@@ -72,6 +72,10 @@ int Generator::generate(const QFileInfoList &descriptions)
 
     Grantlee::Context context;
     context.insert(QSL("ServiceNames"), serviceFileNames);
+    /// @todo We need the module names here, for master.qddoconf; these are not quite identical to
+    /// the service names.  However, I think we should probably sync the service and module names
+    /// anway?
+    render(QSL("master.qdocconf"), context, outputDir.absoluteFilePath(QSL("master.qdocconf")));
     if (!render(QSL("src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")))) {
         return -1;
     }

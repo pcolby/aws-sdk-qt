@@ -1,0 +1,4 @@
+/home/paul/src/aws-sdk-qt/doc/aws-sdk-qt.qdocconf
+{% for name in ServiceNames %}
+{{name}}/doc/qtaws{{name|lower}}.qdocconf
+{% endfor %}

@@ -8,6 +8,7 @@
     <file>templates/client.h</file>
     <file>templates/client_p.h</file>
     <file>templates/license.txt</file>
+    <file>templates/master.qdocconf</file>
     <file>templates/request.cpp</file>
     <file>templates/request.h</file>
     <file>templates/request_p.h</file>
