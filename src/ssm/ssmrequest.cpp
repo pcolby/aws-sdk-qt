@@ -48,6 +48,7 @@ namespace SSM {
  * \value DeleteActivationAction SSM DeleteActivation action.
  * \value DeleteAssociationAction SSM DeleteAssociation action.
  * \value DeleteDocumentAction SSM DeleteDocument action.
+ * \value DeleteInventoryAction SSM DeleteInventory action.
  * \value DeleteMaintenanceWindowAction SSM DeleteMaintenanceWindow action.
  * \value DeleteParameterAction SSM DeleteParameter action.
  * \value DeleteParametersAction SSM DeleteParameters action.
@@ -71,6 +72,7 @@ namespace SSM {
  * \value DescribeInstancePatchStatesAction SSM DescribeInstancePatchStates action.
  * \value DescribeInstancePatchStatesForPatchGroupAction SSM DescribeInstancePatchStatesForPatchGroup action.
  * \value DescribeInstancePatchesAction SSM DescribeInstancePatches action.
+ * \value DescribeInventoryDeletionsAction SSM DescribeInventoryDeletions action.
  * \value DescribeMaintenanceWindowExecutionTaskInvocationsAction SSM DescribeMaintenanceWindowExecutionTaskInvocations action.
  * \value DescribeMaintenanceWindowExecutionTasksAction SSM DescribeMaintenanceWindowExecutionTasks action.
  * \value DescribeMaintenanceWindowExecutionsAction SSM DescribeMaintenanceWindowExecutions action.

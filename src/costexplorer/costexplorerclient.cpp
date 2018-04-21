@@ -58,7 +58,7 @@ namespace CostExplorer {
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
- *  write operations for DynamoDB database tables in your production environment.
+ *  write operations for Amazon DynamoDB database tables in your production environment.
  * 
  *  </p
  * 
@@ -69,6 +69,11 @@ namespace CostExplorer {
  *  The Cost Explorer API provides the following
  * 
  *  endpoint> <ul> <li>
+ * 
+ *  https://ce.us-east-1.amazonaws.co> </li> </ul>
+ * 
+ *  For information about costs associated with the Cost Explorer API, see <a
+ *  href="https://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
  */
 
 /*!
@@ -148,7 +153,7 @@ GetCostAndUsageResponse * CostExplorerClient::getCostAndUsage(const GetCostAndUs
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Retrieves all available filter values for a specific filter over a period of time. You can search the dimension values
+ * Retrieves all available filter values for a specified filter over a period of time. You can search the dimension values
  * for an arbitrary string.
  */
 GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDimensionValuesRequest &request)
@@ -171,13 +176,25 @@ GetDimensionValuesResponse * CostExplorerClient::getDimensionValues(const GetDim
  *
  * A> </li> <li>
  *
+ * CACHE_ENGIN> </li> <li>
+ *
+ * DATABASE_ENGIN> </li> <li>
+ *
+ * DEPLOYMENT_OPTIO> </li> <li>
+ *
  * INSTANCE_TYP> </li> <li>
  *
  * LINKED_ACCOUN> </li> <li>
  *
+ * OPERATING_SYSTE> </li> <li>
+ *
  * PLATFOR> </li> <li>
  *
  * REGIO> </li> <li>
+ *
+ * SERVIC> </li> <li>
+ *
+ * TA> </li> <li>
  *
  * TENANC> </li> </ul>
  *
@@ -223,10 +240,9 @@ GetReservationPurchaseRecommendationResponse * CostExplorerClient::getReservatio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You can retrieve the reservation utilization for your account. Master accounts in an organization in AWS Organizations
- * have access to their associated member accounts. You can filter data by dimensions in a time period. You can use
- * <code>GetDimensionValues</code> to determine the possible dimension values. Currently, you can group only by
- * <code>SUBSCRIPTION_ID</code>.
+ * Retrieves the reservation utilization for your account. Master accounts in an organization have access to member
+ * accounts. You can filter data by dimensions in a time period. You can use <code>GetDimensionValues</code> to determine
+ * the possible dimension values. Currently, you can group only by <code>SUBSCRIPTION_ID</code>.
  */
 GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilization(const GetReservationUtilizationRequest &request)
 {
@@ -239,8 +255,8 @@ GetReservationUtilizationResponse * CostExplorerClient::getReservationUtilizatio
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * You can query for available tag keys and tag values for a specified period. You can search the tag values for an
- * arbitrary string.
+ * Queries for available tag keys and tag values for a specified period. You can search the tag values for an arbitrary
+ * string.
  */
 GetTagsResponse * CostExplorerClient::getTags(const GetTagsRequest &request)
 {

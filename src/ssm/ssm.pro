@@ -58,6 +58,10 @@ HEADERS += \
     deletedocumentrequest_p.h \
     deletedocumentresponse.h \
     deletedocumentresponse_p.h \
+    deleteinventoryrequest.h \
+    deleteinventoryrequest_p.h \
+    deleteinventoryresponse.h \
+    deleteinventoryresponse_p.h \
     deletemaintenancewindowrequest.h \
     deletemaintenancewindowrequest_p.h \
     deletemaintenancewindowresponse.h \
@@ -150,6 +154,10 @@ HEADERS += \
     describeinstancepatchstatesrequest_p.h \
     describeinstancepatchstatesresponse.h \
     describeinstancepatchstatesresponse_p.h \
+    describeinventorydeletionsrequest.h \
+    describeinventorydeletionsrequest_p.h \
+    describeinventorydeletionsresponse.h \
+    describeinventorydeletionsresponse_p.h \
     describemaintenancewindowexecutionsrequest.h \
     describemaintenancewindowexecutionsrequest_p.h \
     describemaintenancewindowexecutionsresponse.h \
@@ -430,6 +438,8 @@ SOURCES += \
     deleteassociationresponse.cpp \
     deletedocumentrequest.cpp \
     deletedocumentresponse.cpp \
+    deleteinventoryrequest.cpp \
+    deleteinventoryresponse.cpp \
     deletemaintenancewindowrequest.cpp \
     deletemaintenancewindowresponse.cpp \
     deleteparameterrequest.cpp \
@@ -476,6 +486,8 @@ SOURCES += \
     describeinstancepatchstatesforpatchgroupresponse.cpp \
     describeinstancepatchstatesrequest.cpp \
     describeinstancepatchstatesresponse.cpp \
+    describeinventorydeletionsrequest.cpp \
+    describeinventorydeletionsresponse.cpp \
     describemaintenancewindowexecutionsrequest.cpp \
     describemaintenancewindowexecutionsresponse.cpp \
     describemaintenancewindowexecutiontaskinvocationsrequest.cpp \

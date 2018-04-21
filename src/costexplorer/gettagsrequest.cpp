@@ -33,7 +33,7 @@ namespace CostExplorer {
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
- *  write operations for DynamoDB database tables in your production environment.
+ *  write operations for Amazon DynamoDB database tables in your production environment.
  * 
  *  </p
  * 
@@ -44,6 +44,11 @@ namespace CostExplorer {
  *  The Cost Explorer API provides the following
  * 
  *  endpoint> <ul> <li>
+ * 
+ *  https://ce.us-east-1.amazonaws.co> </li> </ul>
+ * 
+ *  For information about costs associated with the Cost Explorer API, see <a
+ *  href="https://aws.amazon.com/aws-cost-management/pricing/">AWS Cost Management
  *
  * \sa CostExplorerClient::getTags
  */

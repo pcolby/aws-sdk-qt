@@ -34,6 +34,10 @@ HEADERS += \
     createuploadrequest_p.h \
     createuploadresponse.h \
     createuploadresponse_p.h \
+    createvpceconfigurationrequest.h \
+    createvpceconfigurationrequest_p.h \
+    createvpceconfigurationresponse.h \
+    createvpceconfigurationresponse_p.h \
     deletedevicepoolrequest.h \
     deletedevicepoolrequest_p.h \
     deletedevicepoolresponse.h \
@@ -62,6 +66,10 @@ HEADERS += \
     deleteuploadrequest_p.h \
     deleteuploadresponse.h \
     deleteuploadresponse_p.h \
+    deletevpceconfigurationrequest.h \
+    deletevpceconfigurationrequest_p.h \
+    deletevpceconfigurationresponse.h \
+    deletevpceconfigurationresponse_p.h \
     devicefarmclient.h \
     devicefarmclient_p.h \
     devicefarmrequest.h \
@@ -128,6 +136,10 @@ HEADERS += \
     getuploadrequest_p.h \
     getuploadresponse.h \
     getuploadresponse_p.h \
+    getvpceconfigurationrequest.h \
+    getvpceconfigurationrequest_p.h \
+    getvpceconfigurationresponse.h \
+    getvpceconfigurationresponse_p.h \
     installtoremoteaccesssessionrequest.h \
     installtoremoteaccesssessionrequest_p.h \
     installtoremoteaccesssessionresponse.h \
@@ -204,6 +216,10 @@ HEADERS += \
     listuploadsrequest_p.h \
     listuploadsresponse.h \
     listuploadsresponse_p.h \
+    listvpceconfigurationsrequest.h \
+    listvpceconfigurationsrequest_p.h \
+    listvpceconfigurationsresponse.h \
+    listvpceconfigurationsresponse_p.h \
     purchaseofferingrequest.h \
     purchaseofferingrequest_p.h \
     purchaseofferingresponse.h \
@@ -244,6 +260,10 @@ HEADERS += \
     updateprojectrequest_p.h \
     updateprojectresponse.h \
     updateprojectresponse_p.h \
+    updatevpceconfigurationrequest.h \
+    updatevpceconfigurationrequest_p.h \
+    updatevpceconfigurationresponse.h \
+    updatevpceconfigurationresponse_p.h \
 
 SOURCES += \
     createdevicepoolrequest.cpp \
@@ -258,6 +278,8 @@ SOURCES += \
     createremoteaccesssessionresponse.cpp \
     createuploadrequest.cpp \
     createuploadresponse.cpp \
+    createvpceconfigurationrequest.cpp \
+    createvpceconfigurationresponse.cpp \
     deletedevicepoolrequest.cpp \
     deletedevicepoolresponse.cpp \
     deleteinstanceprofilerequest.cpp \
@@ -272,6 +294,8 @@ SOURCES += \
     deleterunresponse.cpp \
     deleteuploadrequest.cpp \
     deleteuploadresponse.cpp \
+    deletevpceconfigurationrequest.cpp \
+    deletevpceconfigurationresponse.cpp \
     devicefarmclient.cpp \
     devicefarmrequest.cpp \
     devicefarmresponse.cpp \
@@ -305,6 +329,8 @@ SOURCES += \
     gettestresponse.cpp \
     getuploadrequest.cpp \
     getuploadresponse.cpp \
+    getvpceconfigurationrequest.cpp \
+    getvpceconfigurationresponse.cpp \
     installtoremoteaccesssessionrequest.cpp \
     installtoremoteaccesssessionresponse.cpp \
     listartifactsrequest.cpp \
@@ -343,6 +369,8 @@ SOURCES += \
     listuniqueproblemsresponse.cpp \
     listuploadsrequest.cpp \
     listuploadsresponse.cpp \
+    listvpceconfigurationsrequest.cpp \
+    listvpceconfigurationsresponse.cpp \
     purchaseofferingrequest.cpp \
     purchaseofferingresponse.cpp \
     renewofferingrequest.cpp \
@@ -363,5 +391,7 @@ SOURCES += \
     updatenetworkprofileresponse.cpp \
     updateprojectrequest.cpp \
     updateprojectresponse.cpp \
+    updatevpceconfigurationrequest.cpp \
+    updatevpceconfigurationresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

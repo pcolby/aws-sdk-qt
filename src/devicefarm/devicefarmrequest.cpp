@@ -42,6 +42,7 @@ namespace DeviceFarm {
  * \value CreateProjectAction DeviceFarm CreateProject action.
  * \value CreateRemoteAccessSessionAction DeviceFarm CreateRemoteAccessSession action.
  * \value CreateUploadAction DeviceFarm CreateUpload action.
+ * \value CreateVPCEConfigurationAction DeviceFarm CreateVPCEConfiguration action.
  * \value DeleteDevicePoolAction DeviceFarm DeleteDevicePool action.
  * \value DeleteInstanceProfileAction DeviceFarm DeleteInstanceProfile action.
  * \value DeleteNetworkProfileAction DeviceFarm DeleteNetworkProfile action.
@@ -49,6 +50,7 @@ namespace DeviceFarm {
  * \value DeleteRemoteAccessSessionAction DeviceFarm DeleteRemoteAccessSession action.
  * \value DeleteRunAction DeviceFarm DeleteRun action.
  * \value DeleteUploadAction DeviceFarm DeleteUpload action.
+ * \value DeleteVPCEConfigurationAction DeviceFarm DeleteVPCEConfiguration action.
  * \value GetAccountSettingsAction DeviceFarm GetAccountSettings action.
  * \value GetDeviceAction DeviceFarm GetDevice action.
  * \value GetDeviceInstanceAction DeviceFarm GetDeviceInstance action.
@@ -64,6 +66,7 @@ namespace DeviceFarm {
  * \value GetSuiteAction DeviceFarm GetSuite action.
  * \value GetTestAction DeviceFarm GetTest action.
  * \value GetUploadAction DeviceFarm GetUpload action.
+ * \value GetVPCEConfigurationAction DeviceFarm GetVPCEConfiguration action.
  * \value InstallToRemoteAccessSessionAction DeviceFarm InstallToRemoteAccessSession action.
  * \value ListArtifactsAction DeviceFarm ListArtifacts action.
  * \value ListDeviceInstancesAction DeviceFarm ListDeviceInstances action.
@@ -83,6 +86,7 @@ namespace DeviceFarm {
  * \value ListTestsAction DeviceFarm ListTests action.
  * \value ListUniqueProblemsAction DeviceFarm ListUniqueProblems action.
  * \value ListUploadsAction DeviceFarm ListUploads action.
+ * \value ListVPCEConfigurationsAction DeviceFarm ListVPCEConfigurations action.
  * \value PurchaseOfferingAction DeviceFarm PurchaseOffering action.
  * \value RenewOfferingAction DeviceFarm RenewOffering action.
  * \value ScheduleRunAction DeviceFarm ScheduleRun action.
@@ -93,6 +97,7 @@ namespace DeviceFarm {
  * \value UpdateInstanceProfileAction DeviceFarm UpdateInstanceProfile action.
  * \value UpdateNetworkProfileAction DeviceFarm UpdateNetworkProfile action.
  * \value UpdateProjectAction DeviceFarm UpdateProject action.
+ * \value UpdateVPCEConfigurationAction DeviceFarm UpdateVPCEConfiguration action.
  */
 
 /*!

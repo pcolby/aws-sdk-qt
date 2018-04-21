@@ -80,9 +80,8 @@ namespace SecretsManager {
  * 
  *  secrets>
  * 
- *  This guide provides descriptions of the AWS Secrets Manager API. For more information about using this service, see the
- *  <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.com/secretsmanager/latest/userguide/introduction.html">AWS
- *  Secrets Manager User
+ *  This guide provides descriptions of the Secrets Manager API. For more information about using this service, see the <a
+ *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/introduction.html">AWS Secrets Manager User
  * 
  *  Guide</a>>
  * 
@@ -90,7 +89,7 @@ namespace SecretsManager {
  * 
  *  </p
  * 
- *  This version of the AWS Secrets Manager API Reference documents the AWS Secrets Manager API version
+ *  This version of the Secrets Manager API Reference documents the Secrets Manager API version
  * 
  *  2017-10-17> <note>
  * 
@@ -102,43 +101,19 @@ namespace SecretsManager {
  * 
  *  Services</a>> </note>
  * 
- *  We recommend that you use the AWS SDKs to make programmatic API calls to AWS Secrets Manager. However, you also can use
- *  the AWS Secrets Manager HTTP Query API to make direct calls to the AWS Secrets Manager web service. To learn more about
- *  the AWS Secrets Manager HTTP Query API, see <a
+ *  We recommend that you use the AWS SDKs to make programmatic API calls to Secrets Manager. However, you also can use the
+ *  Secrets Manager HTTP Query API to make direct calls to the Secrets Manager web service. To learn more about the Secrets
+ *  Manager HTTP Query API, see <a
  *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_query-requests.html">Making Query Requests</a> in
  *  the <i>AWS Secrets Manager User Guide</i>.
  * 
  *  </p
  * 
- *  AWS Secrets Manager supports GET and POST requests for all actions. That is, the API doesn't require you to use GET for
- *  some actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
+ *  Secrets Manager supports GET and POST requests for all actions. That is, the API doesn't require you to use GET for some
+ *  actions and POST for others. However, GET requests are subject to the limitation size of a URL. Therefore, for
  *  operations that require larger sizes, use a POST
  * 
  *  request>
- * 
- *  <b>Signing Requests</b>
- * 
- *  </p
- * 
- *  When you send HTTP requests to AWS, you must sign the requests so that AWS can identify who sent them. You sign requests
- *  with your AWS access key, which consists of an access key ID and a secret access key. We strongly recommend that you
- *  don't create an access key for your root account. Anyone who has the access key for your root account has unrestricted
- *  access to all the resources in your account. Instead, create an access key for an IAM user account that has the
- *  permissions required for the task at hand. As another option, use AWS Security Token Service to generate temporary
- *  security credentials, and use those credentials to sign requests.
- * 
- *  </p
- * 
- *  To sign requests, you must use <a href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
- *  Version 4</a>. If you have an existing application that uses Signature Version 2, you must update it to use Signature
- *  Version 4.
- * 
- *  </p
- * 
- *  When you use the AWS Command Line Interface (AWS CLI) or one of the AWS SDKs to make requests to AWS, these tools
- *  automatically sign the requests for you with the access key that you specify when you configure the
- * 
- *  tools>
  * 
  *  <b>Support and Feedback for AWS Secrets Manager</b>
  * 
@@ -155,10 +130,11 @@ namespace SecretsManager {
  * 
  *  </p
  * 
- *  The JSON that AWS Secrets Manager returns as a response to your requests is a single long string without line breaks or
- *  white space formatting. Both line breaks and white space are included in the examples in this guide to improve
- *  readability. When example input parameters would also result in long strings that extend beyond the screen, we insert
- *  line breaks to enhance readability. You should always submit the input as a single JSON text
+ *  The JSON that AWS Secrets Manager expects as your request parameters and that the service returns as a response to HTTP
+ *  query requests are single, long strings without line breaks or white space formatting. The JSON shown in the examples is
+ *  formatted with both line breaks and white space to improve readability. When example input parameters would also result
+ *  in long strings that extend beyond the screen, we insert line breaks to enhance readability. You should always submit
+ *  the input as a single JSON text
  * 
  *  string>
  * 
@@ -168,11 +144,11 @@ namespace SecretsManager {
  * 
  *  AWS Secrets Manager supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
  *  files to an Amazon S3 bucket. By using information that's collected by AWS CloudTrail, you can determine which requests
- *  were successfully made to AWS Secrets Manager, who made the request, when it was made, and so on. For more about AWS
- *  Secrets Manager and its support for AWS CloudTrail, see <a
- *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/orgs_cloudtrail-integration.html">Logging AWS Secrets
- *  Manager Events with AWS CloudTrail</a> in the <i>AWS Secrets Manager User Guide</i>. To learn more about CloudTrail,
- *  including how to turn it on and find your log files, see the <a
+ *  were successfully made to Secrets Manager, who made the request, when it was made, and so on. For more about AWS Secrets
+ *  Manager and its support for AWS CloudTrail, see <a
+ *  href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/monitoring.html#monitoring_cloudtrail">Logging AWS
+ *  Secrets Manager Events with AWS CloudTrail</a> in the <i>AWS Secrets Manager User Guide</i>. To learn more about
+ *  CloudTrail, including how to turn it on and find your log files, see the <a
  *  href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail User
  */
 
@@ -308,7 +284,7 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Creates a new secret. A secret in AWS Secrets Manager consists of both the protected secret data and the important
+ * Creates a new secret. A secret in Secrets Manager consists of both the protected secret data and the important
  * information needed to manage the
  *
  * secret>
@@ -326,15 +302,14 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  * Secrets Manager also creates an initial secret version and, if you don't supply a staging label, automatically maps the
  * new version's ID to the staging label
  *
- * <code>AWSCURRENT</code>> <b> <ul> <li>
+ * <code>AWSCURRENT</code>> <note> <ul> <li>
  *
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> and <code>SecretBinary</code>
- * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, AWS Secrets
+ * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets
  * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then AWS Secrets Manager creates it for you automatically. All users
- * in the same AWS account automatically have access to use the default CMK. Note that if an AWS Secrets Manager API call
- * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
- * returning the
+ * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
+ * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
+ * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
@@ -345,7 +320,10 @@ CancelRotateSecretResponse * SecretsManagerClient::cancelRotateSecret(const Canc
  * decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account then the KMS
  * key policy must grant cross-account access to that other account's user or
  *
- * role> </li> </ul> </b>
+ * role> </li> </ul> </note>
+ *
+ *
+ * </p
  *
  * <b>Minimum permissions</b>
  *
@@ -407,26 +385,26 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
  * \note The caller is to take responsbility for the resulting pointer.
  *
  * Deletes an entire secret and all of its versions. You can optionally include a recovery window during which you can
- * restore the secret. If you don't provide a recovery window value, the operation defaults to 30 days. Secrets Manager
+ * restore the secret. If you don't specify a recovery window value, the operation defaults to 30 days. Secrets Manager
  * attaches a <code>DeletionDate</code> stamp to the secret that specifies the end of the recovery window. At the end of
  * the recovery window, Secrets Manager deletes the secret
  *
  * permanently>
  *
- * At any time before recovery period ends, you can use <a>RestoreSecret</a> to remove the <code>DeletionDate</code> and
+ * At any time before recovery window ends, you can use <a>RestoreSecret</a> to remove the <code>DeletionDate</code> and
  * cancel the deletion of the
  *
  * secret>
  *
  * You cannot access the encrypted secret information in any secret that is scheduled for deletion. If you need to access
- * that information, you can cancel the deletion with <a>RestoreSecret</a> and then retrieve the
+ * that information, you must cancel the deletion with <a>RestoreSecret</a> and then retrieve the
  *
  * information> <note> <ul> <li>
  *
  * There is no explicit operation to delete a version of a secret. Instead, remove all staging labels from the
- * <code>VersionStage</code> field of a version. That marks the version as deprecated and allows AWS Secrets Manager to
- * delete it as needed. Versions that do not have any staging labels do not show up in <a>ListSecretVersionIds</a> unless
- * you specify
+ * <code>VersionStage</code> field of a version. That marks the version as deprecated and allows Secrets Manager to delete
+ * it as needed. Versions that do not have any staging labels do not show up in <a>ListSecretVersionIds</a> unless you
+ * specify
  *
  * <code>IncludeDeprecated</code>> </li> <li>
  *
@@ -453,7 +431,7 @@ CreateSecretResponse * SecretsManagerClient::createSecret(const CreateSecretRequ
  *
  * <a>CreateSecret</a>> </li> <li>
  *
- * To cancel deletion of a version of a secret before the recovery period has expired, use
+ * To cancel deletion of a version of a secret before the recovery window has expired, use
  */
 DeleteSecretResponse * SecretsManagerClient::deleteSecret(const DeleteSecretRequest &request)
 {
@@ -616,8 +594,8 @@ ListSecretVersionIdsResponse * SecretsManagerClient::listSecretVersionIds(const 
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
- * Lists all of the secrets that are stored by AWS Secrets Manager in the AWS account. To list the versions currently
- * stored for a specific secret, use <a>ListSecretVersionIds</a>. The encrypted fields <code>SecretString</code> and
+ * Lists all of the secrets that are stored by Secrets Manager in the AWS account. To list the versions currently stored
+ * for a specific secret, use <a>ListSecretVersionIds</a>. The encrypted fields <code>SecretString</code> and
  * <code>SecretBinary</code> are not included in the output. To get that information, call the <a>GetSecretValue</a>
  *
  * operation> <note>
@@ -662,7 +640,7 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  *
  * value> <note>
  *
- * The AWS Secrets Manager console uses only the <code>SecretString</code> field. To add binary data to a secret with the
+ * The Secrets Manager console uses only the <code>SecretString</code> field. To add binary data to a secret with the
  * <code>SecretBinary</code> field you must use the AWS CLI or one of the AWS
  *
  * SDKs> </note> <ul> <li>
@@ -688,15 +666,14 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  * <code>StagingLabels</code> parameter) then Secrets Manager also automatically moves the staging label
  * <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed
  *
- * from> </li> </ul> <b> <ul> <li>
+ * from> </li> </ul> <note> <ul> <li>
  *
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> and <code>SecretBinary</code>
- * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, AWS Secrets
+ * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets
  * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then AWS Secrets Manager creates it for you automatically. All users
- * in the same AWS account automatically have access to use the default CMK. Note that if an AWS Secrets Manager API call
- * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
- * returning the
+ * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
+ * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
+ * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
@@ -707,7 +684,7 @@ ListSecretsResponse * SecretsManagerClient::listSecrets(const ListSecretsRequest
  * decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account then the KMS
  * key policy must grant cross-account access to that other account's user or
  *
- * role> </li> </ul> </b>
+ * role> </li> </ul> </note>
  *
  * <b>Minimum permissions</b>
  *
@@ -802,8 +779,8 @@ RestoreSecretResponse * SecretsManagerClient::restoreSecret(const RestoreSecretR
  * the protected service to match. After testing the new credentials, the function marks the new secret with the staging
  * label <code>AWSCURRENT</code> so that your clients all immediately begin to use the new version. For more information
  * about rotating secrets and how to configure a Lambda function to rotate the secrets for your protected service, see <a
- * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.com/;asm-service-name;/latest/userguide/rotating-secrets.html">Rotating
- * Secrets in AWS Secrets Manager</a> in the <i>AWS Secrets Manager User
+ * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html">Rotating Secrets in AWS Secrets
+ * Manager</a> in the <i>AWS Secrets Manager User
  *
  * Guide</i>>
  *
@@ -997,9 +974,9 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  *
  * instead> <note>
  *
- * The AWS Secrets Manager console uses only the <code>SecretString</code> parameter and therefore limits you to encrypting
- * and storing only a text string. To encrypt and store binary data as part of the version of a secret, you must use either
- * the AWS CLI or one of the AWS
+ * The Secrets Manager console uses only the <code>SecretString</code> parameter and therefore limits you to encrypting and
+ * storing only a text string. To encrypt and store binary data as part of the version of a secret, you must use either the
+ * AWS CLI or one of the AWS
  *
  * SDKs> </note> <ul> <li>
  *
@@ -1012,15 +989,14 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  * If a version with a <code>SecretVersionId</code> with the same value as the <code>ClientRequestToken</code> parameter
  * already exists, the operation generates an error. You cannot modify an existing version, you can only create new
  *
- * ones> </li> </ul> <b> <ul> <li>
+ * ones> </li> </ul> <note> <ul> <li>
  *
  * If you call an operation that needs to encrypt or decrypt the <code>SecretString</code> and <code>SecretBinary</code>
- * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, AWS Secrets
+ * for a secret in the same account as the calling user and that secret doesn't specify a KMS encryption key, Secrets
  * Manager uses the account's default AWS managed customer master key (CMK) with the alias <code>aws/secretsmanager</code>.
- * If this key doesn't already exist in your account then AWS Secrets Manager creates it for you automatically. All users
- * in the same AWS account automatically have access to use the default CMK. Note that if an AWS Secrets Manager API call
- * results in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in
- * returning the
+ * If this key doesn't already exist in your account then Secrets Manager creates it for you automatically. All users in
+ * the same AWS account automatically have access to use the default CMK. Note that if an Secrets Manager API call results
+ * in AWS having to create the account's AWS-managed CMK, it can result in a one-time significant delay in returning the
  *
  * result> </li> <li>
  *
@@ -1031,7 +1007,7 @@ UntagResourceResponse * SecretsManagerClient::untagResource(const UntagResourceR
  * decrypt <code>SecretString</code> or <code>SecretBinary</code> using credentials from a different account then the KMS
  * key policy must grant cross-account access to that other account's user or
  *
- * role> </li> </ul> </b>
+ * role> </li> </ul> </note>
  *
  * <b>Minimum permissions</b>
  *
@@ -1086,7 +1062,7 @@ UpdateSecretResponse * SecretsManagerClient::updateSecret(const UpdateSecretRequ
  * progresses through the secret rotation process. You can attach a staging label to only one version of a secret at a
  * time. If a staging label to be added is already attached to another version, then it is moved--removed from the other
  * version first and then attached to this one. For more information about staging labels, see <a
- * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.com/;asm-service-name;/latest/userguide/terms-concepts.html#term_label">Staging
+ * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_staging-label">Staging
  * Labels</a> in the <i>AWS Secrets Manager User Guide</i>.
  *
  * </p

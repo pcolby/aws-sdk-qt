@@ -40,6 +40,8 @@ class CreateRemoteAccessSessionRequest;
 class CreateRemoteAccessSessionResponse;
 class CreateUploadRequest;
 class CreateUploadResponse;
+class CreateVPCEConfigurationRequest;
+class CreateVPCEConfigurationResponse;
 class DeleteDevicePoolRequest;
 class DeleteDevicePoolResponse;
 class DeleteInstanceProfileRequest;
@@ -54,6 +56,8 @@ class DeleteRunRequest;
 class DeleteRunResponse;
 class DeleteUploadRequest;
 class DeleteUploadResponse;
+class DeleteVPCEConfigurationRequest;
+class DeleteVPCEConfigurationResponse;
 class GetAccountSettingsRequest;
 class GetAccountSettingsResponse;
 class GetDeviceRequest;
@@ -84,6 +88,8 @@ class GetTestRequest;
 class GetTestResponse;
 class GetUploadRequest;
 class GetUploadResponse;
+class GetVPCEConfigurationRequest;
+class GetVPCEConfigurationResponse;
 class InstallToRemoteAccessSessionRequest;
 class InstallToRemoteAccessSessionResponse;
 class ListArtifactsRequest;
@@ -122,6 +128,8 @@ class ListUniqueProblemsRequest;
 class ListUniqueProblemsResponse;
 class ListUploadsRequest;
 class ListUploadsResponse;
+class ListVPCEConfigurationsRequest;
+class ListVPCEConfigurationsResponse;
 class PurchaseOfferingRequest;
 class PurchaseOfferingResponse;
 class RenewOfferingRequest;
@@ -142,6 +150,8 @@ class UpdateNetworkProfileRequest;
 class UpdateNetworkProfileResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
+class UpdateVPCEConfigurationRequest;
+class UpdateVPCEConfigurationResponse;
 
 class QTAWS_EXPORT DeviceFarmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -165,6 +175,7 @@ public slots:
     CreateProjectResponse * createProject(const CreateProjectRequest &request);
     CreateRemoteAccessSessionResponse * createRemoteAccessSession(const CreateRemoteAccessSessionRequest &request);
     CreateUploadResponse * createUpload(const CreateUploadRequest &request);
+    CreateVPCEConfigurationResponse * createVPCEConfiguration(const CreateVPCEConfigurationRequest &request);
     DeleteDevicePoolResponse * deleteDevicePool(const DeleteDevicePoolRequest &request);
     DeleteInstanceProfileResponse * deleteInstanceProfile(const DeleteInstanceProfileRequest &request);
     DeleteNetworkProfileResponse * deleteNetworkProfile(const DeleteNetworkProfileRequest &request);
@@ -172,6 +183,7 @@ public slots:
     DeleteRemoteAccessSessionResponse * deleteRemoteAccessSession(const DeleteRemoteAccessSessionRequest &request);
     DeleteRunResponse * deleteRun(const DeleteRunRequest &request);
     DeleteUploadResponse * deleteUpload(const DeleteUploadRequest &request);
+    DeleteVPCEConfigurationResponse * deleteVPCEConfiguration(const DeleteVPCEConfigurationRequest &request);
     GetAccountSettingsResponse * getAccountSettings(const GetAccountSettingsRequest &request);
     GetDeviceResponse * getDevice(const GetDeviceRequest &request);
     GetDeviceInstanceResponse * getDeviceInstance(const GetDeviceInstanceRequest &request);
@@ -187,6 +199,7 @@ public slots:
     GetSuiteResponse * getSuite(const GetSuiteRequest &request);
     GetTestResponse * getTest(const GetTestRequest &request);
     GetUploadResponse * getUpload(const GetUploadRequest &request);
+    GetVPCEConfigurationResponse * getVPCEConfiguration(const GetVPCEConfigurationRequest &request);
     InstallToRemoteAccessSessionResponse * installToRemoteAccessSession(const InstallToRemoteAccessSessionRequest &request);
     ListArtifactsResponse * listArtifacts(const ListArtifactsRequest &request);
     ListDeviceInstancesResponse * listDeviceInstances(const ListDeviceInstancesRequest &request);
@@ -206,6 +219,7 @@ public slots:
     ListTestsResponse * listTests(const ListTestsRequest &request);
     ListUniqueProblemsResponse * listUniqueProblems(const ListUniqueProblemsRequest &request);
     ListUploadsResponse * listUploads(const ListUploadsRequest &request);
+    ListVPCEConfigurationsResponse * listVPCEConfigurations(const ListVPCEConfigurationsRequest &request);
     PurchaseOfferingResponse * purchaseOffering(const PurchaseOfferingRequest &request);
     RenewOfferingResponse * renewOffering(const RenewOfferingRequest &request);
     ScheduleRunResponse * scheduleRun(const ScheduleRunRequest &request);
@@ -216,6 +230,7 @@ public slots:
     UpdateInstanceProfileResponse * updateInstanceProfile(const UpdateInstanceProfileRequest &request);
     UpdateNetworkProfileResponse * updateNetworkProfile(const UpdateNetworkProfileRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
+    UpdateVPCEConfigurationResponse * updateVPCEConfiguration(const UpdateVPCEConfigurationRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(DeviceFarmClient)

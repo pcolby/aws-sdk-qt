@@ -45,6 +45,8 @@
 #include "deleteassociationresponse.h"
 #include "deletedocumentrequest.h"
 #include "deletedocumentresponse.h"
+#include "deleteinventoryrequest.h"
+#include "deleteinventoryresponse.h"
 #include "deletemaintenancewindowrequest.h"
 #include "deletemaintenancewindowresponse.h"
 #include "deleteparameterrequest.h"
@@ -91,6 +93,8 @@
 #include "describeinstancepatchstatesforpatchgroupresponse.h"
 #include "describeinstancepatchesrequest.h"
 #include "describeinstancepatchesresponse.h"
+#include "describeinventorydeletionsrequest.h"
+#include "describeinventorydeletionsresponse.h"
 #include "describemaintenancewindowexecutiontaskinvocationsrequest.h"
 #include "describemaintenancewindowexecutiontaskinvocationsresponse.h"
 #include "describemaintenancewindowexecutiontasksrequest.h"
@@ -553,6 +557,20 @@ DeleteDocumentResponse * SsmClient::deleteDocument(const DeleteDocumentRequest &
 
 /*!
  * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DeleteInventoryResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Delete a custom inventory type, or the data associated with a custom Inventory type. Deleting a custom inventory type is
+ * also referred to as deleting a custom inventory
+ */
+DeleteInventoryResponse * SsmClient::deleteInventory(const DeleteInventoryRequest &request)
+{
+    return qobject_cast<DeleteInventoryResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
  * DeleteMaintenanceWindowResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -861,6 +879,19 @@ DescribeInstancePatchStatesForPatchGroupResponse * SsmClient::describeInstancePa
 DescribeInstancePatchesResponse * SsmClient::describeInstancePatches(const DescribeInstancePatchesRequest &request)
 {
     return qobject_cast<DescribeInstancePatchesResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the SsmClient service, and returns a pointer to an
+ * DescribeInventoryDeletionsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Describes a specific delete inventory
+ */
+DescribeInventoryDeletionsResponse * SsmClient::describeInventoryDeletions(const DescribeInventoryDeletionsRequest &request)
+{
+    return qobject_cast<DescribeInventoryDeletionsResponse *>(send(request));
 }
 
 /*!
@@ -1773,35 +1804,25 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
  *
  * Modifies a task assigned to a Maintenance Window. You can't change the task type, but you can change the following
  *
- * values>
+ * values> <ul> <li>
  *
- * Task ARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to
+ * TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to
  *
- * AWS-RunShellScript>
+ * AWS-RunShellScript> </li> <li>
  *
- * Service role
+ * ServiceRoleAr> </li> <li>
  *
- * ARN>
+ * TaskInvocationParameter> </li> <li>
  *
- * Task
+ * Priorit> </li> <li>
  *
- * parameters>
+ * MaxConcurrenc> </li> <li>
  *
- * Task
- *
- * priority>
- *
- * Task MaxConcurrency and
- *
- * MaxErrors>
- *
- * Log
- *
- * location>
+ * MaxError> </li> </ul>
  *
  * If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields
- * required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't
- * specified are set to
+ * required by the <a>RegisterTaskWithMaintenanceWindow</a> action are required for this request. Optional fields that
+ * aren't specified are set to
  */
 UpdateMaintenanceWindowTaskResponse * SsmClient::updateMaintenanceWindowTask(const UpdateMaintenanceWindowTaskRequest &request)
 {

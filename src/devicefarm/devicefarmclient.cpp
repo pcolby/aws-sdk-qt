@@ -33,6 +33,8 @@
 #include "createremoteaccesssessionresponse.h"
 #include "createuploadrequest.h"
 #include "createuploadresponse.h"
+#include "createvpceconfigurationrequest.h"
+#include "createvpceconfigurationresponse.h"
 #include "deletedevicepoolrequest.h"
 #include "deletedevicepoolresponse.h"
 #include "deleteinstanceprofilerequest.h"
@@ -47,6 +49,8 @@
 #include "deleterunresponse.h"
 #include "deleteuploadrequest.h"
 #include "deleteuploadresponse.h"
+#include "deletevpceconfigurationrequest.h"
+#include "deletevpceconfigurationresponse.h"
 #include "getaccountsettingsrequest.h"
 #include "getaccountsettingsresponse.h"
 #include "getdevicerequest.h"
@@ -77,6 +81,8 @@
 #include "gettestresponse.h"
 #include "getuploadrequest.h"
 #include "getuploadresponse.h"
+#include "getvpceconfigurationrequest.h"
+#include "getvpceconfigurationresponse.h"
 #include "installtoremoteaccesssessionrequest.h"
 #include "installtoremoteaccesssessionresponse.h"
 #include "listartifactsrequest.h"
@@ -115,6 +121,8 @@
 #include "listuniqueproblemsresponse.h"
 #include "listuploadsrequest.h"
 #include "listuploadsresponse.h"
+#include "listvpceconfigurationsrequest.h"
+#include "listvpceconfigurationsresponse.h"
 #include "purchaseofferingrequest.h"
 #include "purchaseofferingresponse.h"
 #include "renewofferingrequest.h"
@@ -135,6 +143,8 @@
 #include "updatenetworkprofileresponse.h"
 #include "updateprojectrequest.h"
 #include "updateprojectresponse.h"
+#include "updatevpceconfigurationrequest.h"
+#include "updatevpceconfigurationresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -295,6 +305,19 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
 
 /*!
  * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * CreateVPCEConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC)
+ */
+CreateVPCEConfigurationResponse * DeviceFarmClient::createVPCEConfiguration(const CreateVPCEConfigurationRequest &request)
+{
+    return qobject_cast<CreateVPCEConfigurationResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
  * DeleteDevicePoolResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -390,6 +413,19 @@ DeleteRunResponse * DeviceFarmClient::deleteRun(const DeleteRunRequest &request)
 DeleteUploadResponse * DeviceFarmClient::deleteUpload(const DeleteUploadRequest &request)
 {
     return qobject_cast<DeleteUploadResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * DeleteVPCEConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Deletes a configuration for your Amazon Virtual Private Cloud (VPC)
+ */
+DeleteVPCEConfigurationResponse * DeviceFarmClient::deleteVPCEConfiguration(const DeleteVPCEConfigurationRequest &request)
+{
+    return qobject_cast<DeleteVPCEConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -589,6 +625,19 @@ GetTestResponse * DeviceFarmClient::getTest(const GetTestRequest &request)
 GetUploadResponse * DeviceFarmClient::getUpload(const GetUploadRequest &request)
 {
     return qobject_cast<GetUploadResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * GetVPCEConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC)
+ */
+GetVPCEConfigurationResponse * DeviceFarmClient::getVPCEConfiguration(const GetVPCEConfigurationRequest &request)
+{
+    return qobject_cast<GetVPCEConfigurationResponse *>(send(request));
 }
 
 /*!
@@ -852,6 +901,19 @@ ListUploadsResponse * DeviceFarmClient::listUploads(const ListUploadsRequest &re
 
 /*!
  * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * ListVPCEConfigurationsResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS
+ */
+ListVPCEConfigurationsResponse * DeviceFarmClient::listVPCEConfigurations(const ListVPCEConfigurationsRequest &request)
+{
+    return qobject_cast<ListVPCEConfigurationsResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
  * PurchaseOfferingResponse object to track the result.
  *
  * \note The caller is to take responsbility for the resulting pointer.
@@ -989,6 +1051,19 @@ UpdateNetworkProfileResponse * DeviceFarmClient::updateNetworkProfile(const Upda
 UpdateProjectResponse * DeviceFarmClient::updateProject(const UpdateProjectRequest &request)
 {
     return qobject_cast<UpdateProjectResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the DeviceFarmClient service, and returns a pointer to an
+ * UpdateVPCEConfigurationResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint
+ */
+UpdateVPCEConfigurationResponse * DeviceFarmClient::updateVPCEConfiguration(const UpdateVPCEConfigurationRequest &request)
+{
+    return qobject_cast<UpdateVPCEConfigurationResponse *>(send(request));
 }
 
 /*!

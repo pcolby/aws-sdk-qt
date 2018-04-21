@@ -43,6 +43,7 @@ public:
         CreateProjectAction,
         CreateRemoteAccessSessionAction,
         CreateUploadAction,
+        CreateVPCEConfigurationAction,
         DeleteDevicePoolAction,
         DeleteInstanceProfileAction,
         DeleteNetworkProfileAction,
@@ -50,6 +51,7 @@ public:
         DeleteRemoteAccessSessionAction,
         DeleteRunAction,
         DeleteUploadAction,
+        DeleteVPCEConfigurationAction,
         GetAccountSettingsAction,
         GetDeviceAction,
         GetDeviceInstanceAction,
@@ -65,6 +67,7 @@ public:
         GetSuiteAction,
         GetTestAction,
         GetUploadAction,
+        GetVPCEConfigurationAction,
         InstallToRemoteAccessSessionAction,
         ListArtifactsAction,
         ListDeviceInstancesAction,
@@ -84,6 +87,7 @@ public:
         ListTestsAction,
         ListUniqueProblemsAction,
         ListUploadsAction,
+        ListVPCEConfigurationsAction,
         PurchaseOfferingAction,
         RenewOfferingAction,
         ScheduleRunAction,
@@ -94,6 +98,7 @@ public:
         UpdateInstanceProfileAction,
         UpdateNetworkProfileAction,
         UpdateProjectAction,
+        UpdateVPCEConfigurationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
