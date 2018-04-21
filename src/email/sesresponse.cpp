@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SES {
 
 /*!
- * \class QtAws::SES::SESResponse
- * \brief The SESResponse class provides an interface for SES responses.
+ * \class QtAws::SES::SesResponse
+ * \brief The SesResponse class provides an interface for SES responses.
  *
  * \inmodule QtAwsSES
  */
 
 /*!
- * Constructs a SESResponse object with parent \a parent.
+ * Constructs a SesResponse object with parent \a parent.
  */
-SESResponse::SESResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SESResponsePrivate(this), parent)
+SesResponse::SesResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SesResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SESResponse object with private implementation \a d,
+ * Constructs a SesResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SESResponsePrivate.
+ * implementation that inherits from SesResponsePrivate.
  */
-SESResponse::SESResponse(SESResponsePrivate * const d, QObject * const parent)
+SesResponse::SesResponse(SesResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SESResponse::SESResponse(SESResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SESResponse::parseFailure(QIODevice &response)
+void SesResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SESResponse);
+    Q_D(SesResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SESResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SES::SESResponsePrivate
- * \brief The SESResponsePrivate class provides private implementation for SESResponse.
+ * \class QtAws::SES::SesResponsePrivate
+ * \brief The SesResponsePrivate class provides private implementation for SesResponse.
  * \internal
  *
  * \inmodule QtAwsSES
  */
 
 /*!
- * Constructs a SESResponsePrivate object with public implementation \a q.
+ * Constructs a SesResponsePrivate object with public implementation \a q.
  */
-SESResponsePrivate::SESResponsePrivate(
-    SESResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SesResponsePrivate::SesResponsePrivate(
+    SesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

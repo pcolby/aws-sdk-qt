@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace RDS {
 
-class RDSResponse;
+class RdsResponse;
 
-class QTAWS_EXPORT RDSResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT RdsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    RDSResponsePrivate(RDSResponse * const q);
+    RdsResponsePrivate(RdsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(RDSResponse)
-    Q_DISABLE_COPY(RDSResponsePrivate)
+    Q_DECLARE_PUBLIC(RdsResponse)
+    Q_DISABLE_COPY(RdsResponsePrivate)
 
 };
 

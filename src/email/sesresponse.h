@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace SES {
 
-class SESResponsePrivate;
+class SesResponsePrivate;
 
-class QTAWS_EXPORT SESResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT SesResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SESResponse(QObject * const parent = 0);
+    SesResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SESResponse(SESResponsePrivate * const d, QObject * const parent);
+    SesResponse(SesResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(SESResponse)
-    Q_DISABLE_COPY(SESResponse)
+    Q_DECLARE_PRIVATE(SesResponse)
+    Q_DISABLE_COPY(SesResponse)
 
 };
 

@@ -24,14 +24,14 @@ namespace QtAws {
 namespace SWF {
 
 /*!
- * \class QtAws::SWF::SWFRequest
- * \brief The SWFRequest class provides an interface for SWF requests.
+ * \class QtAws::SWF::SwfRequest
+ * \brief The SwfRequest class provides an interface for SWF requests.
  *
  * \inmodule QtAwsSWF
  */
 
 /*!
- * \enum SWFRequest::Action
+ * \enum SwfRequest::Action
  *
  * This enum describes the actions that can be performed as SWF
  * requests.
@@ -70,10 +70,10 @@ namespace SWF {
  */
 
 /*!
- * Constructs a SWFRequest object for SWF \a action.
+ * Constructs a SwfRequest object for SWF \a action.
  */
-SWFRequest::SWFRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SWFRequestPrivate(action, this))
+SwfRequest::SwfRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SwfRequestPrivate(action, this))
 {
 
 }
@@ -81,18 +81,18 @@ SWFRequest::SWFRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SWFRequest::SWFRequest(const SWFRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SWFRequestPrivate(*other.d_func(), this))
+SwfRequest::SwfRequest(const SwfRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SwfRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SWFRequest object to be equal to \a other.
+ * Sets the SwfRequest object to be equal to \a other.
  */
-SWFRequest& SWFRequest::operator=(const SWFRequest &other)
+SwfRequest& SwfRequest::operator=(const SwfRequest &other)
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -100,12 +100,12 @@ SWFRequest& SWFRequest::operator=(const SWFRequest &other)
 }
 
 /*!
- * Constructs aa SWFRequest object with private implementation \a d.
+ * Constructs aa SwfRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SWFRequestPrivate.
+ * implementation that inherits from SwfRequestPrivate.
  */
-SWFRequest::SWFRequest(SWFRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SwfRequest::SwfRequest(SwfRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -113,44 +113,44 @@ SWFRequest::SWFRequest(SWFRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the SWF action to be performed by this request.
  */
-SWFRequest::Action SWFRequest::action() const
+SwfRequest::Action SwfRequest::action() const
 {
-    Q_D(const SWFRequest);
+    Q_D(const SwfRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the SWF action to be performed by this request.
  */
-QString SWFRequest::actionString() const
+QString SwfRequest::actionString() const
 {
-    return SWFRequestPrivate::toString(action());
+    return SwfRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the SWF API version implemented by this request.
  */
-QString SWFRequest::apiVersion() const
+QString SwfRequest::apiVersion() const
 {
-    Q_D(const SWFRequest);
+    Q_D(const SwfRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the SWF action to be performed by this request to \a action.
  */
-void SWFRequest::setAction(const Action action)
+void SwfRequest::setAction(const Action action)
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     d->action = action;
 }
 
 /*!
  * Sets the SWF API version to include in this request to \a version.
  */
-void SWFRequest::setApiVersion(const QString &version)
+void SwfRequest::setApiVersion(const QString &version)
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     d->apiVersion = version;
 }
 
@@ -162,7 +162,7 @@ void SWFRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SWFRequest::operator==(const SWFRequest &other) const
+bool SwfRequest::operator==(const SwfRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -183,7 +183,7 @@ bool SWFRequest::operator==(const SWFRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SWFRequest::isValidQueueName(const QString &queueName)
+/*bool SwfRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -193,45 +193,45 @@ bool SWFRequest::operator==(const SWFRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SWFRequest::clearParameter(const QString &name)
+int SwfRequest::clearParameter(const QString &name)
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SWFRequest::clearParameters()
+void SwfRequest::clearParameters()
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SWFRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SwfRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SWFRequest);
+    Q_D(const SwfRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SWFRequest::parameters() const
+const QVariantMap &SwfRequest::parameters() const
 {
-    Q_D(const SWFRequest);
+    Q_D(const SwfRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SWFRequest::setParameter(const QString &name, const QVariant &value)
+void SwfRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     d->parameters.insert(name, value);
 }
 
@@ -239,9 +239,9 @@ void SWFRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SWFRequest::setParameters(const QVariantMap &parameters)
+void SwfRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SWFRequest);
+    Q_D(SwfRequest);
     d->parameters = parameters;
 }
 
@@ -253,27 +253,27 @@ void SWFRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SWFRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SwfRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SWFRequest);
+    Q_D(const SwfRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SWF::SWFRequestPrivate
- * \brief The SWFRequestPrivate class provides private implementation for SWFRequest.
+ * \class QtAws::SWF::SwfRequestPrivate
+ * \brief The SwfRequestPrivate class provides private implementation for SwfRequest.
  * \internal
  *
  * \inmodule QtAwsSWF
  */
 
 /*!
- * Constructs a SWFRequestPrivate object for SWF \a action,
+ * Constructs a SwfRequestPrivate object for SWF \a action,
  * with public implementation \a q.
  */
-SWFRequestPrivate::SWFRequestPrivate(const SWFRequest::Action action, SWFRequest * const q)
+SwfRequestPrivate::SwfRequestPrivate(const SwfRequest::Action action, SwfRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -285,10 +285,10 @@ SWFRequestPrivate::SWFRequestPrivate(const SWFRequest::Action action, SWFRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SWFRequest class's copy constructor.
+ * This is required to support the SwfRequest class's copy constructor.
  */
-SWFRequestPrivate::SWFRequestPrivate(const SWFRequestPrivate &other,
-                                     SWFRequest * const q)
+SwfRequestPrivate::SwfRequestPrivate(const SwfRequestPrivate &other,
+                                     SwfRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -299,14 +299,14 @@ SWFRequestPrivate::SWFRequestPrivate(const SWFRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SWFRequest::Action enumerator values to their respective
+ * This function converts SwfRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SWF service's Action
  * query parameters.
  */
-QString SWFRequestPrivate::toString(const SWFRequest::Action &action)
+QString SwfRequestPrivate::toString(const SwfRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SWFRequest::action##Action: return QStringLiteral(#action)
+        case SwfRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

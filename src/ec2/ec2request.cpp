@@ -24,14 +24,14 @@ namespace QtAws {
 namespace EC2 {
 
 /*!
- * \class QtAws::EC2::EC2Request
- * \brief The EC2Request class provides an interface for EC2 requests.
+ * \class QtAws::EC2::Ec2Request
+ * \brief The Ec2Request class provides an interface for EC2 requests.
  *
  * \inmodule QtAwsEC2
  */
 
 /*!
- * \enum EC2Request::Action
+ * \enum Ec2Request::Action
  *
  * This enum describes the actions that can be performed as EC2
  * requests.
@@ -307,10 +307,10 @@ namespace EC2 {
  */
 
 /*!
- * Constructs a EC2Request object for EC2 \a action.
+ * Constructs a Ec2Request object for EC2 \a action.
  */
-EC2Request::EC2Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new EC2RequestPrivate(action, this))
+Ec2Request::Ec2Request(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new Ec2RequestPrivate(action, this))
 {
 
 }
@@ -318,18 +318,18 @@ EC2Request::EC2Request(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-EC2Request::EC2Request(const EC2Request &other)
-    : QtAws::Core::AwsAbstractRequest(new EC2RequestPrivate(*other.d_func(), this))
+Ec2Request::Ec2Request(const Ec2Request &other)
+    : QtAws::Core::AwsAbstractRequest(new Ec2RequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the EC2Request object to be equal to \a other.
+ * Sets the Ec2Request object to be equal to \a other.
  */
-EC2Request& EC2Request::operator=(const EC2Request &other)
+Ec2Request& Ec2Request::operator=(const Ec2Request &other)
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -337,12 +337,12 @@ EC2Request& EC2Request::operator=(const EC2Request &other)
 }
 
 /*!
- * Constructs aa EC2Request object with private implementation \a d.
+ * Constructs aa Ec2Request object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EC2RequestPrivate.
+ * implementation that inherits from Ec2RequestPrivate.
  */
-EC2Request::EC2Request(EC2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+Ec2Request::Ec2Request(Ec2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -350,44 +350,44 @@ EC2Request::EC2Request(EC2RequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the EC2 action to be performed by this request.
  */
-EC2Request::Action EC2Request::action() const
+Ec2Request::Action Ec2Request::action() const
 {
-    Q_D(const EC2Request);
+    Q_D(const Ec2Request);
     return d->action;
 }
 
 /*!
  * Returns the name of the EC2 action to be performed by this request.
  */
-QString EC2Request::actionString() const
+QString Ec2Request::actionString() const
 {
-    return EC2RequestPrivate::toString(action());
+    return Ec2RequestPrivate::toString(action());
 }
 
 /*!
  * Returns the EC2 API version implemented by this request.
  */
-QString EC2Request::apiVersion() const
+QString Ec2Request::apiVersion() const
 {
-    Q_D(const EC2Request);
+    Q_D(const Ec2Request);
     return d->apiVersion;
 }
 
 /*!
  * Sets the EC2 action to be performed by this request to \a action.
  */
-void EC2Request::setAction(const Action action)
+void Ec2Request::setAction(const Action action)
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     d->action = action;
 }
 
 /*!
  * Sets the EC2 API version to include in this request to \a version.
  */
-void EC2Request::setApiVersion(const QString &version)
+void Ec2Request::setApiVersion(const QString &version)
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     d->apiVersion = version;
 }
 
@@ -399,7 +399,7 @@ void EC2Request::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool EC2Request::operator==(const EC2Request &other) const
+bool Ec2Request::operator==(const Ec2Request &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -420,7 +420,7 @@ bool EC2Request::operator==(const EC2Request &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool EC2Request::isValidQueueName(const QString &queueName)
+/*bool Ec2Request::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -430,45 +430,45 @@ bool EC2Request::operator==(const EC2Request &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int EC2Request::clearParameter(const QString &name)
+int Ec2Request::clearParameter(const QString &name)
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void EC2Request::clearParameters()
+void Ec2Request::clearParameters()
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant EC2Request::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant Ec2Request::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const EC2Request);
+    Q_D(const Ec2Request);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &EC2Request::parameters() const
+const QVariantMap &Ec2Request::parameters() const
 {
-    Q_D(const EC2Request);
+    Q_D(const Ec2Request);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void EC2Request::setParameter(const QString &name, const QVariant &value)
+void Ec2Request::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     d->parameters.insert(name, value);
 }
 
@@ -476,9 +476,9 @@ void EC2Request::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void EC2Request::setParameters(const QVariantMap &parameters)
+void Ec2Request::setParameters(const QVariantMap &parameters)
 {
-    Q_D(EC2Request);
+    Q_D(Ec2Request);
     d->parameters = parameters;
 }
 
@@ -490,27 +490,27 @@ void EC2Request::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest EC2Request::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest Ec2Request::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const EC2Request);
+    Q_D(const Ec2Request);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::EC2::EC2RequestPrivate
- * \brief The EC2RequestPrivate class provides private implementation for EC2Request.
+ * \class QtAws::EC2::Ec2RequestPrivate
+ * \brief The Ec2RequestPrivate class provides private implementation for Ec2Request.
  * \internal
  *
  * \inmodule QtAwsEC2
  */
 
 /*!
- * Constructs a EC2RequestPrivate object for EC2 \a action,
+ * Constructs a Ec2RequestPrivate object for EC2 \a action,
  * with public implementation \a q.
  */
-EC2RequestPrivate::EC2RequestPrivate(const EC2Request::Action action, EC2Request * const q)
+Ec2RequestPrivate::Ec2RequestPrivate(const Ec2Request::Action action, Ec2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -522,10 +522,10 @@ EC2RequestPrivate::EC2RequestPrivate(const EC2Request::Action action, EC2Request
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the EC2Request class's copy constructor.
+ * This is required to support the Ec2Request class's copy constructor.
  */
-EC2RequestPrivate::EC2RequestPrivate(const EC2RequestPrivate &other,
-                                     EC2Request * const q)
+Ec2RequestPrivate::Ec2RequestPrivate(const Ec2RequestPrivate &other,
+                                     Ec2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -536,14 +536,14 @@ EC2RequestPrivate::EC2RequestPrivate(const EC2RequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts EC2Request::Action enumerator values to their respective
+ * This function converts Ec2Request::Action enumerator values to their respective
  * string representations, appropriate for use with the EC2 service's Action
  * query parameters.
  */
-QString EC2RequestPrivate::toString(const EC2Request::Action &action)
+QString Ec2RequestPrivate::toString(const Ec2Request::Action &action)
 {
     #define ActionToString(action) \
-        case EC2Request::action##Action: return QStringLiteral(#action)
+        case Ec2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

@@ -24,14 +24,14 @@ namespace QtAws {
 namespace SNS {
 
 /*!
- * \class QtAws::SNS::SNSRequest
- * \brief The SNSRequest class provides an interface for SNS requests.
+ * \class QtAws::SNS::SnsRequest
+ * \brief The SnsRequest class provides an interface for SNS requests.
  *
  * \inmodule QtAwsSNS
  */
 
 /*!
- * \enum SNSRequest::Action
+ * \enum SnsRequest::Action
  *
  * This enum describes the actions that can be performed as SNS
  * requests.
@@ -69,10 +69,10 @@ namespace SNS {
  */
 
 /*!
- * Constructs a SNSRequest object for SNS \a action.
+ * Constructs a SnsRequest object for SNS \a action.
  */
-SNSRequest::SNSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SNSRequestPrivate(action, this))
+SnsRequest::SnsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SnsRequestPrivate(action, this))
 {
 
 }
@@ -80,18 +80,18 @@ SNSRequest::SNSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SNSRequest::SNSRequest(const SNSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SNSRequestPrivate(*other.d_func(), this))
+SnsRequest::SnsRequest(const SnsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SnsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SNSRequest object to be equal to \a other.
+ * Sets the SnsRequest object to be equal to \a other.
  */
-SNSRequest& SNSRequest::operator=(const SNSRequest &other)
+SnsRequest& SnsRequest::operator=(const SnsRequest &other)
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -99,12 +99,12 @@ SNSRequest& SNSRequest::operator=(const SNSRequest &other)
 }
 
 /*!
- * Constructs aa SNSRequest object with private implementation \a d.
+ * Constructs aa SnsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SNSRequestPrivate.
+ * implementation that inherits from SnsRequestPrivate.
  */
-SNSRequest::SNSRequest(SNSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SnsRequest::SnsRequest(SnsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -112,44 +112,44 @@ SNSRequest::SNSRequest(SNSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the SNS action to be performed by this request.
  */
-SNSRequest::Action SNSRequest::action() const
+SnsRequest::Action SnsRequest::action() const
 {
-    Q_D(const SNSRequest);
+    Q_D(const SnsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the SNS action to be performed by this request.
  */
-QString SNSRequest::actionString() const
+QString SnsRequest::actionString() const
 {
-    return SNSRequestPrivate::toString(action());
+    return SnsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the SNS API version implemented by this request.
  */
-QString SNSRequest::apiVersion() const
+QString SnsRequest::apiVersion() const
 {
-    Q_D(const SNSRequest);
+    Q_D(const SnsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the SNS action to be performed by this request to \a action.
  */
-void SNSRequest::setAction(const Action action)
+void SnsRequest::setAction(const Action action)
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the SNS API version to include in this request to \a version.
  */
-void SNSRequest::setApiVersion(const QString &version)
+void SnsRequest::setApiVersion(const QString &version)
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     d->apiVersion = version;
 }
 
@@ -161,7 +161,7 @@ void SNSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SNSRequest::operator==(const SNSRequest &other) const
+bool SnsRequest::operator==(const SnsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -182,7 +182,7 @@ bool SNSRequest::operator==(const SNSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SNSRequest::isValidQueueName(const QString &queueName)
+/*bool SnsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -192,45 +192,45 @@ bool SNSRequest::operator==(const SNSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SNSRequest::clearParameter(const QString &name)
+int SnsRequest::clearParameter(const QString &name)
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SNSRequest::clearParameters()
+void SnsRequest::clearParameters()
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SNSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SnsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SNSRequest);
+    Q_D(const SnsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SNSRequest::parameters() const
+const QVariantMap &SnsRequest::parameters() const
 {
-    Q_D(const SNSRequest);
+    Q_D(const SnsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SNSRequest::setParameter(const QString &name, const QVariant &value)
+void SnsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -238,9 +238,9 @@ void SNSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SNSRequest::setParameters(const QVariantMap &parameters)
+void SnsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SNSRequest);
+    Q_D(SnsRequest);
     d->parameters = parameters;
 }
 
@@ -252,27 +252,27 @@ void SNSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SNSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SnsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SNSRequest);
+    Q_D(const SnsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SNS::SNSRequestPrivate
- * \brief The SNSRequestPrivate class provides private implementation for SNSRequest.
+ * \class QtAws::SNS::SnsRequestPrivate
+ * \brief The SnsRequestPrivate class provides private implementation for SnsRequest.
  * \internal
  *
  * \inmodule QtAwsSNS
  */
 
 /*!
- * Constructs a SNSRequestPrivate object for SNS \a action,
+ * Constructs a SnsRequestPrivate object for SNS \a action,
  * with public implementation \a q.
  */
-SNSRequestPrivate::SNSRequestPrivate(const SNSRequest::Action action, SNSRequest * const q)
+SnsRequestPrivate::SnsRequestPrivate(const SnsRequest::Action action, SnsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -284,10 +284,10 @@ SNSRequestPrivate::SNSRequestPrivate(const SNSRequest::Action action, SNSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SNSRequest class's copy constructor.
+ * This is required to support the SnsRequest class's copy constructor.
  */
-SNSRequestPrivate::SNSRequestPrivate(const SNSRequestPrivate &other,
-                                     SNSRequest * const q)
+SnsRequestPrivate::SnsRequestPrivate(const SnsRequestPrivate &other,
+                                     SnsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -298,14 +298,14 @@ SNSRequestPrivate::SNSRequestPrivate(const SNSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SNSRequest::Action enumerator values to their respective
+ * This function converts SnsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SNS service's Action
  * query parameters.
  */
-QString SNSRequestPrivate::toString(const SNSRequest::Action &action)
+QString SnsRequestPrivate::toString(const SnsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SNSRequest::action##Action: return QStringLiteral(#action)
+        case SnsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

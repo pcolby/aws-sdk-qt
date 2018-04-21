@@ -1,6 +1,6 @@
 
 /*!
-    \module QtAwsSQS
+    \module QtAwsSqs
     \title SQS C++ Classes
     \ingroup modules
 

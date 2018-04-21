@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace FMS {
 
-class FMSRequestPrivate;
+class FmsRequestPrivate;
 
-class QTAWS_EXPORT FMSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT FmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by FMS.
@@ -52,9 +52,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    FMSRequest(const Action action);
-    FMSRequest(const FMSRequest &other);
-    FMSRequest &operator=(const FMSRequest &other);
+    FmsRequest(const Action action);
+    FmsRequest(const FmsRequest &other);
+    FmsRequest &operator=(const FmsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -63,12 +63,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const FMSRequest &other) const override;
+    virtual bool operator==(const FmsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    FMSRequest(FMSRequestPrivate * const d);
+    FmsRequest(FmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -81,7 +81,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(FMSRequest)
+    Q_DECLARE_PRIVATE(FmsRequest)
 
 };
 

@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace EFS {
 
-class EFSRequestPrivate;
+class EfsRequestPrivate;
 
-class QTAWS_EXPORT EFSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT EfsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EFS.
@@ -51,9 +51,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    EFSRequest(const Action action);
-    EFSRequest(const EFSRequest &other);
-    EFSRequest &operator=(const EFSRequest &other);
+    EfsRequest(const Action action);
+    EfsRequest(const EfsRequest &other);
+    EfsRequest &operator=(const EfsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -62,12 +62,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const EFSRequest &other) const override;
+    virtual bool operator==(const EfsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    EFSRequest(EFSRequestPrivate * const d);
+    EfsRequest(EfsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -80,7 +80,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(EFSRequest)
+    Q_DECLARE_PRIVATE(EfsRequest)
 
 };
 

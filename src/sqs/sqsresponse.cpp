@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SQS {
 
 /*!
- * \class QtAws::SQS::SQSResponse
- * \brief The SQSResponse class provides an interface for SQS responses.
+ * \class QtAws::SQS::SqsResponse
+ * \brief The SqsResponse class provides an interface for SQS responses.
  *
  * \inmodule QtAwsSQS
  */
 
 /*!
- * Constructs a SQSResponse object with parent \a parent.
+ * Constructs a SqsResponse object with parent \a parent.
  */
-SQSResponse::SQSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SQSResponsePrivate(this), parent)
+SqsResponse::SqsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SqsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SQSResponse object with private implementation \a d,
+ * Constructs a SqsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SQSResponsePrivate.
+ * implementation that inherits from SqsResponsePrivate.
  */
-SQSResponse::SQSResponse(SQSResponsePrivate * const d, QObject * const parent)
+SqsResponse::SqsResponse(SqsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SQSResponse::SQSResponse(SQSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SQSResponse::parseFailure(QIODevice &response)
+void SqsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SQSResponse);
+    Q_D(SqsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SQSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SQS::SQSResponsePrivate
- * \brief The SQSResponsePrivate class provides private implementation for SQSResponse.
+ * \class QtAws::SQS::SqsResponsePrivate
+ * \brief The SqsResponsePrivate class provides private implementation for SqsResponse.
  * \internal
  *
  * \inmodule QtAwsSQS
  */
 
 /*!
- * Constructs a SQSResponsePrivate object with public implementation \a q.
+ * Constructs a SqsResponsePrivate object with public implementation \a q.
  */
-SQSResponsePrivate::SQSResponsePrivate(
-    SQSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SqsResponsePrivate::SqsResponsePrivate(
+    SqsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

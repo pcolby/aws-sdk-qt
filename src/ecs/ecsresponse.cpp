@@ -27,30 +27,30 @@ namespace QtAws {
 namespace ECS {
 
 /*!
- * \class QtAws::ECS::ECSResponse
- * \brief The ECSResponse class provides an interface for ECS responses.
+ * \class QtAws::ECS::EcsResponse
+ * \brief The EcsResponse class provides an interface for ECS responses.
  *
  * \inmodule QtAwsECS
  */
 
 /*!
- * Constructs a ECSResponse object with parent \a parent.
+ * Constructs a EcsResponse object with parent \a parent.
  */
-ECSResponse::ECSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ECSResponsePrivate(this), parent)
+EcsResponse::EcsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new EcsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ECSResponse object with private implementation \a d,
+ * Constructs a EcsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ECSResponsePrivate.
+ * implementation that inherits from EcsResponsePrivate.
  */
-ECSResponse::ECSResponse(ECSResponsePrivate * const d, QObject * const parent)
+EcsResponse::EcsResponse(EcsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ECSResponse::ECSResponse(ECSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void ECSResponse::parseFailure(QIODevice &response)
+void EcsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ECSResponse);
+    Q_D(EcsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void ECSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECS::ECSResponsePrivate
- * \brief The ECSResponsePrivate class provides private implementation for ECSResponse.
+ * \class QtAws::ECS::EcsResponsePrivate
+ * \brief The EcsResponsePrivate class provides private implementation for EcsResponse.
  * \internal
  *
  * \inmodule QtAwsECS
  */
 
 /*!
- * Constructs a ECSResponsePrivate object with public implementation \a q.
+ * Constructs a EcsResponsePrivate object with public implementation \a q.
  */
-ECSResponsePrivate::ECSResponsePrivate(
-    ECSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+EcsResponsePrivate::EcsResponsePrivate(
+    EcsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

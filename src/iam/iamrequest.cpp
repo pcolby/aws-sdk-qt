@@ -24,14 +24,14 @@ namespace QtAws {
 namespace IAM {
 
 /*!
- * \class QtAws::IAM::IAMRequest
- * \brief The IAMRequest class provides an interface for IAM requests.
+ * \class QtAws::IAM::IamRequest
+ * \brief The IamRequest class provides an interface for IAM requests.
  *
  * \inmodule QtAwsIAM
  */
 
 /*!
- * \enum IAMRequest::Action
+ * \enum IamRequest::Action
  *
  * This enum describes the actions that can be performed as IAM
  * requests.
@@ -162,10 +162,10 @@ namespace IAM {
  */
 
 /*!
- * Constructs a IAMRequest object for IAM \a action.
+ * Constructs a IamRequest object for IAM \a action.
  */
-IAMRequest::IAMRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IAMRequestPrivate(action, this))
+IamRequest::IamRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new IamRequestPrivate(action, this))
 {
 
 }
@@ -173,18 +173,18 @@ IAMRequest::IAMRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-IAMRequest::IAMRequest(const IAMRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IAMRequestPrivate(*other.d_func(), this))
+IamRequest::IamRequest(const IamRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new IamRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the IAMRequest object to be equal to \a other.
+ * Sets the IamRequest object to be equal to \a other.
  */
-IAMRequest& IAMRequest::operator=(const IAMRequest &other)
+IamRequest& IamRequest::operator=(const IamRequest &other)
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -192,12 +192,12 @@ IAMRequest& IAMRequest::operator=(const IAMRequest &other)
 }
 
 /*!
- * Constructs aa IAMRequest object with private implementation \a d.
+ * Constructs aa IamRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from IAMRequestPrivate.
+ * implementation that inherits from IamRequestPrivate.
  */
-IAMRequest::IAMRequest(IAMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IamRequest::IamRequest(IamRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -205,44 +205,44 @@ IAMRequest::IAMRequest(IAMRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the IAM action to be performed by this request.
  */
-IAMRequest::Action IAMRequest::action() const
+IamRequest::Action IamRequest::action() const
 {
-    Q_D(const IAMRequest);
+    Q_D(const IamRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the IAM action to be performed by this request.
  */
-QString IAMRequest::actionString() const
+QString IamRequest::actionString() const
 {
-    return IAMRequestPrivate::toString(action());
+    return IamRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the IAM API version implemented by this request.
  */
-QString IAMRequest::apiVersion() const
+QString IamRequest::apiVersion() const
 {
-    Q_D(const IAMRequest);
+    Q_D(const IamRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the IAM action to be performed by this request to \a action.
  */
-void IAMRequest::setAction(const Action action)
+void IamRequest::setAction(const Action action)
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     d->action = action;
 }
 
 /*!
  * Sets the IAM API version to include in this request to \a version.
  */
-void IAMRequest::setApiVersion(const QString &version)
+void IamRequest::setApiVersion(const QString &version)
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     d->apiVersion = version;
 }
 
@@ -254,7 +254,7 @@ void IAMRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool IAMRequest::operator==(const IAMRequest &other) const
+bool IamRequest::operator==(const IamRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -275,7 +275,7 @@ bool IAMRequest::operator==(const IAMRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool IAMRequest::isValidQueueName(const QString &queueName)
+/*bool IamRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -285,45 +285,45 @@ bool IAMRequest::operator==(const IAMRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int IAMRequest::clearParameter(const QString &name)
+int IamRequest::clearParameter(const QString &name)
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void IAMRequest::clearParameters()
+void IamRequest::clearParameters()
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant IAMRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant IamRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const IAMRequest);
+    Q_D(const IamRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &IAMRequest::parameters() const
+const QVariantMap &IamRequest::parameters() const
 {
-    Q_D(const IAMRequest);
+    Q_D(const IamRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void IAMRequest::setParameter(const QString &name, const QVariant &value)
+void IamRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     d->parameters.insert(name, value);
 }
 
@@ -331,9 +331,9 @@ void IAMRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void IAMRequest::setParameters(const QVariantMap &parameters)
+void IamRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(IAMRequest);
+    Q_D(IamRequest);
     d->parameters = parameters;
 }
 
@@ -345,27 +345,27 @@ void IAMRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest IAMRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest IamRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const IAMRequest);
+    Q_D(const IamRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::IAM::IAMRequestPrivate
- * \brief The IAMRequestPrivate class provides private implementation for IAMRequest.
+ * \class QtAws::IAM::IamRequestPrivate
+ * \brief The IamRequestPrivate class provides private implementation for IamRequest.
  * \internal
  *
  * \inmodule QtAwsIAM
  */
 
 /*!
- * Constructs a IAMRequestPrivate object for IAM \a action,
+ * Constructs a IamRequestPrivate object for IAM \a action,
  * with public implementation \a q.
  */
-IAMRequestPrivate::IAMRequestPrivate(const IAMRequest::Action action, IAMRequest * const q)
+IamRequestPrivate::IamRequestPrivate(const IamRequest::Action action, IamRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -377,10 +377,10 @@ IAMRequestPrivate::IAMRequestPrivate(const IAMRequest::Action action, IAMRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the IAMRequest class's copy constructor.
+ * This is required to support the IamRequest class's copy constructor.
  */
-IAMRequestPrivate::IAMRequestPrivate(const IAMRequestPrivate &other,
-                                     IAMRequest * const q)
+IamRequestPrivate::IamRequestPrivate(const IamRequestPrivate &other,
+                                     IamRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -391,14 +391,14 @@ IAMRequestPrivate::IAMRequestPrivate(const IAMRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts IAMRequest::Action enumerator values to their respective
+ * This function converts IamRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the IAM service's Action
  * query parameters.
  */
-QString IAMRequestPrivate::toString(const IAMRequest::Action &action)
+QString IamRequestPrivate::toString(const IamRequest::Action &action)
 {
     #define ActionToString(action) \
-        case IAMRequest::action##Action: return QStringLiteral(#action)
+        case IamRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

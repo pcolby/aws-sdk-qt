@@ -27,30 +27,30 @@ namespace QtAws {
 namespace DAX {
 
 /*!
- * \class QtAws::DAX::DAXResponse
- * \brief The DAXResponse class provides an interface for DAX responses.
+ * \class QtAws::DAX::DaxResponse
+ * \brief The DaxResponse class provides an interface for DAX responses.
  *
  * \inmodule QtAwsDAX
  */
 
 /*!
- * Constructs a DAXResponse object with parent \a parent.
+ * Constructs a DaxResponse object with parent \a parent.
  */
-DAXResponse::DAXResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DAXResponsePrivate(this), parent)
+DaxResponse::DaxResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new DaxResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a DAXResponse object with private implementation \a d,
+ * Constructs a DaxResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from DAXResponsePrivate.
+ * implementation that inherits from DaxResponsePrivate.
  */
-DAXResponse::DAXResponse(DAXResponsePrivate * const d, QObject * const parent)
+DaxResponse::DaxResponse(DaxResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ DAXResponse::DAXResponse(DAXResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void DAXResponse::parseFailure(QIODevice &response)
+void DaxResponse::parseFailure(QIODevice &response)
 {
-    Q_D(DAXResponse);
+    Q_D(DaxResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void DAXResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::DAX::DAXResponsePrivate
- * \brief The DAXResponsePrivate class provides private implementation for DAXResponse.
+ * \class QtAws::DAX::DaxResponsePrivate
+ * \brief The DaxResponsePrivate class provides private implementation for DaxResponse.
  * \internal
  *
  * \inmodule QtAwsDAX
  */
 
 /*!
- * Constructs a DAXResponsePrivate object with public implementation \a q.
+ * Constructs a DaxResponsePrivate object with public implementation \a q.
  */
-DAXResponsePrivate::DAXResponsePrivate(
-    DAXResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+DaxResponsePrivate::DaxResponsePrivate(
+    DaxResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

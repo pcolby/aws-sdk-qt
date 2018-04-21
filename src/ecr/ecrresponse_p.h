@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace ECR {
 
-class ECRResponse;
+class EcrResponse;
 
-class QTAWS_EXPORT ECRResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT EcrResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    ECRResponsePrivate(ECRResponse * const q);
+    EcrResponsePrivate(EcrResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ECRResponse)
-    Q_DISABLE_COPY(ECRResponsePrivate)
+    Q_DECLARE_PUBLIC(EcrResponse)
+    Q_DISABLE_COPY(EcrResponsePrivate)
 
 };
 

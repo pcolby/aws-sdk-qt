@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace KMS {
 
-class KMSResponsePrivate;
+class KmsResponsePrivate;
 
-class QTAWS_EXPORT KMSResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT KmsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    KMSResponse(QObject * const parent = 0);
+    KmsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    KMSResponse(KMSResponsePrivate * const d, QObject * const parent);
+    KmsResponse(KmsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(KMSResponse)
-    Q_DISABLE_COPY(KMSResponse)
+    Q_DECLARE_PRIVATE(KmsResponse)
+    Q_DISABLE_COPY(KmsResponse)
 
 };
 

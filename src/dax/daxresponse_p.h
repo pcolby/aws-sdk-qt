@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace DAX {
 
-class DAXResponse;
+class DaxResponse;
 
-class QTAWS_EXPORT DAXResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT DaxResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    DAXResponsePrivate(DAXResponse * const q);
+    DaxResponsePrivate(DaxResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(DAXResponse)
-    Q_DISABLE_COPY(DAXResponsePrivate)
+    Q_DECLARE_PUBLIC(DaxResponse)
+    Q_DISABLE_COPY(DaxResponsePrivate)
 
 };
 

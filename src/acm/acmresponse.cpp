@@ -27,30 +27,30 @@ namespace QtAws {
 namespace ACM {
 
 /*!
- * \class QtAws::ACM::ACMResponse
- * \brief The ACMResponse class provides an interface for ACM responses.
+ * \class QtAws::ACM::AcmResponse
+ * \brief The AcmResponse class provides an interface for ACM responses.
  *
  * \inmodule QtAwsACM
  */
 
 /*!
- * Constructs a ACMResponse object with parent \a parent.
+ * Constructs a AcmResponse object with parent \a parent.
  */
-ACMResponse::ACMResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ACMResponsePrivate(this), parent)
+AcmResponse::AcmResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new AcmResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ACMResponse object with private implementation \a d,
+ * Constructs a AcmResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ACMResponsePrivate.
+ * implementation that inherits from AcmResponsePrivate.
  */
-ACMResponse::ACMResponse(ACMResponsePrivate * const d, QObject * const parent)
+AcmResponse::AcmResponse(AcmResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ACMResponse::ACMResponse(ACMResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void ACMResponse::parseFailure(QIODevice &response)
+void AcmResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ACMResponse);
+    Q_D(AcmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void ACMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ACM::ACMResponsePrivate
- * \brief The ACMResponsePrivate class provides private implementation for ACMResponse.
+ * \class QtAws::ACM::AcmResponsePrivate
+ * \brief The AcmResponsePrivate class provides private implementation for AcmResponse.
  * \internal
  *
  * \inmodule QtAwsACM
  */
 
 /*!
- * Constructs a ACMResponsePrivate object with public implementation \a q.
+ * Constructs a AcmResponsePrivate object with public implementation \a q.
  */
-ACMResponsePrivate::ACMResponsePrivate(
-    ACMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+AcmResponsePrivate::AcmResponsePrivate(
+    AcmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

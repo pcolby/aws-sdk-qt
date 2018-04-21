@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace EFS {
 
-class EFSRequest;
+class EfsRequest;
 
-class QTAWS_EXPORT EFSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT EfsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EFSRequest::Action action; ///< EFS action to be performed.
+    EfsRequest::Action action; ///< EFS action to be performed.
     QString apiVersion;        ///< EFS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< EFS request (query string) parameters. @todo?
 
-    EFSRequestPrivate(const EFSRequest::Action action, EFSRequest * const q);
-    EFSRequestPrivate(const EFSRequestPrivate &other, EFSRequest * const q);
+    EfsRequestPrivate(const EfsRequest::Action action, EfsRequest * const q);
+    EfsRequestPrivate(const EfsRequestPrivate &other, EfsRequest * const q);
 
-    static QString toString(const EFSRequest::Action &action);
+    static QString toString(const EfsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(EFSRequest)
+    Q_DECLARE_PUBLIC(EfsRequest)
 
 };
 

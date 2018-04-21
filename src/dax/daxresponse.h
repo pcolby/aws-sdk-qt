@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace DAX {
 
-class DAXResponsePrivate;
+class DaxResponsePrivate;
 
-class QTAWS_EXPORT DAXResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT DaxResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    DAXResponse(QObject * const parent = 0);
+    DaxResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    DAXResponse(DAXResponsePrivate * const d, QObject * const parent);
+    DaxResponse(DaxResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(DAXResponse)
-    Q_DISABLE_COPY(DAXResponse)
+    Q_DECLARE_PRIVATE(DaxResponse)
+    Q_DISABLE_COPY(DaxResponse)
 
 };
 

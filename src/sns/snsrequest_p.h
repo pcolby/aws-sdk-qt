@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SNS {
 
-class SNSRequest;
+class SnsRequest;
 
-class QTAWS_EXPORT SNSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SnsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SNSRequest::Action action; ///< SNS action to be performed.
+    SnsRequest::Action action; ///< SNS action to be performed.
     QString apiVersion;        ///< SNS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SNS request (query string) parameters. @todo?
 
-    SNSRequestPrivate(const SNSRequest::Action action, SNSRequest * const q);
-    SNSRequestPrivate(const SNSRequestPrivate &other, SNSRequest * const q);
+    SnsRequestPrivate(const SnsRequest::Action action, SnsRequest * const q);
+    SnsRequestPrivate(const SnsRequestPrivate &other, SnsRequest * const q);
 
-    static QString toString(const SNSRequest::Action &action);
+    static QString toString(const SnsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SNSRequest)
+    Q_DECLARE_PUBLIC(SnsRequest)
 
 };
 

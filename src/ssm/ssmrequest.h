@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SSM {
 
-class SSMRequestPrivate;
+class SsmRequestPrivate;
 
-class QTAWS_EXPORT SSMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SsmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSM.
@@ -137,9 +137,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SSMRequest(const Action action);
-    SSMRequest(const SSMRequest &other);
-    SSMRequest &operator=(const SSMRequest &other);
+    SsmRequest(const Action action);
+    SsmRequest(const SsmRequest &other);
+    SsmRequest &operator=(const SsmRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -148,12 +148,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SSMRequest &other) const override;
+    virtual bool operator==(const SsmRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SSMRequest(SSMRequestPrivate * const d);
+    SsmRequest(SsmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -166,7 +166,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SSMRequest)
+    Q_DECLARE_PRIVATE(SsmRequest)
 
 };
 

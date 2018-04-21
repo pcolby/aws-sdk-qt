@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SMS {
 
 /*!
- * \class QtAws::SMS::SMSResponse
- * \brief The SMSResponse class provides an interface for SMS responses.
+ * \class QtAws::SMS::SmsResponse
+ * \brief The SmsResponse class provides an interface for SMS responses.
  *
  * \inmodule QtAwsSMS
  */
 
 /*!
- * Constructs a SMSResponse object with parent \a parent.
+ * Constructs a SmsResponse object with parent \a parent.
  */
-SMSResponse::SMSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SMSResponsePrivate(this), parent)
+SmsResponse::SmsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SmsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SMSResponse object with private implementation \a d,
+ * Constructs a SmsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SMSResponsePrivate.
+ * implementation that inherits from SmsResponsePrivate.
  */
-SMSResponse::SMSResponse(SMSResponsePrivate * const d, QObject * const parent)
+SmsResponse::SmsResponse(SmsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SMSResponse::SMSResponse(SMSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SMSResponse::parseFailure(QIODevice &response)
+void SmsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SMSResponse);
+    Q_D(SmsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SMSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SMS::SMSResponsePrivate
- * \brief The SMSResponsePrivate class provides private implementation for SMSResponse.
+ * \class QtAws::SMS::SmsResponsePrivate
+ * \brief The SmsResponsePrivate class provides private implementation for SmsResponse.
  * \internal
  *
  * \inmodule QtAwsSMS
  */
 
 /*!
- * Constructs a SMSResponsePrivate object with public implementation \a q.
+ * Constructs a SmsResponsePrivate object with public implementation \a q.
  */
-SMSResponsePrivate::SMSResponsePrivate(
-    SMSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SmsResponsePrivate::SmsResponsePrivate(
+    SmsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

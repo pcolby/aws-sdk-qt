@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace SWF {
 
-class SWFResponse;
+class SwfResponse;
 
-class QTAWS_EXPORT SWFResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT SwfResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    SWFResponsePrivate(SWFResponse * const q);
+    SwfResponsePrivate(SwfResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SWFResponse)
-    Q_DISABLE_COPY(SWFResponsePrivate)
+    Q_DECLARE_PUBLIC(SwfResponse)
+    Q_DISABLE_COPY(SwfResponsePrivate)
 
 };
 

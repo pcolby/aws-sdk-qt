@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SQS {
 
-class SQSRequestPrivate;
+class SqsRequestPrivate;
 
-class QTAWS_EXPORT SQSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SqsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SQS.
@@ -60,9 +60,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SQSRequest(const Action action);
-    SQSRequest(const SQSRequest &other);
-    SQSRequest &operator=(const SQSRequest &other);
+    SqsRequest(const Action action);
+    SqsRequest(const SqsRequest &other);
+    SqsRequest &operator=(const SqsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -71,12 +71,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SQSRequest &other) const override;
+    virtual bool operator==(const SqsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SQSRequest(SQSRequestPrivate * const d);
+    SqsRequest(SqsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -89,7 +89,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SQSRequest)
+    Q_DECLARE_PRIVATE(SqsRequest)
 
 };
 

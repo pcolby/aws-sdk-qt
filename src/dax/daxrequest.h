@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DAX {
 
-class DAXRequestPrivate;
+class DaxRequestPrivate;
 
-class QTAWS_EXPORT DAXRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT DaxRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DAX.
@@ -61,9 +61,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    DAXRequest(const Action action);
-    DAXRequest(const DAXRequest &other);
-    DAXRequest &operator=(const DAXRequest &other);
+    DaxRequest(const Action action);
+    DaxRequest(const DaxRequest &other);
+    DaxRequest &operator=(const DaxRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -72,12 +72,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DAXRequest &other) const override;
+    virtual bool operator==(const DaxRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    DAXRequest(DAXRequestPrivate * const d);
+    DaxRequest(DaxRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -90,7 +90,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(DAXRequest)
+    Q_DECLARE_PRIVATE(DaxRequest)
 
 };
 

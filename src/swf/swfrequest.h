@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SWF {
 
-class SWFRequestPrivate;
+class SwfRequestPrivate;
 
-class QTAWS_EXPORT SWFRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SwfRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SWF.
@@ -71,9 +71,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SWFRequest(const Action action);
-    SWFRequest(const SWFRequest &other);
-    SWFRequest &operator=(const SWFRequest &other);
+    SwfRequest(const Action action);
+    SwfRequest(const SwfRequest &other);
+    SwfRequest &operator=(const SwfRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -82,12 +82,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SWFRequest &other) const override;
+    virtual bool operator==(const SwfRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SWFRequest(SWFRequestPrivate * const d);
+    SwfRequest(SwfRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -100,7 +100,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SWFRequest)
+    Q_DECLARE_PRIVATE(SwfRequest)
 
 };
 

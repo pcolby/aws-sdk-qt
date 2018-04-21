@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace ACM {
 
-class ACMResponsePrivate;
+class AcmResponsePrivate;
 
-class QTAWS_EXPORT ACMResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT AcmResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ACMResponse(QObject * const parent = 0);
+    AcmResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ACMResponse(ACMResponsePrivate * const d, QObject * const parent);
+    AcmResponse(AcmResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(ACMResponse)
-    Q_DISABLE_COPY(ACMResponse)
+    Q_DECLARE_PRIVATE(AcmResponse)
+    Q_DISABLE_COPY(AcmResponse)
 
 };
 

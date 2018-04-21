@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SSM {
 
 /*!
- * \class QtAws::SSM::SSMResponse
- * \brief The SSMResponse class provides an interface for SSM responses.
+ * \class QtAws::SSM::SsmResponse
+ * \brief The SsmResponse class provides an interface for SSM responses.
  *
  * \inmodule QtAwsSSM
  */
 
 /*!
- * Constructs a SSMResponse object with parent \a parent.
+ * Constructs a SsmResponse object with parent \a parent.
  */
-SSMResponse::SSMResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SSMResponsePrivate(this), parent)
+SsmResponse::SsmResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SsmResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SSMResponse object with private implementation \a d,
+ * Constructs a SsmResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSMResponsePrivate.
+ * implementation that inherits from SsmResponsePrivate.
  */
-SSMResponse::SSMResponse(SSMResponsePrivate * const d, QObject * const parent)
+SsmResponse::SsmResponse(SsmResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SSMResponse::SSMResponse(SSMResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SSMResponse::parseFailure(QIODevice &response)
+void SsmResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SSMResponse);
+    Q_D(SsmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SSMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SSM::SSMResponsePrivate
- * \brief The SSMResponsePrivate class provides private implementation for SSMResponse.
+ * \class QtAws::SSM::SsmResponsePrivate
+ * \brief The SsmResponsePrivate class provides private implementation for SsmResponse.
  * \internal
  *
  * \inmodule QtAwsSSM
  */
 
 /*!
- * Constructs a SSMResponsePrivate object with public implementation \a q.
+ * Constructs a SsmResponsePrivate object with public implementation \a q.
  */
-SSMResponsePrivate::SSMResponsePrivate(
-    SSMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SsmResponsePrivate::SsmResponsePrivate(
+    SsmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

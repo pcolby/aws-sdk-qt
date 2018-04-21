@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ECS {
 
-class ECSRequestPrivate;
+class EcsRequestPrivate;
 
-class QTAWS_EXPORT ECSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT EcsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ECS.
@@ -71,9 +71,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ECSRequest(const Action action);
-    ECSRequest(const ECSRequest &other);
-    ECSRequest &operator=(const ECSRequest &other);
+    EcsRequest(const Action action);
+    EcsRequest(const EcsRequest &other);
+    EcsRequest &operator=(const EcsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -82,12 +82,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ECSRequest &other) const override;
+    virtual bool operator==(const EcsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    ECSRequest(ECSRequestPrivate * const d);
+    EcsRequest(EcsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -100,7 +100,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(ECSRequest)
+    Q_DECLARE_PRIVATE(EcsRequest)
 
 };
 

@@ -27,30 +27,30 @@ namespace QtAws {
 namespace WAF {
 
 /*!
- * \class QtAws::WAF::WAFResponse
- * \brief The WAFResponse class provides an interface for WAF responses.
+ * \class QtAws::WAF::WafResponse
+ * \brief The WafResponse class provides an interface for WAF responses.
  *
  * \inmodule QtAwsWAF
  */
 
 /*!
- * Constructs a WAFResponse object with parent \a parent.
+ * Constructs a WafResponse object with parent \a parent.
  */
-WAFResponse::WAFResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new WAFResponsePrivate(this), parent)
+WafResponse::WafResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new WafResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a WAFResponse object with private implementation \a d,
+ * Constructs a WafResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from WAFResponsePrivate.
+ * implementation that inherits from WafResponsePrivate.
  */
-WAFResponse::WAFResponse(WAFResponsePrivate * const d, QObject * const parent)
+WafResponse::WafResponse(WafResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ WAFResponse::WAFResponse(WAFResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void WAFResponse::parseFailure(QIODevice &response)
+void WafResponse::parseFailure(QIODevice &response)
 {
-    Q_D(WAFResponse);
+    Q_D(WafResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void WAFResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::WAF::WAFResponsePrivate
- * \brief The WAFResponsePrivate class provides private implementation for WAFResponse.
+ * \class QtAws::WAF::WafResponsePrivate
+ * \brief The WafResponsePrivate class provides private implementation for WafResponse.
  * \internal
  *
  * \inmodule QtAwsWAF
  */
 
 /*!
- * Constructs a WAFResponsePrivate object with public implementation \a q.
+ * Constructs a WafResponsePrivate object with public implementation \a q.
  */
-WAFResponsePrivate::WAFResponsePrivate(
-    WAFResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+WafResponsePrivate::WafResponsePrivate(
+    WafResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

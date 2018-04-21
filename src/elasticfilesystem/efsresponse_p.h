@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace EFS {
 
-class EFSResponse;
+class EfsResponse;
 
-class QTAWS_EXPORT EFSResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT EfsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    EFSResponsePrivate(EFSResponse * const q);
+    EfsResponsePrivate(EfsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(EFSResponse)
-    Q_DISABLE_COPY(EFSResponsePrivate)
+    Q_DECLARE_PUBLIC(EfsResponse)
+    Q_DISABLE_COPY(EfsResponsePrivate)
 
 };
 

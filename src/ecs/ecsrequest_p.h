@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace ECS {
 
-class ECSRequest;
+class EcsRequest;
 
-class QTAWS_EXPORT ECSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT EcsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ECSRequest::Action action; ///< ECS action to be performed.
+    EcsRequest::Action action; ///< ECS action to be performed.
     QString apiVersion;        ///< ECS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< ECS request (query string) parameters. @todo?
 
-    ECSRequestPrivate(const ECSRequest::Action action, ECSRequest * const q);
-    ECSRequestPrivate(const ECSRequestPrivate &other, ECSRequest * const q);
+    EcsRequestPrivate(const EcsRequest::Action action, EcsRequest * const q);
+    EcsRequestPrivate(const EcsRequestPrivate &other, EcsRequest * const q);
 
-    static QString toString(const ECSRequest::Action &action);
+    static QString toString(const EcsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ECSRequest)
+    Q_DECLARE_PUBLIC(EcsRequest)
 
 };
 

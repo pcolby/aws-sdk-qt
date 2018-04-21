@@ -27,30 +27,30 @@ namespace QtAws {
 namespace FMS {
 
 /*!
- * \class QtAws::FMS::FMSResponse
- * \brief The FMSResponse class provides an interface for FMS responses.
+ * \class QtAws::FMS::FmsResponse
+ * \brief The FmsResponse class provides an interface for FMS responses.
  *
  * \inmodule QtAwsFMS
  */
 
 /*!
- * Constructs a FMSResponse object with parent \a parent.
+ * Constructs a FmsResponse object with parent \a parent.
  */
-FMSResponse::FMSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new FMSResponsePrivate(this), parent)
+FmsResponse::FmsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new FmsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a FMSResponse object with private implementation \a d,
+ * Constructs a FmsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from FMSResponsePrivate.
+ * implementation that inherits from FmsResponsePrivate.
  */
-FMSResponse::FMSResponse(FMSResponsePrivate * const d, QObject * const parent)
+FmsResponse::FmsResponse(FmsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ FMSResponse::FMSResponse(FMSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void FMSResponse::parseFailure(QIODevice &response)
+void FmsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(FMSResponse);
+    Q_D(FmsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void FMSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::FMS::FMSResponsePrivate
- * \brief The FMSResponsePrivate class provides private implementation for FMSResponse.
+ * \class QtAws::FMS::FmsResponsePrivate
+ * \brief The FmsResponsePrivate class provides private implementation for FmsResponse.
  * \internal
  *
  * \inmodule QtAwsFMS
  */
 
 /*!
- * Constructs a FMSResponsePrivate object with public implementation \a q.
+ * Constructs a FmsResponsePrivate object with public implementation \a q.
  */
-FMSResponsePrivate::FMSResponsePrivate(
-    FMSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+FmsResponsePrivate::FmsResponsePrivate(
+    FmsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

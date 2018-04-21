@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SFN {
 
-class SFNRequestPrivate;
+class SfnRequestPrivate;
 
-class QTAWS_EXPORT SFNRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SfnRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SFN.
@@ -59,9 +59,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SFNRequest(const Action action);
-    SFNRequest(const SFNRequest &other);
-    SFNRequest &operator=(const SFNRequest &other);
+    SfnRequest(const Action action);
+    SfnRequest(const SfnRequest &other);
+    SfnRequest &operator=(const SfnRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -70,12 +70,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SFNRequest &other) const override;
+    virtual bool operator==(const SfnRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SFNRequest(SFNRequestPrivate * const d);
+    SfnRequest(SfnRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -88,7 +88,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SFNRequest)
+    Q_DECLARE_PRIVATE(SfnRequest)
 
 };
 

@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ECR {
 
-class ECRRequestPrivate;
+class EcrRequestPrivate;
 
-class QTAWS_EXPORT ECRRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT EcrRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ECR.
@@ -62,9 +62,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ECRRequest(const Action action);
-    ECRRequest(const ECRRequest &other);
-    ECRRequest &operator=(const ECRRequest &other);
+    EcrRequest(const Action action);
+    EcrRequest(const EcrRequest &other);
+    EcrRequest &operator=(const EcrRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -73,12 +73,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ECRRequest &other) const override;
+    virtual bool operator==(const EcrRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    ECRRequest(ECRRequestPrivate * const d);
+    EcrRequest(EcrRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -91,7 +91,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(ECRRequest)
+    Q_DECLARE_PRIVATE(EcrRequest)
 
 };
 

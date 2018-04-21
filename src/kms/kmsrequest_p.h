@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace KMS {
 
-class KMSRequest;
+class KmsRequest;
 
-class QTAWS_EXPORT KMSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT KmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    KMSRequest::Action action; ///< KMS action to be performed.
+    KmsRequest::Action action; ///< KMS action to be performed.
     QString apiVersion;        ///< KMS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< KMS request (query string) parameters. @todo?
 
-    KMSRequestPrivate(const KMSRequest::Action action, KMSRequest * const q);
-    KMSRequestPrivate(const KMSRequestPrivate &other, KMSRequest * const q);
+    KmsRequestPrivate(const KmsRequest::Action action, KmsRequest * const q);
+    KmsRequestPrivate(const KmsRequestPrivate &other, KmsRequest * const q);
 
-    static QString toString(const KMSRequest::Action &action);
+    static QString toString(const KmsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(KMSRequest)
+    Q_DECLARE_PUBLIC(KmsRequest)
 
 };
 

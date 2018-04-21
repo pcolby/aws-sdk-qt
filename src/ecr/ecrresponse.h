@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace ECR {
 
-class ECRResponsePrivate;
+class EcrResponsePrivate;
 
-class QTAWS_EXPORT ECRResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT EcrResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ECRResponse(QObject * const parent = 0);
+    EcrResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ECRResponse(ECRResponsePrivate * const d, QObject * const parent);
+    EcrResponse(EcrResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(ECRResponse)
-    Q_DISABLE_COPY(ECRResponse)
+    Q_DECLARE_PRIVATE(EcrResponse)
+    Q_DISABLE_COPY(EcrResponse)
 
 };
 

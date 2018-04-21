@@ -27,30 +27,30 @@ namespace QtAws {
 namespace EMR {
 
 /*!
- * \class QtAws::EMR::EMRResponse
- * \brief The EMRResponse class provides an interface for EMR responses.
+ * \class QtAws::EMR::EmrResponse
+ * \brief The EmrResponse class provides an interface for EMR responses.
  *
  * \inmodule QtAwsEMR
  */
 
 /*!
- * Constructs a EMRResponse object with parent \a parent.
+ * Constructs a EmrResponse object with parent \a parent.
  */
-EMRResponse::EMRResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EMRResponsePrivate(this), parent)
+EmrResponse::EmrResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new EmrResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a EMRResponse object with private implementation \a d,
+ * Constructs a EmrResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EMRResponsePrivate.
+ * implementation that inherits from EmrResponsePrivate.
  */
-EMRResponse::EMRResponse(EMRResponsePrivate * const d, QObject * const parent)
+EmrResponse::EmrResponse(EmrResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ EMRResponse::EMRResponse(EMRResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void EMRResponse::parseFailure(QIODevice &response)
+void EmrResponse::parseFailure(QIODevice &response)
 {
-    Q_D(EMRResponse);
+    Q_D(EmrResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void EMRResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EMR::EMRResponsePrivate
- * \brief The EMRResponsePrivate class provides private implementation for EMRResponse.
+ * \class QtAws::EMR::EmrResponsePrivate
+ * \brief The EmrResponsePrivate class provides private implementation for EmrResponse.
  * \internal
  *
  * \inmodule QtAwsEMR
  */
 
 /*!
- * Constructs a EMRResponsePrivate object with public implementation \a q.
+ * Constructs a EmrResponsePrivate object with public implementation \a q.
  */
-EMRResponsePrivate::EMRResponsePrivate(
-    EMRResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+EmrResponsePrivate::EmrResponsePrivate(
+    EmrResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -24,14 +24,14 @@ namespace QtAws {
 namespace ECS {
 
 /*!
- * \class QtAws::ECS::ECSRequest
- * \brief The ECSRequest class provides an interface for ECS requests.
+ * \class QtAws::ECS::EcsRequest
+ * \brief The EcsRequest class provides an interface for ECS requests.
  *
  * \inmodule QtAwsECS
  */
 
 /*!
- * \enum ECSRequest::Action
+ * \enum EcsRequest::Action
  *
  * This enum describes the actions that can be performed as ECS
  * requests.
@@ -70,10 +70,10 @@ namespace ECS {
  */
 
 /*!
- * Constructs a ECSRequest object for ECS \a action.
+ * Constructs a EcsRequest object for ECS \a action.
  */
-ECSRequest::ECSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ECSRequestPrivate(action, this))
+EcsRequest::EcsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new EcsRequestPrivate(action, this))
 {
 
 }
@@ -81,18 +81,18 @@ ECSRequest::ECSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-ECSRequest::ECSRequest(const ECSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ECSRequestPrivate(*other.d_func(), this))
+EcsRequest::EcsRequest(const EcsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new EcsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the ECSRequest object to be equal to \a other.
+ * Sets the EcsRequest object to be equal to \a other.
  */
-ECSRequest& ECSRequest::operator=(const ECSRequest &other)
+EcsRequest& EcsRequest::operator=(const EcsRequest &other)
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -100,12 +100,12 @@ ECSRequest& ECSRequest::operator=(const ECSRequest &other)
 }
 
 /*!
- * Constructs aa ECSRequest object with private implementation \a d.
+ * Constructs aa EcsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ECSRequestPrivate.
+ * implementation that inherits from EcsRequestPrivate.
  */
-ECSRequest::ECSRequest(ECSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EcsRequest::EcsRequest(EcsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -113,44 +113,44 @@ ECSRequest::ECSRequest(ECSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the ECS action to be performed by this request.
  */
-ECSRequest::Action ECSRequest::action() const
+EcsRequest::Action EcsRequest::action() const
 {
-    Q_D(const ECSRequest);
+    Q_D(const EcsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the ECS action to be performed by this request.
  */
-QString ECSRequest::actionString() const
+QString EcsRequest::actionString() const
 {
-    return ECSRequestPrivate::toString(action());
+    return EcsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the ECS API version implemented by this request.
  */
-QString ECSRequest::apiVersion() const
+QString EcsRequest::apiVersion() const
 {
-    Q_D(const ECSRequest);
+    Q_D(const EcsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the ECS action to be performed by this request to \a action.
  */
-void ECSRequest::setAction(const Action action)
+void EcsRequest::setAction(const Action action)
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the ECS API version to include in this request to \a version.
  */
-void ECSRequest::setApiVersion(const QString &version)
+void EcsRequest::setApiVersion(const QString &version)
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     d->apiVersion = version;
 }
 
@@ -162,7 +162,7 @@ void ECSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool ECSRequest::operator==(const ECSRequest &other) const
+bool EcsRequest::operator==(const EcsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -183,7 +183,7 @@ bool ECSRequest::operator==(const ECSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool ECSRequest::isValidQueueName(const QString &queueName)
+/*bool EcsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -193,45 +193,45 @@ bool ECSRequest::operator==(const ECSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int ECSRequest::clearParameter(const QString &name)
+int EcsRequest::clearParameter(const QString &name)
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void ECSRequest::clearParameters()
+void EcsRequest::clearParameters()
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant ECSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant EcsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const ECSRequest);
+    Q_D(const EcsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &ECSRequest::parameters() const
+const QVariantMap &EcsRequest::parameters() const
 {
-    Q_D(const ECSRequest);
+    Q_D(const EcsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void ECSRequest::setParameter(const QString &name, const QVariant &value)
+void EcsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -239,9 +239,9 @@ void ECSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void ECSRequest::setParameters(const QVariantMap &parameters)
+void EcsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(ECSRequest);
+    Q_D(EcsRequest);
     d->parameters = parameters;
 }
 
@@ -253,27 +253,27 @@ void ECSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest ECSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest EcsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ECSRequest);
+    Q_D(const EcsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::ECS::ECSRequestPrivate
- * \brief The ECSRequestPrivate class provides private implementation for ECSRequest.
+ * \class QtAws::ECS::EcsRequestPrivate
+ * \brief The EcsRequestPrivate class provides private implementation for EcsRequest.
  * \internal
  *
  * \inmodule QtAwsECS
  */
 
 /*!
- * Constructs a ECSRequestPrivate object for ECS \a action,
+ * Constructs a EcsRequestPrivate object for ECS \a action,
  * with public implementation \a q.
  */
-ECSRequestPrivate::ECSRequestPrivate(const ECSRequest::Action action, ECSRequest * const q)
+EcsRequestPrivate::EcsRequestPrivate(const EcsRequest::Action action, EcsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -285,10 +285,10 @@ ECSRequestPrivate::ECSRequestPrivate(const ECSRequest::Action action, ECSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the ECSRequest class's copy constructor.
+ * This is required to support the EcsRequest class's copy constructor.
  */
-ECSRequestPrivate::ECSRequestPrivate(const ECSRequestPrivate &other,
-                                     ECSRequest * const q)
+EcsRequestPrivate::EcsRequestPrivate(const EcsRequestPrivate &other,
+                                     EcsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -299,14 +299,14 @@ ECSRequestPrivate::ECSRequestPrivate(const ECSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts ECSRequest::Action enumerator values to their respective
+ * This function converts EcsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ECS service's Action
  * query parameters.
  */
-QString ECSRequestPrivate::toString(const ECSRequest::Action &action)
+QString EcsRequestPrivate::toString(const EcsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case ECSRequest::action##Action: return QStringLiteral(#action)
+        case EcsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

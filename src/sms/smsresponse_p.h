@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace SMS {
 
-class SMSResponse;
+class SmsResponse;
 
-class QTAWS_EXPORT SMSResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT SmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    SMSResponsePrivate(SMSResponse * const q);
+    SmsResponsePrivate(SmsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SMSResponse)
-    Q_DISABLE_COPY(SMSResponsePrivate)
+    Q_DECLARE_PUBLIC(SmsResponse)
+    Q_DISABLE_COPY(SmsResponsePrivate)
 
 };
 

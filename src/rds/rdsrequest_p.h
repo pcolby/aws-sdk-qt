@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace RDS {
 
-class RDSRequest;
+class RdsRequest;
 
-class QTAWS_EXPORT RDSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT RdsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    RDSRequest::Action action; ///< RDS action to be performed.
+    RdsRequest::Action action; ///< RDS action to be performed.
     QString apiVersion;        ///< RDS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< RDS request (query string) parameters. @todo?
 
-    RDSRequestPrivate(const RDSRequest::Action action, RDSRequest * const q);
-    RDSRequestPrivate(const RDSRequestPrivate &other, RDSRequest * const q);
+    RdsRequestPrivate(const RdsRequest::Action action, RdsRequest * const q);
+    RdsRequestPrivate(const RdsRequestPrivate &other, RdsRequest * const q);
 
-    static QString toString(const RDSRequest::Action &action);
+    static QString toString(const RdsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(RDSRequest)
+    Q_DECLARE_PUBLIC(RdsRequest)
 
 };
 

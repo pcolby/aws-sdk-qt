@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SFN {
 
 /*!
- * \class QtAws::SFN::SFNResponse
- * \brief The SFNResponse class provides an interface for SFN responses.
+ * \class QtAws::SFN::SfnResponse
+ * \brief The SfnResponse class provides an interface for SFN responses.
  *
  * \inmodule QtAwsSFN
  */
 
 /*!
- * Constructs a SFNResponse object with parent \a parent.
+ * Constructs a SfnResponse object with parent \a parent.
  */
-SFNResponse::SFNResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SFNResponsePrivate(this), parent)
+SfnResponse::SfnResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SfnResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SFNResponse object with private implementation \a d,
+ * Constructs a SfnResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SFNResponsePrivate.
+ * implementation that inherits from SfnResponsePrivate.
  */
-SFNResponse::SFNResponse(SFNResponsePrivate * const d, QObject * const parent)
+SfnResponse::SfnResponse(SfnResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SFNResponse::SFNResponse(SFNResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SFNResponse::parseFailure(QIODevice &response)
+void SfnResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SFNResponse);
+    Q_D(SfnResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SFNResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SFN::SFNResponsePrivate
- * \brief The SFNResponsePrivate class provides private implementation for SFNResponse.
+ * \class QtAws::SFN::SfnResponsePrivate
+ * \brief The SfnResponsePrivate class provides private implementation for SfnResponse.
  * \internal
  *
  * \inmodule QtAwsSFN
  */
 
 /*!
- * Constructs a SFNResponsePrivate object with public implementation \a q.
+ * Constructs a SfnResponsePrivate object with public implementation \a q.
  */
-SFNResponsePrivate::SFNResponsePrivate(
-    SFNResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SfnResponsePrivate::SfnResponsePrivate(
+    SfnResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

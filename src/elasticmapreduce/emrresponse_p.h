@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace EMR {
 
-class EMRResponse;
+class EmrResponse;
 
-class QTAWS_EXPORT EMRResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT EmrResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    EMRResponsePrivate(EMRResponse * const q);
+    EmrResponsePrivate(EmrResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(EMRResponse)
-    Q_DISABLE_COPY(EMRResponsePrivate)
+    Q_DECLARE_PUBLIC(EmrResponse)
+    Q_DISABLE_COPY(EmrResponsePrivate)
 
 };
 

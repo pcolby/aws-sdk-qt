@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace WAF {
 
-class WAFRequestPrivate;
+class WafRequestPrivate;
 
-class QTAWS_EXPORT WAFRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT WafRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WAF.
@@ -109,9 +109,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    WAFRequest(const Action action);
-    WAFRequest(const WAFRequest &other);
-    WAFRequest &operator=(const WAFRequest &other);
+    WafRequest(const Action action);
+    WafRequest(const WafRequest &other);
+    WafRequest &operator=(const WafRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -120,12 +120,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const WAFRequest &other) const override;
+    virtual bool operator==(const WafRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    WAFRequest(WAFRequestPrivate * const d);
+    WafRequest(WafRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -138,7 +138,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(WAFRequest)
+    Q_DECLARE_PRIVATE(WafRequest)
 
 };
 

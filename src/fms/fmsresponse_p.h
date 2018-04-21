@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace FMS {
 
-class FMSResponse;
+class FmsResponse;
 
-class QTAWS_EXPORT FMSResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT FmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    FMSResponsePrivate(FMSResponse * const q);
+    FmsResponsePrivate(FmsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(FMSResponse)
-    Q_DISABLE_COPY(FMSResponsePrivate)
+    Q_DECLARE_PUBLIC(FmsResponse)
+    Q_DISABLE_COPY(FmsResponsePrivate)
 
 };
 

@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace KMS {
 
-class KMSResponse;
+class KmsResponse;
 
-class QTAWS_EXPORT KMSResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT KmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    KMSResponsePrivate(KMSResponse * const q);
+    KmsResponsePrivate(KmsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(KMSResponse)
-    Q_DISABLE_COPY(KMSResponsePrivate)
+    Q_DECLARE_PUBLIC(KmsResponse)
+    Q_DISABLE_COPY(KmsResponsePrivate)
 
 };
 

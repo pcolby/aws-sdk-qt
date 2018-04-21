@@ -27,30 +27,30 @@ namespace QtAws {
 namespace RDS {
 
 /*!
- * \class QtAws::RDS::RDSResponse
- * \brief The RDSResponse class provides an interface for RDS responses.
+ * \class QtAws::RDS::RdsResponse
+ * \brief The RdsResponse class provides an interface for RDS responses.
  *
  * \inmodule QtAwsRDS
  */
 
 /*!
- * Constructs a RDSResponse object with parent \a parent.
+ * Constructs a RdsResponse object with parent \a parent.
  */
-RDSResponse::RDSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new RDSResponsePrivate(this), parent)
+RdsResponse::RdsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new RdsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a RDSResponse object with private implementation \a d,
+ * Constructs a RdsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from RDSResponsePrivate.
+ * implementation that inherits from RdsResponsePrivate.
  */
-RDSResponse::RDSResponse(RDSResponsePrivate * const d, QObject * const parent)
+RdsResponse::RdsResponse(RdsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ RDSResponse::RDSResponse(RDSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void RDSResponse::parseFailure(QIODevice &response)
+void RdsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(RDSResponse);
+    Q_D(RdsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void RDSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::RDS::RDSResponsePrivate
- * \brief The RDSResponsePrivate class provides private implementation for RDSResponse.
+ * \class QtAws::RDS::RdsResponsePrivate
+ * \brief The RdsResponsePrivate class provides private implementation for RdsResponse.
  * \internal
  *
  * \inmodule QtAwsRDS
  */
 
 /*!
- * Constructs a RDSResponsePrivate object with public implementation \a q.
+ * Constructs a RdsResponsePrivate object with public implementation \a q.
  */
-RDSResponsePrivate::RDSResponsePrivate(
-    RDSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+RdsResponsePrivate::RdsResponsePrivate(
+    RdsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

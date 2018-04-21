@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace DAX {
 
-class DAXRequest;
+class DaxRequest;
 
-class QTAWS_EXPORT DAXRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT DaxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    DAXRequest::Action action; ///< DAX action to be performed.
+    DaxRequest::Action action; ///< DAX action to be performed.
     QString apiVersion;        ///< DAX API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< DAX request (query string) parameters. @todo?
 
-    DAXRequestPrivate(const DAXRequest::Action action, DAXRequest * const q);
-    DAXRequestPrivate(const DAXRequestPrivate &other, DAXRequest * const q);
+    DaxRequestPrivate(const DaxRequest::Action action, DaxRequest * const q);
+    DaxRequestPrivate(const DaxRequestPrivate &other, DaxRequest * const q);
 
-    static QString toString(const DAXRequest::Action &action);
+    static QString toString(const DaxRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(DAXRequest)
+    Q_DECLARE_PUBLIC(DaxRequest)
 
 };
 

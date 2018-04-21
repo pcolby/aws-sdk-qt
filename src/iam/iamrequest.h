@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace IAM {
 
-class IAMRequestPrivate;
+class IamRequestPrivate;
 
-class QTAWS_EXPORT IAMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT IamRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IAM.
@@ -163,9 +163,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    IAMRequest(const Action action);
-    IAMRequest(const IAMRequest &other);
-    IAMRequest &operator=(const IAMRequest &other);
+    IamRequest(const Action action);
+    IamRequest(const IamRequest &other);
+    IamRequest &operator=(const IamRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -174,12 +174,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const IAMRequest &other) const override;
+    virtual bool operator==(const IamRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    IAMRequest(IAMRequestPrivate * const d);
+    IamRequest(IamRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -192,7 +192,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(IAMRequest)
+    Q_DECLARE_PRIVATE(IamRequest)
 
 };
 

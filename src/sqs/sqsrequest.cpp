@@ -24,14 +24,14 @@ namespace QtAws {
 namespace SQS {
 
 /*!
- * \class QtAws::SQS::SQSRequest
- * \brief The SQSRequest class provides an interface for SQS requests.
+ * \class QtAws::SQS::SqsRequest
+ * \brief The SqsRequest class provides an interface for SQS requests.
  *
  * \inmodule QtAwsSQS
  */
 
 /*!
- * \enum SQSRequest::Action
+ * \enum SqsRequest::Action
  *
  * This enum describes the actions that can be performed as SQS
  * requests.
@@ -59,10 +59,10 @@ namespace SQS {
  */
 
 /*!
- * Constructs a SQSRequest object for SQS \a action.
+ * Constructs a SqsRequest object for SQS \a action.
  */
-SQSRequest::SQSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SQSRequestPrivate(action, this))
+SqsRequest::SqsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SqsRequestPrivate(action, this))
 {
 
 }
@@ -70,18 +70,18 @@ SQSRequest::SQSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SQSRequest::SQSRequest(const SQSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SQSRequestPrivate(*other.d_func(), this))
+SqsRequest::SqsRequest(const SqsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SqsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SQSRequest object to be equal to \a other.
+ * Sets the SqsRequest object to be equal to \a other.
  */
-SQSRequest& SQSRequest::operator=(const SQSRequest &other)
+SqsRequest& SqsRequest::operator=(const SqsRequest &other)
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -89,12 +89,12 @@ SQSRequest& SQSRequest::operator=(const SQSRequest &other)
 }
 
 /*!
- * Constructs aa SQSRequest object with private implementation \a d.
+ * Constructs aa SqsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SQSRequestPrivate.
+ * implementation that inherits from SqsRequestPrivate.
  */
-SQSRequest::SQSRequest(SQSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SqsRequest::SqsRequest(SqsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -102,44 +102,44 @@ SQSRequest::SQSRequest(SQSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the SQS action to be performed by this request.
  */
-SQSRequest::Action SQSRequest::action() const
+SqsRequest::Action SqsRequest::action() const
 {
-    Q_D(const SQSRequest);
+    Q_D(const SqsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the SQS action to be performed by this request.
  */
-QString SQSRequest::actionString() const
+QString SqsRequest::actionString() const
 {
-    return SQSRequestPrivate::toString(action());
+    return SqsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the SQS API version implemented by this request.
  */
-QString SQSRequest::apiVersion() const
+QString SqsRequest::apiVersion() const
 {
-    Q_D(const SQSRequest);
+    Q_D(const SqsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the SQS action to be performed by this request to \a action.
  */
-void SQSRequest::setAction(const Action action)
+void SqsRequest::setAction(const Action action)
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the SQS API version to include in this request to \a version.
  */
-void SQSRequest::setApiVersion(const QString &version)
+void SqsRequest::setApiVersion(const QString &version)
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     d->apiVersion = version;
 }
 
@@ -151,7 +151,7 @@ void SQSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SQSRequest::operator==(const SQSRequest &other) const
+bool SqsRequest::operator==(const SqsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -172,7 +172,7 @@ bool SQSRequest::operator==(const SQSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SQSRequest::isValidQueueName(const QString &queueName)
+/*bool SqsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -182,45 +182,45 @@ bool SQSRequest::operator==(const SQSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SQSRequest::clearParameter(const QString &name)
+int SqsRequest::clearParameter(const QString &name)
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SQSRequest::clearParameters()
+void SqsRequest::clearParameters()
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SQSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SqsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SQSRequest);
+    Q_D(const SqsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SQSRequest::parameters() const
+const QVariantMap &SqsRequest::parameters() const
 {
-    Q_D(const SQSRequest);
+    Q_D(const SqsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SQSRequest::setParameter(const QString &name, const QVariant &value)
+void SqsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -228,9 +228,9 @@ void SQSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SQSRequest::setParameters(const QVariantMap &parameters)
+void SqsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SQSRequest);
+    Q_D(SqsRequest);
     d->parameters = parameters;
 }
 
@@ -242,27 +242,27 @@ void SQSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SQSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SQSRequest);
+    Q_D(const SqsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SQS::SQSRequestPrivate
- * \brief The SQSRequestPrivate class provides private implementation for SQSRequest.
+ * \class QtAws::SQS::SqsRequestPrivate
+ * \brief The SqsRequestPrivate class provides private implementation for SqsRequest.
  * \internal
  *
  * \inmodule QtAwsSQS
  */
 
 /*!
- * Constructs a SQSRequestPrivate object for SQS \a action,
+ * Constructs a SqsRequestPrivate object for SQS \a action,
  * with public implementation \a q.
  */
-SQSRequestPrivate::SQSRequestPrivate(const SQSRequest::Action action, SQSRequest * const q)
+SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -274,10 +274,10 @@ SQSRequestPrivate::SQSRequestPrivate(const SQSRequest::Action action, SQSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SQSRequest class's copy constructor.
+ * This is required to support the SqsRequest class's copy constructor.
  */
-SQSRequestPrivate::SQSRequestPrivate(const SQSRequestPrivate &other,
-                                     SQSRequest * const q)
+SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
+                                     SqsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -288,14 +288,14 @@ SQSRequestPrivate::SQSRequestPrivate(const SQSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SQSRequest::Action enumerator values to their respective
+ * This function converts SqsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SQS service's Action
  * query parameters.
  */
-QString SQSRequestPrivate::toString(const SQSRequest::Action &action)
+QString SqsRequestPrivate::toString(const SqsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SQSRequest::action##Action: return QStringLiteral(#action)
+        case SqsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

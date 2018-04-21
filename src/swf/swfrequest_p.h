@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SWF {
 
-class SWFRequest;
+class SwfRequest;
 
-class QTAWS_EXPORT SWFRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SwfRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SWFRequest::Action action; ///< SWF action to be performed.
+    SwfRequest::Action action; ///< SWF action to be performed.
     QString apiVersion;        ///< SWF API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SWF request (query string) parameters. @todo?
 
-    SWFRequestPrivate(const SWFRequest::Action action, SWFRequest * const q);
-    SWFRequestPrivate(const SWFRequestPrivate &other, SWFRequest * const q);
+    SwfRequestPrivate(const SwfRequest::Action action, SwfRequest * const q);
+    SwfRequestPrivate(const SwfRequestPrivate &other, SwfRequest * const q);
 
-    static QString toString(const SWFRequest::Action &action);
+    static QString toString(const SwfRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SWFRequest)
+    Q_DECLARE_PUBLIC(SwfRequest)
 
 };
 

@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SMS {
 
-class SMSRequest;
+class SmsRequest;
 
-class QTAWS_EXPORT SMSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SMSRequest::Action action; ///< SMS action to be performed.
+    SmsRequest::Action action; ///< SMS action to be performed.
     QString apiVersion;        ///< SMS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SMS request (query string) parameters. @todo?
 
-    SMSRequestPrivate(const SMSRequest::Action action, SMSRequest * const q);
-    SMSRequestPrivate(const SMSRequestPrivate &other, SMSRequest * const q);
+    SmsRequestPrivate(const SmsRequest::Action action, SmsRequest * const q);
+    SmsRequestPrivate(const SmsRequestPrivate &other, SmsRequest * const q);
 
-    static QString toString(const SMSRequest::Action &action);
+    static QString toString(const SmsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SMSRequest)
+    Q_DECLARE_PUBLIC(SmsRequest)
 
 };
 

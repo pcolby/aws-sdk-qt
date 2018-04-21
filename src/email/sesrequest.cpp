@@ -24,14 +24,14 @@ namespace QtAws {
 namespace SES {
 
 /*!
- * \class QtAws::SES::SESRequest
- * \brief The SESRequest class provides an interface for SES requests.
+ * \class QtAws::SES::SesRequest
+ * \brief The SesRequest class provides an interface for SES requests.
  *
  * \inmodule QtAwsSES
  */
 
 /*!
- * \enum SESRequest::Action
+ * \enum SesRequest::Action
  *
  * This enum describes the actions that can be performed as SES
  * requests.
@@ -109,10 +109,10 @@ namespace SES {
  */
 
 /*!
- * Constructs a SESRequest object for SES \a action.
+ * Constructs a SesRequest object for SES \a action.
  */
-SESRequest::SESRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SESRequestPrivate(action, this))
+SesRequest::SesRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SesRequestPrivate(action, this))
 {
 
 }
@@ -120,18 +120,18 @@ SESRequest::SESRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SESRequest::SESRequest(const SESRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SESRequestPrivate(*other.d_func(), this))
+SesRequest::SesRequest(const SesRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SesRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SESRequest object to be equal to \a other.
+ * Sets the SesRequest object to be equal to \a other.
  */
-SESRequest& SESRequest::operator=(const SESRequest &other)
+SesRequest& SesRequest::operator=(const SesRequest &other)
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -139,12 +139,12 @@ SESRequest& SESRequest::operator=(const SESRequest &other)
 }
 
 /*!
- * Constructs aa SESRequest object with private implementation \a d.
+ * Constructs aa SesRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SESRequestPrivate.
+ * implementation that inherits from SesRequestPrivate.
  */
-SESRequest::SESRequest(SESRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SesRequest::SesRequest(SesRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -152,44 +152,44 @@ SESRequest::SESRequest(SESRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the SES action to be performed by this request.
  */
-SESRequest::Action SESRequest::action() const
+SesRequest::Action SesRequest::action() const
 {
-    Q_D(const SESRequest);
+    Q_D(const SesRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the SES action to be performed by this request.
  */
-QString SESRequest::actionString() const
+QString SesRequest::actionString() const
 {
-    return SESRequestPrivate::toString(action());
+    return SesRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the SES API version implemented by this request.
  */
-QString SESRequest::apiVersion() const
+QString SesRequest::apiVersion() const
 {
-    Q_D(const SESRequest);
+    Q_D(const SesRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the SES action to be performed by this request to \a action.
  */
-void SESRequest::setAction(const Action action)
+void SesRequest::setAction(const Action action)
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     d->action = action;
 }
 
 /*!
  * Sets the SES API version to include in this request to \a version.
  */
-void SESRequest::setApiVersion(const QString &version)
+void SesRequest::setApiVersion(const QString &version)
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     d->apiVersion = version;
 }
 
@@ -201,7 +201,7 @@ void SESRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SESRequest::operator==(const SESRequest &other) const
+bool SesRequest::operator==(const SesRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -222,7 +222,7 @@ bool SESRequest::operator==(const SESRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SESRequest::isValidQueueName(const QString &queueName)
+/*bool SesRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -232,45 +232,45 @@ bool SESRequest::operator==(const SESRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SESRequest::clearParameter(const QString &name)
+int SesRequest::clearParameter(const QString &name)
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SESRequest::clearParameters()
+void SesRequest::clearParameters()
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SESRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SesRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SESRequest);
+    Q_D(const SesRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SESRequest::parameters() const
+const QVariantMap &SesRequest::parameters() const
 {
-    Q_D(const SESRequest);
+    Q_D(const SesRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SESRequest::setParameter(const QString &name, const QVariant &value)
+void SesRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     d->parameters.insert(name, value);
 }
 
@@ -278,9 +278,9 @@ void SESRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SESRequest::setParameters(const QVariantMap &parameters)
+void SesRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SESRequest);
+    Q_D(SesRequest);
     d->parameters = parameters;
 }
 
@@ -292,27 +292,27 @@ void SESRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SESRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SesRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SESRequest);
+    Q_D(const SesRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SES::SESRequestPrivate
- * \brief The SESRequestPrivate class provides private implementation for SESRequest.
+ * \class QtAws::SES::SesRequestPrivate
+ * \brief The SesRequestPrivate class provides private implementation for SesRequest.
  * \internal
  *
  * \inmodule QtAwsSES
  */
 
 /*!
- * Constructs a SESRequestPrivate object for SES \a action,
+ * Constructs a SesRequestPrivate object for SES \a action,
  * with public implementation \a q.
  */
-SESRequestPrivate::SESRequestPrivate(const SESRequest::Action action, SESRequest * const q)
+SesRequestPrivate::SesRequestPrivate(const SesRequest::Action action, SesRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -324,10 +324,10 @@ SESRequestPrivate::SESRequestPrivate(const SESRequest::Action action, SESRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SESRequest class's copy constructor.
+ * This is required to support the SesRequest class's copy constructor.
  */
-SESRequestPrivate::SESRequestPrivate(const SESRequestPrivate &other,
-                                     SESRequest * const q)
+SesRequestPrivate::SesRequestPrivate(const SesRequestPrivate &other,
+                                     SesRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -338,14 +338,14 @@ SESRequestPrivate::SESRequestPrivate(const SESRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SESRequest::Action enumerator values to their respective
+ * This function converts SesRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SES service's Action
  * query parameters.
  */
-QString SESRequestPrivate::toString(const SESRequest::Action &action)
+QString SesRequestPrivate::toString(const SesRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SESRequest::action##Action: return QStringLiteral(#action)
+        case SesRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

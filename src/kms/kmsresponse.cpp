@@ -27,30 +27,30 @@ namespace QtAws {
 namespace KMS {
 
 /*!
- * \class QtAws::KMS::KMSResponse
- * \brief The KMSResponse class provides an interface for KMS responses.
+ * \class QtAws::KMS::KmsResponse
+ * \brief The KmsResponse class provides an interface for KMS responses.
  *
  * \inmodule QtAwsKMS
  */
 
 /*!
- * Constructs a KMSResponse object with parent \a parent.
+ * Constructs a KmsResponse object with parent \a parent.
  */
-KMSResponse::KMSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new KMSResponsePrivate(this), parent)
+KmsResponse::KmsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new KmsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a KMSResponse object with private implementation \a d,
+ * Constructs a KmsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from KMSResponsePrivate.
+ * implementation that inherits from KmsResponsePrivate.
  */
-KMSResponse::KMSResponse(KMSResponsePrivate * const d, QObject * const parent)
+KmsResponse::KmsResponse(KmsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ KMSResponse::KMSResponse(KMSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void KMSResponse::parseFailure(QIODevice &response)
+void KmsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(KMSResponse);
+    Q_D(KmsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void KMSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::KMS::KMSResponsePrivate
- * \brief The KMSResponsePrivate class provides private implementation for KMSResponse.
+ * \class QtAws::KMS::KmsResponsePrivate
+ * \brief The KmsResponsePrivate class provides private implementation for KmsResponse.
  * \internal
  *
  * \inmodule QtAwsKMS
  */
 
 /*!
- * Constructs a KMSResponsePrivate object with public implementation \a q.
+ * Constructs a KmsResponsePrivate object with public implementation \a q.
  */
-KMSResponsePrivate::KMSResponsePrivate(
-    KMSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+KmsResponsePrivate::KmsResponsePrivate(
+    KmsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

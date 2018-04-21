@@ -24,14 +24,14 @@ namespace QtAws {
 namespace ECR {
 
 /*!
- * \class QtAws::ECR::ECRRequest
- * \brief The ECRRequest class provides an interface for ECR requests.
+ * \class QtAws::ECR::EcrRequest
+ * \brief The EcrRequest class provides an interface for ECR requests.
  *
  * \inmodule QtAwsECR
  */
 
 /*!
- * \enum ECRRequest::Action
+ * \enum EcrRequest::Action
  *
  * This enum describes the actions that can be performed as ECR
  * requests.
@@ -61,10 +61,10 @@ namespace ECR {
  */
 
 /*!
- * Constructs a ECRRequest object for ECR \a action.
+ * Constructs a EcrRequest object for ECR \a action.
  */
-ECRRequest::ECRRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ECRRequestPrivate(action, this))
+EcrRequest::EcrRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new EcrRequestPrivate(action, this))
 {
 
 }
@@ -72,18 +72,18 @@ ECRRequest::ECRRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-ECRRequest::ECRRequest(const ECRRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ECRRequestPrivate(*other.d_func(), this))
+EcrRequest::EcrRequest(const EcrRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new EcrRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the ECRRequest object to be equal to \a other.
+ * Sets the EcrRequest object to be equal to \a other.
  */
-ECRRequest& ECRRequest::operator=(const ECRRequest &other)
+EcrRequest& EcrRequest::operator=(const EcrRequest &other)
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -91,12 +91,12 @@ ECRRequest& ECRRequest::operator=(const ECRRequest &other)
 }
 
 /*!
- * Constructs aa ECRRequest object with private implementation \a d.
+ * Constructs aa EcrRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ECRRequestPrivate.
+ * implementation that inherits from EcrRequestPrivate.
  */
-ECRRequest::ECRRequest(ECRRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EcrRequest::EcrRequest(EcrRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -104,44 +104,44 @@ ECRRequest::ECRRequest(ECRRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the ECR action to be performed by this request.
  */
-ECRRequest::Action ECRRequest::action() const
+EcrRequest::Action EcrRequest::action() const
 {
-    Q_D(const ECRRequest);
+    Q_D(const EcrRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the ECR action to be performed by this request.
  */
-QString ECRRequest::actionString() const
+QString EcrRequest::actionString() const
 {
-    return ECRRequestPrivate::toString(action());
+    return EcrRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the ECR API version implemented by this request.
  */
-QString ECRRequest::apiVersion() const
+QString EcrRequest::apiVersion() const
 {
-    Q_D(const ECRRequest);
+    Q_D(const EcrRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the ECR action to be performed by this request to \a action.
  */
-void ECRRequest::setAction(const Action action)
+void EcrRequest::setAction(const Action action)
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     d->action = action;
 }
 
 /*!
  * Sets the ECR API version to include in this request to \a version.
  */
-void ECRRequest::setApiVersion(const QString &version)
+void EcrRequest::setApiVersion(const QString &version)
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     d->apiVersion = version;
 }
 
@@ -153,7 +153,7 @@ void ECRRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool ECRRequest::operator==(const ECRRequest &other) const
+bool EcrRequest::operator==(const EcrRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -174,7 +174,7 @@ bool ECRRequest::operator==(const ECRRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool ECRRequest::isValidQueueName(const QString &queueName)
+/*bool EcrRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -184,45 +184,45 @@ bool ECRRequest::operator==(const ECRRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int ECRRequest::clearParameter(const QString &name)
+int EcrRequest::clearParameter(const QString &name)
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void ECRRequest::clearParameters()
+void EcrRequest::clearParameters()
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant ECRRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant EcrRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const ECRRequest);
+    Q_D(const EcrRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &ECRRequest::parameters() const
+const QVariantMap &EcrRequest::parameters() const
 {
-    Q_D(const ECRRequest);
+    Q_D(const EcrRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void ECRRequest::setParameter(const QString &name, const QVariant &value)
+void EcrRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     d->parameters.insert(name, value);
 }
 
@@ -230,9 +230,9 @@ void ECRRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void ECRRequest::setParameters(const QVariantMap &parameters)
+void EcrRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(ECRRequest);
+    Q_D(EcrRequest);
     d->parameters = parameters;
 }
 
@@ -244,27 +244,27 @@ void ECRRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest ECRRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest EcrRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ECRRequest);
+    Q_D(const EcrRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::ECR::ECRRequestPrivate
- * \brief The ECRRequestPrivate class provides private implementation for ECRRequest.
+ * \class QtAws::ECR::EcrRequestPrivate
+ * \brief The EcrRequestPrivate class provides private implementation for EcrRequest.
  * \internal
  *
  * \inmodule QtAwsECR
  */
 
 /*!
- * Constructs a ECRRequestPrivate object for ECR \a action,
+ * Constructs a EcrRequestPrivate object for ECR \a action,
  * with public implementation \a q.
  */
-ECRRequestPrivate::ECRRequestPrivate(const ECRRequest::Action action, ECRRequest * const q)
+EcrRequestPrivate::EcrRequestPrivate(const EcrRequest::Action action, EcrRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -276,10 +276,10 @@ ECRRequestPrivate::ECRRequestPrivate(const ECRRequest::Action action, ECRRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the ECRRequest class's copy constructor.
+ * This is required to support the EcrRequest class's copy constructor.
  */
-ECRRequestPrivate::ECRRequestPrivate(const ECRRequestPrivate &other,
-                                     ECRRequest * const q)
+EcrRequestPrivate::EcrRequestPrivate(const EcrRequestPrivate &other,
+                                     EcrRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -290,14 +290,14 @@ ECRRequestPrivate::ECRRequestPrivate(const ECRRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts ECRRequest::Action enumerator values to their respective
+ * This function converts EcrRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ECR service's Action
  * query parameters.
  */
-QString ECRRequestPrivate::toString(const ECRRequest::Action &action)
+QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
 {
     #define ActionToString(action) \
-        case ECRRequest::action##Action: return QStringLiteral(#action)
+        case EcrRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

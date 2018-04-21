@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace WAF {
 
-class WAFRequest;
+class WafRequest;
 
-class QTAWS_EXPORT WAFRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT WafRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    WAFRequest::Action action; ///< WAF action to be performed.
+    WafRequest::Action action; ///< WAF action to be performed.
     QString apiVersion;        ///< WAF API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< WAF request (query string) parameters. @todo?
 
-    WAFRequestPrivate(const WAFRequest::Action action, WAFRequest * const q);
-    WAFRequestPrivate(const WAFRequestPrivate &other, WAFRequest * const q);
+    WafRequestPrivate(const WafRequest::Action action, WafRequest * const q);
+    WafRequestPrivate(const WafRequestPrivate &other, WafRequest * const q);
 
-    static QString toString(const WAFRequest::Action &action);
+    static QString toString(const WafRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(WAFRequest)
+    Q_DECLARE_PUBLIC(WafRequest)
 
 };
 

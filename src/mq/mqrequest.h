@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MQ {
 
-class MQRequestPrivate;
+class MqRequestPrivate;
 
-class QTAWS_EXPORT MQRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT MqRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MQ.
@@ -57,9 +57,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    MQRequest(const Action action);
-    MQRequest(const MQRequest &other);
-    MQRequest &operator=(const MQRequest &other);
+    MqRequest(const Action action);
+    MqRequest(const MqRequest &other);
+    MqRequest &operator=(const MqRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -68,12 +68,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const MQRequest &other) const override;
+    virtual bool operator==(const MqRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    MQRequest(MQRequestPrivate * const d);
+    MqRequest(MqRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -86,7 +86,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(MQRequest)
+    Q_DECLARE_PRIVATE(MqRequest)
 
 };
 

@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace ECS {
 
-class ECSResponse;
+class EcsResponse;
 
-class QTAWS_EXPORT ECSResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT EcsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    ECSResponsePrivate(ECSResponse * const q);
+    EcsResponsePrivate(EcsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ECSResponse)
-    Q_DISABLE_COPY(ECSResponsePrivate)
+    Q_DECLARE_PUBLIC(EcsResponse)
+    Q_DISABLE_COPY(EcsResponsePrivate)
 
 };
 

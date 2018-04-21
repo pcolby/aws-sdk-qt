@@ -27,30 +27,30 @@ namespace QtAws {
 namespace ECR {
 
 /*!
- * \class QtAws::ECR::ECRResponse
- * \brief The ECRResponse class provides an interface for ECR responses.
+ * \class QtAws::ECR::EcrResponse
+ * \brief The EcrResponse class provides an interface for ECR responses.
  *
  * \inmodule QtAwsECR
  */
 
 /*!
- * Constructs a ECRResponse object with parent \a parent.
+ * Constructs a EcrResponse object with parent \a parent.
  */
-ECRResponse::ECRResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ECRResponsePrivate(this), parent)
+EcrResponse::EcrResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new EcrResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a ECRResponse object with private implementation \a d,
+ * Constructs a EcrResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ECRResponsePrivate.
+ * implementation that inherits from EcrResponsePrivate.
  */
-ECRResponse::ECRResponse(ECRResponsePrivate * const d, QObject * const parent)
+EcrResponse::EcrResponse(EcrResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ ECRResponse::ECRResponse(ECRResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void ECRResponse::parseFailure(QIODevice &response)
+void EcrResponse::parseFailure(QIODevice &response)
 {
-    Q_D(ECRResponse);
+    Q_D(EcrResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void ECRResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::ECR::ECRResponsePrivate
- * \brief The ECRResponsePrivate class provides private implementation for ECRResponse.
+ * \class QtAws::ECR::EcrResponsePrivate
+ * \brief The EcrResponsePrivate class provides private implementation for EcrResponse.
  * \internal
  *
  * \inmodule QtAwsECR
  */
 
 /*!
- * Constructs a ECRResponsePrivate object with public implementation \a q.
+ * Constructs a EcrResponsePrivate object with public implementation \a q.
  */
-ECRResponsePrivate::ECRResponsePrivate(
-    ECRResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+EcrResponsePrivate::EcrResponsePrivate(
+    EcrResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

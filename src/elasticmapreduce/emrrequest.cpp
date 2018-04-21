@@ -24,14 +24,14 @@ namespace QtAws {
 namespace EMR {
 
 /*!
- * \class QtAws::EMR::EMRRequest
- * \brief The EMRRequest class provides an interface for EMR requests.
+ * \class QtAws::EMR::EmrRequest
+ * \brief The EmrRequest class provides an interface for EMR requests.
  *
  * \inmodule QtAwsEMR
  */
 
 /*!
- * \enum EMRRequest::Action
+ * \enum EmrRequest::Action
  *
  * This enum describes the actions that can be performed as EMR
  * requests.
@@ -66,10 +66,10 @@ namespace EMR {
  */
 
 /*!
- * Constructs a EMRRequest object for EMR \a action.
+ * Constructs a EmrRequest object for EMR \a action.
  */
-EMRRequest::EMRRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new EMRRequestPrivate(action, this))
+EmrRequest::EmrRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new EmrRequestPrivate(action, this))
 {
 
 }
@@ -77,18 +77,18 @@ EMRRequest::EMRRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-EMRRequest::EMRRequest(const EMRRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new EMRRequestPrivate(*other.d_func(), this))
+EmrRequest::EmrRequest(const EmrRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new EmrRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the EMRRequest object to be equal to \a other.
+ * Sets the EmrRequest object to be equal to \a other.
  */
-EMRRequest& EMRRequest::operator=(const EMRRequest &other)
+EmrRequest& EmrRequest::operator=(const EmrRequest &other)
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -96,12 +96,12 @@ EMRRequest& EMRRequest::operator=(const EMRRequest &other)
 }
 
 /*!
- * Constructs aa EMRRequest object with private implementation \a d.
+ * Constructs aa EmrRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EMRRequestPrivate.
+ * implementation that inherits from EmrRequestPrivate.
  */
-EMRRequest::EMRRequest(EMRRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EmrRequest::EmrRequest(EmrRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -109,44 +109,44 @@ EMRRequest::EMRRequest(EMRRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the EMR action to be performed by this request.
  */
-EMRRequest::Action EMRRequest::action() const
+EmrRequest::Action EmrRequest::action() const
 {
-    Q_D(const EMRRequest);
+    Q_D(const EmrRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the EMR action to be performed by this request.
  */
-QString EMRRequest::actionString() const
+QString EmrRequest::actionString() const
 {
-    return EMRRequestPrivate::toString(action());
+    return EmrRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the EMR API version implemented by this request.
  */
-QString EMRRequest::apiVersion() const
+QString EmrRequest::apiVersion() const
 {
-    Q_D(const EMRRequest);
+    Q_D(const EmrRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the EMR action to be performed by this request to \a action.
  */
-void EMRRequest::setAction(const Action action)
+void EmrRequest::setAction(const Action action)
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     d->action = action;
 }
 
 /*!
  * Sets the EMR API version to include in this request to \a version.
  */
-void EMRRequest::setApiVersion(const QString &version)
+void EmrRequest::setApiVersion(const QString &version)
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     d->apiVersion = version;
 }
 
@@ -158,7 +158,7 @@ void EMRRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool EMRRequest::operator==(const EMRRequest &other) const
+bool EmrRequest::operator==(const EmrRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -179,7 +179,7 @@ bool EMRRequest::operator==(const EMRRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool EMRRequest::isValidQueueName(const QString &queueName)
+/*bool EmrRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -189,45 +189,45 @@ bool EMRRequest::operator==(const EMRRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int EMRRequest::clearParameter(const QString &name)
+int EmrRequest::clearParameter(const QString &name)
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void EMRRequest::clearParameters()
+void EmrRequest::clearParameters()
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant EMRRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant EmrRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const EMRRequest);
+    Q_D(const EmrRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &EMRRequest::parameters() const
+const QVariantMap &EmrRequest::parameters() const
 {
-    Q_D(const EMRRequest);
+    Q_D(const EmrRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void EMRRequest::setParameter(const QString &name, const QVariant &value)
+void EmrRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     d->parameters.insert(name, value);
 }
 
@@ -235,9 +235,9 @@ void EMRRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void EMRRequest::setParameters(const QVariantMap &parameters)
+void EmrRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(EMRRequest);
+    Q_D(EmrRequest);
     d->parameters = parameters;
 }
 
@@ -249,27 +249,27 @@ void EMRRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest EMRRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest EmrRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const EMRRequest);
+    Q_D(const EmrRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::EMR::EMRRequestPrivate
- * \brief The EMRRequestPrivate class provides private implementation for EMRRequest.
+ * \class QtAws::EMR::EmrRequestPrivate
+ * \brief The EmrRequestPrivate class provides private implementation for EmrRequest.
  * \internal
  *
  * \inmodule QtAwsEMR
  */
 
 /*!
- * Constructs a EMRRequestPrivate object for EMR \a action,
+ * Constructs a EmrRequestPrivate object for EMR \a action,
  * with public implementation \a q.
  */
-EMRRequestPrivate::EMRRequestPrivate(const EMRRequest::Action action, EMRRequest * const q)
+EmrRequestPrivate::EmrRequestPrivate(const EmrRequest::Action action, EmrRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -281,10 +281,10 @@ EMRRequestPrivate::EMRRequestPrivate(const EMRRequest::Action action, EMRRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the EMRRequest class's copy constructor.
+ * This is required to support the EmrRequest class's copy constructor.
  */
-EMRRequestPrivate::EMRRequestPrivate(const EMRRequestPrivate &other,
-                                     EMRRequest * const q)
+EmrRequestPrivate::EmrRequestPrivate(const EmrRequestPrivate &other,
+                                     EmrRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -295,14 +295,14 @@ EMRRequestPrivate::EMRRequestPrivate(const EMRRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts EMRRequest::Action enumerator values to their respective
+ * This function converts EmrRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the EMR service's Action
  * query parameters.
  */
-QString EMRRequestPrivate::toString(const EMRRequest::Action &action)
+QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
 {
     #define ActionToString(action) \
-        case EMRRequest::action##Action: return QStringLiteral(#action)
+        case EmrRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

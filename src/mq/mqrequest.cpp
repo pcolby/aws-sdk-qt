@@ -24,14 +24,14 @@ namespace QtAws {
 namespace MQ {
 
 /*!
- * \class QtAws::MQ::MQRequest
- * \brief The MQRequest class provides an interface for MQ requests.
+ * \class QtAws::MQ::MqRequest
+ * \brief The MqRequest class provides an interface for MQ requests.
  *
  * \inmodule QtAwsMQ
  */
 
 /*!
- * \enum MQRequest::Action
+ * \enum MqRequest::Action
  *
  * This enum describes the actions that can be performed as MQ
  * requests.
@@ -56,10 +56,10 @@ namespace MQ {
  */
 
 /*!
- * Constructs a MQRequest object for MQ \a action.
+ * Constructs a MqRequest object for MQ \a action.
  */
-MQRequest::MQRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MQRequestPrivate(action, this))
+MqRequest::MqRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new MqRequestPrivate(action, this))
 {
 
 }
@@ -67,18 +67,18 @@ MQRequest::MQRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-MQRequest::MQRequest(const MQRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MQRequestPrivate(*other.d_func(), this))
+MqRequest::MqRequest(const MqRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new MqRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the MQRequest object to be equal to \a other.
+ * Sets the MqRequest object to be equal to \a other.
  */
-MQRequest& MQRequest::operator=(const MQRequest &other)
+MqRequest& MqRequest::operator=(const MqRequest &other)
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -86,12 +86,12 @@ MQRequest& MQRequest::operator=(const MQRequest &other)
 }
 
 /*!
- * Constructs aa MQRequest object with private implementation \a d.
+ * Constructs aa MqRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from MQRequestPrivate.
+ * implementation that inherits from MqRequestPrivate.
  */
-MQRequest::MQRequest(MQRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MqRequest::MqRequest(MqRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -99,44 +99,44 @@ MQRequest::MQRequest(MQRequestPrivate * const d) : QtAws::Core::AwsAbstractReque
 /*!
  * Returns the MQ action to be performed by this request.
  */
-MQRequest::Action MQRequest::action() const
+MqRequest::Action MqRequest::action() const
 {
-    Q_D(const MQRequest);
+    Q_D(const MqRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the MQ action to be performed by this request.
  */
-QString MQRequest::actionString() const
+QString MqRequest::actionString() const
 {
-    return MQRequestPrivate::toString(action());
+    return MqRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the MQ API version implemented by this request.
  */
-QString MQRequest::apiVersion() const
+QString MqRequest::apiVersion() const
 {
-    Q_D(const MQRequest);
+    Q_D(const MqRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the MQ action to be performed by this request to \a action.
  */
-void MQRequest::setAction(const Action action)
+void MqRequest::setAction(const Action action)
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     d->action = action;
 }
 
 /*!
  * Sets the MQ API version to include in this request to \a version.
  */
-void MQRequest::setApiVersion(const QString &version)
+void MqRequest::setApiVersion(const QString &version)
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     d->apiVersion = version;
 }
 
@@ -148,7 +148,7 @@ void MQRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool MQRequest::operator==(const MQRequest &other) const
+bool MqRequest::operator==(const MqRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -169,7 +169,7 @@ bool MQRequest::operator==(const MQRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool MQRequest::isValidQueueName(const QString &queueName)
+/*bool MqRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -179,45 +179,45 @@ bool MQRequest::operator==(const MQRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int MQRequest::clearParameter(const QString &name)
+int MqRequest::clearParameter(const QString &name)
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void MQRequest::clearParameters()
+void MqRequest::clearParameters()
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant MQRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant MqRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const MQRequest);
+    Q_D(const MqRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &MQRequest::parameters() const
+const QVariantMap &MqRequest::parameters() const
 {
-    Q_D(const MQRequest);
+    Q_D(const MqRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void MQRequest::setParameter(const QString &name, const QVariant &value)
+void MqRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     d->parameters.insert(name, value);
 }
 
@@ -225,9 +225,9 @@ void MQRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void MQRequest::setParameters(const QVariantMap &parameters)
+void MqRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(MQRequest);
+    Q_D(MqRequest);
     d->parameters = parameters;
 }
 
@@ -239,27 +239,27 @@ void MQRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest MQRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest MqRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const MQRequest);
+    Q_D(const MqRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::MQ::MQRequestPrivate
- * \brief The MQRequestPrivate class provides private implementation for MQRequest.
+ * \class QtAws::MQ::MqRequestPrivate
+ * \brief The MqRequestPrivate class provides private implementation for MqRequest.
  * \internal
  *
  * \inmodule QtAwsMQ
  */
 
 /*!
- * Constructs a MQRequestPrivate object for MQ \a action,
+ * Constructs a MqRequestPrivate object for MQ \a action,
  * with public implementation \a q.
  */
-MQRequestPrivate::MQRequestPrivate(const MQRequest::Action action, MQRequest * const q)
+MqRequestPrivate::MqRequestPrivate(const MqRequest::Action action, MqRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -271,10 +271,10 @@ MQRequestPrivate::MQRequestPrivate(const MQRequest::Action action, MQRequest * c
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the MQRequest class's copy constructor.
+ * This is required to support the MqRequest class's copy constructor.
  */
-MQRequestPrivate::MQRequestPrivate(const MQRequestPrivate &other,
-                                     MQRequest * const q)
+MqRequestPrivate::MqRequestPrivate(const MqRequestPrivate &other,
+                                     MqRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -285,14 +285,14 @@ MQRequestPrivate::MQRequestPrivate(const MQRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts MQRequest::Action enumerator values to their respective
+ * This function converts MqRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the MQ service's Action
  * query parameters.
  */
-QString MQRequestPrivate::toString(const MQRequest::Action &action)
+QString MqRequestPrivate::toString(const MqRequest::Action &action)
 {
     #define ActionToString(action) \
-        case MQRequest::action##Action: return QStringLiteral(#action)
+        case MqRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

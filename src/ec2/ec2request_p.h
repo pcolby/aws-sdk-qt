@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace EC2 {
 
-class EC2Request;
+class Ec2Request;
 
-class QTAWS_EXPORT EC2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT Ec2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EC2Request::Action action; ///< EC2 action to be performed.
+    Ec2Request::Action action; ///< EC2 action to be performed.
     QString apiVersion;        ///< EC2 API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< EC2 request (query string) parameters. @todo?
 
-    EC2RequestPrivate(const EC2Request::Action action, EC2Request * const q);
-    EC2RequestPrivate(const EC2RequestPrivate &other, EC2Request * const q);
+    Ec2RequestPrivate(const Ec2Request::Action action, Ec2Request * const q);
+    Ec2RequestPrivate(const Ec2RequestPrivate &other, Ec2Request * const q);
 
-    static QString toString(const EC2Request::Action &action);
+    static QString toString(const Ec2Request::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(EC2Request)
+    Q_DECLARE_PUBLIC(Ec2Request)
 
 };
 

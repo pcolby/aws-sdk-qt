@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace RDS {
 
-class RDSRequestPrivate;
+class RdsRequestPrivate;
 
-class QTAWS_EXPORT RDSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT RdsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RDS.
@@ -131,9 +131,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    RDSRequest(const Action action);
-    RDSRequest(const RDSRequest &other);
-    RDSRequest &operator=(const RDSRequest &other);
+    RdsRequest(const Action action);
+    RdsRequest(const RdsRequest &other);
+    RdsRequest &operator=(const RdsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -142,12 +142,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const RDSRequest &other) const override;
+    virtual bool operator==(const RdsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    RDSRequest(RDSRequestPrivate * const d);
+    RdsRequest(RdsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -160,7 +160,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(RDSRequest)
+    Q_DECLARE_PRIVATE(RdsRequest)
 
 };
 

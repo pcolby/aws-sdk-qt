@@ -27,30 +27,30 @@ namespace QtAws {
 namespace MQ {
 
 /*!
- * \class QtAws::MQ::MQResponse
- * \brief The MQResponse class provides an interface for MQ responses.
+ * \class QtAws::MQ::MqResponse
+ * \brief The MqResponse class provides an interface for MQ responses.
  *
  * \inmodule QtAwsMQ
  */
 
 /*!
- * Constructs a MQResponse object with parent \a parent.
+ * Constructs a MqResponse object with parent \a parent.
  */
-MQResponse::MQResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MQResponsePrivate(this), parent)
+MqResponse::MqResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new MqResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a MQResponse object with private implementation \a d,
+ * Constructs a MqResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from MQResponsePrivate.
+ * implementation that inherits from MqResponsePrivate.
  */
-MQResponse::MQResponse(MQResponsePrivate * const d, QObject * const parent)
+MqResponse::MqResponse(MqResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ MQResponse::MQResponse(MQResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void MQResponse::parseFailure(QIODevice &response)
+void MqResponse::parseFailure(QIODevice &response)
 {
-    Q_D(MQResponse);
+    Q_D(MqResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void MQResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::MQ::MQResponsePrivate
- * \brief The MQResponsePrivate class provides private implementation for MQResponse.
+ * \class QtAws::MQ::MqResponsePrivate
+ * \brief The MqResponsePrivate class provides private implementation for MqResponse.
  * \internal
  *
  * \inmodule QtAwsMQ
  */
 
 /*!
- * Constructs a MQResponsePrivate object with public implementation \a q.
+ * Constructs a MqResponsePrivate object with public implementation \a q.
  */
-MQResponsePrivate::MQResponsePrivate(
-    MQResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+MqResponsePrivate::MqResponsePrivate(
+    MqResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

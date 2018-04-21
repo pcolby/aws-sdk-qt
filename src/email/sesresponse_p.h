@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace SES {
 
-class SESResponse;
+class SesResponse;
 
-class QTAWS_EXPORT SESResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT SesResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    SESResponsePrivate(SESResponse * const q);
+    SesResponsePrivate(SesResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(SESResponse)
-    Q_DISABLE_COPY(SESResponsePrivate)
+    Q_DECLARE_PUBLIC(SesResponse)
+    Q_DISABLE_COPY(SesResponsePrivate)
 
 };
 

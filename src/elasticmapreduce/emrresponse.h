@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace EMR {
 
-class EMRResponsePrivate;
+class EmrResponsePrivate;
 
-class QTAWS_EXPORT EMRResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT EmrResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    EMRResponse(QObject * const parent = 0);
+    EmrResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    EMRResponse(EMRResponsePrivate * const d, QObject * const parent);
+    EmrResponse(EmrResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(EMRResponse)
-    Q_DISABLE_COPY(EMRResponse)
+    Q_DECLARE_PRIVATE(EmrResponse)
+    Q_DISABLE_COPY(EmrResponse)
 
 };
 

@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SFN {
 
-class SFNRequest;
+class SfnRequest;
 
-class QTAWS_EXPORT SFNRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SfnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SFNRequest::Action action; ///< SFN action to be performed.
+    SfnRequest::Action action; ///< SFN action to be performed.
     QString apiVersion;        ///< SFN API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SFN request (query string) parameters. @todo?
 
-    SFNRequestPrivate(const SFNRequest::Action action, SFNRequest * const q);
-    SFNRequestPrivate(const SFNRequestPrivate &other, SFNRequest * const q);
+    SfnRequestPrivate(const SfnRequest::Action action, SfnRequest * const q);
+    SfnRequestPrivate(const SfnRequestPrivate &other, SfnRequest * const q);
 
-    static QString toString(const SFNRequest::Action &action);
+    static QString toString(const SfnRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SFNRequest)
+    Q_DECLARE_PUBLIC(SfnRequest)
 
 };
 

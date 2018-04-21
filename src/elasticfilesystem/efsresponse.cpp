@@ -27,30 +27,30 @@ namespace QtAws {
 namespace EFS {
 
 /*!
- * \class QtAws::EFS::EFSResponse
- * \brief The EFSResponse class provides an interface for EFS responses.
+ * \class QtAws::EFS::EfsResponse
+ * \brief The EfsResponse class provides an interface for EFS responses.
  *
  * \inmodule QtAwsEFS
  */
 
 /*!
- * Constructs a EFSResponse object with parent \a parent.
+ * Constructs a EfsResponse object with parent \a parent.
  */
-EFSResponse::EFSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EFSResponsePrivate(this), parent)
+EfsResponse::EfsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new EfsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a EFSResponse object with private implementation \a d,
+ * Constructs a EfsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EFSResponsePrivate.
+ * implementation that inherits from EfsResponsePrivate.
  */
-EFSResponse::EFSResponse(EFSResponsePrivate * const d, QObject * const parent)
+EfsResponse::EfsResponse(EfsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ EFSResponse::EFSResponse(EFSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void EFSResponse::parseFailure(QIODevice &response)
+void EfsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(EFSResponse);
+    Q_D(EfsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void EFSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EFS::EFSResponsePrivate
- * \brief The EFSResponsePrivate class provides private implementation for EFSResponse.
+ * \class QtAws::EFS::EfsResponsePrivate
+ * \brief The EfsResponsePrivate class provides private implementation for EfsResponse.
  * \internal
  *
  * \inmodule QtAwsEFS
  */
 
 /*!
- * Constructs a EFSResponsePrivate object with public implementation \a q.
+ * Constructs a EfsResponsePrivate object with public implementation \a q.
  */
-EFSResponsePrivate::EFSResponsePrivate(
-    EFSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+EfsResponsePrivate::EfsResponsePrivate(
+    EfsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SSM {
 
-class SSMRequest;
+class SsmRequest;
 
-class QTAWS_EXPORT SSMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SsmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SSMRequest::Action action; ///< SSM action to be performed.
+    SsmRequest::Action action; ///< SSM action to be performed.
     QString apiVersion;        ///< SSM API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SSM request (query string) parameters. @todo?
 
-    SSMRequestPrivate(const SSMRequest::Action action, SSMRequest * const q);
-    SSMRequestPrivate(const SSMRequestPrivate &other, SSMRequest * const q);
+    SsmRequestPrivate(const SsmRequest::Action action, SsmRequest * const q);
+    SsmRequestPrivate(const SsmRequestPrivate &other, SsmRequest * const q);
 
-    static QString toString(const SSMRequest::Action &action);
+    static QString toString(const SsmRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SSMRequest)
+    Q_DECLARE_PUBLIC(SsmRequest)
 
 };
 

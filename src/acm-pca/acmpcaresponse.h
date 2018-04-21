@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace ACMPCA {
 
-class ACMPCAResponsePrivate;
+class AcmpcaResponsePrivate;
 
-class QTAWS_EXPORT ACMPCAResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT AcmpcaResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    ACMPCAResponse(QObject * const parent = 0);
+    AcmpcaResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    ACMPCAResponse(ACMPCAResponsePrivate * const d, QObject * const parent);
+    AcmpcaResponse(AcmpcaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(ACMPCAResponse)
-    Q_DISABLE_COPY(ACMPCAResponse)
+    Q_DECLARE_PRIVATE(AcmpcaResponse)
+    Q_DISABLE_COPY(AcmpcaResponse)
 
 };
 

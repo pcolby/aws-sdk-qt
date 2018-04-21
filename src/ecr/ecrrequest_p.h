@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace ECR {
 
-class ECRRequest;
+class EcrRequest;
 
-class QTAWS_EXPORT ECRRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT EcrRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ECRRequest::Action action; ///< ECR action to be performed.
+    EcrRequest::Action action; ///< ECR action to be performed.
     QString apiVersion;        ///< ECR API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< ECR request (query string) parameters. @todo?
 
-    ECRRequestPrivate(const ECRRequest::Action action, ECRRequest * const q);
-    ECRRequestPrivate(const ECRRequestPrivate &other, ECRRequest * const q);
+    EcrRequestPrivate(const EcrRequest::Action action, EcrRequest * const q);
+    EcrRequestPrivate(const EcrRequestPrivate &other, EcrRequest * const q);
 
-    static QString toString(const ECRRequest::Action &action);
+    static QString toString(const EcrRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ECRRequest)
+    Q_DECLARE_PUBLIC(EcrRequest)
 
 };
 

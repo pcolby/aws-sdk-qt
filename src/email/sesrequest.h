@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SES {
 
-class SESRequestPrivate;
+class SesRequestPrivate;
 
-class QTAWS_EXPORT SESRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SesRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SES.
@@ -110,9 +110,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SESRequest(const Action action);
-    SESRequest(const SESRequest &other);
-    SESRequest &operator=(const SESRequest &other);
+    SesRequest(const Action action);
+    SesRequest(const SesRequest &other);
+    SesRequest &operator=(const SesRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -121,12 +121,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SESRequest &other) const override;
+    virtual bool operator==(const SesRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SESRequest(SESRequestPrivate * const d);
+    SesRequest(SesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -139,7 +139,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SESRequest)
+    Q_DECLARE_PRIVATE(SesRequest)
 
 };
 

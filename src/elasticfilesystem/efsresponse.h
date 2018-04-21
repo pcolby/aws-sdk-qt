@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace EFS {
 
-class EFSResponsePrivate;
+class EfsResponsePrivate;
 
-class QTAWS_EXPORT EFSResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT EfsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    EFSResponse(QObject * const parent = 0);
+    EfsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    EFSResponse(EFSResponsePrivate * const d, QObject * const parent);
+    EfsResponse(EfsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(EFSResponse)
-    Q_DISABLE_COPY(EFSResponse)
+    Q_DECLARE_PRIVATE(EfsResponse)
+    Q_DISABLE_COPY(EfsResponse)
 
 };
 

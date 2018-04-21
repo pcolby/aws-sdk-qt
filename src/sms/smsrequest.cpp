@@ -24,14 +24,14 @@ namespace QtAws {
 namespace SMS {
 
 /*!
- * \class QtAws::SMS::SMSRequest
- * \brief The SMSRequest class provides an interface for SMS requests.
+ * \class QtAws::SMS::SmsRequest
+ * \brief The SmsRequest class provides an interface for SMS requests.
  *
  * \inmodule QtAwsSMS
  */
 
 /*!
- * \enum SMSRequest::Action
+ * \enum SmsRequest::Action
  *
  * This enum describes the actions that can be performed as SMS
  * requests.
@@ -50,10 +50,10 @@ namespace SMS {
  */
 
 /*!
- * Constructs a SMSRequest object for SMS \a action.
+ * Constructs a SmsRequest object for SMS \a action.
  */
-SMSRequest::SMSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SMSRequestPrivate(action, this))
+SmsRequest::SmsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SmsRequestPrivate(action, this))
 {
 
 }
@@ -61,18 +61,18 @@ SMSRequest::SMSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SMSRequest::SMSRequest(const SMSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SMSRequestPrivate(*other.d_func(), this))
+SmsRequest::SmsRequest(const SmsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SmsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SMSRequest object to be equal to \a other.
+ * Sets the SmsRequest object to be equal to \a other.
  */
-SMSRequest& SMSRequest::operator=(const SMSRequest &other)
+SmsRequest& SmsRequest::operator=(const SmsRequest &other)
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -80,12 +80,12 @@ SMSRequest& SMSRequest::operator=(const SMSRequest &other)
 }
 
 /*!
- * Constructs aa SMSRequest object with private implementation \a d.
+ * Constructs aa SmsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SMSRequestPrivate.
+ * implementation that inherits from SmsRequestPrivate.
  */
-SMSRequest::SMSRequest(SMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SmsRequest::SmsRequest(SmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -93,44 +93,44 @@ SMSRequest::SMSRequest(SMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the SMS action to be performed by this request.
  */
-SMSRequest::Action SMSRequest::action() const
+SmsRequest::Action SmsRequest::action() const
 {
-    Q_D(const SMSRequest);
+    Q_D(const SmsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the SMS action to be performed by this request.
  */
-QString SMSRequest::actionString() const
+QString SmsRequest::actionString() const
 {
-    return SMSRequestPrivate::toString(action());
+    return SmsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the SMS API version implemented by this request.
  */
-QString SMSRequest::apiVersion() const
+QString SmsRequest::apiVersion() const
 {
-    Q_D(const SMSRequest);
+    Q_D(const SmsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the SMS action to be performed by this request to \a action.
  */
-void SMSRequest::setAction(const Action action)
+void SmsRequest::setAction(const Action action)
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the SMS API version to include in this request to \a version.
  */
-void SMSRequest::setApiVersion(const QString &version)
+void SmsRequest::setApiVersion(const QString &version)
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     d->apiVersion = version;
 }
 
@@ -142,7 +142,7 @@ void SMSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SMSRequest::operator==(const SMSRequest &other) const
+bool SmsRequest::operator==(const SmsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -163,7 +163,7 @@ bool SMSRequest::operator==(const SMSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SMSRequest::isValidQueueName(const QString &queueName)
+/*bool SmsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -173,45 +173,45 @@ bool SMSRequest::operator==(const SMSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SMSRequest::clearParameter(const QString &name)
+int SmsRequest::clearParameter(const QString &name)
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SMSRequest::clearParameters()
+void SmsRequest::clearParameters()
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SMSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SmsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SMSRequest);
+    Q_D(const SmsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SMSRequest::parameters() const
+const QVariantMap &SmsRequest::parameters() const
 {
-    Q_D(const SMSRequest);
+    Q_D(const SmsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SMSRequest::setParameter(const QString &name, const QVariant &value)
+void SmsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -219,9 +219,9 @@ void SMSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SMSRequest::setParameters(const QVariantMap &parameters)
+void SmsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SMSRequest);
+    Q_D(SmsRequest);
     d->parameters = parameters;
 }
 
@@ -233,27 +233,27 @@ void SMSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SMSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SmsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SMSRequest);
+    Q_D(const SmsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SMS::SMSRequestPrivate
- * \brief The SMSRequestPrivate class provides private implementation for SMSRequest.
+ * \class QtAws::SMS::SmsRequestPrivate
+ * \brief The SmsRequestPrivate class provides private implementation for SmsRequest.
  * \internal
  *
  * \inmodule QtAwsSMS
  */
 
 /*!
- * Constructs a SMSRequestPrivate object for SMS \a action,
+ * Constructs a SmsRequestPrivate object for SMS \a action,
  * with public implementation \a q.
  */
-SMSRequestPrivate::SMSRequestPrivate(const SMSRequest::Action action, SMSRequest * const q)
+SmsRequestPrivate::SmsRequestPrivate(const SmsRequest::Action action, SmsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -265,10 +265,10 @@ SMSRequestPrivate::SMSRequestPrivate(const SMSRequest::Action action, SMSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SMSRequest class's copy constructor.
+ * This is required to support the SmsRequest class's copy constructor.
  */
-SMSRequestPrivate::SMSRequestPrivate(const SMSRequestPrivate &other,
-                                     SMSRequest * const q)
+SmsRequestPrivate::SmsRequestPrivate(const SmsRequestPrivate &other,
+                                     SmsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -279,14 +279,14 @@ SMSRequestPrivate::SMSRequestPrivate(const SMSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SMSRequest::Action enumerator values to their respective
+ * This function converts SmsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SMS service's Action
  * query parameters.
  */
-QString SMSRequestPrivate::toString(const SMSRequest::Action &action)
+QString SmsRequestPrivate::toString(const SmsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SMSRequest::action##Action: return QStringLiteral(#action)
+        case SmsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

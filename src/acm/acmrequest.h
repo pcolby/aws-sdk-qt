@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ACM {
 
-class ACMRequestPrivate;
+class AcmRequestPrivate;
 
-class QTAWS_EXPORT ACMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT AcmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ACM.
@@ -52,9 +52,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    ACMRequest(const Action action);
-    ACMRequest(const ACMRequest &other);
-    ACMRequest &operator=(const ACMRequest &other);
+    AcmRequest(const Action action);
+    AcmRequest(const AcmRequest &other);
+    AcmRequest &operator=(const AcmRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -63,12 +63,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ACMRequest &other) const override;
+    virtual bool operator==(const AcmRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    ACMRequest(ACMRequestPrivate * const d);
+    AcmRequest(AcmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -81,7 +81,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(ACMRequest)
+    Q_DECLARE_PRIVATE(AcmRequest)
 
 };
 

@@ -27,30 +27,30 @@ namespace QtAws {
 namespace IAM {
 
 /*!
- * \class QtAws::IAM::IAMResponse
- * \brief The IAMResponse class provides an interface for IAM responses.
+ * \class QtAws::IAM::IamResponse
+ * \brief The IamResponse class provides an interface for IAM responses.
  *
  * \inmodule QtAwsIAM
  */
 
 /*!
- * Constructs a IAMResponse object with parent \a parent.
+ * Constructs a IamResponse object with parent \a parent.
  */
-IAMResponse::IAMResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IAMResponsePrivate(this), parent)
+IamResponse::IamResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new IamResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a IAMResponse object with private implementation \a d,
+ * Constructs a IamResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from IAMResponsePrivate.
+ * implementation that inherits from IamResponsePrivate.
  */
-IAMResponse::IAMResponse(IAMResponsePrivate * const d, QObject * const parent)
+IamResponse::IamResponse(IamResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ IAMResponse::IAMResponse(IAMResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void IAMResponse::parseFailure(QIODevice &response)
+void IamResponse::parseFailure(QIODevice &response)
 {
-    Q_D(IAMResponse);
+    Q_D(IamResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void IAMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::IAM::IAMResponsePrivate
- * \brief The IAMResponsePrivate class provides private implementation for IAMResponse.
+ * \class QtAws::IAM::IamResponsePrivate
+ * \brief The IamResponsePrivate class provides private implementation for IamResponse.
  * \internal
  *
  * \inmodule QtAwsIAM
  */
 
 /*!
- * Constructs a IAMResponsePrivate object with public implementation \a q.
+ * Constructs a IamResponsePrivate object with public implementation \a q.
  */
-IAMResponsePrivate::IAMResponsePrivate(
-    IAMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+IamResponsePrivate::IamResponsePrivate(
+    IamResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

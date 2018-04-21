@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace IAM {
 
-class IAMRequest;
+class IamRequest;
 
-class QTAWS_EXPORT IAMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT IamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    IAMRequest::Action action; ///< IAM action to be performed.
+    IamRequest::Action action; ///< IAM action to be performed.
     QString apiVersion;        ///< IAM API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< IAM request (query string) parameters. @todo?
 
-    IAMRequestPrivate(const IAMRequest::Action action, IAMRequest * const q);
-    IAMRequestPrivate(const IAMRequestPrivate &other, IAMRequest * const q);
+    IamRequestPrivate(const IamRequest::Action action, IamRequest * const q);
+    IamRequestPrivate(const IamRequestPrivate &other, IamRequest * const q);
 
-    static QString toString(const IAMRequest::Action &action);
+    static QString toString(const IamRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(IAMRequest)
+    Q_DECLARE_PUBLIC(IamRequest)
 
 };
 

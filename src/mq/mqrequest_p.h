@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace MQ {
 
-class MQRequest;
+class MqRequest;
 
-class QTAWS_EXPORT MQRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT MqRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    MQRequest::Action action; ///< MQ action to be performed.
+    MqRequest::Action action; ///< MQ action to be performed.
     QString apiVersion;        ///< MQ API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< MQ request (query string) parameters. @todo?
 
-    MQRequestPrivate(const MQRequest::Action action, MQRequest * const q);
-    MQRequestPrivate(const MQRequestPrivate &other, MQRequest * const q);
+    MqRequestPrivate(const MqRequest::Action action, MqRequest * const q);
+    MqRequestPrivate(const MqRequestPrivate &other, MqRequest * const q);
 
-    static QString toString(const MQRequest::Action &action);
+    static QString toString(const MqRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(MQRequest)
+    Q_DECLARE_PUBLIC(MqRequest)
 
 };
 

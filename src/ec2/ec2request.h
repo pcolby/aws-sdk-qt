@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace EC2 {
 
-class EC2RequestPrivate;
+class Ec2RequestPrivate;
 
-class QTAWS_EXPORT EC2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT Ec2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EC2.
@@ -308,9 +308,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    EC2Request(const Action action);
-    EC2Request(const EC2Request &other);
-    EC2Request &operator=(const EC2Request &other);
+    Ec2Request(const Action action);
+    Ec2Request(const Ec2Request &other);
+    Ec2Request &operator=(const Ec2Request &other);
 
     Action action() const;
     QString actionString() const;
@@ -319,12 +319,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const EC2Request &other) const override;
+    virtual bool operator==(const Ec2Request &other) const override;
 
 
 protected:
     /// @cond internal
-    EC2Request(EC2RequestPrivate * const d);
+    Ec2Request(Ec2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -337,7 +337,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(EC2Request)
+    Q_DECLARE_PRIVATE(Ec2Request)
 
 };
 

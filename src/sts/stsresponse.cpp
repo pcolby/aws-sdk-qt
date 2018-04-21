@@ -27,30 +27,30 @@ namespace QtAws {
 namespace STS {
 
 /*!
- * \class QtAws::STS::STSResponse
- * \brief The STSResponse class provides an interface for STS responses.
+ * \class QtAws::STS::StsResponse
+ * \brief The StsResponse class provides an interface for STS responses.
  *
  * \inmodule QtAwsSTS
  */
 
 /*!
- * Constructs a STSResponse object with parent \a parent.
+ * Constructs a StsResponse object with parent \a parent.
  */
-STSResponse::STSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new STSResponsePrivate(this), parent)
+StsResponse::StsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new StsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a STSResponse object with private implementation \a d,
+ * Constructs a StsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from STSResponsePrivate.
+ * implementation that inherits from StsResponsePrivate.
  */
-STSResponse::STSResponse(STSResponsePrivate * const d, QObject * const parent)
+StsResponse::StsResponse(StsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ STSResponse::STSResponse(STSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void STSResponse::parseFailure(QIODevice &response)
+void StsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(STSResponse);
+    Q_D(StsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void STSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::STS::STSResponsePrivate
- * \brief The STSResponsePrivate class provides private implementation for STSResponse.
+ * \class QtAws::STS::StsResponsePrivate
+ * \brief The StsResponsePrivate class provides private implementation for StsResponse.
  * \internal
  *
  * \inmodule QtAwsSTS
  */
 
 /*!
- * Constructs a STSResponsePrivate object with public implementation \a q.
+ * Constructs a StsResponsePrivate object with public implementation \a q.
  */
-STSResponsePrivate::STSResponsePrivate(
-    STSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+StsResponsePrivate::StsResponsePrivate(
+    StsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

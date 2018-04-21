@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace SMS {
 
-class SMSResponsePrivate;
+class SmsResponsePrivate;
 
-class QTAWS_EXPORT SMSResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT SmsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SMSResponse(QObject * const parent = 0);
+    SmsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SMSResponse(SMSResponsePrivate * const d, QObject * const parent);
+    SmsResponse(SmsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(SMSResponse)
-    Q_DISABLE_COPY(SMSResponse)
+    Q_DECLARE_PRIVATE(SmsResponse)
+    Q_DISABLE_COPY(SmsResponse)
 
 };
 

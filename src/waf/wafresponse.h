@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace WAF {
 
-class WAFResponsePrivate;
+class WafResponsePrivate;
 
-class QTAWS_EXPORT WAFResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT WafResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    WAFResponse(QObject * const parent = 0);
+    WafResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    WAFResponse(WAFResponsePrivate * const d, QObject * const parent);
+    WafResponse(WafResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(WAFResponse)
-    Q_DISABLE_COPY(WAFResponse)
+    Q_DECLARE_PRIVATE(WafResponse)
+    Q_DISABLE_COPY(WafResponse)
 
 };
 

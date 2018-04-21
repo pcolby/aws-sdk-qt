@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace ACM {
 
-class ACMRequest;
+class AcmRequest;
 
-class QTAWS_EXPORT ACMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT AcmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    ACMRequest::Action action; ///< ACM action to be performed.
+    AcmRequest::Action action; ///< ACM action to be performed.
     QString apiVersion;        ///< ACM API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< ACM request (query string) parameters. @todo?
 
-    ACMRequestPrivate(const ACMRequest::Action action, ACMRequest * const q);
-    ACMRequestPrivate(const ACMRequestPrivate &other, ACMRequest * const q);
+    AcmRequestPrivate(const AcmRequest::Action action, AcmRequest * const q);
+    AcmRequestPrivate(const AcmRequestPrivate &other, AcmRequest * const q);
 
-    static QString toString(const ACMRequest::Action &action);
+    static QString toString(const AcmRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(ACMRequest)
+    Q_DECLARE_PUBLIC(AcmRequest)
 
 };
 

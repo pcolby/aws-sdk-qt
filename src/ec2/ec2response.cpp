@@ -27,30 +27,30 @@ namespace QtAws {
 namespace EC2 {
 
 /*!
- * \class QtAws::EC2::EC2Response
- * \brief The EC2Response class provides an interface for EC2 responses.
+ * \class QtAws::EC2::Ec2Response
+ * \brief The Ec2Response class provides an interface for EC2 responses.
  *
  * \inmodule QtAwsEC2
  */
 
 /*!
- * Constructs a EC2Response object with parent \a parent.
+ * Constructs a Ec2Response object with parent \a parent.
  */
-EC2Response::EC2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EC2ResponsePrivate(this), parent)
+Ec2Response::Ec2Response(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new Ec2ResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a EC2Response object with private implementation \a d,
+ * Constructs a Ec2Response object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EC2ResponsePrivate.
+ * implementation that inherits from Ec2ResponsePrivate.
  */
-EC2Response::EC2Response(EC2ResponsePrivate * const d, QObject * const parent)
+Ec2Response::Ec2Response(Ec2ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ EC2Response::EC2Response(EC2ResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void EC2Response::parseFailure(QIODevice &response)
+void Ec2Response::parseFailure(QIODevice &response)
 {
-    Q_D(EC2Response);
+    Q_D(Ec2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void EC2Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::EC2::EC2ResponsePrivate
- * \brief The EC2ResponsePrivate class provides private implementation for EC2Response.
+ * \class QtAws::EC2::Ec2ResponsePrivate
+ * \brief The Ec2ResponsePrivate class provides private implementation for Ec2Response.
  * \internal
  *
  * \inmodule QtAwsEC2
  */
 
 /*!
- * Constructs a EC2ResponsePrivate object with public implementation \a q.
+ * Constructs a Ec2ResponsePrivate object with public implementation \a q.
  */
-EC2ResponsePrivate::EC2ResponsePrivate(
-    EC2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+Ec2ResponsePrivate::Ec2ResponsePrivate(
+    Ec2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

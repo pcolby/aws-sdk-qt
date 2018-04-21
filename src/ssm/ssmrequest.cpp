@@ -24,14 +24,14 @@ namespace QtAws {
 namespace SSM {
 
 /*!
- * \class QtAws::SSM::SSMRequest
- * \brief The SSMRequest class provides an interface for SSM requests.
+ * \class QtAws::SSM::SsmRequest
+ * \brief The SsmRequest class provides an interface for SSM requests.
  *
  * \inmodule QtAwsSSM
  */
 
 /*!
- * \enum SSMRequest::Action
+ * \enum SsmRequest::Action
  *
  * This enum describes the actions that can be performed as SSM
  * requests.
@@ -136,10 +136,10 @@ namespace SSM {
  */
 
 /*!
- * Constructs a SSMRequest object for SSM \a action.
+ * Constructs a SsmRequest object for SSM \a action.
  */
-SSMRequest::SSMRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SSMRequestPrivate(action, this))
+SsmRequest::SsmRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new SsmRequestPrivate(action, this))
 {
 
 }
@@ -147,18 +147,18 @@ SSMRequest::SSMRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-SSMRequest::SSMRequest(const SSMRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SSMRequestPrivate(*other.d_func(), this))
+SsmRequest::SsmRequest(const SsmRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new SsmRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the SSMRequest object to be equal to \a other.
+ * Sets the SsmRequest object to be equal to \a other.
  */
-SSMRequest& SSMRequest::operator=(const SSMRequest &other)
+SsmRequest& SsmRequest::operator=(const SsmRequest &other)
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -166,12 +166,12 @@ SSMRequest& SSMRequest::operator=(const SSMRequest &other)
 }
 
 /*!
- * Constructs aa SSMRequest object with private implementation \a d.
+ * Constructs aa SsmRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SSMRequestPrivate.
+ * implementation that inherits from SsmRequestPrivate.
  */
-SSMRequest::SSMRequest(SSMRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SsmRequest::SsmRequest(SsmRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -179,44 +179,44 @@ SSMRequest::SSMRequest(SSMRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the SSM action to be performed by this request.
  */
-SSMRequest::Action SSMRequest::action() const
+SsmRequest::Action SsmRequest::action() const
 {
-    Q_D(const SSMRequest);
+    Q_D(const SsmRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the SSM action to be performed by this request.
  */
-QString SSMRequest::actionString() const
+QString SsmRequest::actionString() const
 {
-    return SSMRequestPrivate::toString(action());
+    return SsmRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the SSM API version implemented by this request.
  */
-QString SSMRequest::apiVersion() const
+QString SsmRequest::apiVersion() const
 {
-    Q_D(const SSMRequest);
+    Q_D(const SsmRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the SSM action to be performed by this request to \a action.
  */
-void SSMRequest::setAction(const Action action)
+void SsmRequest::setAction(const Action action)
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     d->action = action;
 }
 
 /*!
  * Sets the SSM API version to include in this request to \a version.
  */
-void SSMRequest::setApiVersion(const QString &version)
+void SsmRequest::setApiVersion(const QString &version)
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     d->apiVersion = version;
 }
 
@@ -228,7 +228,7 @@ void SSMRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool SSMRequest::operator==(const SSMRequest &other) const
+bool SsmRequest::operator==(const SsmRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -249,7 +249,7 @@ bool SSMRequest::operator==(const SSMRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool SSMRequest::isValidQueueName(const QString &queueName)
+/*bool SsmRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -259,45 +259,45 @@ bool SSMRequest::operator==(const SSMRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int SSMRequest::clearParameter(const QString &name)
+int SsmRequest::clearParameter(const QString &name)
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void SSMRequest::clearParameters()
+void SsmRequest::clearParameters()
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant SSMRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant SsmRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const SSMRequest);
+    Q_D(const SsmRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &SSMRequest::parameters() const
+const QVariantMap &SsmRequest::parameters() const
 {
-    Q_D(const SSMRequest);
+    Q_D(const SsmRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void SSMRequest::setParameter(const QString &name, const QVariant &value)
+void SsmRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     d->parameters.insert(name, value);
 }
 
@@ -305,9 +305,9 @@ void SSMRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void SSMRequest::setParameters(const QVariantMap &parameters)
+void SsmRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(SSMRequest);
+    Q_D(SsmRequest);
     d->parameters = parameters;
 }
 
@@ -319,27 +319,27 @@ void SSMRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest SSMRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest SsmRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const SSMRequest);
+    Q_D(const SsmRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::SSM::SSMRequestPrivate
- * \brief The SSMRequestPrivate class provides private implementation for SSMRequest.
+ * \class QtAws::SSM::SsmRequestPrivate
+ * \brief The SsmRequestPrivate class provides private implementation for SsmRequest.
  * \internal
  *
  * \inmodule QtAwsSSM
  */
 
 /*!
- * Constructs a SSMRequestPrivate object for SSM \a action,
+ * Constructs a SsmRequestPrivate object for SSM \a action,
  * with public implementation \a q.
  */
-SSMRequestPrivate::SSMRequestPrivate(const SSMRequest::Action action, SSMRequest * const q)
+SsmRequestPrivate::SsmRequestPrivate(const SsmRequest::Action action, SsmRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -351,10 +351,10 @@ SSMRequestPrivate::SSMRequestPrivate(const SSMRequest::Action action, SSMRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the SSMRequest class's copy constructor.
+ * This is required to support the SsmRequest class's copy constructor.
  */
-SSMRequestPrivate::SSMRequestPrivate(const SSMRequestPrivate &other,
-                                     SSMRequest * const q)
+SsmRequestPrivate::SsmRequestPrivate(const SsmRequestPrivate &other,
+                                     SsmRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -365,14 +365,14 @@ SSMRequestPrivate::SSMRequestPrivate(const SSMRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts SSMRequest::Action enumerator values to their respective
+ * This function converts SsmRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the SSM service's Action
  * query parameters.
  */
-QString SSMRequestPrivate::toString(const SSMRequest::Action &action)
+QString SsmRequestPrivate::toString(const SsmRequest::Action &action)
 {
     #define ActionToString(action) \
-        case SSMRequest::action##Action: return QStringLiteral(#action)
+        case SsmRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SES {
 
-class SESRequest;
+class SesRequest;
 
-class QTAWS_EXPORT SESRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SESRequest::Action action; ///< SES action to be performed.
+    SesRequest::Action action; ///< SES action to be performed.
     QString apiVersion;        ///< SES API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SES request (query string) parameters. @todo?
 
-    SESRequestPrivate(const SESRequest::Action action, SESRequest * const q);
-    SESRequestPrivate(const SESRequestPrivate &other, SESRequest * const q);
+    SesRequestPrivate(const SesRequest::Action action, SesRequest * const q);
+    SesRequestPrivate(const SesRequestPrivate &other, SesRequest * const q);
 
-    static QString toString(const SESRequest::Action &action);
+    static QString toString(const SesRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SESRequest)
+    Q_DECLARE_PUBLIC(SesRequest)
 
 };
 

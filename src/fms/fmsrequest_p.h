@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace FMS {
 
-class FMSRequest;
+class FmsRequest;
 
-class QTAWS_EXPORT FMSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT FmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    FMSRequest::Action action; ///< FMS action to be performed.
+    FmsRequest::Action action; ///< FMS action to be performed.
     QString apiVersion;        ///< FMS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< FMS request (query string) parameters. @todo?
 
-    FMSRequestPrivate(const FMSRequest::Action action, FMSRequest * const q);
-    FMSRequestPrivate(const FMSRequestPrivate &other, FMSRequest * const q);
+    FmsRequestPrivate(const FmsRequest::Action action, FmsRequest * const q);
+    FmsRequestPrivate(const FmsRequestPrivate &other, FmsRequest * const q);
 
-    static QString toString(const FMSRequest::Action &action);
+    static QString toString(const FmsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(FMSRequest)
+    Q_DECLARE_PUBLIC(FmsRequest)
 
 };
 

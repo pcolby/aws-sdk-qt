@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace STS {
 
-class STSRequest;
+class StsRequest;
 
-class QTAWS_EXPORT STSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT StsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    STSRequest::Action action; ///< STS action to be performed.
+    StsRequest::Action action; ///< STS action to be performed.
     QString apiVersion;        ///< STS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< STS request (query string) parameters. @todo?
 
-    STSRequestPrivate(const STSRequest::Action action, STSRequest * const q);
-    STSRequestPrivate(const STSRequestPrivate &other, STSRequest * const q);
+    StsRequestPrivate(const StsRequest::Action action, StsRequest * const q);
+    StsRequestPrivate(const StsRequestPrivate &other, StsRequest * const q);
 
-    static QString toString(const STSRequest::Action &action);
+    static QString toString(const StsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(STSRequest)
+    Q_DECLARE_PUBLIC(StsRequest)
 
 };
 

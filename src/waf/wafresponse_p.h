@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace WAF {
 
-class WAFResponse;
+class WafResponse;
 
-class QTAWS_EXPORT WAFResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT WafResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    WAFResponsePrivate(WAFResponse * const q);
+    WafResponsePrivate(WafResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(WAFResponse)
-    Q_DISABLE_COPY(WAFResponsePrivate)
+    Q_DECLARE_PUBLIC(WafResponse)
+    Q_DISABLE_COPY(WafResponsePrivate)
 
 };
 

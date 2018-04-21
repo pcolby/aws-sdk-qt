@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace EC2 {
 
-class EC2ResponsePrivate;
+class Ec2ResponsePrivate;
 
-class QTAWS_EXPORT EC2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT Ec2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    EC2Response(QObject * const parent = 0);
+    Ec2Response(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    EC2Response(EC2ResponsePrivate * const d, QObject * const parent);
+    Ec2Response(Ec2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(EC2Response)
-    Q_DISABLE_COPY(EC2Response)
+    Q_DECLARE_PRIVATE(Ec2Response)
+    Q_DISABLE_COPY(Ec2Response)
 
 };
 

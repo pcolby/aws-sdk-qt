@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SNS {
 
 /*!
- * \class QtAws::SNS::SNSResponse
- * \brief The SNSResponse class provides an interface for SNS responses.
+ * \class QtAws::SNS::SnsResponse
+ * \brief The SnsResponse class provides an interface for SNS responses.
  *
  * \inmodule QtAwsSNS
  */
 
 /*!
- * Constructs a SNSResponse object with parent \a parent.
+ * Constructs a SnsResponse object with parent \a parent.
  */
-SNSResponse::SNSResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SNSResponsePrivate(this), parent)
+SnsResponse::SnsResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SnsResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SNSResponse object with private implementation \a d,
+ * Constructs a SnsResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SNSResponsePrivate.
+ * implementation that inherits from SnsResponsePrivate.
  */
-SNSResponse::SNSResponse(SNSResponsePrivate * const d, QObject * const parent)
+SnsResponse::SnsResponse(SnsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SNSResponse::SNSResponse(SNSResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SNSResponse::parseFailure(QIODevice &response)
+void SnsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SNSResponse);
+    Q_D(SnsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SNSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SNS::SNSResponsePrivate
- * \brief The SNSResponsePrivate class provides private implementation for SNSResponse.
+ * \class QtAws::SNS::SnsResponsePrivate
+ * \brief The SnsResponsePrivate class provides private implementation for SnsResponse.
  * \internal
  *
  * \inmodule QtAwsSNS
  */
 
 /*!
- * Constructs a SNSResponsePrivate object with public implementation \a q.
+ * Constructs a SnsResponsePrivate object with public implementation \a q.
  */
-SNSResponsePrivate::SNSResponsePrivate(
-    SNSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SnsResponsePrivate::SnsResponsePrivate(
+    SnsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

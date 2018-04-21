@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace FMS {
 
-class FMSResponsePrivate;
+class FmsResponsePrivate;
 
-class QTAWS_EXPORT FMSResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT FmsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    FMSResponse(QObject * const parent = 0);
+    FmsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    FMSResponse(FMSResponsePrivate * const d, QObject * const parent);
+    FmsResponse(FmsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(FMSResponse)
-    Q_DISABLE_COPY(FMSResponse)
+    Q_DECLARE_PRIVATE(FmsResponse)
+    Q_DISABLE_COPY(FmsResponse)
 
 };
 

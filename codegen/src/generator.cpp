@@ -91,33 +91,25 @@ int Generator::generate(const QString &serviceFileName,
     sources.clear();
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
-    /// @todo The output directory should probably match the Qt module name convention, so:
-    /// * rename getClassNamePrefix to getAbbreviatedServiceName?
-    /// * apply the case-modification from clientClassName below to a new varianle (serviceNameNotAllUpper?)
-    /// * set moduleName = QSL("QtAws") + serviceNameNotAllUpper
-    /// * replace most instances of serviceFileName with moduleName.
-    /// * replace most (all?) instances of classNamePrefix with serviceName.
-    /// * rename classNamePrefix to moduleName, etc.
-
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
-    const QString classNamePrefix = getClassNamePrefix(metaData);
-    const QString clientClassName =
-        ((classNamePrefix.contains(QRegularExpression(QSL("^[^a-z]+$"))))
-        ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
-        + QSL("Client");
+    const QString serviceName = getServiceName(metaData); // ie with original capitalisation.
+    const QString serviceClassName =                      // With "ALLCAPS" changed to "Allcaps".
+        ((serviceName.contains(QRegularExpression(QSL("^[^a-z]+$"))))
+        ? serviceName.at(0) + serviceName.mid(1).toLower() : serviceName);
+    const QString moduleName = QSL("QtAws") + serviceClassName;
 
     Grantlee::Context context(description.toVariantHash());
-    context.insert(QSL("ServiceName"), classNamePrefix);
+    context.insert(QSL("ServiceName"), serviceName);
     context.insert(QSL("TargetLibName"), serviceFileName);
-    context.insert(QSL("NameSpaceName"), classNamePrefix);
+    context.insert(QSL("NameSpaceName"), serviceName);
     context.insert(QSL("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
     // Generate model classes.
     context.push();
-    context.insert(QSL("ClientClassName"), clientClassName);
-    renderClassFiles(QSL("requestbase"),  context, projectDir, classNamePrefix + QSL("Request"));
-    renderClassFiles(QSL("responsebase"), context, projectDir, classNamePrefix + QSL("Response"));
+    context.insert(QSL("ClientClassName"), serviceClassName + QSL("Client"));
+    renderClassFiles(QSL("requestbase"),  context, projectDir, serviceClassName + QSL("Request"));
+    renderClassFiles(QSL("responsebase"), context, projectDir, serviceClassName + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
         generateModelClasses(context, projectDir, operationName, description);
     }
@@ -135,14 +127,13 @@ int Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QSL("operations"), operations);
-    renderClassFiles(QSL("client"), context, projectDir, clientClassName);
+    renderClassFiles(QSL("client"), context, projectDir, serviceClassName + QSL("Client"));
     context.pop();
 
     // Generate documentation.
     context.push();
     outputDir.mkdir(serviceFileName + QSL("/doc"));
     const QString docDir = projectDir + QSL("/doc");
-    const QString moduleName = QSL("QtAws") + classNamePrefix;
     context.insert(QSL("ModuleName"), moduleName);
     render(QSL("doc/module.qdoc"),       context, docDir, moduleName.toLower() + QSL(".qdoc"));
     render(QSL("doc/module.qdocconf"),   context, docDir, moduleName.toLower() + QSL(".qdocconf"));
@@ -238,10 +229,12 @@ bool Generator::generateModelClasses(Grantlee::Context &context, const QString &
     return true;
 }
 
-QString Generator::getClassNamePrefix(const QJsonObject &metaData)
+QString Generator::getServiceName(const QJsonObject &metaData)
 {
     // Replicate what aws-sdk-cpp does; ie use the abbreviated name, if present
     // otherwise fall back to the full service name.
+    // Note, there is also a serviceId field on some API descriptions, which looks promising, but
+    // it is canonocalised, and so case folded to all lower, which is not what we want here.
     QString prefix = metaData.value(QLatin1String("serviceAbbreviation")).toString();
     if (prefix.isEmpty()) {
         prefix = metaData.value(QLatin1String("serviceFullName")).toString();

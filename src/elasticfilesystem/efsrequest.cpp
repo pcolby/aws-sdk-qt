@@ -24,14 +24,14 @@ namespace QtAws {
 namespace EFS {
 
 /*!
- * \class QtAws::EFS::EFSRequest
- * \brief The EFSRequest class provides an interface for EFS requests.
+ * \class QtAws::EFS::EfsRequest
+ * \brief The EfsRequest class provides an interface for EFS requests.
  *
  * \inmodule QtAwsEFS
  */
 
 /*!
- * \enum EFSRequest::Action
+ * \enum EfsRequest::Action
  *
  * This enum describes the actions that can be performed as EFS
  * requests.
@@ -50,10 +50,10 @@ namespace EFS {
  */
 
 /*!
- * Constructs a EFSRequest object for EFS \a action.
+ * Constructs a EfsRequest object for EFS \a action.
  */
-EFSRequest::EFSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new EFSRequestPrivate(action, this))
+EfsRequest::EfsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new EfsRequestPrivate(action, this))
 {
 
 }
@@ -61,18 +61,18 @@ EFSRequest::EFSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-EFSRequest::EFSRequest(const EFSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new EFSRequestPrivate(*other.d_func(), this))
+EfsRequest::EfsRequest(const EfsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new EfsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the EFSRequest object to be equal to \a other.
+ * Sets the EfsRequest object to be equal to \a other.
  */
-EFSRequest& EFSRequest::operator=(const EFSRequest &other)
+EfsRequest& EfsRequest::operator=(const EfsRequest &other)
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -80,12 +80,12 @@ EFSRequest& EFSRequest::operator=(const EFSRequest &other)
 }
 
 /*!
- * Constructs aa EFSRequest object with private implementation \a d.
+ * Constructs aa EfsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from EFSRequestPrivate.
+ * implementation that inherits from EfsRequestPrivate.
  */
-EFSRequest::EFSRequest(EFSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EfsRequest::EfsRequest(EfsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -93,44 +93,44 @@ EFSRequest::EFSRequest(EFSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the EFS action to be performed by this request.
  */
-EFSRequest::Action EFSRequest::action() const
+EfsRequest::Action EfsRequest::action() const
 {
-    Q_D(const EFSRequest);
+    Q_D(const EfsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the EFS action to be performed by this request.
  */
-QString EFSRequest::actionString() const
+QString EfsRequest::actionString() const
 {
-    return EFSRequestPrivate::toString(action());
+    return EfsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the EFS API version implemented by this request.
  */
-QString EFSRequest::apiVersion() const
+QString EfsRequest::apiVersion() const
 {
-    Q_D(const EFSRequest);
+    Q_D(const EfsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the EFS action to be performed by this request to \a action.
  */
-void EFSRequest::setAction(const Action action)
+void EfsRequest::setAction(const Action action)
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the EFS API version to include in this request to \a version.
  */
-void EFSRequest::setApiVersion(const QString &version)
+void EfsRequest::setApiVersion(const QString &version)
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     d->apiVersion = version;
 }
 
@@ -142,7 +142,7 @@ void EFSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool EFSRequest::operator==(const EFSRequest &other) const
+bool EfsRequest::operator==(const EfsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -163,7 +163,7 @@ bool EFSRequest::operator==(const EFSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool EFSRequest::isValidQueueName(const QString &queueName)
+/*bool EfsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -173,45 +173,45 @@ bool EFSRequest::operator==(const EFSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int EFSRequest::clearParameter(const QString &name)
+int EfsRequest::clearParameter(const QString &name)
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void EFSRequest::clearParameters()
+void EfsRequest::clearParameters()
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant EFSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant EfsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const EFSRequest);
+    Q_D(const EfsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &EFSRequest::parameters() const
+const QVariantMap &EfsRequest::parameters() const
 {
-    Q_D(const EFSRequest);
+    Q_D(const EfsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void EFSRequest::setParameter(const QString &name, const QVariant &value)
+void EfsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -219,9 +219,9 @@ void EFSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void EFSRequest::setParameters(const QVariantMap &parameters)
+void EfsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(EFSRequest);
+    Q_D(EfsRequest);
     d->parameters = parameters;
 }
 
@@ -233,27 +233,27 @@ void EFSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest EFSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest EfsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const EFSRequest);
+    Q_D(const EfsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::EFS::EFSRequestPrivate
- * \brief The EFSRequestPrivate class provides private implementation for EFSRequest.
+ * \class QtAws::EFS::EfsRequestPrivate
+ * \brief The EfsRequestPrivate class provides private implementation for EfsRequest.
  * \internal
  *
  * \inmodule QtAwsEFS
  */
 
 /*!
- * Constructs a EFSRequestPrivate object for EFS \a action,
+ * Constructs a EfsRequestPrivate object for EFS \a action,
  * with public implementation \a q.
  */
-EFSRequestPrivate::EFSRequestPrivate(const EFSRequest::Action action, EFSRequest * const q)
+EfsRequestPrivate::EfsRequestPrivate(const EfsRequest::Action action, EfsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -265,10 +265,10 @@ EFSRequestPrivate::EFSRequestPrivate(const EFSRequest::Action action, EFSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the EFSRequest class's copy constructor.
+ * This is required to support the EfsRequest class's copy constructor.
  */
-EFSRequestPrivate::EFSRequestPrivate(const EFSRequestPrivate &other,
-                                     EFSRequest * const q)
+EfsRequestPrivate::EfsRequestPrivate(const EfsRequestPrivate &other,
+                                     EfsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -279,14 +279,14 @@ EFSRequestPrivate::EFSRequestPrivate(const EFSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts EFSRequest::Action enumerator values to their respective
+ * This function converts EfsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the EFS service's Action
  * query parameters.
  */
-QString EFSRequestPrivate::toString(const EFSRequest::Action &action)
+QString EfsRequestPrivate::toString(const EfsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case EFSRequest::action##Action: return QStringLiteral(#action)
+        case EfsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

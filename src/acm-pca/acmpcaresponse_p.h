@@ -25,21 +25,21 @@
 namespace QtAws {
 namespace ACMPCA {
 
-class ACMPCAResponse;
+class AcmpcaResponse;
 
-class QTAWS_EXPORT ACMPCAResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QTAWS_EXPORT AcmpcaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
     Q_OBJECT
 
 public:
 
-    ACMPCAResponsePrivate(ACMPCAResponse * const q);
+    AcmpcaResponsePrivate(AcmpcaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
-    Q_DECLARE_PUBLIC(ACMPCAResponse)
-    Q_DISABLE_COPY(ACMPCAResponsePrivate)
+    Q_DECLARE_PUBLIC(AcmpcaResponse)
+    Q_DISABLE_COPY(AcmpcaResponsePrivate)
 
 };
 

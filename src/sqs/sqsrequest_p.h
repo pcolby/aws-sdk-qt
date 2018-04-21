@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace SQS {
 
-class SQSRequest;
+class SqsRequest;
 
-class QTAWS_EXPORT SQSRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT SqsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    SQSRequest::Action action; ///< SQS action to be performed.
+    SqsRequest::Action action; ///< SQS action to be performed.
     QString apiVersion;        ///< SQS API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< SQS request (query string) parameters. @todo?
 
-    SQSRequestPrivate(const SQSRequest::Action action, SQSRequest * const q);
-    SQSRequestPrivate(const SQSRequestPrivate &other, SQSRequest * const q);
+    SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q);
+    SqsRequestPrivate(const SqsRequestPrivate &other, SqsRequest * const q);
 
-    static QString toString(const SQSRequest::Action &action);
+    static QString toString(const SqsRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(SQSRequest)
+    Q_DECLARE_PUBLIC(SqsRequest)
 
 };
 

@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SMS {
 
-class SMSRequestPrivate;
+class SmsRequestPrivate;
 
-class QTAWS_EXPORT SMSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SMS.
@@ -51,9 +51,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SMSRequest(const Action action);
-    SMSRequest(const SMSRequest &other);
-    SMSRequest &operator=(const SMSRequest &other);
+    SmsRequest(const Action action);
+    SmsRequest(const SmsRequest &other);
+    SmsRequest &operator=(const SmsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -62,12 +62,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SMSRequest &other) const override;
+    virtual bool operator==(const SmsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SMSRequest(SMSRequestPrivate * const d);
+    SmsRequest(SmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -80,7 +80,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SMSRequest)
+    Q_DECLARE_PRIVATE(SmsRequest)
 
 };
 

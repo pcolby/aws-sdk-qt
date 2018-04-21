@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace STS {
 
-class STSRequestPrivate;
+class StsRequestPrivate;
 
-class QTAWS_EXPORT STSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT StsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by STS.
@@ -47,9 +47,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    STSRequest(const Action action);
-    STSRequest(const STSRequest &other);
-    STSRequest &operator=(const STSRequest &other);
+    StsRequest(const Action action);
+    StsRequest(const StsRequest &other);
+    StsRequest &operator=(const StsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -58,12 +58,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const STSRequest &other) const override;
+    virtual bool operator==(const StsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    STSRequest(STSRequestPrivate * const d);
+    StsRequest(StsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -76,7 +76,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(STSRequest)
+    Q_DECLARE_PRIVATE(StsRequest)
 
 };
 

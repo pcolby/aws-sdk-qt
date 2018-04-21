@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace SNS {
 
-class SNSResponsePrivate;
+class SnsResponsePrivate;
 
-class QTAWS_EXPORT SNSResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT SnsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SNSResponse(QObject * const parent = 0);
+    SnsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SNSResponse(SNSResponsePrivate * const d, QObject * const parent);
+    SnsResponse(SnsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(SNSResponse)
-    Q_DISABLE_COPY(SNSResponse)
+    Q_DECLARE_PRIVATE(SnsResponse)
+    Q_DISABLE_COPY(SnsResponse)
 
 };
 

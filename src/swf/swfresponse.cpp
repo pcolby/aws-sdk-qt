@@ -27,30 +27,30 @@ namespace QtAws {
 namespace SWF {
 
 /*!
- * \class QtAws::SWF::SWFResponse
- * \brief The SWFResponse class provides an interface for SWF responses.
+ * \class QtAws::SWF::SwfResponse
+ * \brief The SwfResponse class provides an interface for SWF responses.
  *
  * \inmodule QtAwsSWF
  */
 
 /*!
- * Constructs a SWFResponse object with parent \a parent.
+ * Constructs a SwfResponse object with parent \a parent.
  */
-SWFResponse::SWFResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SWFResponsePrivate(this), parent)
+SwfResponse::SwfResponse(QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(new SwfResponsePrivate(this), parent)
 {
 
 }
 
 /*!
  * \internal
- * Constructs a SWFResponse object with private implementation \a d,
+ * Constructs a SwfResponse object with private implementation \a d,
  * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from SWFResponsePrivate.
+ * implementation that inherits from SwfResponsePrivate.
  */
-SWFResponse::SWFResponse(SWFResponsePrivate * const d, QObject * const parent)
+SwfResponse::SwfResponse(SwfResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
@@ -59,9 +59,9 @@ SWFResponse::SWFResponse(SWFResponsePrivate * const d, QObject * const parent)
 /*!
  * \reimp
  */
-void SWFResponse::parseFailure(QIODevice &response)
+void SwfResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SWFResponse);
+    Q_D(SwfResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -76,18 +76,18 @@ void SWFResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * \class QtAws::SWF::SWFResponsePrivate
- * \brief The SWFResponsePrivate class provides private implementation for SWFResponse.
+ * \class QtAws::SWF::SwfResponsePrivate
+ * \brief The SwfResponsePrivate class provides private implementation for SwfResponse.
  * \internal
  *
  * \inmodule QtAwsSWF
  */
 
 /*!
- * Constructs a SWFResponsePrivate object with public implementation \a q.
+ * Constructs a SwfResponsePrivate object with public implementation \a q.
  */
-SWFResponsePrivate::SWFResponsePrivate(
-    SWFResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+SwfResponsePrivate::SwfResponsePrivate(
+    SwfResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

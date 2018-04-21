@@ -36,7 +36,7 @@ protected:
     bool generateModelClasses(Grantlee::Context &context, const QString &projectDir,
                               const QString &operationName, const QJsonObject &description);
 
-    static QString getClassNamePrefix(const QJsonObject &metaData);
+    static QString getServiceName(const QJsonObject &metaData);
 
     bool render(const QString &templateName, Grantlee::Context &context,
                 const QString &outputPathName) const;

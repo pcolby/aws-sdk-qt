@@ -26,22 +26,22 @@
 namespace QtAws {
 namespace EMR {
 
-class EMRRequest;
+class EmrRequest;
 
-class QTAWS_EXPORT EMRRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class QTAWS_EXPORT EmrRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
-    EMRRequest::Action action; ///< EMR action to be performed.
+    EmrRequest::Action action; ///< EMR action to be performed.
     QString apiVersion;        ///< EMR API version string. @todo Should this be in the abstract base class?
     QVariantMap parameters;    ///< EMR request (query string) parameters. @todo?
 
-    EMRRequestPrivate(const EMRRequest::Action action, EMRRequest * const q);
-    EMRRequestPrivate(const EMRRequestPrivate &other, EMRRequest * const q);
+    EmrRequestPrivate(const EmrRequest::Action action, EmrRequest * const q);
+    EmrRequestPrivate(const EmrRequestPrivate &other, EmrRequest * const q);
 
-    static QString toString(const EMRRequest::Action &action);
+    static QString toString(const EmrRequest::Action &action);
 
 private:
-    Q_DECLARE_PUBLIC(EMRRequest)
+    Q_DECLARE_PUBLIC(EmrRequest)
 
 };
 

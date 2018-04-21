@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace SFN {
 
-class SFNResponsePrivate;
+class SfnResponsePrivate;
 
-class QTAWS_EXPORT SFNResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT SfnResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SFNResponse(QObject * const parent = 0);
+    SfnResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SFNResponse(SFNResponsePrivate * const d, QObject * const parent);
+    SfnResponse(SfnResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(SFNResponse)
-    Q_DISABLE_COPY(SFNResponse)
+    Q_DECLARE_PRIVATE(SfnResponse)
+    Q_DISABLE_COPY(SfnResponse)
 
 };
 

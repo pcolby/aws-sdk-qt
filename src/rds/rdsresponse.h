@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace RDS {
 
-class RDSResponsePrivate;
+class RdsResponsePrivate;
 
-class QTAWS_EXPORT RDSResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT RdsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    RDSResponse(QObject * const parent = 0);
+    RdsResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    RDSResponse(RDSResponsePrivate * const d, QObject * const parent);
+    RdsResponse(RdsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(RDSResponse)
-    Q_DISABLE_COPY(RDSResponse)
+    Q_DECLARE_PRIVATE(RdsResponse)
+    Q_DISABLE_COPY(RdsResponse)
 
 };
 

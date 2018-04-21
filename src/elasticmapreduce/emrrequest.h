@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace EMR {
 
-class EMRRequestPrivate;
+class EmrRequestPrivate;
 
-class QTAWS_EXPORT EMRRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT EmrRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EMR.
@@ -67,9 +67,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    EMRRequest(const Action action);
-    EMRRequest(const EMRRequest &other);
-    EMRRequest &operator=(const EMRRequest &other);
+    EmrRequest(const Action action);
+    EmrRequest(const EmrRequest &other);
+    EmrRequest &operator=(const EmrRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -78,12 +78,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const EMRRequest &other) const override;
+    virtual bool operator==(const EmrRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    EMRRequest(EMRRequestPrivate * const d);
+    EmrRequest(EmrRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -96,7 +96,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(EMRRequest)
+    Q_DECLARE_PRIVATE(EmrRequest)
 
 };
 

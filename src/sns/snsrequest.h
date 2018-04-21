@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SNS {
 
-class SNSRequestPrivate;
+class SnsRequestPrivate;
 
-class QTAWS_EXPORT SNSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT SnsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SNS.
@@ -70,9 +70,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    SNSRequest(const Action action);
-    SNSRequest(const SNSRequest &other);
-    SNSRequest &operator=(const SNSRequest &other);
+    SnsRequest(const Action action);
+    SnsRequest(const SnsRequest &other);
+    SnsRequest &operator=(const SnsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -81,12 +81,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SNSRequest &other) const override;
+    virtual bool operator==(const SnsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    SNSRequest(SNSRequestPrivate * const d);
+    SnsRequest(SnsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -99,7 +99,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(SNSRequest)
+    Q_DECLARE_PRIVATE(SnsRequest)
 
 };
 

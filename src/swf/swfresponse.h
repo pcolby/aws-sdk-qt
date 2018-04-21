@@ -26,25 +26,25 @@
 namespace QtAws {
 namespace SWF {
 
-class SWFResponsePrivate;
+class SwfResponsePrivate;
 
-class QTAWS_EXPORT SWFResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWS_EXPORT SwfResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
-    SWFResponse(QObject * const parent = 0);
+    SwfResponse(QObject * const parent = 0);
 
 protected:
     /// @cond internal
-    SWFResponse(SWFResponsePrivate * const d, QObject * const parent);
+    SwfResponse(SwfResponsePrivate * const d, QObject * const parent);
     /// @endcond
 
 protected slots:
     virtual void parseFailure(QIODevice &response) override;
 
 private:
-    Q_DECLARE_PRIVATE(SWFResponse)
-    Q_DISABLE_COPY(SWFResponse)
+    Q_DECLARE_PRIVATE(SwfResponse)
+    Q_DISABLE_COPY(SwfResponse)
 
 };
 

@@ -30,9 +30,9 @@ class QNetworkRequest;
 namespace QtAws {
 namespace KMS {
 
-class KMSRequestPrivate;
+class KmsRequestPrivate;
 
-class QTAWS_EXPORT KMSRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWS_EXPORT KmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by KMS.
@@ -75,9 +75,9 @@ public:
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
-    KMSRequest(const Action action);
-    KMSRequest(const KMSRequest &other);
-    KMSRequest &operator=(const KMSRequest &other);
+    KmsRequest(const Action action);
+    KmsRequest(const KmsRequest &other);
+    KmsRequest &operator=(const KmsRequest &other);
 
     Action action() const;
     QString actionString() const;
@@ -86,12 +86,12 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const KMSRequest &other) const override;
+    virtual bool operator==(const KmsRequest &other) const override;
 
 
 protected:
     /// @cond internal
-    KMSRequest(KMSRequestPrivate * const d);
+    KmsRequest(KmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
@@ -104,7 +104,7 @@ protected:
     virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
-    Q_DECLARE_PRIVATE(KMSRequest)
+    Q_DECLARE_PRIVATE(KmsRequest)
 
 };
 

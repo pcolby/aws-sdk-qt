@@ -24,14 +24,14 @@ namespace QtAws {
 namespace KMS {
 
 /*!
- * \class QtAws::KMS::KMSRequest
- * \brief The KMSRequest class provides an interface for KMS requests.
+ * \class QtAws::KMS::KmsRequest
+ * \brief The KmsRequest class provides an interface for KMS requests.
  *
  * \inmodule QtAwsKMS
  */
 
 /*!
- * \enum KMSRequest::Action
+ * \enum KmsRequest::Action
  *
  * This enum describes the actions that can be performed as KMS
  * requests.
@@ -74,10 +74,10 @@ namespace KMS {
  */
 
 /*!
- * Constructs a KMSRequest object for KMS \a action.
+ * Constructs a KmsRequest object for KMS \a action.
  */
-KMSRequest::KMSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new KMSRequestPrivate(action, this))
+KmsRequest::KmsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new KmsRequestPrivate(action, this))
 {
 
 }
@@ -85,18 +85,18 @@ KMSRequest::KMSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-KMSRequest::KMSRequest(const KMSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new KMSRequestPrivate(*other.d_func(), this))
+KmsRequest::KmsRequest(const KmsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new KmsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the KMSRequest object to be equal to \a other.
+ * Sets the KmsRequest object to be equal to \a other.
  */
-KMSRequest& KMSRequest::operator=(const KMSRequest &other)
+KmsRequest& KmsRequest::operator=(const KmsRequest &other)
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -104,12 +104,12 @@ KMSRequest& KMSRequest::operator=(const KMSRequest &other)
 }
 
 /*!
- * Constructs aa KMSRequest object with private implementation \a d.
+ * Constructs aa KmsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from KMSRequestPrivate.
+ * implementation that inherits from KmsRequestPrivate.
  */
-KMSRequest::KMSRequest(KMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+KmsRequest::KmsRequest(KmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -117,44 +117,44 @@ KMSRequest::KMSRequest(KMSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the KMS action to be performed by this request.
  */
-KMSRequest::Action KMSRequest::action() const
+KmsRequest::Action KmsRequest::action() const
 {
-    Q_D(const KMSRequest);
+    Q_D(const KmsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the KMS action to be performed by this request.
  */
-QString KMSRequest::actionString() const
+QString KmsRequest::actionString() const
 {
-    return KMSRequestPrivate::toString(action());
+    return KmsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the KMS API version implemented by this request.
  */
-QString KMSRequest::apiVersion() const
+QString KmsRequest::apiVersion() const
 {
-    Q_D(const KMSRequest);
+    Q_D(const KmsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the KMS action to be performed by this request to \a action.
  */
-void KMSRequest::setAction(const Action action)
+void KmsRequest::setAction(const Action action)
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the KMS API version to include in this request to \a version.
  */
-void KMSRequest::setApiVersion(const QString &version)
+void KmsRequest::setApiVersion(const QString &version)
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     d->apiVersion = version;
 }
 
@@ -166,7 +166,7 @@ void KMSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool KMSRequest::operator==(const KMSRequest &other) const
+bool KmsRequest::operator==(const KmsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -187,7 +187,7 @@ bool KMSRequest::operator==(const KMSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool KMSRequest::isValidQueueName(const QString &queueName)
+/*bool KmsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -197,45 +197,45 @@ bool KMSRequest::operator==(const KMSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int KMSRequest::clearParameter(const QString &name)
+int KmsRequest::clearParameter(const QString &name)
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void KMSRequest::clearParameters()
+void KmsRequest::clearParameters()
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant KMSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant KmsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const KMSRequest);
+    Q_D(const KmsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &KMSRequest::parameters() const
+const QVariantMap &KmsRequest::parameters() const
 {
-    Q_D(const KMSRequest);
+    Q_D(const KmsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void KMSRequest::setParameter(const QString &name, const QVariant &value)
+void KmsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -243,9 +243,9 @@ void KMSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void KMSRequest::setParameters(const QVariantMap &parameters)
+void KmsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(KMSRequest);
+    Q_D(KmsRequest);
     d->parameters = parameters;
 }
 
@@ -257,27 +257,27 @@ void KMSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest KMSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest KmsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const KMSRequest);
+    Q_D(const KmsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::KMS::KMSRequestPrivate
- * \brief The KMSRequestPrivate class provides private implementation for KMSRequest.
+ * \class QtAws::KMS::KmsRequestPrivate
+ * \brief The KmsRequestPrivate class provides private implementation for KmsRequest.
  * \internal
  *
  * \inmodule QtAwsKMS
  */
 
 /*!
- * Constructs a KMSRequestPrivate object for KMS \a action,
+ * Constructs a KmsRequestPrivate object for KMS \a action,
  * with public implementation \a q.
  */
-KMSRequestPrivate::KMSRequestPrivate(const KMSRequest::Action action, KMSRequest * const q)
+KmsRequestPrivate::KmsRequestPrivate(const KmsRequest::Action action, KmsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -289,10 +289,10 @@ KMSRequestPrivate::KMSRequestPrivate(const KMSRequest::Action action, KMSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the KMSRequest class's copy constructor.
+ * This is required to support the KmsRequest class's copy constructor.
  */
-KMSRequestPrivate::KMSRequestPrivate(const KMSRequestPrivate &other,
-                                     KMSRequest * const q)
+KmsRequestPrivate::KmsRequestPrivate(const KmsRequestPrivate &other,
+                                     KmsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -303,14 +303,14 @@ KMSRequestPrivate::KMSRequestPrivate(const KMSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts KMSRequest::Action enumerator values to their respective
+ * This function converts KmsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the KMS service's Action
  * query parameters.
  */
-QString KMSRequestPrivate::toString(const KMSRequest::Action &action)
+QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case KMSRequest::action##Action: return QStringLiteral(#action)
+        case KmsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

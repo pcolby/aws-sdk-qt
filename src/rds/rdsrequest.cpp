@@ -24,14 +24,14 @@ namespace QtAws {
 namespace RDS {
 
 /*!
- * \class QtAws::RDS::RDSRequest
- * \brief The RDSRequest class provides an interface for RDS requests.
+ * \class QtAws::RDS::RdsRequest
+ * \brief The RdsRequest class provides an interface for RDS requests.
  *
  * \inmodule QtAwsRDS
  */
 
 /*!
- * \enum RDSRequest::Action
+ * \enum RdsRequest::Action
  *
  * This enum describes the actions that can be performed as RDS
  * requests.
@@ -130,10 +130,10 @@ namespace RDS {
  */
 
 /*!
- * Constructs a RDSRequest object for RDS \a action.
+ * Constructs a RdsRequest object for RDS \a action.
  */
-RDSRequest::RDSRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new RDSRequestPrivate(action, this))
+RdsRequest::RdsRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new RdsRequestPrivate(action, this))
 {
 
 }
@@ -141,18 +141,18 @@ RDSRequest::RDSRequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-RDSRequest::RDSRequest(const RDSRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new RDSRequestPrivate(*other.d_func(), this))
+RdsRequest::RdsRequest(const RdsRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new RdsRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the RDSRequest object to be equal to \a other.
+ * Sets the RdsRequest object to be equal to \a other.
  */
-RDSRequest& RDSRequest::operator=(const RDSRequest &other)
+RdsRequest& RdsRequest::operator=(const RdsRequest &other)
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -160,12 +160,12 @@ RDSRequest& RDSRequest::operator=(const RDSRequest &other)
 }
 
 /*!
- * Constructs aa RDSRequest object with private implementation \a d.
+ * Constructs aa RdsRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from RDSRequestPrivate.
+ * implementation that inherits from RdsRequestPrivate.
  */
-RDSRequest::RDSRequest(RDSRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+RdsRequest::RdsRequest(RdsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -173,44 +173,44 @@ RDSRequest::RDSRequest(RDSRequestPrivate * const d) : QtAws::Core::AwsAbstractRe
 /*!
  * Returns the RDS action to be performed by this request.
  */
-RDSRequest::Action RDSRequest::action() const
+RdsRequest::Action RdsRequest::action() const
 {
-    Q_D(const RDSRequest);
+    Q_D(const RdsRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the RDS action to be performed by this request.
  */
-QString RDSRequest::actionString() const
+QString RdsRequest::actionString() const
 {
-    return RDSRequestPrivate::toString(action());
+    return RdsRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the RDS API version implemented by this request.
  */
-QString RDSRequest::apiVersion() const
+QString RdsRequest::apiVersion() const
 {
-    Q_D(const RDSRequest);
+    Q_D(const RdsRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the RDS action to be performed by this request to \a action.
  */
-void RDSRequest::setAction(const Action action)
+void RdsRequest::setAction(const Action action)
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     d->action = action;
 }
 
 /*!
  * Sets the RDS API version to include in this request to \a version.
  */
-void RDSRequest::setApiVersion(const QString &version)
+void RdsRequest::setApiVersion(const QString &version)
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     d->apiVersion = version;
 }
 
@@ -222,7 +222,7 @@ void RDSRequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool RDSRequest::operator==(const RDSRequest &other) const
+bool RdsRequest::operator==(const RdsRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -243,7 +243,7 @@ bool RDSRequest::operator==(const RDSRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool RDSRequest::isValidQueueName(const QString &queueName)
+/*bool RdsRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -253,45 +253,45 @@ bool RDSRequest::operator==(const RDSRequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int RDSRequest::clearParameter(const QString &name)
+int RdsRequest::clearParameter(const QString &name)
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void RDSRequest::clearParameters()
+void RdsRequest::clearParameters()
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant RDSRequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant RdsRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const RDSRequest);
+    Q_D(const RdsRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &RDSRequest::parameters() const
+const QVariantMap &RdsRequest::parameters() const
 {
-    Q_D(const RDSRequest);
+    Q_D(const RdsRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void RDSRequest::setParameter(const QString &name, const QVariant &value)
+void RdsRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     d->parameters.insert(name, value);
 }
 
@@ -299,9 +299,9 @@ void RDSRequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void RDSRequest::setParameters(const QVariantMap &parameters)
+void RdsRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(RDSRequest);
+    Q_D(RdsRequest);
     d->parameters = parameters;
 }
 
@@ -313,27 +313,27 @@ void RDSRequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest RDSRequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest RdsRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const RDSRequest);
+    Q_D(const RdsRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::RDS::RDSRequestPrivate
- * \brief The RDSRequestPrivate class provides private implementation for RDSRequest.
+ * \class QtAws::RDS::RdsRequestPrivate
+ * \brief The RdsRequestPrivate class provides private implementation for RdsRequest.
  * \internal
  *
  * \inmodule QtAwsRDS
  */
 
 /*!
- * Constructs a RDSRequestPrivate object for RDS \a action,
+ * Constructs a RdsRequestPrivate object for RDS \a action,
  * with public implementation \a q.
  */
-RDSRequestPrivate::RDSRequestPrivate(const RDSRequest::Action action, RDSRequest * const q)
+RdsRequestPrivate::RdsRequestPrivate(const RdsRequest::Action action, RdsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -345,10 +345,10 @@ RDSRequestPrivate::RDSRequestPrivate(const RDSRequest::Action action, RDSRequest
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the RDSRequest class's copy constructor.
+ * This is required to support the RdsRequest class's copy constructor.
  */
-RDSRequestPrivate::RDSRequestPrivate(const RDSRequestPrivate &other,
-                                     RDSRequest * const q)
+RdsRequestPrivate::RdsRequestPrivate(const RdsRequestPrivate &other,
+                                     RdsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -359,14 +359,14 @@ RDSRequestPrivate::RDSRequestPrivate(const RDSRequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts RDSRequest::Action enumerator values to their respective
+ * This function converts RdsRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the RDS service's Action
  * query parameters.
  */
-QString RDSRequestPrivate::toString(const RDSRequest::Action &action)
+QString RdsRequestPrivate::toString(const RdsRequest::Action &action)
 {
     #define ActionToString(action) \
-        case RDSRequest::action##Action: return QStringLiteral(#action)
+        case RdsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:

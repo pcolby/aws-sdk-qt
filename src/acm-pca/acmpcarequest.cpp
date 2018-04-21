@@ -24,14 +24,14 @@ namespace QtAws {
 namespace ACMPCA {
 
 /*!
- * \class QtAws::ACMPCA::ACMPCARequest
- * \brief The ACMPCARequest class provides an interface for ACMPCA requests.
+ * \class QtAws::ACMPCA::AcmpcaRequest
+ * \brief The AcmpcaRequest class provides an interface for ACMPCA requests.
  *
  * \inmodule QtAwsACMPCA
  */
 
 /*!
- * \enum ACMPCARequest::Action
+ * \enum AcmpcaRequest::Action
  *
  * This enum describes the actions that can be performed as ACMPCA
  * requests.
@@ -55,10 +55,10 @@ namespace ACMPCA {
  */
 
 /*!
- * Constructs a ACMPCARequest object for ACMPCA \a action.
+ * Constructs a AcmpcaRequest object for ACMPCA \a action.
  */
-ACMPCARequest::ACMPCARequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ACMPCARequestPrivate(action, this))
+AcmpcaRequest::AcmpcaRequest(const Action action)
+    : QtAws::Core::AwsAbstractRequest(new AcmpcaRequestPrivate(action, this))
 {
 
 }
@@ -66,18 +66,18 @@ ACMPCARequest::ACMPCARequest(const Action action)
 /*!
  * Constructs a copy of \a other.
  */
-ACMPCARequest::ACMPCARequest(const ACMPCARequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ACMPCARequestPrivate(*other.d_func(), this))
+AcmpcaRequest::AcmpcaRequest(const AcmpcaRequest &other)
+    : QtAws::Core::AwsAbstractRequest(new AcmpcaRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Sets the ACMPCARequest object to be equal to \a other.
+ * Sets the AcmpcaRequest object to be equal to \a other.
  */
-ACMPCARequest& ACMPCARequest::operator=(const ACMPCARequest &other)
+AcmpcaRequest& AcmpcaRequest::operator=(const AcmpcaRequest &other)
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     d->action = other.d_func()->action;
     d->apiVersion = other.d_func()->apiVersion;
     d->parameters = other.d_func()->parameters;
@@ -85,12 +85,12 @@ ACMPCARequest& ACMPCARequest::operator=(const ACMPCARequest &other)
 }
 
 /*!
- * Constructs aa ACMPCARequest object with private implementation \a d.
+ * Constructs aa AcmpcaRequest object with private implementation \a d.
  *
  * This overload allows derived classes to provide their own private class
- * implementation that inherits from ACMPCARequestPrivate.
+ * implementation that inherits from AcmpcaRequestPrivate.
  */
-ACMPCARequest::ACMPCARequest(ACMPCARequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AcmpcaRequest::AcmpcaRequest(AcmpcaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -98,44 +98,44 @@ ACMPCARequest::ACMPCARequest(ACMPCARequestPrivate * const d) : QtAws::Core::AwsA
 /*!
  * Returns the ACMPCA action to be performed by this request.
  */
-ACMPCARequest::Action ACMPCARequest::action() const
+AcmpcaRequest::Action AcmpcaRequest::action() const
 {
-    Q_D(const ACMPCARequest);
+    Q_D(const AcmpcaRequest);
     return d->action;
 }
 
 /*!
  * Returns the name of the ACMPCA action to be performed by this request.
  */
-QString ACMPCARequest::actionString() const
+QString AcmpcaRequest::actionString() const
 {
-    return ACMPCARequestPrivate::toString(action());
+    return AcmpcaRequestPrivate::toString(action());
 }
 
 /*!
  * Returns the ACMPCA API version implemented by this request.
  */
-QString ACMPCARequest::apiVersion() const
+QString AcmpcaRequest::apiVersion() const
 {
-    Q_D(const ACMPCARequest);
+    Q_D(const AcmpcaRequest);
     return d->apiVersion;
 }
 
 /*!
  * Sets the ACMPCA action to be performed by this request to \a action.
  */
-void ACMPCARequest::setAction(const Action action)
+void AcmpcaRequest::setAction(const Action action)
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     d->action = action;
 }
 
 /*!
  * Sets the ACMPCA API version to include in this request to \a version.
  */
-void ACMPCARequest::setApiVersion(const QString &version)
+void AcmpcaRequest::setApiVersion(const QString &version)
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     d->apiVersion = version;
 }
 
@@ -147,7 +147,7 @@ void ACMPCARequest::setApiVersion(const QString &version)
  * this class' parameters functionality for all request parameters, and that
  * parameters map is already checked via this implementation.
  */
-bool ACMPCARequest::operator==(const ACMPCARequest &other) const
+bool AcmpcaRequest::operator==(const AcmpcaRequest &other) const
 {
     return ((action() == other.action()) &&
             (apiVersion() == other.apiVersion()) &&
@@ -168,7 +168,7 @@ bool ACMPCARequest::operator==(const ACMPCARequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-/*bool ACMPCARequest::isValidQueueName(const QString &queueName)
+/*bool AcmpcaRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
@@ -178,45 +178,45 @@ bool ACMPCARequest::operator==(const ACMPCARequest &other) const
  * Removes the a \a name parameter from the request, then returns the number of
  * paramters removed (typically \c 0 or \c 1).
  */
-int ACMPCARequest::clearParameter(const QString &name)
+int AcmpcaRequest::clearParameter(const QString &name)
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     return d->parameters.remove(name);
 }
 
 /*!
  * Removes all parameters from the request.
  */
-void ACMPCARequest::clearParameters()
+void AcmpcaRequest::clearParameters()
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     d->parameters.clear();
 }
 
 /*!
  * Returns the value of the \a name pararemter if set; \a defaultValue otherwise.
  */
-QVariant ACMPCARequest::parameter(const QString &name, const QVariant &defaultValue) const
+QVariant AcmpcaRequest::parameter(const QString &name, const QVariant &defaultValue) const
 {
-    Q_D(const ACMPCARequest);
+    Q_D(const AcmpcaRequest);
     return d->parameters.value(name, defaultValue);
 }
 
 /*!
  * Returns the parameters included in this request.
  */
-const QVariantMap &ACMPCARequest::parameters() const
+const QVariantMap &AcmpcaRequest::parameters() const
 {
-    Q_D(const ACMPCARequest);
+    Q_D(const AcmpcaRequest);
     return d->parameters;
 }
 
 /*!
  * Sets the \a name parameter to \a value.
  */
-void ACMPCARequest::setParameter(const QString &name, const QVariant &value)
+void AcmpcaRequest::setParameter(const QString &name, const QVariant &value)
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     d->parameters.insert(name, value);
 }
 
@@ -224,9 +224,9 @@ void ACMPCARequest::setParameter(const QString &name, const QVariant &value)
  * Sets the paramters for this request to \a parameters. Any request parameters
  * set previously will be discarded.
  */
-void ACMPCARequest::setParameters(const QVariantMap &parameters)
+void AcmpcaRequest::setParameters(const QVariantMap &parameters)
 {
-    Q_D(ACMPCARequest);
+    Q_D(AcmpcaRequest);
     d->parameters = parameters;
 }
 
@@ -238,27 +238,27 @@ void ACMPCARequest::setParameters(const QVariantMap &parameters)
  * common query parameters (such as Action and Version), with any that have
  * been added (via setParameter) by child classes.
  */
-QNetworkRequest ACMPCARequest::unsignedRequest(const QUrl &endpoint) const
+QNetworkRequest AcmpcaRequest::unsignedRequest(const QUrl &endpoint) const
 {
-    Q_D(const ACMPCARequest);
+    Q_D(const AcmpcaRequest);
     QUrl url(endpoint);
     /// @todo url.setQuery(d->urlQuery());
     return QNetworkRequest(url);
 }
 
 /*!
- * \class QtAws::ACMPCA::ACMPCARequestPrivate
- * \brief The ACMPCARequestPrivate class provides private implementation for ACMPCARequest.
+ * \class QtAws::ACMPCA::AcmpcaRequestPrivate
+ * \brief The AcmpcaRequestPrivate class provides private implementation for AcmpcaRequest.
  * \internal
  *
  * \inmodule QtAwsACMPCA
  */
 
 /*!
- * Constructs a ACMPCARequestPrivate object for ACMPCA \a action,
+ * Constructs a AcmpcaRequestPrivate object for ACMPCA \a action,
  * with public implementation \a q.
  */
-ACMPCARequestPrivate::ACMPCARequestPrivate(const ACMPCARequest::Action action, ACMPCARequest * const q)
+AcmpcaRequestPrivate::AcmpcaRequestPrivate(const AcmpcaRequest::Action action, AcmpcaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
@@ -270,10 +270,10 @@ ACMPCARequestPrivate::ACMPCARequestPrivate(const ACMPCARequest::Action action, A
  * This copy-like constructor copies everything from \a other, except for the
  * the object's pointer to its public instance - for that, \a q is used instead.
  *
- * This is required to support the ACMPCARequest class's copy constructor.
+ * This is required to support the AcmpcaRequest class's copy constructor.
  */
-ACMPCARequestPrivate::ACMPCARequestPrivate(const ACMPCARequestPrivate &other,
-                                     ACMPCARequest * const q)
+AcmpcaRequestPrivate::AcmpcaRequestPrivate(const AcmpcaRequestPrivate &other,
+                                     AcmpcaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
       apiVersion(other.apiVersion), parameters(other.parameters)
 {
@@ -284,14 +284,14 @@ ACMPCARequestPrivate::ACMPCARequestPrivate(const ACMPCARequestPrivate &other,
  * Returns a string represention of \a action, or a null string if \a action is
  * invalid.
  *
- * This function converts ACMPCARequest::Action enumerator values to their respective
+ * This function converts AcmpcaRequest::Action enumerator values to their respective
  * string representations, appropriate for use with the ACMPCA service's Action
  * query parameters.
  */
-QString ACMPCARequestPrivate::toString(const ACMPCARequest::Action &action)
+QString AcmpcaRequestPrivate::toString(const AcmpcaRequest::Action &action)
 {
     #define ActionToString(action) \
-        case ACMPCARequest::action##Action: return QStringLiteral(#action)
+        case AcmpcaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
         //ActionToString(/*todo*/);
         default:
