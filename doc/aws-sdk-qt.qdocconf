@@ -1,0 +1,76 @@
+# eg. QT_INSTALL_DOCS=/home/paul/opt/qt/Docs/Qt-5.10.1 /home/paul/opt/qt/5.10.1/gcc_64/bin/qdoc aws-sdk-qt.qdocconf --log-progress
+
+# Some conventions:
+
+# \brief The <Foo> class provides an interface for accessing AWS services.
+# Constructs a[n] Foo object with parent \a parent.
+# Constructs a[n] Foo object with private implementation \a d, and parent \a parent.
+# Destroys the thing.
+# Sets the <Foo> object to be equal to \a other.
+# Returns \c true if this <thing> is equal to \a other; \c false otherwise.
+
+
+# \brief The <Foo>Private class provides private implementation for <Foo>.
+# Constructs a <Foo>Private object with public implementation \a q.
+# Constructs a copy of \a other, with public implementation \a q.
+# Destroys the <thing>'s private object.
+
+
+include($QT_INSTALL_DOCS/global/qt-html-templates-online.qdocconf)
+
+project = aws-sdk-qt
+description = AWS SDK for Qt
+outputdir = /home/paul/tmp/qtaws-html
+headerdirs  = /home/paul/src/aws-sdk-qt/src/core \
+              /home/paul/src/aws-sdk-qt/src/rds \
+              /home/paul/src/aws-sdk-qt/doc/src
+
+#headerdirs  = /home/paul/src/aws-sdk-qt/src ./tmp
+sourcedirs  = /home/paul/src/aws-sdk-qt/src/core \
+              /home/paul/src/aws-sdk-qt/src/rds \
+              /home/paul/src/aws-sdk-qt/doc/src
+
+#sourcedirs  = /home/paul/src/aws-sdk-qt/src ./tmp
+
+exampledirs = /home/paul/src/aws-sdk-qt/src/examples
+imagedirs   = ./images
+
+excludedirs = /home/paul/src/aws-sdk-qt/src/sqs-old \
+              /home/paul/src/aws-sdk-qt/src/xray
+	
+indexes = /home/paul/opt/qt/Docs/Qt-5.10.1/qtcore/qtcore.index \
+          /home/paul/opt/qt/Docs/Qt-5.10.1/qtnetwork/qtnetwork.index \
+          /home/paul/opt/qt/Docs/Qt-5.10.1/qtxmlpatterns/qtxmlpatterns.index \
+
+HTML.tocdepth = 5
+
+sources.fileextensions = "*.cpp *.qdoc"
+headers.fileextensions = "*.h"
+
+#Cpp.ignoretokens = QTAWS_EXPORT
+
+navigation.homepage = index.html
+navigation.hometitle = "SDK"
+#navigation.landingpage = "XRay"
+#navigation.cppclassespage = "C++ Classes"
+
+HTML.footer = \
+    "        </div>\n" \
+    "       </div>\n" \
+    "   </div>\n" \
+    "   </div>\n" \
+    "</div>\n" \
+    "<div class=\"footer\">\n" \
+    "   <p>\n" \
+    "   <acronym title=\"Copyright\">&copy;</acronym> 2018 Paul Colby\n" \
+    "   Documentation contributions included herein are the copyrights of\n" \
+    "   their respective owners.<br>" \
+    "   The documentation provided herein is licensed under the terms of the" \
+    "   <a href=\"http://www.gnu.org/licenses/fdl.html\">GNU Free Documentation" \
+    "   License version 1.3</a> as published by the Free Software Foundation.<br>" \
+    "   Qt and respective logos are trademarks of The Qt Company Ltd. " \
+    "   in Finland and/or other countries worldwide. All other trademarks are property\n" \
+    "   of their respective owners. </p>\n" \
+    "</div>\n" \
+
+syntaxhighlighting = true

@@ -20,6 +20,7 @@
 #include "generator.h"
 
 #include <QDebug>
+#include <QDirIterator>
 #include <QJsonParseError>
 #include <QRegularExpression>
 
@@ -37,8 +38,9 @@ Generator::Generator(const QDir &outputDir)
     engine.addTemplateLoader(loader);
     engine.setSmartTrimEnabled(true);
 
-    const QDir dir(QSL(":/templates"));
-    foreach (const QString &name, dir.entryList(QDir::Files|QDir::Readable)) {
+    QDirIterator dir(QSL(":/templates"), QDir::Files|QDir::Readable, QDirIterator::Subdirectories);
+    while (dir.hasNext()) {
+        const QString name = dir.next().mid(dir.path().size()+1);
         qInfo() << "loading template" << name;
         const auto tmplate = engine.loadByName(name);
         if (tmplate->error()) {
@@ -85,6 +87,14 @@ int Generator::generate(const QString &serviceFileName,
     sources.clear();
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
+    /// @todo The output directory should probably match the Qt module name convention, so:
+    /// * rename getClassNamePrefix to getAbbreviatedServiceName?
+    /// * apply the case-modification from clientClassName below to a new varianle (serviceNameNotAllUpper?)
+    /// * set moduleName = QSL("QtAws") + serviceNameNotAllUpper
+    /// * replace most instances of serviceFileName with moduleName.
+    /// * replace most (all?) instances of classNamePrefix with serviceName.
+    /// * rename classNamePrefix to moduleName, etc.
+
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
     const QString classNamePrefix = getClassNamePrefix(metaData);
     const QString clientClassName =
@@ -122,6 +132,17 @@ int Generator::generate(const QString &serviceFileName,
     }
     context.insert(QSL("operations"), operations);
     renderClassFiles(QSL("client"), context, projectDir, clientClassName);
+    context.pop();
+
+    // Generate documentation.
+    context.push();
+    outputDir.mkdir(serviceFileName + QSL("/doc"));
+    const QString docDir = projectDir + QSL("/doc");
+    const QString moduleName = QSL("QtAws") + classNamePrefix;
+    context.insert(QSL("ModuleName"), moduleName);
+    render(QSL("doc/module.qdoc"),       context, docDir, moduleName.toLower() + QSL(".qdoc"));
+    render(QSL("doc/module.qdocconf"),   context, docDir, moduleName.toLower() + QSL(".qdocconf"));
+    render(QSL("doc/module-index.qdoc"), context, docDir, moduleName.toLower() + QSL("-index.qdoc"));
     context.pop();
 
     // Generate ancillary project files.

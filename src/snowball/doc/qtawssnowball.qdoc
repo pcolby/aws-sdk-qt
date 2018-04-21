@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsSnowball
+    \title Snowball C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Snowball functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

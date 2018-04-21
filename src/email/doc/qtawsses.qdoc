@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsSES
+    \title SES C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS SES functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

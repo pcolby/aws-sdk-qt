@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsMediaStore
+    \title MediaStore C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS MediaStore functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

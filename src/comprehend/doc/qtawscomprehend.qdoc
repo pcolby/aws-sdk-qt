@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsComprehend
+    \title Comprehend C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Comprehend functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

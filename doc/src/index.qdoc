@@ -1,0 +1,25 @@
+/*! \page index.html
+
+\title {{index.html}}
+
+Welcome to this simple minimalistic example.
+
+\chapter Annotated Lists
+\c annotatedlist provides a list of classes in given \e group.
+annotatedlist aws-clients (group-based)
+\annotatedlist aws-clients
+
+\chapter generatelist
+generatelist{classesbymodule QtAwsCore}
+\generatelist{classesbymodule QtAwsCore}
+
+generatelist overviews (group-based)
+\generatelist overviews
+
+generatelist annotatedclasses
+\generatelist annotatedclasses
+
+generatelist functionindex
+\generatelist functionindex
+
+*/

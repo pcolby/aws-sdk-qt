@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsFMS
+    \title FMS C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS FMS functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

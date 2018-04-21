@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsKMS
+    \title KMS C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS KMS functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

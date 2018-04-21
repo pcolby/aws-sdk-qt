@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsElasticLoadBalancing
+    \title ElasticLoadBalancing C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS ElasticLoadBalancing functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

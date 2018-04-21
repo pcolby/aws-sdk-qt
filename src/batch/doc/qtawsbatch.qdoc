@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsBatch
+    \title Batch C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Batch functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

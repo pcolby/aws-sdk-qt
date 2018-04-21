@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsWAFRegional
+    \title WAFRegional C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS WAFRegional functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

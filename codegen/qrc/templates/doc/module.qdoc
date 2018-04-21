@@ -1,0 +1,13 @@
+{# Following the same pattern at the Qt project's QtBase, codegen will render #}
+{# this template to "<project-root>/src/<module>/doc/src/<module>.qdoc". QDoc #}
+{# will then render the file to "<outputdir>/.../<module-index>-module.qdoc", #}
+{# and link to it via the "C++ Classes" navigation link for the module.       #}
+/*!
+    \module {{ModuleName}}
+    \title {{ServiceName}} C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS {{ServiceName}} functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

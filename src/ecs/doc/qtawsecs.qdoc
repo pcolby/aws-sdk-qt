@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsECS
+    \title ECS C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS ECS functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

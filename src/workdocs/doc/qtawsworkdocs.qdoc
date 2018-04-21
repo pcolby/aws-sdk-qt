@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsWorkDocs
+    \title WorkDocs C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS WorkDocs functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

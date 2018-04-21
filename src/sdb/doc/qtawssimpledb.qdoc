@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsSimpleDB
+    \title SimpleDB C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS SimpleDB functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

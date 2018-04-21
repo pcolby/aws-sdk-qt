@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsRoute53Domains
+    \title Route53Domains C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Route53Domains functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

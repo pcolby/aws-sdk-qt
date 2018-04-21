@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsDynamoDBStreams
+    \title DynamoDBStreams C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS DynamoDBStreams functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

@@ -1,0 +1,9 @@
+
+/*!
+    \page qtawssagemakerruntime-index.html
+    \title Qt Aws SageMakerRuntime
+
+    \brief The AWS SageMakerRuntime module is part aws-sdk-qt.
+
+    (This is the page the forms the overview for the servce.)
+*/

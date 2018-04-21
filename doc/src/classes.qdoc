@@ -1,0 +1,31 @@
+/*!
+
+\page classes.html
+
+\title C++ Classes
+
+\section1 Annotated Lists
+
+\c annotatedlist provides a list of classes in given \e group.
+
+\section2 Clients
+\annotatedlist aws-clients
+
+\section2 Authentication
+\annotatedlist aws-authentication
+
+\section1 generatelist
+
+\section2 Core
+\generatelist{classesbymodule QtAwsCore}
+
+\section2 RDS
+\generatelist{classesbymodule QtAwsRDS}
+
+\section2 XRay
+\generatelist{classesbymodule QtAwsXRay}
+
+\section2 generatelist annotatedclasses
+\generatelist annotatedclasses
+
+*/

@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsGreengrass
+    \title Greengrass C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS Greengrass functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

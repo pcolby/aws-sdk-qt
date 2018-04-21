@@ -1,0 +1,10 @@
+
+/*!
+    \module QtAwsElasticsearchService
+    \title ElasticsearchService C++ Classes
+    \ingroup modules
+
+    \brief Provides AWS ElasticsearchService functionality.
+
+    (this is the page that QDoc will automatically add namespace and class lists to).
+*/

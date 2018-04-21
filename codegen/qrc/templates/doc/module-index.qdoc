@@ -1,0 +1,12 @@
+{# Following the same pattern at the Qt project's QtBase, codegen will render     #}
+{# this template to "<project-root>/src/<module>/doc/src/<module>-index.qdoc".    #}
+{# QDoc will then render the file to "<outputdir>/.../<module-index>-index.qdoc", #}
+{# and link to it via the "<module name>" navigation link for the module.         #}
+/*!
+    \page {{ModuleName|lower}}-index.html
+    \title Qt Aws {{ServiceName}}
+
+    \brief The AWS {{ServiceName}} module is part aws-sdk-qt.
+
+    (This is the page the forms the overview for the servce.)
+*/
