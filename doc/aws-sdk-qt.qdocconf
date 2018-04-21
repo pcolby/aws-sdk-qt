@@ -21,16 +21,9 @@ include($QT_INSTALL_DOCS/global/qt-html-templates-online.qdocconf)
 project = aws-sdk-qt
 description = AWS SDK for Qt
 outputdir = /home/paul/tmp/qtaws-html
-headerdirs  = /home/paul/src/aws-sdk-qt/src/core \
-              /home/paul/src/aws-sdk-qt/src/rds \
-              /home/paul/src/aws-sdk-qt/doc/src
-
-#headerdirs  = /home/paul/src/aws-sdk-qt/src ./tmp
+headerdirs  = /home/paul/src/aws-sdk-qt/src/core
 sourcedirs  = /home/paul/src/aws-sdk-qt/src/core \
-              /home/paul/src/aws-sdk-qt/src/rds \
               /home/paul/src/aws-sdk-qt/doc/src
-
-#sourcedirs  = /home/paul/src/aws-sdk-qt/src ./tmp
 
 exampledirs = /home/paul/src/aws-sdk-qt/src/examples
 imagedirs   = ./images
