@@ -40,8 +40,11 @@ namespace Firehose {
  * \value DeleteDeliveryStreamAction Firehose DeleteDeliveryStream action.
  * \value DescribeDeliveryStreamAction Firehose DescribeDeliveryStream action.
  * \value ListDeliveryStreamsAction Firehose ListDeliveryStreams action.
+ * \value ListTagsForDeliveryStreamAction Firehose ListTagsForDeliveryStream action.
  * \value PutRecordAction Firehose PutRecord action.
  * \value PutRecordBatchAction Firehose PutRecordBatch action.
+ * \value TagDeliveryStreamAction Firehose TagDeliveryStream action.
+ * \value UntagDeliveryStreamAction Firehose UntagDeliveryStream action.
  * \value UpdateDestinationAction Firehose UpdateDestination action.
  */
 

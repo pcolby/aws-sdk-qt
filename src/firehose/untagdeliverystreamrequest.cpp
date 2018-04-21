@@ -17,17 +17,17 @@
     along with the AWS SDK for Qt.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "updatedestinationrequest.h"
-#include "updatedestinationrequest_p.h"
-#include "updatedestinationresponse.h"
+#include "untagdeliverystreamrequest.h"
+#include "untagdeliverystreamrequest_p.h"
+#include "untagdeliverystreamresponse.h"
 #include "firehoserequest_p.h"
 
 namespace QtAws {
 namespace Firehose {
 
 /*!
- * \class QtAws::Firehose::UpdateDestinationRequest
- * \brief The UpdateDestinationRequest class provides an interface for Firehose UpdateDestination requests.
+ * \class QtAws::Firehose::UntagDeliveryStreamRequest
+ * \brief The UntagDeliveryStreamRequest class provides an interface for Firehose UntagDeliveryStream requests.
  *
  * \inmodule QtAwsFirehose
  *
@@ -36,23 +36,23 @@ namespace Firehose {
  *  Amazon Kinesis Data Firehose is a fully managed service that delivers real-time streaming data to destinations such as
  *  Amazon Simple Storage Service (Amazon S3), Amazon Elasticsearch Service (Amazon ES), Amazon Redshift, and
  *
- * \sa FirehoseClient::updateDestination
+ * \sa FirehoseClient::untagDeliveryStream
  */
 
 /*!
  * Constructs a copy of \a other.
  */
-UpdateDestinationRequest::UpdateDestinationRequest(const UpdateDestinationRequest &other)
-    : FirehoseRequest(new UpdateDestinationRequestPrivate(*other.d_func(), this))
+UntagDeliveryStreamRequest::UntagDeliveryStreamRequest(const UntagDeliveryStreamRequest &other)
+    : FirehoseRequest(new UntagDeliveryStreamRequestPrivate(*other.d_func(), this))
 {
 
 }
 
 /*!
- * Constructs a UpdateDestinationRequest object.
+ * Constructs a UntagDeliveryStreamRequest object.
  */
-UpdateDestinationRequest::UpdateDestinationRequest()
-    : FirehoseRequest(new UpdateDestinationRequestPrivate(FirehoseRequest::UpdateDestinationAction, this))
+UntagDeliveryStreamRequest::UntagDeliveryStreamRequest()
+    : FirehoseRequest(new UntagDeliveryStreamRequestPrivate(FirehoseRequest::UntagDeliveryStreamAction, this))
 {
 
 }
@@ -60,36 +60,36 @@ UpdateDestinationRequest::UpdateDestinationRequest()
 /*!
  * \reimp
  */
-bool UpdateDestinationRequest::isValid() const
+bool UntagDeliveryStreamRequest::isValid() const
 {
     return false;
 }
 
 
 /*!
- * Returns a UpdateDestinationResponse object to process \a reply.
+ * Returns a UntagDeliveryStreamResponse object to process \a reply.
  *
  * \sa QtAws::Core::AwsAbstractClient::send
  */
-QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkReply * const reply) const
+QtAws::Core::AwsAbstractResponse * UntagDeliveryStreamRequest::response(QNetworkReply * const reply) const
 {
-    return new UpdateDestinationResponse(*this, reply);
+    return new UntagDeliveryStreamResponse(*this, reply);
 }
 
 /*!
- * \class QtAws::Firehose::UpdateDestinationRequestPrivate
- * \brief The UpdateDestinationRequestPrivate class provides private implementation for UpdateDestinationRequest.
+ * \class QtAws::Firehose::UntagDeliveryStreamRequestPrivate
+ * \brief The UntagDeliveryStreamRequestPrivate class provides private implementation for UntagDeliveryStreamRequest.
  * \internal
  *
  * \inmodule QtAwsFirehose
  */
 
 /*!
- * Constructs a UpdateDestinationRequestPrivate object for Firehose \a action,
+ * Constructs a UntagDeliveryStreamRequestPrivate object for Firehose \a action,
  * with public implementation \a q.
  */
-UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
-    const FirehoseRequest::Action action, UpdateDestinationRequest * const q)
+UntagDeliveryStreamRequestPrivate::UntagDeliveryStreamRequestPrivate(
+    const FirehoseRequest::Action action, UntagDeliveryStreamRequest * const q)
     : FirehoseRequestPrivate(action, q)
 {
 
@@ -98,11 +98,11 @@ UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
 /*!
  * Constructs a copy of \a other, with public implementation \a q.
  *
- * This copy-like constructor exists for the benefit of the UpdateDestinationRequest
+ * This copy-like constructor exists for the benefit of the UntagDeliveryStreamRequest
  * class' copy constructor.
  */
-UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
-    const UpdateDestinationRequestPrivate &other, UpdateDestinationRequest * const q)
+UntagDeliveryStreamRequestPrivate::UntagDeliveryStreamRequestPrivate(
+    const UntagDeliveryStreamRequestPrivate &other, UntagDeliveryStreamRequest * const q)
     : FirehoseRequestPrivate(other, q)
 {
 

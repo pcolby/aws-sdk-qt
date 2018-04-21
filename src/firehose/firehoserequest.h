@@ -41,8 +41,11 @@ public:
         DeleteDeliveryStreamAction,
         DescribeDeliveryStreamAction,
         ListDeliveryStreamsAction,
+        ListTagsForDeliveryStreamAction,
         PutRecordAction,
         PutRecordBatchAction,
+        TagDeliveryStreamAction,
+        UntagDeliveryStreamAction,
         UpdateDestinationAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)

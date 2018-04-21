@@ -36,10 +36,16 @@ class DescribeDeliveryStreamRequest;
 class DescribeDeliveryStreamResponse;
 class ListDeliveryStreamsRequest;
 class ListDeliveryStreamsResponse;
+class ListTagsForDeliveryStreamRequest;
+class ListTagsForDeliveryStreamResponse;
 class PutRecordRequest;
 class PutRecordResponse;
 class PutRecordBatchRequest;
 class PutRecordBatchResponse;
+class TagDeliveryStreamRequest;
+class TagDeliveryStreamResponse;
+class UntagDeliveryStreamRequest;
+class UntagDeliveryStreamResponse;
 class UpdateDestinationRequest;
 class UpdateDestinationResponse;
 
@@ -63,8 +69,11 @@ public slots:
     DeleteDeliveryStreamResponse * deleteDeliveryStream(const DeleteDeliveryStreamRequest &request);
     DescribeDeliveryStreamResponse * describeDeliveryStream(const DescribeDeliveryStreamRequest &request);
     ListDeliveryStreamsResponse * listDeliveryStreams(const ListDeliveryStreamsRequest &request);
+    ListTagsForDeliveryStreamResponse * listTagsForDeliveryStream(const ListTagsForDeliveryStreamRequest &request);
     PutRecordResponse * putRecord(const PutRecordRequest &request);
     PutRecordBatchResponse * putRecordBatch(const PutRecordBatchRequest &request);
+    TagDeliveryStreamResponse * tagDeliveryStream(const TagDeliveryStreamRequest &request);
+    UntagDeliveryStreamResponse * untagDeliveryStream(const UntagDeliveryStreamRequest &request);
     UpdateDestinationResponse * updateDestination(const UpdateDestinationRequest &request);
 
 private:

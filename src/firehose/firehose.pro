@@ -32,6 +32,10 @@ HEADERS += \
     listdeliverystreamsrequest_p.h \
     listdeliverystreamsresponse.h \
     listdeliverystreamsresponse_p.h \
+    listtagsfordeliverystreamrequest.h \
+    listtagsfordeliverystreamrequest_p.h \
+    listtagsfordeliverystreamresponse.h \
+    listtagsfordeliverystreamresponse_p.h \
     putrecordbatchrequest.h \
     putrecordbatchrequest_p.h \
     putrecordbatchresponse.h \
@@ -40,6 +44,14 @@ HEADERS += \
     putrecordrequest_p.h \
     putrecordresponse.h \
     putrecordresponse_p.h \
+    tagdeliverystreamrequest.h \
+    tagdeliverystreamrequest_p.h \
+    tagdeliverystreamresponse.h \
+    tagdeliverystreamresponse_p.h \
+    untagdeliverystreamrequest.h \
+    untagdeliverystreamrequest_p.h \
+    untagdeliverystreamresponse.h \
+    untagdeliverystreamresponse_p.h \
     updatedestinationrequest.h \
     updatedestinationrequest_p.h \
     updatedestinationresponse.h \
@@ -57,10 +69,16 @@ SOURCES += \
     firehoseresponse.cpp \
     listdeliverystreamsrequest.cpp \
     listdeliverystreamsresponse.cpp \
+    listtagsfordeliverystreamrequest.cpp \
+    listtagsfordeliverystreamresponse.cpp \
     putrecordbatchrequest.cpp \
     putrecordbatchresponse.cpp \
     putrecordrequest.cpp \
     putrecordresponse.cpp \
+    tagdeliverystreamrequest.cpp \
+    tagdeliverystreamresponse.cpp \
+    untagdeliverystreamrequest.cpp \
+    untagdeliverystreamresponse.cpp \
     updatedestinationrequest.cpp \
     updatedestinationresponse.cpp \
 
