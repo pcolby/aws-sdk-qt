@@ -86,10 +86,8 @@ int Generator::generate(const QString &serviceFileName,
                          const QJsonObject &description)
 {
     qInfo() << "generating service" << serviceFileName;
-    outputDir.mkdir(serviceFileName);
     headers.clear();
     sources.clear();
-    const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
     const QString serviceName = getServiceName(metaData); // ie with original capitalisation.
@@ -97,6 +95,11 @@ int Generator::generate(const QString &serviceFileName,
         ((serviceName.contains(QRegularExpression(QSL("^[^a-z]+$"))))
         ? serviceName.at(0) + serviceName.mid(1).toLower() : serviceName);
     const QString moduleName = QSL("QtAws") + serviceClassName;
+    const QString moduleDir = outputDir.absoluteFilePath(serviceClassName.toLower());
+    if (!outputDir.mkdir(serviceClassName.toLower())) {
+        qWarning() << "failed to create " << moduleDir;
+        return -1;
+    }
 
     Grantlee::Context context(description.toVariantHash());
     context.insert(QSL("ServiceName"), serviceName);
@@ -108,10 +111,10 @@ int Generator::generate(const QString &serviceFileName,
     // Generate model classes.
     context.push();
     context.insert(QSL("ClientClassName"), serviceClassName + QSL("Client"));
-    renderClassFiles(QSL("requestbase"),  context, projectDir, serviceClassName + QSL("Request"));
-    renderClassFiles(QSL("responsebase"), context, projectDir, serviceClassName + QSL("Response"));
+    renderClassFiles(QSL("requestbase"),  context, moduleDir, serviceClassName + QSL("Request"));
+    renderClassFiles(QSL("responsebase"), context, moduleDir, serviceClassName + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
-        generateModelClasses(context, projectDir, operationName, description);
+        generateModelClasses(context, moduleDir, operationName, description);
     }
     context.pop();
 
@@ -127,13 +130,13 @@ int Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QSL("operations"), operations);
-    renderClassFiles(QSL("client"), context, projectDir, serviceClassName + QSL("Client"));
+    renderClassFiles(QSL("client"), context, moduleDir, serviceClassName + QSL("Client"));
     context.pop();
 
     // Generate documentation.
     context.push();
-    outputDir.mkdir(serviceFileName + QSL("/doc"));
-    const QString docDir = projectDir + QSL("/doc");
+    outputDir.mkdir(serviceClassName.toLower() + QSL("/doc"));
+    const QString docDir = moduleDir + QSL("/doc");
     context.insert(QSL("ModuleName"), moduleName);
     render(QSL("doc/module.qdoc"),       context, docDir, moduleName.toLower() + QSL(".qdoc"));
     render(QSL("doc/module.qdocconf"),   context, docDir, moduleName.toLower() + QSL(".qdocconf"));
@@ -146,7 +149,7 @@ int Generator::generate(const QString &serviceFileName,
     sources.sort();
     context.insert(QSL("HeaderFiles"), headers);
     context.insert(QSL("SourceFiles"), sources);
-    if (!render(QSL("service.pro"), context, projectDir, serviceFileName + QSL(".pro"))) {
+    if (!render(QSL("service.pro"), context, moduleDir, serviceFileName + QSL(".pro"))) {
         context.pop();
         return -1;
     }
