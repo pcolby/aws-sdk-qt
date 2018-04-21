@@ -53,6 +53,7 @@ Generator::Generator(const QDir &outputDir)
 
 int Generator::generate(const QFileInfoList &descriptions)
 {
+    modules.clear();
     int count = 0;
     QStringList serviceFileNames;
     foreach (const QFileInfo &entry, descriptions) {
@@ -71,10 +72,7 @@ int Generator::generate(const QFileInfoList &descriptions)
     serviceFileNames.sort();
 
     Grantlee::Context context;
-    context.insert(QSL("ServiceNames"), serviceFileNames);
-    /// @todo We need the module names here, for master.qddoconf; these are not quite identical to
-    /// the service names.  However, I think we should probably sync the service and module names
-    /// anway?
+    context.insert(QSL("ModuleNames"), modules);
     render(QSL("master.qdocconf"), context, outputDir.absoluteFilePath(QSL("master.qdocconf")));
     if (!render(QSL("src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")))) {
         return -1;
@@ -95,9 +93,10 @@ int Generator::generate(const QString &serviceFileName,
         ((serviceName.contains(QRegularExpression(QSL("^[^a-z]+$"))))
         ? serviceName.at(0) + serviceName.mid(1).toLower() : serviceName);
     const QString moduleName = QSL("QtAws") + serviceClassName;
-    const QString moduleDir = outputDir.absoluteFilePath(serviceClassName.toLower());
-    if (!outputDir.mkdir(serviceClassName.toLower())) {
-        qWarning() << "failed to create " << moduleDir;
+    const QString moduleDirName = serviceClassName.toLower();
+    const QString moduleDirPath = outputDir.absoluteFilePath(moduleDirName);
+    if (!outputDir.mkpath(moduleDirName)) {
+        qWarning() << "failed to create " << moduleDirPath;
         return -1;
     }
 
@@ -111,10 +110,10 @@ int Generator::generate(const QString &serviceFileName,
     // Generate model classes.
     context.push();
     context.insert(QSL("ClientClassName"), serviceClassName + QSL("Client"));
-    renderClassFiles(QSL("requestbase"),  context, moduleDir, serviceClassName + QSL("Request"));
-    renderClassFiles(QSL("responsebase"), context, moduleDir, serviceClassName + QSL("Response"));
+    renderClassFiles(QSL("requestbase"),  context, moduleDirPath, serviceClassName + QSL("Request"));
+    renderClassFiles(QSL("responsebase"), context, moduleDirPath, serviceClassName + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
-        generateModelClasses(context, moduleDir, operationName, description);
+        generateModelClasses(context, moduleDirPath, operationName, description);
     }
     context.pop();
 
@@ -130,13 +129,16 @@ int Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QSL("operations"), operations);
-    renderClassFiles(QSL("client"), context, moduleDir, serviceClassName + QSL("Client"));
+    renderClassFiles(QSL("client"), context, moduleDirPath, serviceClassName + QSL("Client"));
     context.pop();
 
     // Generate documentation.
     context.push();
-    outputDir.mkdir(serviceClassName.toLower() + QSL("/doc"));
-    const QString docDir = moduleDir + QSL("/doc");
+    if (!outputDir.mkpath(serviceClassName.toLower() + QSL("/doc"))) {
+        qWarning() << "failed to create " << serviceClassName.toLower() + QSL("/doc");
+        return -1;
+    }
+    const QString docDir = moduleDirPath + QSL("/doc");
     context.insert(QSL("ModuleName"), moduleName);
     render(QSL("doc/module.qdoc"),       context, docDir, moduleName.toLower() + QSL(".qdoc"));
     render(QSL("doc/module.qdocconf"),   context, docDir, moduleName.toLower() + QSL(".qdocconf"));
@@ -149,11 +151,12 @@ int Generator::generate(const QString &serviceFileName,
     sources.sort();
     context.insert(QSL("HeaderFiles"), headers);
     context.insert(QSL("SourceFiles"), sources);
-    if (!render(QSL("service.pro"), context, moduleDir, serviceFileName + QSL(".pro"))) {
+    if (!render(QSL("service.pro"), context, moduleDirPath, moduleDirName + QSL(".pro"))) {
         context.pop();
         return -1;
     }
     context.pop();
+    modules.append(serviceClassName);
     return headers.size() + sources.size() + 1;
 }
 

@@ -51,5 +51,5 @@ private:
     QDir outputDir;
     Grantlee::Engine engine;
     QMap<QString, Grantlee::Template> templates;
-    QStringList sources, headers;
+    QStringList headers, modules, sources;
 };

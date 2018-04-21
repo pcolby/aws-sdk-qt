@@ -2,20 +2,20 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     core/core.pro \
-    AWSMigrationHub/AWSMigrationHub.pro \
     acm/acm.pro \
-    acm-pca/acm-pca.pro \
+    acmpca/acmpca.pro \
     alexaforbusiness/alexaforbusiness.pro \
     apigateway/apigateway.pro \
-    application-autoscaling/application-autoscaling.pro \
+    applicationautoscaling/applicationautoscaling.pro \
     appstream/appstream.pro \
     appsync/appsync.pro \
     athena/athena.pro \
     autoscaling/autoscaling.pro \
-    autoscaling-plans/autoscaling-plans.pro \
+    autoscalingplans/autoscalingplans.pro \
+    migrationhub/migrationhub.pro \
     batch/batch.pro \
     budgets/budgets.pro \
-    ce/ce.pro \
+    costexplorer/costexplorer.pro \
     cloud9/cloud9.pro \
     clouddirectory/clouddirectory.pro \
     cloudformation/cloudformation.pro \
@@ -30,20 +30,20 @@ SUBDIRS += \
     codedeploy/codedeploy.pro \
     codepipeline/codepipeline.pro \
     codestar/codestar.pro \
-    cognito-identity/cognito-identity.pro \
-    cognito-idp/cognito-idp.pro \
-    cognito-sync/cognito-sync.pro \
+    cognitoidentity/cognitoidentity.pro \
+    cognitoidentityprovider/cognitoidentityprovider.pro \
+    cognitosync/cognitosync.pro \
     comprehend/comprehend.pro \
-    config/config.pro \
+    configservice/configservice.pro \
     connect/connect.pro \
-    cur/cur.pro \
+    costandusagereportservice/costandusagereportservice.pro \
     datapipeline/datapipeline.pro \
     dax/dax.pro \
     devicefarm/devicefarm.pro \
     directconnect/directconnect.pro \
-    discovery/discovery.pro \
-    dms/dms.pro \
-    ds/ds.pro \
+    applicationdiscoveryservice/applicationdiscoveryservice.pro \
+    databasemigrationservice/databasemigrationservice.pro \
+    directoryservice/directoryservice.pro \
     dynamodb/dynamodb.pro \
     dynamodbstreams/dynamodbstreams.pro \
     ec2/ec2.pro \
@@ -51,15 +51,15 @@ SUBDIRS += \
     ecs/ecs.pro \
     elasticache/elasticache.pro \
     elasticbeanstalk/elasticbeanstalk.pro \
-    elasticfilesystem/elasticfilesystem.pro \
+    efs/efs.pro \
     elasticloadbalancing/elasticloadbalancing.pro \
     elasticloadbalancingv2/elasticloadbalancingv2.pro \
-    elasticmapreduce/elasticmapreduce.pro \
+    emr/emr.pro \
     elastictranscoder/elastictranscoder.pro \
-    email/email.pro \
-    entitlement.marketplace/entitlement.marketplace.pro \
-    es/es.pro \
-    events/events.pro \
+    ses/ses.pro \
+    marketplaceentitlementservice/marketplaceentitlementservice.pro \
+    elasticsearchservice/elasticsearchservice.pro \
+    cloudwatchevents/cloudwatchevents.pro \
     firehose/firehose.pro \
     fms/fms.pro \
     gamelift/gamelift.pro \
@@ -72,31 +72,31 @@ SUBDIRS += \
     importexport/importexport.pro \
     inspector/inspector.pro \
     iot/iot.pro \
-    iot-data/iot-data.pro \
-    iot-jobs-data/iot-jobs-data.pro \
+    iotdataplane/iotdataplane.pro \
+    iotjobsdataplane/iotjobsdataplane.pro \
     kinesis/kinesis.pro \
-    kinesis-video-archived-media/kinesis-video-archived-media.pro \
-    kinesis-video-media/kinesis-video-media.pro \
+    kinesisvideoarchivedmedia/kinesisvideoarchivedmedia.pro \
+    kinesisvideomedia/kinesisvideomedia.pro \
     kinesisanalytics/kinesisanalytics.pro \
     kinesisvideo/kinesisvideo.pro \
     kms/kms.pro \
     lambda/lambda.pro \
-    lex-models/lex-models.pro \
+    lexmodelbuildingservice/lexmodelbuildingservice.pro \
     lightsail/lightsail.pro \
-    logs/logs.pro \
+    cloudwatchlogs/cloudwatchlogs.pro \
     machinelearning/machinelearning.pro \
     marketplacecommerceanalytics/marketplacecommerceanalytics.pro \
     mediaconvert/mediaconvert.pro \
     medialive/medialive.pro \
     mediapackage/mediapackage.pro \
     mediastore/mediastore.pro \
-    mediastore-data/mediastore-data.pro \
-    meteringmarketplace/meteringmarketplace.pro \
+    mediastoredata/mediastoredata.pro \
+    marketplacemetering/marketplacemetering.pro \
     mobile/mobile.pro \
     mobileanalytics/mobileanalytics.pro \
-    monitoring/monitoring.pro \
+    cloudwatch/cloudwatch.pro \
     mq/mq.pro \
-    mturk-requester/mturk-requester.pro \
+    mturk/mturk.pro \
     opsworks/opsworks.pro \
     opsworkscm/opsworkscm.pro \
     organizations/organizations.pro \
@@ -106,17 +106,17 @@ SUBDIRS += \
     rds/rds.pro \
     redshift/redshift.pro \
     rekognition/rekognition.pro \
-    resource-groups/resource-groups.pro \
+    resourcegroups/resourcegroups.pro \
     resourcegroupstaggingapi/resourcegroupstaggingapi.pro \
     route53/route53.pro \
     route53domains/route53domains.pro \
-    runtime.lex/runtime.lex.pro \
-    runtime.sagemaker/runtime.sagemaker.pro \
+    lexruntimeservice/lexruntimeservice.pro \
+    sagemakerruntime/sagemakerruntime.pro \
     s3/s3.pro \
     sagemaker/sagemaker.pro \
-    sdb/sdb.pro \
+    simpledb/simpledb.pro \
     secretsmanager/secretsmanager.pro \
-    serverlessrepo/serverlessrepo.pro \
+    serverlessapplicationrepository/serverlessapplicationrepository.pro \
     servicecatalog/servicecatalog.pro \
     servicediscovery/servicediscovery.pro \
     shield/shield.pro \
@@ -125,15 +125,15 @@ SUBDIRS += \
     sns/sns.pro \
     sqs/sqs.pro \
     ssm/ssm.pro \
-    states/states.pro \
+    sfn/sfn.pro \
     storagegateway/storagegateway.pro \
     sts/sts.pro \
     support/support.pro \
     swf/swf.pro \
-    transcribe/transcribe.pro \
+    transcribeservice/transcribeservice.pro \
     translate/translate.pro \
     waf/waf.pro \
-    waf-regional/waf-regional.pro \
+    wafregional/wafregional.pro \
     workdocs/workdocs.pro \
     workmail/workmail.pro \
     workspaces/workspaces.pro \
