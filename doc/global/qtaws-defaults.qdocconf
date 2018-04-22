@@ -1,17 +1,15 @@
 # eg: QT_INSTALL_DOCS=/home/paul/opt/qt/Docs/Qt-5.10.1 \
 #   /home/paul/opt/qt/5.10.1/gcc_64/bin/qdoc \
 #   ~/src/aws-sdk-qt/src/master.qdocconf \
-#   -showinternal --log-progress -single-exec --outputdir ~/tmp/build/qdocs
+#   [-showinternal] --log-progress -single-exec --outputdir ~/tmp/build/qdocs
 
+include($QT_INSTALL_DOCS/global/fileextensions.qdocconf)
 include($QT_INSTALL_DOCS/global/qt-html-templates-online.qdocconf)
 
 # Unfortunately, QDoc ignores this in -single-exec mode :(
 indexes = $QT_INSTALL_DOCS/qtcore/qtcore.index \
           $QT_INSTALL_DOCS/qtnetwork/qtnetwork.index \
           $QT_INSTALL_DOCS/qtxmlpatterns/qtxmlpatterns.index \
-
-headers.fileextensions = "*.h"
-sources.fileextensions = "*.cpp *.qdoc"
 
 navigation.homepage = index.html
 navigation.hometitle = "SDK"
@@ -36,3 +34,9 @@ HTML.footer = \
     "</div>\n" \
 
 syntaxhighlighting = true
+
+# Don't use seprate sub-directories for each module.
+HTML.nosubdirs = "true"
+
+# Add a red "[intenal]" indicator to items marked with \internal.
+macro.internal.HTML = "<span style="color:red">[internal]</span>"
