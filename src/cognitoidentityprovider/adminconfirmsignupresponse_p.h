@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class AdminConfirmSignUpResponse;
 
 class QTAWS_EXPORT AdminConfirmSignUpResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

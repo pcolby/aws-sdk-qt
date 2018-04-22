@@ -28,7 +28,6 @@ namespace AppStream {
 class ListAssociatedFleetsResponse;
 
 class QTAWS_EXPORT ListAssociatedFleetsResponsePrivate : public AppStreamResponsePrivate {
-    Q_OBJECT
 
 public:
 

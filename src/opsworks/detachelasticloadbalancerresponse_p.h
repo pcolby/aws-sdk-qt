@@ -28,7 +28,6 @@ namespace OpsWorks {
 class DetachElasticLoadBalancerResponse;
 
 class QTAWS_EXPORT DetachElasticLoadBalancerResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

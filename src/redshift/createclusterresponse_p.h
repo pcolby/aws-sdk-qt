@@ -28,7 +28,6 @@ namespace Redshift {
 class CreateClusterResponse;
 
 class QTAWS_EXPORT CreateClusterResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

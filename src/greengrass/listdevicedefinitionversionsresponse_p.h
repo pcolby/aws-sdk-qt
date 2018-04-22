@@ -28,7 +28,6 @@ namespace Greengrass {
 class ListDeviceDefinitionVersionsResponse;
 
 class QTAWS_EXPORT ListDeviceDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

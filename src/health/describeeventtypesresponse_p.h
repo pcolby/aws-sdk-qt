@@ -28,7 +28,6 @@ namespace Health {
 class DescribeEventTypesResponse;
 
 class QTAWS_EXPORT DescribeEventTypesResponsePrivate : public HealthResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace WAFRegional {
 class GetSampledRequestsResponse;
 
 class QTAWS_EXPORT GetSampledRequestsResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ApplicationDiscoveryService {
 class ListServerNeighborsResponse;
 
 class QTAWS_EXPORT ListServerNeighborsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

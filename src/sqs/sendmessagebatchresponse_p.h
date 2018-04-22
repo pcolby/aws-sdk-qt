@@ -28,7 +28,6 @@ namespace SQS {
 class SendMessageBatchResponse;
 
 class QTAWS_EXPORT SendMessageBatchResponsePrivate : public SqsResponsePrivate {
-    Q_OBJECT
 
 public:
 

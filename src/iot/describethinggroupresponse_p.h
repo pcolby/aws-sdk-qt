@@ -28,7 +28,6 @@ namespace IoT {
 class DescribeThingGroupResponse;
 
 class QTAWS_EXPORT DescribeThingGroupResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

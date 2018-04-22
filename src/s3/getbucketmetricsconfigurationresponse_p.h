@@ -28,7 +28,6 @@ namespace S3 {
 class GetBucketMetricsConfigurationResponse;
 
 class QTAWS_EXPORT GetBucketMetricsConfigurationResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

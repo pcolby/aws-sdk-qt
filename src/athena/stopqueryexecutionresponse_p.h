@@ -28,7 +28,6 @@ namespace Athena {
 class StopQueryExecutionResponse;
 
 class QTAWS_EXPORT StopQueryExecutionResponsePrivate : public AthenaResponsePrivate {
-    Q_OBJECT
 
 public:
 

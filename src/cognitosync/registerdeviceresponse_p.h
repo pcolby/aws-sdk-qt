@@ -28,7 +28,6 @@ namespace CognitoSync {
 class RegisterDeviceResponse;
 
 class QTAWS_EXPORT RegisterDeviceResponsePrivate : public CognitoSyncResponsePrivate {
-    Q_OBJECT
 
 public:
 

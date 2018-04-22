@@ -28,7 +28,6 @@ namespace EC2 {
 class ModifyVolumeResponse;
 
 class QTAWS_EXPORT ModifyVolumeResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

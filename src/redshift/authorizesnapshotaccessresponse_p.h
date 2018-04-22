@@ -28,7 +28,6 @@ namespace Redshift {
 class AuthorizeSnapshotAccessResponse;
 
 class QTAWS_EXPORT AuthorizeSnapshotAccessResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

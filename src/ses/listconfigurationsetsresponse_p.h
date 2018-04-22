@@ -28,7 +28,6 @@ namespace SES {
 class ListConfigurationSetsResponse;
 
 class QTAWS_EXPORT ListConfigurationSetsResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

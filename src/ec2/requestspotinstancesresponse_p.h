@@ -28,7 +28,6 @@ namespace EC2 {
 class RequestSpotInstancesResponse;
 
 class QTAWS_EXPORT RequestSpotInstancesResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

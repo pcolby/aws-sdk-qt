@@ -28,7 +28,6 @@ namespace Kinesis {
 class DescribeStreamSummaryResponse;
 
 class QTAWS_EXPORT DescribeStreamSummaryResponsePrivate : public KinesisResponsePrivate {
-    Q_OBJECT
 
 public:
 

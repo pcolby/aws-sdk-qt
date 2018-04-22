@@ -28,7 +28,6 @@ namespace CodePipeline {
 class GetPipelineResponse;
 
 class QTAWS_EXPORT GetPipelineResponsePrivate : public CodePipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

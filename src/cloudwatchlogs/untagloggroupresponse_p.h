@@ -28,7 +28,6 @@ namespace CloudWatchLogs {
 class UntagLogGroupResponse;
 
 class QTAWS_EXPORT UntagLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
-    Q_OBJECT
 
 public:
 

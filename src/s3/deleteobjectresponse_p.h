@@ -28,7 +28,6 @@ namespace S3 {
 class DeleteObjectResponse;
 
 class QTAWS_EXPORT DeleteObjectResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

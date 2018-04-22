@@ -28,7 +28,6 @@ namespace Kinesis {
 class IncreaseStreamRetentionPeriodResponse;
 
 class QTAWS_EXPORT IncreaseStreamRetentionPeriodResponsePrivate : public KinesisResponsePrivate {
-    Q_OBJECT
 
 public:
 

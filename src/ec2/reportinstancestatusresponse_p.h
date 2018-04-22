@@ -28,7 +28,6 @@ namespace EC2 {
 class ReportInstanceStatusResponse;
 
 class QTAWS_EXPORT ReportInstanceStatusResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

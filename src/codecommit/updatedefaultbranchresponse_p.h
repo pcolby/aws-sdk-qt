@@ -28,7 +28,6 @@ namespace CodeCommit {
 class UpdateDefaultBranchResponse;
 
 class QTAWS_EXPORT UpdateDefaultBranchResponsePrivate : public CodeCommitResponsePrivate {
-    Q_OBJECT
 
 public:
 

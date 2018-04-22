@@ -28,7 +28,6 @@ namespace APIGateway {
 class DeleteUsagePlanKeyResponse;
 
 class QTAWS_EXPORT DeleteUsagePlanKeyResponsePrivate : public APIGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

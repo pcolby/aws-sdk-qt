@@ -28,7 +28,6 @@ namespace CloudFormation {
 class GetTemplateResponse;
 
 class QTAWS_EXPORT GetTemplateResponsePrivate : public CloudFormationResponsePrivate {
-    Q_OBJECT
 
 public:
 

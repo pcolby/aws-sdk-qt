@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeVpcClassicLinkResponse;
 
 class QTAWS_EXPORT DescribeVpcClassicLinkResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

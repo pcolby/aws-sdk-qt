@@ -28,7 +28,6 @@ namespace ApplicationDiscoveryService {
 class DescribeConfigurationsResponse;
 
 class QTAWS_EXPORT DescribeConfigurationsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

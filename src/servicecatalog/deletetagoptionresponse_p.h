@@ -28,7 +28,6 @@ namespace ServiceCatalog {
 class DeleteTagOptionResponse;
 
 class QTAWS_EXPORT DeleteTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
-    Q_OBJECT
 
 public:
 

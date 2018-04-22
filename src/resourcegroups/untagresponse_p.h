@@ -28,7 +28,6 @@ namespace ResourceGroups {
 class UntagResponse;
 
 class QTAWS_EXPORT UntagResponsePrivate : public ResourceGroupsResponsePrivate {
-    Q_OBJECT
 
 public:
 

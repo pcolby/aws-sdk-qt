@@ -28,7 +28,6 @@ namespace Route53 {
 class DeleteHealthCheckResponse;
 
 class QTAWS_EXPORT DeleteHealthCheckResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

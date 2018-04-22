@@ -10,7 +10,6 @@ namespace {{NameSpaceName}} {
 class {{ClassName}};
 
 class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceClassName}}ResponsePrivate {
-    Q_OBJECT
 
 public:
     {# @todo data members go here #}

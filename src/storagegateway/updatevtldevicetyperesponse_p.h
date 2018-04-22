@@ -28,7 +28,6 @@ namespace StorageGateway {
 class UpdateVTLDeviceTypeResponse;
 
 class QTAWS_EXPORT UpdateVTLDeviceTypeResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

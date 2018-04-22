@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class ListPolicyAttachmentsResponse;
 
 class QTAWS_EXPORT ListPolicyAttachmentsResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

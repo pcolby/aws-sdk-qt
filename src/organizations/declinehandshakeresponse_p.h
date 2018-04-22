@@ -28,7 +28,6 @@ namespace Organizations {
 class DeclineHandshakeResponse;
 
 class QTAWS_EXPORT DeclineHandshakeResponsePrivate : public OrganizationsResponsePrivate {
-    Q_OBJECT
 
 public:
 

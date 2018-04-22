@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class GetCSVHeaderResponse;
 
 class QTAWS_EXPORT GetCSVHeaderResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

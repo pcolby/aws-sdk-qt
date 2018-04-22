@@ -28,7 +28,6 @@ namespace EFS {
 class CreateMountTargetResponse;
 
 class QTAWS_EXPORT CreateMountTargetResponsePrivate : public EfsResponsePrivate {
-    Q_OBJECT
 
 public:
 

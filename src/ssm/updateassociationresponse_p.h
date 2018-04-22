@@ -28,7 +28,6 @@ namespace SSM {
 class UpdateAssociationResponse;
 
 class QTAWS_EXPORT UpdateAssociationResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

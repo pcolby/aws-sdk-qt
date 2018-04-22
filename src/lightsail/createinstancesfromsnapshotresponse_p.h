@@ -28,7 +28,6 @@ namespace Lightsail {
 class CreateInstancesFromSnapshotResponse;
 
 class QTAWS_EXPORT CreateInstancesFromSnapshotResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

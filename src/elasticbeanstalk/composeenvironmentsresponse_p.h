@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class ComposeEnvironmentsResponse;
 
 class QTAWS_EXPORT ComposeEnvironmentsResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

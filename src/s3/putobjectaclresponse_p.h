@@ -28,7 +28,6 @@ namespace S3 {
 class PutObjectAclResponse;
 
 class QTAWS_EXPORT PutObjectAclResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

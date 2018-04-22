@@ -28,7 +28,6 @@ namespace ACMPCA {
 class UntagCertificateAuthorityResponse;
 
 class QTAWS_EXPORT UntagCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate {
-    Q_OBJECT
 
 public:
 

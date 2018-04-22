@@ -28,7 +28,6 @@ namespace ACM {
 class DeleteCertificateResponse;
 
 class QTAWS_EXPORT DeleteCertificateResponsePrivate : public AcmResponsePrivate {
-    Q_OBJECT
 
 public:
 

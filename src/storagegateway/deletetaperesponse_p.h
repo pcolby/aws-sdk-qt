@@ -28,7 +28,6 @@ namespace StorageGateway {
 class DeleteTapeResponse;
 
 class QTAWS_EXPORT DeleteTapeResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

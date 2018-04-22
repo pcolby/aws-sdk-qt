@@ -28,7 +28,6 @@ namespace AppSync {
 class GetSchemaCreationStatusResponse;
 
 class QTAWS_EXPORT GetSchemaCreationStatusResponsePrivate : public AppSyncResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace OpsWorks {
 class StartStackResponse;
 
 class QTAWS_EXPORT StartStackResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

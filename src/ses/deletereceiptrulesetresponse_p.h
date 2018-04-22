@@ -28,7 +28,6 @@ namespace SES {
 class DeleteReceiptRuleSetResponse;
 
 class QTAWS_EXPORT DeleteReceiptRuleSetResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

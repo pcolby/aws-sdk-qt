@@ -28,7 +28,6 @@ namespace EC2 {
 class ReleaseAddressResponse;
 
 class QTAWS_EXPORT ReleaseAddressResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

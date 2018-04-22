@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeSnapshotAttributeResponse;
 
 class QTAWS_EXPORT DescribeSnapshotAttributeResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

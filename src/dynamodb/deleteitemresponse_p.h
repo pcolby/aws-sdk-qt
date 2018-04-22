@@ -28,7 +28,6 @@ namespace DynamoDB {
 class DeleteItemResponse;
 
 class QTAWS_EXPORT DeleteItemResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

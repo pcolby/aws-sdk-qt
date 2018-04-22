@@ -28,7 +28,6 @@ namespace APIGateway {
 class GetIntegrationResponseResponse;
 
 class QTAWS_EXPORT GetIntegrationResponseResponsePrivate : public APIGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

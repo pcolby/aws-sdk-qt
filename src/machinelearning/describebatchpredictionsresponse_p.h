@@ -28,7 +28,6 @@ namespace MachineLearning {
 class DescribeBatchPredictionsResponse;
 
 class QTAWS_EXPORT DescribeBatchPredictionsResponsePrivate : public MachineLearningResponsePrivate {
-    Q_OBJECT
 
 public:
 

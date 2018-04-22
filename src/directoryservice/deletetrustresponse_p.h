@@ -28,7 +28,6 @@ namespace DirectoryService {
 class DeleteTrustResponse;
 
 class QTAWS_EXPORT DeleteTrustResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

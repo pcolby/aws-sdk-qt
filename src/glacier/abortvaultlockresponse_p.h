@@ -28,7 +28,6 @@ namespace Glacier {
 class AbortVaultLockResponse;
 
 class QTAWS_EXPORT AbortVaultLockResponsePrivate : public GlacierResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudSearch {
 class UpdateScalingParametersResponse;
 
 class QTAWS_EXPORT UpdateScalingParametersResponsePrivate : public CloudSearchResponsePrivate {
-    Q_OBJECT
 
 public:
 

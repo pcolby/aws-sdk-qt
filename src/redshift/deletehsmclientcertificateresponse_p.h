@@ -28,7 +28,6 @@ namespace Redshift {
 class DeleteHsmClientCertificateResponse;
 
 class QTAWS_EXPORT DeleteHsmClientCertificateResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

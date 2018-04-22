@@ -28,7 +28,6 @@ namespace MTurk {
 class CreateAdditionalAssignmentsForHITResponse;
 
 class QTAWS_EXPORT CreateAdditionalAssignmentsForHITResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ElasticsearchService {
 class DeleteElasticsearchDomainResponse;
 
 class QTAWS_EXPORT DeleteElasticsearchDomainResponsePrivate : public ElasticsearchServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

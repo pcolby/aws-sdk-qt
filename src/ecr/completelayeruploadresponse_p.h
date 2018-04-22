@@ -28,7 +28,6 @@ namespace ECR {
 class CompleteLayerUploadResponse;
 
 class QTAWS_EXPORT CompleteLayerUploadResponsePrivate : public EcrResponsePrivate {
-    Q_OBJECT
 
 public:
 

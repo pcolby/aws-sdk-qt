@@ -28,7 +28,6 @@ namespace SageMaker {
 class DeleteEndpointConfigResponse;
 
 class QTAWS_EXPORT DeleteEndpointConfigResponsePrivate : public SageMakerResponsePrivate {
-    Q_OBJECT
 
 public:
 

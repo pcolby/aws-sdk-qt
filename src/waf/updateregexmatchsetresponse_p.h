@@ -28,7 +28,6 @@ namespace WAF {
 class UpdateRegexMatchSetResponse;
 
 class QTAWS_EXPORT UpdateRegexMatchSetResponsePrivate : public WafResponsePrivate {
-    Q_OBJECT
 
 public:
 

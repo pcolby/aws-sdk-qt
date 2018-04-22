@@ -28,7 +28,6 @@ namespace Redshift {
 class DescribeOrderableClusterOptionsResponse;
 
 class QTAWS_EXPORT DescribeOrderableClusterOptionsResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

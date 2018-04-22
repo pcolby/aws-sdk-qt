@@ -28,7 +28,6 @@ namespace Inspector {
 class PreviewAgentsResponse;
 
 class QTAWS_EXPORT PreviewAgentsResponsePrivate : public InspectorResponsePrivate {
-    Q_OBJECT
 
 public:
 

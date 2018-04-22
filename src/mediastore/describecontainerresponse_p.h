@@ -28,7 +28,6 @@ namespace MediaStore {
 class DescribeContainerResponse;
 
 class QTAWS_EXPORT DescribeContainerResponsePrivate : public MediaStoreResponsePrivate {
-    Q_OBJECT
 
 public:
 

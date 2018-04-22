@@ -28,7 +28,6 @@ namespace Connect {
 class StartOutboundVoiceContactResponse;
 
 class QTAWS_EXPORT StartOutboundVoiceContactResponsePrivate : public ConnectResponsePrivate {
-    Q_OBJECT
 
 public:
 

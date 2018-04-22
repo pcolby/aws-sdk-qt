@@ -28,7 +28,6 @@ namespace Snowball {
 class GetSnowballUsageResponse;
 
 class QTAWS_EXPORT GetSnowballUsageResponsePrivate : public SnowballResponsePrivate {
-    Q_OBJECT
 
 public:
 

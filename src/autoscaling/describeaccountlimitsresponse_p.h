@@ -28,7 +28,6 @@ namespace AutoScaling {
 class DescribeAccountLimitsResponse;
 
 class QTAWS_EXPORT DescribeAccountLimitsResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

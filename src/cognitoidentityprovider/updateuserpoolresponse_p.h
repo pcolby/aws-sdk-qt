@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class UpdateUserPoolResponse;
 
 class QTAWS_EXPORT UpdateUserPoolResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace GameLift {
 class DescribeVpcPeeringConnectionsResponse;
 
 class QTAWS_EXPORT DescribeVpcPeeringConnectionsResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

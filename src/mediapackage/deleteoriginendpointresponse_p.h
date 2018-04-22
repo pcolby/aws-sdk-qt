@@ -28,7 +28,6 @@ namespace MediaPackage {
 class DeleteOriginEndpointResponse;
 
 class QTAWS_EXPORT DeleteOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
-    Q_OBJECT
 
 public:
 

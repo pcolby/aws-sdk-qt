@@ -28,7 +28,6 @@ namespace CloudWatchLogs {
 class AssociateKmsKeyResponse;
 
 class QTAWS_EXPORT AssociateKmsKeyResponsePrivate : public CloudWatchLogsResponsePrivate {
-    Q_OBJECT
 
 public:
 

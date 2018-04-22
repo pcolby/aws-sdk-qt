@@ -28,7 +28,6 @@ namespace GuardDuty {
 class GetFindingsStatisticsResponse;
 
 class QTAWS_EXPORT GetFindingsStatisticsResponsePrivate : public GuardDutyResponsePrivate {
-    Q_OBJECT
 
 public:
 

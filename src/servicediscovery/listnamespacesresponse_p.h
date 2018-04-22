@@ -28,7 +28,6 @@ namespace ServiceDiscovery {
 class ListNamespacesResponse;
 
 class QTAWS_EXPORT ListNamespacesResponsePrivate : public ServiceDiscoveryResponsePrivate {
-    Q_OBJECT
 
 public:
 

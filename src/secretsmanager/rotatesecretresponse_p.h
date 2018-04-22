@@ -28,7 +28,6 @@ namespace SecretsManager {
 class RotateSecretResponse;
 
 class QTAWS_EXPORT RotateSecretResponsePrivate : public SecretsManagerResponsePrivate {
-    Q_OBJECT
 
 public:
 

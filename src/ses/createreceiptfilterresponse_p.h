@@ -28,7 +28,6 @@ namespace SES {
 class CreateReceiptFilterResponse;
 
 class QTAWS_EXPORT CreateReceiptFilterResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

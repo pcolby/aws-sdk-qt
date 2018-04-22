@@ -28,7 +28,6 @@ namespace EC2 {
 class CreateNatGatewayResponse;
 
 class QTAWS_EXPORT CreateNatGatewayResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

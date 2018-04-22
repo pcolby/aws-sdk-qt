@@ -28,7 +28,6 @@ namespace EC2 {
 class ConfirmProductInstanceResponse;
 
 class QTAWS_EXPORT ConfirmProductInstanceResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

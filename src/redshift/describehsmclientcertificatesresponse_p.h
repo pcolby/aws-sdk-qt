@@ -28,7 +28,6 @@ namespace Redshift {
 class DescribeHsmClientCertificatesResponse;
 
 class QTAWS_EXPORT DescribeHsmClientCertificatesResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

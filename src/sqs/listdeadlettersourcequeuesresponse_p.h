@@ -28,7 +28,6 @@ namespace SQS {
 class ListDeadLetterSourceQueuesResponse;
 
 class QTAWS_EXPORT ListDeadLetterSourceQueuesResponsePrivate : public SqsResponsePrivate {
-    Q_OBJECT
 
 public:
 

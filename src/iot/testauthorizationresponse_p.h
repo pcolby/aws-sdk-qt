@@ -28,7 +28,6 @@ namespace IoT {
 class TestAuthorizationResponse;
 
 class QTAWS_EXPORT TestAuthorizationResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

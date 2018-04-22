@@ -28,7 +28,6 @@ namespace Redshift {
 class ModifySnapshotCopyRetentionPeriodResponse;
 
 class QTAWS_EXPORT ModifySnapshotCopyRetentionPeriodResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

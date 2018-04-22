@@ -28,7 +28,6 @@ namespace EC2 {
 class CancelBundleTaskResponse;
 
 class QTAWS_EXPORT CancelBundleTaskResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

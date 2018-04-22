@@ -28,7 +28,6 @@ namespace AutoScaling {
 class ExecutePolicyResponse;
 
 class QTAWS_EXPORT ExecutePolicyResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

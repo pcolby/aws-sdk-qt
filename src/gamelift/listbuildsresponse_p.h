@@ -28,7 +28,6 @@ namespace GameLift {
 class ListBuildsResponse;
 
 class QTAWS_EXPORT ListBuildsResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

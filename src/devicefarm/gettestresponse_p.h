@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class GetTestResponse;
 
 class QTAWS_EXPORT GetTestResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

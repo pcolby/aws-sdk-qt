@@ -28,7 +28,6 @@ namespace IAM {
 class AttachRolePolicyResponse;
 
 class QTAWS_EXPORT AttachRolePolicyResponsePrivate : public IamResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace MarketplaceEntitlementService {
 class GetEntitlementsResponse;
 
 class QTAWS_EXPORT GetEntitlementsResponsePrivate : public MarketplaceEntitlementServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

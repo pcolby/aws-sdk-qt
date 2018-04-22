@@ -28,7 +28,6 @@ namespace Greengrass {
 class UpdateGroupResponse;
 
 class QTAWS_EXPORT UpdateGroupResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace IoT {
 class DescribeJobResponse;
 
 class QTAWS_EXPORT DescribeJobResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

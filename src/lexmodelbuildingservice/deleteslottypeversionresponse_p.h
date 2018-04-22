@@ -28,7 +28,6 @@ namespace LexModelBuildingService {
 class DeleteSlotTypeVersionResponse;
 
 class QTAWS_EXPORT DeleteSlotTypeVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

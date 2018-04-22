@@ -28,7 +28,6 @@ namespace DynamoDB {
 class DescribeLimitsResponse;
 
 class QTAWS_EXPORT DescribeLimitsResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

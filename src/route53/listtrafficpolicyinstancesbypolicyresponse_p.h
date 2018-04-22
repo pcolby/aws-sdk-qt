@@ -28,7 +28,6 @@ namespace Route53 {
 class ListTrafficPolicyInstancesByPolicyResponse;
 
 class QTAWS_EXPORT ListTrafficPolicyInstancesByPolicyResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

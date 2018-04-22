@@ -28,7 +28,6 @@ namespace MQ {
 class DeleteBrokerResponse;
 
 class QTAWS_EXPORT DeleteBrokerResponsePrivate : public MqResponsePrivate {
-    Q_OBJECT
 
 public:
 

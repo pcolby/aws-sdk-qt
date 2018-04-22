@@ -28,7 +28,6 @@ namespace IoT {
 class DeleteCertificateResponse;
 
 class QTAWS_EXPORT DeleteCertificateResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

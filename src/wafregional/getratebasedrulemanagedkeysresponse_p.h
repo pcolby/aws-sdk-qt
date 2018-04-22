@@ -28,7 +28,6 @@ namespace WAFRegional {
 class GetRateBasedRuleManagedKeysResponse;
 
 class QTAWS_EXPORT GetRateBasedRuleManagedKeysResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

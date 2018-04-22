@@ -28,7 +28,6 @@ namespace Lambda {
 class TagResourceResponse;
 
 class QTAWS_EXPORT TagResourceResponsePrivate : public LambdaResponsePrivate {
-    Q_OBJECT
 
 public:
 

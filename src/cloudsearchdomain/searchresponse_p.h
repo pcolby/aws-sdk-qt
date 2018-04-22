@@ -28,7 +28,6 @@ namespace CloudSearchDomain {
 class SearchResponse;
 
 class QTAWS_EXPORT SearchResponsePrivate : public CloudSearchDomainResponsePrivate {
-    Q_OBJECT
 
 public:
 

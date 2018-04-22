@@ -28,7 +28,6 @@ namespace AutoScaling {
 class SetInstanceProtectionResponse;
 
 class QTAWS_EXPORT SetInstanceProtectionResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

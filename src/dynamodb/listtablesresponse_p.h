@@ -28,7 +28,6 @@ namespace DynamoDB {
 class ListTablesResponse;
 
 class QTAWS_EXPORT ListTablesResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

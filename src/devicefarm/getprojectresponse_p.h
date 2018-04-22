@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class GetProjectResponse;
 
 class QTAWS_EXPORT GetProjectResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

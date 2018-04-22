@@ -28,7 +28,6 @@ namespace Mobile {
 class DescribeBundleResponse;
 
 class QTAWS_EXPORT DescribeBundleResponsePrivate : public MobileResponsePrivate {
-    Q_OBJECT
 
 public:
 

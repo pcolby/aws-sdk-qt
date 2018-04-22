@@ -28,7 +28,6 @@ namespace DirectoryService {
 class GetDirectoryLimitsResponse;
 
 class QTAWS_EXPORT GetDirectoryLimitsResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Redshift {
 class DeleteSnapshotCopyGrantResponse;
 
 class QTAWS_EXPORT DeleteSnapshotCopyGrantResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

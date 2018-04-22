@@ -28,7 +28,6 @@ namespace CodeStar {
 class ListResourcesResponse;
 
 class QTAWS_EXPORT ListResourcesResponsePrivate : public CodeStarResponsePrivate {
-    Q_OBJECT
 
 public:
 

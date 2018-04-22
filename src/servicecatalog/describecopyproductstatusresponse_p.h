@@ -28,7 +28,6 @@ namespace ServiceCatalog {
 class DescribeCopyProductStatusResponse;
 
 class QTAWS_EXPORT DescribeCopyProductStatusResponsePrivate : public ServiceCatalogResponsePrivate {
-    Q_OBJECT
 
 public:
 

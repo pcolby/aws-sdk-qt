@@ -28,7 +28,6 @@ namespace MachineLearning {
 class CreateDataSourceFromRedshiftResponse;
 
 class QTAWS_EXPORT CreateDataSourceFromRedshiftResponsePrivate : public MachineLearningResponsePrivate {
-    Q_OBJECT
 
 public:
 

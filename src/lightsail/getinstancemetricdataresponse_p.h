@@ -28,7 +28,6 @@ namespace Lightsail {
 class GetInstanceMetricDataResponse;
 
 class QTAWS_EXPORT GetInstanceMetricDataResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

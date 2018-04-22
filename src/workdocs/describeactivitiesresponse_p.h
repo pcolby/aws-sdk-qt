@@ -28,7 +28,6 @@ namespace WorkDocs {
 class DescribeActivitiesResponse;
 
 class QTAWS_EXPORT DescribeActivitiesResponsePrivate : public WorkDocsResponsePrivate {
-    Q_OBJECT
 
 public:
 

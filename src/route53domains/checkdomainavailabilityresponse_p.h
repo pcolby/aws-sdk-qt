@@ -28,7 +28,6 @@ namespace Route53Domains {
 class CheckDomainAvailabilityResponse;
 
 class QTAWS_EXPORT CheckDomainAvailabilityResponsePrivate : public Route53DomainsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace MTurk {
 class RejectQualificationRequestResponse;
 
 class QTAWS_EXPORT RejectQualificationRequestResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

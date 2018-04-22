@@ -28,7 +28,6 @@ namespace KinesisVideoArchivedMedia {
 class GetMediaForFragmentListResponse;
 
 class QTAWS_EXPORT GetMediaForFragmentListResponsePrivate : public KinesisVideoArchivedMediaResponsePrivate {
-    Q_OBJECT
 
 public:
 

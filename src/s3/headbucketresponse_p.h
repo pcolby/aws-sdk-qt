@@ -28,7 +28,6 @@ namespace S3 {
 class HeadBucketResponse;
 
 class QTAWS_EXPORT HeadBucketResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

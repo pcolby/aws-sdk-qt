@@ -28,7 +28,6 @@ namespace Route53 {
 class AssociateVPCWithHostedZoneResponse;
 
 class QTAWS_EXPORT AssociateVPCWithHostedZoneResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

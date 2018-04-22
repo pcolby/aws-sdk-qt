@@ -28,7 +28,6 @@ namespace DynamoDB {
 class DescribeGlobalTableResponse;
 
 class QTAWS_EXPORT DescribeGlobalTableResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

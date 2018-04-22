@@ -28,7 +28,6 @@ namespace CloudHSMV2 {
 class DescribeBackupsResponse;
 
 class QTAWS_EXPORT DescribeBackupsResponsePrivate : public CloudHSMV2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace MobileAnalytics {
 class PutEventsResponse;
 
 class QTAWS_EXPORT PutEventsResponsePrivate : public MobileAnalyticsResponsePrivate {
-    Q_OBJECT
 
 public:
 

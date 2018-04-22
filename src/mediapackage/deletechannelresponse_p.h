@@ -28,7 +28,6 @@ namespace MediaPackage {
 class DeleteChannelResponse;
 
 class QTAWS_EXPORT DeleteChannelResponsePrivate : public MediaPackageResponsePrivate {
-    Q_OBJECT
 
 public:
 

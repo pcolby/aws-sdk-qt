@@ -28,7 +28,6 @@ namespace MediaLive {
 class UpdateChannelResponse;
 
 class QTAWS_EXPORT UpdateChannelResponsePrivate : public MediaLiveResponsePrivate {
-    Q_OBJECT
 
 public:
 

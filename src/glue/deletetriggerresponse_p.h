@@ -28,7 +28,6 @@ namespace Glue {
 class DeleteTriggerResponse;
 
 class QTAWS_EXPORT DeleteTriggerResponsePrivate : public GlueResponsePrivate {
-    Q_OBJECT
 
 public:
 

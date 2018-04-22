@@ -28,7 +28,6 @@ namespace SWF {
 class RequestCancelWorkflowExecutionResponse;
 
 class QTAWS_EXPORT RequestCancelWorkflowExecutionResponsePrivate : public SwfResponsePrivate {
-    Q_OBJECT
 
 public:
 

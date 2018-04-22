@@ -28,7 +28,6 @@ namespace Redshift {
 class DescribeResizeResponse;
 
 class QTAWS_EXPORT DescribeResizeResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

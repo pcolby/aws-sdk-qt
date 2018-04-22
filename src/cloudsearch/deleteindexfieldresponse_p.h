@@ -28,7 +28,6 @@ namespace CloudSearch {
 class DeleteIndexFieldResponse;
 
 class QTAWS_EXPORT DeleteIndexFieldResponsePrivate : public CloudSearchResponsePrivate {
-    Q_OBJECT
 
 public:
 

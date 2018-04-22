@@ -28,7 +28,6 @@ namespace Redshift {
 class DisableSnapshotCopyResponse;
 
 class QTAWS_EXPORT DisableSnapshotCopyResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace RDS {
 class DescribeDBClusterParametersResponse;
 
 class QTAWS_EXPORT DescribeDBClusterParametersResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

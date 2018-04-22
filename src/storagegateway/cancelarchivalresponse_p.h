@@ -28,7 +28,6 @@ namespace StorageGateway {
 class CancelArchivalResponse;
 
 class QTAWS_EXPORT CancelArchivalResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

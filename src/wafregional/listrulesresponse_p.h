@@ -28,7 +28,6 @@ namespace WAFRegional {
 class ListRulesResponse;
 
 class QTAWS_EXPORT ListRulesResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

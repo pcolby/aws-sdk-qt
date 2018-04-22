@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class SetLoadBalancerPoliciesForBackendServerResponse;
 
 class QTAWS_EXPORT SetLoadBalancerPoliciesForBackendServerResponsePrivate : public ElasticLoadBalancingResponsePrivate {
-    Q_OBJECT
 
 public:
 

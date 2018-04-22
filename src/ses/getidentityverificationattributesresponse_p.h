@@ -28,7 +28,6 @@ namespace SES {
 class GetIdentityVerificationAttributesResponse;
 
 class QTAWS_EXPORT GetIdentityVerificationAttributesResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

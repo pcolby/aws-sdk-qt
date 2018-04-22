@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class DeleteGroupResponse;
 
 class QTAWS_EXPORT DeleteGroupResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

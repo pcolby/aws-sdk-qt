@@ -28,7 +28,6 @@ namespace DynamoDB {
 class CreateBackupResponse;
 
 class QTAWS_EXPORT CreateBackupResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

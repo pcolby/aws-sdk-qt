@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class BatchGetOnPremisesInstancesResponse;
 
 class QTAWS_EXPORT BatchGetOnPremisesInstancesResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

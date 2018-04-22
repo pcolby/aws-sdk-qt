@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class ForgotPasswordResponse;
 
 class QTAWS_EXPORT ForgotPasswordResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

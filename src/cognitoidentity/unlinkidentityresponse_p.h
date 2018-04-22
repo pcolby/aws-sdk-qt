@@ -28,7 +28,6 @@ namespace CognitoIdentity {
 class UnlinkIdentityResponse;
 
 class QTAWS_EXPORT UnlinkIdentityResponsePrivate : public CognitoIdentityResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class CreateSchemaResponse;
 
 class QTAWS_EXPORT CreateSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

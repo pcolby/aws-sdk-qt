@@ -28,7 +28,6 @@ namespace Organizations {
 class DetachPolicyResponse;
 
 class QTAWS_EXPORT DetachPolicyResponsePrivate : public OrganizationsResponsePrivate {
-    Q_OBJECT
 
 public:
 

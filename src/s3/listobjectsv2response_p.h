@@ -28,7 +28,6 @@ namespace S3 {
 class ListObjectsV2Response;
 
 class QTAWS_EXPORT ListObjectsV2ResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

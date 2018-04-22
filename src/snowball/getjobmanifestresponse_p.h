@@ -28,7 +28,6 @@ namespace Snowball {
 class GetJobManifestResponse;
 
 class QTAWS_EXPORT GetJobManifestResponsePrivate : public SnowballResponsePrivate {
-    Q_OBJECT
 
 public:
 

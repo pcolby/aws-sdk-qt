@@ -28,7 +28,6 @@ namespace MachineLearning {
 class PredictResponse;
 
 class QTAWS_EXPORT PredictResponsePrivate : public MachineLearningResponsePrivate {
-    Q_OBJECT
 
 public:
 

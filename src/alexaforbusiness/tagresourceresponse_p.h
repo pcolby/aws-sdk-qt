@@ -28,7 +28,6 @@ namespace AlexaForBusiness {
 class TagResourceResponse;
 
 class QTAWS_EXPORT TagResourceResponsePrivate : public AlexaForBusinessResponsePrivate {
-    Q_OBJECT
 
 public:
 

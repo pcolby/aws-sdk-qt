@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeSpotFleetInstancesResponse;
 
 class QTAWS_EXPORT DescribeSpotFleetInstancesResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

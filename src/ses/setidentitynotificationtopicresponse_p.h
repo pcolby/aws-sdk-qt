@@ -28,7 +28,6 @@ namespace SES {
 class SetIdentityNotificationTopicResponse;
 
 class QTAWS_EXPORT SetIdentityNotificationTopicResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

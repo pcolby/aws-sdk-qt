@@ -28,7 +28,6 @@ namespace Redshift {
 class DescribeTagsResponse;
 
 class QTAWS_EXPORT DescribeTagsResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

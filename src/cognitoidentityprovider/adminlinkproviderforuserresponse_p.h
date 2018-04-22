@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class AdminLinkProviderForUserResponse;
 
 class QTAWS_EXPORT AdminLinkProviderForUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

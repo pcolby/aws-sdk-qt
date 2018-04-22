@@ -28,7 +28,6 @@ namespace Route53 {
 class DeleteTrafficPolicyInstanceResponse;
 
 class QTAWS_EXPORT DeleteTrafficPolicyInstanceResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CognitoSync {
 class DescribeIdentityUsageResponse;
 
 class QTAWS_EXPORT DescribeIdentityUsageResponsePrivate : public CognitoSyncResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace IoT {
 class UpdateAuthorizerResponse;
 
 class QTAWS_EXPORT UpdateAuthorizerResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

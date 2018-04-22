@@ -28,7 +28,6 @@ namespace SES {
 class ListVerifiedEmailAddressesResponse;
 
 class QTAWS_EXPORT ListVerifiedEmailAddressesResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

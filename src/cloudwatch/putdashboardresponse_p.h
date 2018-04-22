@@ -28,7 +28,6 @@ namespace CloudWatch {
 class PutDashboardResponse;
 
 class QTAWS_EXPORT PutDashboardResponsePrivate : public CloudWatchResponsePrivate {
-    Q_OBJECT
 
 public:
 

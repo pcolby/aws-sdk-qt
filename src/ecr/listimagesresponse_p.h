@@ -28,7 +28,6 @@ namespace ECR {
 class ListImagesResponse;
 
 class QTAWS_EXPORT ListImagesResponsePrivate : public EcrResponsePrivate {
-    Q_OBJECT
 
 public:
 

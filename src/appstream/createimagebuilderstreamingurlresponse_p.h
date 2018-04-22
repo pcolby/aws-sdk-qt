@@ -28,7 +28,6 @@ namespace AppStream {
 class CreateImageBuilderStreamingURLResponse;
 
 class QTAWS_EXPORT CreateImageBuilderStreamingURLResponsePrivate : public AppStreamResponsePrivate {
-    Q_OBJECT
 
 public:
 

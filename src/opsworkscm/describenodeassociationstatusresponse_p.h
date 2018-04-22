@@ -28,7 +28,6 @@ namespace OpsWorksCM {
 class DescribeNodeAssociationStatusResponse;
 
 class QTAWS_EXPORT DescribeNodeAssociationStatusResponsePrivate : public OpsWorksCMResponsePrivate {
-    Q_OBJECT
 
 public:
 

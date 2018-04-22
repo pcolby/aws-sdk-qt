@@ -28,7 +28,6 @@ namespace SWF {
 class PollForActivityTaskResponse;
 
 class QTAWS_EXPORT PollForActivityTaskResponsePrivate : public SwfResponsePrivate {
-    Q_OBJECT
 
 public:
 

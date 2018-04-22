@@ -28,7 +28,6 @@ namespace APIGateway {
 class FlushStageAuthorizersCacheResponse;
 
 class QTAWS_EXPORT FlushStageAuthorizersCacheResponsePrivate : public APIGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

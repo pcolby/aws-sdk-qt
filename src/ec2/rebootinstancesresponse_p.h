@@ -28,7 +28,6 @@ namespace EC2 {
 class RebootInstancesResponse;
 
 class QTAWS_EXPORT RebootInstancesResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

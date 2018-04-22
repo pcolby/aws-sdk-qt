@@ -28,7 +28,6 @@ namespace IoT {
 class SearchIndexResponse;
 
 class QTAWS_EXPORT SearchIndexResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

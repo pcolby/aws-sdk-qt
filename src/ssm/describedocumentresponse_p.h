@@ -28,7 +28,6 @@ namespace SSM {
 class DescribeDocumentResponse;
 
 class QTAWS_EXPORT DescribeDocumentResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

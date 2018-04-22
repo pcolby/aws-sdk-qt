@@ -28,7 +28,6 @@ namespace EMR {
 class DescribeJobFlowsResponse;
 
 class QTAWS_EXPORT DescribeJobFlowsResponsePrivate : public EmrResponsePrivate {
-    Q_OBJECT
 
 public:
 

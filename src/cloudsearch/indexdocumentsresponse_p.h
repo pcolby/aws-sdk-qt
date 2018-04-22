@@ -28,7 +28,6 @@ namespace CloudSearch {
 class IndexDocumentsResponse;
 
 class QTAWS_EXPORT IndexDocumentsResponsePrivate : public CloudSearchResponsePrivate {
-    Q_OBJECT
 
 public:
 

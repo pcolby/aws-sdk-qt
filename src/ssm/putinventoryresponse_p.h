@@ -28,7 +28,6 @@ namespace SSM {
 class PutInventoryResponse;
 
 class QTAWS_EXPORT PutInventoryResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeConversionTasksResponse;
 
 class QTAWS_EXPORT DescribeConversionTasksResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

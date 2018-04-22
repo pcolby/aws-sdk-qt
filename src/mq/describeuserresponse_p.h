@@ -28,7 +28,6 @@ namespace MQ {
 class DescribeUserResponse;
 
 class QTAWS_EXPORT DescribeUserResponsePrivate : public MqResponsePrivate {
-    Q_OBJECT
 
 public:
 

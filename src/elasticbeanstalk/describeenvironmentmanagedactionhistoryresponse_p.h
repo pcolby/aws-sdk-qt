@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class DescribeEnvironmentManagedActionHistoryResponse;
 
 class QTAWS_EXPORT DescribeEnvironmentManagedActionHistoryResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

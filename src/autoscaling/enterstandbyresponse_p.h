@@ -28,7 +28,6 @@ namespace AutoScaling {
 class EnterStandbyResponse;
 
 class QTAWS_EXPORT EnterStandbyResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace SQS {
 class ReceiveMessageResponse;
 
 class QTAWS_EXPORT ReceiveMessageResponsePrivate : public SqsResponsePrivate {
-    Q_OBJECT
 
 public:
 

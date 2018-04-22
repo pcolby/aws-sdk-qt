@@ -28,7 +28,6 @@ namespace Lightsail {
 class AttachLoadBalancerTlsCertificateResponse;
 
 class QTAWS_EXPORT AttachLoadBalancerTlsCertificateResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

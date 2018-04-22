@@ -28,7 +28,6 @@ namespace IAM {
 class ListServiceSpecificCredentialsResponse;
 
 class QTAWS_EXPORT ListServiceSpecificCredentialsResponsePrivate : public IamResponsePrivate {
-    Q_OBJECT
 
 public:
 

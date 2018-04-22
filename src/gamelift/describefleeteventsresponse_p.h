@@ -28,7 +28,6 @@ namespace GameLift {
 class DescribeFleetEventsResponse;
 
 class QTAWS_EXPORT DescribeFleetEventsResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Route53 {
 class DisassociateVPCFromHostedZoneResponse;
 
 class QTAWS_EXPORT DisassociateVPCFromHostedZoneResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudHSM {
 class CreateHapgResponse;
 
 class QTAWS_EXPORT CreateHapgResponsePrivate : public CloudHSMResponsePrivate {
-    Q_OBJECT
 
 public:
 

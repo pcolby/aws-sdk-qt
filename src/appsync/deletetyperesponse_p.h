@@ -28,7 +28,6 @@ namespace AppSync {
 class DeleteTypeResponse;
 
 class QTAWS_EXPORT DeleteTypeResponsePrivate : public AppSyncResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Redshift {
 class ModifyClusterParameterGroupResponse;
 
 class QTAWS_EXPORT ModifyClusterParameterGroupResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

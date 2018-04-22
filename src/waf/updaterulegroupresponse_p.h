@@ -28,7 +28,6 @@ namespace WAF {
 class UpdateRuleGroupResponse;
 
 class QTAWS_EXPORT UpdateRuleGroupResponsePrivate : public WafResponsePrivate {
-    Q_OBJECT
 
 public:
 

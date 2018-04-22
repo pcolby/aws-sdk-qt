@@ -28,7 +28,6 @@ namespace Rekognition {
 class ListStreamProcessorsResponse;
 
 class QTAWS_EXPORT ListStreamProcessorsResponsePrivate : public RekognitionResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ElasticLoadBalancingv2 {
 class SetSubnetsResponse;
 
 class QTAWS_EXPORT SetSubnetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

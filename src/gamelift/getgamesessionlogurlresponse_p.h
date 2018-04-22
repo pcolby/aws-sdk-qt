@@ -28,7 +28,6 @@ namespace GameLift {
 class GetGameSessionLogUrlResponse;
 
 class QTAWS_EXPORT GetGameSessionLogUrlResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

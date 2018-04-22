@@ -28,7 +28,6 @@ namespace EC2 {
 class CreateVpcPeeringConnectionResponse;
 
 class QTAWS_EXPORT CreateVpcPeeringConnectionResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

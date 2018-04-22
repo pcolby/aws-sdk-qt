@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class CreateLBCookieStickinessPolicyResponse;
 
 class QTAWS_EXPORT CreateLBCookieStickinessPolicyResponsePrivate : public ElasticLoadBalancingResponsePrivate {
-    Q_OBJECT
 
 public:
 

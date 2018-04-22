@@ -28,7 +28,6 @@ namespace Lambda {
 class PublishVersionResponse;
 
 class QTAWS_EXPORT PublishVersionResponsePrivate : public LambdaResponsePrivate {
-    Q_OBJECT
 
 public:
 

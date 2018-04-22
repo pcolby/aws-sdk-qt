@@ -28,7 +28,6 @@ namespace KinesisVideo {
 class UntagStreamResponse;
 
 class QTAWS_EXPORT UntagStreamResponsePrivate : public KinesisVideoResponsePrivate {
-    Q_OBJECT
 
 public:
 

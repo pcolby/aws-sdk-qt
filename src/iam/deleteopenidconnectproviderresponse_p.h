@@ -28,7 +28,6 @@ namespace IAM {
 class DeleteOpenIDConnectProviderResponse;
 
 class QTAWS_EXPORT DeleteOpenIDConnectProviderResponsePrivate : public IamResponsePrivate {
-    Q_OBJECT
 
 public:
 

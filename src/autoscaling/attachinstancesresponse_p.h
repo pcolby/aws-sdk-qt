@@ -28,7 +28,6 @@ namespace AutoScaling {
 class AttachInstancesResponse;
 
 class QTAWS_EXPORT AttachInstancesResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

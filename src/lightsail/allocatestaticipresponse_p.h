@@ -28,7 +28,6 @@ namespace Lightsail {
 class AllocateStaticIpResponse;
 
 class QTAWS_EXPORT AllocateStaticIpResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

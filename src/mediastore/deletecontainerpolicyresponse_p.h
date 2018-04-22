@@ -28,7 +28,6 @@ namespace MediaStore {
 class DeleteContainerPolicyResponse;
 
 class QTAWS_EXPORT DeleteContainerPolicyResponsePrivate : public MediaStoreResponsePrivate {
-    Q_OBJECT
 
 public:
 

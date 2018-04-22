@@ -28,7 +28,6 @@ namespace Route53Domains {
 class ListOperationsResponse;
 
 class QTAWS_EXPORT ListOperationsResponsePrivate : public Route53DomainsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace OpsWorks {
 class UnassignInstanceResponse;
 
 class QTAWS_EXPORT UnassignInstanceResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

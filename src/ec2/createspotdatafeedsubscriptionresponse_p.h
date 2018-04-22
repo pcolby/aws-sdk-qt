@@ -28,7 +28,6 @@ namespace EC2 {
 class CreateSpotDatafeedSubscriptionResponse;
 
 class QTAWS_EXPORT CreateSpotDatafeedSubscriptionResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

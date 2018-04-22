@@ -28,7 +28,6 @@ namespace AlexaForBusiness {
 class ResolveRoomResponse;
 
 class QTAWS_EXPORT ResolveRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
-    Q_OBJECT
 
 public:
 

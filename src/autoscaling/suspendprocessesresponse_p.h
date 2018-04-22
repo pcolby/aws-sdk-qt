@@ -28,7 +28,6 @@ namespace AutoScaling {
 class SuspendProcessesResponse;
 
 class QTAWS_EXPORT SuspendProcessesResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

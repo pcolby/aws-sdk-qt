@@ -28,7 +28,6 @@ namespace LexModelBuildingService {
 class GetSlotTypeVersionsResponse;
 
 class QTAWS_EXPORT GetSlotTypeVersionsResponsePrivate : public LexModelBuildingServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

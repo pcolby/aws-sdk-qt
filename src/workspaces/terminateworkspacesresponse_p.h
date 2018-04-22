@@ -28,7 +28,6 @@ namespace WorkSpaces {
 class TerminateWorkspacesResponse;
 
 class QTAWS_EXPORT TerminateWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
-    Q_OBJECT
 
 public:
 

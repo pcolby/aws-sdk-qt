@@ -28,7 +28,6 @@ namespace WAFRegional {
 class GetChangeTokenStatusResponse;
 
 class QTAWS_EXPORT GetChangeTokenStatusResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CognitoIdentity {
 class GetCredentialsForIdentityResponse;
 
 class QTAWS_EXPORT GetCredentialsForIdentityResponsePrivate : public CognitoIdentityResponsePrivate {
-    Q_OBJECT
 
 public:
 

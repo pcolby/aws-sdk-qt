@@ -28,7 +28,6 @@ namespace CloudHSMV2 {
 class TagResourceResponse;
 
 class QTAWS_EXPORT TagResourceResponsePrivate : public CloudHSMV2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

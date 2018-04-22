@@ -28,7 +28,6 @@ namespace RDS {
 class DescribeReservedDBInstancesResponse;
 
 class QTAWS_EXPORT DescribeReservedDBInstancesResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

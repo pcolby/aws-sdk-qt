@@ -28,7 +28,6 @@ namespace SSM {
 class ListResourceComplianceSummariesResponse;
 
 class QTAWS_EXPORT ListResourceComplianceSummariesResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

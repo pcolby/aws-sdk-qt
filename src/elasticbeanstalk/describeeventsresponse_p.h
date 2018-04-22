@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class DescribeEventsResponse;
 
 class QTAWS_EXPORT DescribeEventsResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

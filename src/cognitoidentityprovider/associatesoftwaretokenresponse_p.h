@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class AssociateSoftwareTokenResponse;
 
 class QTAWS_EXPORT AssociateSoftwareTokenResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

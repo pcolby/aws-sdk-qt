@@ -28,7 +28,6 @@ namespace GuardDuty {
 class ListThreatIntelSetsResponse;
 
 class QTAWS_EXPORT ListThreatIntelSetsResponsePrivate : public GuardDutyResponsePrivate {
-    Q_OBJECT
 
 public:
 

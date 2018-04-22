@@ -28,7 +28,6 @@ namespace Redshift {
 class RevokeClusterSecurityGroupIngressResponse;
 
 class QTAWS_EXPORT RevokeClusterSecurityGroupIngressResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

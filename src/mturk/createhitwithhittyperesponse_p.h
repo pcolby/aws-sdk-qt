@@ -28,7 +28,6 @@ namespace MTurk {
 class CreateHITWithHITTypeResponse;
 
 class QTAWS_EXPORT CreateHITWithHITTypeResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

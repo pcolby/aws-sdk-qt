@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class UpdateAuthEventFeedbackResponse;
 
 class QTAWS_EXPORT UpdateAuthEventFeedbackResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

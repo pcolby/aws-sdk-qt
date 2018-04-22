@@ -28,7 +28,6 @@ namespace CodePipeline {
 class PutJobSuccessResultResponse;
 
 class QTAWS_EXPORT PutJobSuccessResultResponsePrivate : public CodePipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

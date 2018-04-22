@@ -28,7 +28,6 @@ namespace ServiceCatalog {
 class ScanProvisionedProductsResponse;
 
 class QTAWS_EXPORT ScanProvisionedProductsResponsePrivate : public ServiceCatalogResponsePrivate {
-    Q_OBJECT
 
 public:
 

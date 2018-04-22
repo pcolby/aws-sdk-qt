@@ -28,7 +28,6 @@ namespace RDS {
 class DescribeAccountAttributesResponse;
 
 class QTAWS_EXPORT DescribeAccountAttributesResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

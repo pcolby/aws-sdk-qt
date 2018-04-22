@@ -28,7 +28,6 @@ namespace SecretsManager {
 class TagResourceResponse;
 
 class QTAWS_EXPORT TagResourceResponsePrivate : public SecretsManagerResponsePrivate {
-    Q_OBJECT
 
 public:
 

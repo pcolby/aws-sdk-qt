@@ -28,7 +28,6 @@ namespace StorageGateway {
 class DescribeGatewayInformationResponse;
 
 class QTAWS_EXPORT DescribeGatewayInformationResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Lightsail {
 class OpenInstancePublicPortsResponse;
 
 class QTAWS_EXPORT OpenInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

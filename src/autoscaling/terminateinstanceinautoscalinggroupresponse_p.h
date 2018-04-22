@@ -28,7 +28,6 @@ namespace AutoScaling {
 class TerminateInstanceInAutoScalingGroupResponse;
 
 class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace StorageGateway {
 class UpdateGatewayInformationResponse;
 
 class QTAWS_EXPORT UpdateGatewayInformationResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

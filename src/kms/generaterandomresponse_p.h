@@ -28,7 +28,6 @@ namespace KMS {
 class GenerateRandomResponse;
 
 class QTAWS_EXPORT GenerateRandomResponsePrivate : public KmsResponsePrivate {
-    Q_OBJECT
 
 public:
 

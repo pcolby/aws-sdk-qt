@@ -28,7 +28,6 @@ namespace StorageGateway {
 class CreateStorediSCSIVolumeResponse;
 
 class QTAWS_EXPORT CreateStorediSCSIVolumeResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

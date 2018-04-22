@@ -28,7 +28,6 @@ namespace ServiceDiscovery {
 class CreatePublicDnsNamespaceResponse;
 
 class QTAWS_EXPORT CreatePublicDnsNamespaceResponsePrivate : public ServiceDiscoveryResponsePrivate {
-    Q_OBJECT
 
 public:
 

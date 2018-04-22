@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class EnableAvailabilityZonesForLoadBalancerResponse;
 
 class QTAWS_EXPORT EnableAvailabilityZonesForLoadBalancerResponsePrivate : public ElasticLoadBalancingResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudTrail {
 class PutEventSelectorsResponse;
 
 class QTAWS_EXPORT PutEventSelectorsResponsePrivate : public CloudTrailResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudWatchLogs {
 class DescribeResourcePoliciesResponse;
 
 class QTAWS_EXPORT DescribeResourcePoliciesResponsePrivate : public CloudWatchLogsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudFront {
 class GetPublicKeyConfigResponse;
 
 class QTAWS_EXPORT GetPublicKeyConfigResponsePrivate : public CloudFrontResponsePrivate {
-    Q_OBJECT
 
 public:
 

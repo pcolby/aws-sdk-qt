@@ -28,7 +28,6 @@ namespace SNS {
 class SetSubscriptionAttributesResponse;
 
 class QTAWS_EXPORT SetSubscriptionAttributesResponsePrivate : public SnsResponsePrivate {
-    Q_OBJECT
 
 public:
 

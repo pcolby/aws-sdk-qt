@@ -28,7 +28,6 @@ namespace CodeBuild {
 class DeleteProjectResponse;
 
 class QTAWS_EXPORT DeleteProjectResponsePrivate : public CodeBuildResponsePrivate {
-    Q_OBJECT
 
 public:
 

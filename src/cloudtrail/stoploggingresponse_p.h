@@ -28,7 +28,6 @@ namespace CloudTrail {
 class StopLoggingResponse;
 
 class QTAWS_EXPORT StopLoggingResponsePrivate : public CloudTrailResponsePrivate {
-    Q_OBJECT
 
 public:
 

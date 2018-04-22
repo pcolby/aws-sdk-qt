@@ -28,7 +28,6 @@ namespace SQS {
 class ChangeMessageVisibilityResponse;
 
 class QTAWS_EXPORT ChangeMessageVisibilityResponsePrivate : public SqsResponsePrivate {
-    Q_OBJECT
 
 public:
 

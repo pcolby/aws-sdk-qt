@@ -28,7 +28,6 @@ namespace CloudSearch {
 class DescribeScalingParametersResponse;
 
 class QTAWS_EXPORT DescribeScalingParametersResponsePrivate : public CloudSearchResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class SetLoadBalancerListenerSSLCertificateResponse;
 
 class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateResponsePrivate : public ElasticLoadBalancingResponsePrivate {
-    Q_OBJECT
 
 public:
 

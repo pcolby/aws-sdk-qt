@@ -28,7 +28,6 @@ namespace CodeBuild {
 class BatchDeleteBuildsResponse;
 
 class QTAWS_EXPORT BatchDeleteBuildsResponsePrivate : public CodeBuildResponsePrivate {
-    Q_OBJECT
 
 public:
 

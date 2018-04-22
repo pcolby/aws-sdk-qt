@@ -28,7 +28,6 @@ namespace Snowball {
 class CancelClusterResponse;
 
 class QTAWS_EXPORT CancelClusterResponsePrivate : public SnowballResponsePrivate {
-    Q_OBJECT
 
 public:
 

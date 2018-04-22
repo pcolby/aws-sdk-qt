@@ -28,7 +28,6 @@ namespace Route53Domains {
 class GetOperationDetailResponse;
 
 class QTAWS_EXPORT GetOperationDetailResponsePrivate : public Route53DomainsResponsePrivate {
-    Q_OBJECT
 
 public:
 

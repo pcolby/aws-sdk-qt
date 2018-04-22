@@ -28,7 +28,6 @@ namespace Route53Domains {
 class CheckDomainTransferabilityResponse;
 
 class QTAWS_EXPORT CheckDomainTransferabilityResponsePrivate : public Route53DomainsResponsePrivate {
-    Q_OBJECT
 
 public:
 

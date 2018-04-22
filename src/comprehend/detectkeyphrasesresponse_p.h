@@ -28,7 +28,6 @@ namespace Comprehend {
 class DetectKeyPhrasesResponse;
 
 class QTAWS_EXPORT DetectKeyPhrasesResponsePrivate : public ComprehendResponsePrivate {
-    Q_OBJECT
 
 public:
 

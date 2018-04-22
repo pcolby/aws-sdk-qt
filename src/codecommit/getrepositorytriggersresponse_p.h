@@ -28,7 +28,6 @@ namespace CodeCommit {
 class GetRepositoryTriggersResponse;
 
 class QTAWS_EXPORT GetRepositoryTriggersResponsePrivate : public CodeCommitResponsePrivate {
-    Q_OBJECT
 
 public:
 

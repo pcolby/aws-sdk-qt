@@ -28,7 +28,6 @@ namespace MachineLearning {
 class DeleteDataSourceResponse;
 
 class QTAWS_EXPORT DeleteDataSourceResponsePrivate : public MachineLearningResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Athena {
 class BatchGetQueryExecutionResponse;
 
 class QTAWS_EXPORT BatchGetQueryExecutionResponsePrivate : public AthenaResponsePrivate {
-    Q_OBJECT
 
 public:
 

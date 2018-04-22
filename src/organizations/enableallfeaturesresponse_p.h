@@ -28,7 +28,6 @@ namespace Organizations {
 class EnableAllFeaturesResponse;
 
 class QTAWS_EXPORT EnableAllFeaturesResponsePrivate : public OrganizationsResponsePrivate {
-    Q_OBJECT
 
 public:
 

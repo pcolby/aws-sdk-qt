@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class ModifyLoadBalancerAttributesResponse;
 
 class QTAWS_EXPORT ModifyLoadBalancerAttributesResponsePrivate : public ElasticLoadBalancingResponsePrivate {
-    Q_OBJECT
 
 public:
 

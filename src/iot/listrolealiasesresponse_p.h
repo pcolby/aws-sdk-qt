@@ -28,7 +28,6 @@ namespace IoT {
 class ListRoleAliasesResponse;
 
 class QTAWS_EXPORT ListRoleAliasesResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

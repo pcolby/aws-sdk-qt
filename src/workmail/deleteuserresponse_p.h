@@ -28,7 +28,6 @@ namespace WorkMail {
 class DeleteUserResponse;
 
 class QTAWS_EXPORT DeleteUserResponsePrivate : public WorkMailResponsePrivate {
-    Q_OBJECT
 
 public:
 

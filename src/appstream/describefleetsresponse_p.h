@@ -28,7 +28,6 @@ namespace AppStream {
 class DescribeFleetsResponse;
 
 class QTAWS_EXPORT DescribeFleetsResponsePrivate : public AppStreamResponsePrivate {
-    Q_OBJECT
 
 public:
 

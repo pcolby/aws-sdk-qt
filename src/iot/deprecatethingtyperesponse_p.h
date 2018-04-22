@@ -28,7 +28,6 @@ namespace IoT {
 class DeprecateThingTypeResponse;
 
 class QTAWS_EXPORT DeprecateThingTypeResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

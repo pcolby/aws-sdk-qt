@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class ListInstanceProfilesResponse;
 
 class QTAWS_EXPORT ListInstanceProfilesResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

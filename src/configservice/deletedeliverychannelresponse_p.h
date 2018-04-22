@@ -28,7 +28,6 @@ namespace ConfigService {
 class DeleteDeliveryChannelResponse;
 
 class QTAWS_EXPORT DeleteDeliveryChannelResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

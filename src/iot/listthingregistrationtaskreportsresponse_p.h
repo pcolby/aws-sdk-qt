@@ -28,7 +28,6 @@ namespace IoT {
 class ListThingRegistrationTaskReportsResponse;
 
 class QTAWS_EXPORT ListThingRegistrationTaskReportsResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

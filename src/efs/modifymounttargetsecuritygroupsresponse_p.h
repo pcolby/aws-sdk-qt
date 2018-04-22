@@ -28,7 +28,6 @@ namespace EFS {
 class ModifyMountTargetSecurityGroupsResponse;
 
 class QTAWS_EXPORT ModifyMountTargetSecurityGroupsResponsePrivate : public EfsResponsePrivate {
-    Q_OBJECT
 
 public:
 

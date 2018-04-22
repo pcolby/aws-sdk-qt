@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class CreateTypedLinkFacetResponse;
 
 class QTAWS_EXPORT CreateTypedLinkFacetResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Route53 {
 class UpdateTrafficPolicyCommentResponse;
 
 class QTAWS_EXPORT UpdateTrafficPolicyCommentResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

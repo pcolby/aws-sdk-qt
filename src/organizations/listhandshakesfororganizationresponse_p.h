@@ -28,7 +28,6 @@ namespace Organizations {
 class ListHandshakesForOrganizationResponse;
 
 class QTAWS_EXPORT ListHandshakesForOrganizationResponsePrivate : public OrganizationsResponsePrivate {
-    Q_OBJECT
 
 public:
 

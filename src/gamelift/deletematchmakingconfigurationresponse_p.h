@@ -28,7 +28,6 @@ namespace GameLift {
 class DeleteMatchmakingConfigurationResponse;
 
 class QTAWS_EXPORT DeleteMatchmakingConfigurationResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

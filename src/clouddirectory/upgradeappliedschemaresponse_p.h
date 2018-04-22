@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class UpgradeAppliedSchemaResponse;
 
 class QTAWS_EXPORT UpgradeAppliedSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

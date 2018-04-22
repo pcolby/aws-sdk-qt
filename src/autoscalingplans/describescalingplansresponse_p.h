@@ -28,7 +28,6 @@ namespace AutoScalingPlans {
 class DescribeScalingPlansResponse;
 
 class QTAWS_EXPORT DescribeScalingPlansResponsePrivate : public AutoScalingPlansResponsePrivate {
-    Q_OBJECT
 
 public:
 

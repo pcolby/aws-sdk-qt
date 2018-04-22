@@ -28,7 +28,6 @@ namespace ServerlessApplicationRepository {
 class GetApplicationPolicyResponse;
 
 class QTAWS_EXPORT GetApplicationPolicyResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudWatchLogs {
 class DescribeLogGroupsResponse;
 
 class QTAWS_EXPORT DescribeLogGroupsResponsePrivate : public CloudWatchLogsResponsePrivate {
-    Q_OBJECT
 
 public:
 

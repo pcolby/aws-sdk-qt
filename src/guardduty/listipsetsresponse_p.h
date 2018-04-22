@@ -28,7 +28,6 @@ namespace GuardDuty {
 class ListIPSetsResponse;
 
 class QTAWS_EXPORT ListIPSetsResponsePrivate : public GuardDutyResponsePrivate {
-    Q_OBJECT
 
 public:
 

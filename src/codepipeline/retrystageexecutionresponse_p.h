@@ -28,7 +28,6 @@ namespace CodePipeline {
 class RetryStageExecutionResponse;
 
 class QTAWS_EXPORT RetryStageExecutionResponsePrivate : public CodePipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

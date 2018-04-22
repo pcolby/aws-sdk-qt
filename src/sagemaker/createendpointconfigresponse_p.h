@@ -28,7 +28,6 @@ namespace SageMaker {
 class CreateEndpointConfigResponse;
 
 class QTAWS_EXPORT CreateEndpointConfigResponsePrivate : public SageMakerResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DirectConnect {
 class DescribeLocationsResponse;
 
 class QTAWS_EXPORT DescribeLocationsResponsePrivate : public DirectConnectResponsePrivate {
-    Q_OBJECT
 
 public:
 

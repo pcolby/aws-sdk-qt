@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class ListAvailableSolutionStacksResponse;
 
 class QTAWS_EXPORT ListAvailableSolutionStacksResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

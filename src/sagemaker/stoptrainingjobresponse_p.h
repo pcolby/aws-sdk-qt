@@ -28,7 +28,6 @@ namespace SageMaker {
 class StopTrainingJobResponse;
 
 class QTAWS_EXPORT StopTrainingJobResponsePrivate : public SageMakerResponsePrivate {
-    Q_OBJECT
 
 public:
 

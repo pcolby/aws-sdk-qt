@@ -28,7 +28,6 @@ namespace ConfigService {
 class DescribeDeliveryChannelStatusResponse;
 
 class QTAWS_EXPORT DescribeDeliveryChannelStatusResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace MediaStore {
 class PutCorsPolicyResponse;
 
 class QTAWS_EXPORT PutCorsPolicyResponsePrivate : public MediaStoreResponsePrivate {
-    Q_OBJECT
 
 public:
 

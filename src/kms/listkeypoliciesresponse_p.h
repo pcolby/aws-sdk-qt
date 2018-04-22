@@ -28,7 +28,6 @@ namespace KMS {
 class ListKeyPoliciesResponse;
 
 class QTAWS_EXPORT ListKeyPoliciesResponsePrivate : public KmsResponsePrivate {
-    Q_OBJECT
 
 public:
 

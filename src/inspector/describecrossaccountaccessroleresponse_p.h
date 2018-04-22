@@ -28,7 +28,6 @@ namespace Inspector {
 class DescribeCrossAccountAccessRoleResponse;
 
 class QTAWS_EXPORT DescribeCrossAccountAccessRoleResponsePrivate : public InspectorResponsePrivate {
-    Q_OBJECT
 
 public:
 

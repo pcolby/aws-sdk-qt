@@ -28,7 +28,6 @@ namespace Cloud9 {
 class DeleteEnvironmentMembershipResponse;
 
 class QTAWS_EXPORT DeleteEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate {
-    Q_OBJECT
 
 public:
 

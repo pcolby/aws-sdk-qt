@@ -28,7 +28,6 @@ namespace IoT {
 class GetLoggingOptionsResponse;
 
 class QTAWS_EXPORT GetLoggingOptionsResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace SES {
 class UpdateAccountSendingEnabledResponse;
 
 class QTAWS_EXPORT UpdateAccountSendingEnabledResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

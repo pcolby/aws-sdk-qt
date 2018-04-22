@@ -28,7 +28,6 @@ namespace WorkSpaces {
 class RebootWorkspacesResponse;
 
 class QTAWS_EXPORT RebootWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
-    Q_OBJECT
 
 public:
 

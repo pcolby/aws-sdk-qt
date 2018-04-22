@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class DeleteApplicationResponse;
 
 class QTAWS_EXPORT DeleteApplicationResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

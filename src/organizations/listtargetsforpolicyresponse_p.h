@@ -28,7 +28,6 @@ namespace Organizations {
 class ListTargetsForPolicyResponse;
 
 class QTAWS_EXPORT ListTargetsForPolicyResponsePrivate : public OrganizationsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace EC2 {
 class AuthorizeSecurityGroupIngressResponse;
 
 class QTAWS_EXPORT AuthorizeSecurityGroupIngressResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

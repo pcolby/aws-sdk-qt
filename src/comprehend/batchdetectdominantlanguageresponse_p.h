@@ -28,7 +28,6 @@ namespace Comprehend {
 class BatchDetectDominantLanguageResponse;
 
 class QTAWS_EXPORT BatchDetectDominantLanguageResponsePrivate : public ComprehendResponsePrivate {
-    Q_OBJECT
 
 public:
 

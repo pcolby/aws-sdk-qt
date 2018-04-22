@@ -28,7 +28,6 @@ namespace ElasticLoadBalancingv2 {
 class DescribeListenerCertificatesResponse;
 
 class QTAWS_EXPORT DescribeListenerCertificatesResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

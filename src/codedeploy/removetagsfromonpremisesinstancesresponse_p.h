@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class RemoveTagsFromOnPremisesInstancesResponse;
 
 class QTAWS_EXPORT RemoveTagsFromOnPremisesInstancesResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

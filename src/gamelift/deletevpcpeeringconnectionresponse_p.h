@@ -28,7 +28,6 @@ namespace GameLift {
 class DeleteVpcPeeringConnectionResponse;
 
 class QTAWS_EXPORT DeleteVpcPeeringConnectionResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

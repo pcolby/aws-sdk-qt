@@ -28,7 +28,6 @@ namespace RDS {
 class CopyDBClusterSnapshotResponse;
 
 class QTAWS_EXPORT CopyDBClusterSnapshotResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

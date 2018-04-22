@@ -28,7 +28,6 @@ namespace RDS {
 class DeleteDBParameterGroupResponse;
 
 class QTAWS_EXPORT DeleteDBParameterGroupResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class ListSamplesResponse;
 
 class QTAWS_EXPORT ListSamplesResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ConfigService {
 class DeleteAggregationAuthorizationResponse;
 
 class QTAWS_EXPORT DeleteAggregationAuthorizationResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

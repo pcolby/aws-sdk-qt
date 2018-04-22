@@ -28,7 +28,6 @@ namespace ECS {
 class RunTaskResponse;
 
 class QTAWS_EXPORT RunTaskResponsePrivate : public EcsResponsePrivate {
-    Q_OBJECT
 
 public:
 

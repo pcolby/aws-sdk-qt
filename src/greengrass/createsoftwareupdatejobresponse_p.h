@@ -28,7 +28,6 @@ namespace Greengrass {
 class CreateSoftwareUpdateJobResponse;
 
 class QTAWS_EXPORT CreateSoftwareUpdateJobResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

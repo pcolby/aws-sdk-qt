@@ -28,7 +28,6 @@ namespace OpsWorks {
 class RegisterEcsClusterResponse;
 
 class QTAWS_EXPORT RegisterEcsClusterResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace AppSync {
 class DeleteDataSourceResponse;
 
 class QTAWS_EXPORT DeleteDataSourceResponsePrivate : public AppSyncResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace S3 {
 class GetBucketInventoryConfigurationResponse;
 
 class QTAWS_EXPORT GetBucketInventoryConfigurationResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

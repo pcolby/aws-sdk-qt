@@ -28,7 +28,6 @@ namespace EMR {
 class AddTagsResponse;
 
 class QTAWS_EXPORT AddTagsResponsePrivate : public EmrResponsePrivate {
-    Q_OBJECT
 
 public:
 

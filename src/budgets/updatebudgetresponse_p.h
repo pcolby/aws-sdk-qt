@@ -28,7 +28,6 @@ namespace Budgets {
 class UpdateBudgetResponse;
 
 class QTAWS_EXPORT UpdateBudgetResponsePrivate : public BudgetsResponsePrivate {
-    Q_OBJECT
 
 public:
 

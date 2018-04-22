@@ -28,7 +28,6 @@ namespace SageMaker {
 class AddTagsResponse;
 
 class QTAWS_EXPORT AddTagsResponsePrivate : public SageMakerResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace S3 {
 class CopyObjectResponse;
 
 class QTAWS_EXPORT CopyObjectResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

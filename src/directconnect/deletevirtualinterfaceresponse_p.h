@@ -28,7 +28,6 @@ namespace DirectConnect {
 class DeleteVirtualInterfaceResponse;
 
 class QTAWS_EXPORT DeleteVirtualInterfaceResponsePrivate : public DirectConnectResponsePrivate {
-    Q_OBJECT
 
 public:
 

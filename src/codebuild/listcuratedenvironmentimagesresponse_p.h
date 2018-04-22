@@ -28,7 +28,6 @@ namespace CodeBuild {
 class ListCuratedEnvironmentImagesResponse;
 
 class QTAWS_EXPORT ListCuratedEnvironmentImagesResponsePrivate : public CodeBuildResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudWatchLogs {
 class DeleteMetricFilterResponse;
 
 class QTAWS_EXPORT DeleteMetricFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
-    Q_OBJECT
 
 public:
 

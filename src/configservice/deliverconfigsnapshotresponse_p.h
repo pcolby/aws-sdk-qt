@@ -28,7 +28,6 @@ namespace ConfigService {
 class DeliverConfigSnapshotResponse;
 
 class QTAWS_EXPORT DeliverConfigSnapshotResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

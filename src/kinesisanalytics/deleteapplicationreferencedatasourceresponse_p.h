@@ -28,7 +28,6 @@ namespace KinesisAnalytics {
 class DeleteApplicationReferenceDataSourceResponse;
 
 class QTAWS_EXPORT DeleteApplicationReferenceDataSourceResponsePrivate : public KinesisAnalyticsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Route53 {
 class DeleteHostedZoneResponse;
 
 class QTAWS_EXPORT DeleteHostedZoneResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

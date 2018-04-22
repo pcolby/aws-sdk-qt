@@ -28,7 +28,6 @@ namespace CloudWatchEvents {
 class ListTargetsByRuleResponse;
 
 class QTAWS_EXPORT ListTargetsByRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
-    Q_OBJECT
 
 public:
 

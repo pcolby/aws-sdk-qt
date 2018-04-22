@@ -28,7 +28,6 @@ namespace Shield {
 class GetSubscriptionStateResponse;
 
 class QTAWS_EXPORT GetSubscriptionStateResponsePrivate : public ShieldResponsePrivate {
-    Q_OBJECT
 
 public:
 

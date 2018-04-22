@@ -28,7 +28,6 @@ namespace IoT {
 class AttachPrincipalPolicyResponse;
 
 class QTAWS_EXPORT AttachPrincipalPolicyResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

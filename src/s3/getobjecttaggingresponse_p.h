@@ -28,7 +28,6 @@ namespace S3 {
 class GetObjectTaggingResponse;
 
 class QTAWS_EXPORT GetObjectTaggingResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

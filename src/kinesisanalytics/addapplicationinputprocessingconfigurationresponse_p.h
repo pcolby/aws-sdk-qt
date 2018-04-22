@@ -28,7 +28,6 @@ namespace KinesisAnalytics {
 class AddApplicationInputProcessingConfigurationResponse;
 
 class QTAWS_EXPORT AddApplicationInputProcessingConfigurationResponsePrivate : public KinesisAnalyticsResponsePrivate {
-    Q_OBJECT
 
 public:
 

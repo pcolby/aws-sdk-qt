@@ -28,7 +28,6 @@ namespace WAF {
 class DeleteByteMatchSetResponse;
 
 class QTAWS_EXPORT DeleteByteMatchSetResponsePrivate : public WafResponsePrivate {
-    Q_OBJECT
 
 public:
 

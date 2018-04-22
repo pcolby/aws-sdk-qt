@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class DeleteInstanceProfileResponse;
 
 class QTAWS_EXPORT DeleteInstanceProfileResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Inspector {
 class ListTagsForResourceResponse;
 
 class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public InspectorResponsePrivate {
-    Q_OBJECT
 
 public:
 

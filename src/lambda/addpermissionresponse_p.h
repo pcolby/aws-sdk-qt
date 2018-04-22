@@ -28,7 +28,6 @@ namespace Lambda {
 class AddPermissionResponse;
 
 class QTAWS_EXPORT AddPermissionResponsePrivate : public LambdaResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ElasticTranscoder {
 class CancelJobResponse;
 
 class QTAWS_EXPORT CancelJobResponsePrivate : public ElasticTranscoderResponsePrivate {
-    Q_OBJECT
 
 public:
 

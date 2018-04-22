@@ -28,7 +28,6 @@ namespace IoT {
 class CancelJobResponse;
 
 class QTAWS_EXPORT CancelJobResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Rekognition {
 class GetLabelDetectionResponse;
 
 class QTAWS_EXPORT GetLabelDetectionResponsePrivate : public RekognitionResponsePrivate {
-    Q_OBJECT
 
 public:
 

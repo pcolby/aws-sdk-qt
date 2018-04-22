@@ -28,7 +28,6 @@ namespace StorageGateway {
 class ShutdownGatewayResponse;
 
 class QTAWS_EXPORT ShutdownGatewayResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

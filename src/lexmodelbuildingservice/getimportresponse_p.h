@@ -28,7 +28,6 @@ namespace LexModelBuildingService {
 class GetImportResponse;
 
 class QTAWS_EXPORT GetImportResponsePrivate : public LexModelBuildingServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

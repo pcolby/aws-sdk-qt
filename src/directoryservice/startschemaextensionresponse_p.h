@@ -28,7 +28,6 @@ namespace DirectoryService {
 class StartSchemaExtensionResponse;
 
 class QTAWS_EXPORT StartSchemaExtensionResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

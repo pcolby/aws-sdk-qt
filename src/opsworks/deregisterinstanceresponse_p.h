@@ -28,7 +28,6 @@ namespace OpsWorks {
 class DeregisterInstanceResponse;
 
 class QTAWS_EXPORT DeregisterInstanceResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

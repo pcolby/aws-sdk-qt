@@ -28,7 +28,6 @@ namespace APIGateway {
 class DeleteMethodResponseResponse;
 
 class QTAWS_EXPORT DeleteMethodResponseResponsePrivate : public APIGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

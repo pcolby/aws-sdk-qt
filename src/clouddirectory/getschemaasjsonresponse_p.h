@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class GetSchemaAsJsonResponse;
 
 class QTAWS_EXPORT GetSchemaAsJsonResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

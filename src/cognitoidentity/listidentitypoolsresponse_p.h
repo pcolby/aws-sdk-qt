@@ -28,7 +28,6 @@ namespace CognitoIdentity {
 class ListIdentityPoolsResponse;
 
 class QTAWS_EXPORT ListIdentityPoolsResponsePrivate : public CognitoIdentityResponsePrivate {
-    Q_OBJECT
 
 public:
 

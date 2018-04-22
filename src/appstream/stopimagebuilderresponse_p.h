@@ -28,7 +28,6 @@ namespace AppStream {
 class StopImageBuilderResponse;
 
 class QTAWS_EXPORT StopImageBuilderResponsePrivate : public AppStreamResponsePrivate {
-    Q_OBJECT
 
 public:
 

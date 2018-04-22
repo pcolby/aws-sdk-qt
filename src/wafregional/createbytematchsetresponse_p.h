@@ -28,7 +28,6 @@ namespace WAFRegional {
 class CreateByteMatchSetResponse;
 
 class QTAWS_EXPORT CreateByteMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

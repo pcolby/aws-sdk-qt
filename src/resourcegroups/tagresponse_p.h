@@ -28,7 +28,6 @@ namespace ResourceGroups {
 class TagResponse;
 
 class QTAWS_EXPORT TagResponsePrivate : public ResourceGroupsResponsePrivate {
-    Q_OBJECT
 
 public:
 

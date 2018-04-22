@@ -28,7 +28,6 @@ namespace ConfigService {
 class GetComplianceSummaryByResourceTypeResponse;
 
 class QTAWS_EXPORT GetComplianceSummaryByResourceTypeResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

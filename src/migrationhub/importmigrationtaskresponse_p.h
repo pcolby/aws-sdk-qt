@@ -28,7 +28,6 @@ namespace MigrationHub {
 class ImportMigrationTaskResponse;
 
 class QTAWS_EXPORT ImportMigrationTaskResponsePrivate : public MigrationHubResponsePrivate {
-    Q_OBJECT
 
 public:
 

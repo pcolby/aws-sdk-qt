@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class InstallToRemoteAccessSessionResponse;
 
 class QTAWS_EXPORT InstallToRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

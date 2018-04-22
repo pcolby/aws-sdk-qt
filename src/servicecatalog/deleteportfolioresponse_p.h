@@ -28,7 +28,6 @@ namespace ServiceCatalog {
 class DeletePortfolioResponse;
 
 class QTAWS_EXPORT DeletePortfolioResponsePrivate : public ServiceCatalogResponsePrivate {
-    Q_OBJECT
 
 public:
 

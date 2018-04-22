@@ -28,7 +28,6 @@ namespace Snowball {
 class GetJobUnlockCodeResponse;
 
 class QTAWS_EXPORT GetJobUnlockCodeResponsePrivate : public SnowballResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ECS {
 class DeleteClusterResponse;
 
 class QTAWS_EXPORT DeleteClusterResponsePrivate : public EcsResponsePrivate {
-    Q_OBJECT
 
 public:
 

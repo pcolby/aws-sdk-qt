@@ -28,7 +28,6 @@ namespace RDS {
 class ResetDBClusterParameterGroupResponse;
 
 class QTAWS_EXPORT ResetDBClusterParameterGroupResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

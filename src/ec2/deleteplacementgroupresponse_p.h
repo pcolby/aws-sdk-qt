@@ -28,7 +28,6 @@ namespace EC2 {
 class DeletePlacementGroupResponse;
 
 class QTAWS_EXPORT DeletePlacementGroupResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

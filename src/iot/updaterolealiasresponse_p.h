@@ -28,7 +28,6 @@ namespace IoT {
 class UpdateRoleAliasResponse;
 
 class QTAWS_EXPORT UpdateRoleAliasResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

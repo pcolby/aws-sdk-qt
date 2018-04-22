@@ -28,7 +28,6 @@ namespace CloudFormation {
 class ListChangeSetsResponse;
 
 class QTAWS_EXPORT ListChangeSetsResponsePrivate : public CloudFormationResponsePrivate {
-    Q_OBJECT
 
 public:
 

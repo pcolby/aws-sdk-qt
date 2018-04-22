@@ -28,7 +28,6 @@ namespace OpsWorks {
 class ListTagsResponse;
 
 class QTAWS_EXPORT ListTagsResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

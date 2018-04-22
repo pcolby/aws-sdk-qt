@@ -28,7 +28,6 @@ namespace DatabaseMigrationService {
 class DescribeEndpointTypesResponse;
 
 class QTAWS_EXPORT DescribeEndpointTypesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

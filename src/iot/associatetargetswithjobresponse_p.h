@@ -28,7 +28,6 @@ namespace IoT {
 class AssociateTargetsWithJobResponse;
 
 class QTAWS_EXPORT AssociateTargetsWithJobResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

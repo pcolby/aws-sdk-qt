@@ -28,7 +28,6 @@ namespace WorkDocs {
 class DeleteNotificationSubscriptionResponse;
 
 class QTAWS_EXPORT DeleteNotificationSubscriptionResponsePrivate : public WorkDocsResponsePrivate {
-    Q_OBJECT
 
 public:
 

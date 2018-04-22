@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class SetRiskConfigurationResponse;
 
 class QTAWS_EXPORT SetRiskConfigurationResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

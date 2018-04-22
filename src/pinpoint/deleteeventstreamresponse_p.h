@@ -28,7 +28,6 @@ namespace Pinpoint {
 class DeleteEventStreamResponse;
 
 class QTAWS_EXPORT DeleteEventStreamResponsePrivate : public PinpointResponsePrivate {
-    Q_OBJECT
 
 public:
 

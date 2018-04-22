@@ -28,7 +28,6 @@ namespace CodeBuild {
 class CreateWebhookResponse;
 
 class QTAWS_EXPORT CreateWebhookResponsePrivate : public CodeBuildResponsePrivate {
-    Q_OBJECT
 
 public:
 

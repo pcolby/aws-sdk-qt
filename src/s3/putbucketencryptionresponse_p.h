@@ -28,7 +28,6 @@ namespace S3 {
 class PutBucketEncryptionResponse;
 
 class QTAWS_EXPORT PutBucketEncryptionResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

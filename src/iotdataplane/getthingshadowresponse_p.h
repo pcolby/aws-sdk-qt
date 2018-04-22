@@ -28,7 +28,6 @@ namespace IoTDataPlane {
 class GetThingShadowResponse;
 
 class QTAWS_EXPORT GetThingShadowResponsePrivate : public IoTDataPlaneResponsePrivate {
-    Q_OBJECT
 
 public:
 

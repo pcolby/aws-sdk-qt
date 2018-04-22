@@ -28,7 +28,6 @@ namespace EC2 {
 class CreateVpnConnectionResponse;
 
 class QTAWS_EXPORT CreateVpnConnectionResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class ScheduleRunResponse;
 
 class QTAWS_EXPORT ScheduleRunResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

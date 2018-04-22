@@ -28,7 +28,6 @@ namespace Glue {
 class GetMappingResponse;
 
 class QTAWS_EXPORT GetMappingResponsePrivate : public GlueResponsePrivate {
-    Q_OBJECT
 
 public:
 

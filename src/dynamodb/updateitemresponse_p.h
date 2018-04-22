@@ -28,7 +28,6 @@ namespace DynamoDB {
 class UpdateItemResponse;
 
 class QTAWS_EXPORT UpdateItemResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

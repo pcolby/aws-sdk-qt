@@ -28,7 +28,6 @@ namespace ServiceCatalog {
 class ListLaunchPathsResponse;
 
 class QTAWS_EXPORT ListLaunchPathsResponsePrivate : public ServiceCatalogResponsePrivate {
-    Q_OBJECT
 
 public:
 

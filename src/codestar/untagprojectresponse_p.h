@@ -28,7 +28,6 @@ namespace CodeStar {
 class UntagProjectResponse;
 
 class QTAWS_EXPORT UntagProjectResponsePrivate : public CodeStarResponsePrivate {
-    Q_OBJECT
 
 public:
 

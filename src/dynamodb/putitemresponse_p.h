@@ -28,7 +28,6 @@ namespace DynamoDB {
 class PutItemResponse;
 
 class QTAWS_EXPORT PutItemResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

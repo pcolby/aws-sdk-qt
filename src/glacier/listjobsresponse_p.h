@@ -28,7 +28,6 @@ namespace Glacier {
 class ListJobsResponse;
 
 class QTAWS_EXPORT ListJobsResponsePrivate : public GlacierResponsePrivate {
-    Q_OBJECT
 
 public:
 

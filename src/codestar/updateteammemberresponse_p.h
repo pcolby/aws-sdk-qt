@@ -28,7 +28,6 @@ namespace CodeStar {
 class UpdateTeamMemberResponse;
 
 class QTAWS_EXPORT UpdateTeamMemberResponsePrivate : public CodeStarResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace IoT {
 class CreateKeysAndCertificateResponse;
 
 class QTAWS_EXPORT CreateKeysAndCertificateResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

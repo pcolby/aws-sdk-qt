@@ -28,7 +28,6 @@ namespace WorkMail {
 class CreateAliasResponse;
 
 class QTAWS_EXPORT CreateAliasResponsePrivate : public WorkMailResponsePrivate {
-    Q_OBJECT
 
 public:
 

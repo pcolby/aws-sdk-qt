@@ -28,7 +28,6 @@ namespace StorageGateway {
 class UpdateNFSFileShareResponse;
 
 class QTAWS_EXPORT UpdateNFSFileShareResponsePrivate : public StorageGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

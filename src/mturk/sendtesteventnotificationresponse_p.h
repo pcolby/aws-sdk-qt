@@ -28,7 +28,6 @@ namespace MTurk {
 class SendTestEventNotificationResponse;
 
 class QTAWS_EXPORT SendTestEventNotificationResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

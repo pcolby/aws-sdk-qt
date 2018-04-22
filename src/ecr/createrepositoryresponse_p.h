@@ -28,7 +28,6 @@ namespace ECR {
 class CreateRepositoryResponse;
 
 class QTAWS_EXPORT CreateRepositoryResponsePrivate : public EcrResponsePrivate {
-    Q_OBJECT
 
 public:
 

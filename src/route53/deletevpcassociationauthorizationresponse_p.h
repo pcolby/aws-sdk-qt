@@ -28,7 +28,6 @@ namespace Route53 {
 class DeleteVPCAssociationAuthorizationResponse;
 
 class QTAWS_EXPORT DeleteVPCAssociationAuthorizationResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

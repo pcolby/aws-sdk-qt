@@ -28,7 +28,6 @@ namespace Route53 {
 class GetReusableDelegationSetResponse;
 
 class QTAWS_EXPORT GetReusableDelegationSetResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

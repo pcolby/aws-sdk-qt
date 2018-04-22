@@ -28,7 +28,6 @@ namespace CloudTrail {
 class RemoveTagsResponse;
 
 class QTAWS_EXPORT RemoveTagsResponsePrivate : public CloudTrailResponsePrivate {
-    Q_OBJECT
 
 public:
 

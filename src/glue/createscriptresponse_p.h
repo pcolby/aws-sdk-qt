@@ -28,7 +28,6 @@ namespace Glue {
 class CreateScriptResponse;
 
 class QTAWS_EXPORT CreateScriptResponsePrivate : public GlueResponsePrivate {
-    Q_OBJECT
 
 public:
 

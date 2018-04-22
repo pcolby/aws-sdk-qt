@@ -28,7 +28,6 @@ namespace Greengrass {
 class CreateSubscriptionDefinitionResponse;
 
 class QTAWS_EXPORT CreateSubscriptionDefinitionResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

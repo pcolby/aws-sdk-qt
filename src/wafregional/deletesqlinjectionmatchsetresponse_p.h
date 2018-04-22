@@ -28,7 +28,6 @@ namespace WAFRegional {
 class DeleteSqlInjectionMatchSetResponse;
 
 class QTAWS_EXPORT DeleteSqlInjectionMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

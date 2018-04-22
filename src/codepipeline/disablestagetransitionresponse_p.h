@@ -28,7 +28,6 @@ namespace CodePipeline {
 class DisableStageTransitionResponse;
 
 class QTAWS_EXPORT DisableStageTransitionResponsePrivate : public CodePipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

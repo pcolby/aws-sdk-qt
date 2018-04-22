@@ -28,7 +28,6 @@ namespace Route53 {
 class GetReusableDelegationSetLimitResponse;
 
 class QTAWS_EXPORT GetReusableDelegationSetLimitResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

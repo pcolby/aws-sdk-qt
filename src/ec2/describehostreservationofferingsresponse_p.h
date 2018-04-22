@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeHostReservationOfferingsResponse;
 
 class QTAWS_EXPORT DescribeHostReservationOfferingsResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

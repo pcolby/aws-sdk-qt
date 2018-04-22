@@ -28,7 +28,6 @@ namespace Route53Domains {
 class ResendContactReachabilityEmailResponse;
 
 class QTAWS_EXPORT ResendContactReachabilityEmailResponsePrivate : public Route53DomainsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace GuardDuty {
 class GetMembersResponse;
 
 class QTAWS_EXPORT GetMembersResponsePrivate : public GuardDutyResponsePrivate {
-    Q_OBJECT
 
 public:
 

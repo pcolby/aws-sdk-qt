@@ -28,7 +28,6 @@ namespace CloudFront {
 class CreateDistributionWithTagsResponse;
 
 class QTAWS_EXPORT CreateDistributionWithTagsResponsePrivate : public CloudFrontResponsePrivate {
-    Q_OBJECT
 
 public:
 

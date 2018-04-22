@@ -28,7 +28,6 @@ namespace EC2 {
 class ModifySubnetAttributeResponse;
 
 class QTAWS_EXPORT ModifySubnetAttributeResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

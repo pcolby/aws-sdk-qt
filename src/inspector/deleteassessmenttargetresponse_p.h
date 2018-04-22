@@ -28,7 +28,6 @@ namespace Inspector {
 class DeleteAssessmentTargetResponse;
 
 class QTAWS_EXPORT DeleteAssessmentTargetResponsePrivate : public InspectorResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DynamoDB {
 class TagResourceResponse;
 
 class QTAWS_EXPORT TagResourceResponsePrivate : public DynamoDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

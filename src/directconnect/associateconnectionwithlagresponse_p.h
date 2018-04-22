@@ -28,7 +28,6 @@ namespace DirectConnect {
 class AssociateConnectionWithLagResponse;
 
 class QTAWS_EXPORT AssociateConnectionWithLagResponsePrivate : public DirectConnectResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Lightsail {
 class GetBundlesResponse;
 
 class QTAWS_EXPORT GetBundlesResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

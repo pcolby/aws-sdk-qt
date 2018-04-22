@@ -28,7 +28,6 @@ namespace OpsWorks {
 class RebootInstanceResponse;
 
 class QTAWS_EXPORT RebootInstanceResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

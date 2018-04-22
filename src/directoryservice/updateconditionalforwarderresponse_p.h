@@ -28,7 +28,6 @@ namespace DirectoryService {
 class UpdateConditionalForwarderResponse;
 
 class QTAWS_EXPORT UpdateConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

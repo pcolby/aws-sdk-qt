@@ -28,7 +28,6 @@ namespace CloudHSM {
 class RemoveTagsFromResourceResponse;
 
 class QTAWS_EXPORT RemoveTagsFromResourceResponsePrivate : public CloudHSMResponsePrivate {
-    Q_OBJECT
 
 public:
 

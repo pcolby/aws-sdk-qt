@@ -28,7 +28,6 @@ namespace WorkDocs {
 class AddResourcePermissionsResponse;
 
 class QTAWS_EXPORT AddResourcePermissionsResponsePrivate : public WorkDocsResponsePrivate {
-    Q_OBJECT
 
 public:
 

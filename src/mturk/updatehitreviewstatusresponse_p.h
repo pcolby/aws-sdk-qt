@@ -28,7 +28,6 @@ namespace MTurk {
 class UpdateHITReviewStatusResponse;
 
 class QTAWS_EXPORT UpdateHITReviewStatusResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

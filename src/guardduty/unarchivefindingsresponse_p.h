@@ -28,7 +28,6 @@ namespace GuardDuty {
 class UnarchiveFindingsResponse;
 
 class QTAWS_EXPORT UnarchiveFindingsResponsePrivate : public GuardDutyResponsePrivate {
-    Q_OBJECT
 
 public:
 

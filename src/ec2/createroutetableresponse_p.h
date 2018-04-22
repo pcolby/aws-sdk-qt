@@ -28,7 +28,6 @@ namespace EC2 {
 class CreateRouteTableResponse;
 
 class QTAWS_EXPORT CreateRouteTableResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ElasticLoadBalancingv2 {
 class RegisterTargetsResponse;
 
 class QTAWS_EXPORT RegisterTargetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

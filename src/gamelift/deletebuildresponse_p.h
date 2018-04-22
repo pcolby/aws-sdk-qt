@@ -28,7 +28,6 @@ namespace GameLift {
 class DeleteBuildResponse;
 
 class QTAWS_EXPORT DeleteBuildResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

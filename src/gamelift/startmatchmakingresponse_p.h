@@ -28,7 +28,6 @@ namespace GameLift {
 class StartMatchmakingResponse;
 
 class QTAWS_EXPORT StartMatchmakingResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

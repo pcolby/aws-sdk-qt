@@ -28,7 +28,6 @@ namespace CloudFront {
 class ListFieldLevelEncryptionConfigsResponse;
 
 class QTAWS_EXPORT ListFieldLevelEncryptionConfigsResponsePrivate : public CloudFrontResponsePrivate {
-    Q_OBJECT
 
 public:
 

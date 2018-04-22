@@ -28,7 +28,6 @@ namespace Support {
 class DescribeTrustedAdvisorChecksResponse;
 
 class QTAWS_EXPORT DescribeTrustedAdvisorChecksResponsePrivate : public SupportResponsePrivate {
-    Q_OBJECT
 
 public:
 

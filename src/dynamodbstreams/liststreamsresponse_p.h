@@ -28,7 +28,6 @@ namespace DynamoDBStreams {
 class ListStreamsResponse;
 
 class QTAWS_EXPORT ListStreamsResponsePrivate : public DynamoDBStreamsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudFormation {
 class ListExportsResponse;
 
 class QTAWS_EXPORT ListExportsResponsePrivate : public CloudFormationResponsePrivate {
-    Q_OBJECT
 
 public:
 

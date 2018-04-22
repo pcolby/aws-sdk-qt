@@ -28,7 +28,6 @@ namespace SecretsManager {
 class DeleteSecretResponse;
 
 class QTAWS_EXPORT DeleteSecretResponsePrivate : public SecretsManagerResponsePrivate {
-    Q_OBJECT
 
 public:
 

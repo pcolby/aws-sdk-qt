@@ -28,7 +28,6 @@ namespace CloudFront {
 class UpdatePublicKeyResponse;
 
 class QTAWS_EXPORT UpdatePublicKeyResponsePrivate : public CloudFrontResponsePrivate {
-    Q_OBJECT
 
 public:
 

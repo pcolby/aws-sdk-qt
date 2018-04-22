@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class CreateApplicationResponse;
 
 class QTAWS_EXPORT CreateApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

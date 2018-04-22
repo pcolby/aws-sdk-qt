@@ -28,7 +28,6 @@ namespace CodePipeline {
 class PutApprovalResultResponse;
 
 class QTAWS_EXPORT PutApprovalResultResponsePrivate : public CodePipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Kinesis {
 class AddTagsToStreamResponse;
 
 class QTAWS_EXPORT AddTagsToStreamResponsePrivate : public KinesisResponsePrivate {
-    Q_OBJECT
 
 public:
 

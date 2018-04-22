@@ -28,7 +28,6 @@ namespace OpsWorksCM {
 class RestoreServerResponse;
 
 class QTAWS_EXPORT RestoreServerResponsePrivate : public OpsWorksCMResponsePrivate {
-    Q_OBJECT
 
 public:
 

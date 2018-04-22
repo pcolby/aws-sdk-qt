@@ -28,7 +28,6 @@ namespace OpsWorks {
 class RegisterElasticIpResponse;
 
 class QTAWS_EXPORT RegisterElasticIpResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

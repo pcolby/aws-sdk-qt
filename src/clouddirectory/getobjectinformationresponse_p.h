@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class GetObjectInformationResponse;
 
 class QTAWS_EXPORT GetObjectInformationResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

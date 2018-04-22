@@ -28,7 +28,6 @@ namespace CloudWatch {
 class DescribeAlarmHistoryResponse;
 
 class QTAWS_EXPORT DescribeAlarmHistoryResponsePrivate : public CloudWatchResponsePrivate {
-    Q_OBJECT
 
 public:
 

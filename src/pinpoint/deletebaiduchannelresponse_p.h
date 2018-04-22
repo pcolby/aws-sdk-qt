@@ -28,7 +28,6 @@ namespace Pinpoint {
 class DeleteBaiduChannelResponse;
 
 class QTAWS_EXPORT DeleteBaiduChannelResponsePrivate : public PinpointResponsePrivate {
-    Q_OBJECT
 
 public:
 

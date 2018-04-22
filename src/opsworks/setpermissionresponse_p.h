@@ -28,7 +28,6 @@ namespace OpsWorks {
 class SetPermissionResponse;
 
 class QTAWS_EXPORT SetPermissionResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class GetUICustomizationResponse;
 
 class QTAWS_EXPORT GetUICustomizationResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

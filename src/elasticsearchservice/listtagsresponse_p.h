@@ -28,7 +28,6 @@ namespace ElasticsearchService {
 class ListTagsResponse;
 
 class QTAWS_EXPORT ListTagsResponsePrivate : public ElasticsearchServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

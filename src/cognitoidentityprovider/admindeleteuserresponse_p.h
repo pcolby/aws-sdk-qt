@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class AdminDeleteUserResponse;
 
 class QTAWS_EXPORT AdminDeleteUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

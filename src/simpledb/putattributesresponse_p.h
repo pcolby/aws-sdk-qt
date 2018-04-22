@@ -28,7 +28,6 @@ namespace SimpleDB {
 class PutAttributesResponse;
 
 class QTAWS_EXPORT PutAttributesResponsePrivate : public SimpleDBResponsePrivate {
-    Q_OBJECT
 
 public:
 

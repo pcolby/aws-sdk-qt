@@ -28,7 +28,6 @@ namespace MediaConvert {
 class CancelJobResponse;
 
 class QTAWS_EXPORT CancelJobResponsePrivate : public MediaConvertResponsePrivate {
-    Q_OBJECT
 
 public:
 

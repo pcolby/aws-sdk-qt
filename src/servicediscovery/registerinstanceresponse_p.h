@@ -28,7 +28,6 @@ namespace ServiceDiscovery {
 class RegisterInstanceResponse;
 
 class QTAWS_EXPORT RegisterInstanceResponsePrivate : public ServiceDiscoveryResponsePrivate {
-    Q_OBJECT
 
 public:
 

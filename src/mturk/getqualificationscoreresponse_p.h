@@ -28,7 +28,6 @@ namespace MTurk {
 class GetQualificationScoreResponse;
 
 class QTAWS_EXPORT GetQualificationScoreResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

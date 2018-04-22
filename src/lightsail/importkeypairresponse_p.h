@@ -28,7 +28,6 @@ namespace Lightsail {
 class ImportKeyPairResponse;
 
 class QTAWS_EXPORT ImportKeyPairResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

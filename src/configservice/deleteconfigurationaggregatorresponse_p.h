@@ -28,7 +28,6 @@ namespace ConfigService {
 class DeleteConfigurationAggregatorResponse;
 
 class QTAWS_EXPORT DeleteConfigurationAggregatorResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

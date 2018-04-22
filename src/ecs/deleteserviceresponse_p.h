@@ -28,7 +28,6 @@ namespace ECS {
 class DeleteServiceResponse;
 
 class QTAWS_EXPORT DeleteServiceResponsePrivate : public EcsResponsePrivate {
-    Q_OBJECT
 
 public:
 

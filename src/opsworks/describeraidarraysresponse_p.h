@@ -28,7 +28,6 @@ namespace OpsWorks {
 class DescribeRaidArraysResponse;
 
 class QTAWS_EXPORT DescribeRaidArraysResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Redshift {
 class DeleteClusterResponse;
 
 class QTAWS_EXPORT DeleteClusterResponsePrivate : public RedshiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

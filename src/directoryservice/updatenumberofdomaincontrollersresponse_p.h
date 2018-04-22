@@ -28,7 +28,6 @@ namespace DirectoryService {
 class UpdateNumberOfDomainControllersResponse;
 
 class QTAWS_EXPORT UpdateNumberOfDomainControllersResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

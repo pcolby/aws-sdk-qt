@@ -28,7 +28,6 @@ namespace ElastiCache {
 class DeleteSnapshotResponse;
 
 class QTAWS_EXPORT DeleteSnapshotResponsePrivate : public ElastiCacheResponsePrivate {
-    Q_OBJECT
 
 public:
 

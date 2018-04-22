@@ -28,7 +28,6 @@ namespace RDS {
 class ModifyDBSubnetGroupResponse;
 
 class QTAWS_EXPORT ModifyDBSubnetGroupResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

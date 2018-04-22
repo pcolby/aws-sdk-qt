@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class AddCustomAttributesResponse;
 
 class QTAWS_EXPORT AddCustomAttributesResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

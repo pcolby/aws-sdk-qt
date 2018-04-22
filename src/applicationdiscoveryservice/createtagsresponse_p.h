@@ -28,7 +28,6 @@ namespace ApplicationDiscoveryService {
 class CreateTagsResponse;
 
 class QTAWS_EXPORT CreateTagsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

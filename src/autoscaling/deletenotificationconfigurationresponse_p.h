@@ -28,7 +28,6 @@ namespace AutoScaling {
 class DeleteNotificationConfigurationResponse;
 
 class QTAWS_EXPORT DeleteNotificationConfigurationResponsePrivate : public AutoScalingResponsePrivate {
-    Q_OBJECT
 
 public:
 

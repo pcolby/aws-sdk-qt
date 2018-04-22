@@ -28,7 +28,6 @@ namespace CloudHSM {
 class GetConfigResponse;
 
 class QTAWS_EXPORT GetConfigResponsePrivate : public CloudHSMResponsePrivate {
-    Q_OBJECT
 
 public:
 

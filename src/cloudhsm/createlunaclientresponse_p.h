@@ -28,7 +28,6 @@ namespace CloudHSM {
 class CreateLunaClientResponse;
 
 class QTAWS_EXPORT CreateLunaClientResponsePrivate : public CloudHSMResponsePrivate {
-    Q_OBJECT
 
 public:
 

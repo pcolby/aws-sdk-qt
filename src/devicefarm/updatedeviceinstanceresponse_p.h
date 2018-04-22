@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class UpdateDeviceInstanceResponse;
 
 class QTAWS_EXPORT UpdateDeviceInstanceResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

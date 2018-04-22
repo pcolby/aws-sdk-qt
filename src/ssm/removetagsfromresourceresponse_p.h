@@ -28,7 +28,6 @@ namespace SSM {
 class RemoveTagsFromResourceResponse;
 
 class QTAWS_EXPORT RemoveTagsFromResourceResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

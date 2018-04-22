@@ -28,7 +28,6 @@ namespace Snowball {
 class ListClusterJobsResponse;
 
 class QTAWS_EXPORT ListClusterJobsResponsePrivate : public SnowballResponsePrivate {
-    Q_OBJECT
 
 public:
 

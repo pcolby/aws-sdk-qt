@@ -28,7 +28,6 @@ namespace Route53 {
 class UpdateHostedZoneCommentResponse;
 
 class QTAWS_EXPORT UpdateHostedZoneCommentResponsePrivate : public Route53ResponsePrivate {
-    Q_OBJECT
 
 public:
 

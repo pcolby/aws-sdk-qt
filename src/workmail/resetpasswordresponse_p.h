@@ -28,7 +28,6 @@ namespace WorkMail {
 class ResetPasswordResponse;
 
 class QTAWS_EXPORT ResetPasswordResponsePrivate : public WorkMailResponsePrivate {
-    Q_OBJECT
 
 public:
 

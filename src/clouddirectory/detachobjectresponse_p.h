@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class DetachObjectResponse;
 
 class QTAWS_EXPORT DetachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

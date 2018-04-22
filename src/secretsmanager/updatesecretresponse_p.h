@@ -28,7 +28,6 @@ namespace SecretsManager {
 class UpdateSecretResponse;
 
 class QTAWS_EXPORT UpdateSecretResponsePrivate : public SecretsManagerResponsePrivate {
-    Q_OBJECT
 
 public:
 

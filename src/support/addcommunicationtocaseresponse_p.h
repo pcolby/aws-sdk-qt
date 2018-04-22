@@ -28,7 +28,6 @@ namespace Support {
 class AddCommunicationToCaseResponse;
 
 class QTAWS_EXPORT AddCommunicationToCaseResponsePrivate : public SupportResponsePrivate {
-    Q_OBJECT
 
 public:
 

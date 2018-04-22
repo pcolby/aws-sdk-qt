@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class BatchWriteResponse;
 
 class QTAWS_EXPORT BatchWriteResponsePrivate : public CloudDirectoryResponsePrivate {
-    Q_OBJECT
 
 public:
 

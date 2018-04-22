@@ -28,7 +28,6 @@ namespace AppSync {
 class GetResolverResponse;
 
 class QTAWS_EXPORT GetResolverResponsePrivate : public AppSyncResponsePrivate {
-    Q_OBJECT
 
 public:
 

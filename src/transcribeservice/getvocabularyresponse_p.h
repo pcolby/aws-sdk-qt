@@ -28,7 +28,6 @@ namespace TranscribeService {
 class GetVocabularyResponse;
 
 class QTAWS_EXPORT GetVocabularyResponsePrivate : public TranscribeServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace AlexaForBusiness {
 class StartDeviceSyncResponse;
 
 class QTAWS_EXPORT StartDeviceSyncResponsePrivate : public AlexaForBusinessResponsePrivate {
-    Q_OBJECT
 
 public:
 

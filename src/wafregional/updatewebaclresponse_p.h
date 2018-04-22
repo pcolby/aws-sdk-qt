@@ -28,7 +28,6 @@ namespace WAFRegional {
 class UpdateWebACLResponse;
 
 class QTAWS_EXPORT UpdateWebACLResponsePrivate : public WAFRegionalResponsePrivate {
-    Q_OBJECT
 
 public:
 

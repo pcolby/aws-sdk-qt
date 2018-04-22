@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class DeleteConfigurationTemplateResponse;
 
 class QTAWS_EXPORT DeleteConfigurationTemplateResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

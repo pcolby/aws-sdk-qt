@@ -28,7 +28,6 @@ namespace LexModelBuildingService {
 class GetBotChannelAssociationResponse;
 
 class QTAWS_EXPORT GetBotChannelAssociationResponsePrivate : public LexModelBuildingServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DatabaseMigrationService {
 class DeleteReplicationTaskResponse;
 
 class QTAWS_EXPORT DeleteReplicationTaskResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

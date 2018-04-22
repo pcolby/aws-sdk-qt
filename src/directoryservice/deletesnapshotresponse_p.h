@@ -28,7 +28,6 @@ namespace DirectoryService {
 class DeleteSnapshotResponse;
 
 class QTAWS_EXPORT DeleteSnapshotResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

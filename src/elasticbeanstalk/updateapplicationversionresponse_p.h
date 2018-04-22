@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class UpdateApplicationVersionResponse;
 
 class QTAWS_EXPORT UpdateApplicationVersionResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

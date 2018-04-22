@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class RegisterOnPremisesInstanceResponse;
 
 class QTAWS_EXPORT RegisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

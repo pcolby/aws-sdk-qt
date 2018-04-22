@@ -28,7 +28,6 @@ namespace LexModelBuildingService {
 class CreateIntentVersionResponse;
 
 class QTAWS_EXPORT CreateIntentVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

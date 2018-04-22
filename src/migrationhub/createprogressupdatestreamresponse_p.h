@@ -28,7 +28,6 @@ namespace MigrationHub {
 class CreateProgressUpdateStreamResponse;
 
 class QTAWS_EXPORT CreateProgressUpdateStreamResponsePrivate : public MigrationHubResponsePrivate {
-    Q_OBJECT
 
 public:
 

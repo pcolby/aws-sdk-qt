@@ -28,7 +28,6 @@ namespace ElastiCache {
 class PurchaseReservedCacheNodesOfferingResponse;
 
 class QTAWS_EXPORT PurchaseReservedCacheNodesOfferingResponsePrivate : public ElastiCacheResponsePrivate {
-    Q_OBJECT
 
 public:
 

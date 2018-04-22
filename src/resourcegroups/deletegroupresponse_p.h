@@ -28,7 +28,6 @@ namespace ResourceGroups {
 class DeleteGroupResponse;
 
 class QTAWS_EXPORT DeleteGroupResponsePrivate : public ResourceGroupsResponsePrivate {
-    Q_OBJECT
 
 public:
 

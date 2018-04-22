@@ -28,7 +28,6 @@ namespace ResourceGroups {
 class SearchResourcesResponse;
 
 class QTAWS_EXPORT SearchResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
-    Q_OBJECT
 
 public:
 

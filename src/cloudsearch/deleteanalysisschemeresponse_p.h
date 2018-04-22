@@ -28,7 +28,6 @@ namespace CloudSearch {
 class DeleteAnalysisSchemeResponse;
 
 class QTAWS_EXPORT DeleteAnalysisSchemeResponsePrivate : public CloudSearchResponsePrivate {
-    Q_OBJECT
 
 public:
 

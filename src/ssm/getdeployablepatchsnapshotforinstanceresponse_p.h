@@ -28,7 +28,6 @@ namespace SSM {
 class GetDeployablePatchSnapshotForInstanceResponse;
 
 class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

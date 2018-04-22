@@ -28,7 +28,6 @@ namespace DatabaseMigrationService {
 class DescribeRefreshSchemasStatusResponse;
 
 class QTAWS_EXPORT DescribeRefreshSchemasStatusResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

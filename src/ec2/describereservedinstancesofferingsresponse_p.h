@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeReservedInstancesOfferingsResponse;
 
 class QTAWS_EXPORT DescribeReservedInstancesOfferingsResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

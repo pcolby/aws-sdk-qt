@@ -28,7 +28,6 @@ namespace Lightsail {
 class DeleteInstanceResponse;
 
 class QTAWS_EXPORT DeleteInstanceResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

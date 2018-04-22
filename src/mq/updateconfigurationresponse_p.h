@@ -28,7 +28,6 @@ namespace MQ {
 class UpdateConfigurationResponse;
 
 class QTAWS_EXPORT UpdateConfigurationResponsePrivate : public MqResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace SSM {
 class CancelCommandResponse;
 
 class QTAWS_EXPORT CancelCommandResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

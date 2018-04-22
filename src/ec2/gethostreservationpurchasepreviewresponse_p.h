@@ -28,7 +28,6 @@ namespace EC2 {
 class GetHostReservationPurchasePreviewResponse;
 
 class QTAWS_EXPORT GetHostReservationPurchasePreviewResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

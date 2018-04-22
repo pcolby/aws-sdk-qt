@@ -28,7 +28,6 @@ namespace GameLift {
 class DescribeFleetPortSettingsResponse;
 
 class QTAWS_EXPORT DescribeFleetPortSettingsResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

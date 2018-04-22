@@ -28,7 +28,6 @@ namespace Rekognition {
 class StartCelebrityRecognitionResponse;
 
 class QTAWS_EXPORT StartCelebrityRecognitionResponsePrivate : public RekognitionResponsePrivate {
-    Q_OBJECT
 
 public:
 

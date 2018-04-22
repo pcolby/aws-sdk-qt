@@ -28,7 +28,6 @@ namespace DataPipeline {
 class ReportTaskProgressResponse;
 
 class QTAWS_EXPORT ReportTaskProgressResponsePrivate : public DataPipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

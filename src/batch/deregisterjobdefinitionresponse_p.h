@@ -28,7 +28,6 @@ namespace Batch {
 class DeregisterJobDefinitionResponse;
 
 class QTAWS_EXPORT DeregisterJobDefinitionResponsePrivate : public BatchResponsePrivate {
-    Q_OBJECT
 
 public:
 

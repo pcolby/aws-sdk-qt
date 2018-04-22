@@ -28,7 +28,6 @@ namespace MTurk {
 class ListHITsResponse;
 
 class QTAWS_EXPORT ListHITsResponsePrivate : public MTurkResponsePrivate {
-    Q_OBJECT
 
 public:
 

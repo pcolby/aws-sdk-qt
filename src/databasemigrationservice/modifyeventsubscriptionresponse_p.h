@@ -28,7 +28,6 @@ namespace DatabaseMigrationService {
 class ModifyEventSubscriptionResponse;
 
 class QTAWS_EXPORT ModifyEventSubscriptionResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

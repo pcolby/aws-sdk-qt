@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class RegisterApplicationRevisionResponse;
 
 class QTAWS_EXPORT RegisterApplicationRevisionResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

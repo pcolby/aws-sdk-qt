@@ -28,7 +28,6 @@ namespace ElasticBeanstalk {
 class DeleteApplicationVersionResponse;
 
 class QTAWS_EXPORT DeleteApplicationVersionResponsePrivate : public ElasticBeanstalkResponsePrivate {
-    Q_OBJECT
 
 public:
 

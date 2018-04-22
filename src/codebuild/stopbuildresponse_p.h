@@ -28,7 +28,6 @@ namespace CodeBuild {
 class StopBuildResponse;
 
 class QTAWS_EXPORT StopBuildResponsePrivate : public CodeBuildResponsePrivate {
-    Q_OBJECT
 
 public:
 

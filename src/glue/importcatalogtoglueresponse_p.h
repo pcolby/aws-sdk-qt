@@ -28,7 +28,6 @@ namespace Glue {
 class ImportCatalogToGlueResponse;
 
 class QTAWS_EXPORT ImportCatalogToGlueResponsePrivate : public GlueResponsePrivate {
-    Q_OBJECT
 
 public:
 

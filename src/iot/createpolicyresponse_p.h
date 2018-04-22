@@ -28,7 +28,6 @@ namespace IoT {
 class CreatePolicyResponse;
 
 class QTAWS_EXPORT CreatePolicyResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

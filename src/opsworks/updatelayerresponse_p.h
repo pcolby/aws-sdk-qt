@@ -28,7 +28,6 @@ namespace OpsWorks {
 class UpdateLayerResponse;
 
 class QTAWS_EXPORT UpdateLayerResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

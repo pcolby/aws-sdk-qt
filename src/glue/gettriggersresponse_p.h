@@ -28,7 +28,6 @@ namespace Glue {
 class GetTriggersResponse;
 
 class QTAWS_EXPORT GetTriggersResponsePrivate : public GlueResponsePrivate {
-    Q_OBJECT
 
 public:
 

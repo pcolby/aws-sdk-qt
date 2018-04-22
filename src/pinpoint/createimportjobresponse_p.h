@@ -28,7 +28,6 @@ namespace Pinpoint {
 class CreateImportJobResponse;
 
 class QTAWS_EXPORT CreateImportJobResponsePrivate : public PinpointResponsePrivate {
-    Q_OBJECT
 
 public:
 

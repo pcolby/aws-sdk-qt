@@ -28,7 +28,6 @@ namespace DirectoryService {
 class RegisterEventTopicResponse;
 
 class QTAWS_EXPORT RegisterEventTopicResponsePrivate : public DirectoryServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace MachineLearning {
 class DescribeTagsResponse;
 
 class QTAWS_EXPORT DescribeTagsResponsePrivate : public MachineLearningResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DataPipeline {
 class RemoveTagsResponse;
 
 class QTAWS_EXPORT RemoveTagsResponsePrivate : public DataPipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

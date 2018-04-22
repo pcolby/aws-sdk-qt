@@ -28,7 +28,6 @@ namespace Lightsail {
 class IsVpcPeeredResponse;
 
 class QTAWS_EXPORT IsVpcPeeredResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

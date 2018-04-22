@@ -28,7 +28,6 @@ namespace EC2 {
 class TerminateInstancesResponse;
 
 class QTAWS_EXPORT TerminateInstancesResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace RDS {
 class DescribeDBSecurityGroupsResponse;
 
 class QTAWS_EXPORT DescribeDBSecurityGroupsResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DataPipeline {
 class PutPipelineDefinitionResponse;
 
 class QTAWS_EXPORT PutPipelineDefinitionResponsePrivate : public DataPipelineResponsePrivate {
-    Q_OBJECT
 
 public:
 

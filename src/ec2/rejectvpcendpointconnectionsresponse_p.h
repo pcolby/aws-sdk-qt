@@ -28,7 +28,6 @@ namespace EC2 {
 class RejectVpcEndpointConnectionsResponse;
 
 class QTAWS_EXPORT RejectVpcEndpointConnectionsResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ImportExport {
 class UpdateJobResponse;
 
 class QTAWS_EXPORT UpdateJobResponsePrivate : public ImportExportResponsePrivate {
-    Q_OBJECT
 
 public:
 

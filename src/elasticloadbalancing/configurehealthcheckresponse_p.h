@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class ConfigureHealthCheckResponse;
 
 class QTAWS_EXPORT ConfigureHealthCheckResponsePrivate : public ElasticLoadBalancingResponsePrivate {
-    Q_OBJECT
 
 public:
 

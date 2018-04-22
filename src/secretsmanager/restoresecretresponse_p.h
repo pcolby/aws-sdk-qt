@@ -28,7 +28,6 @@ namespace SecretsManager {
 class RestoreSecretResponse;
 
 class QTAWS_EXPORT RestoreSecretResponsePrivate : public SecretsManagerResponsePrivate {
-    Q_OBJECT
 
 public:
 

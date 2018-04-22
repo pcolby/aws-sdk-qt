@@ -28,7 +28,6 @@ namespace CloudTrail {
 class DescribeTrailsResponse;
 
 class QTAWS_EXPORT DescribeTrailsResponsePrivate : public CloudTrailResponsePrivate {
-    Q_OBJECT
 
 public:
 

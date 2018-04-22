@@ -28,7 +28,6 @@ namespace MarketplaceCommerceAnalytics {
 class GenerateDataSetResponse;
 
 class QTAWS_EXPORT GenerateDataSetResponsePrivate : public MarketplaceCommerceAnalyticsResponsePrivate {
-    Q_OBJECT
 
 public:
 

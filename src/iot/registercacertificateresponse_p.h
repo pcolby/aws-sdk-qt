@@ -28,7 +28,6 @@ namespace IoT {
 class RegisterCACertificateResponse;
 
 class QTAWS_EXPORT RegisterCACertificateResponsePrivate : public IoTResponsePrivate {
-    Q_OBJECT
 
 public:
 

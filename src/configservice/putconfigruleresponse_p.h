@@ -28,7 +28,6 @@ namespace ConfigService {
 class PutConfigRuleResponse;
 
 class QTAWS_EXPORT PutConfigRuleResponsePrivate : public ConfigServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

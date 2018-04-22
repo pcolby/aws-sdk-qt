@@ -28,7 +28,6 @@ namespace EC2 {
 class ResetSnapshotAttributeResponse;
 
 class QTAWS_EXPORT ResetSnapshotAttributeResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

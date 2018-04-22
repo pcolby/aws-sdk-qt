@@ -28,7 +28,6 @@ namespace DeviceFarm {
 class GetVPCEConfigurationResponse;
 
 class QTAWS_EXPORT GetVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace RDS {
 class DeleteDBClusterSnapshotResponse;
 
 class QTAWS_EXPORT DeleteDBClusterSnapshotResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

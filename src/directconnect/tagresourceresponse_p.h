@@ -28,7 +28,6 @@ namespace DirectConnect {
 class TagResourceResponse;
 
 class QTAWS_EXPORT TagResourceResponsePrivate : public DirectConnectResponsePrivate {
-    Q_OBJECT
 
 public:
 

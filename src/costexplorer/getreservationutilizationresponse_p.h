@@ -28,7 +28,6 @@ namespace CostExplorer {
 class GetReservationUtilizationResponse;
 
 class QTAWS_EXPORT GetReservationUtilizationResponsePrivate : public CostExplorerResponsePrivate {
-    Q_OBJECT
 
 public:
 

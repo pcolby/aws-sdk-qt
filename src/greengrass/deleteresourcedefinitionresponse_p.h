@@ -28,7 +28,6 @@ namespace Greengrass {
 class DeleteResourceDefinitionResponse;
 
 class QTAWS_EXPORT DeleteResourceDefinitionResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

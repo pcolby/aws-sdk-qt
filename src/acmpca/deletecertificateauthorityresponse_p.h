@@ -28,7 +28,6 @@ namespace ACMPCA {
 class DeleteCertificateAuthorityResponse;
 
 class QTAWS_EXPORT DeleteCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate {
-    Q_OBJECT
 
 public:
 

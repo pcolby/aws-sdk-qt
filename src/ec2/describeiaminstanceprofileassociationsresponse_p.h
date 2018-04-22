@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeIamInstanceProfileAssociationsResponse;
 
 class QTAWS_EXPORT DescribeIamInstanceProfileAssociationsResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

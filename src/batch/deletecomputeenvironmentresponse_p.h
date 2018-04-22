@@ -28,7 +28,6 @@ namespace Batch {
 class DeleteComputeEnvironmentResponse;
 
 class QTAWS_EXPORT DeleteComputeEnvironmentResponsePrivate : public BatchResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace S3 {
 class PutBucketLoggingResponse;
 
 class QTAWS_EXPORT PutBucketLoggingResponsePrivate : public S3ResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Lambda {
 class ListVersionsByFunctionResponse;
 
 class QTAWS_EXPORT ListVersionsByFunctionResponsePrivate : public LambdaResponsePrivate {
-    Q_OBJECT
 
 public:
 

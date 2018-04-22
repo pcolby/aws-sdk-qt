@@ -28,7 +28,6 @@ namespace OpsWorks {
 class CreateLayerResponse;
 
 class QTAWS_EXPORT CreateLayerResponsePrivate : public OpsWorksResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CognitoIdentityProvider {
 class AdminListDevicesResponse;
 
 class QTAWS_EXPORT AdminListDevicesResponsePrivate : public CognitoIdentityProviderResponsePrivate {
-    Q_OBJECT
 
 public:
 

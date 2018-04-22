@@ -28,7 +28,6 @@ namespace APIGateway {
 class CreateVpcLinkResponse;
 
 class QTAWS_EXPORT CreateVpcLinkResponsePrivate : public APIGatewayResponsePrivate {
-    Q_OBJECT
 
 public:
 

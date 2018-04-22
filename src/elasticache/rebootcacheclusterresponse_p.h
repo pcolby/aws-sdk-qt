@@ -28,7 +28,6 @@ namespace ElastiCache {
 class RebootCacheClusterResponse;
 
 class QTAWS_EXPORT RebootCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
-    Q_OBJECT
 
 public:
 

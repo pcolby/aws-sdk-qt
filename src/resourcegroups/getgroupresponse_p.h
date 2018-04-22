@@ -28,7 +28,6 @@ namespace ResourceGroups {
 class GetGroupResponse;
 
 class QTAWS_EXPORT GetGroupResponsePrivate : public ResourceGroupsResponsePrivate {
-    Q_OBJECT
 
 public:
 

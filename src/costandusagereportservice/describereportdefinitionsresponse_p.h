@@ -28,7 +28,6 @@ namespace CostandUsageReportService {
 class DescribeReportDefinitionsResponse;
 
 class QTAWS_EXPORT DescribeReportDefinitionsResponsePrivate : public CostandUsageReportServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

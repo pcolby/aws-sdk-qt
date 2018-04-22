@@ -28,7 +28,6 @@ namespace CloudHSMV2 {
 class DeleteHsmResponse;
 
 class QTAWS_EXPORT DeleteHsmResponsePrivate : public CloudHSMV2ResponsePrivate {
-    Q_OBJECT
 
 public:
 

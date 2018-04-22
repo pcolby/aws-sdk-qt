@@ -28,7 +28,6 @@ namespace GameLift {
 class RequestUploadCredentialsResponse;
 
 class QTAWS_EXPORT RequestUploadCredentialsResponsePrivate : public GameLiftResponsePrivate {
-    Q_OBJECT
 
 public:
 

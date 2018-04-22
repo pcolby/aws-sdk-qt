@@ -28,7 +28,6 @@ namespace RDS {
 class RevokeDBSecurityGroupIngressResponse;
 
 class QTAWS_EXPORT RevokeDBSecurityGroupIngressResponsePrivate : public RdsResponsePrivate {
-    Q_OBJECT
 
 public:
 

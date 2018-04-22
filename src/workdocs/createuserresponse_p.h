@@ -28,7 +28,6 @@ namespace WorkDocs {
 class CreateUserResponse;
 
 class QTAWS_EXPORT CreateUserResponsePrivate : public WorkDocsResponsePrivate {
-    Q_OBJECT
 
 public:
 

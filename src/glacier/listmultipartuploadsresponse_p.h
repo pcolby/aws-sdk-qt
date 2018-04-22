@@ -28,7 +28,6 @@ namespace Glacier {
 class ListMultipartUploadsResponse;
 
 class QTAWS_EXPORT ListMultipartUploadsResponsePrivate : public GlacierResponsePrivate {
-    Q_OBJECT
 
 public:
 

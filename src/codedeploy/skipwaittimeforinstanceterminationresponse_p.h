@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class SkipWaitTimeForInstanceTerminationResponse;
 
 class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace DatabaseMigrationService {
 class ModifyReplicationSubnetGroupResponse;
 
 class QTAWS_EXPORT ModifyReplicationSubnetGroupResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
-    Q_OBJECT
 
 public:
 

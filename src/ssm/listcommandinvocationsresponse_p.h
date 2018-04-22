@@ -28,7 +28,6 @@ namespace SSM {
 class ListCommandInvocationsResponse;
 
 class QTAWS_EXPORT ListCommandInvocationsResponsePrivate : public SsmResponsePrivate {
-    Q_OBJECT
 
 public:
 

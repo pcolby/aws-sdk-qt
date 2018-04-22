@@ -28,7 +28,6 @@ namespace Pinpoint {
 class GetSmsChannelResponse;
 
 class QTAWS_EXPORT GetSmsChannelResponsePrivate : public PinpointResponsePrivate {
-    Q_OBJECT
 
 public:
 

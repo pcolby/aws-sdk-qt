@@ -28,7 +28,6 @@ namespace Pinpoint {
 class SendUsersMessagesResponse;
 
 class QTAWS_EXPORT SendUsersMessagesResponsePrivate : public PinpointResponsePrivate {
-    Q_OBJECT
 
 public:
 

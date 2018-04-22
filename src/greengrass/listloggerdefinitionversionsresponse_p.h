@@ -28,7 +28,6 @@ namespace Greengrass {
 class ListLoggerDefinitionVersionsResponse;
 
 class QTAWS_EXPORT ListLoggerDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

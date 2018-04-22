@@ -28,7 +28,6 @@ namespace CodeDeploy {
 class GetApplicationResponse;
 
 class QTAWS_EXPORT GetApplicationResponsePrivate : public CodeDeployResponsePrivate {
-    Q_OBJECT
 
 public:
 

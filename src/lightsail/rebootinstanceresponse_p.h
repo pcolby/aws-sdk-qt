@@ -28,7 +28,6 @@ namespace Lightsail {
 class RebootInstanceResponse;
 
 class QTAWS_EXPORT RebootInstanceResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

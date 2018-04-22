@@ -28,7 +28,6 @@ namespace Greengrass {
 class ListCoreDefinitionsResponse;
 
 class QTAWS_EXPORT ListCoreDefinitionsResponsePrivate : public GreengrassResponsePrivate {
-    Q_OBJECT
 
 public:
 

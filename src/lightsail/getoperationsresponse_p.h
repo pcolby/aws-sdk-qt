@@ -28,7 +28,6 @@ namespace Lightsail {
 class GetOperationsResponse;
 
 class QTAWS_EXPORT GetOperationsResponsePrivate : public LightsailResponsePrivate {
-    Q_OBJECT
 
 public:
 

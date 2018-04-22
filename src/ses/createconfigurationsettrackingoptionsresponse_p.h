@@ -28,7 +28,6 @@ namespace SES {
 class CreateConfigurationSetTrackingOptionsResponse;
 
 class QTAWS_EXPORT CreateConfigurationSetTrackingOptionsResponsePrivate : public SesResponsePrivate {
-    Q_OBJECT
 
 public:
 

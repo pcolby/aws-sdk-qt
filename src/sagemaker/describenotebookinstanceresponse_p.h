@@ -28,7 +28,6 @@ namespace SageMaker {
 class DescribeNotebookInstanceResponse;
 
 class QTAWS_EXPORT DescribeNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
-    Q_OBJECT
 
 public:
 

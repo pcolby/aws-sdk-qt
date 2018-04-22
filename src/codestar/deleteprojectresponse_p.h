@@ -28,7 +28,6 @@ namespace CodeStar {
 class DeleteProjectResponse;
 
 class QTAWS_EXPORT DeleteProjectResponsePrivate : public CodeStarResponsePrivate {
-    Q_OBJECT
 
 public:
 

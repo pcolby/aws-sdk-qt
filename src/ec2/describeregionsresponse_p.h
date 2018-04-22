@@ -28,7 +28,6 @@ namespace EC2 {
 class DescribeRegionsResponse;
 
 class QTAWS_EXPORT DescribeRegionsResponsePrivate : public Ec2ResponsePrivate {
-    Q_OBJECT
 
 public:
 
