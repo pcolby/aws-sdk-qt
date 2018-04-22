@@ -381,7 +381,7 @@ CreatePlatformVersionResponse * ElasticBeanstalkClient::createPlatformVersion(co
  */
 CreateStorageLocationResponse * ElasticBeanstalkClient::createStorageLocation()
 {
-    return qobject_cast<CreateStorageLocationResponse *>(send(request));
+    return qobject_cast<CreateStorageLocationResponse *>(send());
 }
 
 /*!
@@ -484,7 +484,7 @@ DeletePlatformVersionResponse * ElasticBeanstalkClient::deletePlatformVersion(co
  */
 DescribeAccountAttributesResponse * ElasticBeanstalkClient::describeAccountAttributes()
 {
-    return qobject_cast<DescribeAccountAttributesResponse *>(send(request));
+    return qobject_cast<DescribeAccountAttributesResponse *>(send());
 }
 
 /*!
@@ -676,7 +676,7 @@ DescribePlatformVersionResponse * ElasticBeanstalkClient::describePlatformVersio
  */
 ListAvailableSolutionStacksResponse * ElasticBeanstalkClient::listAvailableSolutionStacks()
 {
-    return qobject_cast<ListAvailableSolutionStacksResponse *>(send(request));
+    return qobject_cast<ListAvailableSolutionStacksResponse *>(send());
 }
 
 /*!

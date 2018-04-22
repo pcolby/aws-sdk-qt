@@ -111,7 +111,11 @@ namespace {{NameSpaceName}} {
  */
 {{name}}Response * {{ClassName}}::{{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}({% if op.input.shape %}const {{name}}Request &request{% endif %})
 {
+{% if op.input.shape %}
     return qobject_cast<{{name}}Response *>(send(request));
+{% else %}
+    return qobject_cast<{{name}}Response *>(send());
+{% endif %}
 }
 
 {% endfor %}

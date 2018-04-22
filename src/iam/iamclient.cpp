@@ -982,7 +982,7 @@ DeleteAccountAliasResponse * IamClient::deleteAccountAlias(const DeleteAccountAl
  */
 DeleteAccountPasswordPolicyResponse * IamClient::deleteAccountPasswordPolicy()
 {
-    return qobject_cast<DeleteAccountPasswordPolicyResponse *>(send(request));
+    return qobject_cast<DeleteAccountPasswordPolicyResponse *>(send());
 }
 
 /*!
@@ -1463,7 +1463,7 @@ EnableMFADeviceResponse * IamClient::enableMFADevice(const EnableMFADeviceReques
  */
 GenerateCredentialReportResponse * IamClient::generateCredentialReport()
 {
-    return qobject_cast<GenerateCredentialReportResponse *>(send(request));
+    return qobject_cast<GenerateCredentialReportResponse *>(send());
 }
 
 /*!
@@ -1518,7 +1518,7 @@ GetAccountAuthorizationDetailsResponse * IamClient::getAccountAuthorizationDetai
  */
 GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
 {
-    return qobject_cast<GetAccountPasswordPolicyResponse *>(send(request));
+    return qobject_cast<GetAccountPasswordPolicyResponse *>(send());
 }
 
 /*!
@@ -1537,7 +1537,7 @@ GetAccountPasswordPolicyResponse * IamClient::getAccountPasswordPolicy()
  */
 GetAccountSummaryResponse * IamClient::getAccountSummary()
 {
-    return qobject_cast<GetAccountSummaryResponse *>(send(request));
+    return qobject_cast<GetAccountSummaryResponse *>(send());
 }
 
 /*!
@@ -1605,7 +1605,7 @@ GetContextKeysForPrincipalPolicyResponse * IamClient::getContextKeysForPrincipal
  */
 GetCredentialReportResponse * IamClient::getCredentialReport()
 {
-    return qobject_cast<GetCredentialReportResponse *>(send(request));
+    return qobject_cast<GetCredentialReportResponse *>(send());
 }
 
 /*!

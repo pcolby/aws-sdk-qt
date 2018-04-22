@@ -632,7 +632,7 @@ DeclineHandshakeResponse * OrganizationsClient::declineHandshake(const DeclineHa
  */
 DeleteOrganizationResponse * OrganizationsClient::deleteOrganization()
 {
-    return qobject_cast<DeleteOrganizationResponse *>(send(request));
+    return qobject_cast<DeleteOrganizationResponse *>(send());
 }
 
 /*!
@@ -747,7 +747,7 @@ DescribeHandshakeResponse * OrganizationsClient::describeHandshake(const Describ
  */
 DescribeOrganizationResponse * OrganizationsClient::describeOrganization()
 {
-    return qobject_cast<DescribeOrganizationResponse *>(send(request));
+    return qobject_cast<DescribeOrganizationResponse *>(send());
 }
 
 /*!
@@ -1065,7 +1065,7 @@ InviteAccountToOrganizationResponse * OrganizationsClient::inviteAccountToOrgani
  */
 LeaveOrganizationResponse * OrganizationsClient::leaveOrganization()
 {
-    return qobject_cast<LeaveOrganizationResponse *>(send(request));
+    return qobject_cast<LeaveOrganizationResponse *>(send());
 }
 
 /*!

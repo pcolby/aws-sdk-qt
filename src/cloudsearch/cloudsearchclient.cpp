@@ -491,7 +491,7 @@ IndexDocumentsResponse * CloudSearchClient::indexDocuments(const IndexDocumentsR
  */
 ListDomainNamesResponse * CloudSearchClient::listDomainNames()
 {
-    return qobject_cast<ListDomainNamesResponse *>(send(request));
+    return qobject_cast<ListDomainNamesResponse *>(send());
 }
 
 /*!

@@ -934,7 +934,7 @@ DescribeLoaResponse * DirectConnectClient::describeLoa(const DescribeLoaRequest 
  */
 DescribeLocationsResponse * DirectConnectClient::describeLocations()
 {
-    return qobject_cast<DescribeLocationsResponse *>(send(request));
+    return qobject_cast<DescribeLocationsResponse *>(send());
 }
 
 /*!
@@ -967,7 +967,7 @@ DescribeTagsResponse * DirectConnectClient::describeTags(const DescribeTagsReque
  */
 DescribeVirtualGatewaysResponse * DirectConnectClient::describeVirtualGateways()
 {
-    return qobject_cast<DescribeVirtualGatewaysResponse *>(send(request));
+    return qobject_cast<DescribeVirtualGatewaysResponse *>(send());
 }
 
 /*!

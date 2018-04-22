@@ -695,7 +695,7 @@ GetComplianceDetailsByResourceResponse * ConfigServiceClient::getComplianceDetai
  */
 GetComplianceSummaryByConfigRuleResponse * ConfigServiceClient::getComplianceSummaryByConfigRule()
 {
-    return qobject_cast<GetComplianceSummaryByConfigRuleResponse *>(send(request));
+    return qobject_cast<GetComplianceSummaryByConfigRuleResponse *>(send());
 }
 
 /*!

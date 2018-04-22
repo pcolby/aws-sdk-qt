@@ -191,7 +191,7 @@ DeleteElasticsearchDomainResponse * ElasticsearchServiceClient::deleteElasticsea
  */
 DeleteElasticsearchServiceRoleResponse * ElasticsearchServiceClient::deleteElasticsearchServiceRole()
 {
-    return qobject_cast<DeleteElasticsearchServiceRoleResponse *>(send(request));
+    return qobject_cast<DeleteElasticsearchServiceRoleResponse *>(send());
 }
 
 /*!
@@ -260,7 +260,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse * ElasticsearchServiceClient::de
  */
 ListDomainNamesResponse * ElasticsearchServiceClient::listDomainNames()
 {
-    return qobject_cast<ListDomainNamesResponse *>(send(request));
+    return qobject_cast<ListDomainNamesResponse *>(send());
 }
 
 /*!

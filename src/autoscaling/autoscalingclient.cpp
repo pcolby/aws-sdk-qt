@@ -546,7 +546,7 @@ DeleteTagsResponse * AutoScalingClient::deleteTags(const DeleteTagsRequest &requ
  */
 DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
 {
-    return qobject_cast<DescribeAccountLimitsResponse *>(send(request));
+    return qobject_cast<DescribeAccountLimitsResponse *>(send());
 }
 
 /*!
@@ -559,7 +559,7 @@ DescribeAccountLimitsResponse * AutoScalingClient::describeAccountLimits()
  */
 DescribeAdjustmentTypesResponse * AutoScalingClient::describeAdjustmentTypes()
 {
-    return qobject_cast<DescribeAdjustmentTypesResponse *>(send(request));
+    return qobject_cast<DescribeAdjustmentTypesResponse *>(send());
 }
 
 /*!
@@ -598,7 +598,7 @@ DescribeAutoScalingInstancesResponse * AutoScalingClient::describeAutoScalingIns
  */
 DescribeAutoScalingNotificationTypesResponse * AutoScalingClient::describeAutoScalingNotificationTypes()
 {
-    return qobject_cast<DescribeAutoScalingNotificationTypesResponse *>(send(request));
+    return qobject_cast<DescribeAutoScalingNotificationTypesResponse *>(send());
 }
 
 /*!
@@ -624,7 +624,7 @@ DescribeLaunchConfigurationsResponse * AutoScalingClient::describeLaunchConfigur
  */
 DescribeLifecycleHookTypesResponse * AutoScalingClient::describeLifecycleHookTypes()
 {
-    return qobject_cast<DescribeLifecycleHookTypesResponse *>(send(request));
+    return qobject_cast<DescribeLifecycleHookTypesResponse *>(send());
 }
 
 /*!
@@ -686,7 +686,7 @@ DescribeLoadBalancersResponse * AutoScalingClient::describeLoadBalancers(const D
  */
 DescribeMetricCollectionTypesResponse * AutoScalingClient::describeMetricCollectionTypes()
 {
-    return qobject_cast<DescribeMetricCollectionTypesResponse *>(send(request));
+    return qobject_cast<DescribeMetricCollectionTypesResponse *>(send());
 }
 
 /*!
@@ -738,7 +738,7 @@ DescribeScalingActivitiesResponse * AutoScalingClient::describeScalingActivities
  */
 DescribeScalingProcessTypesResponse * AutoScalingClient::describeScalingProcessTypes()
 {
-    return qobject_cast<DescribeScalingProcessTypesResponse *>(send(request));
+    return qobject_cast<DescribeScalingProcessTypesResponse *>(send());
 }
 
 /*!
@@ -789,7 +789,7 @@ DescribeTagsResponse * AutoScalingClient::describeTags(const DescribeTagsRequest
  */
 DescribeTerminationPolicyTypesResponse * AutoScalingClient::describeTerminationPolicyTypes()
 {
-    return qobject_cast<DescribeTerminationPolicyTypesResponse *>(send(request));
+    return qobject_cast<DescribeTerminationPolicyTypesResponse *>(send());
 }
 
 /*!

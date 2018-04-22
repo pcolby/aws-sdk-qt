@@ -1045,7 +1045,7 @@ DescribeLoadBasedAutoScalingResponse * OpsWorksClient::describeLoadBasedAutoScal
  */
 DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
 {
-    return qobject_cast<DescribeMyUserProfileResponse *>(send(request));
+    return qobject_cast<DescribeMyUserProfileResponse *>(send());
 }
 
 /*!
@@ -1058,7 +1058,7 @@ DescribeMyUserProfileResponse * OpsWorksClient::describeMyUserProfile()
  */
 DescribeOperatingSystemsResponse * OpsWorksClient::describeOperatingSystems()
 {
-    return qobject_cast<DescribeOperatingSystemsResponse *>(send(request));
+    return qobject_cast<DescribeOperatingSystemsResponse *>(send());
 }
 
 /*!

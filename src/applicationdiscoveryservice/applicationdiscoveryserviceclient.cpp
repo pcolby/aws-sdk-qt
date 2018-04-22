@@ -377,7 +377,7 @@ DisassociateConfigurationItemsFromApplicationResponse * ApplicationDiscoveryServ
  */
 ExportConfigurationsResponse * ApplicationDiscoveryServiceClient::exportConfigurations()
 {
-    return qobject_cast<ExportConfigurationsResponse *>(send(request));
+    return qobject_cast<ExportConfigurationsResponse *>(send());
 }
 
 /*!

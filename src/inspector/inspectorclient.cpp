@@ -319,7 +319,7 @@ DescribeAssessmentTemplatesResponse * InspectorClient::describeAssessmentTemplat
  */
 DescribeCrossAccountAccessRoleResponse * InspectorClient::describeCrossAccountAccessRole()
 {
-    return qobject_cast<DescribeCrossAccountAccessRoleResponse *>(send(request));
+    return qobject_cast<DescribeCrossAccountAccessRoleResponse *>(send());
 }
 
 /*!

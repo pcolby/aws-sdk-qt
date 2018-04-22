@@ -782,7 +782,7 @@ DescribeReceiptRuleSetResponse * SesClient::describeReceiptRuleSet(const Describ
  */
 GetAccountSendingEnabledResponse * SesClient::getAccountSendingEnabled()
 {
-    return qobject_cast<GetAccountSendingEnabledResponse *>(send(request));
+    return qobject_cast<GetAccountSendingEnabledResponse *>(send());
 }
 
 /*!
@@ -968,7 +968,7 @@ GetIdentityVerificationAttributesResponse * SesClient::getIdentityVerificationAt
  */
 GetSendQuotaResponse * SesClient::getSendQuota()
 {
-    return qobject_cast<GetSendQuotaResponse *>(send(request));
+    return qobject_cast<GetSendQuotaResponse *>(send());
 }
 
 /*!
@@ -986,7 +986,7 @@ GetSendQuotaResponse * SesClient::getSendQuota()
  */
 GetSendStatisticsResponse * SesClient::getSendStatistics()
 {
-    return qobject_cast<GetSendStatisticsResponse *>(send(request));
+    return qobject_cast<GetSendStatisticsResponse *>(send());
 }
 
 /*!
@@ -1173,7 +1173,7 @@ ListTemplatesResponse * SesClient::listTemplates(const ListTemplatesRequest &req
  */
 ListVerifiedEmailAddressesResponse * SesClient::listVerifiedEmailAddresses()
 {
-    return qobject_cast<ListVerifiedEmailAddressesResponse *>(send(request));
+    return qobject_cast<ListVerifiedEmailAddressesResponse *>(send());
 }
 
 /*!

@@ -838,7 +838,7 @@ ListBucketMetricsConfigurationsResponse * S3Client::listBucketMetricsConfigurati
  */
 ListBucketsResponse * S3Client::listBuckets()
 {
-    return qobject_cast<ListBucketsResponse *>(send(request));
+    return qobject_cast<ListBucketsResponse *>(send());
 }
 
 /*!
