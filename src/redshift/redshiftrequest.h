@@ -114,7 +114,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const RedshiftRequest &other) const override;
+    virtual bool operator==(const RedshiftRequest &other) const;
 
 
 protected:

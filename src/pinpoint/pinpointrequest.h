@@ -116,7 +116,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const PinpointRequest &other) const override;
+    virtual bool operator==(const PinpointRequest &other) const;
 
 
 protected:

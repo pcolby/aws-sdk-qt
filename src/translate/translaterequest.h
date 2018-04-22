@@ -52,7 +52,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const TranslateRequest &other) const override;
+    virtual bool operator==(const TranslateRequest &other) const;
 
 
 protected:

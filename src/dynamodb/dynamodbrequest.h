@@ -82,7 +82,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DynamoDBRequest &other) const override;
+    virtual bool operator==(const DynamoDBRequest &other) const;
 
 
 protected:

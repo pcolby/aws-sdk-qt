@@ -85,7 +85,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SageMakerRequest &other) const override;
+    virtual bool operator==(const SageMakerRequest &other) const;
 
 
 protected:

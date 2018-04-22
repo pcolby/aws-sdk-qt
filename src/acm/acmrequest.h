@@ -63,7 +63,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const AcmRequest &other) const override;
+    virtual bool operator==(const AcmRequest &other) const;
 
 
 protected:

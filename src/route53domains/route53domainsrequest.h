@@ -75,7 +75,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const Route53DomainsRequest &other) const override;
+    virtual bool operator==(const Route53DomainsRequest &other) const;
 
 
 protected:

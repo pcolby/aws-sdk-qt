@@ -79,7 +79,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const MachineLearningRequest &other) const override;
+    virtual bool operator==(const MachineLearningRequest &other) const;
 
 
 protected:

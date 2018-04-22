@@ -107,7 +107,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const Route53Request &other) const override;
+    virtual bool operator==(const Route53Request &other) const;
 
 
 protected:

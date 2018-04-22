@@ -61,7 +61,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ApplicationAutoScalingRequest &other) const override;
+    virtual bool operator==(const ApplicationAutoScalingRequest &other) const;
 
 
 protected:

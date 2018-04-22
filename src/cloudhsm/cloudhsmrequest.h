@@ -71,7 +71,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CloudHSMRequest &other) const override;
+    virtual bool operator==(const CloudHSMRequest &other) const;
 
 
 protected:

@@ -61,7 +61,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const Cloud9Request &other) const override;
+    virtual bool operator==(const Cloud9Request &other) const;
 
 
 protected:

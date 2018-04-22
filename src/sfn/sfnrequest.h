@@ -70,7 +70,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SfnRequest &other) const override;
+    virtual bool operator==(const SfnRequest &other) const;
 
 
 protected:

@@ -78,7 +78,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const AppSyncRequest &other) const override;
+    virtual bool operator==(const AppSyncRequest &other) const;
 
 
 protected:

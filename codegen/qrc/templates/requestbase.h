@@ -36,7 +36,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const {{ClassName}} &other) const override;
+    virtual bool operator==(const {{ClassName}} &other) const;
 
     {# @todo Things like: static bool isValidQueueName(const QString &queueName); #}
 

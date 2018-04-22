@@ -84,7 +84,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CloudWatchLogsRequest &other) const override;
+    virtual bool operator==(const CloudWatchLogsRequest &other) const;
 
 
 protected:

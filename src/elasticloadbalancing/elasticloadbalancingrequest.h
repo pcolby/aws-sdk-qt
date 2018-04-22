@@ -80,7 +80,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const ElasticLoadBalancingRequest &other) const override;
+    virtual bool operator==(const ElasticLoadBalancingRequest &other) const;
 
 
 protected:

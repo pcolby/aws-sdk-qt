@@ -95,7 +95,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const DirectConnectRequest &other) const override;
+    virtual bool operator==(const DirectConnectRequest &other) const;
 
 
 protected:

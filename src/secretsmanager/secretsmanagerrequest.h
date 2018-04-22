@@ -66,7 +66,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SecretsManagerRequest &other) const override;
+    virtual bool operator==(const SecretsManagerRequest &other) const;
 
 
 protected:

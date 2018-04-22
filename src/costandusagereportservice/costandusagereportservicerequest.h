@@ -54,7 +54,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const CostandUsageReportServiceRequest &other) const override;
+    virtual bool operator==(const CostandUsageReportServiceRequest &other) const;
 
 
 protected:

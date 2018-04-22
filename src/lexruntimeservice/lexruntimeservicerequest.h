@@ -53,7 +53,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const LexRuntimeServiceRequest &other) const override;
+    virtual bool operator==(const LexRuntimeServiceRequest &other) const;
 
 
 protected:

@@ -90,7 +90,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const MTurkRequest &other) const override;
+    virtual bool operator==(const MTurkRequest &other) const;
 
 
 protected:
