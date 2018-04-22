@@ -97,7 +97,7 @@ int AwsSignatureV2::version() const
  * Constructs an AwsSignatureV2Private object with hash \a algorithm, and public implementation \a q.
  */
 AwsSignatureV2Private::AwsSignatureV2Private(const QCryptographicHash::Algorithm algorithm, AwsSignatureV2 * const q)
-    : AwsAbstractSignaturePrivate(q), hashAlgorithm(hashAlgorithm)
+    : AwsAbstractSignaturePrivate(q), hashAlgorithm(algorithm)
 {
 
 }
