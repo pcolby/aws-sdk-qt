@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = elasticfilesystem
+TARGET = QtAwsEfs
 TEMPLATE = lib
 QT -= gui
 QT += network

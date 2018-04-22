@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = sdb
+TARGET = QtAwsSimpleDB
 TEMPLATE = lib
 QT -= gui
 QT += network

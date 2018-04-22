@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = rekognition
+TARGET = QtAwsRekognition
 TEMPLATE = lib
 QT -= gui
 QT += network

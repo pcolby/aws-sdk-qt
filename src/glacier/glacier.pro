@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = glacier
+TARGET = QtAwsGlacier
 TEMPLATE = lib
 QT -= gui
 QT += network

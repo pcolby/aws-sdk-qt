@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cloud9
+TARGET = QtAwsCloud9
 TEMPLATE = lib
 QT -= gui
 QT += network

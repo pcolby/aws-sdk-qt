@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = machinelearning
+TARGET = QtAwsMachineLearning
 TEMPLATE = lib
 QT -= gui
 QT += network

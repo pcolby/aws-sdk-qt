@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = sns
+TARGET = QtAwsSns
 TEMPLATE = lib
 QT -= gui
 QT += network

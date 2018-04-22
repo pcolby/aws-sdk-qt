@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = support
+TARGET = QtAwsSupport
 TEMPLATE = lib
 QT -= gui
 QT += network

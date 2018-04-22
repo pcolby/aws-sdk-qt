@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = kms
+TARGET = QtAwsKms
 TEMPLATE = lib
 QT -= gui
 QT += network

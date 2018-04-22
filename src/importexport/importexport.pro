@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = importexport
+TARGET = QtAwsImportExport
 TEMPLATE = lib
 QT -= gui
 QT += network

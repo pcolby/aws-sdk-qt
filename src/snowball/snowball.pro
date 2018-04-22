@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = snowball
+TARGET = QtAwsSnowball
 TEMPLATE = lib
 QT -= gui
 QT += network

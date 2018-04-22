@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cloudtrail
+TARGET = QtAwsCloudTrail
 TEMPLATE = lib
 QT -= gui
 QT += network

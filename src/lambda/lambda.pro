@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = lambda
+TARGET = QtAwsLambda
 TEMPLATE = lib
 QT -= gui
 QT += network

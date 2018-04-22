@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = application-autoscaling
+TARGET = QtAwsApplicationAutoScaling
 TEMPLATE = lib
 QT -= gui
 QT += network

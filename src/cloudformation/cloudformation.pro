@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cloudformation
+TARGET = QtAwsCloudFormation
 TEMPLATE = lib
 QT -= gui
 QT += network

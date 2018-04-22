@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = s3
+TARGET = QtAwsS3
 TEMPLATE = lib
 QT -= gui
 QT += network

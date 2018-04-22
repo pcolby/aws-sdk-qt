@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = codebuild
+TARGET = QtAwsCodeBuild
 TEMPLATE = lib
 QT -= gui
 QT += network

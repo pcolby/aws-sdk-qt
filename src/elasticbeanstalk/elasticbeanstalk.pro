@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = elasticbeanstalk
+TARGET = QtAwsElasticBeanstalk
 TEMPLATE = lib
 QT -= gui
 QT += network

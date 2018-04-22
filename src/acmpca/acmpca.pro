@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = acm-pca
+TARGET = QtAwsAcmpca
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = events
+TARGET = QtAwsCloudWatchEvents
 TEMPLATE = lib
 QT -= gui
 QT += network

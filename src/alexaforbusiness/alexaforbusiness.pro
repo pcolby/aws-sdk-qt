@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = alexaforbusiness
+TARGET = QtAwsAlexaForBusiness
 TEMPLATE = lib
 QT -= gui
 QT += network

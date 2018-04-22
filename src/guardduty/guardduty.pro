@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = guardduty
+TARGET = QtAwsGuardDuty
 TEMPLATE = lib
 QT -= gui
 QT += network

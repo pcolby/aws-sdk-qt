@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = gamelift
+TARGET = QtAwsGameLift
 TEMPLATE = lib
 QT -= gui
 QT += network

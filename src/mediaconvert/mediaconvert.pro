@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = mediaconvert
+TARGET = QtAwsMediaConvert
 TEMPLATE = lib
 QT -= gui
 QT += network

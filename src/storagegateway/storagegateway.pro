@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = storagegateway
+TARGET = QtAwsStorageGateway
 TEMPLATE = lib
 QT -= gui
 QT += network

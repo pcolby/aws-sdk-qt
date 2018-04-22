@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = pricing
+TARGET = QtAwsPricing
 TEMPLATE = lib
 QT -= gui
 QT += network

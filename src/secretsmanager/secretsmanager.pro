@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = secretsmanager
+TARGET = QtAwsSecretsManager
 TEMPLATE = lib
 QT -= gui
 QT += network

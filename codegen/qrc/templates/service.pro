@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = {{ TargetLibName }}
+TARGET = {{ModuleName}}
 TEMPLATE = lib
 QT -= gui
 QT += network

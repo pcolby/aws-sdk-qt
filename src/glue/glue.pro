@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = glue
+TARGET = QtAwsGlue
 TEMPLATE = lib
 QT -= gui
 QT += network

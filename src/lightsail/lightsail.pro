@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = lightsail
+TARGET = QtAwsLightsail
 TEMPLATE = lib
 QT -= gui
 QT += network

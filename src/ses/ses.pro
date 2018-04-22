@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = email
+TARGET = QtAwsSes
 TEMPLATE = lib
 QT -= gui
 QT += network

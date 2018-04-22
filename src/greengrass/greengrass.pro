@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = greengrass
+TARGET = QtAwsGreengrass
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = meteringmarketplace
+TARGET = QtAwsMarketplaceMetering
 TEMPLATE = lib
 QT -= gui
 QT += network

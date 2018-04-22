@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = iam
+TARGET = QtAwsIam
 TEMPLATE = lib
 QT -= gui
 QT += network

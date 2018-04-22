@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = mturk-requester
+TARGET = QtAwsMTurk
 TEMPLATE = lib
 QT -= gui
 QT += network

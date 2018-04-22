@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = appstream
+TARGET = QtAwsAppStream
 TEMPLATE = lib
 QT -= gui
 QT += network

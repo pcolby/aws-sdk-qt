@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = waf-regional
+TARGET = QtAwsWAFRegional
 TEMPLATE = lib
 QT -= gui
 QT += network

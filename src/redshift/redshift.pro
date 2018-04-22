@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = redshift
+TARGET = QtAwsRedshift
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = monitoring
+TARGET = QtAwsCloudWatch
 TEMPLATE = lib
 QT -= gui
 QT += network

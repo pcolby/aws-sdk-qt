@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = ce
+TARGET = QtAwsCostExplorer
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cloudfront
+TARGET = QtAwsCloudFront
 TEMPLATE = lib
 QT -= gui
 QT += network

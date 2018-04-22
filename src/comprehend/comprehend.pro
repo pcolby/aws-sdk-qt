@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = comprehend
+TARGET = QtAwsComprehend
 TEMPLATE = lib
 QT -= gui
 QT += network

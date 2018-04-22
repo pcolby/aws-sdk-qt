@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = directconnect
+TARGET = QtAwsDirectConnect
 TEMPLATE = lib
 QT -= gui
 QT += network

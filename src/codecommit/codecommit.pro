@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = codecommit
+TARGET = QtAwsCodeCommit
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = lex-models
+TARGET = QtAwsLexModelBuildingService
 TEMPLATE = lib
 QT -= gui
 QT += network

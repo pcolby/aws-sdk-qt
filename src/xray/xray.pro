@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = xray
+TARGET = QtAwsXRay
 TEMPLATE = lib
 QT -= gui
 QT += network

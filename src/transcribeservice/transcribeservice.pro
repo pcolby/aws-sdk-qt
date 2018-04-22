@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = transcribe
+TARGET = QtAwsTranscribeService
 TEMPLATE = lib
 QT -= gui
 QT += network

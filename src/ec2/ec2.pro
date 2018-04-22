@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = ec2
+TARGET = QtAwsEc2
 TEMPLATE = lib
 QT -= gui
 QT += network

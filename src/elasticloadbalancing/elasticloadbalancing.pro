@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = elasticloadbalancing
+TARGET = QtAwsElasticLoadBalancing
 TEMPLATE = lib
 QT -= gui
 QT += network

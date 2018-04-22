@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = servicediscovery
+TARGET = QtAwsServiceDiscovery
 TEMPLATE = lib
 QT -= gui
 QT += network

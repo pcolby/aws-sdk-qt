@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = iot
+TARGET = QtAwsIoT
 TEMPLATE = lib
 QT -= gui
 QT += network

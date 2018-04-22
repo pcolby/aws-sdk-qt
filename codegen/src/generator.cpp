@@ -101,9 +101,9 @@ int Generator::generate(const QString &serviceFileName,
     }
 
     Grantlee::Context context(description.toVariantHash());
+    context.insert(QSL("ModuleName"), moduleName);
     context.insert(QSL("ServiceName"), serviceName);
     context.insert(QSL("ServiceClassName"), serviceClassName);
-    context.insert(QSL("TargetLibName"), serviceFileName); /// @todo Use ModuleName?
     context.insert(QSL("NameSpaceName"), serviceName);
     context.insert(QSL("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
@@ -140,7 +140,6 @@ int Generator::generate(const QString &serviceFileName,
         return -1;
     }
     const QString docDir = moduleDirPath + QSL("/doc");
-    context.insert(QSL("ModuleName"), moduleName);
     render(QSL("doc/module.qdoc"),       context, docDir, moduleName.toLower() + QSL(".qdoc"));
     render(QSL("doc/module.qdocconf"),   context, docDir, moduleName.toLower() + QSL(".qdocconf"));
     render(QSL("doc/module-index.qdoc"), context, docDir, moduleName.toLower() + QSL("-index.qdoc"));

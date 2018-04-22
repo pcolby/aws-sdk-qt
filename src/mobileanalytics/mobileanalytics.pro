@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = mobileanalytics
+TARGET = QtAwsMobileAnalytics
 TEMPLATE = lib
 QT -= gui
 QT += network

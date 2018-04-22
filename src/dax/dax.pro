@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = dax
+TARGET = QtAwsDax
 TEMPLATE = lib
 QT -= gui
 QT += network

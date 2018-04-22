@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = rds
+TARGET = QtAwsRds
 TEMPLATE = lib
 QT -= gui
 QT += network

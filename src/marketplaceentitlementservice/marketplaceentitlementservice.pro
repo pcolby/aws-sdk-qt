@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = entitlement.marketplace
+TARGET = QtAwsMarketplaceEntitlementService
 TEMPLATE = lib
 QT -= gui
 QT += network

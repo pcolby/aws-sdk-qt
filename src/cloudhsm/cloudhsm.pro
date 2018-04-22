@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cloudhsm
+TARGET = QtAwsCloudHSM
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = serverlessrepo
+TARGET = QtAwsServerlessApplicationRepository
 TEMPLATE = lib
 QT -= gui
 QT += network

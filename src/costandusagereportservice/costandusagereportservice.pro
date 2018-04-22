@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cur
+TARGET = QtAwsCostandUsageReportService
 TEMPLATE = lib
 QT -= gui
 QT += network

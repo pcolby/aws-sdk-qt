@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = sms
+TARGET = QtAwsSms
 TEMPLATE = lib
 QT -= gui
 QT += network

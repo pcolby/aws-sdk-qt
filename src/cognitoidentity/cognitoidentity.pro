@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cognito-identity
+TARGET = QtAwsCognitoIdentity
 TEMPLATE = lib
 QT -= gui
 QT += network

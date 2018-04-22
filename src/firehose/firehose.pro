@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = firehose
+TARGET = QtAwsFirehose
 TEMPLATE = lib
 QT -= gui
 QT += network

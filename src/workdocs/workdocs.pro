@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = workdocs
+TARGET = QtAwsWorkDocs
 TEMPLATE = lib
 QT -= gui
 QT += network

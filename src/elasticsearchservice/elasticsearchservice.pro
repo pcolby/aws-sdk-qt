@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = es
+TARGET = QtAwsElasticsearchService
 TEMPLATE = lib
 QT -= gui
 QT += network

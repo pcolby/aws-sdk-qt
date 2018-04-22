@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = runtime.lex
+TARGET = QtAwsLexRuntimeService
 TEMPLATE = lib
 QT -= gui
 QT += network

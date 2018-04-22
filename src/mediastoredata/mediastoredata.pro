@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = mediastore-data
+TARGET = QtAwsMediaStoreData
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = workspaces
+TARGET = QtAwsWorkSpaces
 TEMPLATE = lib
 QT -= gui
 QT += network

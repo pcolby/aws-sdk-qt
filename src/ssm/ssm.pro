@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = ssm
+TARGET = QtAwsSsm
 TEMPLATE = lib
 QT -= gui
 QT += network

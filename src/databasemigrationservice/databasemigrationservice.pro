@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = dms
+TARGET = QtAwsDatabaseMigrationService
 TEMPLATE = lib
 QT -= gui
 QT += network

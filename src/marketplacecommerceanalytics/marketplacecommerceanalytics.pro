@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = marketplacecommerceanalytics
+TARGET = QtAwsMarketplaceCommerceAnalytics
 TEMPLATE = lib
 QT -= gui
 QT += network

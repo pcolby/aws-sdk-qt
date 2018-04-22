@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = resourcegroupstaggingapi
+TARGET = QtAwsResourceGroupsTaggingAPI
 TEMPLATE = lib
 QT -= gui
 QT += network

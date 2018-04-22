@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = elastictranscoder
+TARGET = QtAwsElasticTranscoder
 TEMPLATE = lib
 QT -= gui
 QT += network

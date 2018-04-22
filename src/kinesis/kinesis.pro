@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = kinesis
+TARGET = QtAwsKinesis
 TEMPLATE = lib
 QT -= gui
 QT += network

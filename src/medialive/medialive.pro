@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = medialive
+TARGET = QtAwsMediaLive
 TEMPLATE = lib
 QT -= gui
 QT += network

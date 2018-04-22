@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = translate
+TARGET = QtAwsTranslate
 TEMPLATE = lib
 QT -= gui
 QT += network

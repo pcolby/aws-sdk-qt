@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = ecs
+TARGET = QtAwsEcs
 TEMPLATE = lib
 QT -= gui
 QT += network

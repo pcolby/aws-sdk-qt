@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = devicefarm
+TARGET = QtAwsDeviceFarm
 TEMPLATE = lib
 QT -= gui
 QT += network

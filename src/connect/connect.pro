@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = connect
+TARGET = QtAwsConnect
 TEMPLATE = lib
 QT -= gui
 QT += network

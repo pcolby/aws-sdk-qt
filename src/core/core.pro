@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = aws-qt-core
+TARGET = QtAwsCore
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = dynamodbstreams
+TARGET = QtAwsDynamoDBStreams
 TEMPLATE = lib
 QT -= gui
 QT += network

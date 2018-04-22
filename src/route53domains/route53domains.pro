@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = route53domains
+TARGET = QtAwsRoute53Domains
 TEMPLATE = lib
 QT -= gui
 QT += network

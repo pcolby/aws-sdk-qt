@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = batch
+TARGET = QtAwsBatch
 TEMPLATE = lib
 QT -= gui
 QT += network

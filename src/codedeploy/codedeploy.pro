@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = codedeploy
+TARGET = QtAwsCodeDeploy
 TEMPLATE = lib
 QT -= gui
 QT += network

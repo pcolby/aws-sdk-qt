@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = ds
+TARGET = QtAwsDirectoryService
 TEMPLATE = lib
 QT -= gui
 QT += network

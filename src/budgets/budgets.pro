@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = budgets
+TARGET = QtAwsBudgets
 TEMPLATE = lib
 QT -= gui
 QT += network

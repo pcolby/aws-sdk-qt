@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = states
+TARGET = QtAwsSfn
 TEMPLATE = lib
 QT -= gui
 QT += network

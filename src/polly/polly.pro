@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = polly
+TARGET = QtAwsPolly
 TEMPLATE = lib
 QT -= gui
 QT += network

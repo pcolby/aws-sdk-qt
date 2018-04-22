@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = servicecatalog
+TARGET = QtAwsServiceCatalog
 TEMPLATE = lib
 QT -= gui
 QT += network

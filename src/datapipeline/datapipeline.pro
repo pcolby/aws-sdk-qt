@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = datapipeline
+TARGET = QtAwsDataPipeline
 TEMPLATE = lib
 QT -= gui
 QT += network

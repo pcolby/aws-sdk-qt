@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = AWSMigrationHub
+TARGET = QtAwsMigrationHub
 TEMPLATE = lib
 QT -= gui
 QT += network

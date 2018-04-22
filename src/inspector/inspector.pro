@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = inspector
+TARGET = QtAwsInspector
 TEMPLATE = lib
 QT -= gui
 QT += network

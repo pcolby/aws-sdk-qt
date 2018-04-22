@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = opsworkscm
+TARGET = QtAwsOpsWorksCM
 TEMPLATE = lib
 QT -= gui
 QT += network

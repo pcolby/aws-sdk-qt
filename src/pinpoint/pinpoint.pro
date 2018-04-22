@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = pinpoint
+TARGET = QtAwsPinpoint
 TEMPLATE = lib
 QT -= gui
 QT += network

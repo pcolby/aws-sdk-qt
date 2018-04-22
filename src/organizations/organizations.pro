@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = organizations
+TARGET = QtAwsOrganizations
 TEMPLATE = lib
 QT -= gui
 QT += network

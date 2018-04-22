@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = athena
+TARGET = QtAwsAthena
 TEMPLATE = lib
 QT -= gui
 QT += network

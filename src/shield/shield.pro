@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = shield
+TARGET = QtAwsShield
 TEMPLATE = lib
 QT -= gui
 QT += network

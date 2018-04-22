@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = clouddirectory
+TARGET = QtAwsCloudDirectory
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = swf
+TARGET = QtAwsSwf
 TEMPLATE = lib
 QT -= gui
 QT += network

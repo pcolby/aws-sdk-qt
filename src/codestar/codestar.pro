@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = codestar
+TARGET = QtAwsCodeStar
 TEMPLATE = lib
 QT -= gui
 QT += network

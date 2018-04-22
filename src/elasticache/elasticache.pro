@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = elasticache
+TARGET = QtAwsElastiCache
 TEMPLATE = lib
 QT -= gui
 QT += network

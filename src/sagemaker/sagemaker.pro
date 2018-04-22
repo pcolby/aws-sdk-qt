@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = sagemaker
+TARGET = QtAwsSageMaker
 TEMPLATE = lib
 QT -= gui
 QT += network

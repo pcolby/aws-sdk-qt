@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = health
+TARGET = QtAwsHealth
 TEMPLATE = lib
 QT -= gui
 QT += network

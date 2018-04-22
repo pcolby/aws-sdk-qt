@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = cloudsearchdomain
+TARGET = QtAwsCloudSearchDomain
 TEMPLATE = lib
 QT -= gui
 QT += network

@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = kinesisvideo
+TARGET = QtAwsKinesisVideo
 TEMPLATE = lib
 QT -= gui
 QT += network
