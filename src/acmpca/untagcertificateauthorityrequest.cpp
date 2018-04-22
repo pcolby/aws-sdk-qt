@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 UntagCertificateAuthorityRequest::UntagCertificateAuthorityRequest(const UntagCertificateAuthorityRequest &other)
-    : ACMPCARequest(new UntagCertificateAuthorityRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new UntagCertificateAuthorityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ UntagCertificateAuthorityRequest::UntagCertificateAuthorityRequest(const UntagCe
  * Constructs a UntagCertificateAuthorityRequest object.
  */
 UntagCertificateAuthorityRequest::UntagCertificateAuthorityRequest()
-    : ACMPCARequest(new UntagCertificateAuthorityRequestPrivate(ACMPCARequest::UntagCertificateAuthorityAction, this))
+    : AcmpcaRequest(new UntagCertificateAuthorityRequestPrivate(AcmpcaRequest::UntagCertificateAuthorityAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * UntagCertificateAuthorityRequest::response(QN
  */
 
 /*!
- * Constructs a UntagCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * Constructs a UntagCertificateAuthorityRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate(
-    const ACMPCARequest::Action action, UntagCertificateAuthorityRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, UntagCertificateAuthorityRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate
  */
 UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate(
     const UntagCertificateAuthorityRequestPrivate &other, UntagCertificateAuthorityRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

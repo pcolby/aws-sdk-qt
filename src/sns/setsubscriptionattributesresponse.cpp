@@ -58,7 +58,7 @@ SetSubscriptionAttributesResponse::SetSubscriptionAttributesResponse(
         const SetSubscriptionAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SetSubscriptionAttributesResponsePrivate(this), parent)
+    : SnsResponse(new SetSubscriptionAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetSubscriptionAttributesRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void SetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a SetSubscriptionAttributesResponsePrivate object with public implementation \a q.
  */
 SetSubscriptionAttributesResponsePrivate::SetSubscriptionAttributesResponsePrivate(
-    SetSubscriptionAttributesResponse * const q) : SNSResponsePrivate(q)
+    SetSubscriptionAttributesResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

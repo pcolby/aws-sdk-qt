@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest &other)
-    : EC2Request(new CreateVolumeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateVolumeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest &other)
  * Constructs a CreateVolumeRequest object.
  */
 CreateVolumeRequest::CreateVolumeRequest()
-    : EC2Request(new CreateVolumeRequestPrivate(EC2Request::CreateVolumeAction, this))
+    : Ec2Request(new CreateVolumeRequestPrivate(Ec2Request::CreateVolumeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a CreateVolumeRequestPrivate object for EC2 \a action,
+ * Constructs a CreateVolumeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
-    const EC2Request::Action action, CreateVolumeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateVolumeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
  */
 CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
     const CreateVolumeRequestPrivate &other, CreateVolumeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

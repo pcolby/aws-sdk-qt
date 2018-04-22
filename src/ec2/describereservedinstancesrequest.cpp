@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeReservedInstancesRequest::DescribeReservedInstancesRequest(const DescribeReservedInstancesRequest &other)
-    : EC2Request(new DescribeReservedInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeReservedInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeReservedInstancesRequest::DescribeReservedInstancesRequest(const Describ
  * Constructs a DescribeReservedInstancesRequest object.
  */
 DescribeReservedInstancesRequest::DescribeReservedInstancesRequest()
-    : EC2Request(new DescribeReservedInstancesRequestPrivate(EC2Request::DescribeReservedInstancesAction, this))
+    : Ec2Request(new DescribeReservedInstancesRequestPrivate(Ec2Request::DescribeReservedInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeReservedInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeReservedInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate(
-    const EC2Request::Action action, DescribeReservedInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeReservedInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate
  */
 DescribeReservedInstancesRequestPrivate::DescribeReservedInstancesRequestPrivate(
     const DescribeReservedInstancesRequestPrivate &other, DescribeReservedInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

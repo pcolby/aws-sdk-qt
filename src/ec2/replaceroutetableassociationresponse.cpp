@@ -48,7 +48,7 @@ ReplaceRouteTableAssociationResponse::ReplaceRouteTableAssociationResponse(
         const ReplaceRouteTableAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReplaceRouteTableAssociationResponsePrivate(this), parent)
+    : Ec2Response(new ReplaceRouteTableAssociationResponsePrivate(this), parent)
 {
     setRequest(new ReplaceRouteTableAssociationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ReplaceRouteTableAssociationResponse::parseSuccess(QIODevice &response)
  * Constructs a ReplaceRouteTableAssociationResponsePrivate object with public implementation \a q.
  */
 ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationResponsePrivate(
-    ReplaceRouteTableAssociationResponse * const q) : EC2ResponsePrivate(q)
+    ReplaceRouteTableAssociationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ImportInstanceRequestPrivate;
 
-class QTAWS_EXPORT ImportInstanceRequest : public EC2Request {
+class QTAWS_EXPORT ImportInstanceRequest : public Ec2Request {
 
 public:
     ImportInstanceRequest(const ImportInstanceRequest &other);

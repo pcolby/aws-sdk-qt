@@ -55,7 +55,7 @@ GetSendStatisticsResponse::GetSendStatisticsResponse(
         const GetSendStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetSendStatisticsResponsePrivate(this), parent)
+    : SesResponse(new GetSendStatisticsResponsePrivate(this), parent)
 {
     setRequest(new GetSendStatisticsRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
  * Constructs a GetSendStatisticsResponsePrivate object with public implementation \a q.
  */
 GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
-    GetSendStatisticsResponse * const q) : SESResponsePrivate(q)
+    GetSendStatisticsResponse * const q) : SesResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ DescribeFpgaImagesResponse::DescribeFpgaImagesResponse(
         const DescribeFpgaImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeFpgaImagesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeFpgaImagesResponsePrivate(this), parent)
 {
     setRequest(new DescribeFpgaImagesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeFpgaImagesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeFpgaImagesResponsePrivate object with public implementation \a q.
  */
 DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponsePrivate(
-    DescribeFpgaImagesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeFpgaImagesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

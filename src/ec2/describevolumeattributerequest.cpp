@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest(const DescribeVolumeAttributeRequest &other)
-    : EC2Request(new DescribeVolumeAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVolumeAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest(const DescribeVol
  * Constructs a DescribeVolumeAttributeRequest object.
  */
 DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest()
-    : EC2Request(new DescribeVolumeAttributeRequestPrivate(EC2Request::DescribeVolumeAttributeAction, this))
+    : Ec2Request(new DescribeVolumeAttributeRequestPrivate(Ec2Request::DescribeVolumeAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNet
  */
 
 /*!
- * Constructs a DescribeVolumeAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVolumeAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
-    const EC2Request::Action action, DescribeVolumeAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVolumeAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
     const DescribeVolumeAttributeRequestPrivate &other, DescribeVolumeAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

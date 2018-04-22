@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeDhcpOptionsRequest;
 
-class QTAWS_EXPORT DescribeDhcpOptionsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeDhcpOptionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeDhcpOptionsRequestPrivate(const EC2Request::Action action,
+    DescribeDhcpOptionsRequestPrivate(const Ec2Request::Action action,
                                    DescribeDhcpOptionsRequest * const q);
     DescribeDhcpOptionsRequestPrivate(const DescribeDhcpOptionsRequestPrivate &other,
                                    DescribeDhcpOptionsRequest * const q);

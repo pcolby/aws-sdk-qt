@@ -28,10 +28,10 @@ namespace SSM {
 
 class DescribeMaintenanceWindowsRequest;
 
-class QTAWS_EXPORT DescribeMaintenanceWindowsRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DescribeMaintenanceWindowsRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DescribeMaintenanceWindowsRequestPrivate(const SSMRequest::Action action,
+    DescribeMaintenanceWindowsRequestPrivate(const SsmRequest::Action action,
                                    DescribeMaintenanceWindowsRequest * const q);
     DescribeMaintenanceWindowsRequestPrivate(const DescribeMaintenanceWindowsRequestPrivate &other,
                                    DescribeMaintenanceWindowsRequest * const q);

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RevokeDBSecurityGroupIngressRequest::RevokeDBSecurityGroupIngressRequest(const RevokeDBSecurityGroupIngressRequest &other)
-    : RDSRequest(new RevokeDBSecurityGroupIngressRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RevokeDBSecurityGroupIngressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RevokeDBSecurityGroupIngressRequest::RevokeDBSecurityGroupIngressRequest(const R
  * Constructs a RevokeDBSecurityGroupIngressRequest object.
  */
 RevokeDBSecurityGroupIngressRequest::RevokeDBSecurityGroupIngressRequest()
-    : RDSRequest(new RevokeDBSecurityGroupIngressRequestPrivate(RDSRequest::RevokeDBSecurityGroupIngressAction, this))
+    : RdsRequest(new RevokeDBSecurityGroupIngressRequestPrivate(RdsRequest::RevokeDBSecurityGroupIngressAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response
  */
 
 /*!
- * Constructs a RevokeDBSecurityGroupIngressRequestPrivate object for RDS \a action,
+ * Constructs a RevokeDBSecurityGroupIngressRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
-    const RDSRequest::Action action, RevokeDBSecurityGroupIngressRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RevokeDBSecurityGroupIngressRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestP
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
     const RevokeDBSecurityGroupIngressRequestPrivate &other, RevokeDBSecurityGroupIngressRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusRequest(const GetServiceLinkedRoleDeletionStatusRequest &other)
-    : IAMRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusReq
  * Constructs a GetServiceLinkedRoleDeletionStatusRequest object.
  */
 GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusRequest()
-    : IAMRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(IAMRequest::GetServiceLinkedRoleDeletionStatusAction, this))
+    : IamRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(IamRequest::GetServiceLinkedRoleDeletionStatusAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::re
  */
 
 /*!
- * Constructs a GetServiceLinkedRoleDeletionStatusRequestPrivate object for IAM \a action,
+ * Constructs a GetServiceLinkedRoleDeletionStatusRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
-    const IAMRequest::Action action, GetServiceLinkedRoleDeletionStatusRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetServiceLinkedRoleDeletionStatusRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionSt
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
     const GetServiceLinkedRoleDeletionStatusRequestPrivate &other, GetServiceLinkedRoleDeletionStatusRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

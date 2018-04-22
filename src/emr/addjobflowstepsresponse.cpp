@@ -47,7 +47,7 @@ AddJobFlowStepsResponse::AddJobFlowStepsResponse(
         const AddJobFlowStepsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new AddJobFlowStepsResponsePrivate(this), parent)
+    : EmrResponse(new AddJobFlowStepsResponsePrivate(this), parent)
 {
     setRequest(new AddJobFlowStepsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
  * Constructs a AddJobFlowStepsResponsePrivate object with public implementation \a q.
  */
 AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
-    AddJobFlowStepsResponse * const q) : EMRResponsePrivate(q)
+    AddJobFlowStepsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

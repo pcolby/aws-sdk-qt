@@ -27,7 +27,7 @@ namespace EMR {
 
 class SetTerminationProtectionResponse;
 
-class QTAWS_EXPORT SetTerminationProtectionResponsePrivate : public EMRResponsePrivate {
+class QTAWS_EXPORT SetTerminationProtectionResponsePrivate : public EmrResponsePrivate {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace RDS {
 
 class ListTagsForResourceResponse;
 
-class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public RDSResponsePrivate {
+class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public RdsResponsePrivate {
     Q_OBJECT
 
 public:

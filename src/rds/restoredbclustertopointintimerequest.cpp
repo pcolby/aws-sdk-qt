@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest(const RestoreDBClusterToPointInTimeRequest &other)
-    : RDSRequest(new RestoreDBClusterToPointInTimeRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RestoreDBClusterToPointInTimeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest(const
  * Constructs a RestoreDBClusterToPointInTimeRequest object.
  */
 RestoreDBClusterToPointInTimeRequest::RestoreDBClusterToPointInTimeRequest()
-    : RDSRequest(new RestoreDBClusterToPointInTimeRequestPrivate(RDSRequest::RestoreDBClusterToPointInTimeAction, this))
+    : RdsRequest(new RestoreDBClusterToPointInTimeRequestPrivate(RdsRequest::RestoreDBClusterToPointInTimeAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::respons
  */
 
 /*!
- * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for RDS \a action,
+ * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
-    const RDSRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RestoreDBClusterToPointInTimeRequestPrivate &other, RestoreDBClusterToPointInTimeRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

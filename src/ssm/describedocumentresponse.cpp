@@ -68,7 +68,7 @@ DescribeDocumentResponse::DescribeDocumentResponse(
         const DescribeDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeDocumentResponsePrivate(this), parent)
+    : SsmResponse(new DescribeDocumentResponsePrivate(this), parent)
 {
     setRequest(new DescribeDocumentRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeDocumentResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDocumentResponsePrivate object with public implementation \a q.
  */
 DescribeDocumentResponsePrivate::DescribeDocumentResponsePrivate(
-    DescribeDocumentResponse * const q) : SSMResponsePrivate(q)
+    DescribeDocumentResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

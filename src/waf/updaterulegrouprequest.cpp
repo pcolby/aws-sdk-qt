@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &other)
-    : WAFRequest(new UpdateRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateRuleGroupRequest::UpdateRuleGroupRequest(const UpdateRuleGroupRequest &oth
  * Constructs a UpdateRuleGroupRequest object.
  */
 UpdateRuleGroupRequest::UpdateRuleGroupRequest()
-    : WAFRequest(new UpdateRuleGroupRequestPrivate(WAFRequest::UpdateRuleGroupAction, this))
+    : WafRequest(new UpdateRuleGroupRequestPrivate(WafRequest::UpdateRuleGroupAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a UpdateRuleGroupRequestPrivate object for WAF \a action,
+ * Constructs a UpdateRuleGroupRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
-    const WAFRequest::Action action, UpdateRuleGroupRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateRuleGroupRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const UpdateRuleGroupRequestPrivate &other, UpdateRuleGroupRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

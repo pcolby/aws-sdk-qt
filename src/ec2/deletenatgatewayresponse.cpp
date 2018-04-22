@@ -48,7 +48,7 @@ DeleteNatGatewayResponse::DeleteNatGatewayResponse(
         const DeleteNatGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteNatGatewayResponsePrivate(this), parent)
+    : Ec2Response(new DeleteNatGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteNatGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteNatGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
-    DeleteNatGatewayResponse * const q) : EC2ResponsePrivate(q)
+    DeleteNatGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest(const GetWorkflowExecutionHistoryRequest &other)
-    : SWFRequest(new GetWorkflowExecutionHistoryRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new GetWorkflowExecutionHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest(const Get
  * Constructs a GetWorkflowExecutionHistoryRequest object.
  */
 GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest()
-    : SWFRequest(new GetWorkflowExecutionHistoryRequestPrivate(SWFRequest::GetWorkflowExecutionHistoryAction, this))
+    : SwfRequest(new GetWorkflowExecutionHistoryRequestPrivate(SwfRequest::GetWorkflowExecutionHistoryAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(
  */
 
 /*!
- * Constructs a GetWorkflowExecutionHistoryRequestPrivate object for SWF \a action,
+ * Constructs a GetWorkflowExecutionHistoryRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
-    const SWFRequest::Action action, GetWorkflowExecutionHistoryRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, GetWorkflowExecutionHistoryRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPri
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
     const GetWorkflowExecutionHistoryRequestPrivate &other, GetWorkflowExecutionHistoryRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

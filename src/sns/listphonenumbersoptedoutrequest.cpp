@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest(const ListPhoneNumbersOptedOutRequest &other)
-    : SNSRequest(new ListPhoneNumbersOptedOutRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new ListPhoneNumbersOptedOutRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest(const ListPhone
  * Constructs a ListPhoneNumbersOptedOutRequest object.
  */
 ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest()
-    : SNSRequest(new ListPhoneNumbersOptedOutRequestPrivate(SNSRequest::ListPhoneNumbersOptedOutAction, this))
+    : SnsRequest(new ListPhoneNumbersOptedOutRequestPrivate(SnsRequest::ListPhoneNumbersOptedOutAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
  */
 
 /*!
- * Constructs a ListPhoneNumbersOptedOutRequestPrivate object for SNS \a action,
+ * Constructs a ListPhoneNumbersOptedOutRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
-    const SNSRequest::Action action, ListPhoneNumbersOptedOutRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, ListPhoneNumbersOptedOutRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
     const ListPhoneNumbersOptedOutRequestPrivate &other, ListPhoneNumbersOptedOutRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

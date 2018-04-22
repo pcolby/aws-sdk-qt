@@ -48,7 +48,7 @@ DescribeClustersResponse::DescribeClustersResponse(
         const DescribeClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DescribeClustersResponsePrivate(this), parent)
+    : DaxResponse(new DescribeClustersResponsePrivate(this), parent)
 {
     setRequest(new DescribeClustersRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeClustersResponsePrivate object with public implementation \a q.
  */
 DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
-    DescribeClustersResponse * const q) : DAXResponsePrivate(q)
+    DescribeClustersResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

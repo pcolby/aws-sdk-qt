@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DeleteNetworkInterfaceRequest;
 
-class QTAWS_EXPORT DeleteNetworkInterfaceRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DeleteNetworkInterfaceRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DeleteNetworkInterfaceRequestPrivate(const EC2Request::Action action,
+    DeleteNetworkInterfaceRequestPrivate(const Ec2Request::Action action,
                                    DeleteNetworkInterfaceRequest * const q);
     DeleteNetworkInterfaceRequestPrivate(const DeleteNetworkInterfaceRequestPrivate &other,
                                    DeleteNetworkInterfaceRequest * const q);

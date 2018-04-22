@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CancelExportTaskRequest;
 
-class QTAWS_EXPORT CancelExportTaskRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CancelExportTaskRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CancelExportTaskRequestPrivate(const EC2Request::Action action,
+    CancelExportTaskRequestPrivate(const Ec2Request::Action action,
                                    CancelExportTaskRequest * const q);
     CancelExportTaskRequestPrivate(const CancelExportTaskRequestPrivate &other,
                                    CancelExportTaskRequest * const q);

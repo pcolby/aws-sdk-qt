@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListDocumentsRequest::ListDocumentsRequest(const ListDocumentsRequest &other)
-    : SSMRequest(new ListDocumentsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListDocumentsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListDocumentsRequest::ListDocumentsRequest(const ListDocumentsRequest &other)
  * Constructs a ListDocumentsRequest object.
  */
 ListDocumentsRequest::ListDocumentsRequest()
-    : SSMRequest(new ListDocumentsRequestPrivate(SSMRequest::ListDocumentsAction, this))
+    : SsmRequest(new ListDocumentsRequestPrivate(SsmRequest::ListDocumentsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a ListDocumentsRequestPrivate object for SSM \a action,
+ * Constructs a ListDocumentsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
-    const SSMRequest::Action action, ListDocumentsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListDocumentsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
  */
 ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
     const ListDocumentsRequestPrivate &other, ListDocumentsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

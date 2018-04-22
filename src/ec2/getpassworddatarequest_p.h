@@ -28,10 +28,10 @@ namespace EC2 {
 
 class GetPasswordDataRequest;
 
-class QTAWS_EXPORT GetPasswordDataRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT GetPasswordDataRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    GetPasswordDataRequestPrivate(const EC2Request::Action action,
+    GetPasswordDataRequestPrivate(const Ec2Request::Action action,
                                    GetPasswordDataRequest * const q);
     GetPasswordDataRequestPrivate(const GetPasswordDataRequestPrivate &other,
                                    GetPasswordDataRequest * const q);

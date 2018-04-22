@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 CancelKeyDeletionRequest::CancelKeyDeletionRequest(const CancelKeyDeletionRequest &other)
-    : KMSRequest(new CancelKeyDeletionRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new CancelKeyDeletionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ CancelKeyDeletionRequest::CancelKeyDeletionRequest(const CancelKeyDeletionReques
  * Constructs a CancelKeyDeletionRequest object.
  */
 CancelKeyDeletionRequest::CancelKeyDeletionRequest()
-    : KMSRequest(new CancelKeyDeletionRequestPrivate(KMSRequest::CancelKeyDeletionAction, this))
+    : KmsRequest(new CancelKeyDeletionRequestPrivate(KmsRequest::CancelKeyDeletionAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a CancelKeyDeletionRequestPrivate object for KMS \a action,
+ * Constructs a CancelKeyDeletionRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
-    const KMSRequest::Action action, CancelKeyDeletionRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, CancelKeyDeletionRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
     const CancelKeyDeletionRequestPrivate &other, CancelKeyDeletionRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

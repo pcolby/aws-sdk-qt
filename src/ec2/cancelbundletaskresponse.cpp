@@ -48,7 +48,7 @@ CancelBundleTaskResponse::CancelBundleTaskResponse(
         const CancelBundleTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelBundleTaskResponsePrivate(this), parent)
+    : Ec2Response(new CancelBundleTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelBundleTaskRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CancelBundleTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelBundleTaskResponsePrivate object with public implementation \a q.
  */
 CancelBundleTaskResponsePrivate::CancelBundleTaskResponsePrivate(
-    CancelBundleTaskResponse * const q) : EC2ResponsePrivate(q)
+    CancelBundleTaskResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

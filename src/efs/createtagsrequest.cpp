@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
-    : EFSRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new CreateTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
  * Constructs a CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
-    : EFSRequest(new CreateTagsRequestPrivate(EFSRequest::CreateTagsAction, this))
+    : EfsRequest(new CreateTagsRequestPrivate(EfsRequest::CreateTagsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a CreateTagsRequestPrivate object for EFS \a action,
+ * Constructs a CreateTagsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
-    const EFSRequest::Action action, CreateTagsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, CreateTagsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

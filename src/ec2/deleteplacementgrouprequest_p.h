@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DeletePlacementGroupRequest;
 
-class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DeletePlacementGroupRequestPrivate(const EC2Request::Action action,
+    DeletePlacementGroupRequestPrivate(const Ec2Request::Action action,
                                    DeletePlacementGroupRequest * const q);
     DeletePlacementGroupRequestPrivate(const DeletePlacementGroupRequestPrivate &other,
                                    DeletePlacementGroupRequest * const q);

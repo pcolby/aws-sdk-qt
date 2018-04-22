@@ -27,7 +27,7 @@ namespace WAF {
 
 class PutPermissionPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutPermissionPolicyRequest : public WAFRequest {
+class QTAWS_EXPORT PutPermissionPolicyRequest : public WafRequest {
 
 public:
     PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other);

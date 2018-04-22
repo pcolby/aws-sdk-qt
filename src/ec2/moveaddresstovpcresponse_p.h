@@ -27,7 +27,7 @@ namespace EC2 {
 
 class MoveAddressToVpcResponse;
 
-class QTAWS_EXPORT MoveAddressToVpcResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT MoveAddressToVpcResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

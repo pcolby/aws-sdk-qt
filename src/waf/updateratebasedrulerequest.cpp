@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest(const UpdateRateBasedRuleRequest &other)
-    : WAFRequest(new UpdateRateBasedRuleRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateRateBasedRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest(const UpdateRateBasedRule
  * Constructs a UpdateRateBasedRuleRequest object.
  */
 UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest()
-    : WAFRequest(new UpdateRateBasedRuleRequestPrivate(WAFRequest::UpdateRateBasedRuleAction, this))
+    : WafRequest(new UpdateRateBasedRuleRequestPrivate(WafRequest::UpdateRateBasedRuleAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetwork
  */
 
 /*!
- * Constructs a UpdateRateBasedRuleRequestPrivate object for WAF \a action,
+ * Constructs a UpdateRateBasedRuleRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
-    const WAFRequest::Action action, UpdateRateBasedRuleRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateRateBasedRuleRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
     const UpdateRateBasedRuleRequestPrivate &other, UpdateRateBasedRuleRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

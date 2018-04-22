@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest(const RespondActivityTaskCanceledRequest &other)
-    : SWFRequest(new RespondActivityTaskCanceledRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RespondActivityTaskCanceledRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest(const Res
  * Constructs a RespondActivityTaskCanceledRequest object.
  */
 RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest()
-    : SWFRequest(new RespondActivityTaskCanceledRequestPrivate(SWFRequest::RespondActivityTaskCanceledAction, this))
+    : SwfRequest(new RespondActivityTaskCanceledRequestPrivate(SwfRequest::RespondActivityTaskCanceledAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
  */
 
 /*!
- * Constructs a RespondActivityTaskCanceledRequestPrivate object for SWF \a action,
+ * Constructs a RespondActivityTaskCanceledRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
-    const SWFRequest::Action action, RespondActivityTaskCanceledRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RespondActivityTaskCanceledRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPri
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
     const RespondActivityTaskCanceledRequestPrivate &other, RespondActivityTaskCanceledRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

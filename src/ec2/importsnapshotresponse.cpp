@@ -48,7 +48,7 @@ ImportSnapshotResponse::ImportSnapshotResponse(
         const ImportSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ImportSnapshotResponsePrivate(this), parent)
+    : Ec2Response(new ImportSnapshotResponsePrivate(this), parent)
 {
     setRequest(new ImportSnapshotRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ImportSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportSnapshotResponsePrivate object with public implementation \a q.
  */
 ImportSnapshotResponsePrivate::ImportSnapshotResponsePrivate(
-    ImportSnapshotResponse * const q) : EC2ResponsePrivate(q)
+    ImportSnapshotResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

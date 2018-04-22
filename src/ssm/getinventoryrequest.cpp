@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetInventoryRequest::GetInventoryRequest(const GetInventoryRequest &other)
-    : SSMRequest(new GetInventoryRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetInventoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetInventoryRequest::GetInventoryRequest(const GetInventoryRequest &other)
  * Constructs a GetInventoryRequest object.
  */
 GetInventoryRequest::GetInventoryRequest()
-    : SSMRequest(new GetInventoryRequestPrivate(SSMRequest::GetInventoryAction, this))
+    : SsmRequest(new GetInventoryRequestPrivate(SsmRequest::GetInventoryAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetInventoryRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a GetInventoryRequestPrivate object for SSM \a action,
+ * Constructs a GetInventoryRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
-    const SSMRequest::Action action, GetInventoryRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetInventoryRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetInventoryRequestPrivate::GetInventoryRequestPrivate(
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
     const GetInventoryRequestPrivate &other, GetInventoryRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

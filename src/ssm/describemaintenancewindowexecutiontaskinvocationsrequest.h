@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeMaintenanceWindowExecutionTaskInvocationsRequest : public SSMRequest {
+class QTAWS_EXPORT DescribeMaintenanceWindowExecutionTaskInvocationsRequest : public SsmRequest {
 
 public:
     DescribeMaintenanceWindowExecutionTaskInvocationsRequest(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &other);

@@ -109,7 +109,7 @@ DeleteSSHPublicKeyResponse::DeleteSSHPublicKeyResponse(
         const DeleteSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteSSHPublicKeyResponsePrivate(this), parent)
+    : IamResponse(new DeleteSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteSSHPublicKeyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteSSHPublicKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponsePrivate(
-    DeleteSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
+    DeleteSSHPublicKeyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

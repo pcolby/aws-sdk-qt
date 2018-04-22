@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other)
-    : RDSRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEvent
  * Constructs a ModifyEventSubscriptionRequest object.
  */
 ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest()
-    : RDSRequest(new ModifyEventSubscriptionRequestPrivate(RDSRequest::ModifyEventSubscriptionAction, this))
+    : RdsRequest(new ModifyEventSubscriptionRequestPrivate(RdsRequest::ModifyEventSubscriptionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNet
  */
 
 /*!
- * Constructs a ModifyEventSubscriptionRequestPrivate object for RDS \a action,
+ * Constructs a ModifyEventSubscriptionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
-    const RDSRequest::Action action, ModifyEventSubscriptionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyEventSubscriptionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
  */
 ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
     const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

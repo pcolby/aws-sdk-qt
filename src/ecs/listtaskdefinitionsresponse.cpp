@@ -61,7 +61,7 @@ ListTaskDefinitionsResponse::ListTaskDefinitionsResponse(
         const ListTaskDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new ListTaskDefinitionsResponsePrivate(this), parent)
+    : EcsResponse(new ListTaskDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListTaskDefinitionsRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void ListTaskDefinitionsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListTaskDefinitionsResponsePrivate object with public implementation \a q.
  */
 ListTaskDefinitionsResponsePrivate::ListTaskDefinitionsResponsePrivate(
-    ListTaskDefinitionsResponse * const q) : ECSResponsePrivate(q)
+    ListTaskDefinitionsResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace IAM {
 
 class GetSSHPublicKeyRequest;
 
-class QTAWS_EXPORT GetSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT GetSSHPublicKeyRequestPrivate : public IamRequestPrivate {
 
 public:
-    GetSSHPublicKeyRequestPrivate(const IAMRequest::Action action,
+    GetSSHPublicKeyRequestPrivate(const IamRequest::Action action,
                                    GetSSHPublicKeyRequest * const q);
     GetSSHPublicKeyRequestPrivate(const GetSSHPublicKeyRequestPrivate &other,
                                    GetSSHPublicKeyRequest * const q);

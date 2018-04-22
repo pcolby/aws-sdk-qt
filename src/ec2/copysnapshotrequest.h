@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CopySnapshotRequestPrivate;
 
-class QTAWS_EXPORT CopySnapshotRequest : public EC2Request {
+class QTAWS_EXPORT CopySnapshotRequest : public Ec2Request {
 
 public:
     CopySnapshotRequest(const CopySnapshotRequest &other);

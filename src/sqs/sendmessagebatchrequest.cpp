@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 SendMessageBatchRequest::SendMessageBatchRequest(const SendMessageBatchRequest &other)
-    : SQSRequest(new SendMessageBatchRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new SendMessageBatchRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ SendMessageBatchRequest::SendMessageBatchRequest(const SendMessageBatchRequest &
  * Constructs a SendMessageBatchRequest object.
  */
 SendMessageBatchRequest::SendMessageBatchRequest()
-    : SQSRequest(new SendMessageBatchRequestPrivate(SQSRequest::SendMessageBatchAction, this))
+    : SqsRequest(new SendMessageBatchRequestPrivate(SqsRequest::SendMessageBatchAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a SendMessageBatchRequestPrivate object for SQS \a action,
+ * Constructs a SendMessageBatchRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
-    const SQSRequest::Action action, SendMessageBatchRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, SendMessageBatchRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
     const SendMessageBatchRequestPrivate &other, SendMessageBatchRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

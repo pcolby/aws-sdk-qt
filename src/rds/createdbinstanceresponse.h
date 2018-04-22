@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBInstanceResponsePrivate;
 
-class QTAWS_EXPORT CreateDBInstanceResponse : public RDSResponse {
+class QTAWS_EXPORT CreateDBInstanceResponse : public RdsResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetParametersByPathResponsePrivate;
 
-class QTAWS_EXPORT GetParametersByPathResponse : public SSMResponse {
+class QTAWS_EXPORT GetParametersByPathResponse : public SsmResponse {
     Q_OBJECT
 
 public:

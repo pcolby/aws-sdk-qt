@@ -63,7 +63,7 @@ ListStateMachinesResponse::ListStateMachinesResponse(
         const ListStateMachinesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new ListStateMachinesResponsePrivate(this), parent)
+    : SfnResponse(new ListStateMachinesResponsePrivate(this), parent)
 {
     setRequest(new ListStateMachinesRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void ListStateMachinesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListStateMachinesResponsePrivate object with public implementation \a q.
  */
 ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
-    ListStateMachinesResponse * const q) : SFNResponsePrivate(q)
+    ListStateMachinesResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

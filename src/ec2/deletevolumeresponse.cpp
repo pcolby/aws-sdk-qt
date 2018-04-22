@@ -48,7 +48,7 @@ DeleteVolumeResponse::DeleteVolumeResponse(
         const DeleteVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVolumeResponsePrivate(this), parent)
+    : Ec2Response(new DeleteVolumeResponsePrivate(this), parent)
 {
     setRequest(new DeleteVolumeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteVolumeResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteVolumeResponsePrivate object with public implementation \a q.
  */
 DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
-    DeleteVolumeResponse * const q) : EC2ResponsePrivate(q)
+    DeleteVolumeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

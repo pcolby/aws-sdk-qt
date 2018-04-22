@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 GenerateRandomRequest::GenerateRandomRequest(const GenerateRandomRequest &other)
-    : KMSRequest(new GenerateRandomRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new GenerateRandomRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ GenerateRandomRequest::GenerateRandomRequest(const GenerateRandomRequest &other)
  * Constructs a GenerateRandomRequest object.
  */
 GenerateRandomRequest::GenerateRandomRequest()
-    : KMSRequest(new GenerateRandomRequestPrivate(KMSRequest::GenerateRandomAction, this))
+    : KmsRequest(new GenerateRandomRequestPrivate(KmsRequest::GenerateRandomAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a GenerateRandomRequestPrivate object for KMS \a action,
+ * Constructs a GenerateRandomRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
-    const KMSRequest::Action action, GenerateRandomRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, GenerateRandomRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
     const GenerateRandomRequestPrivate &other, GenerateRandomRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

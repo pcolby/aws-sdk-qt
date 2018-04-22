@@ -108,7 +108,7 @@ RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
         const RestoreDBClusterToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
+    : RdsResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterToPointInTimeRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
  * Constructs a RestoreDBClusterToPointInTimeResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponsePrivate(
-    RestoreDBClusterToPointInTimeResponse * const q) : RDSResponsePrivate(q)
+    RestoreDBClusterToPointInTimeResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

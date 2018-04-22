@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
-    : EC2Request(new DeleteKeyPairRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteKeyPairRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteKeyPairRequest::DeleteKeyPairRequest(const DeleteKeyPairRequest &other)
  * Constructs a DeleteKeyPairRequest object.
  */
 DeleteKeyPairRequest::DeleteKeyPairRequest()
-    : EC2Request(new DeleteKeyPairRequestPrivate(EC2Request::DeleteKeyPairAction, this))
+    : Ec2Request(new DeleteKeyPairRequestPrivate(Ec2Request::DeleteKeyPairAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a DeleteKeyPairRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteKeyPairRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
-    const EC2Request::Action action, DeleteKeyPairRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteKeyPairRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const DeleteKeyPairRequestPrivate &other, DeleteKeyPairRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

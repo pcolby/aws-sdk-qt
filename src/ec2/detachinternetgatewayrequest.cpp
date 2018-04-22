@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DetachInternetGatewayRequest::DetachInternetGatewayRequest(const DetachInternetGatewayRequest &other)
-    : EC2Request(new DetachInternetGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DetachInternetGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DetachInternetGatewayRequest::DetachInternetGatewayRequest(const DetachInternetG
  * Constructs a DetachInternetGatewayRequest object.
  */
 DetachInternetGatewayRequest::DetachInternetGatewayRequest()
-    : EC2Request(new DetachInternetGatewayRequestPrivate(EC2Request::DetachInternetGatewayAction, this))
+    : Ec2Request(new DetachInternetGatewayRequestPrivate(Ec2Request::DetachInternetGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DetachInternetGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a DetachInternetGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
-    const EC2Request::Action action, DetachInternetGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DetachInternetGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
     const DetachInternetGatewayRequestPrivate &other, DetachInternetGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

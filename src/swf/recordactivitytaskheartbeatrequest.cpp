@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RecordActivityTaskHeartbeatRequest::RecordActivityTaskHeartbeatRequest(const RecordActivityTaskHeartbeatRequest &other)
-    : SWFRequest(new RecordActivityTaskHeartbeatRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RecordActivityTaskHeartbeatRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RecordActivityTaskHeartbeatRequest::RecordActivityTaskHeartbeatRequest(const Rec
  * Constructs a RecordActivityTaskHeartbeatRequest object.
  */
 RecordActivityTaskHeartbeatRequest::RecordActivityTaskHeartbeatRequest()
-    : SWFRequest(new RecordActivityTaskHeartbeatRequestPrivate(SWFRequest::RecordActivityTaskHeartbeatAction, this))
+    : SwfRequest(new RecordActivityTaskHeartbeatRequestPrivate(SwfRequest::RecordActivityTaskHeartbeatAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(
  */
 
 /*!
- * Constructs a RecordActivityTaskHeartbeatRequestPrivate object for SWF \a action,
+ * Constructs a RecordActivityTaskHeartbeatRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
-    const SWFRequest::Action action, RecordActivityTaskHeartbeatRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RecordActivityTaskHeartbeatRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPri
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
     const RecordActivityTaskHeartbeatRequestPrivate &other, RecordActivityTaskHeartbeatRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

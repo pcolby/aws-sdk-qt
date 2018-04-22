@@ -143,7 +143,7 @@ ListKeyPoliciesResponse::ListKeyPoliciesResponse(
         const ListKeyPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListKeyPoliciesResponsePrivate(this), parent)
+    : KmsResponse(new ListKeyPoliciesResponsePrivate(this), parent)
 {
     setRequest(new ListKeyPoliciesRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ListKeyPoliciesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListKeyPoliciesResponsePrivate object with public implementation \a q.
  */
 ListKeyPoliciesResponsePrivate::ListKeyPoliciesResponsePrivate(
-    ListKeyPoliciesResponse * const q) : KMSResponsePrivate(q)
+    ListKeyPoliciesResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

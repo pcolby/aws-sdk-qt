@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateServiceSpecificCredentialResponsePrivate;
 
-class QTAWS_EXPORT UpdateServiceSpecificCredentialResponse : public IAMResponse {
+class QTAWS_EXPORT UpdateServiceSpecificCredentialResponse : public IamResponse {
     Q_OBJECT
 
 public:

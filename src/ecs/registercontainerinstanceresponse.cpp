@@ -61,7 +61,7 @@ RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
         const RegisterContainerInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new RegisterContainerInstanceResponsePrivate(this), parent)
+    : EcsResponse(new RegisterContainerInstanceResponsePrivate(this), parent)
 {
     setRequest(new RegisterContainerInstanceRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void RegisterContainerInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a RegisterContainerInstanceResponsePrivate object with public implementation \a q.
  */
 RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePrivate(
-    RegisterContainerInstanceResponse * const q) : ECSResponsePrivate(q)
+    RegisterContainerInstanceResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

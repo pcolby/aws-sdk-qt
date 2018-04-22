@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateVpcResponse;
 
-class QTAWS_EXPORT CreateVpcResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT CreateVpcResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

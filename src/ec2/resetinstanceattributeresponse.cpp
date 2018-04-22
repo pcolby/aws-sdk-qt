@@ -48,7 +48,7 @@ ResetInstanceAttributeResponse::ResetInstanceAttributeResponse(
         const ResetInstanceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetInstanceAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ResetInstanceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetInstanceAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ResetInstanceAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetInstanceAttributeResponsePrivate object with public implementation \a q.
  */
 ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
-    ResetInstanceAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ResetInstanceAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 DeprecateActivityTypeRequest::DeprecateActivityTypeRequest(const DeprecateActivityTypeRequest &other)
-    : SWFRequest(new DeprecateActivityTypeRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new DeprecateActivityTypeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ DeprecateActivityTypeRequest::DeprecateActivityTypeRequest(const DeprecateActivi
  * Constructs a DeprecateActivityTypeRequest object.
  */
 DeprecateActivityTypeRequest::DeprecateActivityTypeRequest()
-    : SWFRequest(new DeprecateActivityTypeRequestPrivate(SWFRequest::DeprecateActivityTypeAction, this))
+    : SwfRequest(new DeprecateActivityTypeRequestPrivate(SwfRequest::DeprecateActivityTypeAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeprecateActivityTypeRequestPrivate object for SWF \a action,
+ * Constructs a DeprecateActivityTypeRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
-    const SWFRequest::Action action, DeprecateActivityTypeRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, DeprecateActivityTypeRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
     const DeprecateActivityTypeRequestPrivate &other, DeprecateActivityTypeRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

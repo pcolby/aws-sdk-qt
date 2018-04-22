@@ -48,7 +48,7 @@ DescribeElasticGpusResponse::DescribeElasticGpusResponse(
         const DescribeElasticGpusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeElasticGpusResponsePrivate(this), parent)
+    : Ec2Response(new DescribeElasticGpusResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticGpusRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeElasticGpusResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeElasticGpusResponsePrivate object with public implementation \a q.
  */
 DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
-    DescribeElasticGpusResponse * const q) : EC2ResponsePrivate(q)
+    DescribeElasticGpusResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

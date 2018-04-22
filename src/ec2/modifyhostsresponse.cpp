@@ -48,7 +48,7 @@ ModifyHostsResponse::ModifyHostsResponse(
         const ModifyHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyHostsResponsePrivate(this), parent)
+    : Ec2Response(new ModifyHostsResponsePrivate(this), parent)
 {
     setRequest(new ModifyHostsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyHostsResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyHostsResponsePrivate object with public implementation \a q.
  */
 ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
-    ModifyHostsResponse * const q) : EC2ResponsePrivate(q)
+    ModifyHostsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

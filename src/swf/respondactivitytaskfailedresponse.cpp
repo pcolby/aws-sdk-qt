@@ -60,7 +60,7 @@ RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
         const RespondActivityTaskFailedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RespondActivityTaskFailedResponsePrivate(this), parent)
+    : SwfResponse(new RespondActivityTaskFailedResponsePrivate(this), parent)
 {
     setRequest(new RespondActivityTaskFailedRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
  * Constructs a RespondActivityTaskFailedResponsePrivate object with public implementation \a q.
  */
 RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePrivate(
-    RespondActivityTaskFailedResponse * const q) : SWFResponsePrivate(q)
+    RespondActivityTaskFailedResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

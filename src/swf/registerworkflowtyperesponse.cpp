@@ -60,7 +60,7 @@ RegisterWorkflowTypeResponse::RegisterWorkflowTypeResponse(
         const RegisterWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RegisterWorkflowTypeResponsePrivate(this), parent)
+    : SwfResponse(new RegisterWorkflowTypeResponsePrivate(this), parent)
 {
     setRequest(new RegisterWorkflowTypeRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
  * Constructs a RegisterWorkflowTypeResponsePrivate object with public implementation \a q.
  */
 RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
-    RegisterWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
+    RegisterWorkflowTypeResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

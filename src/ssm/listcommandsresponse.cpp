@@ -68,7 +68,7 @@ ListCommandsResponse::ListCommandsResponse(
         const ListCommandsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListCommandsResponsePrivate(this), parent)
+    : SsmResponse(new ListCommandsResponsePrivate(this), parent)
 {
     setRequest(new ListCommandsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ListCommandsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListCommandsResponsePrivate object with public implementation \a q.
  */
 ListCommandsResponsePrivate::ListCommandsResponsePrivate(
-    ListCommandsResponse * const q) : SSMResponsePrivate(q)
+    ListCommandsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

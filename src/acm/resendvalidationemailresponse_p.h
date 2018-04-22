@@ -27,7 +27,7 @@ namespace ACM {
 
 class ResendValidationEmailResponse;
 
-class QTAWS_EXPORT ResendValidationEmailResponsePrivate : public ACMResponsePrivate {
+class QTAWS_EXPORT ResendValidationEmailResponsePrivate : public AcmResponsePrivate {
     Q_OBJECT
 
 public:

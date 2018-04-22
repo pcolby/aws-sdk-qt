@@ -48,7 +48,7 @@ CreateRouteResponse::CreateRouteResponse(
         const CreateRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateRouteResponsePrivate(this), parent)
+    : Ec2Response(new CreateRouteResponsePrivate(this), parent)
 {
     setRequest(new CreateRouteRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateRouteResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateRouteResponsePrivate object with public implementation \a q.
  */
 CreateRouteResponsePrivate::CreateRouteResponsePrivate(
-    CreateRouteResponse * const q) : EC2ResponsePrivate(q)
+    CreateRouteResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

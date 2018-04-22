@@ -55,7 +55,7 @@ UpdateConfigurationSetSendingEnabledResponse::UpdateConfigurationSetSendingEnabl
         const UpdateConfigurationSetSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateConfigurationSetSendingEnabledResponsePrivate(this), parent)
+    : SesResponse(new UpdateConfigurationSetSendingEnabledResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationSetSendingEnabledRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &respo
  * Constructs a UpdateConfigurationSetSendingEnabledResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendingEnabledResponsePrivate(
-    UpdateConfigurationSetSendingEnabledResponse * const q) : SESResponsePrivate(q)
+    UpdateConfigurationSetSendingEnabledResponse * const q) : SesResponsePrivate(q)
 {
 
 }

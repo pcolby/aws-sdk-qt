@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest(const ListEntitiesForPolicyRequest &other)
-    : IAMRequest(new ListEntitiesForPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListEntitiesForPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest(const ListEntitiesFor
  * Constructs a ListEntitiesForPolicyRequest object.
  */
 ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest()
-    : IAMRequest(new ListEntitiesForPolicyRequestPrivate(IAMRequest::ListEntitiesForPolicyAction, this))
+    : IamRequest(new ListEntitiesForPolicyRequestPrivate(IamRequest::ListEntitiesForPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListEntitiesForPolicyRequest::response(QNetwo
  */
 
 /*!
- * Constructs a ListEntitiesForPolicyRequestPrivate object for IAM \a action,
+ * Constructs a ListEntitiesForPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
-    const IAMRequest::Action action, ListEntitiesForPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListEntitiesForPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
     const ListEntitiesForPolicyRequestPrivate &other, ListEntitiesForPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

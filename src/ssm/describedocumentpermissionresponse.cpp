@@ -68,7 +68,7 @@ DescribeDocumentPermissionResponse::DescribeDocumentPermissionResponse(
         const DescribeDocumentPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeDocumentPermissionResponsePrivate(this), parent)
+    : SsmResponse(new DescribeDocumentPermissionResponsePrivate(this), parent)
 {
     setRequest(new DescribeDocumentPermissionRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeDocumentPermissionResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDocumentPermissionResponsePrivate object with public implementation \a q.
  */
 DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponsePrivate(
-    DescribeDocumentPermissionResponse * const q) : SSMResponsePrivate(q)
+    DescribeDocumentPermissionResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

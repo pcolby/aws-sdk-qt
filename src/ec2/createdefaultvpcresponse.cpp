@@ -48,7 +48,7 @@ CreateDefaultVpcResponse::CreateDefaultVpcResponse(
         const CreateDefaultVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateDefaultVpcResponsePrivate(this), parent)
+    : Ec2Response(new CreateDefaultVpcResponsePrivate(this), parent)
 {
     setRequest(new CreateDefaultVpcRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateDefaultVpcResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDefaultVpcResponsePrivate object with public implementation \a q.
  */
 CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
-    CreateDefaultVpcResponse * const q) : EC2ResponsePrivate(q)
+    CreateDefaultVpcResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

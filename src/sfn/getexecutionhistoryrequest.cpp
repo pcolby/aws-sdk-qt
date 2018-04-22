@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 GetExecutionHistoryRequest::GetExecutionHistoryRequest(const GetExecutionHistoryRequest &other)
-    : SFNRequest(new GetExecutionHistoryRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new GetExecutionHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ GetExecutionHistoryRequest::GetExecutionHistoryRequest(const GetExecutionHistory
  * Constructs a GetExecutionHistoryRequest object.
  */
 GetExecutionHistoryRequest::GetExecutionHistoryRequest()
-    : SFNRequest(new GetExecutionHistoryRequestPrivate(SFNRequest::GetExecutionHistoryAction, this))
+    : SfnRequest(new GetExecutionHistoryRequestPrivate(SfnRequest::GetExecutionHistoryAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
  */
 
 /*!
- * Constructs a GetExecutionHistoryRequestPrivate object for SFN \a action,
+ * Constructs a GetExecutionHistoryRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
-    const SFNRequest::Action action, GetExecutionHistoryRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, GetExecutionHistoryRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
     const GetExecutionHistoryRequestPrivate &other, GetExecutionHistoryRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

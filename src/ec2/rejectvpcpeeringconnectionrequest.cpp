@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest(const RejectVpcPeeringConnectionRequest &other)
-    : EC2Request(new RejectVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RejectVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest(const Rejec
  * Constructs a RejectVpcPeeringConnectionRequest object.
  */
 RejectVpcPeeringConnectionRequest::RejectVpcPeeringConnectionRequest()
-    : EC2Request(new RejectVpcPeeringConnectionRequestPrivate(EC2Request::RejectVpcPeeringConnectionAction, this))
+    : Ec2Request(new RejectVpcPeeringConnectionRequestPrivate(Ec2Request::RejectVpcPeeringConnectionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- * Constructs a RejectVpcPeeringConnectionRequestPrivate object for EC2 \a action,
+ * Constructs a RejectVpcPeeringConnectionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
-    const EC2Request::Action action, RejectVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RejectVpcPeeringConnectionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPriva
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
     const RejectVpcPeeringConnectionRequestPrivate &other, RejectVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

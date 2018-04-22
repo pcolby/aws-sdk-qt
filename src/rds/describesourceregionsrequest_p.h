@@ -28,10 +28,10 @@ namespace RDS {
 
 class DescribeSourceRegionsRequest;
 
-class QTAWS_EXPORT DescribeSourceRegionsRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT DescribeSourceRegionsRequestPrivate : public RdsRequestPrivate {
 
 public:
-    DescribeSourceRegionsRequestPrivate(const RDSRequest::Action action,
+    DescribeSourceRegionsRequestPrivate(const RdsRequest::Action action,
                                    DescribeSourceRegionsRequest * const q);
     DescribeSourceRegionsRequestPrivate(const DescribeSourceRegionsRequestPrivate &other,
                                    DescribeSourceRegionsRequest * const q);

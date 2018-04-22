@@ -28,10 +28,10 @@ namespace SSM {
 
 class DescribeInstancePatchStatesRequest;
 
-class QTAWS_EXPORT DescribeInstancePatchStatesRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DescribeInstancePatchStatesRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DescribeInstancePatchStatesRequestPrivate(const SSMRequest::Action action,
+    DescribeInstancePatchStatesRequestPrivate(const SsmRequest::Action action,
                                    DescribeInstancePatchStatesRequest * const q);
     DescribeInstancePatchStatesRequestPrivate(const DescribeInstancePatchStatesRequestPrivate &other,
                                    DescribeInstancePatchStatesRequest * const q);

@@ -109,7 +109,7 @@ AddRoleToInstanceProfileResponse::AddRoleToInstanceProfileResponse(
         const AddRoleToInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new AddRoleToInstanceProfileResponsePrivate(this), parent)
+    : IamResponse(new AddRoleToInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new AddRoleToInstanceProfileRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void AddRoleToInstanceProfileResponse::parseSuccess(QIODevice &response)
  * Constructs a AddRoleToInstanceProfileResponsePrivate object with public implementation \a q.
  */
 AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponsePrivate(
-    AddRoleToInstanceProfileResponse * const q) : IAMResponsePrivate(q)
+    AddRoleToInstanceProfileResponse * const q) : IamResponsePrivate(q)
 {
 
 }

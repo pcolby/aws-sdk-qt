@@ -55,7 +55,7 @@ DeleteIdentityResponse::DeleteIdentityResponse(
         const DeleteIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteIdentityResponsePrivate(this), parent)
+    : SesResponse(new DeleteIdentityResponsePrivate(this), parent)
 {
     setRequest(new DeleteIdentityRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteIdentityResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteIdentityResponsePrivate object with public implementation \a q.
  */
 DeleteIdentityResponsePrivate::DeleteIdentityResponsePrivate(
-    DeleteIdentityResponse * const q) : SESResponsePrivate(q)
+    DeleteIdentityResponse * const q) : SesResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest(const PurchaseScheduledInstancesRequest &other)
-    : EC2Request(new PurchaseScheduledInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new PurchaseScheduledInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest(const Purch
  * Constructs a PurchaseScheduledInstancesRequest object.
  */
 PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest()
-    : EC2Request(new PurchaseScheduledInstancesRequestPrivate(EC2Request::PurchaseScheduledInstancesAction, this))
+    : Ec2Request(new PurchaseScheduledInstancesRequestPrivate(Ec2Request::PurchaseScheduledInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(Q
  */
 
 /*!
- * Constructs a PurchaseScheduledInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a PurchaseScheduledInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
-    const EC2Request::Action action, PurchaseScheduledInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, PurchaseScheduledInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPriva
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
     const PurchaseScheduledInstancesRequestPrivate &other, PurchaseScheduledInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -108,7 +108,7 @@ PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
         const PromoteReadReplicaDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new PromoteReadReplicaDBClusterResponsePrivate(this), parent)
+    : RdsResponse(new PromoteReadReplicaDBClusterResponsePrivate(this), parent)
 {
     setRequest(new PromoteReadReplicaDBClusterRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a PromoteReadReplicaDBClusterResponsePrivate object with public implementation \a q.
  */
 PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponsePrivate(
-    PromoteReadReplicaDBClusterResponse * const q) : RDSResponsePrivate(q)
+    PromoteReadReplicaDBClusterResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

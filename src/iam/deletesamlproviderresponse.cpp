@@ -109,7 +109,7 @@ DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
         const DeleteSAMLProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteSAMLProviderResponsePrivate(this), parent)
+    : IamResponse(new DeleteSAMLProviderResponsePrivate(this), parent)
 {
     setRequest(new DeleteSAMLProviderRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSAMLProviderResponsePrivate object with public implementation \a q.
  */
 DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
-    DeleteSAMLProviderResponse * const q) : IAMResponsePrivate(q)
+    DeleteSAMLProviderResponse * const q) : IamResponsePrivate(q)
 {
 
 }

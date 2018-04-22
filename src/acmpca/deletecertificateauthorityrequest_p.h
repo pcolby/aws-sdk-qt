@@ -28,10 +28,10 @@ namespace ACMPCA {
 
 class DeleteCertificateAuthorityRequest;
 
-class QTAWS_EXPORT DeleteCertificateAuthorityRequestPrivate : public ACMPCARequestPrivate {
+class QTAWS_EXPORT DeleteCertificateAuthorityRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
-    DeleteCertificateAuthorityRequestPrivate(const ACMPCARequest::Action action,
+    DeleteCertificateAuthorityRequestPrivate(const AcmpcaRequest::Action action,
                                    DeleteCertificateAuthorityRequest * const q);
     DeleteCertificateAuthorityRequestPrivate(const DeleteCertificateAuthorityRequestPrivate &other,
                                    DeleteCertificateAuthorityRequest * const q);

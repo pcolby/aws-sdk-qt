@@ -55,7 +55,7 @@ GetIdentityVerificationAttributesResponse::GetIdentityVerificationAttributesResp
         const GetIdentityVerificationAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetIdentityVerificationAttributesResponsePrivate(this), parent)
+    : SesResponse(new GetIdentityVerificationAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityVerificationAttributesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response
  * Constructs a GetIdentityVerificationAttributesResponsePrivate object with public implementation \a q.
  */
 GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttributesResponsePrivate(
-    GetIdentityVerificationAttributesResponse * const q) : SESResponsePrivate(q)
+    GetIdentityVerificationAttributesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

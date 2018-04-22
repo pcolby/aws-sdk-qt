@@ -28,10 +28,10 @@ namespace IAM {
 
 class SetDefaultPolicyVersionRequest;
 
-class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IamRequestPrivate {
 
 public:
-    SetDefaultPolicyVersionRequestPrivate(const IAMRequest::Action action,
+    SetDefaultPolicyVersionRequestPrivate(const IamRequest::Action action,
                                    SetDefaultPolicyVersionRequest * const q);
     SetDefaultPolicyVersionRequestPrivate(const SetDefaultPolicyVersionRequestPrivate &other,
                                    SetDefaultPolicyVersionRequest * const q);

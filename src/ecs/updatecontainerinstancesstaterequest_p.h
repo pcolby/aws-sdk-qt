@@ -28,10 +28,10 @@ namespace ECS {
 
 class UpdateContainerInstancesStateRequest;
 
-class QTAWS_EXPORT UpdateContainerInstancesStateRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT UpdateContainerInstancesStateRequestPrivate : public EcsRequestPrivate {
 
 public:
-    UpdateContainerInstancesStateRequestPrivate(const ECSRequest::Action action,
+    UpdateContainerInstancesStateRequestPrivate(const EcsRequest::Action action,
                                    UpdateContainerInstancesStateRequest * const q);
     UpdateContainerInstancesStateRequestPrivate(const UpdateContainerInstancesStateRequestPrivate &other,
                                    UpdateContainerInstancesStateRequest * const q);

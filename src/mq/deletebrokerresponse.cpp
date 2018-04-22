@@ -46,7 +46,7 @@ DeleteBrokerResponse::DeleteBrokerResponse(
         const DeleteBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new DeleteBrokerResponsePrivate(this), parent)
+    : MqResponse(new DeleteBrokerResponsePrivate(this), parent)
 {
     setRequest(new DeleteBrokerRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void DeleteBrokerResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteBrokerResponsePrivate object with public implementation \a q.
  */
 DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
-    DeleteBrokerResponse * const q) : MQResponsePrivate(q)
+    DeleteBrokerResponse * const q) : MqResponsePrivate(q)
 {
 
 }

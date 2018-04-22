@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetPolicyVersionResponsePrivate;
 
-class QTAWS_EXPORT GetPolicyVersionResponse : public IAMResponse {
+class QTAWS_EXPORT GetPolicyVersionResponse : public IamResponse {
     Q_OBJECT
 
 public:

@@ -60,7 +60,7 @@ RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
         const RecordActivityTaskHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RecordActivityTaskHeartbeatResponsePrivate(this), parent)
+    : SwfResponse(new RecordActivityTaskHeartbeatResponsePrivate(this), parent)
 {
     setRequest(new RecordActivityTaskHeartbeatRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RecordActivityTaskHeartbeatResponse::parseSuccess(QIODevice &response)
  * Constructs a RecordActivityTaskHeartbeatResponsePrivate object with public implementation \a q.
  */
 RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponsePrivate(
-    RecordActivityTaskHeartbeatResponse * const q) : SWFResponsePrivate(q)
+    RecordActivityTaskHeartbeatResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

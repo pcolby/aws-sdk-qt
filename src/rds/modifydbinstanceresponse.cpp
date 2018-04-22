@@ -108,7 +108,7 @@ ModifyDBInstanceResponse::ModifyDBInstanceResponse(
         const ModifyDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBInstanceResponsePrivate(this), parent)
+    : RdsResponse(new ModifyDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBInstanceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyDBInstanceResponsePrivate object with public implementation \a q.
  */
 ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
-    ModifyDBInstanceResponse * const q) : RDSResponsePrivate(q)
+    ModifyDBInstanceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

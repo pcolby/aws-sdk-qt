@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetServerCertificateRequest::GetServerCertificateRequest(const GetServerCertificateRequest &other)
-    : IAMRequest(new GetServerCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetServerCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetServerCertificateRequest::GetServerCertificateRequest(const GetServerCertific
  * Constructs a GetServerCertificateRequest object.
  */
 GetServerCertificateRequest::GetServerCertificateRequest()
-    : IAMRequest(new GetServerCertificateRequestPrivate(IAMRequest::GetServerCertificateAction, this))
+    : IamRequest(new GetServerCertificateRequestPrivate(IamRequest::GetServerCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetServerCertificateRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetServerCertificateRequestPrivate object for IAM \a action,
+ * Constructs a GetServerCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
-    const IAMRequest::Action action, GetServerCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetServerCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
  */
 GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
     const GetServerCertificateRequestPrivate &other, GetServerCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

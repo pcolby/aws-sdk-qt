@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
-    : ECSRequest(new DeleteServiceRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DeleteServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
  * Constructs a DeleteServiceRequest object.
  */
 DeleteServiceRequest::DeleteServiceRequest()
-    : ECSRequest(new DeleteServiceRequestPrivate(ECSRequest::DeleteServiceAction, this))
+    : EcsRequest(new DeleteServiceRequestPrivate(EcsRequest::DeleteServiceAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a DeleteServiceRequestPrivate object for ECS \a action,
+ * Constructs a DeleteServiceRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
-    const ECSRequest::Action action, DeleteServiceRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DeleteServiceRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const DeleteServiceRequestPrivate &other, DeleteServiceRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

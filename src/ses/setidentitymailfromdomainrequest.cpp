@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SetIdentityMailFromDomainRequest::SetIdentityMailFromDomainRequest(const SetIdentityMailFromDomainRequest &other)
-    : SESRequest(new SetIdentityMailFromDomainRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SetIdentityMailFromDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SetIdentityMailFromDomainRequest::SetIdentityMailFromDomainRequest(const SetIden
  * Constructs a SetIdentityMailFromDomainRequest object.
  */
 SetIdentityMailFromDomainRequest::SetIdentityMailFromDomainRequest()
-    : SESRequest(new SetIdentityMailFromDomainRequestPrivate(SESRequest::SetIdentityMailFromDomainAction, this))
+    : SesRequest(new SetIdentityMailFromDomainRequestPrivate(SesRequest::SetIdentityMailFromDomainAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SetIdentityMailFromDomainRequest::response(QN
  */
 
 /*!
- * Constructs a SetIdentityMailFromDomainRequestPrivate object for SES \a action,
+ * Constructs a SetIdentityMailFromDomainRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate(
-    const SESRequest::Action action, SetIdentityMailFromDomainRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SetIdentityMailFromDomainRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate
  */
 SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate(
     const SetIdentityMailFromDomainRequestPrivate &other, SetIdentityMailFromDomainRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

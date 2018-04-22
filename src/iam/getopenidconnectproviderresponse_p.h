@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetOpenIDConnectProviderResponse;
 
-class QTAWS_EXPORT GetOpenIDConnectProviderResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT GetOpenIDConnectProviderResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

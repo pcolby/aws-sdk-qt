@@ -48,7 +48,7 @@ DescribeEgressOnlyInternetGatewaysResponse::DescribeEgressOnlyInternetGatewaysRe
         const DescribeEgressOnlyInternetGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeEgressOnlyInternetGatewaysResponsePrivate(this), parent)
+    : Ec2Response(new DescribeEgressOnlyInternetGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeEgressOnlyInternetGatewaysRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeEgressOnlyInternetGatewaysResponse::parseSuccess(QIODevice &respons
  * Constructs a DescribeEgressOnlyInternetGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyInternetGatewaysResponsePrivate(
-    DescribeEgressOnlyInternetGatewaysResponse * const q) : EC2ResponsePrivate(q)
+    DescribeEgressOnlyInternetGatewaysResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

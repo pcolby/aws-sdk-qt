@@ -53,7 +53,7 @@ GetCertificateResponse::GetCertificateResponse(
         const GetCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new GetCertificateResponsePrivate(this), parent)
+    : AcmResponse(new GetCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetCertificateRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void GetCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a GetCertificateResponsePrivate object with public implementation \a q.
  */
 GetCertificateResponsePrivate::GetCertificateResponsePrivate(
-    GetCertificateResponse * const q) : ACMResponsePrivate(q)
+    GetCertificateResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

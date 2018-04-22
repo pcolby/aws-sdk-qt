@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 AttachRolePolicyRequest::AttachRolePolicyRequest(const AttachRolePolicyRequest &other)
-    : IAMRequest(new AttachRolePolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new AttachRolePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ AttachRolePolicyRequest::AttachRolePolicyRequest(const AttachRolePolicyRequest &
  * Constructs a AttachRolePolicyRequest object.
  */
 AttachRolePolicyRequest::AttachRolePolicyRequest()
-    : IAMRequest(new AttachRolePolicyRequestPrivate(IAMRequest::AttachRolePolicyAction, this))
+    : IamRequest(new AttachRolePolicyRequestPrivate(IamRequest::AttachRolePolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * AttachRolePolicyRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a AttachRolePolicyRequestPrivate object for IAM \a action,
+ * Constructs a AttachRolePolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
-    const IAMRequest::Action action, AttachRolePolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, AttachRolePolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
  */
 AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
     const AttachRolePolicyRequestPrivate &other, AttachRolePolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -49,7 +49,7 @@ CreateWebACLResponse::CreateWebACLResponse(
         const CreateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new CreateWebACLResponsePrivate(this), parent)
+    : WafResponse(new CreateWebACLResponsePrivate(this), parent)
 {
     setRequest(new CreateWebACLRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void CreateWebACLResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateWebACLResponsePrivate object with public implementation \a q.
  */
 CreateWebACLResponsePrivate::CreateWebACLResponsePrivate(
-    CreateWebACLResponse * const q) : WAFResponsePrivate(q)
+    CreateWebACLResponse * const q) : WafResponsePrivate(q)
 {
 
 }

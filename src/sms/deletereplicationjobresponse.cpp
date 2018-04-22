@@ -44,7 +44,7 @@ DeleteReplicationJobResponse::DeleteReplicationJobResponse(
         const DeleteReplicationJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new DeleteReplicationJobResponsePrivate(this), parent)
+    : SmsResponse(new DeleteReplicationJobResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationJobRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void DeleteReplicationJobResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteReplicationJobResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponsePrivate(
-    DeleteReplicationJobResponse * const q) : SMSResponsePrivate(q)
+    DeleteReplicationJobResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

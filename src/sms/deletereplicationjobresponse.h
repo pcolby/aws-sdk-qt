@@ -28,7 +28,7 @@ namespace SMS {
 
 class DeleteReplicationJobResponsePrivate;
 
-class QTAWS_EXPORT DeleteReplicationJobResponse : public SMSResponse {
+class QTAWS_EXPORT DeleteReplicationJobResponse : public SmsResponse {
     Q_OBJECT
 
 public:

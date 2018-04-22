@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyIdFormatRequest::ModifyIdFormatRequest(const ModifyIdFormatRequest &other)
-    : EC2Request(new ModifyIdFormatRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyIdFormatRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyIdFormatRequest::ModifyIdFormatRequest(const ModifyIdFormatRequest &other)
  * Constructs a ModifyIdFormatRequest object.
  */
 ModifyIdFormatRequest::ModifyIdFormatRequest()
-    : EC2Request(new ModifyIdFormatRequestPrivate(EC2Request::ModifyIdFormatAction, this))
+    : Ec2Request(new ModifyIdFormatRequestPrivate(Ec2Request::ModifyIdFormatAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ModifyIdFormatRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyIdFormatRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
-    const EC2Request::Action action, ModifyIdFormatRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyIdFormatRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
  */
 ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
     const ModifyIdFormatRequestPrivate &other, ModifyIdFormatRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

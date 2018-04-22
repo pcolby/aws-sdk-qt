@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ImportSnapshotRequest;
 
-class QTAWS_EXPORT ImportSnapshotRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ImportSnapshotRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ImportSnapshotRequestPrivate(const EC2Request::Action action,
+    ImportSnapshotRequestPrivate(const Ec2Request::Action action,
                                    ImportSnapshotRequest * const q);
     ImportSnapshotRequestPrivate(const ImportSnapshotRequestPrivate &other,
                                    ImportSnapshotRequest * const q);

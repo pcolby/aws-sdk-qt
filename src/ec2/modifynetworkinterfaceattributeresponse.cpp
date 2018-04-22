@@ -48,7 +48,7 @@ ModifyNetworkInterfaceAttributeResponse::ModifyNetworkInterfaceAttributeResponse
         const ModifyNetworkInterfaceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyNetworkInterfaceAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifyNetworkInterfaceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyNetworkInterfaceAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyNetworkInterfaceAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyNetworkInterfaceAttributeResponsePrivate::ModifyNetworkInterfaceAttributeResponsePrivate(
-    ModifyNetworkInterfaceAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifyNetworkInterfaceAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

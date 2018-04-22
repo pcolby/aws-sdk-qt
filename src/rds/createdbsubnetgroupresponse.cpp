@@ -108,7 +108,7 @@ CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
         const CreateDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBSubnetGroupResponsePrivate(this), parent)
+    : RdsResponse(new CreateDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSubnetGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
-    CreateDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
+    CreateDBSubnetGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

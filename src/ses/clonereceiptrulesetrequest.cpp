@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest(const CloneReceiptRuleSetRequest &other)
-    : SESRequest(new CloneReceiptRuleSetRequestPrivate(*other.d_func(), this))
+    : SesRequest(new CloneReceiptRuleSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest(const CloneReceiptRuleSet
  * Constructs a CloneReceiptRuleSetRequest object.
  */
 CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest()
-    : SESRequest(new CloneReceiptRuleSetRequestPrivate(SESRequest::CloneReceiptRuleSetAction, this))
+    : SesRequest(new CloneReceiptRuleSetRequestPrivate(SesRequest::CloneReceiptRuleSetAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetwork
  */
 
 /*!
- * Constructs a CloneReceiptRuleSetRequestPrivate object for SES \a action,
+ * Constructs a CloneReceiptRuleSetRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
-    const SESRequest::Action action, CloneReceiptRuleSetRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, CloneReceiptRuleSetRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
     const CloneReceiptRuleSetRequestPrivate &other, CloneReceiptRuleSetRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

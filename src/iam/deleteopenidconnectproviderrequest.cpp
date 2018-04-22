@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest(const DeleteOpenIDConnectProviderRequest &other)
-    : IAMRequest(new DeleteOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest(const Del
  * Constructs a DeleteOpenIDConnectProviderRequest object.
  */
 DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest()
-    : IAMRequest(new DeleteOpenIDConnectProviderRequestPrivate(IAMRequest::DeleteOpenIDConnectProviderAction, this))
+    : IamRequest(new DeleteOpenIDConnectProviderRequestPrivate(IamRequest::DeleteOpenIDConnectProviderAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(
  */
 
 /*!
- * Constructs a DeleteOpenIDConnectProviderRequestPrivate object for IAM \a action,
+ * Constructs a DeleteOpenIDConnectProviderRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
-    const IAMRequest::Action action, DeleteOpenIDConnectProviderRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteOpenIDConnectProviderRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPri
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
     const DeleteOpenIDConnectProviderRequestPrivate &other, DeleteOpenIDConnectProviderRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

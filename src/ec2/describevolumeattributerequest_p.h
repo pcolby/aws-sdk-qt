@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeVolumeAttributeRequest;
 
-class QTAWS_EXPORT DescribeVolumeAttributeRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeVolumeAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeVolumeAttributeRequestPrivate(const EC2Request::Action action,
+    DescribeVolumeAttributeRequestPrivate(const Ec2Request::Action action,
                                    DescribeVolumeAttributeRequest * const q);
     DescribeVolumeAttributeRequestPrivate(const DescribeVolumeAttributeRequestPrivate &other,
                                    DescribeVolumeAttributeRequest * const q);

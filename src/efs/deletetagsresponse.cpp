@@ -50,7 +50,7 @@ DeleteTagsResponse::DeleteTagsResponse(
         const DeleteTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DeleteTagsResponsePrivate(this), parent)
+    : EfsResponse(new DeleteTagsResponsePrivate(this), parent)
 {
     setRequest(new DeleteTagsRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteTagsResponsePrivate object with public implementation \a q.
  */
 DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
-    DeleteTagsResponse * const q) : EFSResponsePrivate(q)
+    DeleteTagsResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

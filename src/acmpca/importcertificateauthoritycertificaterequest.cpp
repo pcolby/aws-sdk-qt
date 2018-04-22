@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 ImportCertificateAuthorityCertificateRequest::ImportCertificateAuthorityCertificateRequest(const ImportCertificateAuthorityCertificateRequest &other)
-    : ACMPCARequest(new ImportCertificateAuthorityCertificateRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new ImportCertificateAuthorityCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ ImportCertificateAuthorityCertificateRequest::ImportCertificateAuthorityCertific
  * Constructs a ImportCertificateAuthorityCertificateRequest object.
  */
 ImportCertificateAuthorityCertificateRequest::ImportCertificateAuthorityCertificateRequest()
-    : ACMPCARequest(new ImportCertificateAuthorityCertificateRequestPrivate(ACMPCARequest::ImportCertificateAuthorityCertificateAction, this))
+    : AcmpcaRequest(new ImportCertificateAuthorityCertificateRequestPrivate(AcmpcaRequest::ImportCertificateAuthorityCertificateAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateAuthorityCertificateRequest:
  */
 
 /*!
- * Constructs a ImportCertificateAuthorityCertificateRequestPrivate object for ACMPCA \a action,
+ * Constructs a ImportCertificateAuthorityCertificateRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityCertificateRequestPrivate(
-    const ACMPCARequest::Action action, ImportCertificateAuthorityCertificateRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, ImportCertificateAuthorityCertificateRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityC
  */
 ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityCertificateRequestPrivate(
     const ImportCertificateAuthorityCertificateRequestPrivate &other, ImportCertificateAuthorityCertificateRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

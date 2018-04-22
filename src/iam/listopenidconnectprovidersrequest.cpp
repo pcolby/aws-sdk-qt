@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest(const ListOpenIDConnectProvidersRequest &other)
-    : IAMRequest(new ListOpenIDConnectProvidersRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListOpenIDConnectProvidersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest(const ListO
  * Constructs a ListOpenIDConnectProvidersRequest object.
  */
 ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest()
-    : IAMRequest(new ListOpenIDConnectProvidersRequestPrivate(IAMRequest::ListOpenIDConnectProvidersAction, this))
+    : IamRequest(new ListOpenIDConnectProvidersRequestPrivate(IamRequest::ListOpenIDConnectProvidersAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListOpenIDConnectProvidersRequest::response(Q
  */
 
 /*!
- * Constructs a ListOpenIDConnectProvidersRequestPrivate object for IAM \a action,
+ * Constructs a ListOpenIDConnectProvidersRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
-    const IAMRequest::Action action, ListOpenIDConnectProvidersRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListOpenIDConnectProvidersRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPriva
  */
 ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
     const ListOpenIDConnectProvidersRequestPrivate &other, ListOpenIDConnectProvidersRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

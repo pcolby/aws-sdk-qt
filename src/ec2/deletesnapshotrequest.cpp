@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
-    : EC2Request(new DeleteSnapshotRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
  * Constructs a DeleteSnapshotRequest object.
  */
 DeleteSnapshotRequest::DeleteSnapshotRequest()
-    : EC2Request(new DeleteSnapshotRequestPrivate(EC2Request::DeleteSnapshotAction, this))
+    : Ec2Request(new DeleteSnapshotRequestPrivate(Ec2Request::DeleteSnapshotAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DeleteSnapshotRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteSnapshotRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
-    const EC2Request::Action action, DeleteSnapshotRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteSnapshotRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const DeleteSnapshotRequestPrivate &other, DeleteSnapshotRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

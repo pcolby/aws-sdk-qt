@@ -28,10 +28,10 @@ namespace SES {
 
 class SendTemplatedEmailRequest;
 
-class QTAWS_EXPORT SendTemplatedEmailRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT SendTemplatedEmailRequestPrivate : public SesRequestPrivate {
 
 public:
-    SendTemplatedEmailRequestPrivate(const SESRequest::Action action,
+    SendTemplatedEmailRequestPrivate(const SesRequest::Action action,
                                    SendTemplatedEmailRequest * const q);
     SendTemplatedEmailRequestPrivate(const SendTemplatedEmailRequestPrivate &other,
                                    SendTemplatedEmailRequest * const q);

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteDocumentRequest::DeleteDocumentRequest(const DeleteDocumentRequest &other)
-    : SSMRequest(new DeleteDocumentRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteDocumentRequest::DeleteDocumentRequest(const DeleteDocumentRequest &other)
  * Constructs a DeleteDocumentRequest object.
  */
 DeleteDocumentRequest::DeleteDocumentRequest()
-    : SSMRequest(new DeleteDocumentRequestPrivate(SSMRequest::DeleteDocumentAction, this))
+    : SsmRequest(new DeleteDocumentRequestPrivate(SsmRequest::DeleteDocumentAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DeleteDocumentRequestPrivate object for SSM \a action,
+ * Constructs a DeleteDocumentRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
-    const SSMRequest::Action action, DeleteDocumentRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteDocumentRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const DeleteDocumentRequestPrivate &other, DeleteDocumentRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

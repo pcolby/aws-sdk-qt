@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest(const ModifyInstanceAttributeRequest &other)
-    : EC2Request(new ModifyInstanceAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyInstanceAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest(const ModifyInsta
  * Constructs a ModifyInstanceAttributeRequest object.
  */
 ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest()
-    : EC2Request(new ModifyInstanceAttributeRequestPrivate(EC2Request::ModifyInstanceAttributeAction, this))
+    : Ec2Request(new ModifyInstanceAttributeRequestPrivate(Ec2Request::ModifyInstanceAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNet
  */
 
 /*!
- * Constructs a ModifyInstanceAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyInstanceAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
-    const EC2Request::Action action, ModifyInstanceAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyInstanceAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
     const ModifyInstanceAttributeRequestPrivate &other, ModifyInstanceAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

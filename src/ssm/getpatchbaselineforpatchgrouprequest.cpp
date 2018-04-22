@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest(const GetPatchBaselineForPatchGroupRequest &other)
-    : SSMRequest(new GetPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest(const
  * Constructs a GetPatchBaselineForPatchGroupRequest object.
  */
 GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest()
-    : SSMRequest(new GetPatchBaselineForPatchGroupRequestPrivate(SSMRequest::GetPatchBaselineForPatchGroupAction, this))
+    : SsmRequest(new GetPatchBaselineForPatchGroupRequestPrivate(SsmRequest::GetPatchBaselineForPatchGroupAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::respons
  */
 
 /*!
- * Constructs a GetPatchBaselineForPatchGroupRequestPrivate object for SSM \a action,
+ * Constructs a GetPatchBaselineForPatchGroupRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
-    const SSMRequest::Action action, GetPatchBaselineForPatchGroupRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetPatchBaselineForPatchGroupRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupReques
  */
 GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
     const GetPatchBaselineForPatchGroupRequestPrivate &other, GetPatchBaselineForPatchGroupRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

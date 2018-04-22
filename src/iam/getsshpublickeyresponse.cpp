@@ -109,7 +109,7 @@ GetSSHPublicKeyResponse::GetSSHPublicKeyResponse(
         const GetSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetSSHPublicKeyResponsePrivate(this), parent)
+    : IamResponse(new GetSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new GetSSHPublicKeyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetSSHPublicKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a GetSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponsePrivate(
-    GetSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
+    GetSSHPublicKeyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

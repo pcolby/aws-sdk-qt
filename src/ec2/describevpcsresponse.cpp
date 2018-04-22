@@ -48,7 +48,7 @@ DescribeVpcsResponse::DescribeVpcsResponse(
         const DescribeVpcsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpcsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeVpcsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeVpcsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeVpcsResponsePrivate object with public implementation \a q.
  */
 DescribeVpcsResponsePrivate::DescribeVpcsResponsePrivate(
-    DescribeVpcsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeVpcsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

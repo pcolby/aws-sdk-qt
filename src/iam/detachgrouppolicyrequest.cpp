@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DetachGroupPolicyRequest::DetachGroupPolicyRequest(const DetachGroupPolicyRequest &other)
-    : IAMRequest(new DetachGroupPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DetachGroupPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DetachGroupPolicyRequest::DetachGroupPolicyRequest(const DetachGroupPolicyReques
  * Constructs a DetachGroupPolicyRequest object.
  */
 DetachGroupPolicyRequest::DetachGroupPolicyRequest()
-    : IAMRequest(new DetachGroupPolicyRequestPrivate(IAMRequest::DetachGroupPolicyAction, this))
+    : IamRequest(new DetachGroupPolicyRequestPrivate(IamRequest::DetachGroupPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DetachGroupPolicyRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DetachGroupPolicyRequestPrivate object for IAM \a action,
+ * Constructs a DetachGroupPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DetachGroupPolicyRequestPrivate::DetachGroupPolicyRequestPrivate(
-    const IAMRequest::Action action, DetachGroupPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DetachGroupPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DetachGroupPolicyRequestPrivate::DetachGroupPolicyRequestPrivate(
  */
 DetachGroupPolicyRequestPrivate::DetachGroupPolicyRequestPrivate(
     const DetachGroupPolicyRequestPrivate &other, DetachGroupPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

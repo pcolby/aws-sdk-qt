@@ -48,7 +48,7 @@ DeleteSubnetGroupResponse::DeleteSubnetGroupResponse(
         const DeleteSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DeleteSubnetGroupResponsePrivate(this), parent)
+    : DaxResponse(new DeleteSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubnetGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteSubnetGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
-    DeleteSubnetGroupResponse * const q) : DAXResponsePrivate(q)
+    DeleteSubnetGroupResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

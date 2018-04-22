@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 UntagQueueRequest::UntagQueueRequest(const UntagQueueRequest &other)
-    : SQSRequest(new UntagQueueRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new UntagQueueRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ UntagQueueRequest::UntagQueueRequest(const UntagQueueRequest &other)
  * Constructs a UntagQueueRequest object.
  */
 UntagQueueRequest::UntagQueueRequest()
-    : SQSRequest(new UntagQueueRequestPrivate(SQSRequest::UntagQueueAction, this))
+    : SqsRequest(new UntagQueueRequestPrivate(SqsRequest::UntagQueueAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a UntagQueueRequestPrivate object for SQS \a action,
+ * Constructs a UntagQueueRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
-    const SQSRequest::Action action, UntagQueueRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, UntagQueueRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ UntagQueueRequestPrivate::UntagQueueRequestPrivate(
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
     const UntagQueueRequestPrivate &other, UntagQueueRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

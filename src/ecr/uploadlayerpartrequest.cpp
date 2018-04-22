@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &other)
-    : ECRRequest(new UploadLayerPartRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new UploadLayerPartRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UploadLayerPartRequest::UploadLayerPartRequest(const UploadLayerPartRequest &oth
  * Constructs a UploadLayerPartRequest object.
  */
 UploadLayerPartRequest::UploadLayerPartRequest()
-    : ECRRequest(new UploadLayerPartRequestPrivate(ECRRequest::UploadLayerPartAction, this))
+    : EcrRequest(new UploadLayerPartRequestPrivate(EcrRequest::UploadLayerPartAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a UploadLayerPartRequestPrivate object for ECR \a action,
+ * Constructs a UploadLayerPartRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
-    const ECRRequest::Action action, UploadLayerPartRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, UploadLayerPartRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const UploadLayerPartRequestPrivate &other, UploadLayerPartRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

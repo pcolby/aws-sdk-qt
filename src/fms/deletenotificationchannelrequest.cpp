@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 DeleteNotificationChannelRequest::DeleteNotificationChannelRequest(const DeleteNotificationChannelRequest &other)
-    : FMSRequest(new DeleteNotificationChannelRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new DeleteNotificationChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DeleteNotificationChannelRequest::DeleteNotificationChannelRequest(const DeleteN
  * Constructs a DeleteNotificationChannelRequest object.
  */
 DeleteNotificationChannelRequest::DeleteNotificationChannelRequest()
-    : FMSRequest(new DeleteNotificationChannelRequestPrivate(FMSRequest::DeleteNotificationChannelAction, this))
+    : FmsRequest(new DeleteNotificationChannelRequestPrivate(FmsRequest::DeleteNotificationChannelAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationChannelRequest::response(QN
  */
 
 /*!
- * Constructs a DeleteNotificationChannelRequestPrivate object for FMS \a action,
+ * Constructs a DeleteNotificationChannelRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate(
-    const FMSRequest::Action action, DeleteNotificationChannelRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, DeleteNotificationChannelRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate
  */
 DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate(
     const DeleteNotificationChannelRequestPrivate &other, DeleteNotificationChannelRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

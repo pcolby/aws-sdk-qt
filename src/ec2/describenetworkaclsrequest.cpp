@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeNetworkAclsRequest::DescribeNetworkAclsRequest(const DescribeNetworkAclsRequest &other)
-    : EC2Request(new DescribeNetworkAclsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeNetworkAclsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeNetworkAclsRequest::DescribeNetworkAclsRequest(const DescribeNetworkAcls
  * Constructs a DescribeNetworkAclsRequest object.
  */
 DescribeNetworkAclsRequest::DescribeNetworkAclsRequest()
-    : EC2Request(new DescribeNetworkAclsRequestPrivate(EC2Request::DescribeNetworkAclsAction, this))
+    : Ec2Request(new DescribeNetworkAclsRequestPrivate(Ec2Request::DescribeNetworkAclsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeNetworkAclsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeNetworkAclsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
-    const EC2Request::Action action, DescribeNetworkAclsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeNetworkAclsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
     const DescribeNetworkAclsRequestPrivate &other, DescribeNetworkAclsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

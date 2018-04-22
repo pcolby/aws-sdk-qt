@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest(const ReplaceNetworkAclEntryRequest &other)
-    : EC2Request(new ReplaceNetworkAclEntryRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReplaceNetworkAclEntryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest(const ReplaceNetwor
  * Constructs a ReplaceNetworkAclEntryRequest object.
  */
 ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest()
-    : EC2Request(new ReplaceNetworkAclEntryRequestPrivate(EC2Request::ReplaceNetworkAclEntryAction, this))
+    : Ec2Request(new ReplaceNetworkAclEntryRequestPrivate(Ec2Request::ReplaceNetworkAclEntryAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetw
  */
 
 /*!
- * Constructs a ReplaceNetworkAclEntryRequestPrivate object for EC2 \a action,
+ * Constructs a ReplaceNetworkAclEntryRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
-    const EC2Request::Action action, ReplaceNetworkAclEntryRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReplaceNetworkAclEntryRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
  */
 ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
     const ReplaceNetworkAclEntryRequestPrivate &other, ReplaceNetworkAclEntryRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -68,7 +68,7 @@ DeregisterPatchBaselineForPatchGroupResponse::DeregisterPatchBaselineForPatchGro
         const DeregisterPatchBaselineForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeregisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
+    : SsmResponse(new DeregisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
 {
     setRequest(new DeregisterPatchBaselineForPatchGroupRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeregisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &respo
  * Constructs a DeregisterPatchBaselineForPatchGroupResponsePrivate object with public implementation \a q.
  */
 DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForPatchGroupResponsePrivate(
-    DeregisterPatchBaselineForPatchGroupResponse * const q) : SSMResponsePrivate(q)
+    DeregisterPatchBaselineForPatchGroupResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

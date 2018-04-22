@@ -27,7 +27,7 @@ namespace SES {
 
 class UpdateCustomVerificationEmailTemplateRequestPrivate;
 
-class QTAWS_EXPORT UpdateCustomVerificationEmailTemplateRequest : public SESRequest {
+class QTAWS_EXPORT UpdateCustomVerificationEmailTemplateRequest : public SesRequest {
 
 public:
     UpdateCustomVerificationEmailTemplateRequest(const UpdateCustomVerificationEmailTemplateRequest &other);

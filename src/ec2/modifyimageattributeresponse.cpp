@@ -48,7 +48,7 @@ ModifyImageAttributeResponse::ModifyImageAttributeResponse(
         const ModifyImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyImageAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifyImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyImageAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyImageAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyImageAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
-    ModifyImageAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifyImageAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

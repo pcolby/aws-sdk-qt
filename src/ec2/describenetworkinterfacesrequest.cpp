@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest(const DescribeNetworkInterfacesRequest &other)
-    : EC2Request(new DescribeNetworkInterfacesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeNetworkInterfacesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest(const Describ
  * Constructs a DescribeNetworkInterfacesRequest object.
  */
 DescribeNetworkInterfacesRequest::DescribeNetworkInterfacesRequest()
-    : EC2Request(new DescribeNetworkInterfacesRequestPrivate(EC2Request::DescribeNetworkInterfacesAction, this))
+    : Ec2Request(new DescribeNetworkInterfacesRequestPrivate(Ec2Request::DescribeNetworkInterfacesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeNetworkInterfacesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeNetworkInterfacesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate(
-    const EC2Request::Action action, DescribeNetworkInterfacesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeNetworkInterfacesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate
  */
 DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate(
     const DescribeNetworkInterfacesRequestPrivate &other, DescribeNetworkInterfacesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

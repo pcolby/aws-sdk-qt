@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
-    : SESRequest(new GetTemplateRequestPrivate(*other.d_func(), this))
+    : SesRequest(new GetTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
  * Constructs a GetTemplateRequest object.
  */
 GetTemplateRequest::GetTemplateRequest()
-    : SESRequest(new GetTemplateRequestPrivate(SESRequest::GetTemplateAction, this))
+    : SesRequest(new GetTemplateRequestPrivate(SesRequest::GetTemplateAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a GetTemplateRequestPrivate object for SES \a action,
+ * Constructs a GetTemplateRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
-    const SESRequest::Action action, GetTemplateRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, GetTemplateRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetTemplateRequestPrivate::GetTemplateRequestPrivate(
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const GetTemplateRequestPrivate &other, GetTemplateRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

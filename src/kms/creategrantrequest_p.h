@@ -28,10 +28,10 @@ namespace KMS {
 
 class CreateGrantRequest;
 
-class QTAWS_EXPORT CreateGrantRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT CreateGrantRequestPrivate : public KmsRequestPrivate {
 
 public:
-    CreateGrantRequestPrivate(const KMSRequest::Action action,
+    CreateGrantRequestPrivate(const KmsRequest::Action action,
                                    CreateGrantRequest * const q);
     CreateGrantRequestPrivate(const CreateGrantRequestPrivate &other,
                                    CreateGrantRequest * const q);

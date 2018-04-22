@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetAutomationExecutionRequest::GetAutomationExecutionRequest(const GetAutomationExecutionRequest &other)
-    : SSMRequest(new GetAutomationExecutionRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetAutomationExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetAutomationExecutionRequest::GetAutomationExecutionRequest(const GetAutomation
  * Constructs a GetAutomationExecutionRequest object.
  */
 GetAutomationExecutionRequest::GetAutomationExecutionRequest()
-    : SSMRequest(new GetAutomationExecutionRequestPrivate(SSMRequest::GetAutomationExecutionAction, this))
+    : SsmRequest(new GetAutomationExecutionRequestPrivate(SsmRequest::GetAutomationExecutionAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetw
  */
 
 /*!
- * Constructs a GetAutomationExecutionRequestPrivate object for SSM \a action,
+ * Constructs a GetAutomationExecutionRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
-    const SSMRequest::Action action, GetAutomationExecutionRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetAutomationExecutionRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
  */
 GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
     const GetAutomationExecutionRequestPrivate &other, GetAutomationExecutionRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

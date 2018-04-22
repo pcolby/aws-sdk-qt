@@ -110,7 +110,7 @@ UntagQueueResponse::UntagQueueResponse(
         const UntagQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new UntagQueueResponsePrivate(this), parent)
+    : SqsResponse(new UntagQueueResponsePrivate(this), parent)
 {
     setRequest(new UntagQueueRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void UntagQueueResponse::parseSuccess(QIODevice &response)
  * Constructs a UntagQueueResponsePrivate object with public implementation \a q.
  */
 UntagQueueResponsePrivate::UntagQueueResponsePrivate(
-    UntagQueueResponse * const q) : SQSResponsePrivate(q)
+    UntagQueueResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

@@ -49,7 +49,7 @@ UpdateIPSetResponse::UpdateIPSetResponse(
         const UpdateIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateIPSetResponsePrivate(this), parent)
+    : WafResponse(new UpdateIPSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateIPSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateIPSetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateIPSetResponsePrivate object with public implementation \a q.
  */
 UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
-    UpdateIPSetResponse * const q) : WAFResponsePrivate(q)
+    UpdateIPSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

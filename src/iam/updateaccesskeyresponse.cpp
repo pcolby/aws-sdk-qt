@@ -109,7 +109,7 @@ UpdateAccessKeyResponse::UpdateAccessKeyResponse(
         const UpdateAccessKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateAccessKeyResponsePrivate(this), parent)
+    : IamResponse(new UpdateAccessKeyResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccessKeyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateAccessKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateAccessKeyResponsePrivate object with public implementation \a q.
  */
 UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
-    UpdateAccessKeyResponse * const q) : IAMResponsePrivate(q)
+    UpdateAccessKeyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EMR {
 
 class SetVisibleToAllUsersRequestPrivate;
 
-class QTAWS_EXPORT SetVisibleToAllUsersRequest : public EMRRequest {
+class QTAWS_EXPORT SetVisibleToAllUsersRequest : public EmrRequest {
 
 public:
     SetVisibleToAllUsersRequest(const SetVisibleToAllUsersRequest &other);

@@ -61,7 +61,7 @@ UpdateContainerInstancesStateResponse::UpdateContainerInstancesStateResponse(
         const UpdateContainerInstancesStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new UpdateContainerInstancesStateResponsePrivate(this), parent)
+    : EcsResponse(new UpdateContainerInstancesStateResponsePrivate(this), parent)
 {
     setRequest(new UpdateContainerInstancesStateRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void UpdateContainerInstancesStateResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateContainerInstancesStateResponsePrivate object with public implementation \a q.
  */
 UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateResponsePrivate(
-    UpdateContainerInstancesStateResponse * const q) : ECSResponsePrivate(q)
+    UpdateContainerInstancesStateResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

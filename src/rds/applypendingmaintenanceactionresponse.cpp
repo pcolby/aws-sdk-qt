@@ -108,7 +108,7 @@ ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
         const ApplyPendingMaintenanceActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ApplyPendingMaintenanceActionResponsePrivate(this), parent)
+    : RdsResponse(new ApplyPendingMaintenanceActionResponsePrivate(this), parent)
 {
     setRequest(new ApplyPendingMaintenanceActionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ApplyPendingMaintenanceActionResponse::parseSuccess(QIODevice &response)
  * Constructs a ApplyPendingMaintenanceActionResponsePrivate object with public implementation \a q.
  */
 ApplyPendingMaintenanceActionResponsePrivate::ApplyPendingMaintenanceActionResponsePrivate(
-    ApplyPendingMaintenanceActionResponse * const q) : RDSResponsePrivate(q)
+    ApplyPendingMaintenanceActionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

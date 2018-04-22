@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ChangePasswordRequest::ChangePasswordRequest(const ChangePasswordRequest &other)
-    : IAMRequest(new ChangePasswordRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ChangePasswordRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ChangePasswordRequest::ChangePasswordRequest(const ChangePasswordRequest &other)
  * Constructs a ChangePasswordRequest object.
  */
 ChangePasswordRequest::ChangePasswordRequest()
-    : IAMRequest(new ChangePasswordRequestPrivate(IAMRequest::ChangePasswordAction, this))
+    : IamRequest(new ChangePasswordRequestPrivate(IamRequest::ChangePasswordAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ChangePasswordRequestPrivate object for IAM \a action,
+ * Constructs a ChangePasswordRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
-    const IAMRequest::Action action, ChangePasswordRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ChangePasswordRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const ChangePasswordRequestPrivate &other, ChangePasswordRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

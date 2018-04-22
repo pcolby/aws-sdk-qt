@@ -28,10 +28,10 @@ namespace IAM {
 
 class CreateServiceSpecificCredentialRequest;
 
-class QTAWS_EXPORT CreateServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT CreateServiceSpecificCredentialRequestPrivate : public IamRequestPrivate {
 
 public:
-    CreateServiceSpecificCredentialRequestPrivate(const IAMRequest::Action action,
+    CreateServiceSpecificCredentialRequestPrivate(const IamRequest::Action action,
                                    CreateServiceSpecificCredentialRequest * const q);
     CreateServiceSpecificCredentialRequestPrivate(const CreateServiceSpecificCredentialRequestPrivate &other,
                                    CreateServiceSpecificCredentialRequest * const q);

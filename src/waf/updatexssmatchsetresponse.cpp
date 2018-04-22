@@ -49,7 +49,7 @@ UpdateXssMatchSetResponse::UpdateXssMatchSetResponse(
         const UpdateXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateXssMatchSetResponsePrivate(this), parent)
+    : WafResponse(new UpdateXssMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateXssMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateXssMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
-    UpdateXssMatchSetResponse * const q) : WAFResponsePrivate(q)
+    UpdateXssMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

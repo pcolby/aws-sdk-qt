@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEventSubscriptionRequest &other)
-    : RDSRequest(new CreateEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEvent
  * Constructs a CreateEventSubscriptionRequest object.
  */
 CreateEventSubscriptionRequest::CreateEventSubscriptionRequest()
-    : RDSRequest(new CreateEventSubscriptionRequestPrivate(RDSRequest::CreateEventSubscriptionAction, this))
+    : RdsRequest(new CreateEventSubscriptionRequestPrivate(RdsRequest::CreateEventSubscriptionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
  */
 
 /*!
- * Constructs a CreateEventSubscriptionRequestPrivate object for RDS \a action,
+ * Constructs a CreateEventSubscriptionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
-    const RDSRequest::Action action, CreateEventSubscriptionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateEventSubscriptionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const CreateEventSubscriptionRequestPrivate &other, CreateEventSubscriptionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

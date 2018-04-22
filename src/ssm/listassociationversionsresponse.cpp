@@ -68,7 +68,7 @@ ListAssociationVersionsResponse::ListAssociationVersionsResponse(
         const ListAssociationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListAssociationVersionsResponsePrivate(this), parent)
+    : SsmResponse(new ListAssociationVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListAssociationVersionsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ListAssociationVersionsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListAssociationVersionsResponsePrivate object with public implementation \a q.
  */
 ListAssociationVersionsResponsePrivate::ListAssociationVersionsResponsePrivate(
-    ListAssociationVersionsResponse * const q) : SSMResponsePrivate(q)
+    ListAssociationVersionsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

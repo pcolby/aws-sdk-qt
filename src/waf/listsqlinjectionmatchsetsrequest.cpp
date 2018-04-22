@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSqlInjectionMatchSetsRequest &other)
-    : WAFRequest(new ListSqlInjectionMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListSqlInjectionMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSql
  * Constructs a ListSqlInjectionMatchSetsRequest object.
  */
 ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
-    : WAFRequest(new ListSqlInjectionMatchSetsRequestPrivate(WAFRequest::ListSqlInjectionMatchSetsAction, this))
+    : WafRequest(new ListSqlInjectionMatchSetsRequestPrivate(WafRequest::ListSqlInjectionMatchSetsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
  */
 
 /*!
- * Constructs a ListSqlInjectionMatchSetsRequestPrivate object for WAF \a action,
+ * Constructs a ListSqlInjectionMatchSetsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
-    const WAFRequest::Action action, ListSqlInjectionMatchSetsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListSqlInjectionMatchSetsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate
  */
 ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
     const ListSqlInjectionMatchSetsRequestPrivate &other, ListSqlInjectionMatchSetsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

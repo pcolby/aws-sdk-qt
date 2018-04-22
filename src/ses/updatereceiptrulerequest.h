@@ -27,7 +27,7 @@ namespace SES {
 
 class UpdateReceiptRuleRequestPrivate;
 
-class QTAWS_EXPORT UpdateReceiptRuleRequest : public SESRequest {
+class QTAWS_EXPORT UpdateReceiptRuleRequest : public SesRequest {
 
 public:
     UpdateReceiptRuleRequest(const UpdateReceiptRuleRequest &other);

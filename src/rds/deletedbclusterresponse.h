@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBClusterResponsePrivate;
 
-class QTAWS_EXPORT DeleteDBClusterResponse : public RDSResponse {
+class QTAWS_EXPORT DeleteDBClusterResponse : public RdsResponse {
     Q_OBJECT
 
 public:

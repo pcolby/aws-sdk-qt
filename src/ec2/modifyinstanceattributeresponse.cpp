@@ -48,7 +48,7 @@ ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
         const ModifyInstanceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyInstanceAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifyInstanceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstanceAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyInstanceAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyInstanceAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponsePrivate(
-    ModifyInstanceAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifyInstanceAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

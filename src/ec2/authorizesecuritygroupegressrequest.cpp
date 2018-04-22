@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest(const AuthorizeSecurityGroupEgressRequest &other)
-    : EC2Request(new AuthorizeSecurityGroupEgressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AuthorizeSecurityGroupEgressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest(const A
  * Constructs a AuthorizeSecurityGroupEgressRequest object.
  */
 AuthorizeSecurityGroupEgressRequest::AuthorizeSecurityGroupEgressRequest()
-    : EC2Request(new AuthorizeSecurityGroupEgressRequestPrivate(EC2Request::AuthorizeSecurityGroupEgressAction, this))
+    : Ec2Request(new AuthorizeSecurityGroupEgressRequestPrivate(Ec2Request::AuthorizeSecurityGroupEgressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupEgressRequest::response
  */
 
 /*!
- * Constructs a AuthorizeSecurityGroupEgressRequestPrivate object for EC2 \a action,
+ * Constructs a AuthorizeSecurityGroupEgressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestPrivate(
-    const EC2Request::Action action, AuthorizeSecurityGroupEgressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AuthorizeSecurityGroupEgressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestP
  */
 AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestPrivate(
     const AuthorizeSecurityGroupEgressRequestPrivate &other, AuthorizeSecurityGroupEgressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

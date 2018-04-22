@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 ReceiveMessageRequest::ReceiveMessageRequest(const ReceiveMessageRequest &other)
-    : SQSRequest(new ReceiveMessageRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new ReceiveMessageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ ReceiveMessageRequest::ReceiveMessageRequest(const ReceiveMessageRequest &other)
  * Constructs a ReceiveMessageRequest object.
  */
 ReceiveMessageRequest::ReceiveMessageRequest()
-    : SQSRequest(new ReceiveMessageRequestPrivate(SQSRequest::ReceiveMessageAction, this))
+    : SqsRequest(new ReceiveMessageRequestPrivate(SqsRequest::ReceiveMessageAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * ReceiveMessageRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ReceiveMessageRequestPrivate object for SQS \a action,
+ * Constructs a ReceiveMessageRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
-    const SQSRequest::Action action, ReceiveMessageRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, ReceiveMessageRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
     const ReceiveMessageRequestPrivate &other, ReceiveMessageRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
-    : SSMRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
  * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
-    : SSMRequest(new AddTagsToResourceRequestPrivate(SSMRequest::AddTagsToResourceAction, this))
+    : SsmRequest(new AddTagsToResourceRequestPrivate(SsmRequest::AddTagsToResourceAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a AddTagsToResourceRequestPrivate object for SSM \a action,
+ * Constructs a AddTagsToResourceRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
-    const SSMRequest::Action action, AddTagsToResourceRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, AddTagsToResourceRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

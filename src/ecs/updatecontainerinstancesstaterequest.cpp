@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest(const UpdateContainerInstancesStateRequest &other)
-    : ECSRequest(new UpdateContainerInstancesStateRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new UpdateContainerInstancesStateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest(const
  * Constructs a UpdateContainerInstancesStateRequest object.
  */
 UpdateContainerInstancesStateRequest::UpdateContainerInstancesStateRequest()
-    : ECSRequest(new UpdateContainerInstancesStateRequestPrivate(ECSRequest::UpdateContainerInstancesStateAction, this))
+    : EcsRequest(new UpdateContainerInstancesStateRequestPrivate(EcsRequest::UpdateContainerInstancesStateAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::respons
  */
 
 /*!
- * Constructs a UpdateContainerInstancesStateRequestPrivate object for ECS \a action,
+ * Constructs a UpdateContainerInstancesStateRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
-    const ECSRequest::Action action, UpdateContainerInstancesStateRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, UpdateContainerInstancesStateRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateReques
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
     const UpdateContainerInstancesStateRequestPrivate &other, UpdateContainerInstancesStateRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

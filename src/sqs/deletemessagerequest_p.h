@@ -28,10 +28,10 @@ namespace SQS {
 
 class DeleteMessageRequest;
 
-class QTAWS_EXPORT DeleteMessageRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT DeleteMessageRequestPrivate : public SqsRequestPrivate {
 
 public:
-    DeleteMessageRequestPrivate(const SQSRequest::Action action,
+    DeleteMessageRequestPrivate(const SqsRequest::Action action,
                                    DeleteMessageRequest * const q);
     DeleteMessageRequestPrivate(const DeleteMessageRequestPrivate &other,
                                    DeleteMessageRequest * const q);

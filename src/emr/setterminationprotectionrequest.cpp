@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 SetTerminationProtectionRequest::SetTerminationProtectionRequest(const SetTerminationProtectionRequest &other)
-    : EMRRequest(new SetTerminationProtectionRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new SetTerminationProtectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ SetTerminationProtectionRequest::SetTerminationProtectionRequest(const SetTermin
  * Constructs a SetTerminationProtectionRequest object.
  */
 SetTerminationProtectionRequest::SetTerminationProtectionRequest()
-    : EMRRequest(new SetTerminationProtectionRequestPrivate(EMRRequest::SetTerminationProtectionAction, this))
+    : EmrRequest(new SetTerminationProtectionRequestPrivate(EmrRequest::SetTerminationProtectionAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
  */
 
 /*!
- * Constructs a SetTerminationProtectionRequestPrivate object for EMR \a action,
+ * Constructs a SetTerminationProtectionRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
-    const EMRRequest::Action action, SetTerminationProtectionRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, SetTerminationProtectionRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
     const SetTerminationProtectionRequestPrivate &other, SetTerminationProtectionRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

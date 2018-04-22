@@ -48,7 +48,7 @@ DeleteEgressOnlyInternetGatewayResponse::DeleteEgressOnlyInternetGatewayResponse
         const DeleteEgressOnlyInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteEgressOnlyInternetGatewayResponsePrivate(this), parent)
+    : Ec2Response(new DeleteEgressOnlyInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteEgressOnlyInternetGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteEgressOnlyInternetGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayResponsePrivate(
-    DeleteEgressOnlyInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
+    DeleteEgressOnlyInternetGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeInstanceAssociationsStatusRequest::DescribeInstanceAssociationsStatusRequest(const DescribeInstanceAssociationsStatusRequest &other)
-    : SSMRequest(new DescribeInstanceAssociationsStatusRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeInstanceAssociationsStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeInstanceAssociationsStatusRequest::DescribeInstanceAssociationsStatusReq
  * Constructs a DescribeInstanceAssociationsStatusRequest object.
  */
 DescribeInstanceAssociationsStatusRequest::DescribeInstanceAssociationsStatusRequest()
-    : SSMRequest(new DescribeInstanceAssociationsStatusRequestPrivate(SSMRequest::DescribeInstanceAssociationsStatusAction, this))
+    : SsmRequest(new DescribeInstanceAssociationsStatusRequestPrivate(SsmRequest::DescribeInstanceAssociationsStatusAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::re
  */
 
 /*!
- * Constructs a DescribeInstanceAssociationsStatusRequestPrivate object for SSM \a action,
+ * Constructs a DescribeInstanceAssociationsStatusRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
-    const SSMRequest::Action action, DescribeInstanceAssociationsStatusRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeInstanceAssociationsStatusRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsSt
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
     const DescribeInstanceAssociationsStatusRequestPrivate &other, DescribeInstanceAssociationsStatusRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

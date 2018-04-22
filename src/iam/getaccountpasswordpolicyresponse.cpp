@@ -109,7 +109,7 @@ GetAccountPasswordPolicyResponse::GetAccountPasswordPolicyResponse(
         const GetAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetAccountPasswordPolicyResponsePrivate(this), parent)
+    : IamResponse(new GetAccountPasswordPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetAccountPasswordPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a GetAccountPasswordPolicyResponsePrivate object with public implementation \a q.
  */
 GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponsePrivate(
-    GetAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
+    GetAccountPasswordPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

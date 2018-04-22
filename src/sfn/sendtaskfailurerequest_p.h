@@ -28,10 +28,10 @@ namespace SFN {
 
 class SendTaskFailureRequest;
 
-class QTAWS_EXPORT SendTaskFailureRequestPrivate : public SFNRequestPrivate {
+class QTAWS_EXPORT SendTaskFailureRequestPrivate : public SfnRequestPrivate {
 
 public:
-    SendTaskFailureRequestPrivate(const SFNRequest::Action action,
+    SendTaskFailureRequestPrivate(const SfnRequest::Action action,
                                    SendTaskFailureRequest * const q);
     SendTaskFailureRequestPrivate(const SendTaskFailureRequestPrivate &other,
                                    SendTaskFailureRequest * const q);

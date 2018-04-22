@@ -28,10 +28,10 @@ namespace EC2 {
 
 class UnmonitorInstancesRequest;
 
-class QTAWS_EXPORT UnmonitorInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT UnmonitorInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    UnmonitorInstancesRequestPrivate(const EC2Request::Action action,
+    UnmonitorInstancesRequestPrivate(const Ec2Request::Action action,
                                    UnmonitorInstancesRequest * const q);
     UnmonitorInstancesRequestPrivate(const UnmonitorInstancesRequestPrivate &other,
                                    UnmonitorInstancesRequest * const q);

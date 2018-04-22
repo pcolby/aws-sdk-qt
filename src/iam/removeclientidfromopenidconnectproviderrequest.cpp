@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 RemoveClientIDFromOpenIDConnectProviderRequest::RemoveClientIDFromOpenIDConnectProviderRequest(const RemoveClientIDFromOpenIDConnectProviderRequest &other)
-    : IAMRequest(new RemoveClientIDFromOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
+    : IamRequest(new RemoveClientIDFromOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ RemoveClientIDFromOpenIDConnectProviderRequest::RemoveClientIDFromOpenIDConnectP
  * Constructs a RemoveClientIDFromOpenIDConnectProviderRequest object.
  */
 RemoveClientIDFromOpenIDConnectProviderRequest::RemoveClientIDFromOpenIDConnectProviderRequest()
-    : IAMRequest(new RemoveClientIDFromOpenIDConnectProviderRequestPrivate(IAMRequest::RemoveClientIDFromOpenIDConnectProviderAction, this))
+    : IamRequest(new RemoveClientIDFromOpenIDConnectProviderRequestPrivate(IamRequest::RemoveClientIDFromOpenIDConnectProviderAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * RemoveClientIDFromOpenIDConnectProviderReques
  */
 
 /*!
- * Constructs a RemoveClientIDFromOpenIDConnectProviderRequestPrivate object for IAM \a action,
+ * Constructs a RemoveClientIDFromOpenIDConnectProviderRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDConnectProviderRequestPrivate(
-    const IAMRequest::Action action, RemoveClientIDFromOpenIDConnectProviderRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, RemoveClientIDFromOpenIDConnectProviderRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDC
  */
 RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDConnectProviderRequestPrivate(
     const RemoveClientIDFromOpenIDConnectProviderRequestPrivate &other, RemoveClientIDFromOpenIDConnectProviderRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

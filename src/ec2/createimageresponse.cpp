@@ -48,7 +48,7 @@ CreateImageResponse::CreateImageResponse(
         const CreateImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateImageResponsePrivate(this), parent)
+    : Ec2Response(new CreateImageResponsePrivate(this), parent)
 {
     setRequest(new CreateImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateImageResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateImageResponsePrivate object with public implementation \a q.
  */
 CreateImageResponsePrivate::CreateImageResponsePrivate(
-    CreateImageResponse * const q) : EC2ResponsePrivate(q)
+    CreateImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

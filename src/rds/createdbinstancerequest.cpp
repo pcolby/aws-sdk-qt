@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &other)
-    : RDSRequest(new CreateDBInstanceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &
  * Constructs a CreateDBInstanceRequest object.
  */
 CreateDBInstanceRequest::CreateDBInstanceRequest()
-    : RDSRequest(new CreateDBInstanceRequestPrivate(RDSRequest::CreateDBInstanceAction, this))
+    : RdsRequest(new CreateDBInstanceRequestPrivate(RdsRequest::CreateDBInstanceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateDBInstanceRequestPrivate object for RDS \a action,
+ * Constructs a CreateDBInstanceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
-    const RDSRequest::Action action, CreateDBInstanceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateDBInstanceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
     const CreateDBInstanceRequestPrivate &other, CreateDBInstanceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

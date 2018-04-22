@@ -28,10 +28,10 @@ namespace EFS {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public EFSRequestPrivate {
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public EfsRequestPrivate {
 
 public:
-    DescribeTagsRequestPrivate(const EFSRequest::Action action,
+    DescribeTagsRequestPrivate(const EfsRequest::Action action,
                                    DescribeTagsRequest * const q);
     DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
                                    DescribeTagsRequest * const q);

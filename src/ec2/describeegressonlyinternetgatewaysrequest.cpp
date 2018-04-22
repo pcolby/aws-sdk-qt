@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest(const DescribeEgressOnlyInternetGatewaysRequest &other)
-    : EC2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysReq
  * Constructs a DescribeEgressOnlyInternetGatewaysRequest object.
  */
 DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest()
-    : EC2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(EC2Request::DescribeEgressOnlyInternetGatewaysAction, this))
+    : Ec2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(Ec2Request::DescribeEgressOnlyInternetGatewaysAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEgressOnlyInternetGatewaysRequest::re
  */
 
 /*!
- * Constructs a DescribeEgressOnlyInternetGatewaysRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeEgressOnlyInternetGatewaysRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGatewaysRequestPrivate(
-    const EC2Request::Action action, DescribeEgressOnlyInternetGatewaysRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeEgressOnlyInternetGatewaysRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGate
  */
 DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGatewaysRequestPrivate(
     const DescribeEgressOnlyInternetGatewaysRequestPrivate &other, DescribeEgressOnlyInternetGatewaysRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

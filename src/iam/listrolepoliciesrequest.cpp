@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListRolePoliciesRequest::ListRolePoliciesRequest(const ListRolePoliciesRequest &other)
-    : IAMRequest(new ListRolePoliciesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListRolePoliciesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListRolePoliciesRequest::ListRolePoliciesRequest(const ListRolePoliciesRequest &
  * Constructs a ListRolePoliciesRequest object.
  */
 ListRolePoliciesRequest::ListRolePoliciesRequest()
-    : IAMRequest(new ListRolePoliciesRequestPrivate(IAMRequest::ListRolePoliciesAction, this))
+    : IamRequest(new ListRolePoliciesRequestPrivate(IamRequest::ListRolePoliciesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListRolePoliciesRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ListRolePoliciesRequestPrivate object for IAM \a action,
+ * Constructs a ListRolePoliciesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
-    const IAMRequest::Action action, ListRolePoliciesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListRolePoliciesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
  */
 ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
     const ListRolePoliciesRequestPrivate &other, ListRolePoliciesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

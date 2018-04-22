@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest(const DeleteSpotDatafeedSubscriptionRequest &other)
-    : EC2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest(con
  * Constructs a DeleteSpotDatafeedSubscriptionRequest object.
  */
 DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest()
-    : EC2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(EC2Request::DeleteSpotDatafeedSubscriptionAction, this))
+    : Ec2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(Ec2Request::DeleteSpotDatafeedSubscriptionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::respon
  */
 
 /*!
- * Constructs a DeleteSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteSpotDatafeedSubscriptionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
-    const EC2Request::Action action, DeleteSpotDatafeedSubscriptionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteSpotDatafeedSubscriptionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequ
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
     const DeleteSpotDatafeedSubscriptionRequestPrivate &other, DeleteSpotDatafeedSubscriptionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

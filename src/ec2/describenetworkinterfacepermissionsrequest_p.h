@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeNetworkInterfacePermissionsRequest;
 
-class QTAWS_EXPORT DescribeNetworkInterfacePermissionsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeNetworkInterfacePermissionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeNetworkInterfacePermissionsRequestPrivate(const EC2Request::Action action,
+    DescribeNetworkInterfacePermissionsRequestPrivate(const Ec2Request::Action action,
                                    DescribeNetworkInterfacePermissionsRequest * const q);
     DescribeNetworkInterfacePermissionsRequestPrivate(const DescribeNetworkInterfacePermissionsRequestPrivate &other,
                                    DescribeNetworkInterfacePermissionsRequest * const q);

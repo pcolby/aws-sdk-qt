@@ -48,7 +48,7 @@ ListImagesResponse::ListImagesResponse(
         const ListImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new ListImagesResponsePrivate(this), parent)
+    : EcrResponse(new ListImagesResponsePrivate(this), parent)
 {
     setRequest(new ListImagesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ListImagesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListImagesResponsePrivate object with public implementation \a q.
  */
 ListImagesResponsePrivate::ListImagesResponsePrivate(
-    ListImagesResponse * const q) : ECRResponsePrivate(q)
+    ListImagesResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

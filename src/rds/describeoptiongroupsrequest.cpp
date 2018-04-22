@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeOptionGroupsRequest::DescribeOptionGroupsRequest(const DescribeOptionGroupsRequest &other)
-    : RDSRequest(new DescribeOptionGroupsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeOptionGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeOptionGroupsRequest::DescribeOptionGroupsRequest(const DescribeOptionGro
  * Constructs a DescribeOptionGroupsRequest object.
  */
 DescribeOptionGroupsRequest::DescribeOptionGroupsRequest()
-    : RDSRequest(new DescribeOptionGroupsRequestPrivate(RDSRequest::DescribeOptionGroupsAction, this))
+    : RdsRequest(new DescribeOptionGroupsRequestPrivate(RdsRequest::DescribeOptionGroupsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeOptionGroupsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeOptionGroupsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeOptionGroupsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
-    const RDSRequest::Action action, DescribeOptionGroupsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeOptionGroupsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
  */
 DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
     const DescribeOptionGroupsRequestPrivate &other, DescribeOptionGroupsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest(const DeleteRegexPatternSetRequest &other)
-    : WAFRequest(new DeleteRegexPatternSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteRegexPatternSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest(const DeleteRegexPatt
  * Constructs a DeleteRegexPatternSetRequest object.
  */
 DeleteRegexPatternSetRequest::DeleteRegexPatternSetRequest()
-    : WAFRequest(new DeleteRegexPatternSetRequestPrivate(WAFRequest::DeleteRegexPatternSetAction, this))
+    : WafRequest(new DeleteRegexPatternSetRequestPrivate(WafRequest::DeleteRegexPatternSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeleteRegexPatternSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteRegexPatternSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
-    const WAFRequest::Action action, DeleteRegexPatternSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteRegexPatternSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const DeleteRegexPatternSetRequestPrivate &other, DeleteRegexPatternSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

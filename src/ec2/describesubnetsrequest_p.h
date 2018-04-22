@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeSubnetsRequest;
 
-class QTAWS_EXPORT DescribeSubnetsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeSubnetsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeSubnetsRequestPrivate(const EC2Request::Action action,
+    DescribeSubnetsRequestPrivate(const Ec2Request::Action action,
                                    DescribeSubnetsRequest * const q);
     DescribeSubnetsRequestPrivate(const DescribeSubnetsRequestPrivate &other,
                                    DescribeSubnetsRequest * const q);

@@ -48,7 +48,7 @@ DescribeSpotInstanceRequestsResponse::DescribeSpotInstanceRequestsResponse(
         const DescribeSpotInstanceRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSpotInstanceRequestsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSpotInstanceRequestsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotInstanceRequestsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSpotInstanceRequestsResponsePrivate object with public implementation \a q.
  */
 DescribeSpotInstanceRequestsResponsePrivate::DescribeSpotInstanceRequestsResponsePrivate(
-    DescribeSpotInstanceRequestsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSpotInstanceRequestsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

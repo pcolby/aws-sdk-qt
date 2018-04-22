@@ -47,7 +47,7 @@ SetTerminationProtectionResponse::SetTerminationProtectionResponse(
         const SetTerminationProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new SetTerminationProtectionResponsePrivate(this), parent)
+    : EmrResponse(new SetTerminationProtectionResponsePrivate(this), parent)
 {
     setRequest(new SetTerminationProtectionRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
  * Constructs a SetTerminationProtectionResponsePrivate object with public implementation \a q.
  */
 SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate(
-    SetTerminationProtectionResponse * const q) : EMRResponsePrivate(q)
+    SetTerminationProtectionResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

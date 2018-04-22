@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeVpcEndpointServicesRequest;
 
-class QTAWS_EXPORT DescribeVpcEndpointServicesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeVpcEndpointServicesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeVpcEndpointServicesRequestPrivate(const EC2Request::Action action,
+    DescribeVpcEndpointServicesRequestPrivate(const Ec2Request::Action action,
                                    DescribeVpcEndpointServicesRequest * const q);
     DescribeVpcEndpointServicesRequestPrivate(const DescribeVpcEndpointServicesRequestPrivate &other,
                                    DescribeVpcEndpointServicesRequest * const q);

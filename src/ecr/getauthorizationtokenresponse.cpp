@@ -48,7 +48,7 @@ GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
         const GetAuthorizationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
+    : EcrResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
 {
     setRequest(new GetAuthorizationTokenRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
  * Constructs a GetAuthorizationTokenResponsePrivate object with public implementation \a q.
  */
 GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
-    GetAuthorizationTokenResponse * const q) : ECRResponsePrivate(q)
+    GetAuthorizationTokenResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

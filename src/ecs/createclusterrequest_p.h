@@ -28,10 +28,10 @@ namespace ECS {
 
 class CreateClusterRequest;
 
-class QTAWS_EXPORT CreateClusterRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT CreateClusterRequestPrivate : public EcsRequestPrivate {
 
 public:
-    CreateClusterRequestPrivate(const ECSRequest::Action action,
+    CreateClusterRequestPrivate(const EcsRequest::Action action,
                                    CreateClusterRequest * const q);
     CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
                                    CreateClusterRequest * const q);

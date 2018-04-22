@@ -28,10 +28,10 @@ namespace DAX {
 
 class CreateParameterGroupRequest;
 
-class QTAWS_EXPORT CreateParameterGroupRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT CreateParameterGroupRequestPrivate : public DaxRequestPrivate {
 
 public:
-    CreateParameterGroupRequestPrivate(const DAXRequest::Action action,
+    CreateParameterGroupRequestPrivate(const DaxRequest::Action action,
                                    CreateParameterGroupRequest * const q);
     CreateParameterGroupRequestPrivate(const CreateParameterGroupRequestPrivate &other,
                                    CreateParameterGroupRequest * const q);

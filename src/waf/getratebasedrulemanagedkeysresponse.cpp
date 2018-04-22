@@ -49,7 +49,7 @@ GetRateBasedRuleManagedKeysResponse::GetRateBasedRuleManagedKeysResponse(
         const GetRateBasedRuleManagedKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetRateBasedRuleManagedKeysResponsePrivate(this), parent)
+    : WafResponse(new GetRateBasedRuleManagedKeysResponsePrivate(this), parent)
 {
     setRequest(new GetRateBasedRuleManagedKeysRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetRateBasedRuleManagedKeysResponse::parseSuccess(QIODevice &response)
  * Constructs a GetRateBasedRuleManagedKeysResponsePrivate object with public implementation \a q.
  */
 GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponsePrivate(
-    GetRateBasedRuleManagedKeysResponse * const q) : WAFResponsePrivate(q)
+    GetRateBasedRuleManagedKeysResponse * const q) : WafResponsePrivate(q)
 {
 
 }

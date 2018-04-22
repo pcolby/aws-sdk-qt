@@ -27,7 +27,7 @@ namespace EMR {
 
 class RemoveAutoScalingPolicyRequestPrivate;
 
-class QTAWS_EXPORT RemoveAutoScalingPolicyRequest : public EMRRequest {
+class QTAWS_EXPORT RemoveAutoScalingPolicyRequest : public EmrRequest {
 
 public:
     RemoveAutoScalingPolicyRequest(const RemoveAutoScalingPolicyRequest &other);

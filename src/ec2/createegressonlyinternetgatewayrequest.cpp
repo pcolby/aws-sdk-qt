@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest(const CreateEgressOnlyInternetGatewayRequest &other)
-    : EC2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest(c
  * Constructs a CreateEgressOnlyInternetGatewayRequest object.
  */
 CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest()
-    : EC2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(EC2Request::CreateEgressOnlyInternetGatewayAction, this))
+    : Ec2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(Ec2Request::CreateEgressOnlyInternetGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::respo
  */
 
 /*!
- * Constructs a CreateEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a CreateEgressOnlyInternetGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
-    const EC2Request::Action action, CreateEgressOnlyInternetGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateEgressOnlyInternetGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRe
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
     const CreateEgressOnlyInternetGatewayRequestPrivate &other, CreateEgressOnlyInternetGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

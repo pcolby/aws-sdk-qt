@@ -28,10 +28,10 @@ namespace RDS {
 
 class RestoreDBClusterToPointInTimeRequest;
 
-class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequestPrivate : public RdsRequestPrivate {
 
 public:
-    RestoreDBClusterToPointInTimeRequestPrivate(const RDSRequest::Action action,
+    RestoreDBClusterToPointInTimeRequestPrivate(const RdsRequest::Action action,
                                    RestoreDBClusterToPointInTimeRequest * const q);
     RestoreDBClusterToPointInTimeRequestPrivate(const RestoreDBClusterToPointInTimeRequestPrivate &other,
                                    RestoreDBClusterToPointInTimeRequest * const q);

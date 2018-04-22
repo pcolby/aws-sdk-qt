@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DescribeTasksRequest::DescribeTasksRequest(const DescribeTasksRequest &other)
-    : ECSRequest(new DescribeTasksRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DescribeTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeTasksRequest::DescribeTasksRequest(const DescribeTasksRequest &other)
  * Constructs a DescribeTasksRequest object.
  */
 DescribeTasksRequest::DescribeTasksRequest()
-    : ECSRequest(new DescribeTasksRequestPrivate(ECSRequest::DescribeTasksAction, this))
+    : EcsRequest(new DescribeTasksRequestPrivate(EcsRequest::DescribeTasksAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DescribeTasksRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a DescribeTasksRequestPrivate object for ECS \a action,
+ * Constructs a DescribeTasksRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
-    const ECSRequest::Action action, DescribeTasksRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DescribeTasksRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
  */
 DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
     const DescribeTasksRequestPrivate &other, DescribeTasksRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

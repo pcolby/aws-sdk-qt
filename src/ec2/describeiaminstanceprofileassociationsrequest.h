@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeIamInstanceProfileAssociationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeIamInstanceProfileAssociationsRequest : public EC2Request {
+class QTAWS_EXPORT DescribeIamInstanceProfileAssociationsRequest : public Ec2Request {
 
 public:
     DescribeIamInstanceProfileAssociationsRequest(const DescribeIamInstanceProfileAssociationsRequest &other);

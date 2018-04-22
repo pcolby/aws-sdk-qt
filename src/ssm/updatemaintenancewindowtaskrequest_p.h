@@ -28,10 +28,10 @@ namespace SSM {
 
 class UpdateMaintenanceWindowTaskRequest;
 
-class QTAWS_EXPORT UpdateMaintenanceWindowTaskRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT UpdateMaintenanceWindowTaskRequestPrivate : public SsmRequestPrivate {
 
 public:
-    UpdateMaintenanceWindowTaskRequestPrivate(const SSMRequest::Action action,
+    UpdateMaintenanceWindowTaskRequestPrivate(const SsmRequest::Action action,
                                    UpdateMaintenanceWindowTaskRequest * const q);
     UpdateMaintenanceWindowTaskRequestPrivate(const UpdateMaintenanceWindowTaskRequestPrivate &other,
                                    UpdateMaintenanceWindowTaskRequest * const q);

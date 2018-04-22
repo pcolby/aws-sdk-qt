@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class GetCertificateAuthorityCertificateResponsePrivate;
 
-class QTAWS_EXPORT GetCertificateAuthorityCertificateResponse : public ACMPCAResponse {
+class QTAWS_EXPORT GetCertificateAuthorityCertificateResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

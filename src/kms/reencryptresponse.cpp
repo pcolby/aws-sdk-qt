@@ -143,7 +143,7 @@ ReEncryptResponse::ReEncryptResponse(
         const ReEncryptRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ReEncryptResponsePrivate(this), parent)
+    : KmsResponse(new ReEncryptResponsePrivate(this), parent)
 {
     setRequest(new ReEncryptRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ReEncryptResponse::parseSuccess(QIODevice &response)
  * Constructs a ReEncryptResponsePrivate object with public implementation \a q.
  */
 ReEncryptResponsePrivate::ReEncryptResponsePrivate(
-    ReEncryptResponse * const q) : KMSResponsePrivate(q)
+    ReEncryptResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeNatGatewaysRequest::DescribeNatGatewaysRequest(const DescribeNatGatewaysRequest &other)
-    : EC2Request(new DescribeNatGatewaysRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeNatGatewaysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeNatGatewaysRequest::DescribeNatGatewaysRequest(const DescribeNatGateways
  * Constructs a DescribeNatGatewaysRequest object.
  */
 DescribeNatGatewaysRequest::DescribeNatGatewaysRequest()
-    : EC2Request(new DescribeNatGatewaysRequestPrivate(EC2Request::DescribeNatGatewaysAction, this))
+    : Ec2Request(new DescribeNatGatewaysRequestPrivate(Ec2Request::DescribeNatGatewaysAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeNatGatewaysRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeNatGatewaysRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
-    const EC2Request::Action action, DescribeNatGatewaysRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeNatGatewaysRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
     const DescribeNatGatewaysRequestPrivate &other, DescribeNatGatewaysRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

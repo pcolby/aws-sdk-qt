@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeMovingAddressesRequest::DescribeMovingAddressesRequest(const DescribeMovingAddressesRequest &other)
-    : EC2Request(new DescribeMovingAddressesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeMovingAddressesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeMovingAddressesRequest::DescribeMovingAddressesRequest(const DescribeMov
  * Constructs a DescribeMovingAddressesRequest object.
  */
 DescribeMovingAddressesRequest::DescribeMovingAddressesRequest()
-    : EC2Request(new DescribeMovingAddressesRequestPrivate(EC2Request::DescribeMovingAddressesAction, this))
+    : Ec2Request(new DescribeMovingAddressesRequestPrivate(Ec2Request::DescribeMovingAddressesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNet
  */
 
 /*!
- * Constructs a DescribeMovingAddressesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeMovingAddressesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
-    const EC2Request::Action action, DescribeMovingAddressesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeMovingAddressesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
  */
 DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
     const DescribeMovingAddressesRequestPrivate &other, DescribeMovingAddressesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

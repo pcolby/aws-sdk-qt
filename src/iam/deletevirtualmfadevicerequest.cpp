@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest(const DeleteVirtualMFADeviceRequest &other)
-    : IAMRequest(new DeleteVirtualMFADeviceRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteVirtualMFADeviceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest(const DeleteVirtual
  * Constructs a DeleteVirtualMFADeviceRequest object.
  */
 DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest()
-    : IAMRequest(new DeleteVirtualMFADeviceRequestPrivate(IAMRequest::DeleteVirtualMFADeviceAction, this))
+    : IamRequest(new DeleteVirtualMFADeviceRequestPrivate(IamRequest::DeleteVirtualMFADeviceAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeleteVirtualMFADeviceRequestPrivate object for IAM \a action,
+ * Constructs a DeleteVirtualMFADeviceRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
-    const IAMRequest::Action action, DeleteVirtualMFADeviceRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteVirtualMFADeviceRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
     const DeleteVirtualMFADeviceRequestPrivate &other, DeleteVirtualMFADeviceRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

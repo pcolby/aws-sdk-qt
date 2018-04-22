@@ -58,7 +58,7 @@ UnsubscribeResponse::UnsubscribeResponse(
         const UnsubscribeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new UnsubscribeResponsePrivate(this), parent)
+    : SnsResponse(new UnsubscribeResponsePrivate(this), parent)
 {
     setRequest(new UnsubscribeRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void UnsubscribeResponse::parseSuccess(QIODevice &response)
  * Constructs a UnsubscribeResponsePrivate object with public implementation \a q.
  */
 UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
-    UnsubscribeResponse * const q) : SNSResponsePrivate(q)
+    UnsubscribeResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

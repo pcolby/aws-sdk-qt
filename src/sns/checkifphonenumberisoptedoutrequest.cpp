@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest(const CheckIfPhoneNumberIsOptedOutRequest &other)
-    : SNSRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest(const C
  * Constructs a CheckIfPhoneNumberIsOptedOutRequest object.
  */
 CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest()
-    : SNSRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(SNSRequest::CheckIfPhoneNumberIsOptedOutAction, this))
+    : SnsRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(SnsRequest::CheckIfPhoneNumberIsOptedOutAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response
  */
 
 /*!
- * Constructs a CheckIfPhoneNumberIsOptedOutRequestPrivate object for SNS \a action,
+ * Constructs a CheckIfPhoneNumberIsOptedOutRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
-    const SNSRequest::Action action, CheckIfPhoneNumberIsOptedOutRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, CheckIfPhoneNumberIsOptedOutRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestP
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
     const CheckIfPhoneNumberIsOptedOutRequestPrivate &other, CheckIfPhoneNumberIsOptedOutRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

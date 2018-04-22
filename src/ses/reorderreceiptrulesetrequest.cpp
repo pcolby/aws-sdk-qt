@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest(const ReorderReceiptRuleSetRequest &other)
-    : SESRequest(new ReorderReceiptRuleSetRequestPrivate(*other.d_func(), this))
+    : SesRequest(new ReorderReceiptRuleSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest(const ReorderReceiptR
  * Constructs a ReorderReceiptRuleSetRequest object.
  */
 ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest()
-    : SESRequest(new ReorderReceiptRuleSetRequestPrivate(SESRequest::ReorderReceiptRuleSetAction, this))
+    : SesRequest(new ReorderReceiptRuleSetRequestPrivate(SesRequest::ReorderReceiptRuleSetAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetwo
  */
 
 /*!
- * Constructs a ReorderReceiptRuleSetRequestPrivate object for SES \a action,
+ * Constructs a ReorderReceiptRuleSetRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
-    const SESRequest::Action action, ReorderReceiptRuleSetRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, ReorderReceiptRuleSetRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
     const ReorderReceiptRuleSetRequestPrivate &other, ReorderReceiptRuleSetRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

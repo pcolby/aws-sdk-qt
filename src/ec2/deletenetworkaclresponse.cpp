@@ -48,7 +48,7 @@ DeleteNetworkAclResponse::DeleteNetworkAclResponse(
         const DeleteNetworkAclRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteNetworkAclResponsePrivate(this), parent)
+    : Ec2Response(new DeleteNetworkAclResponsePrivate(this), parent)
 {
     setRequest(new DeleteNetworkAclRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteNetworkAclResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteNetworkAclResponsePrivate object with public implementation \a q.
  */
 DeleteNetworkAclResponsePrivate::DeleteNetworkAclResponsePrivate(
-    DeleteNetworkAclResponse * const q) : EC2ResponsePrivate(q)
+    DeleteNetworkAclResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

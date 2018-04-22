@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 MonitorInstancesRequest::MonitorInstancesRequest(const MonitorInstancesRequest &other)
-    : EC2Request(new MonitorInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new MonitorInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ MonitorInstancesRequest::MonitorInstancesRequest(const MonitorInstancesRequest &
  * Constructs a MonitorInstancesRequest object.
  */
 MonitorInstancesRequest::MonitorInstancesRequest()
-    : EC2Request(new MonitorInstancesRequestPrivate(EC2Request::MonitorInstancesAction, this))
+    : Ec2Request(new MonitorInstancesRequestPrivate(Ec2Request::MonitorInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a MonitorInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a MonitorInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
-    const EC2Request::Action action, MonitorInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, MonitorInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
     const MonitorInstancesRequestPrivate &other, MonitorInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

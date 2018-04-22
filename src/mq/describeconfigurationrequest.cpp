@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 DescribeConfigurationRequest::DescribeConfigurationRequest(const DescribeConfigurationRequest &other)
-    : MQRequest(new DescribeConfigurationRequestPrivate(*other.d_func(), this))
+    : MqRequest(new DescribeConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeConfigurationRequest::DescribeConfigurationRequest(const DescribeConfigu
  * Constructs a DescribeConfigurationRequest object.
  */
 DescribeConfigurationRequest::DescribeConfigurationRequest()
-    : MQRequest(new DescribeConfigurationRequestPrivate(MQRequest::DescribeConfigurationAction, this))
+    : MqRequest(new DescribeConfigurationRequestPrivate(MqRequest::DescribeConfigurationAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DescribeConfigurationRequestPrivate object for MQ \a action,
+ * Constructs a DescribeConfigurationRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
-    const MQRequest::Action action, DescribeConfigurationRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, DescribeConfigurationRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
  */
 DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
     const DescribeConfigurationRequestPrivate &other, DescribeConfigurationRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

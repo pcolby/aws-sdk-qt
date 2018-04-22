@@ -49,7 +49,7 @@ GetByteMatchSetResponse::GetByteMatchSetResponse(
         const GetByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetByteMatchSetResponsePrivate(this), parent)
+    : WafResponse(new GetByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new GetByteMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a GetByteMatchSetResponsePrivate object with public implementation \a q.
  */
 GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
-    GetByteMatchSetResponse * const q) : WAFResponsePrivate(q)
+    GetByteMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

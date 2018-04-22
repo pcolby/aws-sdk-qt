@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest(const GetPlatformApplicationAttributesRequest &other)
-    : SNSRequest(new GetPlatformApplicationAttributesRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new GetPlatformApplicationAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest
  * Constructs a GetPlatformApplicationAttributesRequest object.
  */
 GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest()
-    : SNSRequest(new GetPlatformApplicationAttributesRequestPrivate(SNSRequest::GetPlatformApplicationAttributesAction, this))
+    : SnsRequest(new GetPlatformApplicationAttributesRequestPrivate(SnsRequest::GetPlatformApplicationAttributesAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * GetPlatformApplicationAttributesRequest::resp
  */
 
 /*!
- * Constructs a GetPlatformApplicationAttributesRequestPrivate object for SNS \a action,
+ * Constructs a GetPlatformApplicationAttributesRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
-    const SNSRequest::Action action, GetPlatformApplicationAttributesRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, GetPlatformApplicationAttributesRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributes
  */
 GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
     const GetPlatformApplicationAttributesRequestPrivate &other, GetPlatformApplicationAttributesRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

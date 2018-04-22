@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 ListAttributesRequest::ListAttributesRequest(const ListAttributesRequest &other)
-    : ECSRequest(new ListAttributesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new ListAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListAttributesRequest::ListAttributesRequest(const ListAttributesRequest &other)
  * Constructs a ListAttributesRequest object.
  */
 ListAttributesRequest::ListAttributesRequest()
-    : ECSRequest(new ListAttributesRequestPrivate(ECSRequest::ListAttributesAction, this))
+    : EcsRequest(new ListAttributesRequestPrivate(EcsRequest::ListAttributesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * ListAttributesRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ListAttributesRequestPrivate object for ECS \a action,
+ * Constructs a ListAttributesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 ListAttributesRequestPrivate::ListAttributesRequestPrivate(
-    const ECSRequest::Action action, ListAttributesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, ListAttributesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ ListAttributesRequestPrivate::ListAttributesRequestPrivate(
  */
 ListAttributesRequestPrivate::ListAttributesRequestPrivate(
     const ListAttributesRequestPrivate &other, ListAttributesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

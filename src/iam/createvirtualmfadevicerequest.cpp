@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateVirtualMFADeviceRequest::CreateVirtualMFADeviceRequest(const CreateVirtualMFADeviceRequest &other)
-    : IAMRequest(new CreateVirtualMFADeviceRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateVirtualMFADeviceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateVirtualMFADeviceRequest::CreateVirtualMFADeviceRequest(const CreateVirtual
  * Constructs a CreateVirtualMFADeviceRequest object.
  */
 CreateVirtualMFADeviceRequest::CreateVirtualMFADeviceRequest()
-    : IAMRequest(new CreateVirtualMFADeviceRequestPrivate(IAMRequest::CreateVirtualMFADeviceAction, this))
+    : IamRequest(new CreateVirtualMFADeviceRequestPrivate(IamRequest::CreateVirtualMFADeviceAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetw
  */
 
 /*!
- * Constructs a CreateVirtualMFADeviceRequestPrivate object for IAM \a action,
+ * Constructs a CreateVirtualMFADeviceRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
-    const IAMRequest::Action action, CreateVirtualMFADeviceRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateVirtualMFADeviceRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
     const CreateVirtualMFADeviceRequestPrivate &other, CreateVirtualMFADeviceRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

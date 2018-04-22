@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest(const ListActivatedRulesInRuleGroupRequest &other)
-    : WAFRequest(new ListActivatedRulesInRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListActivatedRulesInRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest(const
  * Constructs a ListActivatedRulesInRuleGroupRequest object.
  */
 ListActivatedRulesInRuleGroupRequest::ListActivatedRulesInRuleGroupRequest()
-    : WAFRequest(new ListActivatedRulesInRuleGroupRequestPrivate(WAFRequest::ListActivatedRulesInRuleGroupAction, this))
+    : WafRequest(new ListActivatedRulesInRuleGroupRequestPrivate(WafRequest::ListActivatedRulesInRuleGroupAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::respons
  */
 
 /*!
- * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for WAF \a action,
+ * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
-    const WAFRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupReques
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const ListActivatedRulesInRuleGroupRequestPrivate &other, ListActivatedRulesInRuleGroupRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

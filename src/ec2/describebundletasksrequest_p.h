@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeBundleTasksRequest;
 
-class QTAWS_EXPORT DescribeBundleTasksRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeBundleTasksRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeBundleTasksRequestPrivate(const EC2Request::Action action,
+    DescribeBundleTasksRequestPrivate(const Ec2Request::Action action,
                                    DescribeBundleTasksRequest * const q);
     DescribeBundleTasksRequestPrivate(const DescribeBundleTasksRequestPrivate &other,
                                    DescribeBundleTasksRequest * const q);

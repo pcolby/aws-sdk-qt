@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 ExportCertificateRequest::ExportCertificateRequest(const ExportCertificateRequest &other)
-    : ACMRequest(new ExportCertificateRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new ExportCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ ExportCertificateRequest::ExportCertificateRequest(const ExportCertificateReques
  * Constructs a ExportCertificateRequest object.
  */
 ExportCertificateRequest::ExportCertificateRequest()
-    : ACMRequest(new ExportCertificateRequestPrivate(ACMRequest::ExportCertificateAction, this))
+    : AcmRequest(new ExportCertificateRequestPrivate(AcmRequest::ExportCertificateAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ExportCertificateRequestPrivate object for ACM \a action,
+ * Constructs a ExportCertificateRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
-    const ACMRequest::Action action, ExportCertificateRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, ExportCertificateRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
  */
 ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
     const ExportCertificateRequestPrivate &other, ExportCertificateRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

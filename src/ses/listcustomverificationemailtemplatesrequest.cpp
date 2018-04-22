@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplatesRequest(const ListCustomVerificationEmailTemplatesRequest &other)
-    : SESRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(*other.d_func(), this))
+    : SesRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplate
  * Constructs a ListCustomVerificationEmailTemplatesRequest object.
  */
 ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplatesRequest()
-    : SESRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(SESRequest::ListCustomVerificationEmailTemplatesAction, this))
+    : SesRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(SesRequest::ListCustomVerificationEmailTemplatesAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * ListCustomVerificationEmailTemplatesRequest::
  */
 
 /*!
- * Constructs a ListCustomVerificationEmailTemplatesRequestPrivate object for SES \a action,
+ * Constructs a ListCustomVerificationEmailTemplatesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailTemplatesRequestPrivate(
-    const SESRequest::Action action, ListCustomVerificationEmailTemplatesRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, ListCustomVerificationEmailTemplatesRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailT
  */
 ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailTemplatesRequestPrivate(
     const ListCustomVerificationEmailTemplatesRequestPrivate &other, ListCustomVerificationEmailTemplatesRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

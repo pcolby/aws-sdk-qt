@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 TestRenderTemplateRequest::TestRenderTemplateRequest(const TestRenderTemplateRequest &other)
-    : SESRequest(new TestRenderTemplateRequestPrivate(*other.d_func(), this))
+    : SesRequest(new TestRenderTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ TestRenderTemplateRequest::TestRenderTemplateRequest(const TestRenderTemplateReq
  * Constructs a TestRenderTemplateRequest object.
  */
 TestRenderTemplateRequest::TestRenderTemplateRequest()
-    : SESRequest(new TestRenderTemplateRequestPrivate(SESRequest::TestRenderTemplateAction, this))
+    : SesRequest(new TestRenderTemplateRequestPrivate(SesRequest::TestRenderTemplateAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a TestRenderTemplateRequestPrivate object for SES \a action,
+ * Constructs a TestRenderTemplateRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
-    const SESRequest::Action action, TestRenderTemplateRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, TestRenderTemplateRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
     const TestRenderTemplateRequestPrivate &other, TestRenderTemplateRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

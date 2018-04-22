@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeregisterTargetFromMaintenanceWindowRequest::DeregisterTargetFromMaintenanceWindowRequest(const DeregisterTargetFromMaintenanceWindowRequest &other)
-    : SSMRequest(new DeregisterTargetFromMaintenanceWindowRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeregisterTargetFromMaintenanceWindowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeregisterTargetFromMaintenanceWindowRequest::DeregisterTargetFromMaintenanceWin
  * Constructs a DeregisterTargetFromMaintenanceWindowRequest object.
  */
 DeregisterTargetFromMaintenanceWindowRequest::DeregisterTargetFromMaintenanceWindowRequest()
-    : SSMRequest(new DeregisterTargetFromMaintenanceWindowRequestPrivate(SSMRequest::DeregisterTargetFromMaintenanceWindowAction, this))
+    : SsmRequest(new DeregisterTargetFromMaintenanceWindowRequestPrivate(SsmRequest::DeregisterTargetFromMaintenanceWindowAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterTargetFromMaintenanceWindowRequest:
  */
 
 /*!
- * Constructs a DeregisterTargetFromMaintenanceWindowRequestPrivate object for SSM \a action,
+ * Constructs a DeregisterTargetFromMaintenanceWindowRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMaintenanceWindowRequestPrivate(
-    const SSMRequest::Action action, DeregisterTargetFromMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeregisterTargetFromMaintenanceWindowRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMainten
  */
 DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMaintenanceWindowRequestPrivate(
     const DeregisterTargetFromMaintenanceWindowRequestPrivate &other, DeregisterTargetFromMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

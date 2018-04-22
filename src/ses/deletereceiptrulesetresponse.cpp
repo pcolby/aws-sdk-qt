@@ -55,7 +55,7 @@ DeleteReceiptRuleSetResponse::DeleteReceiptRuleSetResponse(
         const DeleteReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteReceiptRuleSetResponsePrivate(this), parent)
+    : SesResponse(new DeleteReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteReceiptRuleSetRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteReceiptRuleSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteReceiptRuleSetResponsePrivate object with public implementation \a q.
  */
 DeleteReceiptRuleSetResponsePrivate::DeleteReceiptRuleSetResponsePrivate(
-    DeleteReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
+    DeleteReceiptRuleSetResponse * const q) : SesResponsePrivate(q)
 {
 
 }

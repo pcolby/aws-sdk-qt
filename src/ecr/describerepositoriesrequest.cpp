@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositoriesRequest &other)
-    : ECRRequest(new DescribeRepositoriesRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new DescribeRepositoriesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositor
  * Constructs a DescribeRepositoriesRequest object.
  */
 DescribeRepositoriesRequest::DescribeRepositoriesRequest()
-    : ECRRequest(new DescribeRepositoriesRequestPrivate(ECRRequest::DescribeRepositoriesAction, this))
+    : EcrRequest(new DescribeRepositoriesRequestPrivate(EcrRequest::DescribeRepositoriesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeRepositoriesRequestPrivate object for ECR \a action,
+ * Constructs a DescribeRepositoriesRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
-    const ECRRequest::Action action, DescribeRepositoriesRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, DescribeRepositoriesRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const DescribeRepositoriesRequestPrivate &other, DescribeRepositoriesRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ CreateSecurityGroupResponse::CreateSecurityGroupResponse(
         const CreateSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateSecurityGroupResponsePrivate(this), parent)
+    : Ec2Response(new CreateSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateSecurityGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
-    CreateSecurityGroupResponse * const q) : EC2ResponsePrivate(q)
+    CreateSecurityGroupResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

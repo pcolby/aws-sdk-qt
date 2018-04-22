@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeFileSystemsRequestPrivate;
 
-class QTAWS_EXPORT DescribeFileSystemsRequest : public EFSRequest {
+class QTAWS_EXPORT DescribeFileSystemsRequest : public EfsRequest {
 
 public:
     DescribeFileSystemsRequest(const DescribeFileSystemsRequest &other);

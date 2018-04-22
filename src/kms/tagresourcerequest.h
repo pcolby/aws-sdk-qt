@@ -27,7 +27,7 @@ namespace KMS {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public KMSRequest {
+class QTAWS_EXPORT TagResourceRequest : public KmsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

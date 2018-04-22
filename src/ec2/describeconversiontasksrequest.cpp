@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeConversionTasksRequest::DescribeConversionTasksRequest(const DescribeConversionTasksRequest &other)
-    : EC2Request(new DescribeConversionTasksRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeConversionTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeConversionTasksRequest::DescribeConversionTasksRequest(const DescribeCon
  * Constructs a DescribeConversionTasksRequest object.
  */
 DescribeConversionTasksRequest::DescribeConversionTasksRequest()
-    : EC2Request(new DescribeConversionTasksRequestPrivate(EC2Request::DescribeConversionTasksAction, this))
+    : Ec2Request(new DescribeConversionTasksRequestPrivate(Ec2Request::DescribeConversionTasksAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNet
  */
 
 /*!
- * Constructs a DescribeConversionTasksRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeConversionTasksRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
-    const EC2Request::Action action, DescribeConversionTasksRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeConversionTasksRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
     const DescribeConversionTasksRequestPrivate &other, DescribeConversionTasksRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

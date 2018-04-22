@@ -28,7 +28,7 @@ namespace SSM {
 
 class SendAutomationSignalResponsePrivate;
 
-class QTAWS_EXPORT SendAutomationSignalResponse : public SSMResponse {
+class QTAWS_EXPORT SendAutomationSignalResponse : public SsmResponse {
     Q_OBJECT
 
 public:

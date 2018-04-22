@@ -48,7 +48,7 @@ GetReservedInstancesExchangeQuoteResponse::GetReservedInstancesExchangeQuoteResp
         const GetReservedInstancesExchangeQuoteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetReservedInstancesExchangeQuoteResponsePrivate(this), parent)
+    : Ec2Response(new GetReservedInstancesExchangeQuoteResponsePrivate(this), parent)
 {
     setRequest(new GetReservedInstancesExchangeQuoteRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetReservedInstancesExchangeQuoteResponse::parseSuccess(QIODevice &response
  * Constructs a GetReservedInstancesExchangeQuoteResponsePrivate object with public implementation \a q.
  */
 GetReservedInstancesExchangeQuoteResponsePrivate::GetReservedInstancesExchangeQuoteResponsePrivate(
-    GetReservedInstancesExchangeQuoteResponse * const q) : EC2ResponsePrivate(q)
+    GetReservedInstancesExchangeQuoteResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

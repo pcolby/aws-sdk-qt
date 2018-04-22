@@ -28,7 +28,7 @@ namespace STS {
 
 class AssumeRoleWithSAMLResponsePrivate;
 
-class QTAWS_EXPORT AssumeRoleWithSAMLResponse : public STSResponse {
+class QTAWS_EXPORT AssumeRoleWithSAMLResponse : public StsResponse {
     Q_OBJECT
 
 public:

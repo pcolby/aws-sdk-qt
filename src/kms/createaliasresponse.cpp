@@ -143,7 +143,7 @@ CreateAliasResponse::CreateAliasResponse(
         const CreateAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new CreateAliasResponsePrivate(this), parent)
+    : KmsResponse(new CreateAliasResponsePrivate(this), parent)
 {
     setRequest(new CreateAliasRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void CreateAliasResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateAliasResponsePrivate object with public implementation \a q.
  */
 CreateAliasResponsePrivate::CreateAliasResponsePrivate(
-    CreateAliasResponse * const q) : KMSResponsePrivate(q)
+    CreateAliasResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

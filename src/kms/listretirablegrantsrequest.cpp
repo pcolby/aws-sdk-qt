@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 ListRetirableGrantsRequest::ListRetirableGrantsRequest(const ListRetirableGrantsRequest &other)
-    : KMSRequest(new ListRetirableGrantsRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new ListRetirableGrantsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ ListRetirableGrantsRequest::ListRetirableGrantsRequest(const ListRetirableGrants
  * Constructs a ListRetirableGrantsRequest object.
  */
 ListRetirableGrantsRequest::ListRetirableGrantsRequest()
-    : KMSRequest(new ListRetirableGrantsRequestPrivate(KMSRequest::ListRetirableGrantsAction, this))
+    : KmsRequest(new ListRetirableGrantsRequestPrivate(KmsRequest::ListRetirableGrantsAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetwork
  */
 
 /*!
- * Constructs a ListRetirableGrantsRequestPrivate object for KMS \a action,
+ * Constructs a ListRetirableGrantsRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
-    const KMSRequest::Action action, ListRetirableGrantsRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, ListRetirableGrantsRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
     const ListRetirableGrantsRequestPrivate &other, ListRetirableGrantsRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

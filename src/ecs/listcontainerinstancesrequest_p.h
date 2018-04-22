@@ -28,10 +28,10 @@ namespace ECS {
 
 class ListContainerInstancesRequest;
 
-class QTAWS_EXPORT ListContainerInstancesRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT ListContainerInstancesRequestPrivate : public EcsRequestPrivate {
 
 public:
-    ListContainerInstancesRequestPrivate(const ECSRequest::Action action,
+    ListContainerInstancesRequestPrivate(const EcsRequest::Action action,
                                    ListContainerInstancesRequest * const q);
     ListContainerInstancesRequestPrivate(const ListContainerInstancesRequestPrivate &other,
                                    ListContainerInstancesRequest * const q);

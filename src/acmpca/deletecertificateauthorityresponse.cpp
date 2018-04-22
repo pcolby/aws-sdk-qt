@@ -74,7 +74,7 @@ DeleteCertificateAuthorityResponse::DeleteCertificateAuthorityResponse(
         const DeleteCertificateAuthorityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new DeleteCertificateAuthorityResponsePrivate(this), parent)
+    : AcmpcaResponse(new DeleteCertificateAuthorityResponsePrivate(this), parent)
 {
     setRequest(new DeleteCertificateAuthorityRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void DeleteCertificateAuthorityResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 DeleteCertificateAuthorityResponsePrivate::DeleteCertificateAuthorityResponsePrivate(
-    DeleteCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
+    DeleteCertificateAuthorityResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

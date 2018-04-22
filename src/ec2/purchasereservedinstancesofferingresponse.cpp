@@ -48,7 +48,7 @@ PurchaseReservedInstancesOfferingResponse::PurchaseReservedInstancesOfferingResp
         const PurchaseReservedInstancesOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new PurchaseReservedInstancesOfferingResponsePrivate(this), parent)
+    : Ec2Response(new PurchaseReservedInstancesOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedInstancesOfferingRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void PurchaseReservedInstancesOfferingResponse::parseSuccess(QIODevice &response
  * Constructs a PurchaseReservedInstancesOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOfferingResponsePrivate(
-    PurchaseReservedInstancesOfferingResponse * const q) : EC2ResponsePrivate(q)
+    PurchaseReservedInstancesOfferingResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

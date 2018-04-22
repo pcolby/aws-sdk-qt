@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CopyDBParameterGroupRequest::CopyDBParameterGroupRequest(const CopyDBParameterGroupRequest &other)
-    : RDSRequest(new CopyDBParameterGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CopyDBParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CopyDBParameterGroupRequest::CopyDBParameterGroupRequest(const CopyDBParameterGr
  * Constructs a CopyDBParameterGroupRequest object.
  */
 CopyDBParameterGroupRequest::CopyDBParameterGroupRequest()
-    : RDSRequest(new CopyDBParameterGroupRequestPrivate(RDSRequest::CopyDBParameterGroupAction, this))
+    : RdsRequest(new CopyDBParameterGroupRequestPrivate(RdsRequest::CopyDBParameterGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetwor
  */
 
 /*!
- * Constructs a CopyDBParameterGroupRequestPrivate object for RDS \a action,
+ * Constructs a CopyDBParameterGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
-    const RDSRequest::Action action, CopyDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CopyDBParameterGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
     const CopyDBParameterGroupRequestPrivate &other, CopyDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace ECR {
 
 class PutLifecyclePolicyRequestPrivate;
 
-class QTAWS_EXPORT PutLifecyclePolicyRequest : public ECRRequest {
+class QTAWS_EXPORT PutLifecyclePolicyRequest : public EcrRequest {
 
 public:
     PutLifecyclePolicyRequest(const PutLifecyclePolicyRequest &other);

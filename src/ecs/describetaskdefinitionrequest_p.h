@@ -28,10 +28,10 @@ namespace ECS {
 
 class DescribeTaskDefinitionRequest;
 
-class QTAWS_EXPORT DescribeTaskDefinitionRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT DescribeTaskDefinitionRequestPrivate : public EcsRequestPrivate {
 
 public:
-    DescribeTaskDefinitionRequestPrivate(const ECSRequest::Action action,
+    DescribeTaskDefinitionRequestPrivate(const EcsRequest::Action action,
                                    DescribeTaskDefinitionRequest * const q);
     DescribeTaskDefinitionRequestPrivate(const DescribeTaskDefinitionRequestPrivate &other,
                                    DescribeTaskDefinitionRequest * const q);

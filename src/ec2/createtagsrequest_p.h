@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CreateTagsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CreateTagsRequestPrivate(const EC2Request::Action action,
+    CreateTagsRequestPrivate(const Ec2Request::Action action,
                                    CreateTagsRequest * const q);
     CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
                                    CreateTagsRequest * const q);

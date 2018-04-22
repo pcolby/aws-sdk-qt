@@ -28,10 +28,10 @@ namespace ECR {
 
 class GetAuthorizationTokenRequest;
 
-class QTAWS_EXPORT GetAuthorizationTokenRequestPrivate : public ECRRequestPrivate {
+class QTAWS_EXPORT GetAuthorizationTokenRequestPrivate : public EcrRequestPrivate {
 
 public:
-    GetAuthorizationTokenRequestPrivate(const ECRRequest::Action action,
+    GetAuthorizationTokenRequestPrivate(const EcrRequest::Action action,
                                    GetAuthorizationTokenRequest * const q);
     GetAuthorizationTokenRequestPrivate(const GetAuthorizationTokenRequestPrivate &other,
                                    GetAuthorizationTokenRequest * const q);

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateServiceSpecificCredentialRequest::CreateServiceSpecificCredentialRequest(const CreateServiceSpecificCredentialRequest &other)
-    : IAMRequest(new CreateServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateServiceSpecificCredentialRequest::CreateServiceSpecificCredentialRequest(c
  * Constructs a CreateServiceSpecificCredentialRequest object.
  */
 CreateServiceSpecificCredentialRequest::CreateServiceSpecificCredentialRequest()
-    : IAMRequest(new CreateServiceSpecificCredentialRequestPrivate(IAMRequest::CreateServiceSpecificCredentialAction, this))
+    : IamRequest(new CreateServiceSpecificCredentialRequestPrivate(IamRequest::CreateServiceSpecificCredentialAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateServiceSpecificCredentialRequest::respo
  */
 
 /*!
- * Constructs a CreateServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * Constructs a CreateServiceSpecificCredentialRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRequestPrivate(
-    const IAMRequest::Action action, CreateServiceSpecificCredentialRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateServiceSpecificCredentialRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRe
  */
 CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRequestPrivate(
     const CreateServiceSpecificCredentialRequestPrivate &other, CreateServiceSpecificCredentialRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SWF {
 
 class DescribeWorkflowTypeRequest;
 
-class QTAWS_EXPORT DescribeWorkflowTypeRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT DescribeWorkflowTypeRequestPrivate : public SwfRequestPrivate {
 
 public:
-    DescribeWorkflowTypeRequestPrivate(const SWFRequest::Action action,
+    DescribeWorkflowTypeRequestPrivate(const SwfRequest::Action action,
                                    DescribeWorkflowTypeRequest * const q);
     DescribeWorkflowTypeRequestPrivate(const DescribeWorkflowTypeRequestPrivate &other,
                                    DescribeWorkflowTypeRequest * const q);

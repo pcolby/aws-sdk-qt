@@ -55,7 +55,7 @@ DeleteReceiptFilterResponse::DeleteReceiptFilterResponse(
         const DeleteReceiptFilterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteReceiptFilterResponsePrivate(this), parent)
+    : SesResponse(new DeleteReceiptFilterResponsePrivate(this), parent)
 {
     setRequest(new DeleteReceiptFilterRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteReceiptFilterResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteReceiptFilterResponsePrivate object with public implementation \a q.
  */
 DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponsePrivate(
-    DeleteReceiptFilterResponse * const q) : SESResponsePrivate(q)
+    DeleteReceiptFilterResponse * const q) : SesResponsePrivate(q)
 {
 
 }

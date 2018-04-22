@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 ListSubscriptionsByTopicRequest::ListSubscriptionsByTopicRequest(const ListSubscriptionsByTopicRequest &other)
-    : SNSRequest(new ListSubscriptionsByTopicRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new ListSubscriptionsByTopicRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ ListSubscriptionsByTopicRequest::ListSubscriptionsByTopicRequest(const ListSubsc
  * Constructs a ListSubscriptionsByTopicRequest object.
  */
 ListSubscriptionsByTopicRequest::ListSubscriptionsByTopicRequest()
-    : SNSRequest(new ListSubscriptionsByTopicRequestPrivate(SNSRequest::ListSubscriptionsByTopicAction, this))
+    : SnsRequest(new ListSubscriptionsByTopicRequestPrivate(SnsRequest::ListSubscriptionsByTopicAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionsByTopicRequest::response(QNe
  */
 
 /*!
- * Constructs a ListSubscriptionsByTopicRequestPrivate object for SNS \a action,
+ * Constructs a ListSubscriptionsByTopicRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 ListSubscriptionsByTopicRequestPrivate::ListSubscriptionsByTopicRequestPrivate(
-    const SNSRequest::Action action, ListSubscriptionsByTopicRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, ListSubscriptionsByTopicRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ ListSubscriptionsByTopicRequestPrivate::ListSubscriptionsByTopicRequestPrivate(
  */
 ListSubscriptionsByTopicRequestPrivate::ListSubscriptionsByTopicRequestPrivate(
     const ListSubscriptionsByTopicRequestPrivate &other, ListSubscriptionsByTopicRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

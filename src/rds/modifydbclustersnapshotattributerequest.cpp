@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyDBClusterSnapshotAttributeRequest::ModifyDBClusterSnapshotAttributeRequest(const ModifyDBClusterSnapshotAttributeRequest &other)
-    : RDSRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyDBClusterSnapshotAttributeRequest::ModifyDBClusterSnapshotAttributeRequest
  * Constructs a ModifyDBClusterSnapshotAttributeRequest object.
  */
 ModifyDBClusterSnapshotAttributeRequest::ModifyDBClusterSnapshotAttributeRequest()
-    : RDSRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(RDSRequest::ModifyDBClusterSnapshotAttributeAction, this))
+    : RdsRequest(new ModifyDBClusterSnapshotAttributeRequestPrivate(RdsRequest::ModifyDBClusterSnapshotAttributeAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterSnapshotAttributeRequest::resp
  */
 
 /*!
- * Constructs a ModifyDBClusterSnapshotAttributeRequestPrivate object for RDS \a action,
+ * Constructs a ModifyDBClusterSnapshotAttributeRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttributeRequestPrivate(
-    const RDSRequest::Action action, ModifyDBClusterSnapshotAttributeRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyDBClusterSnapshotAttributeRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttribute
  */
 ModifyDBClusterSnapshotAttributeRequestPrivate::ModifyDBClusterSnapshotAttributeRequestPrivate(
     const ModifyDBClusterSnapshotAttributeRequestPrivate &other, ModifyDBClusterSnapshotAttributeRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

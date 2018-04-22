@@ -28,10 +28,10 @@ namespace KMS {
 
 class CancelKeyDeletionRequest;
 
-class QTAWS_EXPORT CancelKeyDeletionRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT CancelKeyDeletionRequestPrivate : public KmsRequestPrivate {
 
 public:
-    CancelKeyDeletionRequestPrivate(const KMSRequest::Action action,
+    CancelKeyDeletionRequestPrivate(const KmsRequest::Action action,
                                    CancelKeyDeletionRequest * const q);
     CancelKeyDeletionRequestPrivate(const CancelKeyDeletionRequestPrivate &other,
                                    CancelKeyDeletionRequest * const q);

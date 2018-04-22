@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 EnableVolumeIORequest::EnableVolumeIORequest(const EnableVolumeIORequest &other)
-    : EC2Request(new EnableVolumeIORequestPrivate(*other.d_func(), this))
+    : Ec2Request(new EnableVolumeIORequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ EnableVolumeIORequest::EnableVolumeIORequest(const EnableVolumeIORequest &other)
  * Constructs a EnableVolumeIORequest object.
  */
 EnableVolumeIORequest::EnableVolumeIORequest()
-    : EC2Request(new EnableVolumeIORequestPrivate(EC2Request::EnableVolumeIOAction, this))
+    : Ec2Request(new EnableVolumeIORequestPrivate(Ec2Request::EnableVolumeIOAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a EnableVolumeIORequestPrivate object for EC2 \a action,
+ * Constructs a EnableVolumeIORequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
-    const EC2Request::Action action, EnableVolumeIORequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, EnableVolumeIORequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
     const EnableVolumeIORequestPrivate &other, EnableVolumeIORequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

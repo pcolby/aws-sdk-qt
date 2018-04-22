@@ -27,7 +27,7 @@ namespace SNS {
 
 class ListSubscriptionsRequestPrivate;
 
-class QTAWS_EXPORT ListSubscriptionsRequest : public SNSRequest {
+class QTAWS_EXPORT ListSubscriptionsRequest : public SnsRequest {
 
 public:
     ListSubscriptionsRequest(const ListSubscriptionsRequest &other);

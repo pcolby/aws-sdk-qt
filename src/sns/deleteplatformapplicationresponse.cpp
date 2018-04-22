@@ -58,7 +58,7 @@ DeletePlatformApplicationResponse::DeletePlatformApplicationResponse(
         const DeletePlatformApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new DeletePlatformApplicationResponsePrivate(this), parent)
+    : SnsResponse(new DeletePlatformApplicationResponsePrivate(this), parent)
 {
     setRequest(new DeletePlatformApplicationRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
  * Constructs a DeletePlatformApplicationResponsePrivate object with public implementation \a q.
  */
 DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePrivate(
-    DeletePlatformApplicationResponse * const q) : SNSResponsePrivate(q)
+    DeletePlatformApplicationResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest(const UnassignIpv6AddressesRequest &other)
-    : EC2Request(new UnassignIpv6AddressesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new UnassignIpv6AddressesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest(const UnassignIpv6Add
  * Constructs a UnassignIpv6AddressesRequest object.
  */
 UnassignIpv6AddressesRequest::UnassignIpv6AddressesRequest()
-    : EC2Request(new UnassignIpv6AddressesRequestPrivate(EC2Request::UnassignIpv6AddressesAction, this))
+    : Ec2Request(new UnassignIpv6AddressesRequestPrivate(Ec2Request::UnassignIpv6AddressesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UnassignIpv6AddressesRequest::response(QNetwo
  */
 
 /*!
- * Constructs a UnassignIpv6AddressesRequestPrivate object for EC2 \a action,
+ * Constructs a UnassignIpv6AddressesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
-    const EC2Request::Action action, UnassignIpv6AddressesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, UnassignIpv6AddressesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
  */
 UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
     const UnassignIpv6AddressesRequestPrivate &other, UnassignIpv6AddressesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

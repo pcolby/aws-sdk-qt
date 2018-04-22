@@ -48,7 +48,7 @@ DeleteRouteResponse::DeleteRouteResponse(
         const DeleteRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteRouteResponsePrivate(this), parent)
+    : Ec2Response(new DeleteRouteResponsePrivate(this), parent)
 {
     setRequest(new DeleteRouteRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteRouteResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteRouteResponsePrivate object with public implementation \a q.
  */
 DeleteRouteResponsePrivate::DeleteRouteResponsePrivate(
-    DeleteRouteResponse * const q) : EC2ResponsePrivate(q)
+    DeleteRouteResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

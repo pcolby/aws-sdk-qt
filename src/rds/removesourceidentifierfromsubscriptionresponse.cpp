@@ -108,7 +108,7 @@ RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscr
         const RemoveSourceIdentifierFromSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
+    : RdsResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new RemoveSourceIdentifierFromSubscriptionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &res
  * Constructs a RemoveSourceIdentifierFromSubscriptionResponsePrivate object with public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponsePrivate(
-    RemoveSourceIdentifierFromSubscriptionResponse * const q) : RDSResponsePrivate(q)
+    RemoveSourceIdentifierFromSubscriptionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

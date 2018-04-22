@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &other)
-    : SNSRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &
  * Constructs a RemovePermissionRequest object.
  */
 RemovePermissionRequest::RemovePermissionRequest()
-    : SNSRequest(new RemovePermissionRequestPrivate(SNSRequest::RemovePermissionAction, this))
+    : SnsRequest(new RemovePermissionRequestPrivate(SnsRequest::RemovePermissionAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a RemovePermissionRequestPrivate object for SNS \a action,
+ * Constructs a RemovePermissionRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
-    const SNSRequest::Action action, RemovePermissionRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, RemovePermissionRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const RemovePermissionRequestPrivate &other, RemovePermissionRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

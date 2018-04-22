@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 ListSubscriptionsRequest::ListSubscriptionsRequest(const ListSubscriptionsRequest &other)
-    : SNSRequest(new ListSubscriptionsRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new ListSubscriptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ ListSubscriptionsRequest::ListSubscriptionsRequest(const ListSubscriptionsReques
  * Constructs a ListSubscriptionsRequest object.
  */
 ListSubscriptionsRequest::ListSubscriptionsRequest()
-    : SNSRequest(new ListSubscriptionsRequestPrivate(SNSRequest::ListSubscriptionsAction, this))
+    : SnsRequest(new ListSubscriptionsRequestPrivate(SnsRequest::ListSubscriptionsAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ListSubscriptionsRequestPrivate object for SNS \a action,
+ * Constructs a ListSubscriptionsRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
-    const SNSRequest::Action action, ListSubscriptionsRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, ListSubscriptionsRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
     const ListSubscriptionsRequestPrivate &other, ListSubscriptionsRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

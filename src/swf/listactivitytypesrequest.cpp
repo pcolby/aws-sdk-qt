@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 ListActivityTypesRequest::ListActivityTypesRequest(const ListActivityTypesRequest &other)
-    : SWFRequest(new ListActivityTypesRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new ListActivityTypesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ ListActivityTypesRequest::ListActivityTypesRequest(const ListActivityTypesReques
  * Constructs a ListActivityTypesRequest object.
  */
 ListActivityTypesRequest::ListActivityTypesRequest()
-    : SWFRequest(new ListActivityTypesRequestPrivate(SWFRequest::ListActivityTypesAction, this))
+    : SwfRequest(new ListActivityTypesRequestPrivate(SwfRequest::ListActivityTypesAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * ListActivityTypesRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ListActivityTypesRequestPrivate object for SWF \a action,
+ * Constructs a ListActivityTypesRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
-    const SWFRequest::Action action, ListActivityTypesRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, ListActivityTypesRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
  */
 ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
     const ListActivityTypesRequestPrivate &other, ListActivityTypesRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

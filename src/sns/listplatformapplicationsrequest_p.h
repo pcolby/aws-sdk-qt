@@ -28,10 +28,10 @@ namespace SNS {
 
 class ListPlatformApplicationsRequest;
 
-class QTAWS_EXPORT ListPlatformApplicationsRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT ListPlatformApplicationsRequestPrivate : public SnsRequestPrivate {
 
 public:
-    ListPlatformApplicationsRequestPrivate(const SNSRequest::Action action,
+    ListPlatformApplicationsRequestPrivate(const SnsRequest::Action action,
                                    ListPlatformApplicationsRequest * const q);
     ListPlatformApplicationsRequestPrivate(const ListPlatformApplicationsRequestPrivate &other,
                                    ListPlatformApplicationsRequest * const q);

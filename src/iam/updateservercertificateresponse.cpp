@@ -109,7 +109,7 @@ UpdateServerCertificateResponse::UpdateServerCertificateResponse(
         const UpdateServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateServerCertificateResponsePrivate(this), parent)
+    : IamResponse(new UpdateServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new UpdateServerCertificateRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateServerCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateServerCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateServerCertificateResponsePrivate::UpdateServerCertificateResponsePrivate(
-    UpdateServerCertificateResponse * const q) : IAMResponsePrivate(q)
+    UpdateServerCertificateResponse * const q) : IamResponsePrivate(q)
 {
 
 }

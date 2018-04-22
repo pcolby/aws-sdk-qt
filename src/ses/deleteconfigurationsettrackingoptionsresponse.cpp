@@ -55,7 +55,7 @@ DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOpt
         const DeleteConfigurationSetTrackingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteConfigurationSetTrackingOptionsResponsePrivate(this), parent)
+    : SesResponse(new DeleteConfigurationSetTrackingOptionsResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetTrackingOptionsRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
  * Constructs a DeleteConfigurationSetTrackingOptionsResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrackingOptionsResponsePrivate(
-    DeleteConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
+    DeleteConfigurationSetTrackingOptionsResponse * const q) : SesResponsePrivate(q)
 {
 
 }

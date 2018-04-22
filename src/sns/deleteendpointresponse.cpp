@@ -58,7 +58,7 @@ DeleteEndpointResponse::DeleteEndpointResponse(
         const DeleteEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new DeleteEndpointResponsePrivate(this), parent)
+    : SnsResponse(new DeleteEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteEndpointRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void DeleteEndpointResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteEndpointResponsePrivate object with public implementation \a q.
  */
 DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
-    DeleteEndpointResponse * const q) : SNSResponsePrivate(q)
+    DeleteEndpointResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

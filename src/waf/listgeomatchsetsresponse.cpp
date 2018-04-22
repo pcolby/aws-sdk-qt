@@ -49,7 +49,7 @@ ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
         const ListGeoMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
+    : WafResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListGeoMatchSetsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListGeoMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
-    ListGeoMatchSetsResponse * const q) : WAFResponsePrivate(q)
+    ListGeoMatchSetsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

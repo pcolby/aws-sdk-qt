@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteFpgaImageRequestPrivate;
 
-class QTAWS_EXPORT DeleteFpgaImageRequest : public EC2Request {
+class QTAWS_EXPORT DeleteFpgaImageRequest : public Ec2Request {
 
 public:
     DeleteFpgaImageRequest(const DeleteFpgaImageRequest &other);

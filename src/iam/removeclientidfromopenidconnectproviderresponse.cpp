@@ -109,7 +109,7 @@ RemoveClientIDFromOpenIDConnectProviderResponse::RemoveClientIDFromOpenIDConnect
         const RemoveClientIDFromOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new RemoveClientIDFromOpenIDConnectProviderResponsePrivate(this), parent)
+    : IamResponse(new RemoveClientIDFromOpenIDConnectProviderResponsePrivate(this), parent)
 {
     setRequest(new RemoveClientIDFromOpenIDConnectProviderRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void RemoveClientIDFromOpenIDConnectProviderResponse::parseSuccess(QIODevice &re
  * Constructs a RemoveClientIDFromOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 RemoveClientIDFromOpenIDConnectProviderResponsePrivate::RemoveClientIDFromOpenIDConnectProviderResponsePrivate(
-    RemoveClientIDFromOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
+    RemoveClientIDFromOpenIDConnectProviderResponse * const q) : IamResponsePrivate(q)
 {
 
 }

@@ -109,7 +109,7 @@ ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
         const ListVirtualMFADevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListVirtualMFADevicesResponsePrivate(this), parent)
+    : IamResponse(new ListVirtualMFADevicesResponsePrivate(this), parent)
 {
     setRequest(new ListVirtualMFADevicesRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListVirtualMFADevicesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListVirtualMFADevicesResponsePrivate object with public implementation \a q.
  */
 ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponsePrivate(
-    ListVirtualMFADevicesResponse * const q) : IAMResponsePrivate(q)
+    ListVirtualMFADevicesResponse * const q) : IamResponsePrivate(q)
 {
 
 }

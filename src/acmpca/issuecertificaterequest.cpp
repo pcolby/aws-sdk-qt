@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 IssueCertificateRequest::IssueCertificateRequest(const IssueCertificateRequest &other)
-    : ACMPCARequest(new IssueCertificateRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new IssueCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ IssueCertificateRequest::IssueCertificateRequest(const IssueCertificateRequest &
  * Constructs a IssueCertificateRequest object.
  */
 IssueCertificateRequest::IssueCertificateRequest()
-    : ACMPCARequest(new IssueCertificateRequestPrivate(ACMPCARequest::IssueCertificateAction, this))
+    : AcmpcaRequest(new IssueCertificateRequestPrivate(AcmpcaRequest::IssueCertificateAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * IssueCertificateRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a IssueCertificateRequestPrivate object for ACMPCA \a action,
+ * Constructs a IssueCertificateRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
-    const ACMPCARequest::Action action, IssueCertificateRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, IssueCertificateRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
  */
 IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
     const IssueCertificateRequestPrivate &other, IssueCertificateRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

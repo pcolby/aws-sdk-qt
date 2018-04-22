@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest(const DescribeVpnGatewaysRequest &other)
-    : EC2Request(new DescribeVpnGatewaysRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVpnGatewaysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest(const DescribeVpnGateways
  * Constructs a DescribeVpnGatewaysRequest object.
  */
 DescribeVpnGatewaysRequest::DescribeVpnGatewaysRequest()
-    : EC2Request(new DescribeVpnGatewaysRequestPrivate(EC2Request::DescribeVpnGatewaysAction, this))
+    : Ec2Request(new DescribeVpnGatewaysRequestPrivate(Ec2Request::DescribeVpnGatewaysAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnGatewaysRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeVpnGatewaysRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVpnGatewaysRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
-    const EC2Request::Action action, DescribeVpnGatewaysRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVpnGatewaysRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
  */
 DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
     const DescribeVpnGatewaysRequestPrivate &other, DescribeVpnGatewaysRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

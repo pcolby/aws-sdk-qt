@@ -48,7 +48,7 @@ DescribeMovingAddressesResponse::DescribeMovingAddressesResponse(
         const DescribeMovingAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeMovingAddressesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeMovingAddressesResponsePrivate(this), parent)
 {
     setRequest(new DescribeMovingAddressesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeMovingAddressesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeMovingAddressesResponsePrivate object with public implementation \a q.
  */
 DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponsePrivate(
-    DescribeMovingAddressesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeMovingAddressesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

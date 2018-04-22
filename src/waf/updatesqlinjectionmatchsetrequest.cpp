@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateSqlInjectionMatchSetRequest::UpdateSqlInjectionMatchSetRequest(const UpdateSqlInjectionMatchSetRequest &other)
-    : WAFRequest(new UpdateSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateSqlInjectionMatchSetRequest::UpdateSqlInjectionMatchSetRequest(const Updat
  * Constructs a UpdateSqlInjectionMatchSetRequest object.
  */
 UpdateSqlInjectionMatchSetRequest::UpdateSqlInjectionMatchSetRequest()
-    : WAFRequest(new UpdateSqlInjectionMatchSetRequestPrivate(WAFRequest::UpdateSqlInjectionMatchSetAction, this))
+    : WafRequest(new UpdateSqlInjectionMatchSetRequestPrivate(WafRequest::UpdateSqlInjectionMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateSqlInjectionMatchSetRequest::response(Q
  */
 
 /*!
- * Constructs a UpdateSqlInjectionMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a UpdateSqlInjectionMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPrivate(
-    const WAFRequest::Action action, UpdateSqlInjectionMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateSqlInjectionMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPriva
  */
 UpdateSqlInjectionMatchSetRequestPrivate::UpdateSqlInjectionMatchSetRequestPrivate(
     const UpdateSqlInjectionMatchSetRequestPrivate &other, UpdateSqlInjectionMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

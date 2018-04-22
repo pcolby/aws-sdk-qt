@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifyVolumeAttributeRequest;
 
-class QTAWS_EXPORT ModifyVolumeAttributeRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifyVolumeAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifyVolumeAttributeRequestPrivate(const EC2Request::Action action,
+    ModifyVolumeAttributeRequestPrivate(const Ec2Request::Action action,
                                    ModifyVolumeAttributeRequest * const q);
     ModifyVolumeAttributeRequestPrivate(const ModifyVolumeAttributeRequestPrivate &other,
                                    ModifyVolumeAttributeRequest * const q);

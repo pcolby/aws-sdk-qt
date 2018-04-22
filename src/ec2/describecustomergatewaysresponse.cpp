@@ -48,7 +48,7 @@ DescribeCustomerGatewaysResponse::DescribeCustomerGatewaysResponse(
         const DescribeCustomerGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeCustomerGatewaysResponsePrivate(this), parent)
+    : Ec2Response(new DescribeCustomerGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeCustomerGatewaysRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeCustomerGatewaysResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeCustomerGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate(
-    DescribeCustomerGatewaysResponse * const q) : EC2ResponsePrivate(q)
+    DescribeCustomerGatewaysResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

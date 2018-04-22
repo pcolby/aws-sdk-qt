@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest(const CreateNetworkAclEntryRequest &other)
-    : EC2Request(new CreateNetworkAclEntryRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateNetworkAclEntryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest(const CreateNetworkAc
  * Constructs a CreateNetworkAclEntryRequest object.
  */
 CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest()
-    : EC2Request(new CreateNetworkAclEntryRequestPrivate(EC2Request::CreateNetworkAclEntryAction, this))
+    : Ec2Request(new CreateNetworkAclEntryRequestPrivate(Ec2Request::CreateNetworkAclEntryAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclEntryRequest::response(QNetwo
  */
 
 /*!
- * Constructs a CreateNetworkAclEntryRequestPrivate object for EC2 \a action,
+ * Constructs a CreateNetworkAclEntryRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
-    const EC2Request::Action action, CreateNetworkAclEntryRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateNetworkAclEntryRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
  */
 CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
     const CreateNetworkAclEntryRequestPrivate &other, CreateNetworkAclEntryRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

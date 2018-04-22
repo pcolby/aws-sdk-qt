@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 GetLifecyclePolicyRequest::GetLifecyclePolicyRequest(const GetLifecyclePolicyRequest &other)
-    : ECRRequest(new GetLifecyclePolicyRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new GetLifecyclePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetLifecyclePolicyRequest::GetLifecyclePolicyRequest(const GetLifecyclePolicyReq
  * Constructs a GetLifecyclePolicyRequest object.
  */
 GetLifecyclePolicyRequest::GetLifecyclePolicyRequest()
-    : ECRRequest(new GetLifecyclePolicyRequestPrivate(ECRRequest::GetLifecyclePolicyAction, this))
+    : EcrRequest(new GetLifecyclePolicyRequestPrivate(EcrRequest::GetLifecyclePolicyAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetLifecyclePolicyRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a GetLifecyclePolicyRequestPrivate object for ECR \a action,
+ * Constructs a GetLifecyclePolicyRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 GetLifecyclePolicyRequestPrivate::GetLifecyclePolicyRequestPrivate(
-    const ECRRequest::Action action, GetLifecyclePolicyRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, GetLifecyclePolicyRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetLifecyclePolicyRequestPrivate::GetLifecyclePolicyRequestPrivate(
  */
 GetLifecyclePolicyRequestPrivate::GetLifecyclePolicyRequestPrivate(
     const GetLifecyclePolicyRequestPrivate &other, GetLifecyclePolicyRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

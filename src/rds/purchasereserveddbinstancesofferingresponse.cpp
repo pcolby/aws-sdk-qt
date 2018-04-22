@@ -108,7 +108,7 @@ PurchaseReservedDBInstancesOfferingResponse::PurchaseReservedDBInstancesOffering
         const PurchaseReservedDBInstancesOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new PurchaseReservedDBInstancesOfferingResponsePrivate(this), parent)
+    : RdsResponse(new PurchaseReservedDBInstancesOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedDBInstancesOfferingRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &respon
  * Constructs a PurchaseReservedDBInstancesOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesOfferingResponsePrivate(
-    PurchaseReservedDBInstancesOfferingResponse * const q) : RDSResponsePrivate(q)
+    PurchaseReservedDBInstancesOfferingResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

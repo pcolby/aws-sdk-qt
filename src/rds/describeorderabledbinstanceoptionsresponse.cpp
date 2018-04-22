@@ -108,7 +108,7 @@ DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsRe
         const DescribeOrderableDBInstanceOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
+    : RdsResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOrderableDBInstanceOptionsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &respons
  * Constructs a DescribeOrderableDBInstanceOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponsePrivate(
-    DescribeOrderableDBInstanceOptionsResponse * const q) : RDSResponsePrivate(q)
+    DescribeOrderableDBInstanceOptionsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

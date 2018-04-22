@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeInstanceStatusRequest::DescribeInstanceStatusRequest(const DescribeInstanceStatusRequest &other)
-    : EC2Request(new DescribeInstanceStatusRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeInstanceStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeInstanceStatusRequest::DescribeInstanceStatusRequest(const DescribeInsta
  * Constructs a DescribeInstanceStatusRequest object.
  */
 DescribeInstanceStatusRequest::DescribeInstanceStatusRequest()
-    : EC2Request(new DescribeInstanceStatusRequestPrivate(EC2Request::DescribeInstanceStatusAction, this))
+    : Ec2Request(new DescribeInstanceStatusRequestPrivate(Ec2Request::DescribeInstanceStatusAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetw
  */
 
 /*!
- * Constructs a DescribeInstanceStatusRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeInstanceStatusRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
-    const EC2Request::Action action, DescribeInstanceStatusRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeInstanceStatusRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
  */
 DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
     const DescribeInstanceStatusRequestPrivate &other, DescribeInstanceStatusRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

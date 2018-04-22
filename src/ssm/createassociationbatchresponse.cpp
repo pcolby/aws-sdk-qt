@@ -68,7 +68,7 @@ CreateAssociationBatchResponse::CreateAssociationBatchResponse(
         const CreateAssociationBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateAssociationBatchResponsePrivate(this), parent)
+    : SsmResponse(new CreateAssociationBatchResponsePrivate(this), parent)
 {
     setRequest(new CreateAssociationBatchRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void CreateAssociationBatchResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateAssociationBatchResponsePrivate object with public implementation \a q.
  */
 CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponsePrivate(
-    CreateAssociationBatchResponse * const q) : SSMResponsePrivate(q)
+    CreateAssociationBatchResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

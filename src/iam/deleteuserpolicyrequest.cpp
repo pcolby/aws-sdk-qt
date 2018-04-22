@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteUserPolicyRequest::DeleteUserPolicyRequest(const DeleteUserPolicyRequest &other)
-    : IAMRequest(new DeleteUserPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteUserPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteUserPolicyRequest::DeleteUserPolicyRequest(const DeleteUserPolicyRequest &
  * Constructs a DeleteUserPolicyRequest object.
  */
 DeleteUserPolicyRequest::DeleteUserPolicyRequest()
-    : IAMRequest(new DeleteUserPolicyRequestPrivate(IAMRequest::DeleteUserPolicyAction, this))
+    : IamRequest(new DeleteUserPolicyRequestPrivate(IamRequest::DeleteUserPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPolicyRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteUserPolicyRequestPrivate object for IAM \a action,
+ * Constructs a DeleteUserPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteUserPolicyRequestPrivate::DeleteUserPolicyRequestPrivate(
-    const IAMRequest::Action action, DeleteUserPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteUserPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteUserPolicyRequestPrivate::DeleteUserPolicyRequestPrivate(
  */
 DeleteUserPolicyRequestPrivate::DeleteUserPolicyRequestPrivate(
     const DeleteUserPolicyRequestPrivate &other, DeleteUserPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

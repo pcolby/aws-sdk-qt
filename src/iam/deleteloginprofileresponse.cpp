@@ -109,7 +109,7 @@ DeleteLoginProfileResponse::DeleteLoginProfileResponse(
         const DeleteLoginProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteLoginProfileResponsePrivate(this), parent)
+    : IamResponse(new DeleteLoginProfileResponsePrivate(this), parent)
 {
     setRequest(new DeleteLoginProfileRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteLoginProfileResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteLoginProfileResponsePrivate object with public implementation \a q.
  */
 DeleteLoginProfileResponsePrivate::DeleteLoginProfileResponsePrivate(
-    DeleteLoginProfileResponse * const q) : IAMResponsePrivate(q)
+    DeleteLoginProfileResponse * const q) : IamResponsePrivate(q)
 {
 
 }

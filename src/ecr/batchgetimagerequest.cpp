@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 BatchGetImageRequest::BatchGetImageRequest(const BatchGetImageRequest &other)
-    : ECRRequest(new BatchGetImageRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new BatchGetImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ BatchGetImageRequest::BatchGetImageRequest(const BatchGetImageRequest &other)
  * Constructs a BatchGetImageRequest object.
  */
 BatchGetImageRequest::BatchGetImageRequest()
-    : ECRRequest(new BatchGetImageRequestPrivate(ECRRequest::BatchGetImageAction, this))
+    : EcrRequest(new BatchGetImageRequestPrivate(EcrRequest::BatchGetImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a BatchGetImageRequestPrivate object for ECR \a action,
+ * Constructs a BatchGetImageRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
-    const ECRRequest::Action action, BatchGetImageRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, BatchGetImageRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
     const BatchGetImageRequestPrivate &other, BatchGetImageRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

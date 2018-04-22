@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeFpgaImagesRequest::DescribeFpgaImagesRequest(const DescribeFpgaImagesRequest &other)
-    : EC2Request(new DescribeFpgaImagesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeFpgaImagesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeFpgaImagesRequest::DescribeFpgaImagesRequest(const DescribeFpgaImagesReq
  * Constructs a DescribeFpgaImagesRequest object.
  */
 DescribeFpgaImagesRequest::DescribeFpgaImagesRequest()
-    : EC2Request(new DescribeFpgaImagesRequestPrivate(EC2Request::DescribeFpgaImagesAction, this))
+    : Ec2Request(new DescribeFpgaImagesRequestPrivate(Ec2Request::DescribeFpgaImagesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DescribeFpgaImagesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeFpgaImagesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
-    const EC2Request::Action action, DescribeFpgaImagesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeFpgaImagesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
     const DescribeFpgaImagesRequestPrivate &other, DescribeFpgaImagesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

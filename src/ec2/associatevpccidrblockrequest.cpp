@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest(const AssociateVpcCidrBlockRequest &other)
-    : EC2Request(new AssociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest(const AssociateVpcCid
  * Constructs a AssociateVpcCidrBlockRequest object.
  */
 AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest()
-    : EC2Request(new AssociateVpcCidrBlockRequestPrivate(EC2Request::AssociateVpcCidrBlockAction, this))
+    : Ec2Request(new AssociateVpcCidrBlockRequestPrivate(Ec2Request::AssociateVpcCidrBlockAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetwo
  */
 
 /*!
- * Constructs a AssociateVpcCidrBlockRequestPrivate object for EC2 \a action,
+ * Constructs a AssociateVpcCidrBlockRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
-    const EC2Request::Action action, AssociateVpcCidrBlockRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssociateVpcCidrBlockRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
  */
 AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
     const AssociateVpcCidrBlockRequestPrivate &other, AssociateVpcCidrBlockRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

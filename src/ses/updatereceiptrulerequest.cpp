@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 UpdateReceiptRuleRequest::UpdateReceiptRuleRequest(const UpdateReceiptRuleRequest &other)
-    : SESRequest(new UpdateReceiptRuleRequestPrivate(*other.d_func(), this))
+    : SesRequest(new UpdateReceiptRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ UpdateReceiptRuleRequest::UpdateReceiptRuleRequest(const UpdateReceiptRuleReques
  * Constructs a UpdateReceiptRuleRequest object.
  */
 UpdateReceiptRuleRequest::UpdateReceiptRuleRequest()
-    : SESRequest(new UpdateReceiptRuleRequestPrivate(SESRequest::UpdateReceiptRuleAction, this))
+    : SesRequest(new UpdateReceiptRuleRequestPrivate(SesRequest::UpdateReceiptRuleAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * UpdateReceiptRuleRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a UpdateReceiptRuleRequestPrivate object for SES \a action,
+ * Constructs a UpdateReceiptRuleRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
-    const SESRequest::Action action, UpdateReceiptRuleRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, UpdateReceiptRuleRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
  */
 UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
     const UpdateReceiptRuleRequestPrivate &other, UpdateReceiptRuleRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

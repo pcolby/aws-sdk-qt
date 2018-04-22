@@ -27,7 +27,7 @@ namespace ECS {
 
 class CreateClusterRequestPrivate;
 
-class QTAWS_EXPORT CreateClusterRequest : public ECSRequest {
+class QTAWS_EXPORT CreateClusterRequest : public EcsRequest {
 
 public:
     CreateClusterRequest(const CreateClusterRequest &other);

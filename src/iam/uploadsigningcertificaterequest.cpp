@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UploadSigningCertificateRequest::UploadSigningCertificateRequest(const UploadSigningCertificateRequest &other)
-    : IAMRequest(new UploadSigningCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UploadSigningCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UploadSigningCertificateRequest::UploadSigningCertificateRequest(const UploadSig
  * Constructs a UploadSigningCertificateRequest object.
  */
 UploadSigningCertificateRequest::UploadSigningCertificateRequest()
-    : IAMRequest(new UploadSigningCertificateRequestPrivate(IAMRequest::UploadSigningCertificateAction, this))
+    : IamRequest(new UploadSigningCertificateRequestPrivate(IamRequest::UploadSigningCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UploadSigningCertificateRequest::response(QNe
  */
 
 /*!
- * Constructs a UploadSigningCertificateRequestPrivate object for IAM \a action,
+ * Constructs a UploadSigningCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
-    const IAMRequest::Action action, UploadSigningCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UploadSigningCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
  */
 UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
     const UploadSigningCertificateRequestPrivate &other, UploadSigningCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

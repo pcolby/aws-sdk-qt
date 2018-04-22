@@ -27,7 +27,7 @@ namespace EMR {
 
 class DescribeClusterRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterRequest : public EMRRequest {
+class QTAWS_EXPORT DescribeClusterRequest : public EmrRequest {
 
 public:
     DescribeClusterRequest(const DescribeClusterRequest &other);

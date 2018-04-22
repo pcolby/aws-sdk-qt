@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DeleteParameterGroupRequest::DeleteParameterGroupRequest(const DeleteParameterGroupRequest &other)
-    : DAXRequest(new DeleteParameterGroupRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DeleteParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteParameterGroupRequest::DeleteParameterGroupRequest(const DeleteParameterGr
  * Constructs a DeleteParameterGroupRequest object.
  */
 DeleteParameterGroupRequest::DeleteParameterGroupRequest()
-    : DAXRequest(new DeleteParameterGroupRequestPrivate(DAXRequest::DeleteParameterGroupAction, this))
+    : DaxRequest(new DeleteParameterGroupRequestPrivate(DaxRequest::DeleteParameterGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DeleteParameterGroupRequestPrivate object for DAX \a action,
+ * Constructs a DeleteParameterGroupRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
-    const DAXRequest::Action action, DeleteParameterGroupRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DeleteParameterGroupRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
     const DeleteParameterGroupRequestPrivate &other, DeleteParameterGroupRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

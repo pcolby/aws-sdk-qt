@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest(const PurchaseReservedInstancesOfferingRequest &other)
-    : EC2Request(new PurchaseReservedInstancesOfferingRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new PurchaseReservedInstancesOfferingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingReque
  * Constructs a PurchaseReservedInstancesOfferingRequest object.
  */
 PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest()
-    : EC2Request(new PurchaseReservedInstancesOfferingRequestPrivate(EC2Request::PurchaseReservedInstancesOfferingAction, this))
+    : Ec2Request(new PurchaseReservedInstancesOfferingRequestPrivate(Ec2Request::PurchaseReservedInstancesOfferingAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::res
  */
 
 /*!
- * Constructs a PurchaseReservedInstancesOfferingRequestPrivate object for EC2 \a action,
+ * Constructs a PurchaseReservedInstancesOfferingRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
-    const EC2Request::Action action, PurchaseReservedInstancesOfferingRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, PurchaseReservedInstancesOfferingRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferi
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
     const PurchaseReservedInstancesOfferingRequestPrivate &other, PurchaseReservedInstancesOfferingRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

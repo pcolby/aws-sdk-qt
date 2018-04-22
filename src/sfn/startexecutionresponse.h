@@ -28,7 +28,7 @@ namespace SFN {
 
 class StartExecutionResponsePrivate;
 
-class QTAWS_EXPORT StartExecutionResponse : public SFNResponse {
+class QTAWS_EXPORT StartExecutionResponse : public SfnResponse {
     Q_OBJECT
 
 public:

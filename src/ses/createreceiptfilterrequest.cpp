@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 CreateReceiptFilterRequest::CreateReceiptFilterRequest(const CreateReceiptFilterRequest &other)
-    : SESRequest(new CreateReceiptFilterRequestPrivate(*other.d_func(), this))
+    : SesRequest(new CreateReceiptFilterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CreateReceiptFilterRequest::CreateReceiptFilterRequest(const CreateReceiptFilter
  * Constructs a CreateReceiptFilterRequest object.
  */
 CreateReceiptFilterRequest::CreateReceiptFilterRequest()
-    : SESRequest(new CreateReceiptFilterRequestPrivate(SESRequest::CreateReceiptFilterAction, this))
+    : SesRequest(new CreateReceiptFilterRequestPrivate(SesRequest::CreateReceiptFilterAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetwork
  */
 
 /*!
- * Constructs a CreateReceiptFilterRequestPrivate object for SES \a action,
+ * Constructs a CreateReceiptFilterRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
-    const SESRequest::Action action, CreateReceiptFilterRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, CreateReceiptFilterRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
  */
 CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
     const CreateReceiptFilterRequestPrivate &other, CreateReceiptFilterRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

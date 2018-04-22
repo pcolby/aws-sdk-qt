@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteServerCertificateRequest::DeleteServerCertificateRequest(const DeleteServerCertificateRequest &other)
-    : IAMRequest(new DeleteServerCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteServerCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteServerCertificateRequest::DeleteServerCertificateRequest(const DeleteServe
  * Constructs a DeleteServerCertificateRequest object.
  */
 DeleteServerCertificateRequest::DeleteServerCertificateRequest()
-    : IAMRequest(new DeleteServerCertificateRequestPrivate(IAMRequest::DeleteServerCertificateAction, this))
+    : IamRequest(new DeleteServerCertificateRequestPrivate(IamRequest::DeleteServerCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCertificateRequest::response(QNet
  */
 
 /*!
- * Constructs a DeleteServerCertificateRequestPrivate object for IAM \a action,
+ * Constructs a DeleteServerCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
-    const IAMRequest::Action action, DeleteServerCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteServerCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
     const DeleteServerCertificateRequestPrivate &other, DeleteServerCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

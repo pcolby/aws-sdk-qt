@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
-    : SNSRequest(new AddPermissionRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new AddPermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
  * Constructs a AddPermissionRequest object.
  */
 AddPermissionRequest::AddPermissionRequest()
-    : SNSRequest(new AddPermissionRequestPrivate(SNSRequest::AddPermissionAction, this))
+    : SnsRequest(new AddPermissionRequestPrivate(SnsRequest::AddPermissionAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a AddPermissionRequestPrivate object for SNS \a action,
+ * Constructs a AddPermissionRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
-    const SNSRequest::Action action, AddPermissionRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, AddPermissionRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const AddPermissionRequestPrivate &other, AddPermissionRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

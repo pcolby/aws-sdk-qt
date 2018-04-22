@@ -48,7 +48,7 @@ DescribeKeyPairsResponse::DescribeKeyPairsResponse(
         const DescribeKeyPairsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeKeyPairsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeKeyPairsResponsePrivate(this), parent)
 {
     setRequest(new DescribeKeyPairsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeKeyPairsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeKeyPairsResponsePrivate object with public implementation \a q.
  */
 DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
-    DescribeKeyPairsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeKeyPairsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

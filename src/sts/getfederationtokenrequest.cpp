@@ -97,7 +97,7 @@ namespace STS {
  * Constructs a copy of \a other.
  */
 GetFederationTokenRequest::GetFederationTokenRequest(const GetFederationTokenRequest &other)
-    : STSRequest(new GetFederationTokenRequestPrivate(*other.d_func(), this))
+    : StsRequest(new GetFederationTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +106,7 @@ GetFederationTokenRequest::GetFederationTokenRequest(const GetFederationTokenReq
  * Constructs a GetFederationTokenRequest object.
  */
 GetFederationTokenRequest::GetFederationTokenRequest()
-    : STSRequest(new GetFederationTokenRequestPrivate(STSRequest::GetFederationTokenAction, this))
+    : StsRequest(new GetFederationTokenRequestPrivate(StsRequest::GetFederationTokenAction, this))
 {
 
 }
@@ -139,12 +139,12 @@ QtAws::Core::AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a GetFederationTokenRequestPrivate object for STS \a action,
+ * Constructs a GetFederationTokenRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
-    const STSRequest::Action action, GetFederationTokenRequest * const q)
-    : STSRequestPrivate(action, q)
+    const StsRequest::Action action, GetFederationTokenRequest * const q)
+    : StsRequestPrivate(action, q)
 {
 
 }
@@ -157,7 +157,7 @@ GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
     const GetFederationTokenRequestPrivate &other, GetFederationTokenRequest * const q)
-    : STSRequestPrivate(other, q)
+    : StsRequestPrivate(other, q)
 {
 
 }

@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteIdentityPolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteIdentityPolicyResponse : public SESResponse {
+class QTAWS_EXPORT DeleteIdentityPolicyResponse : public SesResponse {
     Q_OBJECT
 
 public:

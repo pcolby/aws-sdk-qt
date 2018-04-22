@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteRegexPatternSetRequest;
 
-class QTAWS_EXPORT DeleteRegexPatternSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteRegexPatternSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteRegexPatternSetRequestPrivate(const WAFRequest::Action action,
+    DeleteRegexPatternSetRequestPrivate(const WafRequest::Action action,
                                    DeleteRegexPatternSetRequest * const q);
     DeleteRegexPatternSetRequestPrivate(const DeleteRegexPatternSetRequestPrivate &other,
                                    DeleteRegexPatternSetRequest * const q);

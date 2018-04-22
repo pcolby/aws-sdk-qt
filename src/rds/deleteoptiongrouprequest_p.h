@@ -28,10 +28,10 @@ namespace RDS {
 
 class DeleteOptionGroupRequest;
 
-class QTAWS_EXPORT DeleteOptionGroupRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT DeleteOptionGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
-    DeleteOptionGroupRequestPrivate(const RDSRequest::Action action,
+    DeleteOptionGroupRequestPrivate(const RdsRequest::Action action,
                                    DeleteOptionGroupRequest * const q);
     DeleteOptionGroupRequestPrivate(const DeleteOptionGroupRequestPrivate &other,
                                    DeleteOptionGroupRequest * const q);

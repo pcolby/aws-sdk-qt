@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest(const RemoveTagsFromCertificateRequest &other)
-    : ACMRequest(new RemoveTagsFromCertificateRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new RemoveTagsFromCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest(const RemoveT
  * Constructs a RemoveTagsFromCertificateRequest object.
  */
 RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest()
-    : ACMRequest(new RemoveTagsFromCertificateRequestPrivate(ACMRequest::RemoveTagsFromCertificateAction, this))
+    : AcmRequest(new RemoveTagsFromCertificateRequestPrivate(AcmRequest::RemoveTagsFromCertificateAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QN
  */
 
 /*!
- * Constructs a RemoveTagsFromCertificateRequestPrivate object for ACM \a action,
+ * Constructs a RemoveTagsFromCertificateRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
-    const ACMRequest::Action action, RemoveTagsFromCertificateRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, RemoveTagsFromCertificateRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
     const RemoveTagsFromCertificateRequestPrivate &other, RemoveTagsFromCertificateRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

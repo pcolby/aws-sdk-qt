@@ -27,7 +27,7 @@ namespace WAF {
 
 class ListWebACLsRequestPrivate;
 
-class QTAWS_EXPORT ListWebACLsRequest : public WAFRequest {
+class QTAWS_EXPORT ListWebACLsRequest : public WafRequest {
 
 public:
     ListWebACLsRequest(const ListWebACLsRequest &other);

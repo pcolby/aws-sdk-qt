@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &other)
-    : RDSRequest(new DeleteDBInstanceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &
  * Constructs a DeleteDBInstanceRequest object.
  */
 DeleteDBInstanceRequest::DeleteDBInstanceRequest()
-    : RDSRequest(new DeleteDBInstanceRequestPrivate(RDSRequest::DeleteDBInstanceAction, this))
+    : RdsRequest(new DeleteDBInstanceRequestPrivate(RdsRequest::DeleteDBInstanceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteDBInstanceRequestPrivate object for RDS \a action,
+ * Constructs a DeleteDBInstanceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
-    const RDSRequest::Action action, DeleteDBInstanceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteDBInstanceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const DeleteDBInstanceRequestPrivate &other, DeleteDBInstanceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

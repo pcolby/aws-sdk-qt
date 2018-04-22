@@ -47,7 +47,7 @@ AddInstanceFleetResponse::AddInstanceFleetResponse(
         const AddInstanceFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new AddInstanceFleetResponsePrivate(this), parent)
+    : EmrResponse(new AddInstanceFleetResponsePrivate(this), parent)
 {
     setRequest(new AddInstanceFleetRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void AddInstanceFleetResponse::parseSuccess(QIODevice &response)
  * Constructs a AddInstanceFleetResponsePrivate object with public implementation \a q.
  */
 AddInstanceFleetResponsePrivate::AddInstanceFleetResponsePrivate(
-    AddInstanceFleetResponse * const q) : EMRResponsePrivate(q)
+    AddInstanceFleetResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

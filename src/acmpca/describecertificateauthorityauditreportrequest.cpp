@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 DescribeCertificateAuthorityAuditReportRequest::DescribeCertificateAuthorityAuditReportRequest(const DescribeCertificateAuthorityAuditReportRequest &other)
-    : ACMPCARequest(new DescribeCertificateAuthorityAuditReportRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new DescribeCertificateAuthorityAuditReportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ DescribeCertificateAuthorityAuditReportRequest::DescribeCertificateAuthorityAudi
  * Constructs a DescribeCertificateAuthorityAuditReportRequest object.
  */
 DescribeCertificateAuthorityAuditReportRequest::DescribeCertificateAuthorityAuditReportRequest()
-    : ACMPCARequest(new DescribeCertificateAuthorityAuditReportRequestPrivate(ACMPCARequest::DescribeCertificateAuthorityAuditReportAction, this))
+    : AcmpcaRequest(new DescribeCertificateAuthorityAuditReportRequestPrivate(AcmpcaRequest::DescribeCertificateAuthorityAuditReportAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateAuthorityAuditReportReques
  */
 
 /*!
- * Constructs a DescribeCertificateAuthorityAuditReportRequestPrivate object for ACMPCA \a action,
+ * Constructs a DescribeCertificateAuthorityAuditReportRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 DescribeCertificateAuthorityAuditReportRequestPrivate::DescribeCertificateAuthorityAuditReportRequestPrivate(
-    const ACMPCARequest::Action action, DescribeCertificateAuthorityAuditReportRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, DescribeCertificateAuthorityAuditReportRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ DescribeCertificateAuthorityAuditReportRequestPrivate::DescribeCertificateAuthor
  */
 DescribeCertificateAuthorityAuditReportRequestPrivate::DescribeCertificateAuthorityAuditReportRequestPrivate(
     const DescribeCertificateAuthorityAuditReportRequestPrivate &other, DescribeCertificateAuthorityAuditReportRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

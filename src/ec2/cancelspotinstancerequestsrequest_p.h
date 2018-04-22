@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CancelSpotInstanceRequestsRequest;
 
-class QTAWS_EXPORT CancelSpotInstanceRequestsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CancelSpotInstanceRequestsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CancelSpotInstanceRequestsRequestPrivate(const EC2Request::Action action,
+    CancelSpotInstanceRequestsRequestPrivate(const Ec2Request::Action action,
                                    CancelSpotInstanceRequestsRequest * const q);
     CancelSpotInstanceRequestsRequestPrivate(const CancelSpotInstanceRequestsRequestPrivate &other,
                                    CancelSpotInstanceRequestsRequest * const q);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ImportKeyPairRequestPrivate;
 
-class QTAWS_EXPORT ImportKeyPairRequest : public EC2Request {
+class QTAWS_EXPORT ImportKeyPairRequest : public Ec2Request {
 
 public:
     ImportKeyPairRequest(const ImportKeyPairRequest &other);

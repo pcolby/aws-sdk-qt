@@ -27,7 +27,7 @@ namespace ECS {
 
 class DeleteAttributesResponse;
 
-class QTAWS_EXPORT DeleteAttributesResponsePrivate : public ECSResponsePrivate {
+class QTAWS_EXPORT DeleteAttributesResponsePrivate : public EcsResponsePrivate {
     Q_OBJECT
 
 public:

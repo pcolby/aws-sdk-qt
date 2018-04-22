@@ -27,7 +27,7 @@ namespace SES {
 
 class SendBulkTemplatedEmailRequestPrivate;
 
-class QTAWS_EXPORT SendBulkTemplatedEmailRequest : public SESRequest {
+class QTAWS_EXPORT SendBulkTemplatedEmailRequest : public SesRequest {
 
 public:
     SendBulkTemplatedEmailRequest(const SendBulkTemplatedEmailRequest &other);

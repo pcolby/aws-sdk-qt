@@ -48,7 +48,7 @@ MoveAddressToVpcResponse::MoveAddressToVpcResponse(
         const MoveAddressToVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new MoveAddressToVpcResponsePrivate(this), parent)
+    : Ec2Response(new MoveAddressToVpcResponsePrivate(this), parent)
 {
     setRequest(new MoveAddressToVpcRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void MoveAddressToVpcResponse::parseSuccess(QIODevice &response)
  * Constructs a MoveAddressToVpcResponsePrivate object with public implementation \a q.
  */
 MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponsePrivate(
-    MoveAddressToVpcResponse * const q) : EC2ResponsePrivate(q)
+    MoveAddressToVpcResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ DeleteLaunchTemplateResponse::DeleteLaunchTemplateResponse(
         const DeleteLaunchTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteLaunchTemplateResponsePrivate(this), parent)
+    : Ec2Response(new DeleteLaunchTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteLaunchTemplateRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteLaunchTemplateResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteLaunchTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteLaunchTemplateResponsePrivate::DeleteLaunchTemplateResponsePrivate(
-    DeleteLaunchTemplateResponse * const q) : EC2ResponsePrivate(q)
+    DeleteLaunchTemplateResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -49,7 +49,7 @@ DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
         const DeletePermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
+    : WafResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeletePermissionPolicyRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeletePermissionPolicyResponsePrivate object with public implementation \a q.
  */
 DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
-    DeletePermissionPolicyResponse * const q) : WAFResponsePrivate(q)
+    DeletePermissionPolicyResponse * const q) : WafResponsePrivate(q)
 {
 
 }

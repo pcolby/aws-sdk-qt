@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest(const GetIdentityMailFromDomainAttributesRequest &other)
-    : SESRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(*other.d_func(), this))
+    : SesRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesR
  * Constructs a GetIdentityMailFromDomainAttributesRequest object.
  */
 GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest()
-    : SESRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(SESRequest::GetIdentityMailFromDomainAttributesAction, this))
+    : SesRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(SesRequest::GetIdentityMailFromDomainAttributesAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::r
  */
 
 /*!
- * Constructs a GetIdentityMailFromDomainAttributesRequestPrivate object for SES \a action,
+ * Constructs a GetIdentityMailFromDomainAttributesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
-    const SESRequest::Action action, GetIdentityMailFromDomainAttributesRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, GetIdentityMailFromDomainAttributesRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
  */
 GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
     const GetIdentityMailFromDomainAttributesRequestPrivate &other, GetIdentityMailFromDomainAttributesRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListInventoryEntriesRequest::ListInventoryEntriesRequest(const ListInventoryEntriesRequest &other)
-    : SSMRequest(new ListInventoryEntriesRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListInventoryEntriesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListInventoryEntriesRequest::ListInventoryEntriesRequest(const ListInventoryEntr
  * Constructs a ListInventoryEntriesRequest object.
  */
 ListInventoryEntriesRequest::ListInventoryEntriesRequest()
-    : SSMRequest(new ListInventoryEntriesRequestPrivate(SSMRequest::ListInventoryEntriesAction, this))
+    : SsmRequest(new ListInventoryEntriesRequestPrivate(SsmRequest::ListInventoryEntriesAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListInventoryEntriesRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListInventoryEntriesRequestPrivate object for SSM \a action,
+ * Constructs a ListInventoryEntriesRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
-    const SSMRequest::Action action, ListInventoryEntriesRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListInventoryEntriesRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
  */
 ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
     const ListInventoryEntriesRequestPrivate &other, ListInventoryEntriesRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

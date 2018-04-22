@@ -108,7 +108,7 @@ CopyOptionGroupResponse::CopyOptionGroupResponse(
         const CopyOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyOptionGroupResponsePrivate(this), parent)
+    : RdsResponse(new CopyOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyOptionGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CopyOptionGroupResponsePrivate object with public implementation \a q.
  */
 CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
-    CopyOptionGroupResponse * const q) : RDSResponsePrivate(q)
+    CopyOptionGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -49,7 +49,7 @@ DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
         const DeleteRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
+    : WafResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteRateBasedRuleRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
-    DeleteRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
+    DeleteRateBasedRuleResponse * const q) : WafResponsePrivate(q)
 {
 
 }

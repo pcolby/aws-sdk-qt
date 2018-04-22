@@ -28,10 +28,10 @@ namespace IAM {
 
 class UpdateLoginProfileRequest;
 
-class QTAWS_EXPORT UpdateLoginProfileRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT UpdateLoginProfileRequestPrivate : public IamRequestPrivate {
 
 public:
-    UpdateLoginProfileRequestPrivate(const IAMRequest::Action action,
+    UpdateLoginProfileRequestPrivate(const IamRequest::Action action,
                                    UpdateLoginProfileRequest * const q);
     UpdateLoginProfileRequestPrivate(const UpdateLoginProfileRequestPrivate &other,
                                    UpdateLoginProfileRequest * const q);

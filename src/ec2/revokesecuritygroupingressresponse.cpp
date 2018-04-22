@@ -48,7 +48,7 @@ RevokeSecurityGroupIngressResponse::RevokeSecurityGroupIngressResponse(
         const RevokeSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RevokeSecurityGroupIngressResponsePrivate(this), parent)
+    : Ec2Response(new RevokeSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new RevokeSecurityGroupIngressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RevokeSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * Constructs a RevokeSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 RevokeSecurityGroupIngressResponsePrivate::RevokeSecurityGroupIngressResponsePrivate(
-    RevokeSecurityGroupIngressResponse * const q) : EC2ResponsePrivate(q)
+    RevokeSecurityGroupIngressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

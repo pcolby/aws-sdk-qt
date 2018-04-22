@@ -68,7 +68,7 @@ GetParametersResponse::GetParametersResponse(
         const GetParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetParametersResponsePrivate(this), parent)
+    : SsmResponse(new GetParametersResponsePrivate(this), parent)
 {
     setRequest(new GetParametersRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a GetParametersResponsePrivate object with public implementation \a q.
  */
 GetParametersResponsePrivate::GetParametersResponsePrivate(
-    GetParametersResponse * const q) : SSMResponsePrivate(q)
+    GetParametersResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

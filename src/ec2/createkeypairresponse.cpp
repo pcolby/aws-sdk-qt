@@ -48,7 +48,7 @@ CreateKeyPairResponse::CreateKeyPairResponse(
         const CreateKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateKeyPairResponsePrivate(this), parent)
+    : Ec2Response(new CreateKeyPairResponsePrivate(this), parent)
 {
     setRequest(new CreateKeyPairRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateKeyPairResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateKeyPairResponsePrivate object with public implementation \a q.
  */
 CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
-    CreateKeyPairResponse * const q) : EC2ResponsePrivate(q)
+    CreateKeyPairResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

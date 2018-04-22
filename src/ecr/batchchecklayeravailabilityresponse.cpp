@@ -48,7 +48,7 @@ BatchCheckLayerAvailabilityResponse::BatchCheckLayerAvailabilityResponse(
         const BatchCheckLayerAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
+    : EcrResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new BatchCheckLayerAvailabilityRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
  * Constructs a BatchCheckLayerAvailabilityResponsePrivate object with public implementation \a q.
  */
 BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponsePrivate(
-    BatchCheckLayerAvailabilityResponse * const q) : ECRResponsePrivate(q)
+    BatchCheckLayerAvailabilityResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

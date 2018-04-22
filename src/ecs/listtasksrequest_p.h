@@ -28,10 +28,10 @@ namespace ECS {
 
 class ListTasksRequest;
 
-class QTAWS_EXPORT ListTasksRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT ListTasksRequestPrivate : public EcsRequestPrivate {
 
 public:
-    ListTasksRequestPrivate(const ECSRequest::Action action,
+    ListTasksRequestPrivate(const EcsRequest::Action action,
                                    ListTasksRequest * const q);
     ListTasksRequestPrivate(const ListTasksRequestPrivate &other,
                                    ListTasksRequest * const q);

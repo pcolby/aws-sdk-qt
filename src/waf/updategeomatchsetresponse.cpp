@@ -49,7 +49,7 @@ UpdateGeoMatchSetResponse::UpdateGeoMatchSetResponse(
         const UpdateGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateGeoMatchSetResponsePrivate(this), parent)
+    : WafResponse(new UpdateGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateGeoMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateGeoMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponsePrivate(
-    UpdateGeoMatchSetResponse * const q) : WAFResponsePrivate(q)
+    UpdateGeoMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

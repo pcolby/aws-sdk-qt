@@ -60,7 +60,7 @@ RegisterDomainResponse::RegisterDomainResponse(
         const RegisterDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RegisterDomainResponsePrivate(this), parent)
+    : SwfResponse(new RegisterDomainResponsePrivate(this), parent)
 {
     setRequest(new RegisterDomainRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
  * Constructs a RegisterDomainResponsePrivate object with public implementation \a q.
  */
 RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
-    RegisterDomainResponse * const q) : SWFResponsePrivate(q)
+    RegisterDomainResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

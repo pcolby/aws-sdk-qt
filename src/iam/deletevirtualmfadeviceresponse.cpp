@@ -109,7 +109,7 @@ DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
         const DeleteVirtualMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteVirtualMFADeviceResponsePrivate(this), parent)
+    : IamResponse(new DeleteVirtualMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new DeleteVirtualMFADeviceRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteVirtualMFADeviceResponsePrivate object with public implementation \a q.
  */
 DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponsePrivate(
-    DeleteVirtualMFADeviceResponse * const q) : IAMResponsePrivate(q)
+    DeleteVirtualMFADeviceResponse * const q) : IamResponsePrivate(q)
 {
 
 }

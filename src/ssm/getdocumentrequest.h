@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetDocumentRequestPrivate;
 
-class QTAWS_EXPORT GetDocumentRequest : public SSMRequest {
+class QTAWS_EXPORT GetDocumentRequest : public SsmRequest {
 
 public:
     GetDocumentRequest(const GetDocumentRequest &other);

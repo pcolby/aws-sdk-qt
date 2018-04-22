@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifySubnetAttributeRequest::ModifySubnetAttributeRequest(const ModifySubnetAttributeRequest &other)
-    : EC2Request(new ModifySubnetAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifySubnetAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifySubnetAttributeRequest::ModifySubnetAttributeRequest(const ModifySubnetAtt
  * Constructs a ModifySubnetAttributeRequest object.
  */
 ModifySubnetAttributeRequest::ModifySubnetAttributeRequest()
-    : EC2Request(new ModifySubnetAttributeRequestPrivate(EC2Request::ModifySubnetAttributeAction, this))
+    : Ec2Request(new ModifySubnetAttributeRequestPrivate(Ec2Request::ModifySubnetAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetwo
  */
 
 /*!
- * Constructs a ModifySubnetAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifySubnetAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
-    const EC2Request::Action action, ModifySubnetAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifySubnetAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
     const ModifySubnetAttributeRequestPrivate &other, ModifySubnetAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

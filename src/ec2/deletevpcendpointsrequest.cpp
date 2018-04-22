@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest(const DeleteVpcEndpointsRequest &other)
-    : EC2Request(new DeleteVpcEndpointsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVpcEndpointsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest(const DeleteVpcEndpointsReq
  * Constructs a DeleteVpcEndpointsRequest object.
  */
 DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest()
-    : EC2Request(new DeleteVpcEndpointsRequestPrivate(EC2Request::DeleteVpcEndpointsAction, this))
+    : Ec2Request(new DeleteVpcEndpointsRequestPrivate(Ec2Request::DeleteVpcEndpointsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteVpcEndpointsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVpcEndpointsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
-    const EC2Request::Action action, DeleteVpcEndpointsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVpcEndpointsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
  */
 DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
     const DeleteVpcEndpointsRequestPrivate &other, DeleteVpcEndpointsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

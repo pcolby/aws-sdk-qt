@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 DescribeKeyRequest::DescribeKeyRequest(const DescribeKeyRequest &other)
-    : KMSRequest(new DescribeKeyRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new DescribeKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ DescribeKeyRequest::DescribeKeyRequest(const DescribeKeyRequest &other)
  * Constructs a DescribeKeyRequest object.
  */
 DescribeKeyRequest::DescribeKeyRequest()
-    : KMSRequest(new DescribeKeyRequestPrivate(KMSRequest::DescribeKeyAction, this))
+    : KmsRequest(new DescribeKeyRequestPrivate(KmsRequest::DescribeKeyAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DescribeKeyRequestPrivate object for KMS \a action,
+ * Constructs a DescribeKeyRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
-    const KMSRequest::Action action, DescribeKeyRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, DescribeKeyRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
     const DescribeKeyRequestPrivate &other, DescribeKeyRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

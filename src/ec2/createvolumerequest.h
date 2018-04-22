@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateVolumeRequestPrivate;
 
-class QTAWS_EXPORT CreateVolumeRequest : public EC2Request {
+class QTAWS_EXPORT CreateVolumeRequest : public Ec2Request {
 
 public:
     CreateVolumeRequest(const CreateVolumeRequest &other);

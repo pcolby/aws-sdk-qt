@@ -55,7 +55,7 @@ VerifyEmailAddressResponse::VerifyEmailAddressResponse(
         const VerifyEmailAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyEmailAddressResponsePrivate(this), parent)
+    : SesResponse(new VerifyEmailAddressResponsePrivate(this), parent)
 {
     setRequest(new VerifyEmailAddressRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void VerifyEmailAddressResponse::parseSuccess(QIODevice &response)
  * Constructs a VerifyEmailAddressResponsePrivate object with public implementation \a q.
  */
 VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponsePrivate(
-    VerifyEmailAddressResponse * const q) : SESResponsePrivate(q)
+    VerifyEmailAddressResponse * const q) : SesResponsePrivate(q)
 {
 
 }

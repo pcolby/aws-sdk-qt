@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest(const DeleteCustomerGatewayRequest &other)
-    : EC2Request(new DeleteCustomerGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteCustomerGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest(const DeleteCustomerG
  * Constructs a DeleteCustomerGatewayRequest object.
  */
 DeleteCustomerGatewayRequest::DeleteCustomerGatewayRequest()
-    : EC2Request(new DeleteCustomerGatewayRequestPrivate(EC2Request::DeleteCustomerGatewayAction, this))
+    : Ec2Request(new DeleteCustomerGatewayRequestPrivate(Ec2Request::DeleteCustomerGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeleteCustomerGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteCustomerGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
-    const EC2Request::Action action, DeleteCustomerGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteCustomerGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
  */
 DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
     const DeleteCustomerGatewayRequestPrivate &other, DeleteCustomerGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

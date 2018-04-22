@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest(const DeleteVpcEndpointConnectionNotificationsRequest &other)
-    : EC2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNoti
  * Constructs a DeleteVpcEndpointConnectionNotificationsRequest object.
  */
 DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest()
-    : EC2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(EC2Request::DeleteVpcEndpointConnectionNotificationsAction, this))
+    : Ec2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(Ec2Request::DeleteVpcEndpointConnectionNotificationsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsReque
  */
 
 /*!
- * Constructs a DeleteVpcEndpointConnectionNotificationsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVpcEndpointConnectionNotificationsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
-    const EC2Request::Action action, DeleteVpcEndpointConnectionNotificationsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVpcEndpointConnectionNotificationsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnect
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
     const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other, DeleteVpcEndpointConnectionNotificationsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

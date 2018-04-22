@@ -109,7 +109,7 @@ ListServiceSpecificCredentialsResponse::ListServiceSpecificCredentialsResponse(
         const ListServiceSpecificCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListServiceSpecificCredentialsResponsePrivate(this), parent)
+    : IamResponse(new ListServiceSpecificCredentialsResponsePrivate(this), parent)
 {
     setRequest(new ListServiceSpecificCredentialsRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListServiceSpecificCredentialsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListServiceSpecificCredentialsResponsePrivate object with public implementation \a q.
  */
 ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsResponsePrivate(
-    ListServiceSpecificCredentialsResponse * const q) : IAMResponsePrivate(q)
+    ListServiceSpecificCredentialsResponse * const q) : IamResponsePrivate(q)
 {
 
 }

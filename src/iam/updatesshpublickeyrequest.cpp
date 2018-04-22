@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateSSHPublicKeyRequest::UpdateSSHPublicKeyRequest(const UpdateSSHPublicKeyRequest &other)
-    : IAMRequest(new UpdateSSHPublicKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateSSHPublicKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateSSHPublicKeyRequest::UpdateSSHPublicKeyRequest(const UpdateSSHPublicKeyReq
  * Constructs a UpdateSSHPublicKeyRequest object.
  */
 UpdateSSHPublicKeyRequest::UpdateSSHPublicKeyRequest()
-    : IAMRequest(new UpdateSSHPublicKeyRequestPrivate(IAMRequest::UpdateSSHPublicKeyAction, this))
+    : IamRequest(new UpdateSSHPublicKeyRequestPrivate(IamRequest::UpdateSSHPublicKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UpdateSSHPublicKeyRequestPrivate object for IAM \a action,
+ * Constructs a UpdateSSHPublicKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
-    const IAMRequest::Action action, UpdateSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateSSHPublicKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
     const UpdateSSHPublicKeyRequestPrivate &other, UpdateSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

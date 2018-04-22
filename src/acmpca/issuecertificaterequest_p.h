@@ -28,10 +28,10 @@ namespace ACMPCA {
 
 class IssueCertificateRequest;
 
-class QTAWS_EXPORT IssueCertificateRequestPrivate : public ACMPCARequestPrivate {
+class QTAWS_EXPORT IssueCertificateRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
-    IssueCertificateRequestPrivate(const ACMPCARequest::Action action,
+    IssueCertificateRequestPrivate(const AcmpcaRequest::Action action,
                                    IssueCertificateRequest * const q);
     IssueCertificateRequestPrivate(const IssueCertificateRequestPrivate &other,
                                    IssueCertificateRequest * const q);

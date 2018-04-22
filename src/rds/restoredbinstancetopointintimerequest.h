@@ -27,7 +27,7 @@ namespace RDS {
 
 class RestoreDBInstanceToPointInTimeRequestPrivate;
 
-class QTAWS_EXPORT RestoreDBInstanceToPointInTimeRequest : public RDSRequest {
+class QTAWS_EXPORT RestoreDBInstanceToPointInTimeRequest : public RdsRequest {
 
 public:
     RestoreDBInstanceToPointInTimeRequest(const RestoreDBInstanceToPointInTimeRequest &other);

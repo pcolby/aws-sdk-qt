@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVolumeRequest::ModifyVolumeRequest(const ModifyVolumeRequest &other)
-    : EC2Request(new ModifyVolumeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVolumeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVolumeRequest::ModifyVolumeRequest(const ModifyVolumeRequest &other)
  * Constructs a ModifyVolumeRequest object.
  */
 ModifyVolumeRequest::ModifyVolumeRequest()
-    : EC2Request(new ModifyVolumeRequestPrivate(EC2Request::ModifyVolumeAction, this))
+    : Ec2Request(new ModifyVolumeRequestPrivate(Ec2Request::ModifyVolumeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ModifyVolumeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVolumeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
-    const EC2Request::Action action, ModifyVolumeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVolumeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
  */
 ModifyVolumeRequestPrivate::ModifyVolumeRequestPrivate(
     const ModifyVolumeRequestPrivate &other, ModifyVolumeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

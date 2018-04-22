@@ -28,10 +28,10 @@ namespace EC2 {
 
 class RequestSpotInstancesRequest;
 
-class QTAWS_EXPORT RequestSpotInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT RequestSpotInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    RequestSpotInstancesRequestPrivate(const EC2Request::Action action,
+    RequestSpotInstancesRequestPrivate(const Ec2Request::Action action,
                                    RequestSpotInstancesRequest * const q);
     RequestSpotInstancesRequestPrivate(const RequestSpotInstancesRequestPrivate &other,
                                    RequestSpotInstancesRequest * const q);

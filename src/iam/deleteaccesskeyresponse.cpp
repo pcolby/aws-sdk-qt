@@ -109,7 +109,7 @@ DeleteAccessKeyResponse::DeleteAccessKeyResponse(
         const DeleteAccessKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteAccessKeyResponsePrivate(this), parent)
+    : IamResponse(new DeleteAccessKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteAccessKeyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteAccessKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteAccessKeyResponsePrivate object with public implementation \a q.
  */
 DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
-    DeleteAccessKeyResponse * const q) : IAMResponsePrivate(q)
+    DeleteAccessKeyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

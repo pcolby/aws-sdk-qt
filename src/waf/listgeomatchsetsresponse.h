@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListGeoMatchSetsResponsePrivate;
 
-class QTAWS_EXPORT ListGeoMatchSetsResponse : public WAFResponse {
+class QTAWS_EXPORT ListGeoMatchSetsResponse : public WafResponse {
     Q_OBJECT
 
 public:

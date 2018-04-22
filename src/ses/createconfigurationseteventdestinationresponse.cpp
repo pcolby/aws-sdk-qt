@@ -55,7 +55,7 @@ CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDesti
         const CreateConfigurationSetEventDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CreateConfigurationSetEventDestinationResponsePrivate(this), parent)
+    : SesResponse(new CreateConfigurationSetEventDestinationResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetEventDestinationRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
  * Constructs a CreateConfigurationSetEventDestinationResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationSetEventDestinationResponsePrivate(
-    CreateConfigurationSetEventDestinationResponse * const q) : SESResponsePrivate(q)
+    CreateConfigurationSetEventDestinationResponse * const q) : SesResponsePrivate(q)
 {
 
 }

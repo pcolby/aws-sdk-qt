@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 DeprecateDomainRequest::DeprecateDomainRequest(const DeprecateDomainRequest &other)
-    : SWFRequest(new DeprecateDomainRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new DeprecateDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ DeprecateDomainRequest::DeprecateDomainRequest(const DeprecateDomainRequest &oth
  * Constructs a DeprecateDomainRequest object.
  */
 DeprecateDomainRequest::DeprecateDomainRequest()
-    : SWFRequest(new DeprecateDomainRequestPrivate(SWFRequest::DeprecateDomainAction, this))
+    : SwfRequest(new DeprecateDomainRequestPrivate(SwfRequest::DeprecateDomainAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeprecateDomainRequestPrivate object for SWF \a action,
+ * Constructs a DeprecateDomainRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
-    const SWFRequest::Action action, DeprecateDomainRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, DeprecateDomainRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
  */
 DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
     const DeprecateDomainRequestPrivate &other, DeprecateDomainRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
-    : EMRRequest(new ListClustersRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new ListClustersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
  * Constructs a ListClustersRequest object.
  */
 ListClustersRequest::ListClustersRequest()
-    : EMRRequest(new ListClustersRequestPrivate(EMRRequest::ListClustersAction, this))
+    : EmrRequest(new ListClustersRequestPrivate(EmrRequest::ListClustersAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ListClustersRequestPrivate object for EMR \a action,
+ * Constructs a ListClustersRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
-    const EMRRequest::Action action, ListClustersRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, ListClustersRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ ListClustersRequestPrivate::ListClustersRequestPrivate(
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const ListClustersRequestPrivate &other, ListClustersRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

@@ -108,7 +108,7 @@ DescribeDBParametersResponse::DescribeDBParametersResponse(
         const DescribeDBParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBParametersResponsePrivate(this), parent)
+    : RdsResponse(new DescribeDBParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBParametersRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeDBParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDBParametersResponsePrivate object with public implementation \a q.
  */
 DescribeDBParametersResponsePrivate::DescribeDBParametersResponsePrivate(
-    DescribeDBParametersResponse * const q) : RDSResponsePrivate(q)
+    DescribeDBParametersResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

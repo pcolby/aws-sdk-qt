@@ -58,7 +58,7 @@ OptInPhoneNumberResponse::OptInPhoneNumberResponse(
         const OptInPhoneNumberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new OptInPhoneNumberResponsePrivate(this), parent)
+    : SnsResponse(new OptInPhoneNumberResponsePrivate(this), parent)
 {
     setRequest(new OptInPhoneNumberRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
  * Constructs a OptInPhoneNumberResponsePrivate object with public implementation \a q.
  */
 OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
-    OptInPhoneNumberResponse * const q) : SNSResponsePrivate(q)
+    OptInPhoneNumberResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 PutIdentityPolicyRequest::PutIdentityPolicyRequest(const PutIdentityPolicyRequest &other)
-    : SESRequest(new PutIdentityPolicyRequestPrivate(*other.d_func(), this))
+    : SesRequest(new PutIdentityPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ PutIdentityPolicyRequest::PutIdentityPolicyRequest(const PutIdentityPolicyReques
  * Constructs a PutIdentityPolicyRequest object.
  */
 PutIdentityPolicyRequest::PutIdentityPolicyRequest()
-    : SESRequest(new PutIdentityPolicyRequestPrivate(SESRequest::PutIdentityPolicyAction, this))
+    : SesRequest(new PutIdentityPolicyRequestPrivate(SesRequest::PutIdentityPolicyAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a PutIdentityPolicyRequestPrivate object for SES \a action,
+ * Constructs a PutIdentityPolicyRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
-    const SESRequest::Action action, PutIdentityPolicyRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, PutIdentityPolicyRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
  */
 PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
     const PutIdentityPolicyRequestPrivate &other, PutIdentityPolicyRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

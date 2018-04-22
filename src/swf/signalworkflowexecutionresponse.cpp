@@ -60,7 +60,7 @@ SignalWorkflowExecutionResponse::SignalWorkflowExecutionResponse(
         const SignalWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new SignalWorkflowExecutionResponsePrivate(this), parent)
+    : SwfResponse(new SignalWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new SignalWorkflowExecutionRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * Constructs a SignalWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
-    SignalWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
+    SignalWorkflowExecutionResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

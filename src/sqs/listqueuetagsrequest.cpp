@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 ListQueueTagsRequest::ListQueueTagsRequest(const ListQueueTagsRequest &other)
-    : SQSRequest(new ListQueueTagsRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new ListQueueTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ ListQueueTagsRequest::ListQueueTagsRequest(const ListQueueTagsRequest &other)
  * Constructs a ListQueueTagsRequest object.
  */
 ListQueueTagsRequest::ListQueueTagsRequest()
-    : SQSRequest(new ListQueueTagsRequestPrivate(SQSRequest::ListQueueTagsAction, this))
+    : SqsRequest(new ListQueueTagsRequestPrivate(SqsRequest::ListQueueTagsAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a ListQueueTagsRequestPrivate object for SQS \a action,
+ * Constructs a ListQueueTagsRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
-    const SQSRequest::Action action, ListQueueTagsRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, ListQueueTagsRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
     const ListQueueTagsRequestPrivate &other, ListQueueTagsRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

@@ -68,7 +68,7 @@ RegisterPatchBaselineForPatchGroupResponse::RegisterPatchBaselineForPatchGroupRe
         const RegisterPatchBaselineForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new RegisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
+    : SsmResponse(new RegisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
 {
     setRequest(new RegisterPatchBaselineForPatchGroupRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void RegisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &respons
  * Constructs a RegisterPatchBaselineForPatchGroupResponsePrivate object with public implementation \a q.
  */
 RegisterPatchBaselineForPatchGroupResponsePrivate::RegisterPatchBaselineForPatchGroupResponsePrivate(
-    RegisterPatchBaselineForPatchGroupResponse * const q) : SSMResponsePrivate(q)
+    RegisterPatchBaselineForPatchGroupResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

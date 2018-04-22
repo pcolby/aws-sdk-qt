@@ -28,10 +28,10 @@ namespace SSM {
 
 class CancelCommandRequest;
 
-class QTAWS_EXPORT CancelCommandRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT CancelCommandRequestPrivate : public SsmRequestPrivate {
 
 public:
-    CancelCommandRequestPrivate(const SSMRequest::Action action,
+    CancelCommandRequestPrivate(const SsmRequest::Action action,
                                    CancelCommandRequest * const q);
     CancelCommandRequestPrivate(const CancelCommandRequestPrivate &other,
                                    CancelCommandRequest * const q);

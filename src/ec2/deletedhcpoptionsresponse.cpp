@@ -48,7 +48,7 @@ DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
         const DeleteDhcpOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteDhcpOptionsResponsePrivate(this), parent)
+    : Ec2Response(new DeleteDhcpOptionsResponsePrivate(this), parent)
 {
     setRequest(new DeleteDhcpOptionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDhcpOptionsResponsePrivate object with public implementation \a q.
  */
 DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
-    DeleteDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
+    DeleteDhcpOptionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

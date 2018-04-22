@@ -28,10 +28,10 @@ namespace WAF {
 
 class GetSampledRequestsRequest;
 
-class QTAWS_EXPORT GetSampledRequestsRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT GetSampledRequestsRequestPrivate : public WafRequestPrivate {
 
 public:
-    GetSampledRequestsRequestPrivate(const WAFRequest::Action action,
+    GetSampledRequestsRequestPrivate(const WafRequest::Action action,
                                    GetSampledRequestsRequest * const q);
     GetSampledRequestsRequestPrivate(const GetSampledRequestsRequestPrivate &other,
                                    GetSampledRequestsRequest * const q);

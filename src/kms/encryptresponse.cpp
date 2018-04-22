@@ -143,7 +143,7 @@ EncryptResponse::EncryptResponse(
         const EncryptRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new EncryptResponsePrivate(this), parent)
+    : KmsResponse(new EncryptResponsePrivate(this), parent)
 {
     setRequest(new EncryptRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void EncryptResponse::parseSuccess(QIODevice &response)
  * Constructs a EncryptResponsePrivate object with public implementation \a q.
  */
 EncryptResponsePrivate::EncryptResponsePrivate(
-    EncryptResponse * const q) : KMSResponsePrivate(q)
+    EncryptResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

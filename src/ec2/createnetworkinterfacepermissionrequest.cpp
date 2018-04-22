@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest(const CreateNetworkInterfacePermissionRequest &other)
-    : EC2Request(new CreateNetworkInterfacePermissionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateNetworkInterfacePermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest
  * Constructs a CreateNetworkInterfacePermissionRequest object.
  */
 CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest()
-    : EC2Request(new CreateNetworkInterfacePermissionRequestPrivate(EC2Request::CreateNetworkInterfacePermissionAction, this))
+    : Ec2Request(new CreateNetworkInterfacePermissionRequestPrivate(Ec2Request::CreateNetworkInterfacePermissionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfacePermissionRequest::resp
  */
 
 /*!
- * Constructs a CreateNetworkInterfacePermissionRequestPrivate object for EC2 \a action,
+ * Constructs a CreateNetworkInterfacePermissionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermissionRequestPrivate(
-    const EC2Request::Action action, CreateNetworkInterfacePermissionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateNetworkInterfacePermissionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermission
  */
 CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermissionRequestPrivate(
     const CreateNetworkInterfacePermissionRequestPrivate &other, CreateNetworkInterfacePermissionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

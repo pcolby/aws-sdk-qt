@@ -48,7 +48,7 @@ StartLifecyclePolicyPreviewResponse::StartLifecyclePolicyPreviewResponse(
         const StartLifecyclePolicyPreviewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new StartLifecyclePolicyPreviewResponsePrivate(this), parent)
+    : EcrResponse(new StartLifecyclePolicyPreviewResponsePrivate(this), parent)
 {
     setRequest(new StartLifecyclePolicyPreviewRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void StartLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
  * Constructs a StartLifecyclePolicyPreviewResponsePrivate object with public implementation \a q.
  */
 StartLifecyclePolicyPreviewResponsePrivate::StartLifecyclePolicyPreviewResponsePrivate(
-    StartLifecyclePolicyPreviewResponse * const q) : ECRResponsePrivate(q)
+    StartLifecyclePolicyPreviewResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

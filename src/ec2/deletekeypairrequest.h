@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteKeyPairRequestPrivate;
 
-class QTAWS_EXPORT DeleteKeyPairRequest : public EC2Request {
+class QTAWS_EXPORT DeleteKeyPairRequest : public Ec2Request {
 
 public:
     DeleteKeyPairRequest(const DeleteKeyPairRequest &other);

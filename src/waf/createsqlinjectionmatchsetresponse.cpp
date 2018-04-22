@@ -49,7 +49,7 @@ CreateSqlInjectionMatchSetResponse::CreateSqlInjectionMatchSetResponse(
         const CreateSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new CreateSqlInjectionMatchSetResponsePrivate(this), parent)
+    : WafResponse(new CreateSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateSqlInjectionMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateSqlInjectionMatchSetResponsePrivate::CreateSqlInjectionMatchSetResponsePrivate(
-    CreateSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
+    CreateSqlInjectionMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

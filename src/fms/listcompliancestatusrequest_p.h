@@ -28,10 +28,10 @@ namespace FMS {
 
 class ListComplianceStatusRequest;
 
-class QTAWS_EXPORT ListComplianceStatusRequestPrivate : public FMSRequestPrivate {
+class QTAWS_EXPORT ListComplianceStatusRequestPrivate : public FmsRequestPrivate {
 
 public:
-    ListComplianceStatusRequestPrivate(const FMSRequest::Action action,
+    ListComplianceStatusRequestPrivate(const FmsRequest::Action action,
                                    ListComplianceStatusRequest * const q);
     ListComplianceStatusRequestPrivate(const ListComplianceStatusRequestPrivate &other,
                                    ListComplianceStatusRequest * const q);

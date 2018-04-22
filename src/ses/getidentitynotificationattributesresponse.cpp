@@ -55,7 +55,7 @@ GetIdentityNotificationAttributesResponse::GetIdentityNotificationAttributesResp
         const GetIdentityNotificationAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetIdentityNotificationAttributesResponsePrivate(this), parent)
+    : SesResponse(new GetIdentityNotificationAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityNotificationAttributesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void GetIdentityNotificationAttributesResponse::parseSuccess(QIODevice &response
  * Constructs a GetIdentityNotificationAttributesResponsePrivate object with public implementation \a q.
  */
 GetIdentityNotificationAttributesResponsePrivate::GetIdentityNotificationAttributesResponsePrivate(
-    GetIdentityNotificationAttributesResponse * const q) : SESResponsePrivate(q)
+    GetIdentityNotificationAttributesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

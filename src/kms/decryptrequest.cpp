@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 DecryptRequest::DecryptRequest(const DecryptRequest &other)
-    : KMSRequest(new DecryptRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new DecryptRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ DecryptRequest::DecryptRequest(const DecryptRequest &other)
  * Constructs a DecryptRequest object.
  */
 DecryptRequest::DecryptRequest()
-    : KMSRequest(new DecryptRequestPrivate(KMSRequest::DecryptAction, this))
+    : KmsRequest(new DecryptRequestPrivate(KmsRequest::DecryptAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * DecryptRequest::response(QNetworkReply * cons
  */
 
 /*!
- * Constructs a DecryptRequestPrivate object for KMS \a action,
+ * Constructs a DecryptRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
-    const KMSRequest::Action action, DecryptRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, DecryptRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ DecryptRequestPrivate::DecryptRequestPrivate(
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
     const DecryptRequestPrivate &other, DecryptRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

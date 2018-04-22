@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyNetworkInterfaceAttributeResponsePrivate;
 
-class QTAWS_EXPORT ModifyNetworkInterfaceAttributeResponse : public EC2Response {
+class QTAWS_EXPORT ModifyNetworkInterfaceAttributeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

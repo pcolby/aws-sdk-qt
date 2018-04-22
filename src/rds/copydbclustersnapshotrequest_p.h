@@ -28,10 +28,10 @@ namespace RDS {
 
 class CopyDBClusterSnapshotRequest;
 
-class QTAWS_EXPORT CopyDBClusterSnapshotRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT CopyDBClusterSnapshotRequestPrivate : public RdsRequestPrivate {
 
 public:
-    CopyDBClusterSnapshotRequestPrivate(const RDSRequest::Action action,
+    CopyDBClusterSnapshotRequestPrivate(const RdsRequest::Action action,
                                    CopyDBClusterSnapshotRequest * const q);
     CopyDBClusterSnapshotRequestPrivate(const CopyDBClusterSnapshotRequestPrivate &other,
                                    CopyDBClusterSnapshotRequest * const q);

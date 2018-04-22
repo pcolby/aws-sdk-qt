@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ConfirmProductInstanceRequest::ConfirmProductInstanceRequest(const ConfirmProductInstanceRequest &other)
-    : EC2Request(new ConfirmProductInstanceRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ConfirmProductInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ConfirmProductInstanceRequest::ConfirmProductInstanceRequest(const ConfirmProduc
  * Constructs a ConfirmProductInstanceRequest object.
  */
 ConfirmProductInstanceRequest::ConfirmProductInstanceRequest()
-    : EC2Request(new ConfirmProductInstanceRequestPrivate(EC2Request::ConfirmProductInstanceAction, this))
+    : Ec2Request(new ConfirmProductInstanceRequestPrivate(Ec2Request::ConfirmProductInstanceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetw
  */
 
 /*!
- * Constructs a ConfirmProductInstanceRequestPrivate object for EC2 \a action,
+ * Constructs a ConfirmProductInstanceRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
-    const EC2Request::Action action, ConfirmProductInstanceRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ConfirmProductInstanceRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
     const ConfirmProductInstanceRequestPrivate &other, ConfirmProductInstanceRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

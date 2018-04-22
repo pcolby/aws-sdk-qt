@@ -27,7 +27,7 @@ namespace DAX {
 
 class CreateParameterGroupResponse;
 
-class QTAWS_EXPORT CreateParameterGroupResponsePrivate : public DAXResponsePrivate {
+class QTAWS_EXPORT CreateParameterGroupResponsePrivate : public DaxResponsePrivate {
     Q_OBJECT
 
 public:

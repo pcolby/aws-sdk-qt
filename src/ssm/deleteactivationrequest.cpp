@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteActivationRequest::DeleteActivationRequest(const DeleteActivationRequest &other)
-    : SSMRequest(new DeleteActivationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteActivationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteActivationRequest::DeleteActivationRequest(const DeleteActivationRequest &
  * Constructs a DeleteActivationRequest object.
  */
 DeleteActivationRequest::DeleteActivationRequest()
-    : SSMRequest(new DeleteActivationRequestPrivate(SSMRequest::DeleteActivationAction, this))
+    : SsmRequest(new DeleteActivationRequestPrivate(SsmRequest::DeleteActivationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteActivationRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteActivationRequestPrivate object for SSM \a action,
+ * Constructs a DeleteActivationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
-    const SSMRequest::Action action, DeleteActivationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteActivationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
     const DeleteActivationRequestPrivate &other, DeleteActivationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

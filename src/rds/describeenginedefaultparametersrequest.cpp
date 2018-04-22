@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(const DescribeEngineDefaultParametersRequest &other)
-    : RDSRequest(new DescribeEngineDefaultParametersRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeEngineDefaultParametersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(c
  * Constructs a DescribeEngineDefaultParametersRequest object.
  */
 DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest()
-    : RDSRequest(new DescribeEngineDefaultParametersRequestPrivate(RDSRequest::DescribeEngineDefaultParametersAction, this))
+    : RdsRequest(new DescribeEngineDefaultParametersRequestPrivate(RdsRequest::DescribeEngineDefaultParametersAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::respo
  */
 
 /*!
- * Constructs a DescribeEngineDefaultParametersRequestPrivate object for RDS \a action,
+ * Constructs a DescribeEngineDefaultParametersRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
-    const RDSRequest::Action action, DescribeEngineDefaultParametersRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeEngineDefaultParametersRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRe
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const DescribeEngineDefaultParametersRequestPrivate &other, DescribeEngineDefaultParametersRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SES {
 
 class DescribeReceiptRuleRequest;
 
-class QTAWS_EXPORT DescribeReceiptRuleRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT DescribeReceiptRuleRequestPrivate : public SesRequestPrivate {
 
 public:
-    DescribeReceiptRuleRequestPrivate(const SESRequest::Action action,
+    DescribeReceiptRuleRequestPrivate(const SesRequest::Action action,
                                    DescribeReceiptRuleRequest * const q);
     DescribeReceiptRuleRequestPrivate(const DescribeReceiptRuleRequestPrivate &other,
                                    DescribeReceiptRuleRequest * const q);

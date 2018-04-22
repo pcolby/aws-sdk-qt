@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &other)
-    : ECRRequest(new BatchDeleteImageRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new BatchDeleteImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ BatchDeleteImageRequest::BatchDeleteImageRequest(const BatchDeleteImageRequest &
  * Constructs a BatchDeleteImageRequest object.
  */
 BatchDeleteImageRequest::BatchDeleteImageRequest()
-    : ECRRequest(new BatchDeleteImageRequestPrivate(ECRRequest::BatchDeleteImageAction, this))
+    : EcrRequest(new BatchDeleteImageRequestPrivate(EcrRequest::BatchDeleteImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a BatchDeleteImageRequestPrivate object for ECR \a action,
+ * Constructs a BatchDeleteImageRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
-    const ECRRequest::Action action, BatchDeleteImageRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, BatchDeleteImageRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const BatchDeleteImageRequestPrivate &other, BatchDeleteImageRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

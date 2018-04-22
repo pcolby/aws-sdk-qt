@@ -109,7 +109,7 @@ DeleteServerCertificateResponse::DeleteServerCertificateResponse(
         const DeleteServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteServerCertificateResponsePrivate(this), parent)
+    : IamResponse(new DeleteServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteServerCertificateRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteServerCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteServerCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteServerCertificateResponsePrivate::DeleteServerCertificateResponsePrivate(
-    DeleteServerCertificateResponse * const q) : IAMResponsePrivate(q)
+    DeleteServerCertificateResponse * const q) : IamResponsePrivate(q)
 {
 
 }

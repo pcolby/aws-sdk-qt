@@ -50,7 +50,7 @@ CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new CreateTagsResponsePrivate(this), parent)
+    : EfsResponse(new CreateTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateTagsRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateTagsResponsePrivate object with public implementation \a q.
  */
 CreateTagsResponsePrivate::CreateTagsResponsePrivate(
-    CreateTagsResponse * const q) : EFSResponsePrivate(q)
+    CreateTagsResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeAvailabilityZonesRequestPrivate;
 
-class QTAWS_EXPORT DescribeAvailabilityZonesRequest : public EC2Request {
+class QTAWS_EXPORT DescribeAvailabilityZonesRequest : public Ec2Request {
 
 public:
     DescribeAvailabilityZonesRequest(const DescribeAvailabilityZonesRequest &other);

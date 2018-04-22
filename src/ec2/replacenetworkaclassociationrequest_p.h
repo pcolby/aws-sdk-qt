@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ReplaceNetworkAclAssociationRequest;
 
-class QTAWS_EXPORT ReplaceNetworkAclAssociationRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ReplaceNetworkAclAssociationRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ReplaceNetworkAclAssociationRequestPrivate(const EC2Request::Action action,
+    ReplaceNetworkAclAssociationRequestPrivate(const Ec2Request::Action action,
                                    ReplaceNetworkAclAssociationRequest * const q);
     ReplaceNetworkAclAssociationRequestPrivate(const ReplaceNetworkAclAssociationRequestPrivate &other,
                                    ReplaceNetworkAclAssociationRequest * const q);

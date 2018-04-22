@@ -48,7 +48,7 @@ ModifyVpcPeeringConnectionOptionsResponse::ModifyVpcPeeringConnectionOptionsResp
         const ModifyVpcPeeringConnectionOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcPeeringConnectionOptionsResponsePrivate(this), parent)
+    : Ec2Response(new ModifyVpcPeeringConnectionOptionsResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcPeeringConnectionOptionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyVpcPeeringConnectionOptionsResponse::parseSuccess(QIODevice &response
  * Constructs a ModifyVpcPeeringConnectionOptionsResponsePrivate object with public implementation \a q.
  */
 ModifyVpcPeeringConnectionOptionsResponsePrivate::ModifyVpcPeeringConnectionOptionsResponsePrivate(
-    ModifyVpcPeeringConnectionOptionsResponse * const q) : EC2ResponsePrivate(q)
+    ModifyVpcPeeringConnectionOptionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

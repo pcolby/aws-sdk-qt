@@ -50,7 +50,7 @@ DescribeFileSystemsResponse::DescribeFileSystemsResponse(
         const DescribeFileSystemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DescribeFileSystemsResponsePrivate(this), parent)
+    : EfsResponse(new DescribeFileSystemsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFileSystemsRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeFileSystemsResponsePrivate object with public implementation \a q.
  */
 DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
-    DescribeFileSystemsResponse * const q) : EFSResponsePrivate(q)
+    DescribeFileSystemsResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SNS {
 
 class GetEndpointAttributesRequest;
 
-class QTAWS_EXPORT GetEndpointAttributesRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT GetEndpointAttributesRequestPrivate : public SnsRequestPrivate {
 
 public:
-    GetEndpointAttributesRequestPrivate(const SNSRequest::Action action,
+    GetEndpointAttributesRequestPrivate(const SnsRequest::Action action,
                                    GetEndpointAttributesRequest * const q);
     GetEndpointAttributesRequestPrivate(const GetEndpointAttributesRequestPrivate &other,
                                    GetEndpointAttributesRequest * const q);

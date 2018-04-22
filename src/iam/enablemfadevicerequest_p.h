@@ -28,10 +28,10 @@ namespace IAM {
 
 class EnableMFADeviceRequest;
 
-class QTAWS_EXPORT EnableMFADeviceRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT EnableMFADeviceRequestPrivate : public IamRequestPrivate {
 
 public:
-    EnableMFADeviceRequestPrivate(const IAMRequest::Action action,
+    EnableMFADeviceRequestPrivate(const IamRequest::Action action,
                                    EnableMFADeviceRequest * const q);
     EnableMFADeviceRequestPrivate(const EnableMFADeviceRequestPrivate &other,
                                    EnableMFADeviceRequest * const q);

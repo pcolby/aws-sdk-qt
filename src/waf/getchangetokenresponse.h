@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetChangeTokenResponsePrivate;
 
-class QTAWS_EXPORT GetChangeTokenResponse : public WAFResponse {
+class QTAWS_EXPORT GetChangeTokenResponse : public WafResponse {
     Q_OBJECT
 
 public:

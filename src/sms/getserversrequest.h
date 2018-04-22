@@ -27,7 +27,7 @@ namespace SMS {
 
 class GetServersRequestPrivate;
 
-class QTAWS_EXPORT GetServersRequest : public SMSRequest {
+class QTAWS_EXPORT GetServersRequest : public SmsRequest {
 
 public:
     GetServersRequest(const GetServersRequest &other);

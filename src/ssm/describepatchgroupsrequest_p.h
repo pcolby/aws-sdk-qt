@@ -28,10 +28,10 @@ namespace SSM {
 
 class DescribePatchGroupsRequest;
 
-class QTAWS_EXPORT DescribePatchGroupsRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DescribePatchGroupsRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DescribePatchGroupsRequestPrivate(const SSMRequest::Action action,
+    DescribePatchGroupsRequestPrivate(const SsmRequest::Action action,
                                    DescribePatchGroupsRequest * const q);
     DescribePatchGroupsRequestPrivate(const DescribePatchGroupsRequestPrivate &other,
                                    DescribePatchGroupsRequest * const q);

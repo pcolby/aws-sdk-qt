@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 DisassociateConnectorRequest::DisassociateConnectorRequest(const DisassociateConnectorRequest &other)
-    : SMSRequest(new DisassociateConnectorRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new DisassociateConnectorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ DisassociateConnectorRequest::DisassociateConnectorRequest(const DisassociateCon
  * Constructs a DisassociateConnectorRequest object.
  */
 DisassociateConnectorRequest::DisassociateConnectorRequest()
-    : SMSRequest(new DisassociateConnectorRequestPrivate(SMSRequest::DisassociateConnectorAction, this))
+    : SmsRequest(new DisassociateConnectorRequestPrivate(SmsRequest::DisassociateConnectorAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectorRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DisassociateConnectorRequestPrivate object for SMS \a action,
+ * Constructs a DisassociateConnectorRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
-    const SMSRequest::Action action, DisassociateConnectorRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, DisassociateConnectorRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
     const DisassociateConnectorRequestPrivate &other, DisassociateConnectorRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

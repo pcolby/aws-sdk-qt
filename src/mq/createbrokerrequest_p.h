@@ -28,10 +28,10 @@ namespace MQ {
 
 class CreateBrokerRequest;
 
-class QTAWS_EXPORT CreateBrokerRequestPrivate : public MQRequestPrivate {
+class QTAWS_EXPORT CreateBrokerRequestPrivate : public MqRequestPrivate {
 
 public:
-    CreateBrokerRequestPrivate(const MQRequest::Action action,
+    CreateBrokerRequestPrivate(const MqRequest::Action action,
                                    CreateBrokerRequest * const q);
     CreateBrokerRequestPrivate(const CreateBrokerRequestPrivate &other,
                                    CreateBrokerRequest * const q);

@@ -48,7 +48,7 @@ DescribeVpcClassicLinkResponse::DescribeVpcClassicLinkResponse(
         const DescribeVpcClassicLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpcClassicLinkResponsePrivate(this), parent)
+    : Ec2Response(new DescribeVpcClassicLinkResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcClassicLinkRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeVpcClassicLinkResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeVpcClassicLinkResponsePrivate object with public implementation \a q.
  */
 DescribeVpcClassicLinkResponsePrivate::DescribeVpcClassicLinkResponsePrivate(
-    DescribeVpcClassicLinkResponse * const q) : EC2ResponsePrivate(q)
+    DescribeVpcClassicLinkResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

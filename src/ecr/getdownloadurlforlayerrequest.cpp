@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest(const GetDownloadUrlForLayerRequest &other)
-    : ECRRequest(new GetDownloadUrlForLayerRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new GetDownloadUrlForLayerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest(const GetDownloadUr
  * Constructs a GetDownloadUrlForLayerRequest object.
  */
 GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest()
-    : ECRRequest(new GetDownloadUrlForLayerRequestPrivate(ECRRequest::GetDownloadUrlForLayerAction, this))
+    : EcrRequest(new GetDownloadUrlForLayerRequestPrivate(EcrRequest::GetDownloadUrlForLayerAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetw
  */
 
 /*!
- * Constructs a GetDownloadUrlForLayerRequestPrivate object for ECR \a action,
+ * Constructs a GetDownloadUrlForLayerRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
-    const ECRRequest::Action action, GetDownloadUrlForLayerRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, GetDownloadUrlForLayerRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
     const GetDownloadUrlForLayerRequestPrivate &other, GetDownloadUrlForLayerRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

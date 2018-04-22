@@ -48,7 +48,7 @@ AssociateDhcpOptionsResponse::AssociateDhcpOptionsResponse(
         const AssociateDhcpOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateDhcpOptionsResponsePrivate(this), parent)
+    : Ec2Response(new AssociateDhcpOptionsResponsePrivate(this), parent)
 {
     setRequest(new AssociateDhcpOptionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AssociateDhcpOptionsResponse::parseSuccess(QIODevice &response)
  * Constructs a AssociateDhcpOptionsResponsePrivate object with public implementation \a q.
  */
 AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponsePrivate(
-    AssociateDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
+    AssociateDhcpOptionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

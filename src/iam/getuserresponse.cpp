@@ -109,7 +109,7 @@ GetUserResponse::GetUserResponse(
         const GetUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetUserResponsePrivate(this), parent)
+    : IamResponse(new GetUserResponsePrivate(this), parent)
 {
     setRequest(new GetUserRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetUserResponse::parseSuccess(QIODevice &response)
  * Constructs a GetUserResponsePrivate object with public implementation \a q.
  */
 GetUserResponsePrivate::GetUserResponsePrivate(
-    GetUserResponse * const q) : IAMResponsePrivate(q)
+    GetUserResponse * const q) : IamResponsePrivate(q)
 {
 
 }

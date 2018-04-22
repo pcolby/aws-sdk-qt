@@ -48,7 +48,7 @@ BundleInstanceResponse::BundleInstanceResponse(
         const BundleInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new BundleInstanceResponsePrivate(this), parent)
+    : Ec2Response(new BundleInstanceResponsePrivate(this), parent)
 {
     setRequest(new BundleInstanceRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void BundleInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a BundleInstanceResponsePrivate object with public implementation \a q.
  */
 BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
-    BundleInstanceResponse * const q) : EC2ResponsePrivate(q)
+    BundleInstanceResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

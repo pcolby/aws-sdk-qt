@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other)
-    : WAFRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
+    : WafRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicy
  * Constructs a PutPermissionPolicyRequest object.
  */
 PutPermissionPolicyRequest::PutPermissionPolicyRequest()
-    : WAFRequest(new PutPermissionPolicyRequestPrivate(WAFRequest::PutPermissionPolicyAction, this))
+    : WafRequest(new PutPermissionPolicyRequestPrivate(WafRequest::PutPermissionPolicyAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
  */
 
 /*!
- * Constructs a PutPermissionPolicyRequestPrivate object for WAF \a action,
+ * Constructs a PutPermissionPolicyRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
-    const WAFRequest::Action action, PutPermissionPolicyRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, PutPermissionPolicyRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const PutPermissionPolicyRequestPrivate &other, PutPermissionPolicyRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateFlowLogsRequest::CreateFlowLogsRequest(const CreateFlowLogsRequest &other)
-    : EC2Request(new CreateFlowLogsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateFlowLogsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateFlowLogsRequest::CreateFlowLogsRequest(const CreateFlowLogsRequest &other)
  * Constructs a CreateFlowLogsRequest object.
  */
 CreateFlowLogsRequest::CreateFlowLogsRequest()
-    : EC2Request(new CreateFlowLogsRequestPrivate(EC2Request::CreateFlowLogsAction, this))
+    : Ec2Request(new CreateFlowLogsRequestPrivate(Ec2Request::CreateFlowLogsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateFlowLogsRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a CreateFlowLogsRequestPrivate object for EC2 \a action,
+ * Constructs a CreateFlowLogsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
-    const EC2Request::Action action, CreateFlowLogsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateFlowLogsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
  */
 CreateFlowLogsRequestPrivate::CreateFlowLogsRequestPrivate(
     const CreateFlowLogsRequestPrivate &other, CreateFlowLogsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

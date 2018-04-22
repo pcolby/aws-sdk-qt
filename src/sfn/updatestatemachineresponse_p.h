@@ -27,7 +27,7 @@ namespace SFN {
 
 class UpdateStateMachineResponse;
 
-class QTAWS_EXPORT UpdateStateMachineResponsePrivate : public SFNResponsePrivate {
+class QTAWS_EXPORT UpdateStateMachineResponsePrivate : public SfnResponsePrivate {
     Q_OBJECT
 
 public:

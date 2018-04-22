@@ -108,7 +108,7 @@ CreateDBClusterSnapshotResponse::CreateDBClusterSnapshotResponse(
         const CreateDBClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBClusterSnapshotResponsePrivate(this), parent)
+    : RdsResponse(new CreateDBClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CreateDBClusterSnapshotRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDBClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateDBClusterSnapshotResponsePrivate::CreateDBClusterSnapshotResponsePrivate(
-    CreateDBClusterSnapshotResponse * const q) : RDSResponsePrivate(q)
+    CreateDBClusterSnapshotResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

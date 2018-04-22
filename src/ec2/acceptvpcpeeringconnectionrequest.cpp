@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AcceptVpcPeeringConnectionRequest::AcceptVpcPeeringConnectionRequest(const AcceptVpcPeeringConnectionRequest &other)
-    : EC2Request(new AcceptVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AcceptVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AcceptVpcPeeringConnectionRequest::AcceptVpcPeeringConnectionRequest(const Accep
  * Constructs a AcceptVpcPeeringConnectionRequest object.
  */
 AcceptVpcPeeringConnectionRequest::AcceptVpcPeeringConnectionRequest()
-    : EC2Request(new AcceptVpcPeeringConnectionRequestPrivate(EC2Request::AcceptVpcPeeringConnectionAction, this))
+    : Ec2Request(new AcceptVpcPeeringConnectionRequestPrivate(Ec2Request::AcceptVpcPeeringConnectionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AcceptVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- * Constructs a AcceptVpcPeeringConnectionRequestPrivate object for EC2 \a action,
+ * Constructs a AcceptVpcPeeringConnectionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AcceptVpcPeeringConnectionRequestPrivate::AcceptVpcPeeringConnectionRequestPrivate(
-    const EC2Request::Action action, AcceptVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AcceptVpcPeeringConnectionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AcceptVpcPeeringConnectionRequestPrivate::AcceptVpcPeeringConnectionRequestPriva
  */
 AcceptVpcPeeringConnectionRequestPrivate::AcceptVpcPeeringConnectionRequestPrivate(
     const AcceptVpcPeeringConnectionRequestPrivate &other, AcceptVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

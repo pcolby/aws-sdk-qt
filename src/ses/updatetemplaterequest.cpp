@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 UpdateTemplateRequest::UpdateTemplateRequest(const UpdateTemplateRequest &other)
-    : SESRequest(new UpdateTemplateRequestPrivate(*other.d_func(), this))
+    : SesRequest(new UpdateTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ UpdateTemplateRequest::UpdateTemplateRequest(const UpdateTemplateRequest &other)
  * Constructs a UpdateTemplateRequest object.
  */
 UpdateTemplateRequest::UpdateTemplateRequest()
-    : SESRequest(new UpdateTemplateRequestPrivate(SESRequest::UpdateTemplateAction, this))
+    : SesRequest(new UpdateTemplateRequestPrivate(SesRequest::UpdateTemplateAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * UpdateTemplateRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a UpdateTemplateRequestPrivate object for SES \a action,
+ * Constructs a UpdateTemplateRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
-    const SESRequest::Action action, UpdateTemplateRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, UpdateTemplateRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
  */
 UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
     const UpdateTemplateRequestPrivate &other, UpdateTemplateRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

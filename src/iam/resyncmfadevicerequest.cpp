@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ResyncMFADeviceRequest::ResyncMFADeviceRequest(const ResyncMFADeviceRequest &other)
-    : IAMRequest(new ResyncMFADeviceRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ResyncMFADeviceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ResyncMFADeviceRequest::ResyncMFADeviceRequest(const ResyncMFADeviceRequest &oth
  * Constructs a ResyncMFADeviceRequest object.
  */
 ResyncMFADeviceRequest::ResyncMFADeviceRequest()
-    : IAMRequest(new ResyncMFADeviceRequestPrivate(IAMRequest::ResyncMFADeviceAction, this))
+    : IamRequest(new ResyncMFADeviceRequestPrivate(IamRequest::ResyncMFADeviceAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a ResyncMFADeviceRequestPrivate object for IAM \a action,
+ * Constructs a ResyncMFADeviceRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
-    const IAMRequest::Action action, ResyncMFADeviceRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ResyncMFADeviceRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
     const ResyncMFADeviceRequestPrivate &other, ResyncMFADeviceRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

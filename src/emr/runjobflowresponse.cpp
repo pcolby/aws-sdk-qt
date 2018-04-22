@@ -47,7 +47,7 @@ RunJobFlowResponse::RunJobFlowResponse(
         const RunJobFlowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new RunJobFlowResponsePrivate(this), parent)
+    : EmrResponse(new RunJobFlowResponsePrivate(this), parent)
 {
     setRequest(new RunJobFlowRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void RunJobFlowResponse::parseSuccess(QIODevice &response)
  * Constructs a RunJobFlowResponsePrivate object with public implementation \a q.
  */
 RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
-    RunJobFlowResponse * const q) : EMRResponsePrivate(q)
+    RunJobFlowResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

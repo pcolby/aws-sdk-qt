@@ -28,10 +28,10 @@ namespace SWF {
 
 class CountPendingDecisionTasksRequest;
 
-class QTAWS_EXPORT CountPendingDecisionTasksRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT CountPendingDecisionTasksRequestPrivate : public SwfRequestPrivate {
 
 public:
-    CountPendingDecisionTasksRequestPrivate(const SWFRequest::Action action,
+    CountPendingDecisionTasksRequestPrivate(const SwfRequest::Action action,
                                    CountPendingDecisionTasksRequest * const q);
     CountPendingDecisionTasksRequestPrivate(const CountPendingDecisionTasksRequestPrivate &other,
                                    CountPendingDecisionTasksRequest * const q);

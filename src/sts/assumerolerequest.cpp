@@ -97,7 +97,7 @@ namespace STS {
  * Constructs a copy of \a other.
  */
 AssumeRoleRequest::AssumeRoleRequest(const AssumeRoleRequest &other)
-    : STSRequest(new AssumeRoleRequestPrivate(*other.d_func(), this))
+    : StsRequest(new AssumeRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +106,7 @@ AssumeRoleRequest::AssumeRoleRequest(const AssumeRoleRequest &other)
  * Constructs a AssumeRoleRequest object.
  */
 AssumeRoleRequest::AssumeRoleRequest()
-    : STSRequest(new AssumeRoleRequestPrivate(STSRequest::AssumeRoleAction, this))
+    : StsRequest(new AssumeRoleRequestPrivate(StsRequest::AssumeRoleAction, this))
 {
 
 }
@@ -139,12 +139,12 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a AssumeRoleRequestPrivate object for STS \a action,
+ * Constructs a AssumeRoleRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
-    const STSRequest::Action action, AssumeRoleRequest * const q)
-    : STSRequestPrivate(action, q)
+    const StsRequest::Action action, AssumeRoleRequest * const q)
+    : StsRequestPrivate(action, q)
 {
 
 }
@@ -157,7 +157,7 @@ AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
  */
 AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
     const AssumeRoleRequestPrivate &other, AssumeRoleRequest * const q)
-    : STSRequestPrivate(other, q)
+    : StsRequestPrivate(other, q)
 {
 
 }

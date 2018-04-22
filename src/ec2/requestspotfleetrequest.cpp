@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RequestSpotFleetRequest::RequestSpotFleetRequest(const RequestSpotFleetRequest &other)
-    : EC2Request(new RequestSpotFleetRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RequestSpotFleetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RequestSpotFleetRequest::RequestSpotFleetRequest(const RequestSpotFleetRequest &
  * Constructs a RequestSpotFleetRequest object.
  */
 RequestSpotFleetRequest::RequestSpotFleetRequest()
-    : EC2Request(new RequestSpotFleetRequestPrivate(EC2Request::RequestSpotFleetAction, this))
+    : Ec2Request(new RequestSpotFleetRequestPrivate(Ec2Request::RequestSpotFleetAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a RequestSpotFleetRequestPrivate object for EC2 \a action,
+ * Constructs a RequestSpotFleetRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
-    const EC2Request::Action action, RequestSpotFleetRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RequestSpotFleetRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
  */
 RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
     const RequestSpotFleetRequestPrivate &other, RequestSpotFleetRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

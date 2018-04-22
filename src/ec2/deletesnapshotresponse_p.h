@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteSnapshotResponse;
 
-class QTAWS_EXPORT DeleteSnapshotResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT DeleteSnapshotResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

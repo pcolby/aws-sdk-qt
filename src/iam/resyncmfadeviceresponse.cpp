@@ -109,7 +109,7 @@ ResyncMFADeviceResponse::ResyncMFADeviceResponse(
         const ResyncMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ResyncMFADeviceResponsePrivate(this), parent)
+    : IamResponse(new ResyncMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new ResyncMFADeviceRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ResyncMFADeviceResponse::parseSuccess(QIODevice &response)
  * Constructs a ResyncMFADeviceResponsePrivate object with public implementation \a q.
  */
 ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
-    ResyncMFADeviceResponse * const q) : IAMResponsePrivate(q)
+    ResyncMFADeviceResponse * const q) : IamResponsePrivate(q)
 {
 
 }

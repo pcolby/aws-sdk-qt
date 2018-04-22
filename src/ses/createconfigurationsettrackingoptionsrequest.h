@@ -27,7 +27,7 @@ namespace SES {
 
 class CreateConfigurationSetTrackingOptionsRequestPrivate;
 
-class QTAWS_EXPORT CreateConfigurationSetTrackingOptionsRequest : public SESRequest {
+class QTAWS_EXPORT CreateConfigurationSetTrackingOptionsRequest : public SesRequest {
 
 public:
     CreateConfigurationSetTrackingOptionsRequest(const CreateConfigurationSetTrackingOptionsRequest &other);

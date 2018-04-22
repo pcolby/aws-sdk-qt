@@ -60,7 +60,7 @@ RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
         const RespondActivityTaskCanceledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RespondActivityTaskCanceledResponsePrivate(this), parent)
+    : SwfResponse(new RespondActivityTaskCanceledResponsePrivate(this), parent)
 {
     setRequest(new RespondActivityTaskCanceledRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
  * Constructs a RespondActivityTaskCanceledResponsePrivate object with public implementation \a q.
  */
 RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponsePrivate(
-    RespondActivityTaskCanceledResponse * const q) : SWFResponsePrivate(q)
+    RespondActivityTaskCanceledResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

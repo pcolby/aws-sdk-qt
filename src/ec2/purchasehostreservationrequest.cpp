@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 PurchaseHostReservationRequest::PurchaseHostReservationRequest(const PurchaseHostReservationRequest &other)
-    : EC2Request(new PurchaseHostReservationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new PurchaseHostReservationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PurchaseHostReservationRequest::PurchaseHostReservationRequest(const PurchaseHos
  * Constructs a PurchaseHostReservationRequest object.
  */
 PurchaseHostReservationRequest::PurchaseHostReservationRequest()
-    : EC2Request(new PurchaseHostReservationRequestPrivate(EC2Request::PurchaseHostReservationAction, this))
+    : Ec2Request(new PurchaseHostReservationRequestPrivate(Ec2Request::PurchaseHostReservationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNet
  */
 
 /*!
- * Constructs a PurchaseHostReservationRequestPrivate object for EC2 \a action,
+ * Constructs a PurchaseHostReservationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
-    const EC2Request::Action action, PurchaseHostReservationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, PurchaseHostReservationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
     const PurchaseHostReservationRequestPrivate &other, PurchaseHostReservationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

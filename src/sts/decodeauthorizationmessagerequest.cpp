@@ -97,7 +97,7 @@ namespace STS {
  * Constructs a copy of \a other.
  */
 DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest(const DecodeAuthorizationMessageRequest &other)
-    : STSRequest(new DecodeAuthorizationMessageRequestPrivate(*other.d_func(), this))
+    : StsRequest(new DecodeAuthorizationMessageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +106,7 @@ DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest(const Decod
  * Constructs a DecodeAuthorizationMessageRequest object.
  */
 DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest()
-    : STSRequest(new DecodeAuthorizationMessageRequestPrivate(STSRequest::DecodeAuthorizationMessageAction, this))
+    : StsRequest(new DecodeAuthorizationMessageRequestPrivate(StsRequest::DecodeAuthorizationMessageAction, this))
 {
 
 }
@@ -139,12 +139,12 @@ QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(Q
  */
 
 /*!
- * Constructs a DecodeAuthorizationMessageRequestPrivate object for STS \a action,
+ * Constructs a DecodeAuthorizationMessageRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
-    const STSRequest::Action action, DecodeAuthorizationMessageRequest * const q)
-    : STSRequestPrivate(action, q)
+    const StsRequest::Action action, DecodeAuthorizationMessageRequest * const q)
+    : StsRequestPrivate(action, q)
 {
 
 }
@@ -157,7 +157,7 @@ DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPriva
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
     const DecodeAuthorizationMessageRequestPrivate &other, DecodeAuthorizationMessageRequest * const q)
-    : STSRequestPrivate(other, q)
+    : StsRequestPrivate(other, q)
 {
 
 }

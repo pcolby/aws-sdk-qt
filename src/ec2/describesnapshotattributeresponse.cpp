@@ -48,7 +48,7 @@ DescribeSnapshotAttributeResponse::DescribeSnapshotAttributeResponse(
         const DescribeSnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSnapshotAttributeResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new DescribeSnapshotAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSnapshotAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeSnapshotAttributeResponsePrivate::DescribeSnapshotAttributeResponsePrivate(
-    DescribeSnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSnapshotAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

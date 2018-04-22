@@ -60,7 +60,7 @@ ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
         const ListOpenWorkflowExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new ListOpenWorkflowExecutionsResponsePrivate(this), parent)
+    : SwfResponse(new ListOpenWorkflowExecutionsResponsePrivate(this), parent)
 {
     setRequest(new ListOpenWorkflowExecutionsRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void ListOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListOpenWorkflowExecutionsResponsePrivate object with public implementation \a q.
  */
 ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePrivate(
-    ListOpenWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
+    ListOpenWorkflowExecutionsResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

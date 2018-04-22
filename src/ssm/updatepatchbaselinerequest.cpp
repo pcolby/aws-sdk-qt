@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 UpdatePatchBaselineRequest::UpdatePatchBaselineRequest(const UpdatePatchBaselineRequest &other)
-    : SSMRequest(new UpdatePatchBaselineRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new UpdatePatchBaselineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ UpdatePatchBaselineRequest::UpdatePatchBaselineRequest(const UpdatePatchBaseline
  * Constructs a UpdatePatchBaselineRequest object.
  */
 UpdatePatchBaselineRequest::UpdatePatchBaselineRequest()
-    : SSMRequest(new UpdatePatchBaselineRequestPrivate(SSMRequest::UpdatePatchBaselineAction, this))
+    : SsmRequest(new UpdatePatchBaselineRequestPrivate(SsmRequest::UpdatePatchBaselineAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetwork
  */
 
 /*!
- * Constructs a UpdatePatchBaselineRequestPrivate object for SSM \a action,
+ * Constructs a UpdatePatchBaselineRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
-    const SSMRequest::Action action, UpdatePatchBaselineRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, UpdatePatchBaselineRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
     const UpdatePatchBaselineRequestPrivate &other, UpdatePatchBaselineRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

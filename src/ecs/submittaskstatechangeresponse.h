@@ -28,7 +28,7 @@ namespace ECS {
 
 class SubmitTaskStateChangeResponsePrivate;
 
-class QTAWS_EXPORT SubmitTaskStateChangeResponse : public ECSResponse {
+class QTAWS_EXPORT SubmitTaskStateChangeResponse : public EcsResponse {
     Q_OBJECT
 
 public:

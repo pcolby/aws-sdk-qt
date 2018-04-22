@@ -108,7 +108,7 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
         const DeleteEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
+    : RdsResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteEventSubscriptionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
-    DeleteEventSubscriptionResponse * const q) : RDSResponsePrivate(q)
+    DeleteEventSubscriptionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace KMS {
 
 class GenerateRandomRequest;
 
-class QTAWS_EXPORT GenerateRandomRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT GenerateRandomRequestPrivate : public KmsRequestPrivate {
 
 public:
-    GenerateRandomRequestPrivate(const KMSRequest::Action action,
+    GenerateRandomRequestPrivate(const KmsRequest::Action action,
                                    GenerateRandomRequest * const q);
     GenerateRandomRequestPrivate(const GenerateRandomRequestPrivate &other,
                                    GenerateRandomRequest * const q);

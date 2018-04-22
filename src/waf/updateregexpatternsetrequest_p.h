@@ -28,10 +28,10 @@ namespace WAF {
 
 class UpdateRegexPatternSetRequest;
 
-class QTAWS_EXPORT UpdateRegexPatternSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT UpdateRegexPatternSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    UpdateRegexPatternSetRequestPrivate(const WAFRequest::Action action,
+    UpdateRegexPatternSetRequestPrivate(const WafRequest::Action action,
                                    UpdateRegexPatternSetRequest * const q);
     UpdateRegexPatternSetRequestPrivate(const UpdateRegexPatternSetRequestPrivate &other,
                                    UpdateRegexPatternSetRequest * const q);

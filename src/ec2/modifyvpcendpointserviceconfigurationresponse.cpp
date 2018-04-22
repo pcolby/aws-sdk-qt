@@ -48,7 +48,7 @@ ModifyVpcEndpointServiceConfigurationResponse::ModifyVpcEndpointServiceConfigura
         const ModifyVpcEndpointServiceConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcEndpointServiceConfigurationResponsePrivate(this), parent)
+    : Ec2Response(new ModifyVpcEndpointServiceConfigurationResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcEndpointServiceConfigurationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyVpcEndpointServiceConfigurationResponse::parseSuccess(QIODevice &resp
  * Constructs a ModifyVpcEndpointServiceConfigurationResponsePrivate object with public implementation \a q.
  */
 ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceConfigurationResponsePrivate(
-    ModifyVpcEndpointServiceConfigurationResponse * const q) : EC2ResponsePrivate(q)
+    ModifyVpcEndpointServiceConfigurationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

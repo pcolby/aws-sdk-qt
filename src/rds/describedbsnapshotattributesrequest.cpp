@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBSnapshotAttributesRequest::DescribeDBSnapshotAttributesRequest(const DescribeDBSnapshotAttributesRequest &other)
-    : RDSRequest(new DescribeDBSnapshotAttributesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBSnapshotAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBSnapshotAttributesRequest::DescribeDBSnapshotAttributesRequest(const D
  * Constructs a DescribeDBSnapshotAttributesRequest object.
  */
 DescribeDBSnapshotAttributesRequest::DescribeDBSnapshotAttributesRequest()
-    : RDSRequest(new DescribeDBSnapshotAttributesRequestPrivate(RDSRequest::DescribeDBSnapshotAttributesAction, this))
+    : RdsRequest(new DescribeDBSnapshotAttributesRequestPrivate(RdsRequest::DescribeDBSnapshotAttributesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSnapshotAttributesRequest::response
  */
 
 /*!
- * Constructs a DescribeDBSnapshotAttributesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBSnapshotAttributesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBSnapshotAttributesRequestPrivate::DescribeDBSnapshotAttributesRequestPrivate(
-    const RDSRequest::Action action, DescribeDBSnapshotAttributesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBSnapshotAttributesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBSnapshotAttributesRequestPrivate::DescribeDBSnapshotAttributesRequestP
  */
 DescribeDBSnapshotAttributesRequestPrivate::DescribeDBSnapshotAttributesRequestPrivate(
     const DescribeDBSnapshotAttributesRequestPrivate &other, DescribeDBSnapshotAttributesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribePlacementGroupsRequest::DescribePlacementGroupsRequest(const DescribePlacementGroupsRequest &other)
-    : EC2Request(new DescribePlacementGroupsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribePlacementGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribePlacementGroupsRequest::DescribePlacementGroupsRequest(const DescribePla
  * Constructs a DescribePlacementGroupsRequest object.
  */
 DescribePlacementGroupsRequest::DescribePlacementGroupsRequest()
-    : EC2Request(new DescribePlacementGroupsRequestPrivate(EC2Request::DescribePlacementGroupsAction, this))
+    : Ec2Request(new DescribePlacementGroupsRequestPrivate(Ec2Request::DescribePlacementGroupsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNet
  */
 
 /*!
- * Constructs a DescribePlacementGroupsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribePlacementGroupsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
-    const EC2Request::Action action, DescribePlacementGroupsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribePlacementGroupsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
     const DescribePlacementGroupsRequestPrivate &other, DescribePlacementGroupsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

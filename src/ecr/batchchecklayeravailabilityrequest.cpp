@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const BatchCheckLayerAvailabilityRequest &other)
-    : ECRRequest(new BatchCheckLayerAvailabilityRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new BatchCheckLayerAvailabilityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest(const Bat
  * Constructs a BatchCheckLayerAvailabilityRequest object.
  */
 BatchCheckLayerAvailabilityRequest::BatchCheckLayerAvailabilityRequest()
-    : ECRRequest(new BatchCheckLayerAvailabilityRequestPrivate(ECRRequest::BatchCheckLayerAvailabilityAction, this))
+    : EcrRequest(new BatchCheckLayerAvailabilityRequestPrivate(EcrRequest::BatchCheckLayerAvailabilityAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
  */
 
 /*!
- * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for ECR \a action,
+ * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
-    const ECRRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPri
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const BatchCheckLayerAvailabilityRequestPrivate &other, BatchCheckLayerAvailabilityRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

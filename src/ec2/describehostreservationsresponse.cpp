@@ -48,7 +48,7 @@ DescribeHostReservationsResponse::DescribeHostReservationsResponse(
         const DescribeHostReservationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeHostReservationsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeHostReservationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeHostReservationsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeHostReservationsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeHostReservationsResponsePrivate object with public implementation \a q.
  */
 DescribeHostReservationsResponsePrivate::DescribeHostReservationsResponsePrivate(
-    DescribeHostReservationsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeHostReservationsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

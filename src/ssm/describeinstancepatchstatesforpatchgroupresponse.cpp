@@ -68,7 +68,7 @@ DescribeInstancePatchStatesForPatchGroupResponse::DescribeInstancePatchStatesFor
         const DescribeInstancePatchStatesForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeInstancePatchStatesForPatchGroupResponsePrivate(this), parent)
+    : SsmResponse(new DescribeInstancePatchStatesForPatchGroupResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstancePatchStatesForPatchGroupRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeInstancePatchStatesForPatchGroupResponse::parseSuccess(QIODevice &r
  * Constructs a DescribeInstancePatchStatesForPatchGroupResponsePrivate object with public implementation \a q.
  */
 DescribeInstancePatchStatesForPatchGroupResponsePrivate::DescribeInstancePatchStatesForPatchGroupResponsePrivate(
-    DescribeInstancePatchStatesForPatchGroupResponse * const q) : SSMResponsePrivate(q)
+    DescribeInstancePatchStatesForPatchGroupResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

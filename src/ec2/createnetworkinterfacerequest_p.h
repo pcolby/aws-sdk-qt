@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CreateNetworkInterfaceRequest;
 
-class QTAWS_EXPORT CreateNetworkInterfaceRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CreateNetworkInterfaceRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CreateNetworkInterfaceRequestPrivate(const EC2Request::Action action,
+    CreateNetworkInterfaceRequestPrivate(const Ec2Request::Action action,
                                    CreateNetworkInterfaceRequest * const q);
     CreateNetworkInterfaceRequestPrivate(const CreateNetworkInterfaceRequestPrivate &other,
                                    CreateNetworkInterfaceRequest * const q);

@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 VerifyDomainDkimRequest::VerifyDomainDkimRequest(const VerifyDomainDkimRequest &other)
-    : SESRequest(new VerifyDomainDkimRequestPrivate(*other.d_func(), this))
+    : SesRequest(new VerifyDomainDkimRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ VerifyDomainDkimRequest::VerifyDomainDkimRequest(const VerifyDomainDkimRequest &
  * Constructs a VerifyDomainDkimRequest object.
  */
 VerifyDomainDkimRequest::VerifyDomainDkimRequest()
-    : SESRequest(new VerifyDomainDkimRequestPrivate(SESRequest::VerifyDomainDkimAction, this))
+    : SesRequest(new VerifyDomainDkimRequestPrivate(SesRequest::VerifyDomainDkimAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a VerifyDomainDkimRequestPrivate object for SES \a action,
+ * Constructs a VerifyDomainDkimRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
-    const SESRequest::Action action, VerifyDomainDkimRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, VerifyDomainDkimRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
     const VerifyDomainDkimRequestPrivate &other, VerifyDomainDkimRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

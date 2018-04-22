@@ -110,7 +110,7 @@ GetQueueUrlResponse::GetQueueUrlResponse(
         const GetQueueUrlRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new GetQueueUrlResponsePrivate(this), parent)
+    : SqsResponse(new GetQueueUrlResponsePrivate(this), parent)
 {
     setRequest(new GetQueueUrlRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void GetQueueUrlResponse::parseSuccess(QIODevice &response)
  * Constructs a GetQueueUrlResponsePrivate object with public implementation \a q.
  */
 GetQueueUrlResponsePrivate::GetQueueUrlResponsePrivate(
-    GetQueueUrlResponse * const q) : SQSResponsePrivate(q)
+    GetQueueUrlResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

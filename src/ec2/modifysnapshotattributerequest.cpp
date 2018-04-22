@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest(const ModifySnapshotAttributeRequest &other)
-    : EC2Request(new ModifySnapshotAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifySnapshotAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest(const ModifySnaps
  * Constructs a ModifySnapshotAttributeRequest object.
  */
 ModifySnapshotAttributeRequest::ModifySnapshotAttributeRequest()
-    : EC2Request(new ModifySnapshotAttributeRequestPrivate(EC2Request::ModifySnapshotAttributeAction, this))
+    : Ec2Request(new ModifySnapshotAttributeRequestPrivate(Ec2Request::ModifySnapshotAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotAttributeRequest::response(QNet
  */
 
 /*!
- * Constructs a ModifySnapshotAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifySnapshotAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
-    const EC2Request::Action action, ModifySnapshotAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifySnapshotAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
  */
 ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
     const ModifySnapshotAttributeRequestPrivate &other, ModifySnapshotAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

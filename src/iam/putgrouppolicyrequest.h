@@ -27,7 +27,7 @@ namespace IAM {
 
 class PutGroupPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutGroupPolicyRequest : public IAMRequest {
+class QTAWS_EXPORT PutGroupPolicyRequest : public IamRequest {
 
 public:
     PutGroupPolicyRequest(const PutGroupPolicyRequest &other);

@@ -50,7 +50,7 @@ DeleteNotificationChannelResponse::DeleteNotificationChannelResponse(
         const DeleteNotificationChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new DeleteNotificationChannelResponsePrivate(this), parent)
+    : FmsResponse(new DeleteNotificationChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotificationChannelRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DeleteNotificationChannelResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteNotificationChannelResponsePrivate object with public implementation \a q.
  */
 DeleteNotificationChannelResponsePrivate::DeleteNotificationChannelResponsePrivate(
-    DeleteNotificationChannelResponse * const q) : FMSResponsePrivate(q)
+    DeleteNotificationChannelResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ DisassociateIamInstanceProfileResponse::DisassociateIamInstanceProfileResponse(
         const DisassociateIamInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisassociateIamInstanceProfileResponsePrivate(this), parent)
+    : Ec2Response(new DisassociateIamInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new DisassociateIamInstanceProfileRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
  * Constructs a DisassociateIamInstanceProfileResponsePrivate object with public implementation \a q.
  */
 DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileResponsePrivate(
-    DisassociateIamInstanceProfileResponse * const q) : EC2ResponsePrivate(q)
+    DisassociateIamInstanceProfileResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

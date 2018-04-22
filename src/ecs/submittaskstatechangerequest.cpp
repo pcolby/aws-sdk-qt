@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 SubmitTaskStateChangeRequest::SubmitTaskStateChangeRequest(const SubmitTaskStateChangeRequest &other)
-    : ECSRequest(new SubmitTaskStateChangeRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new SubmitTaskStateChangeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ SubmitTaskStateChangeRequest::SubmitTaskStateChangeRequest(const SubmitTaskState
  * Constructs a SubmitTaskStateChangeRequest object.
  */
 SubmitTaskStateChangeRequest::SubmitTaskStateChangeRequest()
-    : ECSRequest(new SubmitTaskStateChangeRequestPrivate(ECSRequest::SubmitTaskStateChangeAction, this))
+    : EcsRequest(new SubmitTaskStateChangeRequestPrivate(EcsRequest::SubmitTaskStateChangeAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetwo
  */
 
 /*!
- * Constructs a SubmitTaskStateChangeRequestPrivate object for ECS \a action,
+ * Constructs a SubmitTaskStateChangeRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
-    const ECSRequest::Action action, SubmitTaskStateChangeRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, SubmitTaskStateChangeRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
     const SubmitTaskStateChangeRequestPrivate &other, SubmitTaskStateChangeRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

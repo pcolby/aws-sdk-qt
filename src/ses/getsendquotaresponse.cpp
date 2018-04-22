@@ -55,7 +55,7 @@ GetSendQuotaResponse::GetSendQuotaResponse(
         const GetSendQuotaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetSendQuotaResponsePrivate(this), parent)
+    : SesResponse(new GetSendQuotaResponsePrivate(this), parent)
 {
     setRequest(new GetSendQuotaRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void GetSendQuotaResponse::parseSuccess(QIODevice &response)
  * Constructs a GetSendQuotaResponsePrivate object with public implementation \a q.
  */
 GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
-    GetSendQuotaResponse * const q) : SESResponsePrivate(q)
+    GetSendQuotaResponse * const q) : SesResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace ACM {
 
 class UpdateCertificateOptionsResponse;
 
-class QTAWS_EXPORT UpdateCertificateOptionsResponsePrivate : public ACMResponsePrivate {
+class QTAWS_EXPORT UpdateCertificateOptionsResponsePrivate : public AcmResponsePrivate {
     Q_OBJECT
 
 public:

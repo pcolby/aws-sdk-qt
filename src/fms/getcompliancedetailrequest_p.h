@@ -28,10 +28,10 @@ namespace FMS {
 
 class GetComplianceDetailRequest;
 
-class QTAWS_EXPORT GetComplianceDetailRequestPrivate : public FMSRequestPrivate {
+class QTAWS_EXPORT GetComplianceDetailRequestPrivate : public FmsRequestPrivate {
 
 public:
-    GetComplianceDetailRequestPrivate(const FMSRequest::Action action,
+    GetComplianceDetailRequestPrivate(const FmsRequest::Action action,
                                    GetComplianceDetailRequest * const q);
     GetComplianceDetailRequestPrivate(const GetComplianceDetailRequestPrivate &other,
                                    GetComplianceDetailRequest * const q);

@@ -27,7 +27,7 @@ namespace SSM {
 
 class RemoveTagsFromResourceRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequest : public SSMRequest {
+class QTAWS_EXPORT RemoveTagsFromResourceRequest : public SsmRequest {
 
 public:
     RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);

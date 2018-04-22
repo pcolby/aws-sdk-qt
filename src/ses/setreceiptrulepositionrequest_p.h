@@ -28,10 +28,10 @@ namespace SES {
 
 class SetReceiptRulePositionRequest;
 
-class QTAWS_EXPORT SetReceiptRulePositionRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT SetReceiptRulePositionRequestPrivate : public SesRequestPrivate {
 
 public:
-    SetReceiptRulePositionRequestPrivate(const SESRequest::Action action,
+    SetReceiptRulePositionRequestPrivate(const SesRequest::Action action,
                                    SetReceiptRulePositionRequest * const q);
     SetReceiptRulePositionRequestPrivate(const SetReceiptRulePositionRequestPrivate &other,
                                    SetReceiptRulePositionRequest * const q);

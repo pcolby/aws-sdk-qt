@@ -108,7 +108,7 @@ DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterPara
         const DescribeEngineDefaultClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeEngineDefaultClusterParametersResponsePrivate(this), parent)
+    : RdsResponse(new DescribeEngineDefaultClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeEngineDefaultClusterParametersRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &res
  * Constructs a DescribeEngineDefaultClusterParametersResponsePrivate object with public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClusterParametersResponsePrivate(
-    DescribeEngineDefaultClusterParametersResponse * const q) : RDSResponsePrivate(q)
+    DescribeEngineDefaultClusterParametersResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

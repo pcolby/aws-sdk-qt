@@ -48,7 +48,7 @@ GetPasswordDataResponse::GetPasswordDataResponse(
         const GetPasswordDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetPasswordDataResponsePrivate(this), parent)
+    : Ec2Response(new GetPasswordDataResponsePrivate(this), parent)
 {
     setRequest(new GetPasswordDataRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetPasswordDataResponse::parseSuccess(QIODevice &response)
  * Constructs a GetPasswordDataResponsePrivate object with public implementation \a q.
  */
 GetPasswordDataResponsePrivate::GetPasswordDataResponsePrivate(
-    GetPasswordDataResponse * const q) : EC2ResponsePrivate(q)
+    GetPasswordDataResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

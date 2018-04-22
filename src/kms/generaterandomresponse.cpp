@@ -143,7 +143,7 @@ GenerateRandomResponse::GenerateRandomResponse(
         const GenerateRandomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GenerateRandomResponsePrivate(this), parent)
+    : KmsResponse(new GenerateRandomResponsePrivate(this), parent)
 {
     setRequest(new GenerateRandomRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void GenerateRandomResponse::parseSuccess(QIODevice &response)
  * Constructs a GenerateRandomResponsePrivate object with public implementation \a q.
  */
 GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
-    GenerateRandomResponse * const q) : KMSResponsePrivate(q)
+    GenerateRandomResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -109,7 +109,7 @@ CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
         const CreateServiceLinkedRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateServiceLinkedRoleResponsePrivate(this), parent)
+    : IamResponse(new CreateServiceLinkedRoleResponsePrivate(this), parent)
 {
     setRequest(new CreateServiceLinkedRoleRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateServiceLinkedRoleResponsePrivate object with public implementation \a q.
  */
 CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
-    CreateServiceLinkedRoleResponse * const q) : IAMResponsePrivate(q)
+    CreateServiceLinkedRoleResponse * const q) : IamResponsePrivate(q)
 {
 
 }

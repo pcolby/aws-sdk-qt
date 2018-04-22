@@ -108,7 +108,7 @@ ModifyDBSnapshotResponse::ModifyDBSnapshotResponse(
         const ModifyDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBSnapshotResponsePrivate(this), parent)
+    : RdsResponse(new ModifyDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBSnapshotRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ModifyDBSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyDBSnapshotResponsePrivate object with public implementation \a q.
  */
 ModifyDBSnapshotResponsePrivate::ModifyDBSnapshotResponsePrivate(
-    ModifyDBSnapshotResponse * const q) : RDSResponsePrivate(q)
+    ModifyDBSnapshotResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

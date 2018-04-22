@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RemoveRoleFromDBClusterRequest::RemoveRoleFromDBClusterRequest(const RemoveRoleFromDBClusterRequest &other)
-    : RDSRequest(new RemoveRoleFromDBClusterRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RemoveRoleFromDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RemoveRoleFromDBClusterRequest::RemoveRoleFromDBClusterRequest(const RemoveRoleF
  * Constructs a RemoveRoleFromDBClusterRequest object.
  */
 RemoveRoleFromDBClusterRequest::RemoveRoleFromDBClusterRequest()
-    : RDSRequest(new RemoveRoleFromDBClusterRequestPrivate(RDSRequest::RemoveRoleFromDBClusterAction, this))
+    : RdsRequest(new RemoveRoleFromDBClusterRequestPrivate(RdsRequest::RemoveRoleFromDBClusterAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromDBClusterRequest::response(QNet
  */
 
 /*!
- * Constructs a RemoveRoleFromDBClusterRequestPrivate object for RDS \a action,
+ * Constructs a RemoveRoleFromDBClusterRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
-    const RDSRequest::Action action, RemoveRoleFromDBClusterRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RemoveRoleFromDBClusterRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
     const RemoveRoleFromDBClusterRequestPrivate &other, RemoveRoleFromDBClusterRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

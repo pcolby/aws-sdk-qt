@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest(const DescribeSecurityConfigurationRequest &other)
-    : EMRRequest(new DescribeSecurityConfigurationRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new DescribeSecurityConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest(const
  * Constructs a DescribeSecurityConfigurationRequest object.
  */
 DescribeSecurityConfigurationRequest::DescribeSecurityConfigurationRequest()
-    : EMRRequest(new DescribeSecurityConfigurationRequestPrivate(EMRRequest::DescribeSecurityConfigurationAction, this))
+    : EmrRequest(new DescribeSecurityConfigurationRequestPrivate(EmrRequest::DescribeSecurityConfigurationAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityConfigurationRequest::respons
  */
 
 /*!
- * Constructs a DescribeSecurityConfigurationRequestPrivate object for EMR \a action,
+ * Constructs a DescribeSecurityConfigurationRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationRequestPrivate(
-    const EMRRequest::Action action, DescribeSecurityConfigurationRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, DescribeSecurityConfigurationRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationReques
  */
 DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationRequestPrivate(
     const DescribeSecurityConfigurationRequestPrivate &other, DescribeSecurityConfigurationRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

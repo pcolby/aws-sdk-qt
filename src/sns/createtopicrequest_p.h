@@ -28,10 +28,10 @@ namespace SNS {
 
 class CreateTopicRequest;
 
-class QTAWS_EXPORT CreateTopicRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT CreateTopicRequestPrivate : public SnsRequestPrivate {
 
 public:
-    CreateTopicRequestPrivate(const SNSRequest::Action action,
+    CreateTopicRequestPrivate(const SnsRequest::Action action,
                                    CreateTopicRequest * const q);
     CreateTopicRequestPrivate(const CreateTopicRequestPrivate &other,
                                    CreateTopicRequest * const q);

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest(const DescribeIdentityIdFormatRequest &other)
-    : EC2Request(new DescribeIdentityIdFormatRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeIdentityIdFormatRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest(const DescribeI
  * Constructs a DescribeIdentityIdFormatRequest object.
  */
 DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest()
-    : EC2Request(new DescribeIdentityIdFormatRequestPrivate(EC2Request::DescribeIdentityIdFormatAction, this))
+    : Ec2Request(new DescribeIdentityIdFormatRequestPrivate(Ec2Request::DescribeIdentityIdFormatAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeIdentityIdFormatRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeIdentityIdFormatRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
-    const EC2Request::Action action, DescribeIdentityIdFormatRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeIdentityIdFormatRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
  */
 DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
     const DescribeIdentityIdFormatRequestPrivate &other, DescribeIdentityIdFormatRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

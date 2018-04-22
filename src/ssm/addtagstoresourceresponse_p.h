@@ -27,7 +27,7 @@ namespace SSM {
 
 class AddTagsToResourceResponse;
 
-class QTAWS_EXPORT AddTagsToResourceResponsePrivate : public SSMResponsePrivate {
+class QTAWS_EXPORT AddTagsToResourceResponsePrivate : public SsmResponsePrivate {
     Q_OBJECT
 
 public:

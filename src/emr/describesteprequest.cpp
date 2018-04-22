@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 DescribeStepRequest::DescribeStepRequest(const DescribeStepRequest &other)
-    : EMRRequest(new DescribeStepRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new DescribeStepRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DescribeStepRequest::DescribeStepRequest(const DescribeStepRequest &other)
  * Constructs a DescribeStepRequest object.
  */
 DescribeStepRequest::DescribeStepRequest()
-    : EMRRequest(new DescribeStepRequestPrivate(EMRRequest::DescribeStepAction, this))
+    : EmrRequest(new DescribeStepRequestPrivate(EmrRequest::DescribeStepAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DescribeStepRequestPrivate object for EMR \a action,
+ * Constructs a DescribeStepRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
-    const EMRRequest::Action action, DescribeStepRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, DescribeStepRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ DescribeStepRequestPrivate::DescribeStepRequestPrivate(
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
     const DescribeStepRequestPrivate &other, DescribeStepRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

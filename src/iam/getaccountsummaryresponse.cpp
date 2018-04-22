@@ -109,7 +109,7 @@ GetAccountSummaryResponse::GetAccountSummaryResponse(
         const GetAccountSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetAccountSummaryResponsePrivate(this), parent)
+    : IamResponse(new GetAccountSummaryResponsePrivate(this), parent)
 {
     setRequest(new GetAccountSummaryRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetAccountSummaryResponse::parseSuccess(QIODevice &response)
  * Constructs a GetAccountSummaryResponsePrivate object with public implementation \a q.
  */
 GetAccountSummaryResponsePrivate::GetAccountSummaryResponsePrivate(
-    GetAccountSummaryResponse * const q) : IAMResponsePrivate(q)
+    GetAccountSummaryResponse * const q) : IamResponsePrivate(q)
 {
 
 }

@@ -143,7 +143,7 @@ ListKeysResponse::ListKeysResponse(
         const ListKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListKeysResponsePrivate(this), parent)
+    : KmsResponse(new ListKeysResponsePrivate(this), parent)
 {
     setRequest(new ListKeysRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ListKeysResponse::parseSuccess(QIODevice &response)
  * Constructs a ListKeysResponsePrivate object with public implementation \a q.
  */
 ListKeysResponsePrivate::ListKeysResponsePrivate(
-    ListKeysResponse * const q) : KMSResponsePrivate(q)
+    ListKeysResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

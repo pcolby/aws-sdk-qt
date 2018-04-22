@@ -68,7 +68,7 @@ DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
         const DeleteResourceDataSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteResourceDataSyncResponsePrivate(this), parent)
+    : SsmResponse(new DeleteResourceDataSyncResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourceDataSyncRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteResourceDataSyncResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteResourceDataSyncResponsePrivate object with public implementation \a q.
  */
 DeleteResourceDataSyncResponsePrivate::DeleteResourceDataSyncResponsePrivate(
-    DeleteResourceDataSyncResponse * const q) : SSMResponsePrivate(q)
+    DeleteResourceDataSyncResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

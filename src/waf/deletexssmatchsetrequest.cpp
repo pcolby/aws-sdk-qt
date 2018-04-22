@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteXssMatchSetRequest::DeleteXssMatchSetRequest(const DeleteXssMatchSetRequest &other)
-    : WAFRequest(new DeleteXssMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteXssMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteXssMatchSetRequest::DeleteXssMatchSetRequest(const DeleteXssMatchSetReques
  * Constructs a DeleteXssMatchSetRequest object.
  */
 DeleteXssMatchSetRequest::DeleteXssMatchSetRequest()
-    : WAFRequest(new DeleteXssMatchSetRequestPrivate(WAFRequest::DeleteXssMatchSetAction, this))
+    : WafRequest(new DeleteXssMatchSetRequestPrivate(WafRequest::DeleteXssMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteXssMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteXssMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
-    const WAFRequest::Action action, DeleteXssMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteXssMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
     const DeleteXssMatchSetRequestPrivate &other, DeleteXssMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

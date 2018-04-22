@@ -68,7 +68,7 @@ GetParametersByPathResponse::GetParametersByPathResponse(
         const GetParametersByPathRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetParametersByPathResponsePrivate(this), parent)
+    : SsmResponse(new GetParametersByPathResponsePrivate(this), parent)
 {
     setRequest(new GetParametersByPathRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetParametersByPathResponse::parseSuccess(QIODevice &response)
  * Constructs a GetParametersByPathResponsePrivate object with public implementation \a q.
  */
 GetParametersByPathResponsePrivate::GetParametersByPathResponsePrivate(
-    GetParametersByPathResponse * const q) : SSMResponsePrivate(q)
+    GetParametersByPathResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

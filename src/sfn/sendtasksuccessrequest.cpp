@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 SendTaskSuccessRequest::SendTaskSuccessRequest(const SendTaskSuccessRequest &other)
-    : SFNRequest(new SendTaskSuccessRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new SendTaskSuccessRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ SendTaskSuccessRequest::SendTaskSuccessRequest(const SendTaskSuccessRequest &oth
  * Constructs a SendTaskSuccessRequest object.
  */
 SendTaskSuccessRequest::SendTaskSuccessRequest()
-    : SFNRequest(new SendTaskSuccessRequestPrivate(SFNRequest::SendTaskSuccessAction, this))
+    : SfnRequest(new SendTaskSuccessRequestPrivate(SfnRequest::SendTaskSuccessAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * SendTaskSuccessRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a SendTaskSuccessRequestPrivate object for SFN \a action,
+ * Constructs a SendTaskSuccessRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
-    const SFNRequest::Action action, SendTaskSuccessRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, SendTaskSuccessRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
     const SendTaskSuccessRequestPrivate &other, SendTaskSuccessRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

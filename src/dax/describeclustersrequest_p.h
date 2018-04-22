@@ -28,10 +28,10 @@ namespace DAX {
 
 class DescribeClustersRequest;
 
-class QTAWS_EXPORT DescribeClustersRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT DescribeClustersRequestPrivate : public DaxRequestPrivate {
 
 public:
-    DescribeClustersRequestPrivate(const DAXRequest::Action action,
+    DescribeClustersRequestPrivate(const DaxRequest::Action action,
                                    DescribeClustersRequest * const q);
     DescribeClustersRequestPrivate(const DescribeClustersRequestPrivate &other,
                                    DescribeClustersRequest * const q);

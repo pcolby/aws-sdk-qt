@@ -28,10 +28,10 @@ namespace ECS {
 
 class CreateServiceRequest;
 
-class QTAWS_EXPORT CreateServiceRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT CreateServiceRequestPrivate : public EcsRequestPrivate {
 
 public:
-    CreateServiceRequestPrivate(const ECSRequest::Action action,
+    CreateServiceRequestPrivate(const EcsRequest::Action action,
                                    CreateServiceRequest * const q);
     CreateServiceRequestPrivate(const CreateServiceRequestPrivate &other,
                                    CreateServiceRequest * const q);

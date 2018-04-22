@@ -27,7 +27,7 @@ namespace ACM {
 
 class GetCertificateRequestPrivate;
 
-class QTAWS_EXPORT GetCertificateRequest : public ACMRequest {
+class QTAWS_EXPORT GetCertificateRequest : public AcmRequest {
 
 public:
     GetCertificateRequest(const GetCertificateRequest &other);

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest(const CreateServiceLinkedRoleRequest &other)
-    : IAMRequest(new CreateServiceLinkedRoleRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateServiceLinkedRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest(const CreateServi
  * Constructs a CreateServiceLinkedRoleRequest object.
  */
 CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest()
-    : IAMRequest(new CreateServiceLinkedRoleRequestPrivate(IAMRequest::CreateServiceLinkedRoleAction, this))
+    : IamRequest(new CreateServiceLinkedRoleRequestPrivate(IamRequest::CreateServiceLinkedRoleAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNet
  */
 
 /*!
- * Constructs a CreateServiceLinkedRoleRequestPrivate object for IAM \a action,
+ * Constructs a CreateServiceLinkedRoleRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
-    const IAMRequest::Action action, CreateServiceLinkedRoleRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateServiceLinkedRoleRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
     const CreateServiceLinkedRoleRequestPrivate &other, CreateServiceLinkedRoleRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

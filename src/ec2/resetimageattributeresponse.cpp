@@ -48,7 +48,7 @@ ResetImageAttributeResponse::ResetImageAttributeResponse(
         const ResetImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetImageAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ResetImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetImageAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ResetImageAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetImageAttributeResponsePrivate object with public implementation \a q.
  */
 ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
-    ResetImageAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ResetImageAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

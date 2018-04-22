@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 DisableKeyRotationRequest::DisableKeyRotationRequest(const DisableKeyRotationRequest &other)
-    : KMSRequest(new DisableKeyRotationRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new DisableKeyRotationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ DisableKeyRotationRequest::DisableKeyRotationRequest(const DisableKeyRotationReq
  * Constructs a DisableKeyRotationRequest object.
  */
 DisableKeyRotationRequest::DisableKeyRotationRequest()
-    : KMSRequest(new DisableKeyRotationRequestPrivate(KMSRequest::DisableKeyRotationAction, this))
+    : KmsRequest(new DisableKeyRotationRequestPrivate(KmsRequest::DisableKeyRotationAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * DisableKeyRotationRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DisableKeyRotationRequestPrivate object for KMS \a action,
+ * Constructs a DisableKeyRotationRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
-    const KMSRequest::Action action, DisableKeyRotationRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, DisableKeyRotationRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
  */
 DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
     const DisableKeyRotationRequestPrivate &other, DisableKeyRotationRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

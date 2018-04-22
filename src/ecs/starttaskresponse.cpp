@@ -61,7 +61,7 @@ StartTaskResponse::StartTaskResponse(
         const StartTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new StartTaskResponsePrivate(this), parent)
+    : EcsResponse(new StartTaskResponsePrivate(this), parent)
 {
     setRequest(new StartTaskRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void StartTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a StartTaskResponsePrivate object with public implementation \a q.
  */
 StartTaskResponsePrivate::StartTaskResponsePrivate(
-    StartTaskResponse * const q) : ECSResponsePrivate(q)
+    StartTaskResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

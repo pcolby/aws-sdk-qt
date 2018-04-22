@@ -48,7 +48,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new UntagResourceResponsePrivate(this), parent)
+    : DaxResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : DAXResponsePrivate(q)
+    UntagResourceResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

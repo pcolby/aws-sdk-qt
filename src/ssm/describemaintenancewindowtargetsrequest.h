@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeMaintenanceWindowTargetsRequestPrivate;
 
-class QTAWS_EXPORT DescribeMaintenanceWindowTargetsRequest : public SSMRequest {
+class QTAWS_EXPORT DescribeMaintenanceWindowTargetsRequest : public SsmRequest {
 
 public:
     DescribeMaintenanceWindowTargetsRequest(const DescribeMaintenanceWindowTargetsRequest &other);

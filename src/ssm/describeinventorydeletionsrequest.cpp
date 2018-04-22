@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeInventoryDeletionsRequest::DescribeInventoryDeletionsRequest(const DescribeInventoryDeletionsRequest &other)
-    : SSMRequest(new DescribeInventoryDeletionsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeInventoryDeletionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeInventoryDeletionsRequest::DescribeInventoryDeletionsRequest(const Descr
  * Constructs a DescribeInventoryDeletionsRequest object.
  */
 DescribeInventoryDeletionsRequest::DescribeInventoryDeletionsRequest()
-    : SSMRequest(new DescribeInventoryDeletionsRequestPrivate(SSMRequest::DescribeInventoryDeletionsAction, this))
+    : SsmRequest(new DescribeInventoryDeletionsRequestPrivate(SsmRequest::DescribeInventoryDeletionsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInventoryDeletionsRequest::response(Q
  */
 
 /*!
- * Constructs a DescribeInventoryDeletionsRequestPrivate object for SSM \a action,
+ * Constructs a DescribeInventoryDeletionsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeInventoryDeletionsRequestPrivate::DescribeInventoryDeletionsRequestPrivate(
-    const SSMRequest::Action action, DescribeInventoryDeletionsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeInventoryDeletionsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeInventoryDeletionsRequestPrivate::DescribeInventoryDeletionsRequestPriva
  */
 DescribeInventoryDeletionsRequestPrivate::DescribeInventoryDeletionsRequestPrivate(
     const DescribeInventoryDeletionsRequestPrivate &other, DescribeInventoryDeletionsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

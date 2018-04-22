@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetSSHPublicKeyRequest::GetSSHPublicKeyRequest(const GetSSHPublicKeyRequest &other)
-    : IAMRequest(new GetSSHPublicKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetSSHPublicKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetSSHPublicKeyRequest::GetSSHPublicKeyRequest(const GetSSHPublicKeyRequest &oth
  * Constructs a GetSSHPublicKeyRequest object.
  */
 GetSSHPublicKeyRequest::GetSSHPublicKeyRequest()
-    : IAMRequest(new GetSSHPublicKeyRequestPrivate(IAMRequest::GetSSHPublicKeyAction, this))
+    : IamRequest(new GetSSHPublicKeyRequestPrivate(IamRequest::GetSSHPublicKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetSSHPublicKeyRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetSSHPublicKeyRequestPrivate object for IAM \a action,
+ * Constructs a GetSSHPublicKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
-    const IAMRequest::Action action, GetSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetSSHPublicKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
  */
 GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
     const GetSSHPublicKeyRequestPrivate &other, GetSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

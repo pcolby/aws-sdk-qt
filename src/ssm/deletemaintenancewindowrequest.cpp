@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest(const DeleteMaintenanceWindowRequest &other)
-    : SSMRequest(new DeleteMaintenanceWindowRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteMaintenanceWindowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest(const DeleteMaint
  * Constructs a DeleteMaintenanceWindowRequest object.
  */
 DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest()
-    : SSMRequest(new DeleteMaintenanceWindowRequestPrivate(SSMRequest::DeleteMaintenanceWindowAction, this))
+    : SsmRequest(new DeleteMaintenanceWindowRequestPrivate(SsmRequest::DeleteMaintenanceWindowAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNet
  */
 
 /*!
- * Constructs a DeleteMaintenanceWindowRequestPrivate object for SSM \a action,
+ * Constructs a DeleteMaintenanceWindowRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
-    const SSMRequest::Action action, DeleteMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteMaintenanceWindowRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
     const DeleteMaintenanceWindowRequestPrivate &other, DeleteMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

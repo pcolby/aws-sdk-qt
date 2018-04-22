@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateLaunchTemplateRequest::CreateLaunchTemplateRequest(const CreateLaunchTemplateRequest &other)
-    : EC2Request(new CreateLaunchTemplateRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateLaunchTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateLaunchTemplateRequest::CreateLaunchTemplateRequest(const CreateLaunchTempl
  * Constructs a CreateLaunchTemplateRequest object.
  */
 CreateLaunchTemplateRequest::CreateLaunchTemplateRequest()
-    : EC2Request(new CreateLaunchTemplateRequestPrivate(EC2Request::CreateLaunchTemplateAction, this))
+    : Ec2Request(new CreateLaunchTemplateRequestPrivate(Ec2Request::CreateLaunchTemplateAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateRequest::response(QNetwor
  */
 
 /*!
- * Constructs a CreateLaunchTemplateRequestPrivate object for EC2 \a action,
+ * Constructs a CreateLaunchTemplateRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
-    const EC2Request::Action action, CreateLaunchTemplateRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateLaunchTemplateRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
  */
 CreateLaunchTemplateRequestPrivate::CreateLaunchTemplateRequestPrivate(
     const CreateLaunchTemplateRequestPrivate &other, CreateLaunchTemplateRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

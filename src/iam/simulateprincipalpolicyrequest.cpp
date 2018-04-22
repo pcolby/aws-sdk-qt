@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest(const SimulatePrincipalPolicyRequest &other)
-    : IAMRequest(new SimulatePrincipalPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new SimulatePrincipalPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest(const SimulatePri
  * Constructs a SimulatePrincipalPolicyRequest object.
  */
 SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest()
-    : IAMRequest(new SimulatePrincipalPolicyRequestPrivate(IAMRequest::SimulatePrincipalPolicyAction, this))
+    : IamRequest(new SimulatePrincipalPolicyRequestPrivate(IamRequest::SimulatePrincipalPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * SimulatePrincipalPolicyRequest::response(QNet
  */
 
 /*!
- * Constructs a SimulatePrincipalPolicyRequestPrivate object for IAM \a action,
+ * Constructs a SimulatePrincipalPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
-    const IAMRequest::Action action, SimulatePrincipalPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, SimulatePrincipalPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
     const SimulatePrincipalPolicyRequestPrivate &other, SimulatePrincipalPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

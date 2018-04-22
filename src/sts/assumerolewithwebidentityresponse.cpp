@@ -102,7 +102,7 @@ AssumeRoleWithWebIdentityResponse::AssumeRoleWithWebIdentityResponse(
         const AssumeRoleWithWebIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new AssumeRoleWithWebIdentityResponsePrivate(this), parent)
+    : StsResponse(new AssumeRoleWithWebIdentityResponsePrivate(this), parent)
 {
     setRequest(new AssumeRoleWithWebIdentityRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
  * Constructs a AssumeRoleWithWebIdentityResponsePrivate object with public implementation \a q.
  */
 AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePrivate(
-    AssumeRoleWithWebIdentityResponse * const q) : STSResponsePrivate(q)
+    AssumeRoleWithWebIdentityResponse * const q) : StsResponsePrivate(q)
 {
 
 }

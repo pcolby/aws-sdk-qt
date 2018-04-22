@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteRuleGroupRequest;
 
-class QTAWS_EXPORT DeleteRuleGroupRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteRuleGroupRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteRuleGroupRequestPrivate(const WAFRequest::Action action,
+    DeleteRuleGroupRequestPrivate(const WafRequest::Action action,
                                    DeleteRuleGroupRequest * const q);
     DeleteRuleGroupRequestPrivate(const DeleteRuleGroupRequestPrivate &other,
                                    DeleteRuleGroupRequest * const q);

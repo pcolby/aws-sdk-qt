@@ -28,10 +28,10 @@ namespace ACMPCA {
 
 class RevokeCertificateRequest;
 
-class QTAWS_EXPORT RevokeCertificateRequestPrivate : public ACMPCARequestPrivate {
+class QTAWS_EXPORT RevokeCertificateRequestPrivate : public AcmpcaRequestPrivate {
 
 public:
-    RevokeCertificateRequestPrivate(const ACMPCARequest::Action action,
+    RevokeCertificateRequestPrivate(const AcmpcaRequest::Action action,
                                    RevokeCertificateRequest * const q);
     RevokeCertificateRequestPrivate(const RevokeCertificateRequestPrivate &other,
                                    RevokeCertificateRequest * const q);

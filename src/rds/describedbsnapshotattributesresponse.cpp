@@ -108,7 +108,7 @@ DescribeDBSnapshotAttributesResponse::DescribeDBSnapshotAttributesResponse(
         const DescribeDBSnapshotAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBSnapshotAttributesResponsePrivate(this), parent)
+    : RdsResponse(new DescribeDBSnapshotAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBSnapshotAttributesRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeDBSnapshotAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDBSnapshotAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeDBSnapshotAttributesResponsePrivate::DescribeDBSnapshotAttributesResponsePrivate(
-    DescribeDBSnapshotAttributesResponse * const q) : RDSResponsePrivate(q)
+    DescribeDBSnapshotAttributesResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

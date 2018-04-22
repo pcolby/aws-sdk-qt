@@ -28,10 +28,10 @@ namespace SSM {
 
 class UpdateDocumentDefaultVersionRequest;
 
-class QTAWS_EXPORT UpdateDocumentDefaultVersionRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT UpdateDocumentDefaultVersionRequestPrivate : public SsmRequestPrivate {
 
 public:
-    UpdateDocumentDefaultVersionRequestPrivate(const SSMRequest::Action action,
+    UpdateDocumentDefaultVersionRequestPrivate(const SsmRequest::Action action,
                                    UpdateDocumentDefaultVersionRequest * const q);
     UpdateDocumentDefaultVersionRequestPrivate(const UpdateDocumentDefaultVersionRequestPrivate &other,
                                    UpdateDocumentDefaultVersionRequest * const q);

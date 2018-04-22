@@ -48,7 +48,7 @@ CancelSpotFleetRequestsResponse::CancelSpotFleetRequestsResponse(
         const CancelSpotFleetRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelSpotFleetRequestsResponsePrivate(this), parent)
+    : Ec2Response(new CancelSpotFleetRequestsResponsePrivate(this), parent)
 {
     setRequest(new CancelSpotFleetRequestsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelSpotFleetRequestsResponsePrivate object with public implementation \a q.
  */
 CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
-    CancelSpotFleetRequestsResponse * const q) : EC2ResponsePrivate(q)
+    CancelSpotFleetRequestsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

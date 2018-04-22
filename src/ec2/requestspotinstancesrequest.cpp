@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RequestSpotInstancesRequest::RequestSpotInstancesRequest(const RequestSpotInstancesRequest &other)
-    : EC2Request(new RequestSpotInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RequestSpotInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RequestSpotInstancesRequest::RequestSpotInstancesRequest(const RequestSpotInstan
  * Constructs a RequestSpotInstancesRequest object.
  */
 RequestSpotInstancesRequest::RequestSpotInstancesRequest()
-    : EC2Request(new RequestSpotInstancesRequestPrivate(EC2Request::RequestSpotInstancesAction, this))
+    : Ec2Request(new RequestSpotInstancesRequestPrivate(Ec2Request::RequestSpotInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetwor
  */
 
 /*!
- * Constructs a RequestSpotInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a RequestSpotInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
-    const EC2Request::Action action, RequestSpotInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RequestSpotInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
     const RequestSpotInstancesRequestPrivate &other, RequestSpotInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

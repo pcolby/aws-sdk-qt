@@ -48,7 +48,7 @@ DescribeInstanceStatusResponse::DescribeInstanceStatusResponse(
         const DescribeInstanceStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeInstanceStatusResponsePrivate(this), parent)
+    : Ec2Response(new DescribeInstanceStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceStatusRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeInstanceStatusResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeInstanceStatusResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceStatusResponsePrivate::DescribeInstanceStatusResponsePrivate(
-    DescribeInstanceStatusResponse * const q) : EC2ResponsePrivate(q)
+    DescribeInstanceStatusResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

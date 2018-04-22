@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicyRequest &other)
-    : ECRRequest(new GetRepositoryPolicyRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new GetRepositoryPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicy
  * Constructs a GetRepositoryPolicyRequest object.
  */
 GetRepositoryPolicyRequest::GetRepositoryPolicyRequest()
-    : ECRRequest(new GetRepositoryPolicyRequestPrivate(ECRRequest::GetRepositoryPolicyAction, this))
+    : EcrRequest(new GetRepositoryPolicyRequestPrivate(EcrRequest::GetRepositoryPolicyAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetwork
  */
 
 /*!
- * Constructs a GetRepositoryPolicyRequestPrivate object for ECR \a action,
+ * Constructs a GetRepositoryPolicyRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
-    const ECRRequest::Action action, GetRepositoryPolicyRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, GetRepositoryPolicyRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
  */
 GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
     const GetRepositoryPolicyRequestPrivate &other, GetRepositoryPolicyRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

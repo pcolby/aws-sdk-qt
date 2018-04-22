@@ -27,7 +27,7 @@ namespace ECS {
 
 class DeleteServiceRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceRequest : public ECSRequest {
+class QTAWS_EXPORT DeleteServiceRequest : public EcsRequest {
 
 public:
     DeleteServiceRequest(const DeleteServiceRequest &other);

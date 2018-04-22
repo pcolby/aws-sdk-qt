@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateRuleRequest::UpdateRuleRequest(const UpdateRuleRequest &other)
-    : WAFRequest(new UpdateRuleRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateRuleRequest::UpdateRuleRequest(const UpdateRuleRequest &other)
  * Constructs a UpdateRuleRequest object.
  */
 UpdateRuleRequest::UpdateRuleRequest()
-    : WAFRequest(new UpdateRuleRequestPrivate(WAFRequest::UpdateRuleAction, this))
+    : WafRequest(new UpdateRuleRequestPrivate(WafRequest::UpdateRuleAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a UpdateRuleRequestPrivate object for WAF \a action,
+ * Constructs a UpdateRuleRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
-    const WAFRequest::Action action, UpdateRuleRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateRuleRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
  */
 UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
     const UpdateRuleRequestPrivate &other, UpdateRuleRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

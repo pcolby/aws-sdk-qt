@@ -108,7 +108,7 @@ RestoreDBInstanceFromS3Response::RestoreDBInstanceFromS3Response(
         const RestoreDBInstanceFromS3Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBInstanceFromS3ResponsePrivate(this), parent)
+    : RdsResponse(new RestoreDBInstanceFromS3ResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBInstanceFromS3Request(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
  * Constructs a RestoreDBInstanceFromS3ResponsePrivate object with public implementation \a q.
  */
 RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
-    RestoreDBInstanceFromS3Response * const q) : RDSResponsePrivate(q)
+    RestoreDBInstanceFromS3Response * const q) : RdsResponsePrivate(q)
 {
 
 }

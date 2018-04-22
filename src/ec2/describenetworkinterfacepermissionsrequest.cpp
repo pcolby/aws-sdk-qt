@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsRequest(const DescribeNetworkInterfacePermissionsRequest &other)
-    : EC2Request(new DescribeNetworkInterfacePermissionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeNetworkInterfacePermissionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsR
  * Constructs a DescribeNetworkInterfacePermissionsRequest object.
  */
 DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsRequest()
-    : EC2Request(new DescribeNetworkInterfacePermissionsRequestPrivate(EC2Request::DescribeNetworkInterfacePermissionsAction, this))
+    : Ec2Request(new DescribeNetworkInterfacePermissionsRequestPrivate(Ec2Request::DescribeNetworkInterfacePermissionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacePermissionsRequest::r
  */
 
 /*!
- * Constructs a DescribeNetworkInterfacePermissionsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeNetworkInterfacePermissionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermissionsRequestPrivate(
-    const EC2Request::Action action, DescribeNetworkInterfacePermissionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeNetworkInterfacePermissionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermi
  */
 DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermissionsRequestPrivate(
     const DescribeNetworkInterfacePermissionsRequestPrivate &other, DescribeNetworkInterfacePermissionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

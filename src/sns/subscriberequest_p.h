@@ -28,10 +28,10 @@ namespace SNS {
 
 class SubscribeRequest;
 
-class QTAWS_EXPORT SubscribeRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT SubscribeRequestPrivate : public SnsRequestPrivate {
 
 public:
-    SubscribeRequestPrivate(const SNSRequest::Action action,
+    SubscribeRequestPrivate(const SnsRequest::Action action,
                                    SubscribeRequest * const q);
     SubscribeRequestPrivate(const SubscribeRequestPrivate &other,
                                    SubscribeRequest * const q);

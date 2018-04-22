@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfigurationsRequest(const DescribeVpcEndpointServiceConfigurationsRequest &other)
-    : EC2Request(new DescribeVpcEndpointServiceConfigurationsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVpcEndpointServiceConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfi
  * Constructs a DescribeVpcEndpointServiceConfigurationsRequest object.
  */
 DescribeVpcEndpointServiceConfigurationsRequest::DescribeVpcEndpointServiceConfigurationsRequest()
-    : EC2Request(new DescribeVpcEndpointServiceConfigurationsRequestPrivate(EC2Request::DescribeVpcEndpointServiceConfigurationsAction, this))
+    : Ec2Request(new DescribeVpcEndpointServiceConfigurationsRequestPrivate(Ec2Request::DescribeVpcEndpointServiceConfigurationsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointServiceConfigurationsReque
  */
 
 /*!
- * Constructs a DescribeVpcEndpointServiceConfigurationsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVpcEndpointServiceConfigurationsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServiceConfigurationsRequestPrivate(
-    const EC2Request::Action action, DescribeVpcEndpointServiceConfigurationsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVpcEndpointServiceConfigurationsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServi
  */
 DescribeVpcEndpointServiceConfigurationsRequestPrivate::DescribeVpcEndpointServiceConfigurationsRequestPrivate(
     const DescribeVpcEndpointServiceConfigurationsRequestPrivate &other, DescribeVpcEndpointServiceConfigurationsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

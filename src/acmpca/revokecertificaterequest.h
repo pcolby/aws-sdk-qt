@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class RevokeCertificateRequestPrivate;
 
-class QTAWS_EXPORT RevokeCertificateRequest : public ACMPCARequest {
+class QTAWS_EXPORT RevokeCertificateRequest : public AcmpcaRequest {
 
 public:
     RevokeCertificateRequest(const RevokeCertificateRequest &other);

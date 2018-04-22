@@ -48,7 +48,7 @@ DeleteFpgaImageResponse::DeleteFpgaImageResponse(
         const DeleteFpgaImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteFpgaImageResponsePrivate(this), parent)
+    : Ec2Response(new DeleteFpgaImageResponsePrivate(this), parent)
 {
     setRequest(new DeleteFpgaImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteFpgaImageResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteFpgaImageResponsePrivate object with public implementation \a q.
  */
 DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
-    DeleteFpgaImageResponse * const q) : EC2ResponsePrivate(q)
+    DeleteFpgaImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

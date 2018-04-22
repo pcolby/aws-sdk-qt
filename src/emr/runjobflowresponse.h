@@ -28,7 +28,7 @@ namespace EMR {
 
 class RunJobFlowResponsePrivate;
 
-class QTAWS_EXPORT RunJobFlowResponse : public EMRResponse {
+class QTAWS_EXPORT RunJobFlowResponse : public EmrResponse {
     Q_OBJECT
 
 public:

@@ -55,7 +55,7 @@ DeleteVerifiedEmailAddressResponse::DeleteVerifiedEmailAddressResponse(
         const DeleteVerifiedEmailAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteVerifiedEmailAddressResponsePrivate(this), parent)
+    : SesResponse(new DeleteVerifiedEmailAddressResponsePrivate(this), parent)
 {
     setRequest(new DeleteVerifiedEmailAddressRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteVerifiedEmailAddressResponsePrivate object with public implementation \a q.
  */
 DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressResponsePrivate(
-    DeleteVerifiedEmailAddressResponse * const q) : SESResponsePrivate(q)
+    DeleteVerifiedEmailAddressResponse * const q) : SesResponsePrivate(q)
 {
 
 }

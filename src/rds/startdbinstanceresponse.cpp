@@ -108,7 +108,7 @@ StartDBInstanceResponse::StartDBInstanceResponse(
         const StartDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new StartDBInstanceResponsePrivate(this), parent)
+    : RdsResponse(new StartDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new StartDBInstanceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void StartDBInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a StartDBInstanceResponsePrivate object with public implementation \a q.
  */
 StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
-    StartDBInstanceResponse * const q) : RDSResponsePrivate(q)
+    StartDBInstanceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest(const DecreaseReplicationFactorRequest &other)
-    : DAXRequest(new DecreaseReplicationFactorRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DecreaseReplicationFactorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest(const Decreas
  * Constructs a DecreaseReplicationFactorRequest object.
  */
 DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest()
-    : DAXRequest(new DecreaseReplicationFactorRequestPrivate(DAXRequest::DecreaseReplicationFactorAction, this))
+    : DaxRequest(new DecreaseReplicationFactorRequestPrivate(DaxRequest::DecreaseReplicationFactorAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QN
  */
 
 /*!
- * Constructs a DecreaseReplicationFactorRequestPrivate object for DAX \a action,
+ * Constructs a DecreaseReplicationFactorRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
-    const DAXRequest::Action action, DecreaseReplicationFactorRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DecreaseReplicationFactorRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate
  */
 DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
     const DecreaseReplicationFactorRequestPrivate &other, DecreaseReplicationFactorRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

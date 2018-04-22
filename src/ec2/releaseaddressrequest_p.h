@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ReleaseAddressRequest;
 
-class QTAWS_EXPORT ReleaseAddressRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ReleaseAddressRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ReleaseAddressRequestPrivate(const EC2Request::Action action,
+    ReleaseAddressRequestPrivate(const Ec2Request::Action action,
                                    ReleaseAddressRequest * const q);
     ReleaseAddressRequestPrivate(const ReleaseAddressRequestPrivate &other,
                                    ReleaseAddressRequest * const q);

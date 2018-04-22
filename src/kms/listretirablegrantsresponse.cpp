@@ -143,7 +143,7 @@ ListRetirableGrantsResponse::ListRetirableGrantsResponse(
         const ListRetirableGrantsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListRetirableGrantsResponsePrivate(this), parent)
+    : KmsResponse(new ListRetirableGrantsResponsePrivate(this), parent)
 {
     setRequest(new ListRetirableGrantsRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ListRetirableGrantsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListRetirableGrantsResponsePrivate object with public implementation \a q.
  */
 ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponsePrivate(
-    ListRetirableGrantsResponse * const q) : KMSResponsePrivate(q)
+    ListRetirableGrantsResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EMR {
 
 class ListBootstrapActionsRequestPrivate;
 
-class QTAWS_EXPORT ListBootstrapActionsRequest : public EMRRequest {
+class QTAWS_EXPORT ListBootstrapActionsRequest : public EmrRequest {
 
 public:
     ListBootstrapActionsRequest(const ListBootstrapActionsRequest &other);

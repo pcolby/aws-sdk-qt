@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateAccessKeyRequest::CreateAccessKeyRequest(const CreateAccessKeyRequest &other)
-    : IAMRequest(new CreateAccessKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateAccessKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateAccessKeyRequest::CreateAccessKeyRequest(const CreateAccessKeyRequest &oth
  * Constructs a CreateAccessKeyRequest object.
  */
 CreateAccessKeyRequest::CreateAccessKeyRequest()
-    : IAMRequest(new CreateAccessKeyRequestPrivate(IAMRequest::CreateAccessKeyAction, this))
+    : IamRequest(new CreateAccessKeyRequestPrivate(IamRequest::CreateAccessKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a CreateAccessKeyRequestPrivate object for IAM \a action,
+ * Constructs a CreateAccessKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
-    const IAMRequest::Action action, CreateAccessKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateAccessKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
     const CreateAccessKeyRequestPrivate &other, CreateAccessKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

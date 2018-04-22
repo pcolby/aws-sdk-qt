@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest(const ListTaskDefinitionFamiliesRequest &other)
-    : ECSRequest(new ListTaskDefinitionFamiliesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new ListTaskDefinitionFamiliesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest(const ListT
  * Constructs a ListTaskDefinitionFamiliesRequest object.
  */
 ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest()
-    : ECSRequest(new ListTaskDefinitionFamiliesRequestPrivate(ECSRequest::ListTaskDefinitionFamiliesAction, this))
+    : EcsRequest(new ListTaskDefinitionFamiliesRequestPrivate(EcsRequest::ListTaskDefinitionFamiliesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * ListTaskDefinitionFamiliesRequest::response(Q
  */
 
 /*!
- * Constructs a ListTaskDefinitionFamiliesRequestPrivate object for ECS \a action,
+ * Constructs a ListTaskDefinitionFamiliesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
-    const ECSRequest::Action action, ListTaskDefinitionFamiliesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, ListTaskDefinitionFamiliesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPriva
  */
 ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
     const ListTaskDefinitionFamiliesRequestPrivate &other, ListTaskDefinitionFamiliesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

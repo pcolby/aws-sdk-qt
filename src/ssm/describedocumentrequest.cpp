@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeDocumentRequest::DescribeDocumentRequest(const DescribeDocumentRequest &other)
-    : SSMRequest(new DescribeDocumentRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeDocumentRequest::DescribeDocumentRequest(const DescribeDocumentRequest &
  * Constructs a DescribeDocumentRequest object.
  */
 DescribeDocumentRequest::DescribeDocumentRequest()
-    : SSMRequest(new DescribeDocumentRequestPrivate(SSMRequest::DescribeDocumentAction, this))
+    : SsmRequest(new DescribeDocumentRequestPrivate(SsmRequest::DescribeDocumentAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DescribeDocumentRequestPrivate object for SSM \a action,
+ * Constructs a DescribeDocumentRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
-    const SSMRequest::Action action, DescribeDocumentRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeDocumentRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
     const DescribeDocumentRequestPrivate &other, DescribeDocumentRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

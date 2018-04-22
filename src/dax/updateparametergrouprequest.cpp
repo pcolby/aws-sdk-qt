@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 UpdateParameterGroupRequest::UpdateParameterGroupRequest(const UpdateParameterGroupRequest &other)
-    : DAXRequest(new UpdateParameterGroupRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new UpdateParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UpdateParameterGroupRequest::UpdateParameterGroupRequest(const UpdateParameterGr
  * Constructs a UpdateParameterGroupRequest object.
  */
 UpdateParameterGroupRequest::UpdateParameterGroupRequest()
-    : DAXRequest(new UpdateParameterGroupRequestPrivate(DAXRequest::UpdateParameterGroupAction, this))
+    : DaxRequest(new UpdateParameterGroupRequestPrivate(DaxRequest::UpdateParameterGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UpdateParameterGroupRequest::response(QNetwor
  */
 
 /*!
- * Constructs a UpdateParameterGroupRequestPrivate object for DAX \a action,
+ * Constructs a UpdateParameterGroupRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
-    const DAXRequest::Action action, UpdateParameterGroupRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, UpdateParameterGroupRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
  */
 UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
     const UpdateParameterGroupRequestPrivate &other, UpdateParameterGroupRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

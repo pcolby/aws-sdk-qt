@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 DescribeJobFlowsRequest::DescribeJobFlowsRequest(const DescribeJobFlowsRequest &other)
-    : EMRRequest(new DescribeJobFlowsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new DescribeJobFlowsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DescribeJobFlowsRequest::DescribeJobFlowsRequest(const DescribeJobFlowsRequest &
  * Constructs a DescribeJobFlowsRequest object.
  */
 DescribeJobFlowsRequest::DescribeJobFlowsRequest()
-    : EMRRequest(new DescribeJobFlowsRequestPrivate(EMRRequest::DescribeJobFlowsAction, this))
+    : EmrRequest(new DescribeJobFlowsRequestPrivate(EmrRequest::DescribeJobFlowsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DescribeJobFlowsRequestPrivate object for EMR \a action,
+ * Constructs a DescribeJobFlowsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
-    const EMRRequest::Action action, DescribeJobFlowsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, DescribeJobFlowsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
     const DescribeJobFlowsRequestPrivate &other, DescribeJobFlowsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

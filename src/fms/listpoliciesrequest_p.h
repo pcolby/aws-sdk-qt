@@ -28,10 +28,10 @@ namespace FMS {
 
 class ListPoliciesRequest;
 
-class QTAWS_EXPORT ListPoliciesRequestPrivate : public FMSRequestPrivate {
+class QTAWS_EXPORT ListPoliciesRequestPrivate : public FmsRequestPrivate {
 
 public:
-    ListPoliciesRequestPrivate(const FMSRequest::Action action,
+    ListPoliciesRequestPrivate(const FmsRequest::Action action,
                                    ListPoliciesRequest * const q);
     ListPoliciesRequestPrivate(const ListPoliciesRequestPrivate &other,
                                    ListPoliciesRequest * const q);

@@ -49,7 +49,7 @@ CreateIPSetResponse::CreateIPSetResponse(
         const CreateIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new CreateIPSetResponsePrivate(this), parent)
+    : WafResponse(new CreateIPSetResponsePrivate(this), parent)
 {
     setRequest(new CreateIPSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateIPSetResponsePrivate object with public implementation \a q.
  */
 CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
-    CreateIPSetResponse * const q) : WAFResponsePrivate(q)
+    CreateIPSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

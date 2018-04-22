@@ -27,7 +27,7 @@ namespace MQ {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public MQRequest {
+class QTAWS_EXPORT CreateUserRequest : public MqRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

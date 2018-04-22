@@ -48,7 +48,7 @@ CreateFpgaImageResponse::CreateFpgaImageResponse(
         const CreateFpgaImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateFpgaImageResponsePrivate(this), parent)
+    : Ec2Response(new CreateFpgaImageResponsePrivate(this), parent)
 {
     setRequest(new CreateFpgaImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateFpgaImageResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateFpgaImageResponsePrivate object with public implementation \a q.
  */
 CreateFpgaImageResponsePrivate::CreateFpgaImageResponsePrivate(
-    CreateFpgaImageResponse * const q) : EC2ResponsePrivate(q)
+    CreateFpgaImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

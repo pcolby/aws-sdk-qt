@@ -28,10 +28,10 @@ namespace SQS {
 
 class ChangeMessageVisibilityRequest;
 
-class QTAWS_EXPORT ChangeMessageVisibilityRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT ChangeMessageVisibilityRequestPrivate : public SqsRequestPrivate {
 
 public:
-    ChangeMessageVisibilityRequestPrivate(const SQSRequest::Action action,
+    ChangeMessageVisibilityRequestPrivate(const SqsRequest::Action action,
                                    ChangeMessageVisibilityRequest * const q);
     ChangeMessageVisibilityRequestPrivate(const ChangeMessageVisibilityRequestPrivate &other,
                                    ChangeMessageVisibilityRequest * const q);

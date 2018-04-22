@@ -63,7 +63,7 @@ DescribeActivityResponse::DescribeActivityResponse(
         const DescribeActivityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DescribeActivityResponsePrivate(this), parent)
+    : SfnResponse(new DescribeActivityResponsePrivate(this), parent)
 {
     setRequest(new DescribeActivityRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void DescribeActivityResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeActivityResponsePrivate object with public implementation \a q.
  */
 DescribeActivityResponsePrivate::DescribeActivityResponsePrivate(
-    DescribeActivityResponse * const q) : SFNResponsePrivate(q)
+    DescribeActivityResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace EC2 {
 
 class RejectVpcPeeringConnectionRequest;
 
-class QTAWS_EXPORT RejectVpcPeeringConnectionRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT RejectVpcPeeringConnectionRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    RejectVpcPeeringConnectionRequestPrivate(const EC2Request::Action action,
+    RejectVpcPeeringConnectionRequestPrivate(const Ec2Request::Action action,
                                    RejectVpcPeeringConnectionRequest * const q);
     RejectVpcPeeringConnectionRequestPrivate(const RejectVpcPeeringConnectionRequestPrivate &other,
                                    RejectVpcPeeringConnectionRequest * const q);

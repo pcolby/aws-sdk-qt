@@ -28,10 +28,10 @@ namespace SNS {
 
 class CreatePlatformEndpointRequest;
 
-class QTAWS_EXPORT CreatePlatformEndpointRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT CreatePlatformEndpointRequestPrivate : public SnsRequestPrivate {
 
 public:
-    CreatePlatformEndpointRequestPrivate(const SNSRequest::Action action,
+    CreatePlatformEndpointRequestPrivate(const SnsRequest::Action action,
                                    CreatePlatformEndpointRequest * const q);
     CreatePlatformEndpointRequestPrivate(const CreatePlatformEndpointRequestPrivate &other,
                                    CreatePlatformEndpointRequest * const q);

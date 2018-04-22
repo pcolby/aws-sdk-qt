@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeHostReservationOfferingsRequest::DescribeHostReservationOfferingsRequest(const DescribeHostReservationOfferingsRequest &other)
-    : EC2Request(new DescribeHostReservationOfferingsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeHostReservationOfferingsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeHostReservationOfferingsRequest::DescribeHostReservationOfferingsRequest
  * Constructs a DescribeHostReservationOfferingsRequest object.
  */
 DescribeHostReservationOfferingsRequest::DescribeHostReservationOfferingsRequest()
-    : EC2Request(new DescribeHostReservationOfferingsRequestPrivate(EC2Request::DescribeHostReservationOfferingsAction, this))
+    : Ec2Request(new DescribeHostReservationOfferingsRequestPrivate(Ec2Request::DescribeHostReservationOfferingsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeHostReservationOfferingsRequest::resp
  */
 
 /*!
- * Constructs a DescribeHostReservationOfferingsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeHostReservationOfferingsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferingsRequestPrivate(
-    const EC2Request::Action action, DescribeHostReservationOfferingsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeHostReservationOfferingsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferings
  */
 DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferingsRequestPrivate(
     const DescribeHostReservationOfferingsRequestPrivate &other, DescribeHostReservationOfferingsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

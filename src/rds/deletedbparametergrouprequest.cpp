@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteDBParameterGroupRequest::DeleteDBParameterGroupRequest(const DeleteDBParameterGroupRequest &other)
-    : RDSRequest(new DeleteDBParameterGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteDBParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteDBParameterGroupRequest::DeleteDBParameterGroupRequest(const DeleteDBParam
  * Constructs a DeleteDBParameterGroupRequest object.
  */
 DeleteDBParameterGroupRequest::DeleteDBParameterGroupRequest()
-    : RDSRequest(new DeleteDBParameterGroupRequestPrivate(RDSRequest::DeleteDBParameterGroupAction, this))
+    : RdsRequest(new DeleteDBParameterGroupRequestPrivate(RdsRequest::DeleteDBParameterGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeleteDBParameterGroupRequestPrivate object for RDS \a action,
+ * Constructs a DeleteDBParameterGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
-    const RDSRequest::Action action, DeleteDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteDBParameterGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
     const DeleteDBParameterGroupRequestPrivate &other, DeleteDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace ECR {
 
 class BatchCheckLayerAvailabilityResponse;
 
-class QTAWS_EXPORT BatchCheckLayerAvailabilityResponsePrivate : public ECRResponsePrivate {
+class QTAWS_EXPORT BatchCheckLayerAvailabilityResponsePrivate : public EcrResponsePrivate {
     Q_OBJECT
 
 public:

@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest(const DescribeConfigurationRevisionRequest &other)
-    : MQRequest(new DescribeConfigurationRevisionRequestPrivate(*other.d_func(), this))
+    : MqRequest(new DescribeConfigurationRevisionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest(const
  * Constructs a DescribeConfigurationRevisionRequest object.
  */
 DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest()
-    : MQRequest(new DescribeConfigurationRevisionRequestPrivate(MQRequest::DescribeConfigurationRevisionAction, this))
+    : MqRequest(new DescribeConfigurationRevisionRequestPrivate(MqRequest::DescribeConfigurationRevisionAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::respons
  */
 
 /*!
- * Constructs a DescribeConfigurationRevisionRequestPrivate object for MQ \a action,
+ * Constructs a DescribeConfigurationRevisionRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
-    const MQRequest::Action action, DescribeConfigurationRevisionRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, DescribeConfigurationRevisionRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionReques
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
     const DescribeConfigurationRevisionRequestPrivate &other, DescribeConfigurationRevisionRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

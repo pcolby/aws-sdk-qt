@@ -68,7 +68,7 @@ ListComplianceItemsResponse::ListComplianceItemsResponse(
         const ListComplianceItemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListComplianceItemsResponsePrivate(this), parent)
+    : SsmResponse(new ListComplianceItemsResponsePrivate(this), parent)
 {
     setRequest(new ListComplianceItemsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ListComplianceItemsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListComplianceItemsResponsePrivate object with public implementation \a q.
  */
 ListComplianceItemsResponsePrivate::ListComplianceItemsResponsePrivate(
-    ListComplianceItemsResponse * const q) : SSMResponsePrivate(q)
+    ListComplianceItemsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

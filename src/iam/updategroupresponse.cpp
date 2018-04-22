@@ -109,7 +109,7 @@ UpdateGroupResponse::UpdateGroupResponse(
         const UpdateGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateGroupResponsePrivate(this), parent)
+    : IamResponse(new UpdateGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateGroupRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateGroupResponsePrivate object with public implementation \a q.
  */
 UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
-    UpdateGroupResponse * const q) : IAMResponsePrivate(q)
+    UpdateGroupResponse * const q) : IamResponsePrivate(q)
 {
 
 }

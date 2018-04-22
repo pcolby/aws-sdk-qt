@@ -55,7 +55,7 @@ ListReceiptFiltersResponse::ListReceiptFiltersResponse(
         const ListReceiptFiltersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListReceiptFiltersResponsePrivate(this), parent)
+    : SesResponse(new ListReceiptFiltersResponsePrivate(this), parent)
 {
     setRequest(new ListReceiptFiltersRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
  * Constructs a ListReceiptFiltersResponsePrivate object with public implementation \a q.
  */
 ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponsePrivate(
-    ListReceiptFiltersResponse * const q) : SESResponsePrivate(q)
+    ListReceiptFiltersResponse * const q) : SesResponsePrivate(q)
 {
 
 }

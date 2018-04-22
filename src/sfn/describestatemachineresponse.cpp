@@ -63,7 +63,7 @@ DescribeStateMachineResponse::DescribeStateMachineResponse(
         const DescribeStateMachineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DescribeStateMachineResponsePrivate(this), parent)
+    : SfnResponse(new DescribeStateMachineResponsePrivate(this), parent)
 {
     setRequest(new DescribeStateMachineRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void DescribeStateMachineResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeStateMachineResponsePrivate object with public implementation \a q.
  */
 DescribeStateMachineResponsePrivate::DescribeStateMachineResponsePrivate(
-    DescribeStateMachineResponse * const q) : SFNResponsePrivate(q)
+    DescribeStateMachineResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

@@ -68,7 +68,7 @@ PutParameterResponse::PutParameterResponse(
         const PutParameterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new PutParameterResponsePrivate(this), parent)
+    : SsmResponse(new PutParameterResponsePrivate(this), parent)
 {
     setRequest(new PutParameterRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void PutParameterResponse::parseSuccess(QIODevice &response)
  * Constructs a PutParameterResponsePrivate object with public implementation \a q.
  */
 PutParameterResponsePrivate::PutParameterResponsePrivate(
-    PutParameterResponse * const q) : SSMResponsePrivate(q)
+    PutParameterResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

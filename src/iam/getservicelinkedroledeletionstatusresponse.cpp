@@ -109,7 +109,7 @@ GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusRe
         const GetServiceLinkedRoleDeletionStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetServiceLinkedRoleDeletionStatusResponsePrivate(this), parent)
+    : IamResponse(new GetServiceLinkedRoleDeletionStatusResponsePrivate(this), parent)
 {
     setRequest(new GetServiceLinkedRoleDeletionStatusRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &respons
  * Constructs a GetServiceLinkedRoleDeletionStatusResponsePrivate object with public implementation \a q.
  */
 GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionStatusResponsePrivate(
-    GetServiceLinkedRoleDeletionStatusResponse * const q) : IAMResponsePrivate(q)
+    GetServiceLinkedRoleDeletionStatusResponse * const q) : IamResponsePrivate(q)
 {
 
 }

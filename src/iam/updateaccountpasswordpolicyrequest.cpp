@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest(const UpdateAccountPasswordPolicyRequest &other)
-    : IAMRequest(new UpdateAccountPasswordPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateAccountPasswordPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest(const Upd
  * Constructs a UpdateAccountPasswordPolicyRequest object.
  */
 UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest()
-    : IAMRequest(new UpdateAccountPasswordPolicyRequestPrivate(IAMRequest::UpdateAccountPasswordPolicyAction, this))
+    : IamRequest(new UpdateAccountPasswordPolicyRequestPrivate(IamRequest::UpdateAccountPasswordPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountPasswordPolicyRequest::response(
  */
 
 /*!
- * Constructs a UpdateAccountPasswordPolicyRequestPrivate object for IAM \a action,
+ * Constructs a UpdateAccountPasswordPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
-    const IAMRequest::Action action, UpdateAccountPasswordPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateAccountPasswordPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPri
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
     const UpdateAccountPasswordPolicyRequestPrivate &other, UpdateAccountPasswordPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

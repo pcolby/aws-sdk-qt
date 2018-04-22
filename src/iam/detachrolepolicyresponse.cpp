@@ -109,7 +109,7 @@ DetachRolePolicyResponse::DetachRolePolicyResponse(
         const DetachRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DetachRolePolicyResponsePrivate(this), parent)
+    : IamResponse(new DetachRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new DetachRolePolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DetachRolePolicyResponsePrivate object with public implementation \a q.
  */
 DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
-    DetachRolePolicyResponse * const q) : IAMResponsePrivate(q)
+    DetachRolePolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

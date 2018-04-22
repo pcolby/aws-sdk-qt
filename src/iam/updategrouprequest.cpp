@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
-    : IAMRequest(new UpdateGroupRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateGroupRequest::UpdateGroupRequest(const UpdateGroupRequest &other)
  * Constructs a UpdateGroupRequest object.
  */
 UpdateGroupRequest::UpdateGroupRequest()
-    : IAMRequest(new UpdateGroupRequestPrivate(IAMRequest::UpdateGroupAction, this))
+    : IamRequest(new UpdateGroupRequestPrivate(IamRequest::UpdateGroupAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a UpdateGroupRequestPrivate object for IAM \a action,
+ * Constructs a UpdateGroupRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
-    const IAMRequest::Action action, UpdateGroupRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateGroupRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const UpdateGroupRequestPrivate &other, UpdateGroupRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

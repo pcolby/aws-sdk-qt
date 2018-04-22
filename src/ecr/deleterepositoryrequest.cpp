@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &other)
-    : ECRRequest(new DeleteRepositoryRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new DeleteRepositoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteRepositoryRequest::DeleteRepositoryRequest(const DeleteRepositoryRequest &
  * Constructs a DeleteRepositoryRequest object.
  */
 DeleteRepositoryRequest::DeleteRepositoryRequest()
-    : ECRRequest(new DeleteRepositoryRequestPrivate(ECRRequest::DeleteRepositoryAction, this))
+    : EcrRequest(new DeleteRepositoryRequestPrivate(EcrRequest::DeleteRepositoryAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteRepositoryRequestPrivate object for ECR \a action,
+ * Constructs a DeleteRepositoryRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
-    const ECRRequest::Action action, DeleteRepositoryRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, DeleteRepositoryRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const DeleteRepositoryRequestPrivate &other, DeleteRepositoryRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

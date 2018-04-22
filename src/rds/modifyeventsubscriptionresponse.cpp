@@ -108,7 +108,7 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
         const ModifyEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
+    : RdsResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new ModifyEventSubscriptionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
-    ModifyEventSubscriptionResponse * const q) : RDSResponsePrivate(q)
+    ModifyEventSubscriptionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

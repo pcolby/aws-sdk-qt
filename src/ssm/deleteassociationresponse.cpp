@@ -68,7 +68,7 @@ DeleteAssociationResponse::DeleteAssociationResponse(
         const DeleteAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteAssociationResponsePrivate(this), parent)
+    : SsmResponse(new DeleteAssociationResponsePrivate(this), parent)
 {
     setRequest(new DeleteAssociationRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteAssociationResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteAssociationResponsePrivate object with public implementation \a q.
  */
 DeleteAssociationResponsePrivate::DeleteAssociationResponsePrivate(
-    DeleteAssociationResponse * const q) : SSMResponsePrivate(q)
+    DeleteAssociationResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

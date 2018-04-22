@@ -50,7 +50,7 @@ DescribeMountTargetSecurityGroupsResponse::DescribeMountTargetSecurityGroupsResp
         const DescribeMountTargetSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DescribeMountTargetSecurityGroupsResponsePrivate(this), parent)
+    : EfsResponse(new DescribeMountTargetSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMountTargetSecurityGroupsRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response
  * Constructs a DescribeMountTargetSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGroupsResponsePrivate(
-    DescribeMountTargetSecurityGroupsResponse * const q) : EFSResponsePrivate(q)
+    DescribeMountTargetSecurityGroupsResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

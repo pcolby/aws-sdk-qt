@@ -48,7 +48,7 @@ ConfirmProductInstanceResponse::ConfirmProductInstanceResponse(
         const ConfirmProductInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ConfirmProductInstanceResponsePrivate(this), parent)
+    : Ec2Response(new ConfirmProductInstanceResponsePrivate(this), parent)
 {
     setRequest(new ConfirmProductInstanceRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ConfirmProductInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a ConfirmProductInstanceResponsePrivate object with public implementation \a q.
  */
 ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
-    ConfirmProductInstanceResponse * const q) : EC2ResponsePrivate(q)
+    ConfirmProductInstanceResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

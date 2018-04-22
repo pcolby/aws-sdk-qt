@@ -110,7 +110,7 @@ ReceiveMessageResponse::ReceiveMessageResponse(
         const ReceiveMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new ReceiveMessageResponsePrivate(this), parent)
+    : SqsResponse(new ReceiveMessageResponsePrivate(this), parent)
 {
     setRequest(new ReceiveMessageRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void ReceiveMessageResponse::parseSuccess(QIODevice &response)
  * Constructs a ReceiveMessageResponsePrivate object with public implementation \a q.
  */
 ReceiveMessageResponsePrivate::ReceiveMessageResponsePrivate(
-    ReceiveMessageResponse * const q) : SQSResponsePrivate(q)
+    ReceiveMessageResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

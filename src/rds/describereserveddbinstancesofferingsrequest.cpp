@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeReservedDBInstancesOfferingsRequest::DescribeReservedDBInstancesOfferingsRequest(const DescribeReservedDBInstancesOfferingsRequest &other)
-    : RDSRequest(new DescribeReservedDBInstancesOfferingsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeReservedDBInstancesOfferingsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeReservedDBInstancesOfferingsRequest::DescribeReservedDBInstancesOffering
  * Constructs a DescribeReservedDBInstancesOfferingsRequest object.
  */
 DescribeReservedDBInstancesOfferingsRequest::DescribeReservedDBInstancesOfferingsRequest()
-    : RDSRequest(new DescribeReservedDBInstancesOfferingsRequestPrivate(RDSRequest::DescribeReservedDBInstancesOfferingsAction, this))
+    : RdsRequest(new DescribeReservedDBInstancesOfferingsRequestPrivate(RdsRequest::DescribeReservedDBInstancesOfferingsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedDBInstancesOfferingsRequest::
  */
 
 /*!
- * Constructs a DescribeReservedDBInstancesOfferingsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeReservedDBInstancesOfferingsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesOfferingsRequestPrivate(
-    const RDSRequest::Action action, DescribeReservedDBInstancesOfferingsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeReservedDBInstancesOfferingsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesO
  */
 DescribeReservedDBInstancesOfferingsRequestPrivate::DescribeReservedDBInstancesOfferingsRequestPrivate(
     const DescribeReservedDBInstancesOfferingsRequestPrivate &other, DescribeReservedDBInstancesOfferingsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

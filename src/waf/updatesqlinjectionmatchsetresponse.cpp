@@ -49,7 +49,7 @@ UpdateSqlInjectionMatchSetResponse::UpdateSqlInjectionMatchSetResponse(
         const UpdateSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateSqlInjectionMatchSetResponsePrivate(this), parent)
+    : WafResponse(new UpdateSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateSqlInjectionMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePrivate(
-    UpdateSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
+    UpdateSqlInjectionMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

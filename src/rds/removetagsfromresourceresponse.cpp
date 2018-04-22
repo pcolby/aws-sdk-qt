@@ -108,7 +108,7 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
+    : RdsResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromResourceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveTagsFromResourceResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
-    RemoveTagsFromResourceResponse * const q) : RDSResponsePrivate(q)
+    RemoveTagsFromResourceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

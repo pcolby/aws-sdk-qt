@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
-    : EC2Request(new DeleteTagsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
  * Constructs a DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
-    : EC2Request(new DeleteTagsRequestPrivate(EC2Request::DeleteTagsAction, this))
+    : Ec2Request(new DeleteTagsRequestPrivate(Ec2Request::DeleteTagsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a DeleteTagsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteTagsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
-    const EC2Request::Action action, DeleteTagsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteTagsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

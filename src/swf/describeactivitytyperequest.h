@@ -27,7 +27,7 @@ namespace SWF {
 
 class DescribeActivityTypeRequestPrivate;
 
-class QTAWS_EXPORT DescribeActivityTypeRequest : public SWFRequest {
+class QTAWS_EXPORT DescribeActivityTypeRequest : public SwfRequest {
 
 public:
     DescribeActivityTypeRequest(const DescribeActivityTypeRequest &other);

@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateRateBasedRuleResponse;
 
-class QTAWS_EXPORT UpdateRateBasedRuleResponsePrivate : public WAFResponsePrivate {
+class QTAWS_EXPORT UpdateRateBasedRuleResponsePrivate : public WafResponsePrivate {
     Q_OBJECT
 
 public:

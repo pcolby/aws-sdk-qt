@@ -48,7 +48,7 @@ SetRepositoryPolicyResponse::SetRepositoryPolicyResponse(
         const SetRepositoryPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new SetRepositoryPolicyResponsePrivate(this), parent)
+    : EcrResponse(new SetRepositoryPolicyResponsePrivate(this), parent)
 {
     setRequest(new SetRepositoryPolicyRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void SetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a SetRepositoryPolicyResponsePrivate object with public implementation \a q.
  */
 SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponsePrivate(
-    SetRepositoryPolicyResponse * const q) : ECRResponsePrivate(q)
+    SetRepositoryPolicyResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

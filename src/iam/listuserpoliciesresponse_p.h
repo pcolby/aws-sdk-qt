@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListUserPoliciesResponse;
 
-class QTAWS_EXPORT ListUserPoliciesResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT ListUserPoliciesResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

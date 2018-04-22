@@ -27,7 +27,7 @@ namespace EMR {
 
 class TerminateJobFlowsResponse;
 
-class QTAWS_EXPORT TerminateJobFlowsResponsePrivate : public EMRResponsePrivate {
+class QTAWS_EXPORT TerminateJobFlowsResponsePrivate : public EmrResponsePrivate {
     Q_OBJECT
 
 public:

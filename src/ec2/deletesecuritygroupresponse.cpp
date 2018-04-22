@@ -48,7 +48,7 @@ DeleteSecurityGroupResponse::DeleteSecurityGroupResponse(
         const DeleteSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteSecurityGroupResponsePrivate(this), parent)
+    : Ec2Response(new DeleteSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteSecurityGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteSecurityGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSecurityGroupResponsePrivate object with public implementation \a q.
  */
 DeleteSecurityGroupResponsePrivate::DeleteSecurityGroupResponsePrivate(
-    DeleteSecurityGroupResponse * const q) : EC2ResponsePrivate(q)
+    DeleteSecurityGroupResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 PutComplianceItemsRequest::PutComplianceItemsRequest(const PutComplianceItemsRequest &other)
-    : SSMRequest(new PutComplianceItemsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new PutComplianceItemsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ PutComplianceItemsRequest::PutComplianceItemsRequest(const PutComplianceItemsReq
  * Constructs a PutComplianceItemsRequest object.
  */
 PutComplianceItemsRequest::PutComplianceItemsRequest()
-    : SSMRequest(new PutComplianceItemsRequestPrivate(SSMRequest::PutComplianceItemsAction, this))
+    : SsmRequest(new PutComplianceItemsRequestPrivate(SsmRequest::PutComplianceItemsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a PutComplianceItemsRequestPrivate object for SSM \a action,
+ * Constructs a PutComplianceItemsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
-    const SSMRequest::Action action, PutComplianceItemsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, PutComplianceItemsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
     const PutComplianceItemsRequestPrivate &other, PutComplianceItemsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

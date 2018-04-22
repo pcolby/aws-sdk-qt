@@ -68,7 +68,7 @@ UpdatePatchBaselineResponse::UpdatePatchBaselineResponse(
         const UpdatePatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdatePatchBaselineResponsePrivate(this), parent)
+    : SsmResponse(new UpdatePatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new UpdatePatchBaselineRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void UpdatePatchBaselineResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdatePatchBaselineResponsePrivate object with public implementation \a q.
  */
 UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
-    UpdatePatchBaselineResponse * const q) : SSMResponsePrivate(q)
+    UpdatePatchBaselineResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

@@ -60,7 +60,7 @@ DescribeActivityTypeResponse::DescribeActivityTypeResponse(
         const DescribeActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DescribeActivityTypeResponsePrivate(this), parent)
+    : SwfResponse(new DescribeActivityTypeResponsePrivate(this), parent)
 {
     setRequest(new DescribeActivityTypeRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void DescribeActivityTypeResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeActivityTypeResponsePrivate object with public implementation \a q.
  */
 DescribeActivityTypeResponsePrivate::DescribeActivityTypeResponsePrivate(
-    DescribeActivityTypeResponse * const q) : SWFResponsePrivate(q)
+    DescribeActivityTypeResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

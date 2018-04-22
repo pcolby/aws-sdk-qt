@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetRegexMatchSetRequest::GetRegexMatchSetRequest(const GetRegexMatchSetRequest &other)
-    : WAFRequest(new GetRegexMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetRegexMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetRegexMatchSetRequest::GetRegexMatchSetRequest(const GetRegexMatchSetRequest &
  * Constructs a GetRegexMatchSetRequest object.
  */
 GetRegexMatchSetRequest::GetRegexMatchSetRequest()
-    : WAFRequest(new GetRegexMatchSetRequestPrivate(WAFRequest::GetRegexMatchSetAction, this))
+    : WafRequest(new GetRegexMatchSetRequestPrivate(WafRequest::GetRegexMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a GetRegexMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a GetRegexMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
-    const WAFRequest::Action action, GetRegexMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetRegexMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
  */
 GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
     const GetRegexMatchSetRequestPrivate &other, GetRegexMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

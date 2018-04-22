@@ -27,7 +27,7 @@ namespace ACM {
 
 class UpdateCertificateOptionsRequestPrivate;
 
-class QTAWS_EXPORT UpdateCertificateOptionsRequest : public ACMRequest {
+class QTAWS_EXPORT UpdateCertificateOptionsRequest : public AcmRequest {
 
 public:
     UpdateCertificateOptionsRequest(const UpdateCertificateOptionsRequest &other);

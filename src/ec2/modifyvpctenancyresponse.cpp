@@ -48,7 +48,7 @@ ModifyVpcTenancyResponse::ModifyVpcTenancyResponse(
         const ModifyVpcTenancyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcTenancyResponsePrivate(this), parent)
+    : Ec2Response(new ModifyVpcTenancyResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcTenancyRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyVpcTenancyResponsePrivate object with public implementation \a q.
  */
 ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
-    ModifyVpcTenancyResponse * const q) : EC2ResponsePrivate(q)
+    ModifyVpcTenancyResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

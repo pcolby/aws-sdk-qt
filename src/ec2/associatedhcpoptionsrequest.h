@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateDhcpOptionsRequestPrivate;
 
-class QTAWS_EXPORT AssociateDhcpOptionsRequest : public EC2Request {
+class QTAWS_EXPORT AssociateDhcpOptionsRequest : public Ec2Request {
 
 public:
     AssociateDhcpOptionsRequest(const AssociateDhcpOptionsRequest &other);

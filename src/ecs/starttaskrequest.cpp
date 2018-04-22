@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 StartTaskRequest::StartTaskRequest(const StartTaskRequest &other)
-    : ECSRequest(new StartTaskRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new StartTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ StartTaskRequest::StartTaskRequest(const StartTaskRequest &other)
  * Constructs a StartTaskRequest object.
  */
 StartTaskRequest::StartTaskRequest()
-    : ECSRequest(new StartTaskRequestPrivate(ECSRequest::StartTaskAction, this))
+    : EcsRequest(new StartTaskRequestPrivate(EcsRequest::StartTaskAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * StartTaskRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a StartTaskRequestPrivate object for ECS \a action,
+ * Constructs a StartTaskRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 StartTaskRequestPrivate::StartTaskRequestPrivate(
-    const ECSRequest::Action action, StartTaskRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, StartTaskRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ StartTaskRequestPrivate::StartTaskRequestPrivate(
  */
 StartTaskRequestPrivate::StartTaskRequestPrivate(
     const StartTaskRequestPrivate &other, StartTaskRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

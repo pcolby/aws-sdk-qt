@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
-    : EC2Request(new CreateSnapshotRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
  * Constructs a CreateSnapshotRequest object.
  */
 CreateSnapshotRequest::CreateSnapshotRequest()
-    : EC2Request(new CreateSnapshotRequestPrivate(EC2Request::CreateSnapshotAction, this))
+    : Ec2Request(new CreateSnapshotRequestPrivate(Ec2Request::CreateSnapshotAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a CreateSnapshotRequestPrivate object for EC2 \a action,
+ * Constructs a CreateSnapshotRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
-    const EC2Request::Action action, CreateSnapshotRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateSnapshotRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

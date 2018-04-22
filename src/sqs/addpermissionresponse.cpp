@@ -110,7 +110,7 @@ AddPermissionResponse::AddPermissionResponse(
         const AddPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new AddPermissionResponsePrivate(this), parent)
+    : SqsResponse(new AddPermissionResponsePrivate(this), parent)
 {
     setRequest(new AddPermissionRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void AddPermissionResponse::parseSuccess(QIODevice &response)
  * Constructs a AddPermissionResponsePrivate object with public implementation \a q.
  */
 AddPermissionResponsePrivate::AddPermissionResponsePrivate(
-    AddPermissionResponse * const q) : SQSResponsePrivate(q)
+    AddPermissionResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

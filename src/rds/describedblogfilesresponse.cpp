@@ -108,7 +108,7 @@ DescribeDBLogFilesResponse::DescribeDBLogFilesResponse(
         const DescribeDBLogFilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBLogFilesResponsePrivate(this), parent)
+    : RdsResponse(new DescribeDBLogFilesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBLogFilesRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDBLogFilesResponsePrivate object with public implementation \a q.
  */
 DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
-    DescribeDBLogFilesResponse * const q) : RDSResponsePrivate(q)
+    DescribeDBLogFilesResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

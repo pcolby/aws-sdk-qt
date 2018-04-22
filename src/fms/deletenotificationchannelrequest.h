@@ -27,7 +27,7 @@ namespace FMS {
 
 class DeleteNotificationChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteNotificationChannelRequest : public FMSRequest {
+class QTAWS_EXPORT DeleteNotificationChannelRequest : public FmsRequest {
 
 public:
     DeleteNotificationChannelRequest(const DeleteNotificationChannelRequest &other);

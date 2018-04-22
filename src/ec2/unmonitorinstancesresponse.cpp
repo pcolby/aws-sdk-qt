@@ -48,7 +48,7 @@ UnmonitorInstancesResponse::UnmonitorInstancesResponse(
         const UnmonitorInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new UnmonitorInstancesResponsePrivate(this), parent)
+    : Ec2Response(new UnmonitorInstancesResponsePrivate(this), parent)
 {
     setRequest(new UnmonitorInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a UnmonitorInstancesResponsePrivate object with public implementation \a q.
  */
 UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
-    UnmonitorInstancesResponse * const q) : EC2ResponsePrivate(q)
+    UnmonitorInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

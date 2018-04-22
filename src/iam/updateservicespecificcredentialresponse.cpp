@@ -109,7 +109,7 @@ UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse
         const UpdateServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateServiceSpecificCredentialResponsePrivate(this), parent)
+    : IamResponse(new UpdateServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new UpdateServiceSpecificCredentialRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialResponsePrivate(
-    UpdateServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
+    UpdateServiceSpecificCredentialResponse * const q) : IamResponsePrivate(q)
 {
 
 }

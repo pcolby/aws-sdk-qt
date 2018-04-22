@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeReservedInstancesOfferingsRequest::DescribeReservedInstancesOfferingsRequest(const DescribeReservedInstancesOfferingsRequest &other)
-    : EC2Request(new DescribeReservedInstancesOfferingsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeReservedInstancesOfferingsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeReservedInstancesOfferingsRequest::DescribeReservedInstancesOfferingsReq
  * Constructs a DescribeReservedInstancesOfferingsRequest object.
  */
 DescribeReservedInstancesOfferingsRequest::DescribeReservedInstancesOfferingsRequest()
-    : EC2Request(new DescribeReservedInstancesOfferingsRequestPrivate(EC2Request::DescribeReservedInstancesOfferingsAction, this))
+    : Ec2Request(new DescribeReservedInstancesOfferingsRequestPrivate(Ec2Request::DescribeReservedInstancesOfferingsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesOfferingsRequest::re
  */
 
 /*!
- * Constructs a DescribeReservedInstancesOfferingsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeReservedInstancesOfferingsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeReservedInstancesOfferingsRequestPrivate::DescribeReservedInstancesOfferingsRequestPrivate(
-    const EC2Request::Action action, DescribeReservedInstancesOfferingsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeReservedInstancesOfferingsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeReservedInstancesOfferingsRequestPrivate::DescribeReservedInstancesOffer
  */
 DescribeReservedInstancesOfferingsRequestPrivate::DescribeReservedInstancesOfferingsRequestPrivate(
     const DescribeReservedInstancesOfferingsRequestPrivate &other, DescribeReservedInstancesOfferingsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

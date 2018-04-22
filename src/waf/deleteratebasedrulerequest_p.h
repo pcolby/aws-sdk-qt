@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteRateBasedRuleRequest;
 
-class QTAWS_EXPORT DeleteRateBasedRuleRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteRateBasedRuleRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteRateBasedRuleRequestPrivate(const WAFRequest::Action action,
+    DeleteRateBasedRuleRequestPrivate(const WafRequest::Action action,
                                    DeleteRateBasedRuleRequest * const q);
     DeleteRateBasedRuleRequestPrivate(const DeleteRateBasedRuleRequestPrivate &other,
                                    DeleteRateBasedRuleRequest * const q);

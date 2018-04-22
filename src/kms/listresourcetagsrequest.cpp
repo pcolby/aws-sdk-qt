@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 ListResourceTagsRequest::ListResourceTagsRequest(const ListResourceTagsRequest &other)
-    : KMSRequest(new ListResourceTagsRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new ListResourceTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ ListResourceTagsRequest::ListResourceTagsRequest(const ListResourceTagsRequest &
  * Constructs a ListResourceTagsRequest object.
  */
 ListResourceTagsRequest::ListResourceTagsRequest()
-    : KMSRequest(new ListResourceTagsRequestPrivate(KMSRequest::ListResourceTagsAction, this))
+    : KmsRequest(new ListResourceTagsRequestPrivate(KmsRequest::ListResourceTagsAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * ListResourceTagsRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ListResourceTagsRequestPrivate object for KMS \a action,
+ * Constructs a ListResourceTagsRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
-    const KMSRequest::Action action, ListResourceTagsRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, ListResourceTagsRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
  */
 ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
     const ListResourceTagsRequestPrivate &other, ListResourceTagsRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

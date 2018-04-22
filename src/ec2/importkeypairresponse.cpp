@@ -48,7 +48,7 @@ ImportKeyPairResponse::ImportKeyPairResponse(
         const ImportKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ImportKeyPairResponsePrivate(this), parent)
+    : Ec2Response(new ImportKeyPairResponsePrivate(this), parent)
 {
     setRequest(new ImportKeyPairRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ImportKeyPairResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportKeyPairResponsePrivate object with public implementation \a q.
  */
 ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
-    ImportKeyPairResponse * const q) : EC2ResponsePrivate(q)
+    ImportKeyPairResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

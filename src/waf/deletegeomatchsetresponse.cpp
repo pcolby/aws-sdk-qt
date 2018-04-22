@@ -49,7 +49,7 @@ DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
         const DeleteGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteGeoMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
-    DeleteGeoMatchSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteGeoMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

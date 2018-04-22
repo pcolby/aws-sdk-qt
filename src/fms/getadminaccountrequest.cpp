@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 GetAdminAccountRequest::GetAdminAccountRequest(const GetAdminAccountRequest &other)
-    : FMSRequest(new GetAdminAccountRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new GetAdminAccountRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ GetAdminAccountRequest::GetAdminAccountRequest(const GetAdminAccountRequest &oth
  * Constructs a GetAdminAccountRequest object.
  */
 GetAdminAccountRequest::GetAdminAccountRequest()
-    : FMSRequest(new GetAdminAccountRequestPrivate(FMSRequest::GetAdminAccountAction, this))
+    : FmsRequest(new GetAdminAccountRequestPrivate(FmsRequest::GetAdminAccountAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * GetAdminAccountRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetAdminAccountRequestPrivate object for FMS \a action,
+ * Constructs a GetAdminAccountRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
-    const FMSRequest::Action action, GetAdminAccountRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, GetAdminAccountRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
  */
 GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
     const GetAdminAccountRequestPrivate &other, GetAdminAccountRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

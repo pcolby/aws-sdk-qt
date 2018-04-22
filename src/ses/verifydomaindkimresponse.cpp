@@ -55,7 +55,7 @@ VerifyDomainDkimResponse::VerifyDomainDkimResponse(
         const VerifyDomainDkimRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyDomainDkimResponsePrivate(this), parent)
+    : SesResponse(new VerifyDomainDkimResponsePrivate(this), parent)
 {
     setRequest(new VerifyDomainDkimRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
  * Constructs a VerifyDomainDkimResponsePrivate object with public implementation \a q.
  */
 VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
-    VerifyDomainDkimResponse * const q) : SESResponsePrivate(q)
+    VerifyDomainDkimResponse * const q) : SesResponsePrivate(q)
 {
 
 }

@@ -61,7 +61,7 @@ PutAttributesResponse::PutAttributesResponse(
         const PutAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new PutAttributesResponsePrivate(this), parent)
+    : EcsResponse(new PutAttributesResponsePrivate(this), parent)
 {
     setRequest(new PutAttributesRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void PutAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a PutAttributesResponsePrivate object with public implementation \a q.
  */
 PutAttributesResponsePrivate::PutAttributesResponsePrivate(
-    PutAttributesResponse * const q) : ECSResponsePrivate(q)
+    PutAttributesResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

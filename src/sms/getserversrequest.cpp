@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 GetServersRequest::GetServersRequest(const GetServersRequest &other)
-    : SMSRequest(new GetServersRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new GetServersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ GetServersRequest::GetServersRequest(const GetServersRequest &other)
  * Constructs a GetServersRequest object.
  */
 GetServersRequest::GetServersRequest()
-    : SMSRequest(new GetServersRequestPrivate(SMSRequest::GetServersAction, this))
+    : SmsRequest(new GetServersRequestPrivate(SmsRequest::GetServersAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a GetServersRequestPrivate object for SMS \a action,
+ * Constructs a GetServersRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
-    const SMSRequest::Action action, GetServersRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, GetServersRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ GetServersRequestPrivate::GetServersRequestPrivate(
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
     const GetServersRequestPrivate &other, GetServersRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

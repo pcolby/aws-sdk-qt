@@ -68,7 +68,7 @@ DescribeInstancePatchesResponse::DescribeInstancePatchesResponse(
         const DescribeInstancePatchesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeInstancePatchesResponsePrivate(this), parent)
+    : SsmResponse(new DescribeInstancePatchesResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstancePatchesRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeInstancePatchesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeInstancePatchesResponsePrivate object with public implementation \a q.
  */
 DescribeInstancePatchesResponsePrivate::DescribeInstancePatchesResponsePrivate(
-    DescribeInstancePatchesResponse * const q) : SSMResponsePrivate(q)
+    DescribeInstancePatchesResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

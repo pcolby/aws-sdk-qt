@@ -28,10 +28,10 @@ namespace STS {
 
 class GetFederationTokenRequest;
 
-class QTAWS_EXPORT GetFederationTokenRequestPrivate : public STSRequestPrivate {
+class QTAWS_EXPORT GetFederationTokenRequestPrivate : public StsRequestPrivate {
 
 public:
-    GetFederationTokenRequestPrivate(const STSRequest::Action action,
+    GetFederationTokenRequestPrivate(const StsRequest::Action action,
                                    GetFederationTokenRequest * const q);
     GetFederationTokenRequestPrivate(const GetFederationTokenRequestPrivate &other,
                                    GetFederationTokenRequest * const q);

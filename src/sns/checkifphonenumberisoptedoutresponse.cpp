@@ -58,7 +58,7 @@ CheckIfPhoneNumberIsOptedOutResponse::CheckIfPhoneNumberIsOptedOutResponse(
         const CheckIfPhoneNumberIsOptedOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new CheckIfPhoneNumberIsOptedOutResponsePrivate(this), parent)
+    : SnsResponse(new CheckIfPhoneNumberIsOptedOutResponsePrivate(this), parent)
 {
     setRequest(new CheckIfPhoneNumberIsOptedOutRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
  * Constructs a CheckIfPhoneNumberIsOptedOutResponsePrivate object with public implementation \a q.
  */
 CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutResponsePrivate(
-    CheckIfPhoneNumberIsOptedOutResponse * const q) : SNSResponsePrivate(q)
+    CheckIfPhoneNumberIsOptedOutResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

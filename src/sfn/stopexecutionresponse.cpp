@@ -63,7 +63,7 @@ StopExecutionResponse::StopExecutionResponse(
         const StopExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new StopExecutionResponsePrivate(this), parent)
+    : SfnResponse(new StopExecutionResponsePrivate(this), parent)
 {
     setRequest(new StopExecutionRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void StopExecutionResponse::parseSuccess(QIODevice &response)
  * Constructs a StopExecutionResponsePrivate object with public implementation \a q.
  */
 StopExecutionResponsePrivate::StopExecutionResponsePrivate(
-    StopExecutionResponse * const q) : SFNResponsePrivate(q)
+    StopExecutionResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

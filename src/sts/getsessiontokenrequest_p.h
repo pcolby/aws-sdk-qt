@@ -28,10 +28,10 @@ namespace STS {
 
 class GetSessionTokenRequest;
 
-class QTAWS_EXPORT GetSessionTokenRequestPrivate : public STSRequestPrivate {
+class QTAWS_EXPORT GetSessionTokenRequestPrivate : public StsRequestPrivate {
 
 public:
-    GetSessionTokenRequestPrivate(const STSRequest::Action action,
+    GetSessionTokenRequestPrivate(const StsRequest::Action action,
                                    GetSessionTokenRequest * const q);
     GetSessionTokenRequestPrivate(const GetSessionTokenRequestPrivate &other,
                                    GetSessionTokenRequest * const q);

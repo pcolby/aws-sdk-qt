@@ -27,7 +27,7 @@ namespace SSM {
 
 class CreateAssociationBatchRequestPrivate;
 
-class QTAWS_EXPORT CreateAssociationBatchRequest : public SSMRequest {
+class QTAWS_EXPORT CreateAssociationBatchRequest : public SsmRequest {
 
 public:
     CreateAssociationBatchRequest(const CreateAssociationBatchRequest &other);

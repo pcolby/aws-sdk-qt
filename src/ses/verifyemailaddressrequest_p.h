@@ -28,10 +28,10 @@ namespace SES {
 
 class VerifyEmailAddressRequest;
 
-class QTAWS_EXPORT VerifyEmailAddressRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT VerifyEmailAddressRequestPrivate : public SesRequestPrivate {
 
 public:
-    VerifyEmailAddressRequestPrivate(const SESRequest::Action action,
+    VerifyEmailAddressRequestPrivate(const SesRequest::Action action,
                                    VerifyEmailAddressRequest * const q);
     VerifyEmailAddressRequestPrivate(const VerifyEmailAddressRequestPrivate &other,
                                    VerifyEmailAddressRequest * const q);

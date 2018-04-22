@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateAssumeRolePolicyRequestPrivate;
 
-class QTAWS_EXPORT UpdateAssumeRolePolicyRequest : public IAMRequest {
+class QTAWS_EXPORT UpdateAssumeRolePolicyRequest : public IamRequest {
 
 public:
     UpdateAssumeRolePolicyRequest(const UpdateAssumeRolePolicyRequest &other);

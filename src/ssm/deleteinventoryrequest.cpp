@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteInventoryRequest::DeleteInventoryRequest(const DeleteInventoryRequest &other)
-    : SSMRequest(new DeleteInventoryRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteInventoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteInventoryRequest::DeleteInventoryRequest(const DeleteInventoryRequest &oth
  * Constructs a DeleteInventoryRequest object.
  */
 DeleteInventoryRequest::DeleteInventoryRequest()
-    : SSMRequest(new DeleteInventoryRequestPrivate(SSMRequest::DeleteInventoryAction, this))
+    : SsmRequest(new DeleteInventoryRequestPrivate(SsmRequest::DeleteInventoryAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteInventoryRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeleteInventoryRequestPrivate object for SSM \a action,
+ * Constructs a DeleteInventoryRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteInventoryRequestPrivate::DeleteInventoryRequestPrivate(
-    const SSMRequest::Action action, DeleteInventoryRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteInventoryRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteInventoryRequestPrivate::DeleteInventoryRequestPrivate(
  */
 DeleteInventoryRequestPrivate::DeleteInventoryRequestPrivate(
     const DeleteInventoryRequestPrivate &other, DeleteInventoryRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

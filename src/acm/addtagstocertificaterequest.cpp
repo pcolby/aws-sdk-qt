@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 AddTagsToCertificateRequest::AddTagsToCertificateRequest(const AddTagsToCertificateRequest &other)
-    : ACMRequest(new AddTagsToCertificateRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new AddTagsToCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ AddTagsToCertificateRequest::AddTagsToCertificateRequest(const AddTagsToCertific
  * Constructs a AddTagsToCertificateRequest object.
  */
 AddTagsToCertificateRequest::AddTagsToCertificateRequest()
-    : ACMRequest(new AddTagsToCertificateRequestPrivate(ACMRequest::AddTagsToCertificateAction, this))
+    : AcmRequest(new AddTagsToCertificateRequestPrivate(AcmRequest::AddTagsToCertificateAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetwor
  */
 
 /*!
- * Constructs a AddTagsToCertificateRequestPrivate object for ACM \a action,
+ * Constructs a AddTagsToCertificateRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
-    const ACMRequest::Action action, AddTagsToCertificateRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, AddTagsToCertificateRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
     const AddTagsToCertificateRequestPrivate &other, AddTagsToCertificateRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

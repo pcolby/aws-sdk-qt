@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetCommandInvocationRequest::GetCommandInvocationRequest(const GetCommandInvocationRequest &other)
-    : SSMRequest(new GetCommandInvocationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetCommandInvocationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetCommandInvocationRequest::GetCommandInvocationRequest(const GetCommandInvocat
  * Constructs a GetCommandInvocationRequest object.
  */
 GetCommandInvocationRequest::GetCommandInvocationRequest()
-    : SSMRequest(new GetCommandInvocationRequestPrivate(SSMRequest::GetCommandInvocationAction, this))
+    : SsmRequest(new GetCommandInvocationRequestPrivate(SsmRequest::GetCommandInvocationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetCommandInvocationRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetCommandInvocationRequestPrivate object for SSM \a action,
+ * Constructs a GetCommandInvocationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
-    const SSMRequest::Action action, GetCommandInvocationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetCommandInvocationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
  */
 GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
     const GetCommandInvocationRequestPrivate &other, GetCommandInvocationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

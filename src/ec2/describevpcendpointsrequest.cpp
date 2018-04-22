@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVpcEndpointsRequest::DescribeVpcEndpointsRequest(const DescribeVpcEndpointsRequest &other)
-    : EC2Request(new DescribeVpcEndpointsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVpcEndpointsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVpcEndpointsRequest::DescribeVpcEndpointsRequest(const DescribeVpcEndpoi
  * Constructs a DescribeVpcEndpointsRequest object.
  */
 DescribeVpcEndpointsRequest::DescribeVpcEndpointsRequest()
-    : EC2Request(new DescribeVpcEndpointsRequestPrivate(EC2Request::DescribeVpcEndpointsAction, this))
+    : Ec2Request(new DescribeVpcEndpointsRequestPrivate(Ec2Request::DescribeVpcEndpointsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeVpcEndpointsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVpcEndpointsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
-    const EC2Request::Action action, DescribeVpcEndpointsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVpcEndpointsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
  */
 DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
     const DescribeVpcEndpointsRequestPrivate &other, DescribeVpcEndpointsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

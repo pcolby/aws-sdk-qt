@@ -28,7 +28,7 @@ namespace ECS {
 
 class RegisterTaskDefinitionResponsePrivate;
 
-class QTAWS_EXPORT RegisterTaskDefinitionResponse : public ECSResponse {
+class QTAWS_EXPORT RegisterTaskDefinitionResponse : public EcsResponse {
     Q_OBJECT
 
 public:

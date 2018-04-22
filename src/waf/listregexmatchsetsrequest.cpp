@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsRequest &other)
-    : WAFRequest(new ListRegexMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListRegexMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListRegexMatchSetsRequest::ListRegexMatchSetsRequest(const ListRegexMatchSetsReq
  * Constructs a ListRegexMatchSetsRequest object.
  */
 ListRegexMatchSetsRequest::ListRegexMatchSetsRequest()
-    : WAFRequest(new ListRegexMatchSetsRequestPrivate(WAFRequest::ListRegexMatchSetsAction, this))
+    : WafRequest(new ListRegexMatchSetsRequestPrivate(WafRequest::ListRegexMatchSetsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListRegexMatchSetsRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a ListRegexMatchSetsRequestPrivate object for WAF \a action,
+ * Constructs a ListRegexMatchSetsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
-    const WAFRequest::Action action, ListRegexMatchSetsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListRegexMatchSetsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
  */
 ListRegexMatchSetsRequestPrivate::ListRegexMatchSetsRequestPrivate(
     const ListRegexMatchSetsRequestPrivate &other, ListRegexMatchSetsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

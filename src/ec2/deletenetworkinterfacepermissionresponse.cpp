@@ -48,7 +48,7 @@ DeleteNetworkInterfacePermissionResponse::DeleteNetworkInterfacePermissionRespon
         const DeleteNetworkInterfacePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteNetworkInterfacePermissionResponsePrivate(this), parent)
+    : Ec2Response(new DeleteNetworkInterfacePermissionResponsePrivate(this), parent)
 {
     setRequest(new DeleteNetworkInterfacePermissionRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteNetworkInterfacePermissionResponsePrivate object with public implementation \a q.
  */
 DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissionResponsePrivate(
-    DeleteNetworkInterfacePermissionResponse * const q) : EC2ResponsePrivate(q)
+    DeleteNetworkInterfacePermissionResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest(const ModifyLaunchTemplateRequest &other)
-    : EC2Request(new ModifyLaunchTemplateRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyLaunchTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest(const ModifyLaunchTempl
  * Constructs a ModifyLaunchTemplateRequest object.
  */
 ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest()
-    : EC2Request(new ModifyLaunchTemplateRequestPrivate(EC2Request::ModifyLaunchTemplateAction, this))
+    : Ec2Request(new ModifyLaunchTemplateRequestPrivate(Ec2Request::ModifyLaunchTemplateAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ModifyLaunchTemplateRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyLaunchTemplateRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
-    const EC2Request::Action action, ModifyLaunchTemplateRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyLaunchTemplateRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
  */
 ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
     const ModifyLaunchTemplateRequestPrivate &other, ModifyLaunchTemplateRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

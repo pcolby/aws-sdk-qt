@@ -108,7 +108,7 @@ DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificatio
         const DescribeValidDBInstanceModificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeValidDBInstanceModificationsResponsePrivate(this), parent)
+    : RdsResponse(new DescribeValidDBInstanceModificationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeValidDBInstanceModificationsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &respo
  * Constructs a DescribeValidDBInstanceModificationsResponsePrivate object with public implementation \a q.
  */
 DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModificationsResponsePrivate(
-    DescribeValidDBInstanceModificationsResponse * const q) : RDSResponsePrivate(q)
+    DescribeValidDBInstanceModificationsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

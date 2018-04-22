@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyReservedInstancesRequest::ModifyReservedInstancesRequest(const ModifyReservedInstancesRequest &other)
-    : EC2Request(new ModifyReservedInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyReservedInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyReservedInstancesRequest::ModifyReservedInstancesRequest(const ModifyReser
  * Constructs a ModifyReservedInstancesRequest object.
  */
 ModifyReservedInstancesRequest::ModifyReservedInstancesRequest()
-    : EC2Request(new ModifyReservedInstancesRequestPrivate(EC2Request::ModifyReservedInstancesAction, this))
+    : Ec2Request(new ModifyReservedInstancesRequestPrivate(Ec2Request::ModifyReservedInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNet
  */
 
 /*!
- * Constructs a ModifyReservedInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyReservedInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
-    const EC2Request::Action action, ModifyReservedInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyReservedInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
     const ModifyReservedInstancesRequestPrivate &other, ModifyReservedInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

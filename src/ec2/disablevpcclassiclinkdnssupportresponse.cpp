@@ -48,7 +48,7 @@ DisableVpcClassicLinkDnsSupportResponse::DisableVpcClassicLinkDnsSupportResponse
         const DisableVpcClassicLinkDnsSupportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisableVpcClassicLinkDnsSupportResponsePrivate(this), parent)
+    : Ec2Response(new DisableVpcClassicLinkDnsSupportResponsePrivate(this), parent)
 {
     setRequest(new DisableVpcClassicLinkDnsSupportRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DisableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
  * Constructs a DisableVpcClassicLinkDnsSupportResponsePrivate object with public implementation \a q.
  */
 DisableVpcClassicLinkDnsSupportResponsePrivate::DisableVpcClassicLinkDnsSupportResponsePrivate(
-    DisableVpcClassicLinkDnsSupportResponse * const q) : EC2ResponsePrivate(q)
+    DisableVpcClassicLinkDnsSupportResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

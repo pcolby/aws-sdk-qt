@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeInstanceAssociationsStatusResponsePrivate;
 
-class QTAWS_EXPORT DescribeInstanceAssociationsStatusResponse : public SSMResponse {
+class QTAWS_EXPORT DescribeInstanceAssociationsStatusResponse : public SsmResponse {
     Q_OBJECT
 
 public:

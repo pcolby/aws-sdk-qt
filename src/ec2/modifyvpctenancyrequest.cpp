@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVpcTenancyRequest::ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &other)
-    : EC2Request(new ModifyVpcTenancyRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVpcTenancyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVpcTenancyRequest::ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &
  * Constructs a ModifyVpcTenancyRequest object.
  */
 ModifyVpcTenancyRequest::ModifyVpcTenancyRequest()
-    : EC2Request(new ModifyVpcTenancyRequestPrivate(EC2Request::ModifyVpcTenancyAction, this))
+    : Ec2Request(new ModifyVpcTenancyRequestPrivate(Ec2Request::ModifyVpcTenancyAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ModifyVpcTenancyRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVpcTenancyRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
-    const EC2Request::Action action, ModifyVpcTenancyRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVpcTenancyRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
     const ModifyVpcTenancyRequestPrivate &other, ModifyVpcTenancyRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

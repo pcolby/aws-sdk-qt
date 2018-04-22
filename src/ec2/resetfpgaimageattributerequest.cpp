@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest(const ResetFpgaImageAttributeRequest &other)
-    : EC2Request(new ResetFpgaImageAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ResetFpgaImageAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest(const ResetFpgaIm
  * Constructs a ResetFpgaImageAttributeRequest object.
  */
 ResetFpgaImageAttributeRequest::ResetFpgaImageAttributeRequest()
-    : EC2Request(new ResetFpgaImageAttributeRequestPrivate(EC2Request::ResetFpgaImageAttributeAction, this))
+    : Ec2Request(new ResetFpgaImageAttributeRequestPrivate(Ec2Request::ResetFpgaImageAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNet
  */
 
 /*!
- * Constructs a ResetFpgaImageAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ResetFpgaImageAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
-    const EC2Request::Action action, ResetFpgaImageAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ResetFpgaImageAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
     const ResetFpgaImageAttributeRequestPrivate &other, ResetFpgaImageAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

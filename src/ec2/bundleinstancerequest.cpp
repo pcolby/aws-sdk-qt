@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 BundleInstanceRequest::BundleInstanceRequest(const BundleInstanceRequest &other)
-    : EC2Request(new BundleInstanceRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new BundleInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ BundleInstanceRequest::BundleInstanceRequest(const BundleInstanceRequest &other)
  * Constructs a BundleInstanceRequest object.
  */
 BundleInstanceRequest::BundleInstanceRequest()
-    : EC2Request(new BundleInstanceRequestPrivate(EC2Request::BundleInstanceAction, this))
+    : Ec2Request(new BundleInstanceRequestPrivate(Ec2Request::BundleInstanceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a BundleInstanceRequestPrivate object for EC2 \a action,
+ * Constructs a BundleInstanceRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
-    const EC2Request::Action action, BundleInstanceRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, BundleInstanceRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
     const BundleInstanceRequestPrivate &other, BundleInstanceRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

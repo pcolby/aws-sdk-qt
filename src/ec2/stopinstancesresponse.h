@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StopInstancesResponsePrivate;
 
-class QTAWS_EXPORT StopInstancesResponse : public EC2Response {
+class QTAWS_EXPORT StopInstancesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

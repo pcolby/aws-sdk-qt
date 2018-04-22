@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateDBParameterGroupRequest::CreateDBParameterGroupRequest(const CreateDBParameterGroupRequest &other)
-    : RDSRequest(new CreateDBParameterGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateDBParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateDBParameterGroupRequest::CreateDBParameterGroupRequest(const CreateDBParam
  * Constructs a CreateDBParameterGroupRequest object.
  */
 CreateDBParameterGroupRequest::CreateDBParameterGroupRequest()
-    : RDSRequest(new CreateDBParameterGroupRequestPrivate(RDSRequest::CreateDBParameterGroupAction, this))
+    : RdsRequest(new CreateDBParameterGroupRequestPrivate(RdsRequest::CreateDBParameterGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetw
  */
 
 /*!
- * Constructs a CreateDBParameterGroupRequestPrivate object for RDS \a action,
+ * Constructs a CreateDBParameterGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
-    const RDSRequest::Action action, CreateDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateDBParameterGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
     const CreateDBParameterGroupRequestPrivate &other, CreateDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

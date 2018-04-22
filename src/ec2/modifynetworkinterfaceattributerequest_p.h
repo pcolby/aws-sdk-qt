@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifyNetworkInterfaceAttributeRequest;
 
-class QTAWS_EXPORT ModifyNetworkInterfaceAttributeRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifyNetworkInterfaceAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifyNetworkInterfaceAttributeRequestPrivate(const EC2Request::Action action,
+    ModifyNetworkInterfaceAttributeRequestPrivate(const Ec2Request::Action action,
                                    ModifyNetworkInterfaceAttributeRequest * const q);
     ModifyNetworkInterfaceAttributeRequestPrivate(const ModifyNetworkInterfaceAttributeRequestPrivate &other,
                                    ModifyNetworkInterfaceAttributeRequest * const q);

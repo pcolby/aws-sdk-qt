@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &other)
-    : WAFRequest(new GetByteMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetByteMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetByteMatchSetRequest::GetByteMatchSetRequest(const GetByteMatchSetRequest &oth
  * Constructs a GetByteMatchSetRequest object.
  */
 GetByteMatchSetRequest::GetByteMatchSetRequest()
-    : WAFRequest(new GetByteMatchSetRequestPrivate(WAFRequest::GetByteMatchSetAction, this))
+    : WafRequest(new GetByteMatchSetRequestPrivate(WafRequest::GetByteMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetByteMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a GetByteMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
-    const WAFRequest::Action action, GetByteMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetByteMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
     const GetByteMatchSetRequestPrivate &other, GetByteMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

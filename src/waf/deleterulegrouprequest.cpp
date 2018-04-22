@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteRuleGroupRequest::DeleteRuleGroupRequest(const DeleteRuleGroupRequest &other)
-    : WAFRequest(new DeleteRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteRuleGroupRequest::DeleteRuleGroupRequest(const DeleteRuleGroupRequest &oth
  * Constructs a DeleteRuleGroupRequest object.
  */
 DeleteRuleGroupRequest::DeleteRuleGroupRequest()
-    : WAFRequest(new DeleteRuleGroupRequestPrivate(WAFRequest::DeleteRuleGroupAction, this))
+    : WafRequest(new DeleteRuleGroupRequestPrivate(WafRequest::DeleteRuleGroupAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeleteRuleGroupRequestPrivate object for WAF \a action,
+ * Constructs a DeleteRuleGroupRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
-    const WAFRequest::Action action, DeleteRuleGroupRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteRuleGroupRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
     const DeleteRuleGroupRequestPrivate &other, DeleteRuleGroupRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

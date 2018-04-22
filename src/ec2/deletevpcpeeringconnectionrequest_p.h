@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DeleteVpcPeeringConnectionRequest;
 
-class QTAWS_EXPORT DeleteVpcPeeringConnectionRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DeleteVpcPeeringConnectionRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DeleteVpcPeeringConnectionRequestPrivate(const EC2Request::Action action,
+    DeleteVpcPeeringConnectionRequestPrivate(const Ec2Request::Action action,
                                    DeleteVpcPeeringConnectionRequest * const q);
     DeleteVpcPeeringConnectionRequestPrivate(const DeleteVpcPeeringConnectionRequestPrivate &other,
                                    DeleteVpcPeeringConnectionRequest * const q);

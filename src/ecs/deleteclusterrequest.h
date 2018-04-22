@@ -27,7 +27,7 @@ namespace ECS {
 
 class DeleteClusterRequestPrivate;
 
-class QTAWS_EXPORT DeleteClusterRequest : public ECSRequest {
+class QTAWS_EXPORT DeleteClusterRequest : public EcsRequest {
 
 public:
     DeleteClusterRequest(const DeleteClusterRequest &other);

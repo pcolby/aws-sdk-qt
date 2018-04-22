@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 PollForActivityTaskRequest::PollForActivityTaskRequest(const PollForActivityTaskRequest &other)
-    : SWFRequest(new PollForActivityTaskRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new PollForActivityTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ PollForActivityTaskRequest::PollForActivityTaskRequest(const PollForActivityTask
  * Constructs a PollForActivityTaskRequest object.
  */
 PollForActivityTaskRequest::PollForActivityTaskRequest()
-    : SWFRequest(new PollForActivityTaskRequestPrivate(SWFRequest::PollForActivityTaskAction, this))
+    : SwfRequest(new PollForActivityTaskRequestPrivate(SwfRequest::PollForActivityTaskAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * PollForActivityTaskRequest::response(QNetwork
  */
 
 /*!
- * Constructs a PollForActivityTaskRequestPrivate object for SWF \a action,
+ * Constructs a PollForActivityTaskRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
-    const SWFRequest::Action action, PollForActivityTaskRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, PollForActivityTaskRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
  */
 PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
     const PollForActivityTaskRequestPrivate &other, PollForActivityTaskRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

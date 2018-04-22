@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest(const CreateReservedInstancesListingRequest &other)
-    : EC2Request(new CreateReservedInstancesListingRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateReservedInstancesListingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest(con
  * Constructs a CreateReservedInstancesListingRequest object.
  */
 CreateReservedInstancesListingRequest::CreateReservedInstancesListingRequest()
-    : EC2Request(new CreateReservedInstancesListingRequestPrivate(EC2Request::CreateReservedInstancesListingAction, this))
+    : Ec2Request(new CreateReservedInstancesListingRequestPrivate(Ec2Request::CreateReservedInstancesListingAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateReservedInstancesListingRequest::respon
  */
 
 /*!
- * Constructs a CreateReservedInstancesListingRequestPrivate object for EC2 \a action,
+ * Constructs a CreateReservedInstancesListingRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequestPrivate(
-    const EC2Request::Action action, CreateReservedInstancesListingRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateReservedInstancesListingRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequ
  */
 CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequestPrivate(
     const CreateReservedInstancesListingRequestPrivate &other, CreateReservedInstancesListingRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

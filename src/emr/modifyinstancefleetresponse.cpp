@@ -47,7 +47,7 @@ ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
         const ModifyInstanceFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ModifyInstanceFleetResponsePrivate(this), parent)
+    : EmrResponse(new ModifyInstanceFleetResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstanceFleetRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyInstanceFleetResponsePrivate object with public implementation \a q.
  */
 ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
-    ModifyInstanceFleetResponse * const q) : EMRResponsePrivate(q)
+    ModifyInstanceFleetResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

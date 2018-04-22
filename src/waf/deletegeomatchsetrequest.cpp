@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetRequest &other)
-    : WAFRequest(new DeleteGeoMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteGeoMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest(const DeleteGeoMatchSetReques
  * Constructs a DeleteGeoMatchSetRequest object.
  */
 DeleteGeoMatchSetRequest::DeleteGeoMatchSetRequest()
-    : WAFRequest(new DeleteGeoMatchSetRequestPrivate(WAFRequest::DeleteGeoMatchSetAction, this))
+    : WafRequest(new DeleteGeoMatchSetRequestPrivate(WafRequest::DeleteGeoMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteGeoMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteGeoMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
-    const WAFRequest::Action action, DeleteGeoMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteGeoMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const DeleteGeoMatchSetRequestPrivate &other, DeleteGeoMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

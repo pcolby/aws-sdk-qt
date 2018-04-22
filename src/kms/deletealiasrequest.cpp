@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 DeleteAliasRequest::DeleteAliasRequest(const DeleteAliasRequest &other)
-    : KMSRequest(new DeleteAliasRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new DeleteAliasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ DeleteAliasRequest::DeleteAliasRequest(const DeleteAliasRequest &other)
  * Constructs a DeleteAliasRequest object.
  */
 DeleteAliasRequest::DeleteAliasRequest()
-    : KMSRequest(new DeleteAliasRequestPrivate(KMSRequest::DeleteAliasAction, this))
+    : KmsRequest(new DeleteAliasRequestPrivate(KmsRequest::DeleteAliasAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DeleteAliasRequestPrivate object for KMS \a action,
+ * Constructs a DeleteAliasRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
-    const KMSRequest::Action action, DeleteAliasRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, DeleteAliasRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const DeleteAliasRequestPrivate &other, DeleteAliasRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

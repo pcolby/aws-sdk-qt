@@ -27,7 +27,7 @@ namespace DAX {
 
 class UpdateSubnetGroupRequestPrivate;
 
-class QTAWS_EXPORT UpdateSubnetGroupRequest : public DAXRequest {
+class QTAWS_EXPORT UpdateSubnetGroupRequest : public DaxRequest {
 
 public:
     UpdateSubnetGroupRequest(const UpdateSubnetGroupRequest &other);

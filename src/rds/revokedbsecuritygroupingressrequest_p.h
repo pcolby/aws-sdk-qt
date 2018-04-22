@@ -28,10 +28,10 @@ namespace RDS {
 
 class RevokeDBSecurityGroupIngressRequest;
 
-class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequestPrivate : public RdsRequestPrivate {
 
 public:
-    RevokeDBSecurityGroupIngressRequestPrivate(const RDSRequest::Action action,
+    RevokeDBSecurityGroupIngressRequestPrivate(const RdsRequest::Action action,
                                    RevokeDBSecurityGroupIngressRequest * const q);
     RevokeDBSecurityGroupIngressRequestPrivate(const RevokeDBSecurityGroupIngressRequestPrivate &other,
                                    RevokeDBSecurityGroupIngressRequest * const q);

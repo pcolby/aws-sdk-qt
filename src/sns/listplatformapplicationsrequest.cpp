@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 ListPlatformApplicationsRequest::ListPlatformApplicationsRequest(const ListPlatformApplicationsRequest &other)
-    : SNSRequest(new ListPlatformApplicationsRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new ListPlatformApplicationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ ListPlatformApplicationsRequest::ListPlatformApplicationsRequest(const ListPlatf
  * Constructs a ListPlatformApplicationsRequest object.
  */
 ListPlatformApplicationsRequest::ListPlatformApplicationsRequest()
-    : SNSRequest(new ListPlatformApplicationsRequestPrivate(SNSRequest::ListPlatformApplicationsAction, this))
+    : SnsRequest(new ListPlatformApplicationsRequestPrivate(SnsRequest::ListPlatformApplicationsAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNe
  */
 
 /*!
- * Constructs a ListPlatformApplicationsRequestPrivate object for SNS \a action,
+ * Constructs a ListPlatformApplicationsRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
-    const SNSRequest::Action action, ListPlatformApplicationsRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, ListPlatformApplicationsRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
     const ListPlatformApplicationsRequestPrivate &other, ListPlatformApplicationsRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

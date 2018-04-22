@@ -109,7 +109,7 @@ GetCredentialReportResponse::GetCredentialReportResponse(
         const GetCredentialReportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetCredentialReportResponsePrivate(this), parent)
+    : IamResponse(new GetCredentialReportResponsePrivate(this), parent)
 {
     setRequest(new GetCredentialReportRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetCredentialReportResponse::parseSuccess(QIODevice &response)
  * Constructs a GetCredentialReportResponsePrivate object with public implementation \a q.
  */
 GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
-    GetCredentialReportResponse * const q) : IAMResponsePrivate(q)
+    GetCredentialReportResponse * const q) : IamResponsePrivate(q)
 {
 
 }

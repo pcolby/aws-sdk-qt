@@ -63,7 +63,7 @@ CreateStateMachineResponse::CreateStateMachineResponse(
         const CreateStateMachineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new CreateStateMachineResponsePrivate(this), parent)
+    : SfnResponse(new CreateStateMachineResponsePrivate(this), parent)
 {
     setRequest(new CreateStateMachineRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void CreateStateMachineResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateStateMachineResponsePrivate object with public implementation \a q.
  */
 CreateStateMachineResponsePrivate::CreateStateMachineResponsePrivate(
-    CreateStateMachineResponse * const q) : SFNResponsePrivate(q)
+    CreateStateMachineResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

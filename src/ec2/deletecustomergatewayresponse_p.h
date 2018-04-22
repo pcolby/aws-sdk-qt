@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteCustomerGatewayResponse;
 
-class QTAWS_EXPORT DeleteCustomerGatewayResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT DeleteCustomerGatewayResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

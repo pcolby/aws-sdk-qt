@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteActivationResponsePrivate;
 
-class QTAWS_EXPORT DeleteActivationResponse : public SSMResponse {
+class QTAWS_EXPORT DeleteActivationResponse : public SsmResponse {
     Q_OBJECT
 
 public:

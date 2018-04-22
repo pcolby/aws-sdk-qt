@@ -58,7 +58,7 @@ CreateTopicResponse::CreateTopicResponse(
         const CreateTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new CreateTopicResponsePrivate(this), parent)
+    : SnsResponse(new CreateTopicResponsePrivate(this), parent)
 {
     setRequest(new CreateTopicRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void CreateTopicResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateTopicResponsePrivate object with public implementation \a q.
  */
 CreateTopicResponsePrivate::CreateTopicResponsePrivate(
-    CreateTopicResponse * const q) : SNSResponsePrivate(q)
+    CreateTopicResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

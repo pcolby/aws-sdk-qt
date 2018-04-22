@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetAccountAuthorizationDetailsRequest::GetAccountAuthorizationDetailsRequest(const GetAccountAuthorizationDetailsRequest &other)
-    : IAMRequest(new GetAccountAuthorizationDetailsRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetAccountAuthorizationDetailsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetAccountAuthorizationDetailsRequest::GetAccountAuthorizationDetailsRequest(con
  * Constructs a GetAccountAuthorizationDetailsRequest object.
  */
 GetAccountAuthorizationDetailsRequest::GetAccountAuthorizationDetailsRequest()
-    : IAMRequest(new GetAccountAuthorizationDetailsRequestPrivate(IAMRequest::GetAccountAuthorizationDetailsAction, this))
+    : IamRequest(new GetAccountAuthorizationDetailsRequestPrivate(IamRequest::GetAccountAuthorizationDetailsAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::respon
  */
 
 /*!
- * Constructs a GetAccountAuthorizationDetailsRequestPrivate object for IAM \a action,
+ * Constructs a GetAccountAuthorizationDetailsRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
-    const IAMRequest::Action action, GetAccountAuthorizationDetailsRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetAccountAuthorizationDetailsRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequ
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
     const GetAccountAuthorizationDetailsRequestPrivate &other, GetAccountAuthorizationDetailsRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

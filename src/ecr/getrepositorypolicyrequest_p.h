@@ -28,10 +28,10 @@ namespace ECR {
 
 class GetRepositoryPolicyRequest;
 
-class QTAWS_EXPORT GetRepositoryPolicyRequestPrivate : public ECRRequestPrivate {
+class QTAWS_EXPORT GetRepositoryPolicyRequestPrivate : public EcrRequestPrivate {
 
 public:
-    GetRepositoryPolicyRequestPrivate(const ECRRequest::Action action,
+    GetRepositoryPolicyRequestPrivate(const EcrRequest::Action action,
                                    GetRepositoryPolicyRequest * const q);
     GetRepositoryPolicyRequestPrivate(const GetRepositoryPolicyRequestPrivate &other,
                                    GetRepositoryPolicyRequest * const q);

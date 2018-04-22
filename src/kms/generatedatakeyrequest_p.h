@@ -28,10 +28,10 @@ namespace KMS {
 
 class GenerateDataKeyRequest;
 
-class QTAWS_EXPORT GenerateDataKeyRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT GenerateDataKeyRequestPrivate : public KmsRequestPrivate {
 
 public:
-    GenerateDataKeyRequestPrivate(const KMSRequest::Action action,
+    GenerateDataKeyRequestPrivate(const KmsRequest::Action action,
                                    GenerateDataKeyRequest * const q);
     GenerateDataKeyRequestPrivate(const GenerateDataKeyRequestPrivate &other,
                                    GenerateDataKeyRequest * const q);

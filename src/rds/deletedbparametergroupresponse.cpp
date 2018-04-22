@@ -108,7 +108,7 @@ DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
         const DeleteDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponsePrivate(
-    DeleteDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

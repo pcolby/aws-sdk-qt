@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicyRequest &other)
-    : WAFRequest(new GetPermissionPolicyRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetPermissionPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicy
  * Constructs a GetPermissionPolicyRequest object.
  */
 GetPermissionPolicyRequest::GetPermissionPolicyRequest()
-    : WAFRequest(new GetPermissionPolicyRequestPrivate(WAFRequest::GetPermissionPolicyAction, this))
+    : WafRequest(new GetPermissionPolicyRequestPrivate(WafRequest::GetPermissionPolicyAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
  */
 
 /*!
- * Constructs a GetPermissionPolicyRequestPrivate object for WAF \a action,
+ * Constructs a GetPermissionPolicyRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
-    const WAFRequest::Action action, GetPermissionPolicyRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetPermissionPolicyRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const GetPermissionPolicyRequestPrivate &other, GetPermissionPolicyRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

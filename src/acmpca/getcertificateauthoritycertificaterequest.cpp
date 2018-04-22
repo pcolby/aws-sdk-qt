@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 GetCertificateAuthorityCertificateRequest::GetCertificateAuthorityCertificateRequest(const GetCertificateAuthorityCertificateRequest &other)
-    : ACMPCARequest(new GetCertificateAuthorityCertificateRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new GetCertificateAuthorityCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ GetCertificateAuthorityCertificateRequest::GetCertificateAuthorityCertificateReq
  * Constructs a GetCertificateAuthorityCertificateRequest object.
  */
 GetCertificateAuthorityCertificateRequest::GetCertificateAuthorityCertificateRequest()
-    : ACMPCARequest(new GetCertificateAuthorityCertificateRequestPrivate(ACMPCARequest::GetCertificateAuthorityCertificateAction, this))
+    : AcmpcaRequest(new GetCertificateAuthorityCertificateRequestPrivate(AcmpcaRequest::GetCertificateAuthorityCertificateAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * GetCertificateAuthorityCertificateRequest::re
  */
 
 /*!
- * Constructs a GetCertificateAuthorityCertificateRequestPrivate object for ACMPCA \a action,
+ * Constructs a GetCertificateAuthorityCertificateRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 GetCertificateAuthorityCertificateRequestPrivate::GetCertificateAuthorityCertificateRequestPrivate(
-    const ACMPCARequest::Action action, GetCertificateAuthorityCertificateRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, GetCertificateAuthorityCertificateRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ GetCertificateAuthorityCertificateRequestPrivate::GetCertificateAuthorityCertifi
  */
 GetCertificateAuthorityCertificateRequestPrivate::GetCertificateAuthorityCertificateRequestPrivate(
     const GetCertificateAuthorityCertificateRequestPrivate &other, GetCertificateAuthorityCertificateRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
-    : DAXRequest(new UpdateClusterRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new UpdateClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UpdateClusterRequest::UpdateClusterRequest(const UpdateClusterRequest &other)
  * Constructs a UpdateClusterRequest object.
  */
 UpdateClusterRequest::UpdateClusterRequest()
-    : DAXRequest(new UpdateClusterRequestPrivate(DAXRequest::UpdateClusterAction, this))
+    : DaxRequest(new UpdateClusterRequestPrivate(DaxRequest::UpdateClusterAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a UpdateClusterRequestPrivate object for DAX \a action,
+ * Constructs a UpdateClusterRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
-    const DAXRequest::Action action, UpdateClusterRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, UpdateClusterRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const UpdateClusterRequestPrivate &other, UpdateClusterRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CancelImportTaskRequest::CancelImportTaskRequest(const CancelImportTaskRequest &other)
-    : EC2Request(new CancelImportTaskRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CancelImportTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CancelImportTaskRequest::CancelImportTaskRequest(const CancelImportTaskRequest &
  * Constructs a CancelImportTaskRequest object.
  */
 CancelImportTaskRequest::CancelImportTaskRequest()
-    : EC2Request(new CancelImportTaskRequestPrivate(EC2Request::CancelImportTaskAction, this))
+    : Ec2Request(new CancelImportTaskRequestPrivate(Ec2Request::CancelImportTaskAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CancelImportTaskRequestPrivate object for EC2 \a action,
+ * Constructs a CancelImportTaskRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
-    const EC2Request::Action action, CancelImportTaskRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CancelImportTaskRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
  */
 CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
     const CancelImportTaskRequestPrivate &other, CancelImportTaskRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

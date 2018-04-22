@@ -55,7 +55,7 @@ SetReceiptRulePositionResponse::SetReceiptRulePositionResponse(
         const SetReceiptRulePositionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetReceiptRulePositionResponsePrivate(this), parent)
+    : SesResponse(new SetReceiptRulePositionResponsePrivate(this), parent)
 {
     setRequest(new SetReceiptRulePositionRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
  * Constructs a SetReceiptRulePositionResponsePrivate object with public implementation \a q.
  */
 SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
-    SetReceiptRulePositionResponse * const q) : SESResponsePrivate(q)
+    SetReceiptRulePositionResponse * const q) : SesResponsePrivate(q)
 {
 
 }

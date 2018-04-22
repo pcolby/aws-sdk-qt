@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 SendCommandRequest::SendCommandRequest(const SendCommandRequest &other)
-    : SSMRequest(new SendCommandRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new SendCommandRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ SendCommandRequest::SendCommandRequest(const SendCommandRequest &other)
  * Constructs a SendCommandRequest object.
  */
 SendCommandRequest::SendCommandRequest()
-    : SSMRequest(new SendCommandRequestPrivate(SSMRequest::SendCommandAction, this))
+    : SsmRequest(new SendCommandRequestPrivate(SsmRequest::SendCommandAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * SendCommandRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a SendCommandRequestPrivate object for SSM \a action,
+ * Constructs a SendCommandRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
-    const SSMRequest::Action action, SendCommandRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, SendCommandRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ SendCommandRequestPrivate::SendCommandRequestPrivate(
  */
 SendCommandRequestPrivate::SendCommandRequestPrivate(
     const SendCommandRequestPrivate &other, SendCommandRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

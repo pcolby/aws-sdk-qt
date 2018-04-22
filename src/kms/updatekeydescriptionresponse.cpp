@@ -143,7 +143,7 @@ UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
         const UpdateKeyDescriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new UpdateKeyDescriptionResponsePrivate(this), parent)
+    : KmsResponse(new UpdateKeyDescriptionResponsePrivate(this), parent)
 {
     setRequest(new UpdateKeyDescriptionRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void UpdateKeyDescriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateKeyDescriptionResponsePrivate object with public implementation \a q.
  */
 UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponsePrivate(
-    UpdateKeyDescriptionResponse * const q) : KMSResponsePrivate(q)
+    UpdateKeyDescriptionResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

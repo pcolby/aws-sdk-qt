@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 AddInstanceFleetRequest::AddInstanceFleetRequest(const AddInstanceFleetRequest &other)
-    : EMRRequest(new AddInstanceFleetRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new AddInstanceFleetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ AddInstanceFleetRequest::AddInstanceFleetRequest(const AddInstanceFleetRequest &
  * Constructs a AddInstanceFleetRequest object.
  */
 AddInstanceFleetRequest::AddInstanceFleetRequest()
-    : EMRRequest(new AddInstanceFleetRequestPrivate(EMRRequest::AddInstanceFleetAction, this))
+    : EmrRequest(new AddInstanceFleetRequestPrivate(EmrRequest::AddInstanceFleetAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * AddInstanceFleetRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a AddInstanceFleetRequestPrivate object for EMR \a action,
+ * Constructs a AddInstanceFleetRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
-    const EMRRequest::Action action, AddInstanceFleetRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, AddInstanceFleetRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
  */
 AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
     const AddInstanceFleetRequestPrivate &other, AddInstanceFleetRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

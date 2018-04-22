@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 DeleteReplicationJobRequest::DeleteReplicationJobRequest(const DeleteReplicationJobRequest &other)
-    : SMSRequest(new DeleteReplicationJobRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new DeleteReplicationJobRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ DeleteReplicationJobRequest::DeleteReplicationJobRequest(const DeleteReplication
  * Constructs a DeleteReplicationJobRequest object.
  */
 DeleteReplicationJobRequest::DeleteReplicationJobRequest()
-    : SMSRequest(new DeleteReplicationJobRequestPrivate(SMSRequest::DeleteReplicationJobAction, this))
+    : SmsRequest(new DeleteReplicationJobRequestPrivate(SmsRequest::DeleteReplicationJobAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DeleteReplicationJobRequestPrivate object for SMS \a action,
+ * Constructs a DeleteReplicationJobRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
-    const SMSRequest::Action action, DeleteReplicationJobRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, DeleteReplicationJobRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
     const DeleteReplicationJobRequestPrivate &other, DeleteReplicationJobRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

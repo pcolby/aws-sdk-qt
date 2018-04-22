@@ -48,7 +48,7 @@ DescribeConversionTasksResponse::DescribeConversionTasksResponse(
         const DescribeConversionTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeConversionTasksResponsePrivate(this), parent)
+    : Ec2Response(new DescribeConversionTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeConversionTasksRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeConversionTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeConversionTasksResponsePrivate object with public implementation \a q.
  */
 DescribeConversionTasksResponsePrivate::DescribeConversionTasksResponsePrivate(
-    DescribeConversionTasksResponse * const q) : EC2ResponsePrivate(q)
+    DescribeConversionTasksResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

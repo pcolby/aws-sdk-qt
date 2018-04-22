@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeInventoryDeletionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeInventoryDeletionsResponse : public SSMResponse {
+class QTAWS_EXPORT DescribeInventoryDeletionsResponse : public SsmResponse {
     Q_OBJECT
 
 public:

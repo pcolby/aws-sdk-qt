@@ -49,7 +49,7 @@ ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
         const ListSizeConstraintSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)
+    : WafResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)
 {
     setRequest(new ListSizeConstraintSetsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListSizeConstraintSetsResponsePrivate object with public implementation \a q.
  */
 ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
-    ListSizeConstraintSetsResponse * const q) : WAFResponsePrivate(q)
+    ListSizeConstraintSetsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

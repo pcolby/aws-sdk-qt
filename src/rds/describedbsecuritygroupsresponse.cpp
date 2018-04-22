@@ -108,7 +108,7 @@ DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse(
         const DescribeDBSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBSecurityGroupsResponsePrivate(this), parent)
+    : RdsResponse(new DescribeDBSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBSecurityGroupsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeDBSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDBSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate(
-    DescribeDBSecurityGroupsResponse * const q) : RDSResponsePrivate(q)
+    DescribeDBSecurityGroupsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

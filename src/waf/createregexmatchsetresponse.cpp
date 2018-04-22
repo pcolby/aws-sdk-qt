@@ -49,7 +49,7 @@ CreateRegexMatchSetResponse::CreateRegexMatchSetResponse(
         const CreateRegexMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new CreateRegexMatchSetResponsePrivate(this), parent)
+    : WafResponse(new CreateRegexMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateRegexMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void CreateRegexMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateRegexMatchSetResponsePrivate::CreateRegexMatchSetResponsePrivate(
-    CreateRegexMatchSetResponse * const q) : WAFResponsePrivate(q)
+    CreateRegexMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
-    : DAXRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DescribeEventsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeEventsRequest::DescribeEventsRequest(const DescribeEventsRequest &other)
  * Constructs a DescribeEventsRequest object.
  */
 DescribeEventsRequest::DescribeEventsRequest()
-    : DAXRequest(new DescribeEventsRequestPrivate(DAXRequest::DescribeEventsAction, this))
+    : DaxRequest(new DescribeEventsRequestPrivate(DaxRequest::DescribeEventsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DescribeEventsRequestPrivate object for DAX \a action,
+ * Constructs a DescribeEventsRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
-    const DAXRequest::Action action, DescribeEventsRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DescribeEventsRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DescribeEventsRequestPrivate &other, DescribeEventsRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

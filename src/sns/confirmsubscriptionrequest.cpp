@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 ConfirmSubscriptionRequest::ConfirmSubscriptionRequest(const ConfirmSubscriptionRequest &other)
-    : SNSRequest(new ConfirmSubscriptionRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new ConfirmSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ ConfirmSubscriptionRequest::ConfirmSubscriptionRequest(const ConfirmSubscription
  * Constructs a ConfirmSubscriptionRequest object.
  */
 ConfirmSubscriptionRequest::ConfirmSubscriptionRequest()
-    : SNSRequest(new ConfirmSubscriptionRequestPrivate(SNSRequest::ConfirmSubscriptionAction, this))
+    : SnsRequest(new ConfirmSubscriptionRequestPrivate(SnsRequest::ConfirmSubscriptionAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * ConfirmSubscriptionRequest::response(QNetwork
  */
 
 /*!
- * Constructs a ConfirmSubscriptionRequestPrivate object for SNS \a action,
+ * Constructs a ConfirmSubscriptionRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
-    const SNSRequest::Action action, ConfirmSubscriptionRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, ConfirmSubscriptionRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
     const ConfirmSubscriptionRequestPrivate &other, ConfirmSubscriptionRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

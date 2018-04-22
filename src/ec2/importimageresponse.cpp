@@ -48,7 +48,7 @@ ImportImageResponse::ImportImageResponse(
         const ImportImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ImportImageResponsePrivate(this), parent)
+    : Ec2Response(new ImportImageResponsePrivate(this), parent)
 {
     setRequest(new ImportImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ImportImageResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportImageResponsePrivate object with public implementation \a q.
  */
 ImportImageResponsePrivate::ImportImageResponsePrivate(
-    ImportImageResponse * const q) : EC2ResponsePrivate(q)
+    ImportImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

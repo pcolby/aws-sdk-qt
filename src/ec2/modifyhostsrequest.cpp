@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyHostsRequest::ModifyHostsRequest(const ModifyHostsRequest &other)
-    : EC2Request(new ModifyHostsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyHostsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyHostsRequest::ModifyHostsRequest(const ModifyHostsRequest &other)
  * Constructs a ModifyHostsRequest object.
  */
 ModifyHostsRequest::ModifyHostsRequest()
-    : EC2Request(new ModifyHostsRequestPrivate(EC2Request::ModifyHostsAction, this))
+    : Ec2Request(new ModifyHostsRequestPrivate(Ec2Request::ModifyHostsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a ModifyHostsRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyHostsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
-    const EC2Request::Action action, ModifyHostsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyHostsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
     const ModifyHostsRequestPrivate &other, ModifyHostsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

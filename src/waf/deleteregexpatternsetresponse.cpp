@@ -49,7 +49,7 @@ DeleteRegexPatternSetResponse::DeleteRegexPatternSetResponse(
         const DeleteRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteRegexPatternSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteRegexPatternSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponsePrivate(
-    DeleteRegexPatternSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteRegexPatternSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

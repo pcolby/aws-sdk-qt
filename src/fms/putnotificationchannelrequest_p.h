@@ -28,10 +28,10 @@ namespace FMS {
 
 class PutNotificationChannelRequest;
 
-class QTAWS_EXPORT PutNotificationChannelRequestPrivate : public FMSRequestPrivate {
+class QTAWS_EXPORT PutNotificationChannelRequestPrivate : public FmsRequestPrivate {
 
 public:
-    PutNotificationChannelRequestPrivate(const FMSRequest::Action action,
+    PutNotificationChannelRequestPrivate(const FmsRequest::Action action,
                                    PutNotificationChannelRequest * const q);
     PutNotificationChannelRequestPrivate(const PutNotificationChannelRequestPrivate &other,
                                    PutNotificationChannelRequest * const q);

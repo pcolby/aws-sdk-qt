@@ -28,10 +28,10 @@ namespace RDS {
 
 class ModifyDBClusterRequest;
 
-class QTAWS_EXPORT ModifyDBClusterRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT ModifyDBClusterRequestPrivate : public RdsRequestPrivate {
 
 public:
-    ModifyDBClusterRequestPrivate(const RDSRequest::Action action,
+    ModifyDBClusterRequestPrivate(const RdsRequest::Action action,
                                    ModifyDBClusterRequest * const q);
     ModifyDBClusterRequestPrivate(const ModifyDBClusterRequestPrivate &other,
                                    ModifyDBClusterRequest * const q);

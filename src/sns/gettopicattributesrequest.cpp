@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 GetTopicAttributesRequest::GetTopicAttributesRequest(const GetTopicAttributesRequest &other)
-    : SNSRequest(new GetTopicAttributesRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new GetTopicAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ GetTopicAttributesRequest::GetTopicAttributesRequest(const GetTopicAttributesReq
  * Constructs a GetTopicAttributesRequest object.
  */
 GetTopicAttributesRequest::GetTopicAttributesRequest()
-    : SNSRequest(new GetTopicAttributesRequestPrivate(SNSRequest::GetTopicAttributesAction, this))
+    : SnsRequest(new GetTopicAttributesRequestPrivate(SnsRequest::GetTopicAttributesAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a GetTopicAttributesRequestPrivate object for SNS \a action,
+ * Constructs a GetTopicAttributesRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
-    const SNSRequest::Action action, GetTopicAttributesRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, GetTopicAttributesRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
     const GetTopicAttributesRequestPrivate &other, GetTopicAttributesRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

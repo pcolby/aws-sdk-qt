@@ -28,10 +28,10 @@ namespace WAF {
 
 class PutPermissionPolicyRequest;
 
-class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WafRequestPrivate {
 
 public:
-    PutPermissionPolicyRequestPrivate(const WAFRequest::Action action,
+    PutPermissionPolicyRequestPrivate(const WafRequest::Action action,
                                    PutPermissionPolicyRequest * const q);
     PutPermissionPolicyRequestPrivate(const PutPermissionPolicyRequestPrivate &other,
                                    PutPermissionPolicyRequest * const q);

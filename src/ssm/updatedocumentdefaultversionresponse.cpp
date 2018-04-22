@@ -68,7 +68,7 @@ UpdateDocumentDefaultVersionResponse::UpdateDocumentDefaultVersionResponse(
         const UpdateDocumentDefaultVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateDocumentDefaultVersionResponsePrivate(this), parent)
+    : SsmResponse(new UpdateDocumentDefaultVersionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentDefaultVersionRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void UpdateDocumentDefaultVersionResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateDocumentDefaultVersionResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentDefaultVersionResponsePrivate::UpdateDocumentDefaultVersionResponsePrivate(
-    UpdateDocumentDefaultVersionResponse * const q) : SSMResponsePrivate(q)
+    UpdateDocumentDefaultVersionResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

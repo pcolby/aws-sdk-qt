@@ -61,7 +61,7 @@ DescribeServicesResponse::DescribeServicesResponse(
         const DescribeServicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DescribeServicesResponsePrivate(this), parent)
+    : EcsResponse(new DescribeServicesResponsePrivate(this), parent)
 {
     setRequest(new DescribeServicesRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DescribeServicesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeServicesResponsePrivate object with public implementation \a q.
  */
 DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
-    DescribeServicesResponse * const q) : ECSResponsePrivate(q)
+    DescribeServicesResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

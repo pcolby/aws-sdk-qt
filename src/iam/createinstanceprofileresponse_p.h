@@ -27,7 +27,7 @@ namespace IAM {
 
 class CreateInstanceProfileResponse;
 
-class QTAWS_EXPORT CreateInstanceProfileResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT CreateInstanceProfileResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

@@ -109,7 +109,7 @@ GetRoleResponse::GetRoleResponse(
         const GetRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetRoleResponsePrivate(this), parent)
+    : IamResponse(new GetRoleResponsePrivate(this), parent)
 {
     setRequest(new GetRoleRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a GetRoleResponsePrivate object with public implementation \a q.
  */
 GetRoleResponsePrivate::GetRoleResponsePrivate(
-    GetRoleResponse * const q) : IAMResponsePrivate(q)
+    GetRoleResponse * const q) : IamResponsePrivate(q)
 {
 
 }

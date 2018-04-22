@@ -28,10 +28,10 @@ namespace SQS {
 
 class SetQueueAttributesRequest;
 
-class QTAWS_EXPORT SetQueueAttributesRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT SetQueueAttributesRequestPrivate : public SqsRequestPrivate {
 
 public:
-    SetQueueAttributesRequestPrivate(const SQSRequest::Action action,
+    SetQueueAttributesRequestPrivate(const SqsRequest::Action action,
                                    SetQueueAttributesRequest * const q);
     SetQueueAttributesRequestPrivate(const SetQueueAttributesRequestPrivate &other,
                                    SetQueueAttributesRequest * const q);

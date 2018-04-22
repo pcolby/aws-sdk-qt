@@ -108,7 +108,7 @@ DeleteDBClusterResponse::DeleteDBClusterResponse(
         const DeleteDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBClusterResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBClusterRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBClusterResponsePrivate object with public implementation \a q.
  */
 DeleteDBClusterResponsePrivate::DeleteDBClusterResponsePrivate(
-    DeleteDBClusterResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBClusterResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

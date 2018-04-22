@@ -49,7 +49,7 @@ DeleteXssMatchSetResponse::DeleteXssMatchSetResponse(
         const DeleteXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteXssMatchSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteXssMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteXssMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteXssMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteXssMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponsePrivate(
-    DeleteXssMatchSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteXssMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

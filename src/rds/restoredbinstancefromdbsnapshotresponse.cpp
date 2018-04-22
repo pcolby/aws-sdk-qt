@@ -108,7 +108,7 @@ RestoreDBInstanceFromDBSnapshotResponse::RestoreDBInstanceFromDBSnapshotResponse
         const RestoreDBInstanceFromDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBInstanceFromDBSnapshotResponsePrivate(this), parent)
+    : RdsResponse(new RestoreDBInstanceFromDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBInstanceFromDBSnapshotRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a RestoreDBInstanceFromDBSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotResponsePrivate(
-    RestoreDBInstanceFromDBSnapshotResponse * const q) : RDSResponsePrivate(q)
+    RestoreDBInstanceFromDBSnapshotResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

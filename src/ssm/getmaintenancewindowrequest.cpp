@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetMaintenanceWindowRequest::GetMaintenanceWindowRequest(const GetMaintenanceWindowRequest &other)
-    : SSMRequest(new GetMaintenanceWindowRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetMaintenanceWindowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetMaintenanceWindowRequest::GetMaintenanceWindowRequest(const GetMaintenanceWin
  * Constructs a GetMaintenanceWindowRequest object.
  */
 GetMaintenanceWindowRequest::GetMaintenanceWindowRequest()
-    : SSMRequest(new GetMaintenanceWindowRequestPrivate(SSMRequest::GetMaintenanceWindowAction, this))
+    : SsmRequest(new GetMaintenanceWindowRequestPrivate(SsmRequest::GetMaintenanceWindowAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetMaintenanceWindowRequestPrivate object for SSM \a action,
+ * Constructs a GetMaintenanceWindowRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetMaintenanceWindowRequestPrivate::GetMaintenanceWindowRequestPrivate(
-    const SSMRequest::Action action, GetMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetMaintenanceWindowRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetMaintenanceWindowRequestPrivate::GetMaintenanceWindowRequestPrivate(
  */
 GetMaintenanceWindowRequestPrivate::GetMaintenanceWindowRequestPrivate(
     const GetMaintenanceWindowRequestPrivate &other, GetMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

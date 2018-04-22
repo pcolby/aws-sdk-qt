@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 AttachGroupPolicyRequest::AttachGroupPolicyRequest(const AttachGroupPolicyRequest &other)
-    : IAMRequest(new AttachGroupPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new AttachGroupPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ AttachGroupPolicyRequest::AttachGroupPolicyRequest(const AttachGroupPolicyReques
  * Constructs a AttachGroupPolicyRequest object.
  */
 AttachGroupPolicyRequest::AttachGroupPolicyRequest()
-    : IAMRequest(new AttachGroupPolicyRequestPrivate(IAMRequest::AttachGroupPolicyAction, this))
+    : IamRequest(new AttachGroupPolicyRequestPrivate(IamRequest::AttachGroupPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * AttachGroupPolicyRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a AttachGroupPolicyRequestPrivate object for IAM \a action,
+ * Constructs a AttachGroupPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
-    const IAMRequest::Action action, AttachGroupPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, AttachGroupPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
  */
 AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
     const AttachGroupPolicyRequestPrivate &other, AttachGroupPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

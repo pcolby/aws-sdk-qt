@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SetIdentityHeadersInNotificationsEnabledRequest::SetIdentityHeadersInNotificationsEnabledRequest(const SetIdentityHeadersInNotificationsEnabledRequest &other)
-    : SESRequest(new SetIdentityHeadersInNotificationsEnabledRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SetIdentityHeadersInNotificationsEnabledRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SetIdentityHeadersInNotificationsEnabledRequest::SetIdentityHeadersInNotificatio
  * Constructs a SetIdentityHeadersInNotificationsEnabledRequest object.
  */
 SetIdentityHeadersInNotificationsEnabledRequest::SetIdentityHeadersInNotificationsEnabledRequest()
-    : SESRequest(new SetIdentityHeadersInNotificationsEnabledRequestPrivate(SESRequest::SetIdentityHeadersInNotificationsEnabledAction, this))
+    : SesRequest(new SetIdentityHeadersInNotificationsEnabledRequestPrivate(SesRequest::SetIdentityHeadersInNotificationsEnabledAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledReque
  */
 
 /*!
- * Constructs a SetIdentityHeadersInNotificationsEnabledRequestPrivate object for SES \a action,
+ * Constructs a SetIdentityHeadersInNotificationsEnabledRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
-    const SESRequest::Action action, SetIdentityHeadersInNotificationsEnabledRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SetIdentityHeadersInNotificationsEnabledRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNoti
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
     const SetIdentityHeadersInNotificationsEnabledRequestPrivate &other, SetIdentityHeadersInNotificationsEnabledRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

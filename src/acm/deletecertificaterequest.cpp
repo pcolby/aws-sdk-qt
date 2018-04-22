@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateRequest &other)
-    : ACMRequest(new DeleteCertificateRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new DeleteCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ DeleteCertificateRequest::DeleteCertificateRequest(const DeleteCertificateReques
  * Constructs a DeleteCertificateRequest object.
  */
 DeleteCertificateRequest::DeleteCertificateRequest()
-    : ACMRequest(new DeleteCertificateRequestPrivate(ACMRequest::DeleteCertificateAction, this))
+    : AcmRequest(new DeleteCertificateRequestPrivate(AcmRequest::DeleteCertificateAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteCertificateRequestPrivate object for ACM \a action,
+ * Constructs a DeleteCertificateRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
-    const ACMRequest::Action action, DeleteCertificateRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, DeleteCertificateRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const DeleteCertificateRequestPrivate &other, DeleteCertificateRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

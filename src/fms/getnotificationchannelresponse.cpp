@@ -50,7 +50,7 @@ GetNotificationChannelResponse::GetNotificationChannelResponse(
         const GetNotificationChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new GetNotificationChannelResponsePrivate(this), parent)
+    : FmsResponse(new GetNotificationChannelResponsePrivate(this), parent)
 {
     setRequest(new GetNotificationChannelRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void GetNotificationChannelResponse::parseSuccess(QIODevice &response)
  * Constructs a GetNotificationChannelResponsePrivate object with public implementation \a q.
  */
 GetNotificationChannelResponsePrivate::GetNotificationChannelResponsePrivate(
-    GetNotificationChannelResponse * const q) : FMSResponsePrivate(q)
+    GetNotificationChannelResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

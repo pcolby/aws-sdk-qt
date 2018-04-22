@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 AddUserToGroupRequest::AddUserToGroupRequest(const AddUserToGroupRequest &other)
-    : IAMRequest(new AddUserToGroupRequestPrivate(*other.d_func(), this))
+    : IamRequest(new AddUserToGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ AddUserToGroupRequest::AddUserToGroupRequest(const AddUserToGroupRequest &other)
  * Constructs a AddUserToGroupRequest object.
  */
 AddUserToGroupRequest::AddUserToGroupRequest()
-    : IAMRequest(new AddUserToGroupRequestPrivate(IAMRequest::AddUserToGroupAction, this))
+    : IamRequest(new AddUserToGroupRequestPrivate(IamRequest::AddUserToGroupAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a AddUserToGroupRequestPrivate object for IAM \a action,
+ * Constructs a AddUserToGroupRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
-    const IAMRequest::Action action, AddUserToGroupRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, AddUserToGroupRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
     const AddUserToGroupRequestPrivate &other, AddUserToGroupRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

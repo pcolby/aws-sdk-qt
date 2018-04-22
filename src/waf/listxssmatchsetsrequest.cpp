@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListXssMatchSetsRequest::ListXssMatchSetsRequest(const ListXssMatchSetsRequest &other)
-    : WAFRequest(new ListXssMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListXssMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListXssMatchSetsRequest::ListXssMatchSetsRequest(const ListXssMatchSetsRequest &
  * Constructs a ListXssMatchSetsRequest object.
  */
 ListXssMatchSetsRequest::ListXssMatchSetsRequest()
-    : WAFRequest(new ListXssMatchSetsRequestPrivate(WAFRequest::ListXssMatchSetsAction, this))
+    : WafRequest(new ListXssMatchSetsRequestPrivate(WafRequest::ListXssMatchSetsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListXssMatchSetsRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ListXssMatchSetsRequestPrivate object for WAF \a action,
+ * Constructs a ListXssMatchSetsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
-    const WAFRequest::Action action, ListXssMatchSetsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListXssMatchSetsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
  */
 ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
     const ListXssMatchSetsRequestPrivate &other, ListXssMatchSetsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

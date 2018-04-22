@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteSizeConstraintSetRequest;
 
-class QTAWS_EXPORT DeleteSizeConstraintSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteSizeConstraintSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteSizeConstraintSetRequestPrivate(const WAFRequest::Action action,
+    DeleteSizeConstraintSetRequestPrivate(const WafRequest::Action action,
                                    DeleteSizeConstraintSetRequest * const q);
     DeleteSizeConstraintSetRequestPrivate(const DeleteSizeConstraintSetRequestPrivate &other,
                                    DeleteSizeConstraintSetRequest * const q);

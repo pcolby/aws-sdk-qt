@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 ImportKeyMaterialRequest::ImportKeyMaterialRequest(const ImportKeyMaterialRequest &other)
-    : KMSRequest(new ImportKeyMaterialRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new ImportKeyMaterialRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ ImportKeyMaterialRequest::ImportKeyMaterialRequest(const ImportKeyMaterialReques
  * Constructs a ImportKeyMaterialRequest object.
  */
 ImportKeyMaterialRequest::ImportKeyMaterialRequest()
-    : KMSRequest(new ImportKeyMaterialRequestPrivate(KMSRequest::ImportKeyMaterialAction, this))
+    : KmsRequest(new ImportKeyMaterialRequestPrivate(KmsRequest::ImportKeyMaterialAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ImportKeyMaterialRequestPrivate object for KMS \a action,
+ * Constructs a ImportKeyMaterialRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
-    const KMSRequest::Action action, ImportKeyMaterialRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, ImportKeyMaterialRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
     const ImportKeyMaterialRequestPrivate &other, ImportKeyMaterialRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

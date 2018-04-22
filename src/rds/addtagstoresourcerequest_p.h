@@ -28,10 +28,10 @@ namespace RDS {
 
 class AddTagsToResourceRequest;
 
-class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public RdsRequestPrivate {
 
 public:
-    AddTagsToResourceRequestPrivate(const RDSRequest::Action action,
+    AddTagsToResourceRequestPrivate(const RdsRequest::Action action,
                                    AddTagsToResourceRequest * const q);
     AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
                                    AddTagsToResourceRequest * const q);

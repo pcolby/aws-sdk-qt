@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ResetFpgaImageAttributeResponse;
 
-class QTAWS_EXPORT ResetFpgaImageAttributeResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT ResetFpgaImageAttributeResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

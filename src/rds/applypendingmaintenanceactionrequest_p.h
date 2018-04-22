@@ -28,10 +28,10 @@ namespace RDS {
 
 class ApplyPendingMaintenanceActionRequest;
 
-class QTAWS_EXPORT ApplyPendingMaintenanceActionRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT ApplyPendingMaintenanceActionRequestPrivate : public RdsRequestPrivate {
 
 public:
-    ApplyPendingMaintenanceActionRequestPrivate(const RDSRequest::Action action,
+    ApplyPendingMaintenanceActionRequestPrivate(const RdsRequest::Action action,
                                    ApplyPendingMaintenanceActionRequest * const q);
     ApplyPendingMaintenanceActionRequestPrivate(const ApplyPendingMaintenanceActionRequestPrivate &other,
                                    ApplyPendingMaintenanceActionRequest * const q);

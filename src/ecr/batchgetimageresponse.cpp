@@ -48,7 +48,7 @@ BatchGetImageResponse::BatchGetImageResponse(
         const BatchGetImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new BatchGetImageResponsePrivate(this), parent)
+    : EcrResponse(new BatchGetImageResponsePrivate(this), parent)
 {
     setRequest(new BatchGetImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void BatchGetImageResponse::parseSuccess(QIODevice &response)
  * Constructs a BatchGetImageResponsePrivate object with public implementation \a q.
  */
 BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
-    BatchGetImageResponse * const q) : ECRResponsePrivate(q)
+    BatchGetImageResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

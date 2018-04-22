@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListClustersResponsePrivate;
 
-class QTAWS_EXPORT ListClustersResponse : public ECSResponse {
+class QTAWS_EXPORT ListClustersResponse : public EcsResponse {
     Q_OBJECT
 
 public:

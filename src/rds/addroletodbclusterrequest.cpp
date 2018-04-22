@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 AddRoleToDBClusterRequest::AddRoleToDBClusterRequest(const AddRoleToDBClusterRequest &other)
-    : RDSRequest(new AddRoleToDBClusterRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new AddRoleToDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ AddRoleToDBClusterRequest::AddRoleToDBClusterRequest(const AddRoleToDBClusterReq
  * Constructs a AddRoleToDBClusterRequest object.
  */
 AddRoleToDBClusterRequest::AddRoleToDBClusterRequest()
-    : RDSRequest(new AddRoleToDBClusterRequestPrivate(RDSRequest::AddRoleToDBClusterAction, this))
+    : RdsRequest(new AddRoleToDBClusterRequestPrivate(RdsRequest::AddRoleToDBClusterAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * AddRoleToDBClusterRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a AddRoleToDBClusterRequestPrivate object for RDS \a action,
+ * Constructs a AddRoleToDBClusterRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
-    const RDSRequest::Action action, AddRoleToDBClusterRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, AddRoleToDBClusterRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
     const AddRoleToDBClusterRequestPrivate &other, AddRoleToDBClusterRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

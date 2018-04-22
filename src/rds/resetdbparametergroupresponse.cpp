@@ -108,7 +108,7 @@ ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
         const ResetDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ResetDBParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new ResetDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetDBParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
-    ResetDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    ResetDBParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

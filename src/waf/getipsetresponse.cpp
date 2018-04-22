@@ -49,7 +49,7 @@ GetIPSetResponse::GetIPSetResponse(
         const GetIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetIPSetResponsePrivate(this), parent)
+    : WafResponse(new GetIPSetResponsePrivate(this), parent)
 {
     setRequest(new GetIPSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetIPSetResponse::parseSuccess(QIODevice &response)
  * Constructs a GetIPSetResponsePrivate object with public implementation \a q.
  */
 GetIPSetResponsePrivate::GetIPSetResponsePrivate(
-    GetIPSetResponse * const q) : WAFResponsePrivate(q)
+    GetIPSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

@@ -68,7 +68,7 @@ DescribeParametersResponse::DescribeParametersResponse(
         const DescribeParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeParametersResponsePrivate(this), parent)
+    : SsmResponse(new DescribeParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeParametersRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeParametersResponsePrivate object with public implementation \a q.
  */
 DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
-    DescribeParametersResponse * const q) : SSMResponsePrivate(q)
+    DescribeParametersResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

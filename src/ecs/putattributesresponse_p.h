@@ -27,7 +27,7 @@ namespace ECS {
 
 class PutAttributesResponse;
 
-class QTAWS_EXPORT PutAttributesResponsePrivate : public ECSResponsePrivate {
+class QTAWS_EXPORT PutAttributesResponsePrivate : public EcsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 EnableKeyRequest::EnableKeyRequest(const EnableKeyRequest &other)
-    : KMSRequest(new EnableKeyRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new EnableKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ EnableKeyRequest::EnableKeyRequest(const EnableKeyRequest &other)
  * Constructs a EnableKeyRequest object.
  */
 EnableKeyRequest::EnableKeyRequest()
-    : KMSRequest(new EnableKeyRequestPrivate(KMSRequest::EnableKeyAction, this))
+    : KmsRequest(new EnableKeyRequestPrivate(KmsRequest::EnableKeyAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * EnableKeyRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a EnableKeyRequestPrivate object for KMS \a action,
+ * Constructs a EnableKeyRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 EnableKeyRequestPrivate::EnableKeyRequestPrivate(
-    const KMSRequest::Action action, EnableKeyRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, EnableKeyRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ EnableKeyRequestPrivate::EnableKeyRequestPrivate(
  */
 EnableKeyRequestPrivate::EnableKeyRequestPrivate(
     const EnableKeyRequestPrivate &other, EnableKeyRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

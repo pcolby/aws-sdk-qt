@@ -28,10 +28,10 @@ namespace SWF {
 
 class GetWorkflowExecutionHistoryRequest;
 
-class QTAWS_EXPORT GetWorkflowExecutionHistoryRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT GetWorkflowExecutionHistoryRequestPrivate : public SwfRequestPrivate {
 
 public:
-    GetWorkflowExecutionHistoryRequestPrivate(const SWFRequest::Action action,
+    GetWorkflowExecutionHistoryRequestPrivate(const SwfRequest::Action action,
                                    GetWorkflowExecutionHistoryRequest * const q);
     GetWorkflowExecutionHistoryRequestPrivate(const GetWorkflowExecutionHistoryRequestPrivate &other,
                                    GetWorkflowExecutionHistoryRequest * const q);

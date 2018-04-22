@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 DeleteCertificateAuthorityRequest::DeleteCertificateAuthorityRequest(const DeleteCertificateAuthorityRequest &other)
-    : ACMPCARequest(new DeleteCertificateAuthorityRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new DeleteCertificateAuthorityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ DeleteCertificateAuthorityRequest::DeleteCertificateAuthorityRequest(const Delet
  * Constructs a DeleteCertificateAuthorityRequest object.
  */
 DeleteCertificateAuthorityRequest::DeleteCertificateAuthorityRequest()
-    : ACMPCARequest(new DeleteCertificateAuthorityRequestPrivate(ACMPCARequest::DeleteCertificateAuthorityAction, this))
+    : AcmpcaRequest(new DeleteCertificateAuthorityRequestPrivate(AcmpcaRequest::DeleteCertificateAuthorityAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateAuthorityRequest::response(Q
  */
 
 /*!
- * Constructs a DeleteCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * Constructs a DeleteCertificateAuthorityRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPrivate(
-    const ACMPCARequest::Action action, DeleteCertificateAuthorityRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, DeleteCertificateAuthorityRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPriva
  */
 DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPrivate(
     const DeleteCertificateAuthorityRequestPrivate &other, DeleteCertificateAuthorityRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

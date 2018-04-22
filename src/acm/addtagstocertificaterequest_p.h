@@ -28,10 +28,10 @@ namespace ACM {
 
 class AddTagsToCertificateRequest;
 
-class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public ACMRequestPrivate {
+class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
-    AddTagsToCertificateRequestPrivate(const ACMRequest::Action action,
+    AddTagsToCertificateRequestPrivate(const AcmRequest::Action action,
                                    AddTagsToCertificateRequest * const q);
     AddTagsToCertificateRequestPrivate(const AddTagsToCertificateRequestPrivate &other,
                                    AddTagsToCertificateRequest * const q);

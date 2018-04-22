@@ -27,7 +27,7 @@ namespace WAF {
 
 class DeleteSqlInjectionMatchSetResponse;
 
-class QTAWS_EXPORT DeleteSqlInjectionMatchSetResponsePrivate : public WAFResponsePrivate {
+class QTAWS_EXPORT DeleteSqlInjectionMatchSetResponsePrivate : public WafResponsePrivate {
     Q_OBJECT
 
 public:

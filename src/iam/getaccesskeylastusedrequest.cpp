@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetAccessKeyLastUsedRequest::GetAccessKeyLastUsedRequest(const GetAccessKeyLastUsedRequest &other)
-    : IAMRequest(new GetAccessKeyLastUsedRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetAccessKeyLastUsedRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetAccessKeyLastUsedRequest::GetAccessKeyLastUsedRequest(const GetAccessKeyLastU
  * Constructs a GetAccessKeyLastUsedRequest object.
  */
 GetAccessKeyLastUsedRequest::GetAccessKeyLastUsedRequest()
-    : IAMRequest(new GetAccessKeyLastUsedRequestPrivate(IAMRequest::GetAccessKeyLastUsedAction, this))
+    : IamRequest(new GetAccessKeyLastUsedRequestPrivate(IamRequest::GetAccessKeyLastUsedAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetAccessKeyLastUsedRequestPrivate object for IAM \a action,
+ * Constructs a GetAccessKeyLastUsedRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
-    const IAMRequest::Action action, GetAccessKeyLastUsedRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetAccessKeyLastUsedRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
     const GetAccessKeyLastUsedRequestPrivate &other, GetAccessKeyLastUsedRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

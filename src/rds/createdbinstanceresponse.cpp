@@ -108,7 +108,7 @@ CreateDBInstanceResponse::CreateDBInstanceResponse(
         const CreateDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBInstanceResponsePrivate(this), parent)
+    : RdsResponse(new CreateDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new CreateDBInstanceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDBInstanceResponsePrivate object with public implementation \a q.
  */
 CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
-    CreateDBInstanceResponse * const q) : RDSResponsePrivate(q)
+    CreateDBInstanceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest(const AcceptVpcEndpointConnectionsRequest &other)
-    : EC2Request(new AcceptVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AcceptVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest(const A
  * Constructs a AcceptVpcEndpointConnectionsRequest object.
  */
 AcceptVpcEndpointConnectionsRequest::AcceptVpcEndpointConnectionsRequest()
-    : EC2Request(new AcceptVpcEndpointConnectionsRequestPrivate(EC2Request::AcceptVpcEndpointConnectionsAction, this))
+    : Ec2Request(new AcceptVpcEndpointConnectionsRequestPrivate(Ec2Request::AcceptVpcEndpointConnectionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AcceptVpcEndpointConnectionsRequest::response
  */
 
 /*!
- * Constructs a AcceptVpcEndpointConnectionsRequestPrivate object for EC2 \a action,
+ * Constructs a AcceptVpcEndpointConnectionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestPrivate(
-    const EC2Request::Action action, AcceptVpcEndpointConnectionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AcceptVpcEndpointConnectionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestP
  */
 AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestPrivate(
     const AcceptVpcEndpointConnectionsRequestPrivate &other, AcceptVpcEndpointConnectionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

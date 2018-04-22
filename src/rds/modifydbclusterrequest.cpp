@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyDBClusterRequest::ModifyDBClusterRequest(const ModifyDBClusterRequest &other)
-    : RDSRequest(new ModifyDBClusterRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyDBClusterRequest::ModifyDBClusterRequest(const ModifyDBClusterRequest &oth
  * Constructs a ModifyDBClusterRequest object.
  */
 ModifyDBClusterRequest::ModifyDBClusterRequest()
-    : RDSRequest(new ModifyDBClusterRequestPrivate(RDSRequest::ModifyDBClusterAction, this))
+    : RdsRequest(new ModifyDBClusterRequestPrivate(RdsRequest::ModifyDBClusterAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a ModifyDBClusterRequestPrivate object for RDS \a action,
+ * Constructs a ModifyDBClusterRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
-    const RDSRequest::Action action, ModifyDBClusterRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyDBClusterRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
     const ModifyDBClusterRequestPrivate &other, ModifyDBClusterRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

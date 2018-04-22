@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeStaleSecurityGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeStaleSecurityGroupsRequest : public EC2Request {
+class QTAWS_EXPORT DescribeStaleSecurityGroupsRequest : public Ec2Request {
 
 public:
     DescribeStaleSecurityGroupsRequest(const DescribeStaleSecurityGroupsRequest &other);

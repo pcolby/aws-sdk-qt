@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeInstancePatchStatesRequest::DescribeInstancePatchStatesRequest(const DescribeInstancePatchStatesRequest &other)
-    : SSMRequest(new DescribeInstancePatchStatesRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeInstancePatchStatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeInstancePatchStatesRequest::DescribeInstancePatchStatesRequest(const Des
  * Constructs a DescribeInstancePatchStatesRequest object.
  */
 DescribeInstancePatchStatesRequest::DescribeInstancePatchStatesRequest()
-    : SSMRequest(new DescribeInstancePatchStatesRequestPrivate(SSMRequest::DescribeInstancePatchStatesAction, this))
+    : SsmRequest(new DescribeInstancePatchStatesRequestPrivate(SsmRequest::DescribeInstancePatchStatesAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancePatchStatesRequest::response(
  */
 
 /*!
- * Constructs a DescribeInstancePatchStatesRequestPrivate object for SSM \a action,
+ * Constructs a DescribeInstancePatchStatesRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeInstancePatchStatesRequestPrivate::DescribeInstancePatchStatesRequestPrivate(
-    const SSMRequest::Action action, DescribeInstancePatchStatesRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeInstancePatchStatesRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeInstancePatchStatesRequestPrivate::DescribeInstancePatchStatesRequestPri
  */
 DescribeInstancePatchStatesRequestPrivate::DescribeInstancePatchStatesRequestPrivate(
     const DescribeInstancePatchStatesRequestPrivate &other, DescribeInstancePatchStatesRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

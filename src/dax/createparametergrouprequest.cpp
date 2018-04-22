@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 CreateParameterGroupRequest::CreateParameterGroupRequest(const CreateParameterGroupRequest &other)
-    : DAXRequest(new CreateParameterGroupRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new CreateParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateParameterGroupRequest::CreateParameterGroupRequest(const CreateParameterGr
  * Constructs a CreateParameterGroupRequest object.
  */
 CreateParameterGroupRequest::CreateParameterGroupRequest()
-    : DAXRequest(new CreateParameterGroupRequestPrivate(DAXRequest::CreateParameterGroupAction, this))
+    : DaxRequest(new CreateParameterGroupRequestPrivate(DaxRequest::CreateParameterGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetwor
  */
 
 /*!
- * Constructs a CreateParameterGroupRequestPrivate object for DAX \a action,
+ * Constructs a CreateParameterGroupRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
-    const DAXRequest::Action action, CreateParameterGroupRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, CreateParameterGroupRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
  */
 CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
     const CreateParameterGroupRequestPrivate &other, CreateParameterGroupRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace MQ {
 
 class ListConfigurationRevisionsResponse;
 
-class QTAWS_EXPORT ListConfigurationRevisionsResponsePrivate : public MQResponsePrivate {
+class QTAWS_EXPORT ListConfigurationRevisionsResponsePrivate : public MqResponsePrivate {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SNS {
 
 class SubscribeResponse;
 
-class QTAWS_EXPORT SubscribeResponsePrivate : public SNSResponsePrivate {
+class QTAWS_EXPORT SubscribeResponsePrivate : public SnsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest(const DescribeVolumesModificationsRequest &other)
-    : EC2Request(new DescribeVolumesModificationsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVolumesModificationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest(const D
  * Constructs a DescribeVolumesModificationsRequest object.
  */
 DescribeVolumesModificationsRequest::DescribeVolumesModificationsRequest()
-    : EC2Request(new DescribeVolumesModificationsRequestPrivate(EC2Request::DescribeVolumesModificationsAction, this))
+    : Ec2Request(new DescribeVolumesModificationsRequestPrivate(Ec2Request::DescribeVolumesModificationsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesModificationsRequest::response
  */
 
 /*!
- * Constructs a DescribeVolumesModificationsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVolumesModificationsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestPrivate(
-    const EC2Request::Action action, DescribeVolumesModificationsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVolumesModificationsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestP
  */
 DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestPrivate(
     const DescribeVolumesModificationsRequestPrivate &other, DescribeVolumesModificationsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

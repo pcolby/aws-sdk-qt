@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 AuthorizeDBSecurityGroupIngressRequest::AuthorizeDBSecurityGroupIngressRequest(const AuthorizeDBSecurityGroupIngressRequest &other)
-    : RDSRequest(new AuthorizeDBSecurityGroupIngressRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new AuthorizeDBSecurityGroupIngressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ AuthorizeDBSecurityGroupIngressRequest::AuthorizeDBSecurityGroupIngressRequest(c
  * Constructs a AuthorizeDBSecurityGroupIngressRequest object.
  */
 AuthorizeDBSecurityGroupIngressRequest::AuthorizeDBSecurityGroupIngressRequest()
-    : RDSRequest(new AuthorizeDBSecurityGroupIngressRequestPrivate(RDSRequest::AuthorizeDBSecurityGroupIngressAction, this))
+    : RdsRequest(new AuthorizeDBSecurityGroupIngressRequestPrivate(RdsRequest::AuthorizeDBSecurityGroupIngressAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * AuthorizeDBSecurityGroupIngressRequest::respo
  */
 
 /*!
- * Constructs a AuthorizeDBSecurityGroupIngressRequestPrivate object for RDS \a action,
+ * Constructs a AuthorizeDBSecurityGroupIngressRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
-    const RDSRequest::Action action, AuthorizeDBSecurityGroupIngressRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, AuthorizeDBSecurityGroupIngressRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRe
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
     const AuthorizeDBSecurityGroupIngressRequestPrivate &other, AuthorizeDBSecurityGroupIngressRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

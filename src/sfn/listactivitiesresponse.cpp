@@ -63,7 +63,7 @@ ListActivitiesResponse::ListActivitiesResponse(
         const ListActivitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new ListActivitiesResponsePrivate(this), parent)
+    : SfnResponse(new ListActivitiesResponsePrivate(this), parent)
 {
     setRequest(new ListActivitiesRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void ListActivitiesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListActivitiesResponsePrivate object with public implementation \a q.
  */
 ListActivitiesResponsePrivate::ListActivitiesResponsePrivate(
-    ListActivitiesResponse * const q) : SFNResponsePrivate(q)
+    ListActivitiesResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

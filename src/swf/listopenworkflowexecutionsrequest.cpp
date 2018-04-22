@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest(const ListOpenWorkflowExecutionsRequest &other)
-    : SWFRequest(new ListOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new ListOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest(const ListO
  * Constructs a ListOpenWorkflowExecutionsRequest object.
  */
 ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest()
-    : SWFRequest(new ListOpenWorkflowExecutionsRequestPrivate(SWFRequest::ListOpenWorkflowExecutionsAction, this))
+    : SwfRequest(new ListOpenWorkflowExecutionsRequestPrivate(SwfRequest::ListOpenWorkflowExecutionsAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(Q
  */
 
 /*!
- * Constructs a ListOpenWorkflowExecutionsRequestPrivate object for SWF \a action,
+ * Constructs a ListOpenWorkflowExecutionsRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
-    const SWFRequest::Action action, ListOpenWorkflowExecutionsRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, ListOpenWorkflowExecutionsRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPriva
  */
 ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
     const ListOpenWorkflowExecutionsRequestPrivate &other, ListOpenWorkflowExecutionsRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

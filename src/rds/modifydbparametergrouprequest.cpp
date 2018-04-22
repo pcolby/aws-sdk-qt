@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyDBParameterGroupRequest::ModifyDBParameterGroupRequest(const ModifyDBParameterGroupRequest &other)
-    : RDSRequest(new ModifyDBParameterGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyDBParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyDBParameterGroupRequest::ModifyDBParameterGroupRequest(const ModifyDBParam
  * Constructs a ModifyDBParameterGroupRequest object.
  */
 ModifyDBParameterGroupRequest::ModifyDBParameterGroupRequest()
-    : RDSRequest(new ModifyDBParameterGroupRequestPrivate(RDSRequest::ModifyDBParameterGroupAction, this))
+    : RdsRequest(new ModifyDBParameterGroupRequestPrivate(RdsRequest::ModifyDBParameterGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetw
  */
 
 /*!
- * Constructs a ModifyDBParameterGroupRequestPrivate object for RDS \a action,
+ * Constructs a ModifyDBParameterGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
-    const RDSRequest::Action action, ModifyDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyDBParameterGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
  */
 ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
     const ModifyDBParameterGroupRequestPrivate &other, ModifyDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

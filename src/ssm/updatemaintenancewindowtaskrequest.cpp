@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 UpdateMaintenanceWindowTaskRequest::UpdateMaintenanceWindowTaskRequest(const UpdateMaintenanceWindowTaskRequest &other)
-    : SSMRequest(new UpdateMaintenanceWindowTaskRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new UpdateMaintenanceWindowTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ UpdateMaintenanceWindowTaskRequest::UpdateMaintenanceWindowTaskRequest(const Upd
  * Constructs a UpdateMaintenanceWindowTaskRequest object.
  */
 UpdateMaintenanceWindowTaskRequest::UpdateMaintenanceWindowTaskRequest()
-    : SSMRequest(new UpdateMaintenanceWindowTaskRequestPrivate(SSMRequest::UpdateMaintenanceWindowTaskAction, this))
+    : SsmRequest(new UpdateMaintenanceWindowTaskRequestPrivate(SsmRequest::UpdateMaintenanceWindowTaskAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowTaskRequest::response(
  */
 
 /*!
- * Constructs a UpdateMaintenanceWindowTaskRequestPrivate object for SSM \a action,
+ * Constructs a UpdateMaintenanceWindowTaskRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPrivate(
-    const SSMRequest::Action action, UpdateMaintenanceWindowTaskRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, UpdateMaintenanceWindowTaskRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPri
  */
 UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPrivate(
     const UpdateMaintenanceWindowTaskRequestPrivate &other, UpdateMaintenanceWindowTaskRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

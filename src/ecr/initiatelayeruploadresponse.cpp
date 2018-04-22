@@ -48,7 +48,7 @@ InitiateLayerUploadResponse::InitiateLayerUploadResponse(
         const InitiateLayerUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new InitiateLayerUploadResponsePrivate(this), parent)
+    : EcrResponse(new InitiateLayerUploadResponsePrivate(this), parent)
 {
     setRequest(new InitiateLayerUploadRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
  * Constructs a InitiateLayerUploadResponsePrivate object with public implementation \a q.
  */
 InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
-    InitiateLayerUploadResponse * const q) : ECRResponsePrivate(q)
+    InitiateLayerUploadResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

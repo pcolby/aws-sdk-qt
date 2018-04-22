@@ -49,7 +49,7 @@ DeleteWebACLResponse::DeleteWebACLResponse(
         const DeleteWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteWebACLResponsePrivate(this), parent)
+    : WafResponse(new DeleteWebACLResponsePrivate(this), parent)
 {
     setRequest(new DeleteWebACLRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteWebACLResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteWebACLResponsePrivate object with public implementation \a q.
  */
 DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
-    DeleteWebACLResponse * const q) : WAFResponsePrivate(q)
+    DeleteWebACLResponse * const q) : WafResponsePrivate(q)
 {
 
 }

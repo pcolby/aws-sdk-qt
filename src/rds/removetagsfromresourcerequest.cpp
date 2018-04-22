@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
-    : RDSRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
  * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
-    : RDSRequest(new RemoveTagsFromResourceRequestPrivate(RDSRequest::RemoveTagsFromResourceAction, this))
+    : RdsRequest(new RemoveTagsFromResourceRequestPrivate(RdsRequest::RemoveTagsFromResourceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 
 /*!
- * Constructs a RemoveTagsFromResourceRequestPrivate object for RDS \a action,
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
-    const RDSRequest::Action action, RemoveTagsFromResourceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RemoveTagsFromResourceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

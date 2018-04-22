@@ -48,7 +48,7 @@ CreateVpcEndpointConnectionNotificationResponse::CreateVpcEndpointConnectionNoti
         const CreateVpcEndpointConnectionNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateVpcEndpointConnectionNotificationResponsePrivate(this), parent)
+    : Ec2Response(new CreateVpcEndpointConnectionNotificationResponsePrivate(this), parent)
 {
     setRequest(new CreateVpcEndpointConnectionNotificationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &re
  * Constructs a CreateVpcEndpointConnectionNotificationResponsePrivate object with public implementation \a q.
  */
 CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnectionNotificationResponsePrivate(
-    CreateVpcEndpointConnectionNotificationResponse * const q) : EC2ResponsePrivate(q)
+    CreateVpcEndpointConnectionNotificationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

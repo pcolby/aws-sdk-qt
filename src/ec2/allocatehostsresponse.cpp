@@ -48,7 +48,7 @@ AllocateHostsResponse::AllocateHostsResponse(
         const AllocateHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AllocateHostsResponsePrivate(this), parent)
+    : Ec2Response(new AllocateHostsResponsePrivate(this), parent)
 {
     setRequest(new AllocateHostsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AllocateHostsResponse::parseSuccess(QIODevice &response)
  * Constructs a AllocateHostsResponsePrivate object with public implementation \a q.
  */
 AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
-    AllocateHostsResponse * const q) : EC2ResponsePrivate(q)
+    AllocateHostsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

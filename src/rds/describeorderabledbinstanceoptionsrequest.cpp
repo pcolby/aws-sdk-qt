@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest(const DescribeOrderableDBInstanceOptionsRequest &other)
-    : RDSRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsReq
  * Constructs a DescribeOrderableDBInstanceOptionsRequest object.
  */
 DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest()
-    : RDSRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(RDSRequest::DescribeOrderableDBInstanceOptionsAction, this))
+    : RdsRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(RdsRequest::DescribeOrderableDBInstanceOptionsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::re
  */
 
 /*!
- * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
-    const RDSRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOpt
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
     const DescribeOrderableDBInstanceOptionsRequestPrivate &other, DescribeOrderableDBInstanceOptionsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

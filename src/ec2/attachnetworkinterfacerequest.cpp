@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest(const AttachNetworkInterfaceRequest &other)
-    : EC2Request(new AttachNetworkInterfaceRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AttachNetworkInterfaceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest(const AttachNetwork
  * Constructs a AttachNetworkInterfaceRequest object.
  */
 AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest()
-    : EC2Request(new AttachNetworkInterfaceRequestPrivate(EC2Request::AttachNetworkInterfaceAction, this))
+    : Ec2Request(new AttachNetworkInterfaceRequestPrivate(Ec2Request::AttachNetworkInterfaceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- * Constructs a AttachNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * Constructs a AttachNetworkInterfaceRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
-    const EC2Request::Action action, AttachNetworkInterfaceRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AttachNetworkInterfaceRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
     const AttachNetworkInterfaceRequestPrivate &other, AttachNetworkInterfaceRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace MQ {
 
 class DescribeConfigurationRevisionRequest;
 
-class QTAWS_EXPORT DescribeConfigurationRevisionRequestPrivate : public MQRequestPrivate {
+class QTAWS_EXPORT DescribeConfigurationRevisionRequestPrivate : public MqRequestPrivate {
 
 public:
-    DescribeConfigurationRevisionRequestPrivate(const MQRequest::Action action,
+    DescribeConfigurationRevisionRequestPrivate(const MqRequest::Action action,
                                    DescribeConfigurationRevisionRequest * const q);
     DescribeConfigurationRevisionRequestPrivate(const DescribeConfigurationRevisionRequestPrivate &other,
                                    DescribeConfigurationRevisionRequest * const q);

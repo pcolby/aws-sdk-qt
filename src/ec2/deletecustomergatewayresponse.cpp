@@ -48,7 +48,7 @@ DeleteCustomerGatewayResponse::DeleteCustomerGatewayResponse(
         const DeleteCustomerGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteCustomerGatewayResponsePrivate(this), parent)
+    : Ec2Response(new DeleteCustomerGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteCustomerGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteCustomerGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteCustomerGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteCustomerGatewayResponsePrivate::DeleteCustomerGatewayResponsePrivate(
-    DeleteCustomerGatewayResponse * const q) : EC2ResponsePrivate(q)
+    DeleteCustomerGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

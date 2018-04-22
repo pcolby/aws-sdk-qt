@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeMountTargetsResponsePrivate;
 
-class QTAWS_EXPORT DescribeMountTargetsResponse : public EFSResponse {
+class QTAWS_EXPORT DescribeMountTargetsResponse : public EfsResponse {
     Q_OBJECT
 
 public:

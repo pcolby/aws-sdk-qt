@@ -27,7 +27,7 @@ namespace KMS {
 
 class GetParametersForImportResponse;
 
-class QTAWS_EXPORT GetParametersForImportResponsePrivate : public KMSResponsePrivate {
+class QTAWS_EXPORT GetParametersForImportResponsePrivate : public KmsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -28,10 +28,10 @@ namespace EC2 {
 
 class TerminateInstancesRequest;
 
-class QTAWS_EXPORT TerminateInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT TerminateInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    TerminateInstancesRequestPrivate(const EC2Request::Action action,
+    TerminateInstancesRequestPrivate(const Ec2Request::Action action,
                                    TerminateInstancesRequest * const q);
     TerminateInstancesRequestPrivate(const TerminateInstancesRequestPrivate &other,
                                    TerminateInstancesRequest * const q);

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest(const EnableVpcClassicLinkDnsSupportRequest &other)
-    : EC2Request(new EnableVpcClassicLinkDnsSupportRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new EnableVpcClassicLinkDnsSupportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest(con
  * Constructs a EnableVpcClassicLinkDnsSupportRequest object.
  */
 EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest()
-    : EC2Request(new EnableVpcClassicLinkDnsSupportRequestPrivate(EC2Request::EnableVpcClassicLinkDnsSupportAction, this))
+    : Ec2Request(new EnableVpcClassicLinkDnsSupportRequestPrivate(Ec2Request::EnableVpcClassicLinkDnsSupportAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkDnsSupportRequest::respon
  */
 
 /*!
- * Constructs a EnableVpcClassicLinkDnsSupportRequestPrivate object for EC2 \a action,
+ * Constructs a EnableVpcClassicLinkDnsSupportRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 EnableVpcClassicLinkDnsSupportRequestPrivate::EnableVpcClassicLinkDnsSupportRequestPrivate(
-    const EC2Request::Action action, EnableVpcClassicLinkDnsSupportRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, EnableVpcClassicLinkDnsSupportRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ EnableVpcClassicLinkDnsSupportRequestPrivate::EnableVpcClassicLinkDnsSupportRequ
  */
 EnableVpcClassicLinkDnsSupportRequestPrivate::EnableVpcClassicLinkDnsSupportRequestPrivate(
     const EnableVpcClassicLinkDnsSupportRequestPrivate &other, EnableVpcClassicLinkDnsSupportRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

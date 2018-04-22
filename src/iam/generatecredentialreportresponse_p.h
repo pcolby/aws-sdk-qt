@@ -27,7 +27,7 @@ namespace IAM {
 
 class GenerateCredentialReportResponse;
 
-class QTAWS_EXPORT GenerateCredentialReportResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT GenerateCredentialReportResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

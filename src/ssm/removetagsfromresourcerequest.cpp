@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
-    : SSMRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFro
  * Constructs a RemoveTagsFromResourceRequest object.
  */
 RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
-    : SSMRequest(new RemoveTagsFromResourceRequestPrivate(SSMRequest::RemoveTagsFromResourceAction, this))
+    : SsmRequest(new RemoveTagsFromResourceRequestPrivate(SsmRequest::RemoveTagsFromResourceAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 
 /*!
- * Constructs a RemoveTagsFromResourceRequestPrivate object for SSM \a action,
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
-    const SSMRequest::Action action, RemoveTagsFromResourceRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, RemoveTagsFromResourceRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

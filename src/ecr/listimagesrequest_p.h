@@ -28,10 +28,10 @@ namespace ECR {
 
 class ListImagesRequest;
 
-class QTAWS_EXPORT ListImagesRequestPrivate : public ECRRequestPrivate {
+class QTAWS_EXPORT ListImagesRequestPrivate : public EcrRequestPrivate {
 
 public:
-    ListImagesRequestPrivate(const ECRRequest::Action action,
+    ListImagesRequestPrivate(const EcrRequest::Action action,
                                    ListImagesRequest * const q);
     ListImagesRequestPrivate(const ListImagesRequestPrivate &other,
                                    ListImagesRequest * const q);

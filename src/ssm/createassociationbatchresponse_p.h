@@ -27,7 +27,7 @@ namespace SSM {
 
 class CreateAssociationBatchResponse;
 
-class QTAWS_EXPORT CreateAssociationBatchResponsePrivate : public SSMResponsePrivate {
+class QTAWS_EXPORT CreateAssociationBatchResponsePrivate : public SsmResponsePrivate {
     Q_OBJECT
 
 public:

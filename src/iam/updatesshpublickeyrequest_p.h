@@ -28,10 +28,10 @@ namespace IAM {
 
 class UpdateSSHPublicKeyRequest;
 
-class QTAWS_EXPORT UpdateSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT UpdateSSHPublicKeyRequestPrivate : public IamRequestPrivate {
 
 public:
-    UpdateSSHPublicKeyRequestPrivate(const IAMRequest::Action action,
+    UpdateSSHPublicKeyRequestPrivate(const IamRequest::Action action,
                                    UpdateSSHPublicKeyRequest * const q);
     UpdateSSHPublicKeyRequestPrivate(const UpdateSSHPublicKeyRequestPrivate &other,
                                    UpdateSSHPublicKeyRequest * const q);

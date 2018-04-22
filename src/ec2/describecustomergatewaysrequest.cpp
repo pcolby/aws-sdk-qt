@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest(const DescribeCustomerGatewaysRequest &other)
-    : EC2Request(new DescribeCustomerGatewaysRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeCustomerGatewaysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest(const DescribeC
  * Constructs a DescribeCustomerGatewaysRequest object.
  */
 DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest()
-    : EC2Request(new DescribeCustomerGatewaysRequestPrivate(EC2Request::DescribeCustomerGatewaysAction, this))
+    : Ec2Request(new DescribeCustomerGatewaysRequestPrivate(Ec2Request::DescribeCustomerGatewaysAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeCustomerGatewaysRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeCustomerGatewaysRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
-    const EC2Request::Action action, DescribeCustomerGatewaysRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeCustomerGatewaysRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
  */
 DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
     const DescribeCustomerGatewaysRequestPrivate &other, DescribeCustomerGatewaysRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

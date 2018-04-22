@@ -48,7 +48,7 @@ CreateNetworkAclEntryResponse::CreateNetworkAclEntryResponse(
         const CreateNetworkAclEntryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateNetworkAclEntryResponsePrivate(this), parent)
+    : Ec2Response(new CreateNetworkAclEntryResponsePrivate(this), parent)
 {
     setRequest(new CreateNetworkAclEntryRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateNetworkAclEntryResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateNetworkAclEntryResponsePrivate object with public implementation \a q.
  */
 CreateNetworkAclEntryResponsePrivate::CreateNetworkAclEntryResponsePrivate(
-    CreateNetworkAclEntryResponse * const q) : EC2ResponsePrivate(q)
+    CreateNetworkAclEntryResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

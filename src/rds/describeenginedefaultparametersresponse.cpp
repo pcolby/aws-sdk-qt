@@ -108,7 +108,7 @@ DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse
         const DescribeEngineDefaultParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeEngineDefaultParametersResponsePrivate(this), parent)
+    : RdsResponse(new DescribeEngineDefaultParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeEngineDefaultParametersRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeEngineDefaultParametersResponsePrivate object with public implementation \a q.
  */
 DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersResponsePrivate(
-    DescribeEngineDefaultParametersResponse * const q) : RDSResponsePrivate(q)
+    DescribeEngineDefaultParametersResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

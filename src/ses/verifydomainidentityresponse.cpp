@@ -55,7 +55,7 @@ VerifyDomainIdentityResponse::VerifyDomainIdentityResponse(
         const VerifyDomainIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyDomainIdentityResponsePrivate(this), parent)
+    : SesResponse(new VerifyDomainIdentityResponsePrivate(this), parent)
 {
     setRequest(new VerifyDomainIdentityRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
  * Constructs a VerifyDomainIdentityResponsePrivate object with public implementation \a q.
  */
 VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
-    VerifyDomainIdentityResponse * const q) : SESResponsePrivate(q)
+    VerifyDomainIdentityResponse * const q) : SesResponsePrivate(q)
 {
 
 }

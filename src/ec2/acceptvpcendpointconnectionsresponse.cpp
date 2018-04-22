@@ -48,7 +48,7 @@ AcceptVpcEndpointConnectionsResponse::AcceptVpcEndpointConnectionsResponse(
         const AcceptVpcEndpointConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AcceptVpcEndpointConnectionsResponsePrivate(this), parent)
+    : Ec2Response(new AcceptVpcEndpointConnectionsResponsePrivate(this), parent)
 {
     setRequest(new AcceptVpcEndpointConnectionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AcceptVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
  * Constructs a AcceptVpcEndpointConnectionsResponsePrivate object with public implementation \a q.
  */
 AcceptVpcEndpointConnectionsResponsePrivate::AcceptVpcEndpointConnectionsResponsePrivate(
-    AcceptVpcEndpointConnectionsResponse * const q) : EC2ResponsePrivate(q)
+    AcceptVpcEndpointConnectionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

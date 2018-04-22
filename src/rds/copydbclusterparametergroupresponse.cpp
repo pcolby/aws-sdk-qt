@@ -108,7 +108,7 @@ CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
         const CopyDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CopyDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponsePrivate(
-    CopyDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    CopyDBClusterParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

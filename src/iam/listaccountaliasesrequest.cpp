@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListAccountAliasesRequest::ListAccountAliasesRequest(const ListAccountAliasesRequest &other)
-    : IAMRequest(new ListAccountAliasesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListAccountAliasesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListAccountAliasesRequest::ListAccountAliasesRequest(const ListAccountAliasesReq
  * Constructs a ListAccountAliasesRequest object.
  */
 ListAccountAliasesRequest::ListAccountAliasesRequest()
-    : IAMRequest(new ListAccountAliasesRequestPrivate(IAMRequest::ListAccountAliasesAction, this))
+    : IamRequest(new ListAccountAliasesRequestPrivate(IamRequest::ListAccountAliasesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a ListAccountAliasesRequestPrivate object for IAM \a action,
+ * Constructs a ListAccountAliasesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
-    const IAMRequest::Action action, ListAccountAliasesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListAccountAliasesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
     const ListAccountAliasesRequestPrivate &other, ListAccountAliasesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

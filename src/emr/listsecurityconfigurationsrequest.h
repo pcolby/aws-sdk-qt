@@ -27,7 +27,7 @@ namespace EMR {
 
 class ListSecurityConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT ListSecurityConfigurationsRequest : public EMRRequest {
+class QTAWS_EXPORT ListSecurityConfigurationsRequest : public EmrRequest {
 
 public:
     ListSecurityConfigurationsRequest(const ListSecurityConfigurationsRequest &other);

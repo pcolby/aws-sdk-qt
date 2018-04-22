@@ -61,7 +61,7 @@ DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
         const DeregisterTaskDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DeregisterTaskDefinitionResponsePrivate(this), parent)
+    : EcsResponse(new DeregisterTaskDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeregisterTaskDefinitionRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DeregisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
  * Constructs a DeregisterTaskDefinitionResponsePrivate object with public implementation \a q.
  */
 DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponsePrivate(
-    DeregisterTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
+    DeregisterTaskDefinitionResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

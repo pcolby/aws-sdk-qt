@@ -27,7 +27,7 @@ namespace KMS {
 
 class ImportKeyMaterialRequestPrivate;
 
-class QTAWS_EXPORT ImportKeyMaterialRequest : public KMSRequest {
+class QTAWS_EXPORT ImportKeyMaterialRequest : public KmsRequest {
 
 public:
     ImportKeyMaterialRequest(const ImportKeyMaterialRequest &other);

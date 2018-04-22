@@ -28,10 +28,10 @@ namespace SSM {
 
 class GetCommandInvocationRequest;
 
-class QTAWS_EXPORT GetCommandInvocationRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT GetCommandInvocationRequestPrivate : public SsmRequestPrivate {
 
 public:
-    GetCommandInvocationRequestPrivate(const SSMRequest::Action action,
+    GetCommandInvocationRequestPrivate(const SsmRequest::Action action,
                                    GetCommandInvocationRequest * const q);
     GetCommandInvocationRequestPrivate(const GetCommandInvocationRequestPrivate &other,
                                    GetCommandInvocationRequest * const q);

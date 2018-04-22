@@ -28,10 +28,10 @@ namespace SSM {
 
 class GetParametersByPathRequest;
 
-class QTAWS_EXPORT GetParametersByPathRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT GetParametersByPathRequestPrivate : public SsmRequestPrivate {
 
 public:
-    GetParametersByPathRequestPrivate(const SSMRequest::Action action,
+    GetParametersByPathRequestPrivate(const SsmRequest::Action action,
                                    GetParametersByPathRequest * const q);
     GetParametersByPathRequestPrivate(const GetParametersByPathRequestPrivate &other,
                                    GetParametersByPathRequest * const q);

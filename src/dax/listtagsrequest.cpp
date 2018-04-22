@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
-    : DAXRequest(new ListTagsRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new ListTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
  * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
-    : DAXRequest(new ListTagsRequestPrivate(DAXRequest::ListTagsAction, this))
+    : DaxRequest(new ListTagsRequestPrivate(DaxRequest::ListTagsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a ListTagsRequestPrivate object for DAX \a action,
+ * Constructs a ListTagsRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
-    const DAXRequest::Action action, ListTagsRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, ListTagsRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

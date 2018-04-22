@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListStepsResponsePrivate;
 
-class QTAWS_EXPORT ListStepsResponse : public EMRResponse {
+class QTAWS_EXPORT ListStepsResponse : public EmrResponse {
     Q_OBJECT
 
 public:

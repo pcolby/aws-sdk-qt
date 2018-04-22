@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 RebootNodeRequest::RebootNodeRequest(const RebootNodeRequest &other)
-    : DAXRequest(new RebootNodeRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new RebootNodeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RebootNodeRequest::RebootNodeRequest(const RebootNodeRequest &other)
  * Constructs a RebootNodeRequest object.
  */
 RebootNodeRequest::RebootNodeRequest()
-    : DAXRequest(new RebootNodeRequestPrivate(DAXRequest::RebootNodeAction, this))
+    : DaxRequest(new RebootNodeRequestPrivate(DaxRequest::RebootNodeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a RebootNodeRequestPrivate object for DAX \a action,
+ * Constructs a RebootNodeRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
-    const DAXRequest::Action action, RebootNodeRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, RebootNodeRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RebootNodeRequestPrivate::RebootNodeRequestPrivate(
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
     const RebootNodeRequestPrivate &other, RebootNodeRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

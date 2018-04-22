@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 SetSubscriptionAttributesRequest::SetSubscriptionAttributesRequest(const SetSubscriptionAttributesRequest &other)
-    : SNSRequest(new SetSubscriptionAttributesRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new SetSubscriptionAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ SetSubscriptionAttributesRequest::SetSubscriptionAttributesRequest(const SetSubs
  * Constructs a SetSubscriptionAttributesRequest object.
  */
 SetSubscriptionAttributesRequest::SetSubscriptionAttributesRequest()
-    : SNSRequest(new SetSubscriptionAttributesRequestPrivate(SNSRequest::SetSubscriptionAttributesAction, this))
+    : SnsRequest(new SetSubscriptionAttributesRequestPrivate(SnsRequest::SetSubscriptionAttributesAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * SetSubscriptionAttributesRequest::response(QN
  */
 
 /*!
- * Constructs a SetSubscriptionAttributesRequestPrivate object for SNS \a action,
+ * Constructs a SetSubscriptionAttributesRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 SetSubscriptionAttributesRequestPrivate::SetSubscriptionAttributesRequestPrivate(
-    const SNSRequest::Action action, SetSubscriptionAttributesRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, SetSubscriptionAttributesRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ SetSubscriptionAttributesRequestPrivate::SetSubscriptionAttributesRequestPrivate
  */
 SetSubscriptionAttributesRequestPrivate::SetSubscriptionAttributesRequestPrivate(
     const SetSubscriptionAttributesRequestPrivate &other, SetSubscriptionAttributesRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

@@ -68,7 +68,7 @@ GetInventorySchemaResponse::GetInventorySchemaResponse(
         const GetInventorySchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetInventorySchemaResponsePrivate(this), parent)
+    : SsmResponse(new GetInventorySchemaResponsePrivate(this), parent)
 {
     setRequest(new GetInventorySchemaRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetInventorySchemaResponse::parseSuccess(QIODevice &response)
  * Constructs a GetInventorySchemaResponsePrivate object with public implementation \a q.
  */
 GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
-    GetInventorySchemaResponse * const q) : SSMResponsePrivate(q)
+    GetInventorySchemaResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

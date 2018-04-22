@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest(const DeleteRateBasedRuleRequest &other)
-    : WAFRequest(new DeleteRateBasedRuleRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteRateBasedRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest(const DeleteRateBasedRule
  * Constructs a DeleteRateBasedRuleRequest object.
  */
 DeleteRateBasedRuleRequest::DeleteRateBasedRuleRequest()
-    : WAFRequest(new DeleteRateBasedRuleRequestPrivate(WAFRequest::DeleteRateBasedRuleAction, this))
+    : WafRequest(new DeleteRateBasedRuleRequestPrivate(WafRequest::DeleteRateBasedRuleAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeleteRateBasedRuleRequestPrivate object for WAF \a action,
+ * Constructs a DeleteRateBasedRuleRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
-    const WAFRequest::Action action, DeleteRateBasedRuleRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteRateBasedRuleRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
     const DeleteRateBasedRuleRequestPrivate &other, DeleteRateBasedRuleRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

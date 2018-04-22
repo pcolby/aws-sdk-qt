@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ImportInstanceRequest::ImportInstanceRequest(const ImportInstanceRequest &other)
-    : EC2Request(new ImportInstanceRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ImportInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ImportInstanceRequest::ImportInstanceRequest(const ImportInstanceRequest &other)
  * Constructs a ImportInstanceRequest object.
  */
 ImportInstanceRequest::ImportInstanceRequest()
-    : EC2Request(new ImportInstanceRequestPrivate(EC2Request::ImportInstanceAction, this))
+    : Ec2Request(new ImportInstanceRequestPrivate(Ec2Request::ImportInstanceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ImportInstanceRequestPrivate object for EC2 \a action,
+ * Constructs a ImportInstanceRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
-    const EC2Request::Action action, ImportInstanceRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ImportInstanceRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
     const ImportInstanceRequestPrivate &other, ImportInstanceRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

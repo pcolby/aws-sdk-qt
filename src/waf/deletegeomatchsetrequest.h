@@ -27,7 +27,7 @@ namespace WAF {
 
 class DeleteGeoMatchSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteGeoMatchSetRequest : public WAFRequest {
+class QTAWS_EXPORT DeleteGeoMatchSetRequest : public WafRequest {
 
 public:
     DeleteGeoMatchSetRequest(const DeleteGeoMatchSetRequest &other);

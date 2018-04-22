@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateInternetGatewayRequest::CreateInternetGatewayRequest(const CreateInternetGatewayRequest &other)
-    : EC2Request(new CreateInternetGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateInternetGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateInternetGatewayRequest::CreateInternetGatewayRequest(const CreateInternetG
  * Constructs a CreateInternetGatewayRequest object.
  */
 CreateInternetGatewayRequest::CreateInternetGatewayRequest()
-    : EC2Request(new CreateInternetGatewayRequestPrivate(EC2Request::CreateInternetGatewayAction, this))
+    : Ec2Request(new CreateInternetGatewayRequestPrivate(Ec2Request::CreateInternetGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- * Constructs a CreateInternetGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a CreateInternetGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
-    const EC2Request::Action action, CreateInternetGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateInternetGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
  */
 CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
     const CreateInternetGatewayRequestPrivate &other, CreateInternetGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

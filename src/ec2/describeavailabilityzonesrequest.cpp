@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest(const DescribeAvailabilityZonesRequest &other)
-    : EC2Request(new DescribeAvailabilityZonesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeAvailabilityZonesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest(const Describ
  * Constructs a DescribeAvailabilityZonesRequest object.
  */
 DescribeAvailabilityZonesRequest::DescribeAvailabilityZonesRequest()
-    : EC2Request(new DescribeAvailabilityZonesRequestPrivate(EC2Request::DescribeAvailabilityZonesAction, this))
+    : Ec2Request(new DescribeAvailabilityZonesRequestPrivate(Ec2Request::DescribeAvailabilityZonesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeAvailabilityZonesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeAvailabilityZonesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
-    const EC2Request::Action action, DescribeAvailabilityZonesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeAvailabilityZonesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
     const DescribeAvailabilityZonesRequestPrivate &other, DescribeAvailabilityZonesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

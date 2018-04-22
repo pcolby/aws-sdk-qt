@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifyIdentityIdFormatRequest;
 
-class QTAWS_EXPORT ModifyIdentityIdFormatRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifyIdentityIdFormatRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifyIdentityIdFormatRequestPrivate(const EC2Request::Action action,
+    ModifyIdentityIdFormatRequestPrivate(const Ec2Request::Action action,
                                    ModifyIdentityIdFormatRequest * const q);
     ModifyIdentityIdFormatRequestPrivate(const ModifyIdentityIdFormatRequestPrivate &other,
                                    ModifyIdentityIdFormatRequest * const q);

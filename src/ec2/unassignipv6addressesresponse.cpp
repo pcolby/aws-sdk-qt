@@ -48,7 +48,7 @@ UnassignIpv6AddressesResponse::UnassignIpv6AddressesResponse(
         const UnassignIpv6AddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new UnassignIpv6AddressesResponsePrivate(this), parent)
+    : Ec2Response(new UnassignIpv6AddressesResponsePrivate(this), parent)
 {
     setRequest(new UnassignIpv6AddressesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UnassignIpv6AddressesResponse::parseSuccess(QIODevice &response)
  * Constructs a UnassignIpv6AddressesResponsePrivate object with public implementation \a q.
  */
 UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponsePrivate(
-    UnassignIpv6AddressesResponse * const q) : EC2ResponsePrivate(q)
+    UnassignIpv6AddressesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

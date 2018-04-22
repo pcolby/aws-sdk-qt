@@ -110,7 +110,7 @@ DeleteMessageBatchResponse::DeleteMessageBatchResponse(
         const DeleteMessageBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new DeleteMessageBatchResponsePrivate(this), parent)
+    : SqsResponse(new DeleteMessageBatchResponsePrivate(this), parent)
 {
     setRequest(new DeleteMessageBatchRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void DeleteMessageBatchResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteMessageBatchResponsePrivate object with public implementation \a q.
  */
 DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponsePrivate(
-    DeleteMessageBatchResponse * const q) : SQSResponsePrivate(q)
+    DeleteMessageBatchResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

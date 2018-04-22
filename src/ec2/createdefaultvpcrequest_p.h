@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CreateDefaultVpcRequest;
 
-class QTAWS_EXPORT CreateDefaultVpcRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CreateDefaultVpcRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CreateDefaultVpcRequestPrivate(const EC2Request::Action action,
+    CreateDefaultVpcRequestPrivate(const Ec2Request::Action action,
                                    CreateDefaultVpcRequest * const q);
     CreateDefaultVpcRequestPrivate(const CreateDefaultVpcRequestPrivate &other,
                                    CreateDefaultVpcRequest * const q);

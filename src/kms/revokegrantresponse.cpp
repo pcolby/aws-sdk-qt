@@ -143,7 +143,7 @@ RevokeGrantResponse::RevokeGrantResponse(
         const RevokeGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new RevokeGrantResponsePrivate(this), parent)
+    : KmsResponse(new RevokeGrantResponsePrivate(this), parent)
 {
     setRequest(new RevokeGrantRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void RevokeGrantResponse::parseSuccess(QIODevice &response)
  * Constructs a RevokeGrantResponsePrivate object with public implementation \a q.
  */
 RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
-    RevokeGrantResponse * const q) : KMSResponsePrivate(q)
+    RevokeGrantResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

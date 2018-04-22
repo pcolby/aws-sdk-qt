@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateSAMLProviderRequest::CreateSAMLProviderRequest(const CreateSAMLProviderRequest &other)
-    : IAMRequest(new CreateSAMLProviderRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateSAMLProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateSAMLProviderRequest::CreateSAMLProviderRequest(const CreateSAMLProviderReq
  * Constructs a CreateSAMLProviderRequest object.
  */
 CreateSAMLProviderRequest::CreateSAMLProviderRequest()
-    : IAMRequest(new CreateSAMLProviderRequestPrivate(IAMRequest::CreateSAMLProviderAction, this))
+    : IamRequest(new CreateSAMLProviderRequestPrivate(IamRequest::CreateSAMLProviderAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateSAMLProviderRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a CreateSAMLProviderRequestPrivate object for IAM \a action,
+ * Constructs a CreateSAMLProviderRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
-    const IAMRequest::Action action, CreateSAMLProviderRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateSAMLProviderRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
  */
 CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
     const CreateSAMLProviderRequestPrivate &other, CreateSAMLProviderRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

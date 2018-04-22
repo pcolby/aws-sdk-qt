@@ -48,7 +48,7 @@ DescribeRepositoriesResponse::DescribeRepositoriesResponse(
         const DescribeRepositoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new DescribeRepositoriesResponsePrivate(this), parent)
+    : EcrResponse(new DescribeRepositoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRepositoriesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeRepositoriesResponsePrivate object with public implementation \a q.
  */
 DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
-    DescribeRepositoriesResponse * const q) : ECRResponsePrivate(q)
+    DescribeRepositoriesResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

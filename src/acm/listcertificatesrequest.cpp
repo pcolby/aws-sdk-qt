@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 ListCertificatesRequest::ListCertificatesRequest(const ListCertificatesRequest &other)
-    : ACMRequest(new ListCertificatesRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new ListCertificatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ ListCertificatesRequest::ListCertificatesRequest(const ListCertificatesRequest &
  * Constructs a ListCertificatesRequest object.
  */
 ListCertificatesRequest::ListCertificatesRequest()
-    : ACMRequest(new ListCertificatesRequestPrivate(ACMRequest::ListCertificatesAction, this))
+    : AcmRequest(new ListCertificatesRequestPrivate(AcmRequest::ListCertificatesAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ListCertificatesRequestPrivate object for ACM \a action,
+ * Constructs a ListCertificatesRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
-    const ACMRequest::Action action, ListCertificatesRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, ListCertificatesRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
  */
 ListCertificatesRequestPrivate::ListCertificatesRequestPrivate(
     const ListCertificatesRequestPrivate &other, ListCertificatesRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

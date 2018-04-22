@@ -68,7 +68,7 @@ ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
         const ModifyDocumentPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ModifyDocumentPermissionResponsePrivate(this), parent)
+    : SsmResponse(new ModifyDocumentPermissionResponsePrivate(this), parent)
 {
     setRequest(new ModifyDocumentPermissionRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ModifyDocumentPermissionResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyDocumentPermissionResponsePrivate object with public implementation \a q.
  */
 ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate(
-    ModifyDocumentPermissionResponse * const q) : SSMResponsePrivate(q)
+    ModifyDocumentPermissionResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

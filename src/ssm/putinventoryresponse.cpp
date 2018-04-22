@@ -68,7 +68,7 @@ PutInventoryResponse::PutInventoryResponse(
         const PutInventoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new PutInventoryResponsePrivate(this), parent)
+    : SsmResponse(new PutInventoryResponsePrivate(this), parent)
 {
     setRequest(new PutInventoryRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void PutInventoryResponse::parseSuccess(QIODevice &response)
  * Constructs a PutInventoryResponsePrivate object with public implementation \a q.
  */
 PutInventoryResponsePrivate::PutInventoryResponsePrivate(
-    PutInventoryResponse * const q) : SSMResponsePrivate(q)
+    PutInventoryResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

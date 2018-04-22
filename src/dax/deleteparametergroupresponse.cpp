@@ -48,7 +48,7 @@ DeleteParameterGroupResponse::DeleteParameterGroupResponse(
         const DeleteParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DeleteParameterGroupResponsePrivate(this), parent)
+    : DaxResponse(new DeleteParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteParameterGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
-    DeleteParameterGroupResponse * const q) : DAXResponsePrivate(q)
+    DeleteParameterGroupResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

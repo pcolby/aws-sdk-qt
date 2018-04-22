@@ -48,7 +48,7 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse::UpdateSecurityGroupRuleDescr
         const UpdateSecurityGroupRuleDescriptionsIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(this), parent)
+    : Ec2Response(new UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(this), parent)
 {
     setRequest(new UpdateSecurityGroupRuleDescriptionsIngressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UpdateSecurityGroupRuleDescriptionsIngressResponse::parseSuccess(QIODevice 
  * Constructs a UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate object with public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(
-    UpdateSecurityGroupRuleDescriptionsIngressResponse * const q) : EC2ResponsePrivate(q)
+    UpdateSecurityGroupRuleDescriptionsIngressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

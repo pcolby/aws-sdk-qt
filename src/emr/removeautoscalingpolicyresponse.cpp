@@ -47,7 +47,7 @@ RemoveAutoScalingPolicyResponse::RemoveAutoScalingPolicyResponse(
         const RemoveAutoScalingPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new RemoveAutoScalingPolicyResponsePrivate(this), parent)
+    : EmrResponse(new RemoveAutoScalingPolicyResponsePrivate(this), parent)
 {
     setRequest(new RemoveAutoScalingPolicyRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void RemoveAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveAutoScalingPolicyResponsePrivate object with public implementation \a q.
  */
 RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponsePrivate(
-    RemoveAutoScalingPolicyResponse * const q) : EMRResponsePrivate(q)
+    RemoveAutoScalingPolicyResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

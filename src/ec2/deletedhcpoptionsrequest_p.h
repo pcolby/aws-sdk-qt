@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DeleteDhcpOptionsRequest;
 
-class QTAWS_EXPORT DeleteDhcpOptionsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DeleteDhcpOptionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DeleteDhcpOptionsRequestPrivate(const EC2Request::Action action,
+    DeleteDhcpOptionsRequestPrivate(const Ec2Request::Action action,
                                    DeleteDhcpOptionsRequest * const q);
     DeleteDhcpOptionsRequestPrivate(const DeleteDhcpOptionsRequestPrivate &other,
                                    DeleteDhcpOptionsRequest * const q);

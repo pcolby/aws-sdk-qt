@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
-    : SNSRequest(new UnsubscribeRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new UnsubscribeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
  * Constructs a UnsubscribeRequest object.
  */
 UnsubscribeRequest::UnsubscribeRequest()
-    : SNSRequest(new UnsubscribeRequestPrivate(SNSRequest::UnsubscribeAction, this))
+    : SnsRequest(new UnsubscribeRequestPrivate(SnsRequest::UnsubscribeAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a UnsubscribeRequestPrivate object for SNS \a action,
+ * Constructs a UnsubscribeRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
-    const SNSRequest::Action action, UnsubscribeRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, UnsubscribeRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const UnsubscribeRequestPrivate &other, UnsubscribeRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

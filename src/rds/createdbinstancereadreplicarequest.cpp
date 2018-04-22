@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateDBInstanceReadReplicaRequest::CreateDBInstanceReadReplicaRequest(const CreateDBInstanceReadReplicaRequest &other)
-    : RDSRequest(new CreateDBInstanceReadReplicaRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateDBInstanceReadReplicaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateDBInstanceReadReplicaRequest::CreateDBInstanceReadReplicaRequest(const Cre
  * Constructs a CreateDBInstanceReadReplicaRequest object.
  */
 CreateDBInstanceReadReplicaRequest::CreateDBInstanceReadReplicaRequest()
-    : RDSRequest(new CreateDBInstanceReadReplicaRequestPrivate(RDSRequest::CreateDBInstanceReadReplicaAction, this))
+    : RdsRequest(new CreateDBInstanceReadReplicaRequestPrivate(RdsRequest::CreateDBInstanceReadReplicaAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceReadReplicaRequest::response(
  */
 
 /*!
- * Constructs a CreateDBInstanceReadReplicaRequestPrivate object for RDS \a action,
+ * Constructs a CreateDBInstanceReadReplicaRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
-    const RDSRequest::Action action, CreateDBInstanceReadReplicaRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateDBInstanceReadReplicaRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPri
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
     const CreateDBInstanceReadReplicaRequestPrivate &other, CreateDBInstanceReadReplicaRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

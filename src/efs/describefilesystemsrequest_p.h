@@ -28,10 +28,10 @@ namespace EFS {
 
 class DescribeFileSystemsRequest;
 
-class QTAWS_EXPORT DescribeFileSystemsRequestPrivate : public EFSRequestPrivate {
+class QTAWS_EXPORT DescribeFileSystemsRequestPrivate : public EfsRequestPrivate {
 
 public:
-    DescribeFileSystemsRequestPrivate(const EFSRequest::Action action,
+    DescribeFileSystemsRequestPrivate(const EfsRequest::Action action,
                                    DescribeFileSystemsRequest * const q);
     DescribeFileSystemsRequestPrivate(const DescribeFileSystemsRequestPrivate &other,
                                    DescribeFileSystemsRequest * const q);

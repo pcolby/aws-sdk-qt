@@ -27,7 +27,7 @@ namespace SES {
 
 class ListTemplatesRequestPrivate;
 
-class QTAWS_EXPORT ListTemplatesRequest : public SESRequest {
+class QTAWS_EXPORT ListTemplatesRequest : public SesRequest {
 
 public:
     ListTemplatesRequest(const ListTemplatesRequest &other);

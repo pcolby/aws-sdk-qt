@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetServiceLinkedRoleDeletionStatusResponse;
 
-class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

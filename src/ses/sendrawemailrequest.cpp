@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SendRawEmailRequest::SendRawEmailRequest(const SendRawEmailRequest &other)
-    : SESRequest(new SendRawEmailRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SendRawEmailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SendRawEmailRequest::SendRawEmailRequest(const SendRawEmailRequest &other)
  * Constructs a SendRawEmailRequest object.
  */
 SendRawEmailRequest::SendRawEmailRequest()
-    : SESRequest(new SendRawEmailRequestPrivate(SESRequest::SendRawEmailAction, this))
+    : SesRequest(new SendRawEmailRequestPrivate(SesRequest::SendRawEmailAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SendRawEmailRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a SendRawEmailRequestPrivate object for SES \a action,
+ * Constructs a SendRawEmailRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SendRawEmailRequestPrivate::SendRawEmailRequestPrivate(
-    const SESRequest::Action action, SendRawEmailRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SendRawEmailRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendRawEmailRequestPrivate::SendRawEmailRequestPrivate(
  */
 SendRawEmailRequestPrivate::SendRawEmailRequestPrivate(
     const SendRawEmailRequestPrivate &other, SendRawEmailRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

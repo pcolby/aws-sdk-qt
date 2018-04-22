@@ -68,7 +68,7 @@ DescribeEffectiveInstanceAssociationsResponse::DescribeEffectiveInstanceAssociat
         const DescribeEffectiveInstanceAssociationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeEffectiveInstanceAssociationsResponsePrivate(this), parent)
+    : SsmResponse(new DescribeEffectiveInstanceAssociationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEffectiveInstanceAssociationsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeEffectiveInstanceAssociationsResponse::parseSuccess(QIODevice &resp
  * Constructs a DescribeEffectiveInstanceAssociationsResponsePrivate object with public implementation \a q.
  */
 DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceAssociationsResponsePrivate(
-    DescribeEffectiveInstanceAssociationsResponse * const q) : SSMResponsePrivate(q)
+    DescribeEffectiveInstanceAssociationsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

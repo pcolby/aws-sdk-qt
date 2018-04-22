@@ -28,10 +28,10 @@ namespace SWF {
 
 class CountPendingActivityTasksRequest;
 
-class QTAWS_EXPORT CountPendingActivityTasksRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT CountPendingActivityTasksRequestPrivate : public SwfRequestPrivate {
 
 public:
-    CountPendingActivityTasksRequestPrivate(const SWFRequest::Action action,
+    CountPendingActivityTasksRequestPrivate(const SwfRequest::Action action,
                                    CountPendingActivityTasksRequest * const q);
     CountPendingActivityTasksRequestPrivate(const CountPendingActivityTasksRequestPrivate &other,
                                    CountPendingActivityTasksRequest * const q);

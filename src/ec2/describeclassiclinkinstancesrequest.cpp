@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeClassicLinkInstancesRequest::DescribeClassicLinkInstancesRequest(const DescribeClassicLinkInstancesRequest &other)
-    : EC2Request(new DescribeClassicLinkInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeClassicLinkInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeClassicLinkInstancesRequest::DescribeClassicLinkInstancesRequest(const D
  * Constructs a DescribeClassicLinkInstancesRequest object.
  */
 DescribeClassicLinkInstancesRequest::DescribeClassicLinkInstancesRequest()
-    : EC2Request(new DescribeClassicLinkInstancesRequestPrivate(EC2Request::DescribeClassicLinkInstancesAction, this))
+    : Ec2Request(new DescribeClassicLinkInstancesRequestPrivate(Ec2Request::DescribeClassicLinkInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response
  */
 
 /*!
- * Constructs a DescribeClassicLinkInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeClassicLinkInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestPrivate(
-    const EC2Request::Action action, DescribeClassicLinkInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeClassicLinkInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestP
  */
 DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestPrivate(
     const DescribeClassicLinkInstancesRequestPrivate &other, DescribeClassicLinkInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

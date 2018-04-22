@@ -48,7 +48,7 @@ ResetNetworkInterfaceAttributeResponse::ResetNetworkInterfaceAttributeResponse(
         const ResetNetworkInterfaceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetNetworkInterfaceAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ResetNetworkInterfaceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetNetworkInterfaceAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetNetworkInterfaceAttributeResponsePrivate object with public implementation \a q.
  */
 ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeResponsePrivate(
-    ResetNetworkInterfaceAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ResetNetworkInterfaceAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

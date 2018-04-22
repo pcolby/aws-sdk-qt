@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 GetReservedInstancesExchangeQuoteRequest::GetReservedInstancesExchangeQuoteRequest(const GetReservedInstancesExchangeQuoteRequest &other)
-    : EC2Request(new GetReservedInstancesExchangeQuoteRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new GetReservedInstancesExchangeQuoteRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetReservedInstancesExchangeQuoteRequest::GetReservedInstancesExchangeQuoteReque
  * Constructs a GetReservedInstancesExchangeQuoteRequest object.
  */
 GetReservedInstancesExchangeQuoteRequest::GetReservedInstancesExchangeQuoteRequest()
-    : EC2Request(new GetReservedInstancesExchangeQuoteRequestPrivate(EC2Request::GetReservedInstancesExchangeQuoteAction, this))
+    : Ec2Request(new GetReservedInstancesExchangeQuoteRequestPrivate(Ec2Request::GetReservedInstancesExchangeQuoteAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetReservedInstancesExchangeQuoteRequest::res
  */
 
 /*!
- * Constructs a GetReservedInstancesExchangeQuoteRequestPrivate object for EC2 \a action,
+ * Constructs a GetReservedInstancesExchangeQuoteRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuoteRequestPrivate(
-    const EC2Request::Action action, GetReservedInstancesExchangeQuoteRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, GetReservedInstancesExchangeQuoteRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuo
  */
 GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuoteRequestPrivate(
     const GetReservedInstancesExchangeQuoteRequestPrivate &other, GetReservedInstancesExchangeQuoteRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

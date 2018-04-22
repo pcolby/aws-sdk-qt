@@ -68,7 +68,7 @@ UpdateAssociationResponse::UpdateAssociationResponse(
         const UpdateAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateAssociationResponsePrivate(this), parent)
+    : SsmResponse(new UpdateAssociationResponsePrivate(this), parent)
 {
     setRequest(new UpdateAssociationRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void UpdateAssociationResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateAssociationResponsePrivate object with public implementation \a q.
  */
 UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
-    UpdateAssociationResponse * const q) : SSMResponsePrivate(q)
+    UpdateAssociationResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

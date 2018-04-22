@@ -48,7 +48,7 @@ DescribeImageAttributeResponse::DescribeImageAttributeResponse(
         const DescribeImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeImageAttributeResponsePrivate(this), parent)
+    : Ec2Response(new DescribeImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new DescribeImageAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeImageAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeImageAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
-    DescribeImageAttributeResponse * const q) : EC2ResponsePrivate(q)
+    DescribeImageAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

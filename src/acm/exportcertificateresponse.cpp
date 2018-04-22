@@ -53,7 +53,7 @@ ExportCertificateResponse::ExportCertificateResponse(
         const ExportCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new ExportCertificateResponsePrivate(this), parent)
+    : AcmResponse(new ExportCertificateResponsePrivate(this), parent)
 {
     setRequest(new ExportCertificateRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void ExportCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a ExportCertificateResponsePrivate object with public implementation \a q.
  */
 ExportCertificateResponsePrivate::ExportCertificateResponsePrivate(
-    ExportCertificateResponse * const q) : ACMResponsePrivate(q)
+    ExportCertificateResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

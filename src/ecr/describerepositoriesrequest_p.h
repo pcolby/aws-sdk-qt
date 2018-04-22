@@ -28,10 +28,10 @@ namespace ECR {
 
 class DescribeRepositoriesRequest;
 
-class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public ECRRequestPrivate {
+class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public EcrRequestPrivate {
 
 public:
-    DescribeRepositoriesRequestPrivate(const ECRRequest::Action action,
+    DescribeRepositoriesRequestPrivate(const EcrRequest::Action action,
                                    DescribeRepositoriesRequest * const q);
     DescribeRepositoriesRequestPrivate(const DescribeRepositoriesRequestPrivate &other,
                                    DescribeRepositoriesRequest * const q);

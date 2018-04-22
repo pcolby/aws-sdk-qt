@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribePrefixListsRequest::DescribePrefixListsRequest(const DescribePrefixListsRequest &other)
-    : EC2Request(new DescribePrefixListsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribePrefixListsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribePrefixListsRequest::DescribePrefixListsRequest(const DescribePrefixLists
  * Constructs a DescribePrefixListsRequest object.
  */
 DescribePrefixListsRequest::DescribePrefixListsRequest()
-    : EC2Request(new DescribePrefixListsRequestPrivate(EC2Request::DescribePrefixListsAction, this))
+    : Ec2Request(new DescribePrefixListsRequestPrivate(Ec2Request::DescribePrefixListsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribePrefixListsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribePrefixListsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
-    const EC2Request::Action action, DescribePrefixListsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribePrefixListsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
     const DescribePrefixListsRequestPrivate &other, DescribePrefixListsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

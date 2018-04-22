@@ -47,7 +47,7 @@ CancelStepsResponse::CancelStepsResponse(
         const CancelStepsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new CancelStepsResponsePrivate(this), parent)
+    : EmrResponse(new CancelStepsResponsePrivate(this), parent)
 {
     setRequest(new CancelStepsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void CancelStepsResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelStepsResponsePrivate object with public implementation \a q.
  */
 CancelStepsResponsePrivate::CancelStepsResponsePrivate(
-    CancelStepsResponse * const q) : EMRResponsePrivate(q)
+    CancelStepsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

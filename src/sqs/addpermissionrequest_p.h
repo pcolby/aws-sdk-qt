@@ -28,10 +28,10 @@ namespace SQS {
 
 class AddPermissionRequest;
 
-class QTAWS_EXPORT AddPermissionRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT AddPermissionRequestPrivate : public SqsRequestPrivate {
 
 public:
-    AddPermissionRequestPrivate(const SQSRequest::Action action,
+    AddPermissionRequestPrivate(const SqsRequest::Action action,
                                    AddPermissionRequest * const q);
     AddPermissionRequestPrivate(const AddPermissionRequestPrivate &other,
                                    AddPermissionRequest * const q);

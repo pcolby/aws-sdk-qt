@@ -28,10 +28,10 @@ namespace SES {
 
 class VerifyDomainDkimRequest;
 
-class QTAWS_EXPORT VerifyDomainDkimRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT VerifyDomainDkimRequestPrivate : public SesRequestPrivate {
 
 public:
-    VerifyDomainDkimRequestPrivate(const SESRequest::Action action,
+    VerifyDomainDkimRequestPrivate(const SesRequest::Action action,
                                    VerifyDomainDkimRequest * const q);
     VerifyDomainDkimRequestPrivate(const VerifyDomainDkimRequestPrivate &other,
                                    VerifyDomainDkimRequest * const q);

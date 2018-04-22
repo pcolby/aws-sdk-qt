@@ -108,7 +108,7 @@ CreateDBSecurityGroupResponse::CreateDBSecurityGroupResponse(
         const CreateDBSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBSecurityGroupResponsePrivate(this), parent)
+    : RdsResponse(new CreateDBSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSecurityGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDBSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
-    CreateDBSecurityGroupResponse * const q) : RDSResponsePrivate(q)
+    CreateDBSecurityGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

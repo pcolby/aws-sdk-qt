@@ -143,7 +143,7 @@ EnableKeyResponse::EnableKeyResponse(
         const EnableKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new EnableKeyResponsePrivate(this), parent)
+    : KmsResponse(new EnableKeyResponsePrivate(this), parent)
 {
     setRequest(new EnableKeyRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void EnableKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a EnableKeyResponsePrivate object with public implementation \a q.
  */
 EnableKeyResponsePrivate::EnableKeyResponsePrivate(
-    EnableKeyResponse * const q) : KMSResponsePrivate(q)
+    EnableKeyResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

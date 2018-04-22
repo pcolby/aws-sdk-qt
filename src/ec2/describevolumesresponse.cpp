@@ -48,7 +48,7 @@ DescribeVolumesResponse::DescribeVolumesResponse(
         const DescribeVolumesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVolumesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeVolumesResponsePrivate(this), parent)
 {
     setRequest(new DescribeVolumesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeVolumesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeVolumesResponsePrivate object with public implementation \a q.
  */
 DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
-    DescribeVolumesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeVolumesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

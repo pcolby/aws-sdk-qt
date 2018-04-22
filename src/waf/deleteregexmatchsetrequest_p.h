@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteRegexMatchSetRequest;
 
-class QTAWS_EXPORT DeleteRegexMatchSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteRegexMatchSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteRegexMatchSetRequestPrivate(const WAFRequest::Action action,
+    DeleteRegexMatchSetRequestPrivate(const WafRequest::Action action,
                                    DeleteRegexMatchSetRequest * const q);
     DeleteRegexMatchSetRequestPrivate(const DeleteRegexMatchSetRequestPrivate &other,
                                    DeleteRegexMatchSetRequest * const q);

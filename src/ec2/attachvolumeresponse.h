@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AttachVolumeResponsePrivate;
 
-class QTAWS_EXPORT AttachVolumeResponse : public EC2Response {
+class QTAWS_EXPORT AttachVolumeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

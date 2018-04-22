@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest(const DeprecateWorkflowTypeRequest &other)
-    : SWFRequest(new DeprecateWorkflowTypeRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new DeprecateWorkflowTypeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest(const DeprecateWorkfl
  * Constructs a DeprecateWorkflowTypeRequest object.
  */
 DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest()
-    : SWFRequest(new DeprecateWorkflowTypeRequestPrivate(SWFRequest::DeprecateWorkflowTypeAction, this))
+    : SwfRequest(new DeprecateWorkflowTypeRequestPrivate(SwfRequest::DeprecateWorkflowTypeAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeprecateWorkflowTypeRequestPrivate object for SWF \a action,
+ * Constructs a DeprecateWorkflowTypeRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
-    const SWFRequest::Action action, DeprecateWorkflowTypeRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, DeprecateWorkflowTypeRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
     const DeprecateWorkflowTypeRequestPrivate &other, DeprecateWorkflowTypeRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

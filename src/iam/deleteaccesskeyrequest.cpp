@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteAccessKeyRequest::DeleteAccessKeyRequest(const DeleteAccessKeyRequest &other)
-    : IAMRequest(new DeleteAccessKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteAccessKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteAccessKeyRequest::DeleteAccessKeyRequest(const DeleteAccessKeyRequest &oth
  * Constructs a DeleteAccessKeyRequest object.
  */
 DeleteAccessKeyRequest::DeleteAccessKeyRequest()
-    : IAMRequest(new DeleteAccessKeyRequestPrivate(IAMRequest::DeleteAccessKeyAction, this))
+    : IamRequest(new DeleteAccessKeyRequestPrivate(IamRequest::DeleteAccessKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteAccessKeyRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeleteAccessKeyRequestPrivate object for IAM \a action,
+ * Constructs a DeleteAccessKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
-    const IAMRequest::Action action, DeleteAccessKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteAccessKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
     const DeleteAccessKeyRequestPrivate &other, DeleteAccessKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest(const ListInstanceProfilesForRoleRequest &other)
-    : IAMRequest(new ListInstanceProfilesForRoleRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListInstanceProfilesForRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest(const Lis
  * Constructs a ListInstanceProfilesForRoleRequest object.
  */
 ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest()
-    : IAMRequest(new ListInstanceProfilesForRoleRequestPrivate(IAMRequest::ListInstanceProfilesForRoleAction, this))
+    : IamRequest(new ListInstanceProfilesForRoleRequestPrivate(IamRequest::ListInstanceProfilesForRoleAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(
  */
 
 /*!
- * Constructs a ListInstanceProfilesForRoleRequestPrivate object for IAM \a action,
+ * Constructs a ListInstanceProfilesForRoleRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
-    const IAMRequest::Action action, ListInstanceProfilesForRoleRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListInstanceProfilesForRoleRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPri
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
     const ListInstanceProfilesForRoleRequestPrivate &other, ListInstanceProfilesForRoleRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

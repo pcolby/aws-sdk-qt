@@ -50,7 +50,7 @@ GetAdminAccountResponse::GetAdminAccountResponse(
         const GetAdminAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new GetAdminAccountResponsePrivate(this), parent)
+    : FmsResponse(new GetAdminAccountResponsePrivate(this), parent)
 {
     setRequest(new GetAdminAccountRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void GetAdminAccountResponse::parseSuccess(QIODevice &response)
  * Constructs a GetAdminAccountResponsePrivate object with public implementation \a q.
  */
 GetAdminAccountResponsePrivate::GetAdminAccountResponsePrivate(
-    GetAdminAccountResponse * const q) : FMSResponsePrivate(q)
+    GetAdminAccountResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

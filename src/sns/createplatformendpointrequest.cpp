@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 CreatePlatformEndpointRequest::CreatePlatformEndpointRequest(const CreatePlatformEndpointRequest &other)
-    : SNSRequest(new CreatePlatformEndpointRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new CreatePlatformEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ CreatePlatformEndpointRequest::CreatePlatformEndpointRequest(const CreatePlatfor
  * Constructs a CreatePlatformEndpointRequest object.
  */
 CreatePlatformEndpointRequest::CreatePlatformEndpointRequest()
-    : SNSRequest(new CreatePlatformEndpointRequestPrivate(SNSRequest::CreatePlatformEndpointAction, this))
+    : SnsRequest(new CreatePlatformEndpointRequestPrivate(SnsRequest::CreatePlatformEndpointAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetw
  */
 
 /*!
- * Constructs a CreatePlatformEndpointRequestPrivate object for SNS \a action,
+ * Constructs a CreatePlatformEndpointRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
-    const SNSRequest::Action action, CreatePlatformEndpointRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, CreatePlatformEndpointRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
     const CreatePlatformEndpointRequestPrivate &other, CreatePlatformEndpointRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

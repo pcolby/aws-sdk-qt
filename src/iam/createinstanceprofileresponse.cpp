@@ -109,7 +109,7 @@ CreateInstanceProfileResponse::CreateInstanceProfileResponse(
         const CreateInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateInstanceProfileResponsePrivate(this), parent)
+    : IamResponse(new CreateInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new CreateInstanceProfileRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void CreateInstanceProfileResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateInstanceProfileResponsePrivate object with public implementation \a q.
  */
 CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponsePrivate(
-    CreateInstanceProfileResponse * const q) : IAMResponsePrivate(q)
+    CreateInstanceProfileResponse * const q) : IamResponsePrivate(q)
 {
 
 }

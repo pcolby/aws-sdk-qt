@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 ListWorkflowTypesRequest::ListWorkflowTypesRequest(const ListWorkflowTypesRequest &other)
-    : SWFRequest(new ListWorkflowTypesRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new ListWorkflowTypesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ ListWorkflowTypesRequest::ListWorkflowTypesRequest(const ListWorkflowTypesReques
  * Constructs a ListWorkflowTypesRequest object.
  */
 ListWorkflowTypesRequest::ListWorkflowTypesRequest()
-    : SWFRequest(new ListWorkflowTypesRequestPrivate(SWFRequest::ListWorkflowTypesAction, this))
+    : SwfRequest(new ListWorkflowTypesRequestPrivate(SwfRequest::ListWorkflowTypesAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * ListWorkflowTypesRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ListWorkflowTypesRequestPrivate object for SWF \a action,
+ * Constructs a ListWorkflowTypesRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
-    const SWFRequest::Action action, ListWorkflowTypesRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, ListWorkflowTypesRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
  */
 ListWorkflowTypesRequestPrivate::ListWorkflowTypesRequestPrivate(
     const ListWorkflowTypesRequestPrivate &other, ListWorkflowTypesRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

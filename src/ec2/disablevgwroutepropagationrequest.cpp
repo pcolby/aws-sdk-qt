@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest(const DisableVgwRoutePropagationRequest &other)
-    : EC2Request(new DisableVgwRoutePropagationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisableVgwRoutePropagationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest(const Disab
  * Constructs a DisableVgwRoutePropagationRequest object.
  */
 DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest()
-    : EC2Request(new DisableVgwRoutePropagationRequestPrivate(EC2Request::DisableVgwRoutePropagationAction, this))
+    : Ec2Request(new DisableVgwRoutePropagationRequestPrivate(Ec2Request::DisableVgwRoutePropagationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(Q
  */
 
 /*!
- * Constructs a DisableVgwRoutePropagationRequestPrivate object for EC2 \a action,
+ * Constructs a DisableVgwRoutePropagationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
-    const EC2Request::Action action, DisableVgwRoutePropagationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisableVgwRoutePropagationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPriva
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
     const DisableVgwRoutePropagationRequestPrivate &other, DisableVgwRoutePropagationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

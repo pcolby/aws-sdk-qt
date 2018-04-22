@@ -108,7 +108,7 @@ AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
         const AddRoleToDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new AddRoleToDBClusterResponsePrivate(this), parent)
+    : RdsResponse(new AddRoleToDBClusterResponsePrivate(this), parent)
 {
     setRequest(new AddRoleToDBClusterRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a AddRoleToDBClusterResponsePrivate object with public implementation \a q.
  */
 AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
-    AddRoleToDBClusterResponse * const q) : RDSResponsePrivate(q)
+    AddRoleToDBClusterResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

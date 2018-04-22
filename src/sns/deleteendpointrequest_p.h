@@ -28,10 +28,10 @@ namespace SNS {
 
 class DeleteEndpointRequest;
 
-class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SnsRequestPrivate {
 
 public:
-    DeleteEndpointRequestPrivate(const SNSRequest::Action action,
+    DeleteEndpointRequestPrivate(const SnsRequest::Action action,
                                    DeleteEndpointRequest * const q);
     DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
                                    DeleteEndpointRequest * const q);

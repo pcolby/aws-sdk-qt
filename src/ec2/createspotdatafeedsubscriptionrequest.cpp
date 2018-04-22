@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest(const CreateSpotDatafeedSubscriptionRequest &other)
-    : EC2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest(con
  * Constructs a CreateSpotDatafeedSubscriptionRequest object.
  */
 CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest()
-    : EC2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(EC2Request::CreateSpotDatafeedSubscriptionAction, this))
+    : Ec2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(Ec2Request::CreateSpotDatafeedSubscriptionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateSpotDatafeedSubscriptionRequest::respon
  */
 
 /*!
- * Constructs a CreateSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action,
+ * Constructs a CreateSpotDatafeedSubscriptionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequestPrivate(
-    const EC2Request::Action action, CreateSpotDatafeedSubscriptionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateSpotDatafeedSubscriptionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequ
  */
 CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequestPrivate(
     const CreateSpotDatafeedSubscriptionRequestPrivate &other, CreateSpotDatafeedSubscriptionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

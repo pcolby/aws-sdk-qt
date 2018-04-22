@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest(const DescribeSubnetGroupsRequest &other)
-    : DAXRequest(new DescribeSubnetGroupsRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DescribeSubnetGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest(const DescribeSubnetGro
  * Constructs a DescribeSubnetGroupsRequest object.
  */
 DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest()
-    : DAXRequest(new DescribeSubnetGroupsRequestPrivate(DAXRequest::DescribeSubnetGroupsAction, this))
+    : DaxRequest(new DescribeSubnetGroupsRequestPrivate(DaxRequest::DescribeSubnetGroupsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeSubnetGroupsRequestPrivate object for DAX \a action,
+ * Constructs a DescribeSubnetGroupsRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
-    const DAXRequest::Action action, DescribeSubnetGroupsRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DescribeSubnetGroupsRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
     const DescribeSubnetGroupsRequestPrivate &other, DescribeSubnetGroupsRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

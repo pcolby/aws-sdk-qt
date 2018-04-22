@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 PromoteReadReplicaRequest::PromoteReadReplicaRequest(const PromoteReadReplicaRequest &other)
-    : RDSRequest(new PromoteReadReplicaRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new PromoteReadReplicaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ PromoteReadReplicaRequest::PromoteReadReplicaRequest(const PromoteReadReplicaReq
  * Constructs a PromoteReadReplicaRequest object.
  */
 PromoteReadReplicaRequest::PromoteReadReplicaRequest()
-    : RDSRequest(new PromoteReadReplicaRequestPrivate(RDSRequest::PromoteReadReplicaAction, this))
+    : RdsRequest(new PromoteReadReplicaRequestPrivate(RdsRequest::PromoteReadReplicaAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a PromoteReadReplicaRequestPrivate object for RDS \a action,
+ * Constructs a PromoteReadReplicaRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
-    const RDSRequest::Action action, PromoteReadReplicaRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, PromoteReadReplicaRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
     const PromoteReadReplicaRequestPrivate &other, PromoteReadReplicaRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -108,7 +108,7 @@ AuthorizeDBSecurityGroupIngressResponse::AuthorizeDBSecurityGroupIngressResponse
         const AuthorizeDBSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new AuthorizeDBSecurityGroupIngressResponsePrivate(this), parent)
+    : RdsResponse(new AuthorizeDBSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeDBSecurityGroupIngressRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * Constructs a AuthorizeDBSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressResponsePrivate(
-    AuthorizeDBSecurityGroupIngressResponse * const q) : RDSResponsePrivate(q)
+    AuthorizeDBSecurityGroupIngressResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

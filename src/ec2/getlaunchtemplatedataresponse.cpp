@@ -48,7 +48,7 @@ GetLaunchTemplateDataResponse::GetLaunchTemplateDataResponse(
         const GetLaunchTemplateDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetLaunchTemplateDataResponsePrivate(this), parent)
+    : Ec2Response(new GetLaunchTemplateDataResponsePrivate(this), parent)
 {
     setRequest(new GetLaunchTemplateDataRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetLaunchTemplateDataResponse::parseSuccess(QIODevice &response)
  * Constructs a GetLaunchTemplateDataResponsePrivate object with public implementation \a q.
  */
 GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponsePrivate(
-    GetLaunchTemplateDataResponse * const q) : EC2ResponsePrivate(q)
+    GetLaunchTemplateDataResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersRequest &other)
-    : SSMRequest(new DescribeParametersRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeParametersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersReq
  * Constructs a DescribeParametersRequest object.
  */
 DescribeParametersRequest::DescribeParametersRequest()
-    : SSMRequest(new DescribeParametersRequestPrivate(SSMRequest::DescribeParametersAction, this))
+    : SsmRequest(new DescribeParametersRequestPrivate(SsmRequest::DescribeParametersAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DescribeParametersRequestPrivate object for SSM \a action,
+ * Constructs a DescribeParametersRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
-    const SSMRequest::Action action, DescribeParametersRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeParametersRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const DescribeParametersRequestPrivate &other, DescribeParametersRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ ReleaseHostsResponse::ReleaseHostsResponse(
         const ReleaseHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReleaseHostsResponsePrivate(this), parent)
+    : Ec2Response(new ReleaseHostsResponsePrivate(this), parent)
 {
     setRequest(new ReleaseHostsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ReleaseHostsResponse::parseSuccess(QIODevice &response)
  * Constructs a ReleaseHostsResponsePrivate object with public implementation \a q.
  */
 ReleaseHostsResponsePrivate::ReleaseHostsResponsePrivate(
-    ReleaseHostsResponse * const q) : EC2ResponsePrivate(q)
+    ReleaseHostsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

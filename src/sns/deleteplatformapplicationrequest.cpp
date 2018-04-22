@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 DeletePlatformApplicationRequest::DeletePlatformApplicationRequest(const DeletePlatformApplicationRequest &other)
-    : SNSRequest(new DeletePlatformApplicationRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new DeletePlatformApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ DeletePlatformApplicationRequest::DeletePlatformApplicationRequest(const DeleteP
  * Constructs a DeletePlatformApplicationRequest object.
  */
 DeletePlatformApplicationRequest::DeletePlatformApplicationRequest()
-    : SNSRequest(new DeletePlatformApplicationRequestPrivate(SNSRequest::DeletePlatformApplicationAction, this))
+    : SnsRequest(new DeletePlatformApplicationRequestPrivate(SnsRequest::DeletePlatformApplicationAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformApplicationRequest::response(QN
  */
 
 /*!
- * Constructs a DeletePlatformApplicationRequestPrivate object for SNS \a action,
+ * Constructs a DeletePlatformApplicationRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
-    const SNSRequest::Action action, DeletePlatformApplicationRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, DeletePlatformApplicationRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
     const DeletePlatformApplicationRequestPrivate &other, DeletePlatformApplicationRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ AllocateAddressResponse::AllocateAddressResponse(
         const AllocateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AllocateAddressResponsePrivate(this), parent)
+    : Ec2Response(new AllocateAddressResponsePrivate(this), parent)
 {
     setRequest(new AllocateAddressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AllocateAddressResponse::parseSuccess(QIODevice &response)
  * Constructs a AllocateAddressResponsePrivate object with public implementation \a q.
  */
 AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
-    AllocateAddressResponse * const q) : EC2ResponsePrivate(q)
+    AllocateAddressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

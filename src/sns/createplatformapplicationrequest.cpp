@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 CreatePlatformApplicationRequest::CreatePlatformApplicationRequest(const CreatePlatformApplicationRequest &other)
-    : SNSRequest(new CreatePlatformApplicationRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new CreatePlatformApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ CreatePlatformApplicationRequest::CreatePlatformApplicationRequest(const CreateP
  * Constructs a CreatePlatformApplicationRequest object.
  */
 CreatePlatformApplicationRequest::CreatePlatformApplicationRequest()
-    : SNSRequest(new CreatePlatformApplicationRequestPrivate(SNSRequest::CreatePlatformApplicationAction, this))
+    : SnsRequest(new CreatePlatformApplicationRequestPrivate(SnsRequest::CreatePlatformApplicationAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformApplicationRequest::response(QN
  */
 
 /*!
- * Constructs a CreatePlatformApplicationRequestPrivate object for SNS \a action,
+ * Constructs a CreatePlatformApplicationRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
-    const SNSRequest::Action action, CreatePlatformApplicationRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, CreatePlatformApplicationRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
     const CreatePlatformApplicationRequestPrivate &other, CreatePlatformApplicationRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

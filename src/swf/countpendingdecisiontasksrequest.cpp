@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest(const CountPendingDecisionTasksRequest &other)
-    : SWFRequest(new CountPendingDecisionTasksRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new CountPendingDecisionTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest(const CountPe
  * Constructs a CountPendingDecisionTasksRequest object.
  */
 CountPendingDecisionTasksRequest::CountPendingDecisionTasksRequest()
-    : SWFRequest(new CountPendingDecisionTasksRequestPrivate(SWFRequest::CountPendingDecisionTasksAction, this))
+    : SwfRequest(new CountPendingDecisionTasksRequestPrivate(SwfRequest::CountPendingDecisionTasksAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QN
  */
 
 /*!
- * Constructs a CountPendingDecisionTasksRequestPrivate object for SWF \a action,
+ * Constructs a CountPendingDecisionTasksRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate(
-    const SWFRequest::Action action, CountPendingDecisionTasksRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, CountPendingDecisionTasksRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate
  */
 CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate(
     const CountPendingDecisionTasksRequestPrivate &other, CountPendingDecisionTasksRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeRegionsRequest::DescribeRegionsRequest(const DescribeRegionsRequest &other)
-    : EC2Request(new DescribeRegionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeRegionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeRegionsRequest::DescribeRegionsRequest(const DescribeRegionsRequest &oth
  * Constructs a DescribeRegionsRequest object.
  */
 DescribeRegionsRequest::DescribeRegionsRequest()
-    : EC2Request(new DescribeRegionsRequestPrivate(EC2Request::DescribeRegionsAction, this))
+    : Ec2Request(new DescribeRegionsRequestPrivate(Ec2Request::DescribeRegionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DescribeRegionsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeRegionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
-    const EC2Request::Action action, DescribeRegionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeRegionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
     const DescribeRegionsRequestPrivate &other, DescribeRegionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

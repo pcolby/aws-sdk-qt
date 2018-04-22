@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
-    : FMSRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
  * Constructs a DeletePolicyRequest object.
  */
 DeletePolicyRequest::DeletePolicyRequest()
-    : FMSRequest(new DeletePolicyRequestPrivate(FMSRequest::DeletePolicyAction, this))
+    : FmsRequest(new DeletePolicyRequestPrivate(FmsRequest::DeletePolicyAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DeletePolicyRequestPrivate object for FMS \a action,
+ * Constructs a DeletePolicyRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
-    const FMSRequest::Action action, DeletePolicyRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, DeletePolicyRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const DeletePolicyRequestPrivate &other, DeletePolicyRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

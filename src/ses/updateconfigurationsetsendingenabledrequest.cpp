@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnabledRequest(const UpdateConfigurationSetSendingEnabledRequest &other)
-    : SESRequest(new UpdateConfigurationSetSendingEnabledRequestPrivate(*other.d_func(), this))
+    : SesRequest(new UpdateConfigurationSetSendingEnabledRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnable
  * Constructs a UpdateConfigurationSetSendingEnabledRequest object.
  */
 UpdateConfigurationSetSendingEnabledRequest::UpdateConfigurationSetSendingEnabledRequest()
-    : SESRequest(new UpdateConfigurationSetSendingEnabledRequestPrivate(SESRequest::UpdateConfigurationSetSendingEnabledAction, this))
+    : SesRequest(new UpdateConfigurationSetSendingEnabledRequestPrivate(SesRequest::UpdateConfigurationSetSendingEnabledAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
  */
 
 /*!
- * Constructs a UpdateConfigurationSetSendingEnabledRequestPrivate object for SES \a action,
+ * Constructs a UpdateConfigurationSetSendingEnabledRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
-    const SESRequest::Action action, UpdateConfigurationSetSendingEnabledRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, UpdateConfigurationSetSendingEnabledRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendin
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
     const UpdateConfigurationSetSendingEnabledRequestPrivate &other, UpdateConfigurationSetSendingEnabledRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

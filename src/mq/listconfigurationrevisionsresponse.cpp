@@ -46,7 +46,7 @@ ListConfigurationRevisionsResponse::ListConfigurationRevisionsResponse(
         const ListConfigurationRevisionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new ListConfigurationRevisionsResponsePrivate(this), parent)
+    : MqResponse(new ListConfigurationRevisionsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationRevisionsRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListConfigurationRevisionsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePrivate(
-    ListConfigurationRevisionsResponse * const q) : MQResponsePrivate(q)
+    ListConfigurationRevisionsResponse * const q) : MqResponsePrivate(q)
 {
 
 }

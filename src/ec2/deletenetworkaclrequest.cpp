@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteNetworkAclRequest::DeleteNetworkAclRequest(const DeleteNetworkAclRequest &other)
-    : EC2Request(new DeleteNetworkAclRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteNetworkAclRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteNetworkAclRequest::DeleteNetworkAclRequest(const DeleteNetworkAclRequest &
  * Constructs a DeleteNetworkAclRequest object.
  */
 DeleteNetworkAclRequest::DeleteNetworkAclRequest()
-    : EC2Request(new DeleteNetworkAclRequestPrivate(EC2Request::DeleteNetworkAclAction, this))
+    : Ec2Request(new DeleteNetworkAclRequestPrivate(Ec2Request::DeleteNetworkAclAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteNetworkAclRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteNetworkAclRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
-    const EC2Request::Action action, DeleteNetworkAclRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteNetworkAclRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
  */
 DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
     const DeleteNetworkAclRequestPrivate &other, DeleteNetworkAclRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

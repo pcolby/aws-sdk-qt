@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 SendAutomationSignalRequest::SendAutomationSignalRequest(const SendAutomationSignalRequest &other)
-    : SSMRequest(new SendAutomationSignalRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new SendAutomationSignalRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ SendAutomationSignalRequest::SendAutomationSignalRequest(const SendAutomationSig
  * Constructs a SendAutomationSignalRequest object.
  */
 SendAutomationSignalRequest::SendAutomationSignalRequest()
-    : SSMRequest(new SendAutomationSignalRequestPrivate(SSMRequest::SendAutomationSignalAction, this))
+    : SsmRequest(new SendAutomationSignalRequestPrivate(SsmRequest::SendAutomationSignalAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * SendAutomationSignalRequest::response(QNetwor
  */
 
 /*!
- * Constructs a SendAutomationSignalRequestPrivate object for SSM \a action,
+ * Constructs a SendAutomationSignalRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
-    const SSMRequest::Action action, SendAutomationSignalRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, SendAutomationSignalRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
     const SendAutomationSignalRequestPrivate &other, SendAutomationSignalRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

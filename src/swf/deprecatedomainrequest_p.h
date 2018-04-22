@@ -28,10 +28,10 @@ namespace SWF {
 
 class DeprecateDomainRequest;
 
-class QTAWS_EXPORT DeprecateDomainRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT DeprecateDomainRequestPrivate : public SwfRequestPrivate {
 
 public:
-    DeprecateDomainRequestPrivate(const SWFRequest::Action action,
+    DeprecateDomainRequestPrivate(const SwfRequest::Action action,
                                    DeprecateDomainRequest * const q);
     DeprecateDomainRequestPrivate(const DeprecateDomainRequestPrivate &other,
                                    DeprecateDomainRequest * const q);

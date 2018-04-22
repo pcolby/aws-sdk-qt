@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest(const DeleteLifecyclePolicyRequest &other)
-    : ECRRequest(new DeleteLifecyclePolicyRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new DeleteLifecyclePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest(const DeleteLifecycle
  * Constructs a DeleteLifecyclePolicyRequest object.
  */
 DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest()
-    : ECRRequest(new DeleteLifecyclePolicyRequestPrivate(ECRRequest::DeleteLifecyclePolicyAction, this))
+    : EcrRequest(new DeleteLifecyclePolicyRequestPrivate(EcrRequest::DeleteLifecyclePolicyAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeleteLifecyclePolicyRequestPrivate object for ECR \a action,
+ * Constructs a DeleteLifecyclePolicyRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
-    const ECRRequest::Action action, DeleteLifecyclePolicyRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, DeleteLifecyclePolicyRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
     const DeleteLifecyclePolicyRequestPrivate &other, DeleteLifecyclePolicyRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

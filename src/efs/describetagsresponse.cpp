@@ -50,7 +50,7 @@ DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DescribeTagsResponsePrivate(this), parent)
+    : EfsResponse(new DescribeTagsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTagsRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeTagsResponsePrivate object with public implementation \a q.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
-    DescribeTagsResponse * const q) : EFSResponsePrivate(q)
+    DescribeTagsResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

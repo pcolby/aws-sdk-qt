@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsRequest(const DescribeMountTargetSecurityGroupsRequest &other)
-    : EFSRequest(new DescribeMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DescribeMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsReque
  * Constructs a DescribeMountTargetSecurityGroupsRequest object.
  */
 DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsRequest()
-    : EFSRequest(new DescribeMountTargetSecurityGroupsRequestPrivate(EFSRequest::DescribeMountTargetSecurityGroupsAction, this))
+    : EfsRequest(new DescribeMountTargetSecurityGroupsRequestPrivate(EfsRequest::DescribeMountTargetSecurityGroupsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::res
  */
 
 /*!
- * Constructs a DescribeMountTargetSecurityGroupsRequestPrivate object for EFS \a action,
+ * Constructs a DescribeMountTargetSecurityGroupsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
-    const EFSRequest::Action action, DescribeMountTargetSecurityGroupsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DescribeMountTargetSecurityGroupsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGrou
  */
 DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
     const DescribeMountTargetSecurityGroupsRequestPrivate &other, DescribeMountTargetSecurityGroupsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateSecurityGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateSecurityGroupRequest : public EC2Request {
+class QTAWS_EXPORT CreateSecurityGroupRequest : public Ec2Request {
 
 public:
     CreateSecurityGroupRequest(const CreateSecurityGroupRequest &other);

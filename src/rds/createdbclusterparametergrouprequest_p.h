@@ -28,10 +28,10 @@ namespace RDS {
 
 class CreateDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT CreateDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT CreateDBClusterParameterGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
-    CreateDBClusterParameterGroupRequestPrivate(const RDSRequest::Action action,
+    CreateDBClusterParameterGroupRequestPrivate(const RdsRequest::Action action,
                                    CreateDBClusterParameterGroupRequest * const q);
     CreateDBClusterParameterGroupRequestPrivate(const CreateDBClusterParameterGroupRequestPrivate &other,
                                    CreateDBClusterParameterGroupRequest * const q);

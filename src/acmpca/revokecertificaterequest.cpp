@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 RevokeCertificateRequest::RevokeCertificateRequest(const RevokeCertificateRequest &other)
-    : ACMPCARequest(new RevokeCertificateRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new RevokeCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ RevokeCertificateRequest::RevokeCertificateRequest(const RevokeCertificateReques
  * Constructs a RevokeCertificateRequest object.
  */
 RevokeCertificateRequest::RevokeCertificateRequest()
-    : ACMPCARequest(new RevokeCertificateRequestPrivate(ACMPCARequest::RevokeCertificateAction, this))
+    : AcmpcaRequest(new RevokeCertificateRequestPrivate(AcmpcaRequest::RevokeCertificateAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * RevokeCertificateRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a RevokeCertificateRequestPrivate object for ACMPCA \a action,
+ * Constructs a RevokeCertificateRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
-    const ACMPCARequest::Action action, RevokeCertificateRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, RevokeCertificateRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
  */
 RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
     const RevokeCertificateRequestPrivate &other, RevokeCertificateRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

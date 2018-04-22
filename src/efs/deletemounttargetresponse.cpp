@@ -50,7 +50,7 @@ DeleteMountTargetResponse::DeleteMountTargetResponse(
         const DeleteMountTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DeleteMountTargetResponsePrivate(this), parent)
+    : EfsResponse(new DeleteMountTargetResponsePrivate(this), parent)
 {
     setRequest(new DeleteMountTargetRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteMountTargetResponsePrivate object with public implementation \a q.
  */
 DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
-    DeleteMountTargetResponse * const q) : EFSResponsePrivate(q)
+    DeleteMountTargetResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

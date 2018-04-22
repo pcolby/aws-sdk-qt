@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DiscoverPollEndpointRequest::DiscoverPollEndpointRequest(const DiscoverPollEndpointRequest &other)
-    : ECSRequest(new DiscoverPollEndpointRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DiscoverPollEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DiscoverPollEndpointRequest::DiscoverPollEndpointRequest(const DiscoverPollEndpo
  * Constructs a DiscoverPollEndpointRequest object.
  */
 DiscoverPollEndpointRequest::DiscoverPollEndpointRequest()
-    : ECSRequest(new DiscoverPollEndpointRequestPrivate(ECSRequest::DiscoverPollEndpointAction, this))
+    : EcsRequest(new DiscoverPollEndpointRequestPrivate(EcsRequest::DiscoverPollEndpointAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DiscoverPollEndpointRequestPrivate object for ECS \a action,
+ * Constructs a DiscoverPollEndpointRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
-    const ECSRequest::Action action, DiscoverPollEndpointRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DiscoverPollEndpointRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
     const DiscoverPollEndpointRequestPrivate &other, DiscoverPollEndpointRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

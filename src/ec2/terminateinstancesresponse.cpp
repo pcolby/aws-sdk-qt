@@ -48,7 +48,7 @@ TerminateInstancesResponse::TerminateInstancesResponse(
         const TerminateInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new TerminateInstancesResponsePrivate(this), parent)
+    : Ec2Response(new TerminateInstancesResponsePrivate(this), parent)
 {
     setRequest(new TerminateInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void TerminateInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a TerminateInstancesResponsePrivate object with public implementation \a q.
  */
 TerminateInstancesResponsePrivate::TerminateInstancesResponsePrivate(
-    TerminateInstancesResponse * const q) : EC2ResponsePrivate(q)
+    TerminateInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

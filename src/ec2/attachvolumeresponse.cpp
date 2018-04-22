@@ -48,7 +48,7 @@ AttachVolumeResponse::AttachVolumeResponse(
         const AttachVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AttachVolumeResponsePrivate(this), parent)
+    : Ec2Response(new AttachVolumeResponsePrivate(this), parent)
 {
     setRequest(new AttachVolumeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AttachVolumeResponse::parseSuccess(QIODevice &response)
  * Constructs a AttachVolumeResponsePrivate object with public implementation \a q.
  */
 AttachVolumeResponsePrivate::AttachVolumeResponsePrivate(
-    AttachVolumeResponse * const q) : EC2ResponsePrivate(q)
+    AttachVolumeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ AssociateAddressResponse::AssociateAddressResponse(
         const AssociateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateAddressResponsePrivate(this), parent)
+    : Ec2Response(new AssociateAddressResponsePrivate(this), parent)
 {
     setRequest(new AssociateAddressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AssociateAddressResponse::parseSuccess(QIODevice &response)
  * Constructs a AssociateAddressResponsePrivate object with public implementation \a q.
  */
 AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
-    AssociateAddressResponse * const q) : EC2ResponsePrivate(q)
+    AssociateAddressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

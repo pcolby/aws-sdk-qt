@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 UpdateBrokerRequest::UpdateBrokerRequest(const UpdateBrokerRequest &other)
-    : MQRequest(new UpdateBrokerRequestPrivate(*other.d_func(), this))
+    : MqRequest(new UpdateBrokerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ UpdateBrokerRequest::UpdateBrokerRequest(const UpdateBrokerRequest &other)
  * Constructs a UpdateBrokerRequest object.
  */
 UpdateBrokerRequest::UpdateBrokerRequest()
-    : MQRequest(new UpdateBrokerRequestPrivate(MQRequest::UpdateBrokerAction, this))
+    : MqRequest(new UpdateBrokerRequestPrivate(MqRequest::UpdateBrokerAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * UpdateBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a UpdateBrokerRequestPrivate object for MQ \a action,
+ * Constructs a UpdateBrokerRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
-    const MQRequest::Action action, UpdateBrokerRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, UpdateBrokerRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
     const UpdateBrokerRequestPrivate &other, UpdateBrokerRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

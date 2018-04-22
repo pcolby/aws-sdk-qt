@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateByteMatchSetRequest::UpdateByteMatchSetRequest(const UpdateByteMatchSetRequest &other)
-    : WAFRequest(new UpdateByteMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateByteMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateByteMatchSetRequest::UpdateByteMatchSetRequest(const UpdateByteMatchSetReq
  * Constructs a UpdateByteMatchSetRequest object.
  */
 UpdateByteMatchSetRequest::UpdateByteMatchSetRequest()
-    : WAFRequest(new UpdateByteMatchSetRequestPrivate(WAFRequest::UpdateByteMatchSetAction, this))
+    : WafRequest(new UpdateByteMatchSetRequestPrivate(WafRequest::UpdateByteMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UpdateByteMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a UpdateByteMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
-    const WAFRequest::Action action, UpdateByteMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateByteMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
     const UpdateByteMatchSetRequestPrivate &other, UpdateByteMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

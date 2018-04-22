@@ -48,7 +48,7 @@ IncreaseReplicationFactorResponse::IncreaseReplicationFactorResponse(
         const IncreaseReplicationFactorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new IncreaseReplicationFactorResponsePrivate(this), parent)
+    : DaxResponse(new IncreaseReplicationFactorResponsePrivate(this), parent)
 {
     setRequest(new IncreaseReplicationFactorRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
  * Constructs a IncreaseReplicationFactorResponsePrivate object with public implementation \a q.
  */
 IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePrivate(
-    IncreaseReplicationFactorResponse * const q) : DAXResponsePrivate(q)
+    IncreaseReplicationFactorResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

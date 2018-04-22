@@ -48,7 +48,7 @@ ModifyFpgaImageAttributeResponse::ModifyFpgaImageAttributeResponse(
         const ModifyFpgaImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyFpgaImageAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifyFpgaImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyFpgaImageAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyFpgaImageAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponsePrivate(
-    ModifyFpgaImageAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifyFpgaImageAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

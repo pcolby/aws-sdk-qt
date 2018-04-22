@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DescribeContainerInstancesRequest::DescribeContainerInstancesRequest(const DescribeContainerInstancesRequest &other)
-    : ECSRequest(new DescribeContainerInstancesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DescribeContainerInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeContainerInstancesRequest::DescribeContainerInstancesRequest(const Descr
  * Constructs a DescribeContainerInstancesRequest object.
  */
 DescribeContainerInstancesRequest::DescribeContainerInstancesRequest()
-    : ECSRequest(new DescribeContainerInstancesRequestPrivate(ECSRequest::DescribeContainerInstancesAction, this))
+    : EcsRequest(new DescribeContainerInstancesRequestPrivate(EcsRequest::DescribeContainerInstancesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DescribeContainerInstancesRequest::response(Q
  */
 
 /*!
- * Constructs a DescribeContainerInstancesRequestPrivate object for ECS \a action,
+ * Constructs a DescribeContainerInstancesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPrivate(
-    const ECSRequest::Action action, DescribeContainerInstancesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DescribeContainerInstancesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPriva
  */
 DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPrivate(
     const DescribeContainerInstancesRequestPrivate &other, DescribeContainerInstancesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

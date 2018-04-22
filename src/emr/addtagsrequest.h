@@ -27,7 +27,7 @@ namespace EMR {
 
 class AddTagsRequestPrivate;
 
-class QTAWS_EXPORT AddTagsRequest : public EMRRequest {
+class QTAWS_EXPORT AddTagsRequest : public EmrRequest {
 
 public:
     AddTagsRequest(const AddTagsRequest &other);

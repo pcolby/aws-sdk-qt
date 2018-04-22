@@ -28,10 +28,10 @@ namespace EC2 {
 
 class UpdateSecurityGroupRuleDescriptionsEgressRequest;
 
-class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(const EC2Request::Action action,
+    UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(const Ec2Request::Action action,
                                    UpdateSecurityGroupRuleDescriptionsEgressRequest * const q);
     UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(const UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate &other,
                                    UpdateSecurityGroupRuleDescriptionsEgressRequest * const q);

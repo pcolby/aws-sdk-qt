@@ -48,7 +48,7 @@ UpdateParameterGroupResponse::UpdateParameterGroupResponse(
         const UpdateParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new UpdateParameterGroupResponsePrivate(this), parent)
+    : DaxResponse(new UpdateParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateParameterGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UpdateParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateParameterGroupResponsePrivate object with public implementation \a q.
  */
 UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponsePrivate(
-    UpdateParameterGroupResponse * const q) : DAXResponsePrivate(q)
+    UpdateParameterGroupResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

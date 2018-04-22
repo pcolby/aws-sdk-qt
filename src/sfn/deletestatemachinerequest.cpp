@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 DeleteStateMachineRequest::DeleteStateMachineRequest(const DeleteStateMachineRequest &other)
-    : SFNRequest(new DeleteStateMachineRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new DeleteStateMachineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DeleteStateMachineRequest::DeleteStateMachineRequest(const DeleteStateMachineReq
  * Constructs a DeleteStateMachineRequest object.
  */
 DeleteStateMachineRequest::DeleteStateMachineRequest()
-    : SFNRequest(new DeleteStateMachineRequestPrivate(SFNRequest::DeleteStateMachineAction, this))
+    : SfnRequest(new DeleteStateMachineRequestPrivate(SfnRequest::DeleteStateMachineAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteStateMachineRequestPrivate object for SFN \a action,
+ * Constructs a DeleteStateMachineRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
-    const SFNRequest::Action action, DeleteStateMachineRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, DeleteStateMachineRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
     const DeleteStateMachineRequestPrivate &other, DeleteStateMachineRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

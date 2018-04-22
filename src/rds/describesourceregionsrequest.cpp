@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeSourceRegionsRequest::DescribeSourceRegionsRequest(const DescribeSourceRegionsRequest &other)
-    : RDSRequest(new DescribeSourceRegionsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeSourceRegionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeSourceRegionsRequest::DescribeSourceRegionsRequest(const DescribeSourceR
  * Constructs a DescribeSourceRegionsRequest object.
  */
 DescribeSourceRegionsRequest::DescribeSourceRegionsRequest()
-    : RDSRequest(new DescribeSourceRegionsRequestPrivate(RDSRequest::DescribeSourceRegionsAction, this))
+    : RdsRequest(new DescribeSourceRegionsRequestPrivate(RdsRequest::DescribeSourceRegionsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DescribeSourceRegionsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeSourceRegionsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
-    const RDSRequest::Action action, DescribeSourceRegionsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeSourceRegionsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
     const DescribeSourceRegionsRequestPrivate &other, DescribeSourceRegionsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

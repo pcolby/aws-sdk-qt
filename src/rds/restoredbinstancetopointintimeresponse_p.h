@@ -27,7 +27,7 @@ namespace RDS {
 
 class RestoreDBInstanceToPointInTimeResponse;
 
-class QTAWS_EXPORT RestoreDBInstanceToPointInTimeResponsePrivate : public RDSResponsePrivate {
+class QTAWS_EXPORT RestoreDBInstanceToPointInTimeResponsePrivate : public RdsResponsePrivate {
     Q_OBJECT
 
 public:

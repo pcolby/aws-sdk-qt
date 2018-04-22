@@ -49,7 +49,7 @@ UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
         const UpdateRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateRegexPatternSetResponsePrivate(this), parent)
+    : WafResponse(new UpdateRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateRegexPatternSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 UpdateRegexPatternSetResponsePrivate::UpdateRegexPatternSetResponsePrivate(
-    UpdateRegexPatternSetResponse * const q) : WAFResponsePrivate(q)
+    UpdateRegexPatternSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

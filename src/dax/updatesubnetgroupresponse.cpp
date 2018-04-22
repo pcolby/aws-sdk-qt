@@ -48,7 +48,7 @@ UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
         const UpdateSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new UpdateSubnetGroupResponsePrivate(this), parent)
+    : DaxResponse(new UpdateSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateSubnetGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UpdateSubnetGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateSubnetGroupResponsePrivate object with public implementation \a q.
  */
 UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
-    UpdateSubnetGroupResponse * const q) : DAXResponsePrivate(q)
+    UpdateSubnetGroupResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

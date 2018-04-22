@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeregisterTaskFromMaintenanceWindowRequest::DeregisterTaskFromMaintenanceWindowRequest(const DeregisterTaskFromMaintenanceWindowRequest &other)
-    : SSMRequest(new DeregisterTaskFromMaintenanceWindowRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeregisterTaskFromMaintenanceWindowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeregisterTaskFromMaintenanceWindowRequest::DeregisterTaskFromMaintenanceWindowR
  * Constructs a DeregisterTaskFromMaintenanceWindowRequest object.
  */
 DeregisterTaskFromMaintenanceWindowRequest::DeregisterTaskFromMaintenanceWindowRequest()
-    : SSMRequest(new DeregisterTaskFromMaintenanceWindowRequestPrivate(SSMRequest::DeregisterTaskFromMaintenanceWindowAction, this))
+    : SsmRequest(new DeregisterTaskFromMaintenanceWindowRequestPrivate(SsmRequest::DeregisterTaskFromMaintenanceWindowAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterTaskFromMaintenanceWindowRequest::r
  */
 
 /*!
- * Constructs a DeregisterTaskFromMaintenanceWindowRequestPrivate object for SSM \a action,
+ * Constructs a DeregisterTaskFromMaintenanceWindowRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenanceWindowRequestPrivate(
-    const SSMRequest::Action action, DeregisterTaskFromMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeregisterTaskFromMaintenanceWindowRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenance
  */
 DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenanceWindowRequestPrivate(
     const DeregisterTaskFromMaintenanceWindowRequestPrivate &other, DeregisterTaskFromMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

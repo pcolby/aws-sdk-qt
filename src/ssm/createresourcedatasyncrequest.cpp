@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 CreateResourceDataSyncRequest::CreateResourceDataSyncRequest(const CreateResourceDataSyncRequest &other)
-    : SSMRequest(new CreateResourceDataSyncRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new CreateResourceDataSyncRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ CreateResourceDataSyncRequest::CreateResourceDataSyncRequest(const CreateResourc
  * Constructs a CreateResourceDataSyncRequest object.
  */
 CreateResourceDataSyncRequest::CreateResourceDataSyncRequest()
-    : SSMRequest(new CreateResourceDataSyncRequestPrivate(SSMRequest::CreateResourceDataSyncAction, this))
+    : SsmRequest(new CreateResourceDataSyncRequestPrivate(SsmRequest::CreateResourceDataSyncAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDataSyncRequest::response(QNetw
  */
 
 /*!
- * Constructs a CreateResourceDataSyncRequestPrivate object for SSM \a action,
+ * Constructs a CreateResourceDataSyncRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
-    const SSMRequest::Action action, CreateResourceDataSyncRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, CreateResourceDataSyncRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
  */
 CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
     const CreateResourceDataSyncRequestPrivate &other, CreateResourceDataSyncRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

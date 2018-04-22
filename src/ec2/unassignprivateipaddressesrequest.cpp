@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest(const UnassignPrivateIpAddressesRequest &other)
-    : EC2Request(new UnassignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new UnassignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest(const Unass
  * Constructs a UnassignPrivateIpAddressesRequest object.
  */
 UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest()
-    : EC2Request(new UnassignPrivateIpAddressesRequestPrivate(EC2Request::UnassignPrivateIpAddressesAction, this))
+    : Ec2Request(new UnassignPrivateIpAddressesRequestPrivate(Ec2Request::UnassignPrivateIpAddressesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(Q
  */
 
 /*!
- * Constructs a UnassignPrivateIpAddressesRequestPrivate object for EC2 \a action,
+ * Constructs a UnassignPrivateIpAddressesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
-    const EC2Request::Action action, UnassignPrivateIpAddressesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, UnassignPrivateIpAddressesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPriva
  */
 UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
     const UnassignPrivateIpAddressesRequestPrivate &other, UnassignPrivateIpAddressesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

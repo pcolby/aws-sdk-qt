@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 ListIdentitiesRequest::ListIdentitiesRequest(const ListIdentitiesRequest &other)
-    : SESRequest(new ListIdentitiesRequestPrivate(*other.d_func(), this))
+    : SesRequest(new ListIdentitiesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ListIdentitiesRequest::ListIdentitiesRequest(const ListIdentitiesRequest &other)
  * Constructs a ListIdentitiesRequest object.
  */
 ListIdentitiesRequest::ListIdentitiesRequest()
-    : SESRequest(new ListIdentitiesRequestPrivate(SESRequest::ListIdentitiesAction, this))
+    : SesRequest(new ListIdentitiesRequestPrivate(SesRequest::ListIdentitiesAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * ListIdentitiesRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ListIdentitiesRequestPrivate object for SES \a action,
+ * Constructs a ListIdentitiesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
-    const SESRequest::Action action, ListIdentitiesRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, ListIdentitiesRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
  */
 ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
     const ListIdentitiesRequestPrivate &other, ListIdentitiesRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

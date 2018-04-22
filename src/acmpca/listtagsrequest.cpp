@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
-    : ACMPCARequest(new ListTagsRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new ListTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
  * Constructs a ListTagsRequest object.
  */
 ListTagsRequest::ListTagsRequest()
-    : ACMPCARequest(new ListTagsRequestPrivate(ACMPCARequest::ListTagsAction, this))
+    : AcmpcaRequest(new ListTagsRequestPrivate(AcmpcaRequest::ListTagsAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a ListTagsRequestPrivate object for ACMPCA \a action,
+ * Constructs a ListTagsRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
-    const ACMPCARequest::Action action, ListTagsRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, ListTagsRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const ListTagsRequestPrivate &other, ListTagsRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

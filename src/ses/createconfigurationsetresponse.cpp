@@ -55,7 +55,7 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
         const CreateConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CreateConfigurationSetResponsePrivate(this), parent)
+    : SesResponse(new CreateConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateConfigurationSetResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
-    CreateConfigurationSetResponse * const q) : SESResponsePrivate(q)
+    CreateConfigurationSetResponse * const q) : SesResponsePrivate(q)
 {
 
 }

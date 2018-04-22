@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReportInstanceStatusRequest::ReportInstanceStatusRequest(const ReportInstanceStatusRequest &other)
-    : EC2Request(new ReportInstanceStatusRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReportInstanceStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReportInstanceStatusRequest::ReportInstanceStatusRequest(const ReportInstanceSta
  * Constructs a ReportInstanceStatusRequest object.
  */
 ReportInstanceStatusRequest::ReportInstanceStatusRequest()
-    : EC2Request(new ReportInstanceStatusRequestPrivate(EC2Request::ReportInstanceStatusAction, this))
+    : Ec2Request(new ReportInstanceStatusRequestPrivate(Ec2Request::ReportInstanceStatusAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ReportInstanceStatusRequestPrivate object for EC2 \a action,
+ * Constructs a ReportInstanceStatusRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
-    const EC2Request::Action action, ReportInstanceStatusRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReportInstanceStatusRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
  */
 ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
     const ReportInstanceStatusRequestPrivate &other, ReportInstanceStatusRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

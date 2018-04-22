@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RestoreAddressToClassicResponsePrivate;
 
-class QTAWS_EXPORT RestoreAddressToClassicResponse : public EC2Response {
+class QTAWS_EXPORT RestoreAddressToClassicResponse : public Ec2Response {
     Q_OBJECT
 
 public:

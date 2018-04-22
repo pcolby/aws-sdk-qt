@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetRolePolicyRequest::GetRolePolicyRequest(const GetRolePolicyRequest &other)
-    : IAMRequest(new GetRolePolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetRolePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetRolePolicyRequest::GetRolePolicyRequest(const GetRolePolicyRequest &other)
  * Constructs a GetRolePolicyRequest object.
  */
 GetRolePolicyRequest::GetRolePolicyRequest()
-    : IAMRequest(new GetRolePolicyRequestPrivate(IAMRequest::GetRolePolicyAction, this))
+    : IamRequest(new GetRolePolicyRequestPrivate(IamRequest::GetRolePolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetRolePolicyRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a GetRolePolicyRequestPrivate object for IAM \a action,
+ * Constructs a GetRolePolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
-    const IAMRequest::Action action, GetRolePolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetRolePolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
  */
 GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
     const GetRolePolicyRequestPrivate &other, GetRolePolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

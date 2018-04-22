@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 UnmonitorInstancesRequest::UnmonitorInstancesRequest(const UnmonitorInstancesRequest &other)
-    : EC2Request(new UnmonitorInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new UnmonitorInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UnmonitorInstancesRequest::UnmonitorInstancesRequest(const UnmonitorInstancesReq
  * Constructs a UnmonitorInstancesRequest object.
  */
 UnmonitorInstancesRequest::UnmonitorInstancesRequest()
-    : EC2Request(new UnmonitorInstancesRequestPrivate(EC2Request::UnmonitorInstancesAction, this))
+    : Ec2Request(new UnmonitorInstancesRequestPrivate(Ec2Request::UnmonitorInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UnmonitorInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a UnmonitorInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
-    const EC2Request::Action action, UnmonitorInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, UnmonitorInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
  */
 UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
     const UnmonitorInstancesRequestPrivate &other, UnmonitorInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

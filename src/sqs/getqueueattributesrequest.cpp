@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 GetQueueAttributesRequest::GetQueueAttributesRequest(const GetQueueAttributesRequest &other)
-    : SQSRequest(new GetQueueAttributesRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new GetQueueAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ GetQueueAttributesRequest::GetQueueAttributesRequest(const GetQueueAttributesReq
  * Constructs a GetQueueAttributesRequest object.
  */
 GetQueueAttributesRequest::GetQueueAttributesRequest()
-    : SQSRequest(new GetQueueAttributesRequestPrivate(SQSRequest::GetQueueAttributesAction, this))
+    : SqsRequest(new GetQueueAttributesRequestPrivate(SqsRequest::GetQueueAttributesAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * GetQueueAttributesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a GetQueueAttributesRequestPrivate object for SQS \a action,
+ * Constructs a GetQueueAttributesRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 GetQueueAttributesRequestPrivate::GetQueueAttributesRequestPrivate(
-    const SQSRequest::Action action, GetQueueAttributesRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, GetQueueAttributesRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ GetQueueAttributesRequestPrivate::GetQueueAttributesRequestPrivate(
  */
 GetQueueAttributesRequestPrivate::GetQueueAttributesRequestPrivate(
     const GetQueueAttributesRequestPrivate &other, GetQueueAttributesRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

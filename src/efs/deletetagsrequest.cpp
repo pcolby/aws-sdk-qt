@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
-    : EFSRequest(new DeleteTagsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DeleteTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DeleteTagsRequest::DeleteTagsRequest(const DeleteTagsRequest &other)
  * Constructs a DeleteTagsRequest object.
  */
 DeleteTagsRequest::DeleteTagsRequest()
-    : EFSRequest(new DeleteTagsRequestPrivate(EFSRequest::DeleteTagsAction, this))
+    : EfsRequest(new DeleteTagsRequestPrivate(EfsRequest::DeleteTagsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a DeleteTagsRequestPrivate object for EFS \a action,
+ * Constructs a DeleteTagsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
-    const EFSRequest::Action action, DeleteTagsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DeleteTagsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const DeleteTagsRequestPrivate &other, DeleteTagsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

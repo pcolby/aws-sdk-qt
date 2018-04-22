@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssociationsRequest(const DescribeIamInstanceProfileAssociationsRequest &other)
-    : EC2Request(new DescribeIamInstanceProfileAssociationsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeIamInstanceProfileAssociationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssocia
  * Constructs a DescribeIamInstanceProfileAssociationsRequest object.
  */
 DescribeIamInstanceProfileAssociationsRequest::DescribeIamInstanceProfileAssociationsRequest()
-    : EC2Request(new DescribeIamInstanceProfileAssociationsRequestPrivate(EC2Request::DescribeIamInstanceProfileAssociationsAction, this))
+    : Ec2Request(new DescribeIamInstanceProfileAssociationsRequestPrivate(Ec2Request::DescribeIamInstanceProfileAssociationsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest
  */
 
 /*!
- * Constructs a DescribeIamInstanceProfileAssociationsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeIamInstanceProfileAssociationsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
-    const EC2Request::Action action, DescribeIamInstanceProfileAssociationsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeIamInstanceProfileAssociationsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfile
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
     const DescribeIamInstanceProfileAssociationsRequestPrivate &other, DescribeIamInstanceProfileAssociationsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

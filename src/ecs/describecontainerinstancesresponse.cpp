@@ -61,7 +61,7 @@ DescribeContainerInstancesResponse::DescribeContainerInstancesResponse(
         const DescribeContainerInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DescribeContainerInstancesResponsePrivate(this), parent)
+    : EcsResponse(new DescribeContainerInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeContainerInstancesRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DescribeContainerInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeContainerInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponsePrivate(
-    DescribeContainerInstancesResponse * const q) : ECSResponsePrivate(q)
+    DescribeContainerInstancesResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

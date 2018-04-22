@@ -58,7 +58,7 @@ ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
         const ListPhoneNumbersOptedOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListPhoneNumbersOptedOutResponsePrivate(this), parent)
+    : SnsResponse(new ListPhoneNumbersOptedOutResponsePrivate(this), parent)
 {
     setRequest(new ListPhoneNumbersOptedOutRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
  * Constructs a ListPhoneNumbersOptedOutResponsePrivate object with public implementation \a q.
  */
 ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponsePrivate(
-    ListPhoneNumbersOptedOutResponse * const q) : SNSResponsePrivate(q)
+    ListPhoneNumbersOptedOutResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifySpotFleetRequestRequest;
 
-class QTAWS_EXPORT ModifySpotFleetRequestRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifySpotFleetRequestRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifySpotFleetRequestRequestPrivate(const EC2Request::Action action,
+    ModifySpotFleetRequestRequestPrivate(const Ec2Request::Action action,
                                    ModifySpotFleetRequestRequest * const q);
     ModifySpotFleetRequestRequestPrivate(const ModifySpotFleetRequestRequestPrivate &other,
                                    ModifySpotFleetRequestRequest * const q);

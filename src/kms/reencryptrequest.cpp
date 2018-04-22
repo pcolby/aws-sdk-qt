@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 ReEncryptRequest::ReEncryptRequest(const ReEncryptRequest &other)
-    : KMSRequest(new ReEncryptRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new ReEncryptRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ ReEncryptRequest::ReEncryptRequest(const ReEncryptRequest &other)
  * Constructs a ReEncryptRequest object.
  */
 ReEncryptRequest::ReEncryptRequest()
-    : KMSRequest(new ReEncryptRequestPrivate(KMSRequest::ReEncryptAction, this))
+    : KmsRequest(new ReEncryptRequestPrivate(KmsRequest::ReEncryptAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a ReEncryptRequestPrivate object for KMS \a action,
+ * Constructs a ReEncryptRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 ReEncryptRequestPrivate::ReEncryptRequestPrivate(
-    const KMSRequest::Action action, ReEncryptRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, ReEncryptRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ ReEncryptRequestPrivate::ReEncryptRequestPrivate(
  */
 ReEncryptRequestPrivate::ReEncryptRequestPrivate(
     const ReEncryptRequestPrivate &other, ReEncryptRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

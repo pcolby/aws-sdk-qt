@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyImageAttributeRequest::ModifyImageAttributeRequest(const ModifyImageAttributeRequest &other)
-    : EC2Request(new ModifyImageAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyImageAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyImageAttributeRequest::ModifyImageAttributeRequest(const ModifyImageAttrib
  * Constructs a ModifyImageAttributeRequest object.
  */
 ModifyImageAttributeRequest::ModifyImageAttributeRequest()
-    : EC2Request(new ModifyImageAttributeRequestPrivate(EC2Request::ModifyImageAttributeAction, this))
+    : Ec2Request(new ModifyImageAttributeRequestPrivate(Ec2Request::ModifyImageAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ModifyImageAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyImageAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
-    const EC2Request::Action action, ModifyImageAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyImageAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
     const ModifyImageAttributeRequestPrivate &other, ModifyImageAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

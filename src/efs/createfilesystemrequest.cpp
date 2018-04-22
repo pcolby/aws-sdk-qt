@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 CreateFileSystemRequest::CreateFileSystemRequest(const CreateFileSystemRequest &other)
-    : EFSRequest(new CreateFileSystemRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new CreateFileSystemRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ CreateFileSystemRequest::CreateFileSystemRequest(const CreateFileSystemRequest &
  * Constructs a CreateFileSystemRequest object.
  */
 CreateFileSystemRequest::CreateFileSystemRequest()
-    : EFSRequest(new CreateFileSystemRequestPrivate(EFSRequest::CreateFileSystemAction, this))
+    : EfsRequest(new CreateFileSystemRequestPrivate(EfsRequest::CreateFileSystemAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateFileSystemRequestPrivate object for EFS \a action,
+ * Constructs a CreateFileSystemRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
-    const EFSRequest::Action action, CreateFileSystemRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, CreateFileSystemRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
     const CreateFileSystemRequestPrivate &other, CreateFileSystemRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

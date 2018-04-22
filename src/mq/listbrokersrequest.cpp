@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 ListBrokersRequest::ListBrokersRequest(const ListBrokersRequest &other)
-    : MQRequest(new ListBrokersRequestPrivate(*other.d_func(), this))
+    : MqRequest(new ListBrokersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ListBrokersRequest::ListBrokersRequest(const ListBrokersRequest &other)
  * Constructs a ListBrokersRequest object.
  */
 ListBrokersRequest::ListBrokersRequest()
-    : MQRequest(new ListBrokersRequestPrivate(MQRequest::ListBrokersAction, this))
+    : MqRequest(new ListBrokersRequestPrivate(MqRequest::ListBrokersAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a ListBrokersRequestPrivate object for MQ \a action,
+ * Constructs a ListBrokersRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
-    const MQRequest::Action action, ListBrokersRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, ListBrokersRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ ListBrokersRequestPrivate::ListBrokersRequestPrivate(
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
     const ListBrokersRequestPrivate &other, ListBrokersRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

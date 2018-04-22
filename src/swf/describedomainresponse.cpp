@@ -60,7 +60,7 @@ DescribeDomainResponse::DescribeDomainResponse(
         const DescribeDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DescribeDomainResponsePrivate(this), parent)
+    : SwfResponse(new DescribeDomainResponsePrivate(this), parent)
 {
     setRequest(new DescribeDomainRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void DescribeDomainResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDomainResponsePrivate object with public implementation \a q.
  */
 DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
-    DescribeDomainResponse * const q) : SWFResponsePrivate(q)
+    DescribeDomainResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

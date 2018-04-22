@@ -48,7 +48,7 @@ DescribePrefixListsResponse::DescribePrefixListsResponse(
         const DescribePrefixListsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribePrefixListsResponsePrivate(this), parent)
+    : Ec2Response(new DescribePrefixListsResponsePrivate(this), parent)
 {
     setRequest(new DescribePrefixListsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribePrefixListsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribePrefixListsResponsePrivate object with public implementation \a q.
  */
 DescribePrefixListsResponsePrivate::DescribePrefixListsResponsePrivate(
-    DescribePrefixListsResponse * const q) : EC2ResponsePrivate(q)
+    DescribePrefixListsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

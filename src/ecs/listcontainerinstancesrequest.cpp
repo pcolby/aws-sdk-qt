@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 ListContainerInstancesRequest::ListContainerInstancesRequest(const ListContainerInstancesRequest &other)
-    : ECSRequest(new ListContainerInstancesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new ListContainerInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListContainerInstancesRequest::ListContainerInstancesRequest(const ListContainer
  * Constructs a ListContainerInstancesRequest object.
  */
 ListContainerInstancesRequest::ListContainerInstancesRequest()
-    : ECSRequest(new ListContainerInstancesRequestPrivate(ECSRequest::ListContainerInstancesAction, this))
+    : EcsRequest(new ListContainerInstancesRequestPrivate(EcsRequest::ListContainerInstancesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * ListContainerInstancesRequest::response(QNetw
  */
 
 /*!
- * Constructs a ListContainerInstancesRequestPrivate object for ECS \a action,
+ * Constructs a ListContainerInstancesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
-    const ECSRequest::Action action, ListContainerInstancesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, ListContainerInstancesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
     const ListContainerInstancesRequestPrivate &other, ListContainerInstancesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

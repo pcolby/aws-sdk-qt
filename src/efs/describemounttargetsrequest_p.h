@@ -28,10 +28,10 @@ namespace EFS {
 
 class DescribeMountTargetsRequest;
 
-class QTAWS_EXPORT DescribeMountTargetsRequestPrivate : public EFSRequestPrivate {
+class QTAWS_EXPORT DescribeMountTargetsRequestPrivate : public EfsRequestPrivate {
 
 public:
-    DescribeMountTargetsRequestPrivate(const EFSRequest::Action action,
+    DescribeMountTargetsRequestPrivate(const EfsRequest::Action action,
                                    DescribeMountTargetsRequest * const q);
     DescribeMountTargetsRequestPrivate(const DescribeMountTargetsRequestPrivate &other,
                                    DescribeMountTargetsRequest * const q);

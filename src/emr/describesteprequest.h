@@ -27,7 +27,7 @@ namespace EMR {
 
 class DescribeStepRequestPrivate;
 
-class QTAWS_EXPORT DescribeStepRequest : public EMRRequest {
+class QTAWS_EXPORT DescribeStepRequest : public EmrRequest {
 
 public:
     DescribeStepRequest(const DescribeStepRequest &other);

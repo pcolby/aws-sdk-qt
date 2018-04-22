@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeReservedInstancesOfferingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeReservedInstancesOfferingsRequest : public EC2Request {
+class QTAWS_EXPORT DescribeReservedInstancesOfferingsRequest : public Ec2Request {
 
 public:
     DescribeReservedInstancesOfferingsRequest(const DescribeReservedInstancesOfferingsRequest &other);

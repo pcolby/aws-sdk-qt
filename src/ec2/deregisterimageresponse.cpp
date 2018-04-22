@@ -48,7 +48,7 @@ DeregisterImageResponse::DeregisterImageResponse(
         const DeregisterImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeregisterImageResponsePrivate(this), parent)
+    : Ec2Response(new DeregisterImageResponsePrivate(this), parent)
 {
     setRequest(new DeregisterImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeregisterImageResponse::parseSuccess(QIODevice &response)
  * Constructs a DeregisterImageResponsePrivate object with public implementation \a q.
  */
 DeregisterImageResponsePrivate::DeregisterImageResponsePrivate(
-    DeregisterImageResponse * const q) : EC2ResponsePrivate(q)
+    DeregisterImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

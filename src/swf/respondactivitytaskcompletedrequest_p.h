@@ -28,10 +28,10 @@ namespace SWF {
 
 class RespondActivityTaskCompletedRequest;
 
-class QTAWS_EXPORT RespondActivityTaskCompletedRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT RespondActivityTaskCompletedRequestPrivate : public SwfRequestPrivate {
 
 public:
-    RespondActivityTaskCompletedRequestPrivate(const SWFRequest::Action action,
+    RespondActivityTaskCompletedRequestPrivate(const SwfRequest::Action action,
                                    RespondActivityTaskCompletedRequest * const q);
     RespondActivityTaskCompletedRequestPrivate(const RespondActivityTaskCompletedRequestPrivate &other,
                                    RespondActivityTaskCompletedRequest * const q);

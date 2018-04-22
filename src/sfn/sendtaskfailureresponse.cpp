@@ -63,7 +63,7 @@ SendTaskFailureResponse::SendTaskFailureResponse(
         const SendTaskFailureRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new SendTaskFailureResponsePrivate(this), parent)
+    : SfnResponse(new SendTaskFailureResponsePrivate(this), parent)
 {
     setRequest(new SendTaskFailureRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void SendTaskFailureResponse::parseSuccess(QIODevice &response)
  * Constructs a SendTaskFailureResponsePrivate object with public implementation \a q.
  */
 SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
-    SendTaskFailureResponse * const q) : SFNResponsePrivate(q)
+    SendTaskFailureResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ DescribeInstanceCreditSpecificationsResponse::DescribeInstanceCreditSpecificatio
         const DescribeInstanceCreditSpecificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeInstanceCreditSpecificationsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeInstanceCreditSpecificationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceCreditSpecificationsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeInstanceCreditSpecificationsResponse::parseSuccess(QIODevice &respo
  * Constructs a DescribeInstanceCreditSpecificationsResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCreditSpecificationsResponsePrivate(
-    DescribeInstanceCreditSpecificationsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeInstanceCreditSpecificationsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

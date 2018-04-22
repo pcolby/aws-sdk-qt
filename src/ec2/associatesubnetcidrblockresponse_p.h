@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateSubnetCidrBlockResponse;
 
-class QTAWS_EXPORT AssociateSubnetCidrBlockResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT AssociateSubnetCidrBlockResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

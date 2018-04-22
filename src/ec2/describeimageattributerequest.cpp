@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeImageAttributeRequest::DescribeImageAttributeRequest(const DescribeImageAttributeRequest &other)
-    : EC2Request(new DescribeImageAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeImageAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeImageAttributeRequest::DescribeImageAttributeRequest(const DescribeImage
  * Constructs a DescribeImageAttributeRequest object.
  */
 DescribeImageAttributeRequest::DescribeImageAttributeRequest()
-    : EC2Request(new DescribeImageAttributeRequestPrivate(EC2Request::DescribeImageAttributeAction, this))
+    : Ec2Request(new DescribeImageAttributeRequestPrivate(Ec2Request::DescribeImageAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeImageAttributeRequest::response(QNetw
  */
 
 /*!
- * Constructs a DescribeImageAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeImageAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
-    const EC2Request::Action action, DescribeImageAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeImageAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
  */
 DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
     const DescribeImageAttributeRequestPrivate &other, DescribeImageAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

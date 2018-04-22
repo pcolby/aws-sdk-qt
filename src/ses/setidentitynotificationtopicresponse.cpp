@@ -55,7 +55,7 @@ SetIdentityNotificationTopicResponse::SetIdentityNotificationTopicResponse(
         const SetIdentityNotificationTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityNotificationTopicResponsePrivate(this), parent)
+    : SesResponse(new SetIdentityNotificationTopicResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityNotificationTopicRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
  * Constructs a SetIdentityNotificationTopicResponsePrivate object with public implementation \a q.
  */
 SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicResponsePrivate(
-    SetIdentityNotificationTopicResponse * const q) : SESResponsePrivate(q)
+    SetIdentityNotificationTopicResponse * const q) : SesResponsePrivate(q)
 {
 
 }

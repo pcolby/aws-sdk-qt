@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest(const DescribeImportSnapshotTasksRequest &other)
-    : EC2Request(new DescribeImportSnapshotTasksRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeImportSnapshotTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest(const Des
  * Constructs a DescribeImportSnapshotTasksRequest object.
  */
 DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest()
-    : EC2Request(new DescribeImportSnapshotTasksRequestPrivate(EC2Request::DescribeImportSnapshotTasksAction, this))
+    : Ec2Request(new DescribeImportSnapshotTasksRequestPrivate(Ec2Request::DescribeImportSnapshotTasksAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(
  */
 
 /*!
- * Constructs a DescribeImportSnapshotTasksRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeImportSnapshotTasksRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
-    const EC2Request::Action action, DescribeImportSnapshotTasksRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeImportSnapshotTasksRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPri
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
     const DescribeImportSnapshotTasksRequestPrivate &other, DescribeImportSnapshotTasksRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

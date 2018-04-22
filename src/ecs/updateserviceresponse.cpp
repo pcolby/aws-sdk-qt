@@ -61,7 +61,7 @@ UpdateServiceResponse::UpdateServiceResponse(
         const UpdateServiceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new UpdateServiceResponsePrivate(this), parent)
+    : EcsResponse(new UpdateServiceResponsePrivate(this), parent)
 {
     setRequest(new UpdateServiceRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void UpdateServiceResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateServiceResponsePrivate object with public implementation \a q.
  */
 UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
-    UpdateServiceResponse * const q) : ECSResponsePrivate(q)
+    UpdateServiceResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

@@ -108,7 +108,7 @@ RevokeDBSecurityGroupIngressResponse::RevokeDBSecurityGroupIngressResponse(
         const RevokeDBSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RevokeDBSecurityGroupIngressResponsePrivate(this), parent)
+    : RdsResponse(new RevokeDBSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new RevokeDBSecurityGroupIngressRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RevokeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * Constructs a RevokeDBSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 RevokeDBSecurityGroupIngressResponsePrivate::RevokeDBSecurityGroupIngressResponsePrivate(
-    RevokeDBSecurityGroupIngressResponse * const q) : RDSResponsePrivate(q)
+    RevokeDBSecurityGroupIngressResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

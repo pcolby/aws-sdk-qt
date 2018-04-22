@@ -27,7 +27,7 @@ namespace SSM {
 
 class UpdateManagedInstanceRoleResponse;
 
-class QTAWS_EXPORT UpdateManagedInstanceRoleResponsePrivate : public SSMResponsePrivate {
+class QTAWS_EXPORT UpdateManagedInstanceRoleResponsePrivate : public SsmResponsePrivate {
     Q_OBJECT
 
 public:

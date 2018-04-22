@@ -47,7 +47,7 @@ SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
         const SetVisibleToAllUsersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new SetVisibleToAllUsersResponsePrivate(this), parent)
+    : EmrResponse(new SetVisibleToAllUsersResponsePrivate(this), parent)
 {
     setRequest(new SetVisibleToAllUsersRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
  * Constructs a SetVisibleToAllUsersResponsePrivate object with public implementation \a q.
  */
 SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
-    SetVisibleToAllUsersResponse * const q) : EMRResponsePrivate(q)
+    SetVisibleToAllUsersResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

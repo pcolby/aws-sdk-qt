@@ -50,7 +50,7 @@ DisassociateAdminAccountResponse::DisassociateAdminAccountResponse(
         const DisassociateAdminAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new DisassociateAdminAccountResponsePrivate(this), parent)
+    : FmsResponse(new DisassociateAdminAccountResponsePrivate(this), parent)
 {
     setRequest(new DisassociateAdminAccountRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
  * Constructs a DisassociateAdminAccountResponsePrivate object with public implementation \a q.
  */
 DisassociateAdminAccountResponsePrivate::DisassociateAdminAccountResponsePrivate(
-    DisassociateAdminAccountResponse * const q) : FMSResponsePrivate(q)
+    DisassociateAdminAccountResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

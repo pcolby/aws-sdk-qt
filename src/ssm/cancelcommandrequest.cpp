@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 CancelCommandRequest::CancelCommandRequest(const CancelCommandRequest &other)
-    : SSMRequest(new CancelCommandRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new CancelCommandRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ CancelCommandRequest::CancelCommandRequest(const CancelCommandRequest &other)
  * Constructs a CancelCommandRequest object.
  */
 CancelCommandRequest::CancelCommandRequest()
-    : SSMRequest(new CancelCommandRequestPrivate(SSMRequest::CancelCommandAction, this))
+    : SsmRequest(new CancelCommandRequestPrivate(SsmRequest::CancelCommandAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * CancelCommandRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a CancelCommandRequestPrivate object for SSM \a action,
+ * Constructs a CancelCommandRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
-    const SSMRequest::Action action, CancelCommandRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, CancelCommandRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ CancelCommandRequestPrivate::CancelCommandRequestPrivate(
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
     const CancelCommandRequestPrivate &other, CancelCommandRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

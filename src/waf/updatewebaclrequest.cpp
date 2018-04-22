@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
-    : WAFRequest(new UpdateWebACLRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateWebACLRequest::UpdateWebACLRequest(const UpdateWebACLRequest &other)
  * Constructs a UpdateWebACLRequest object.
  */
 UpdateWebACLRequest::UpdateWebACLRequest()
-    : WAFRequest(new UpdateWebACLRequestPrivate(WAFRequest::UpdateWebACLAction, this))
+    : WafRequest(new UpdateWebACLRequestPrivate(WafRequest::UpdateWebACLAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a UpdateWebACLRequestPrivate object for WAF \a action,
+ * Constructs a UpdateWebACLRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
-    const WAFRequest::Action action, UpdateWebACLRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateWebACLRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const UpdateWebACLRequestPrivate &other, UpdateWebACLRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

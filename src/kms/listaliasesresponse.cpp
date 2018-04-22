@@ -143,7 +143,7 @@ ListAliasesResponse::ListAliasesResponse(
         const ListAliasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListAliasesResponsePrivate(this), parent)
+    : KmsResponse(new ListAliasesResponsePrivate(this), parent)
 {
     setRequest(new ListAliasesRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ListAliasesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListAliasesResponsePrivate object with public implementation \a q.
  */
 ListAliasesResponsePrivate::ListAliasesResponsePrivate(
-    ListAliasesResponse * const q) : KMSResponsePrivate(q)
+    ListAliasesResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

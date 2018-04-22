@@ -108,7 +108,7 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
         const DescribePendingMaintenanceActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
+    : RdsResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
 {
     setRequest(new DescribePendingMaintenanceActionsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response
  * Constructs a DescribePendingMaintenanceActionsResponsePrivate object with public implementation \a q.
  */
 DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActionsResponsePrivate(
-    DescribePendingMaintenanceActionsResponse * const q) : RDSResponsePrivate(q)
+    DescribePendingMaintenanceActionsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

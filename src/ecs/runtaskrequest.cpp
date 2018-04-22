@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 RunTaskRequest::RunTaskRequest(const RunTaskRequest &other)
-    : ECSRequest(new RunTaskRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new RunTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ RunTaskRequest::RunTaskRequest(const RunTaskRequest &other)
  * Constructs a RunTaskRequest object.
  */
 RunTaskRequest::RunTaskRequest()
-    : ECSRequest(new RunTaskRequestPrivate(ECSRequest::RunTaskAction, this))
+    : EcsRequest(new RunTaskRequestPrivate(EcsRequest::RunTaskAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * cons
  */
 
 /*!
- * Constructs a RunTaskRequestPrivate object for ECS \a action,
+ * Constructs a RunTaskRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
-    const ECSRequest::Action action, RunTaskRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, RunTaskRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ RunTaskRequestPrivate::RunTaskRequestPrivate(
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
     const RunTaskRequestPrivate &other, RunTaskRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

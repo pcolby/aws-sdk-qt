@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListAccessKeysRequest::ListAccessKeysRequest(const ListAccessKeysRequest &other)
-    : IAMRequest(new ListAccessKeysRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListAccessKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListAccessKeysRequest::ListAccessKeysRequest(const ListAccessKeysRequest &other)
  * Constructs a ListAccessKeysRequest object.
  */
 ListAccessKeysRequest::ListAccessKeysRequest()
-    : IAMRequest(new ListAccessKeysRequestPrivate(IAMRequest::ListAccessKeysAction, this))
+    : IamRequest(new ListAccessKeysRequestPrivate(IamRequest::ListAccessKeysAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListAccessKeysRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ListAccessKeysRequestPrivate object for IAM \a action,
+ * Constructs a ListAccessKeysRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
-    const IAMRequest::Action action, ListAccessKeysRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListAccessKeysRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
  */
 ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
     const ListAccessKeysRequestPrivate &other, ListAccessKeysRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

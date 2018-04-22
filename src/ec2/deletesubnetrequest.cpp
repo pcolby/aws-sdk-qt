@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteSubnetRequest::DeleteSubnetRequest(const DeleteSubnetRequest &other)
-    : EC2Request(new DeleteSubnetRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteSubnetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteSubnetRequest::DeleteSubnetRequest(const DeleteSubnetRequest &other)
  * Constructs a DeleteSubnetRequest object.
  */
 DeleteSubnetRequest::DeleteSubnetRequest()
-    : EC2Request(new DeleteSubnetRequestPrivate(EC2Request::DeleteSubnetAction, this))
+    : Ec2Request(new DeleteSubnetRequestPrivate(Ec2Request::DeleteSubnetAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DeleteSubnetRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteSubnetRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
-    const EC2Request::Action action, DeleteSubnetRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteSubnetRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
     const DeleteSubnetRequestPrivate &other, DeleteSubnetRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

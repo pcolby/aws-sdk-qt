@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetRequest &other)
-    : WAFRequest(new DeleteByteMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteByteMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetReq
  * Constructs a DeleteByteMatchSetRequest object.
  */
 DeleteByteMatchSetRequest::DeleteByteMatchSetRequest()
-    : WAFRequest(new DeleteByteMatchSetRequestPrivate(WAFRequest::DeleteByteMatchSetAction, this))
+    : WafRequest(new DeleteByteMatchSetRequestPrivate(WafRequest::DeleteByteMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteByteMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteByteMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
-    const WAFRequest::Action action, DeleteByteMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteByteMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const DeleteByteMatchSetRequestPrivate &other, DeleteByteMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

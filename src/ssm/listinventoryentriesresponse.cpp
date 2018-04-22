@@ -68,7 +68,7 @@ ListInventoryEntriesResponse::ListInventoryEntriesResponse(
         const ListInventoryEntriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListInventoryEntriesResponsePrivate(this), parent)
+    : SsmResponse(new ListInventoryEntriesResponsePrivate(this), parent)
 {
     setRequest(new ListInventoryEntriesRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ListInventoryEntriesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListInventoryEntriesResponsePrivate object with public implementation \a q.
  */
 ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponsePrivate(
-    ListInventoryEntriesResponse * const q) : SSMResponsePrivate(q)
+    ListInventoryEntriesResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreatePlacementGroupRequest::CreatePlacementGroupRequest(const CreatePlacementGroupRequest &other)
-    : EC2Request(new CreatePlacementGroupRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreatePlacementGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreatePlacementGroupRequest::CreatePlacementGroupRequest(const CreatePlacementGr
  * Constructs a CreatePlacementGroupRequest object.
  */
 CreatePlacementGroupRequest::CreatePlacementGroupRequest()
-    : EC2Request(new CreatePlacementGroupRequestPrivate(EC2Request::CreatePlacementGroupAction, this))
+    : Ec2Request(new CreatePlacementGroupRequestPrivate(Ec2Request::CreatePlacementGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetwor
  */
 
 /*!
- * Constructs a CreatePlacementGroupRequestPrivate object for EC2 \a action,
+ * Constructs a CreatePlacementGroupRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
-    const EC2Request::Action action, CreatePlacementGroupRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreatePlacementGroupRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
     const CreatePlacementGroupRequestPrivate &other, CreatePlacementGroupRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ DescribeSpotPriceHistoryResponse::DescribeSpotPriceHistoryResponse(
         const DescribeSpotPriceHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSpotPriceHistoryResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSpotPriceHistoryResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotPriceHistoryRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSpotPriceHistoryResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSpotPriceHistoryResponsePrivate object with public implementation \a q.
  */
 DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponsePrivate(
-    DescribeSpotPriceHistoryResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSpotPriceHistoryResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

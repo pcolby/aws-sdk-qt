@@ -28,7 +28,7 @@ namespace SES {
 
 class PutIdentityPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutIdentityPolicyResponse : public SESResponse {
+class QTAWS_EXPORT PutIdentityPolicyResponse : public SesResponse {
     Q_OBJECT
 
 public:

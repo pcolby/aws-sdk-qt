@@ -28,10 +28,10 @@ namespace IAM {
 
 class GetUserPolicyRequest;
 
-class QTAWS_EXPORT GetUserPolicyRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT GetUserPolicyRequestPrivate : public IamRequestPrivate {
 
 public:
-    GetUserPolicyRequestPrivate(const IAMRequest::Action action,
+    GetUserPolicyRequestPrivate(const IamRequest::Action action,
                                    GetUserPolicyRequest * const q);
     GetUserPolicyRequestPrivate(const GetUserPolicyRequestPrivate &other,
                                    GetUserPolicyRequest * const q);

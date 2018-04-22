@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListDocumentVersionsRequest::ListDocumentVersionsRequest(const ListDocumentVersionsRequest &other)
-    : SSMRequest(new ListDocumentVersionsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListDocumentVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListDocumentVersionsRequest::ListDocumentVersionsRequest(const ListDocumentVersi
  * Constructs a ListDocumentVersionsRequest object.
  */
 ListDocumentVersionsRequest::ListDocumentVersionsRequest()
-    : SSMRequest(new ListDocumentVersionsRequestPrivate(SSMRequest::ListDocumentVersionsAction, this))
+    : SsmRequest(new ListDocumentVersionsRequestPrivate(SsmRequest::ListDocumentVersionsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListDocumentVersionsRequestPrivate object for SSM \a action,
+ * Constructs a ListDocumentVersionsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
-    const SSMRequest::Action action, ListDocumentVersionsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListDocumentVersionsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
     const ListDocumentVersionsRequestPrivate &other, ListDocumentVersionsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

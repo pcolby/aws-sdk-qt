@@ -109,7 +109,7 @@ ListServerCertificatesResponse::ListServerCertificatesResponse(
         const ListServerCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListServerCertificatesResponsePrivate(this), parent)
+    : IamResponse(new ListServerCertificatesResponsePrivate(this), parent)
 {
     setRequest(new ListServerCertificatesRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListServerCertificatesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListServerCertificatesResponsePrivate object with public implementation \a q.
  */
 ListServerCertificatesResponsePrivate::ListServerCertificatesResponsePrivate(
-    ListServerCertificatesResponse * const q) : IAMResponsePrivate(q)
+    ListServerCertificatesResponse * const q) : IamResponsePrivate(q)
 {
 
 }

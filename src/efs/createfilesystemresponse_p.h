@@ -27,7 +27,7 @@ namespace EFS {
 
 class CreateFileSystemResponse;
 
-class QTAWS_EXPORT CreateFileSystemResponsePrivate : public EFSResponsePrivate {
+class QTAWS_EXPORT CreateFileSystemResponsePrivate : public EfsResponsePrivate {
     Q_OBJECT
 
 public:

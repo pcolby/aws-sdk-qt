@@ -28,10 +28,10 @@ namespace IAM {
 
 class ListMFADevicesRequest;
 
-class QTAWS_EXPORT ListMFADevicesRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT ListMFADevicesRequestPrivate : public IamRequestPrivate {
 
 public:
-    ListMFADevicesRequestPrivate(const IAMRequest::Action action,
+    ListMFADevicesRequestPrivate(const IamRequest::Action action,
                                    ListMFADevicesRequest * const q);
     ListMFADevicesRequestPrivate(const ListMFADevicesRequestPrivate &other,
                                    ListMFADevicesRequest * const q);

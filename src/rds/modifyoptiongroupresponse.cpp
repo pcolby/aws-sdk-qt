@@ -108,7 +108,7 @@ ModifyOptionGroupResponse::ModifyOptionGroupResponse(
         const ModifyOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyOptionGroupResponsePrivate(this), parent)
+    : RdsResponse(new ModifyOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyOptionGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyOptionGroupResponsePrivate object with public implementation \a q.
  */
 ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
-    ModifyOptionGroupResponse * const q) : RDSResponsePrivate(q)
+    ModifyOptionGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

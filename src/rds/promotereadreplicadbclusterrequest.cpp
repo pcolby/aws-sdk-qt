@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest(const PromoteReadReplicaDBClusterRequest &other)
-    : RDSRequest(new PromoteReadReplicaDBClusterRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new PromoteReadReplicaDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest(const Pro
  * Constructs a PromoteReadReplicaDBClusterRequest object.
  */
 PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest()
-    : RDSRequest(new PromoteReadReplicaDBClusterRequestPrivate(RDSRequest::PromoteReadReplicaDBClusterAction, this))
+    : RdsRequest(new PromoteReadReplicaDBClusterRequestPrivate(RdsRequest::PromoteReadReplicaDBClusterAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaDBClusterRequest::response(
  */
 
 /*!
- * Constructs a PromoteReadReplicaDBClusterRequestPrivate object for RDS \a action,
+ * Constructs a PromoteReadReplicaDBClusterRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
-    const RDSRequest::Action action, PromoteReadReplicaDBClusterRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, PromoteReadReplicaDBClusterRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPri
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
     const PromoteReadReplicaDBClusterRequestPrivate &other, PromoteReadReplicaDBClusterRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

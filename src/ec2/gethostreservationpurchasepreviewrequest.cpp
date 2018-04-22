@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewRequest(const GetHostReservationPurchasePreviewRequest &other)
-    : EC2Request(new GetHostReservationPurchasePreviewRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new GetHostReservationPurchasePreviewRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewReque
  * Constructs a GetHostReservationPurchasePreviewRequest object.
  */
 GetHostReservationPurchasePreviewRequest::GetHostReservationPurchasePreviewRequest()
-    : EC2Request(new GetHostReservationPurchasePreviewRequestPrivate(EC2Request::GetHostReservationPurchasePreviewAction, this))
+    : Ec2Request(new GetHostReservationPurchasePreviewRequestPrivate(Ec2Request::GetHostReservationPurchasePreviewAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::res
  */
 
 /*!
- * Constructs a GetHostReservationPurchasePreviewRequestPrivate object for EC2 \a action,
+ * Constructs a GetHostReservationPurchasePreviewRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
-    const EC2Request::Action action, GetHostReservationPurchasePreviewRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, GetHostReservationPurchasePreviewRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePrevi
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
     const GetHostReservationPurchasePreviewRequestPrivate &other, GetHostReservationPurchasePreviewRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace IAM {
 
 class UpdateRoleDescriptionRequest;
 
-class QTAWS_EXPORT UpdateRoleDescriptionRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT UpdateRoleDescriptionRequestPrivate : public IamRequestPrivate {
 
 public:
-    UpdateRoleDescriptionRequestPrivate(const IAMRequest::Action action,
+    UpdateRoleDescriptionRequestPrivate(const IamRequest::Action action,
                                    UpdateRoleDescriptionRequest * const q);
     UpdateRoleDescriptionRequestPrivate(const UpdateRoleDescriptionRequestPrivate &other,
                                    UpdateRoleDescriptionRequest * const q);

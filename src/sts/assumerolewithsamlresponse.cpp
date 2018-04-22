@@ -102,7 +102,7 @@ AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
         const AssumeRoleWithSAMLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new AssumeRoleWithSAMLResponsePrivate(this), parent)
+    : StsResponse(new AssumeRoleWithSAMLResponsePrivate(this), parent)
 {
     setRequest(new AssumeRoleWithSAMLRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ void AssumeRoleWithSAMLResponse::parseSuccess(QIODevice &response)
  * Constructs a AssumeRoleWithSAMLResponsePrivate object with public implementation \a q.
  */
 AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
-    AssumeRoleWithSAMLResponse * const q) : STSResponsePrivate(q)
+    AssumeRoleWithSAMLResponse * const q) : StsResponsePrivate(q)
 {
 
 }

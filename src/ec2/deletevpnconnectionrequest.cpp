@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVpnConnectionRequest::DeleteVpnConnectionRequest(const DeleteVpnConnectionRequest &other)
-    : EC2Request(new DeleteVpnConnectionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVpnConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVpnConnectionRequest::DeleteVpnConnectionRequest(const DeleteVpnConnection
  * Constructs a DeleteVpnConnectionRequest object.
  */
 DeleteVpnConnectionRequest::DeleteVpnConnectionRequest()
-    : EC2Request(new DeleteVpnConnectionRequestPrivate(EC2Request::DeleteVpnConnectionAction, this))
+    : Ec2Request(new DeleteVpnConnectionRequestPrivate(Ec2Request::DeleteVpnConnectionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeleteVpnConnectionRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVpnConnectionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
-    const EC2Request::Action action, DeleteVpnConnectionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVpnConnectionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
  */
 DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
     const DeleteVpnConnectionRequestPrivate &other, DeleteVpnConnectionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

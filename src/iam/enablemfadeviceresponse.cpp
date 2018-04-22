@@ -109,7 +109,7 @@ EnableMFADeviceResponse::EnableMFADeviceResponse(
         const EnableMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new EnableMFADeviceResponsePrivate(this), parent)
+    : IamResponse(new EnableMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new EnableMFADeviceRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
  * Constructs a EnableMFADeviceResponsePrivate object with public implementation \a q.
  */
 EnableMFADeviceResponsePrivate::EnableMFADeviceResponsePrivate(
-    EnableMFADeviceResponse * const q) : IAMResponsePrivate(q)
+    EnableMFADeviceResponse * const q) : IamResponsePrivate(q)
 {
 
 }

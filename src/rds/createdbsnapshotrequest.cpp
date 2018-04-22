@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateDBSnapshotRequest::CreateDBSnapshotRequest(const CreateDBSnapshotRequest &other)
-    : RDSRequest(new CreateDBSnapshotRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateDBSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateDBSnapshotRequest::CreateDBSnapshotRequest(const CreateDBSnapshotRequest &
  * Constructs a CreateDBSnapshotRequest object.
  */
 CreateDBSnapshotRequest::CreateDBSnapshotRequest()
-    : RDSRequest(new CreateDBSnapshotRequestPrivate(RDSRequest::CreateDBSnapshotAction, this))
+    : RdsRequest(new CreateDBSnapshotRequestPrivate(RdsRequest::CreateDBSnapshotAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateDBSnapshotRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateDBSnapshotRequestPrivate object for RDS \a action,
+ * Constructs a CreateDBSnapshotRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
-    const RDSRequest::Action action, CreateDBSnapshotRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateDBSnapshotRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
  */
 CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
     const CreateDBSnapshotRequestPrivate &other, CreateDBSnapshotRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

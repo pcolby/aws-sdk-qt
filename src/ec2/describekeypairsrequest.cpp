@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeKeyPairsRequest::DescribeKeyPairsRequest(const DescribeKeyPairsRequest &other)
-    : EC2Request(new DescribeKeyPairsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeKeyPairsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeKeyPairsRequest::DescribeKeyPairsRequest(const DescribeKeyPairsRequest &
  * Constructs a DescribeKeyPairsRequest object.
  */
 DescribeKeyPairsRequest::DescribeKeyPairsRequest()
-    : EC2Request(new DescribeKeyPairsRequestPrivate(EC2Request::DescribeKeyPairsAction, this))
+    : Ec2Request(new DescribeKeyPairsRequestPrivate(Ec2Request::DescribeKeyPairsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DescribeKeyPairsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeKeyPairsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
-    const EC2Request::Action action, DescribeKeyPairsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeKeyPairsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
  */
 DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
     const DescribeKeyPairsRequestPrivate &other, DescribeKeyPairsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 ListBootstrapActionsRequest::ListBootstrapActionsRequest(const ListBootstrapActionsRequest &other)
-    : EMRRequest(new ListBootstrapActionsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new ListBootstrapActionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ ListBootstrapActionsRequest::ListBootstrapActionsRequest(const ListBootstrapActi
  * Constructs a ListBootstrapActionsRequest object.
  */
 ListBootstrapActionsRequest::ListBootstrapActionsRequest()
-    : EMRRequest(new ListBootstrapActionsRequestPrivate(EMRRequest::ListBootstrapActionsAction, this))
+    : EmrRequest(new ListBootstrapActionsRequestPrivate(EmrRequest::ListBootstrapActionsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListBootstrapActionsRequestPrivate object for EMR \a action,
+ * Constructs a ListBootstrapActionsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
-    const EMRRequest::Action action, ListBootstrapActionsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, ListBootstrapActionsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
  */
 ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
     const ListBootstrapActionsRequestPrivate &other, ListBootstrapActionsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

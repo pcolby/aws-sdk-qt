@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest(const DisassociateIamInstanceProfileRequest &other)
-    : EC2Request(new DisassociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisassociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest(con
  * Constructs a DisassociateIamInstanceProfileRequest object.
  */
 DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest()
-    : EC2Request(new DisassociateIamInstanceProfileRequestPrivate(EC2Request::DisassociateIamInstanceProfileAction, this))
+    : Ec2Request(new DisassociateIamInstanceProfileRequestPrivate(Ec2Request::DisassociateIamInstanceProfileAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateIamInstanceProfileRequest::respon
  */
 
 /*!
- * Constructs a DisassociateIamInstanceProfileRequestPrivate object for EC2 \a action,
+ * Constructs a DisassociateIamInstanceProfileRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
-    const EC2Request::Action action, DisassociateIamInstanceProfileRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisassociateIamInstanceProfileRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequ
  */
 DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
     const DisassociateIamInstanceProfileRequestPrivate &other, DisassociateIamInstanceProfileRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

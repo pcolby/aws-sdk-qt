@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 GetNotificationChannelRequest::GetNotificationChannelRequest(const GetNotificationChannelRequest &other)
-    : FMSRequest(new GetNotificationChannelRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new GetNotificationChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ GetNotificationChannelRequest::GetNotificationChannelRequest(const GetNotificati
  * Constructs a GetNotificationChannelRequest object.
  */
 GetNotificationChannelRequest::GetNotificationChannelRequest()
-    : FMSRequest(new GetNotificationChannelRequestPrivate(FMSRequest::GetNotificationChannelAction, this))
+    : FmsRequest(new GetNotificationChannelRequestPrivate(FmsRequest::GetNotificationChannelAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * GetNotificationChannelRequest::response(QNetw
  */
 
 /*!
- * Constructs a GetNotificationChannelRequestPrivate object for FMS \a action,
+ * Constructs a GetNotificationChannelRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
-    const FMSRequest::Action action, GetNotificationChannelRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, GetNotificationChannelRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
  */
 GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
     const GetNotificationChannelRequestPrivate &other, GetNotificationChannelRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

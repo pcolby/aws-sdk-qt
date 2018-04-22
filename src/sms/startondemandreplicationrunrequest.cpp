@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 StartOnDemandReplicationRunRequest::StartOnDemandReplicationRunRequest(const StartOnDemandReplicationRunRequest &other)
-    : SMSRequest(new StartOnDemandReplicationRunRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new StartOnDemandReplicationRunRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ StartOnDemandReplicationRunRequest::StartOnDemandReplicationRunRequest(const Sta
  * Constructs a StartOnDemandReplicationRunRequest object.
  */
 StartOnDemandReplicationRunRequest::StartOnDemandReplicationRunRequest()
-    : SMSRequest(new StartOnDemandReplicationRunRequestPrivate(SMSRequest::StartOnDemandReplicationRunAction, this))
+    : SmsRequest(new StartOnDemandReplicationRunRequestPrivate(SmsRequest::StartOnDemandReplicationRunAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * StartOnDemandReplicationRunRequest::response(
  */
 
 /*!
- * Constructs a StartOnDemandReplicationRunRequestPrivate object for SMS \a action,
+ * Constructs a StartOnDemandReplicationRunRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPrivate(
-    const SMSRequest::Action action, StartOnDemandReplicationRunRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, StartOnDemandReplicationRunRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPri
  */
 StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPrivate(
     const StartOnDemandReplicationRunRequestPrivate &other, StartOnDemandReplicationRunRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

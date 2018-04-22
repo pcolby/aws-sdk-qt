@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ResetInstanceAttributeRequest::ResetInstanceAttributeRequest(const ResetInstanceAttributeRequest &other)
-    : EC2Request(new ResetInstanceAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ResetInstanceAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ResetInstanceAttributeRequest::ResetInstanceAttributeRequest(const ResetInstance
  * Constructs a ResetInstanceAttributeRequest object.
  */
 ResetInstanceAttributeRequest::ResetInstanceAttributeRequest()
-    : EC2Request(new ResetInstanceAttributeRequestPrivate(EC2Request::ResetInstanceAttributeAction, this))
+    : Ec2Request(new ResetInstanceAttributeRequestPrivate(Ec2Request::ResetInstanceAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetw
  */
 
 /*!
- * Constructs a ResetInstanceAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ResetInstanceAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
-    const EC2Request::Action action, ResetInstanceAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ResetInstanceAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
     const ResetInstanceAttributeRequestPrivate &other, ResetInstanceAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

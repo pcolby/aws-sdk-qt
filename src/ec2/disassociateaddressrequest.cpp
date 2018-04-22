@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisassociateAddressRequest::DisassociateAddressRequest(const DisassociateAddressRequest &other)
-    : EC2Request(new DisassociateAddressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisassociateAddressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisassociateAddressRequest::DisassociateAddressRequest(const DisassociateAddress
  * Constructs a DisassociateAddressRequest object.
  */
 DisassociateAddressRequest::DisassociateAddressRequest()
-    : EC2Request(new DisassociateAddressRequestPrivate(EC2Request::DisassociateAddressAction, this))
+    : Ec2Request(new DisassociateAddressRequestPrivate(Ec2Request::DisassociateAddressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DisassociateAddressRequestPrivate object for EC2 \a action,
+ * Constructs a DisassociateAddressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
-    const EC2Request::Action action, DisassociateAddressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisassociateAddressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
     const DisassociateAddressRequestPrivate &other, DisassociateAddressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

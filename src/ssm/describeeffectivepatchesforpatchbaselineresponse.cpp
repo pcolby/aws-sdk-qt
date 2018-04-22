@@ -68,7 +68,7 @@ DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPat
         const DescribeEffectivePatchesForPatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeEffectivePatchesForPatchBaselineResponsePrivate(this), parent)
+    : SsmResponse(new DescribeEffectivePatchesForPatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new DescribeEffectivePatchesForPatchBaselineRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &r
  * Constructs a DescribeEffectivePatchesForPatchBaselineResponsePrivate object with public implementation \a q.
  */
 DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatchesForPatchBaselineResponsePrivate(
-    DescribeEffectivePatchesForPatchBaselineResponse * const q) : SSMResponsePrivate(q)
+    DescribeEffectivePatchesForPatchBaselineResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

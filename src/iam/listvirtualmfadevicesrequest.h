@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListVirtualMFADevicesRequestPrivate;
 
-class QTAWS_EXPORT ListVirtualMFADevicesRequest : public IAMRequest {
+class QTAWS_EXPORT ListVirtualMFADevicesRequest : public IamRequest {
 
 public:
     ListVirtualMFADevicesRequest(const ListVirtualMFADevicesRequest &other);

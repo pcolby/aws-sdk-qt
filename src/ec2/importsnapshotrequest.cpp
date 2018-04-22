@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ImportSnapshotRequest::ImportSnapshotRequest(const ImportSnapshotRequest &other)
-    : EC2Request(new ImportSnapshotRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ImportSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ImportSnapshotRequest::ImportSnapshotRequest(const ImportSnapshotRequest &other)
  * Constructs a ImportSnapshotRequest object.
  */
 ImportSnapshotRequest::ImportSnapshotRequest()
-    : EC2Request(new ImportSnapshotRequestPrivate(EC2Request::ImportSnapshotAction, this))
+    : Ec2Request(new ImportSnapshotRequestPrivate(Ec2Request::ImportSnapshotAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ImportSnapshotRequestPrivate object for EC2 \a action,
+ * Constructs a ImportSnapshotRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
-    const EC2Request::Action action, ImportSnapshotRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ImportSnapshotRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
     const ImportSnapshotRequestPrivate &other, ImportSnapshotRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

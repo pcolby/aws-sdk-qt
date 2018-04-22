@@ -68,7 +68,7 @@ DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
         const DeregisterManagedInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeregisterManagedInstanceResponsePrivate(this), parent)
+    : SsmResponse(new DeregisterManagedInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterManagedInstanceRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeregisterManagedInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a DeregisterManagedInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePrivate(
-    DeregisterManagedInstanceResponse * const q) : SSMResponsePrivate(q)
+    DeregisterManagedInstanceResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

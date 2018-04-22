@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const ResetDBClusterParameterGroupRequest &other)
-    : RDSRequest(new ResetDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ResetDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const R
  * Constructs a ResetDBClusterParameterGroupRequest object.
  */
 ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest()
-    : RDSRequest(new ResetDBClusterParameterGroupRequestPrivate(RDSRequest::ResetDBClusterParameterGroupAction, this))
+    : RdsRequest(new ResetDBClusterParameterGroupRequestPrivate(RdsRequest::ResetDBClusterParameterGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response
  */
 
 /*!
- * Constructs a ResetDBClusterParameterGroupRequestPrivate object for RDS \a action,
+ * Constructs a ResetDBClusterParameterGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
-    const RDSRequest::Action action, ResetDBClusterParameterGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ResetDBClusterParameterGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestP
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
     const ResetDBClusterParameterGroupRequestPrivate &other, ResetDBClusterParameterGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

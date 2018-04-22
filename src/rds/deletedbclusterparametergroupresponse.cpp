@@ -108,7 +108,7 @@ DeleteDBClusterParameterGroupResponse::DeleteDBClusterParameterGroupResponse(
         const DeleteDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupResponsePrivate(
-    DeleteDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBClusterParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

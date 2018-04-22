@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 PollForDecisionTaskRequest::PollForDecisionTaskRequest(const PollForDecisionTaskRequest &other)
-    : SWFRequest(new PollForDecisionTaskRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new PollForDecisionTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ PollForDecisionTaskRequest::PollForDecisionTaskRequest(const PollForDecisionTask
  * Constructs a PollForDecisionTaskRequest object.
  */
 PollForDecisionTaskRequest::PollForDecisionTaskRequest()
-    : SWFRequest(new PollForDecisionTaskRequestPrivate(SWFRequest::PollForDecisionTaskAction, this))
+    : SwfRequest(new PollForDecisionTaskRequestPrivate(SwfRequest::PollForDecisionTaskAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetwork
  */
 
 /*!
- * Constructs a PollForDecisionTaskRequestPrivate object for SWF \a action,
+ * Constructs a PollForDecisionTaskRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
-    const SWFRequest::Action action, PollForDecisionTaskRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, PollForDecisionTaskRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
  */
 PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
     const PollForDecisionTaskRequestPrivate &other, PollForDecisionTaskRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

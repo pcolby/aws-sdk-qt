@@ -27,7 +27,7 @@ namespace ECS {
 
 class PutAttributesRequestPrivate;
 
-class QTAWS_EXPORT PutAttributesRequest : public ECSRequest {
+class QTAWS_EXPORT PutAttributesRequest : public EcsRequest {
 
 public:
     PutAttributesRequest(const PutAttributesRequest &other);

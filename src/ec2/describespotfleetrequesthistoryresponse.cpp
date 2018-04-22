@@ -48,7 +48,7 @@ DescribeSpotFleetRequestHistoryResponse::DescribeSpotFleetRequestHistoryResponse
         const DescribeSpotFleetRequestHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSpotFleetRequestHistoryResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSpotFleetRequestHistoryResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotFleetRequestHistoryRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSpotFleetRequestHistoryResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSpotFleetRequestHistoryResponsePrivate object with public implementation \a q.
  */
 DescribeSpotFleetRequestHistoryResponsePrivate::DescribeSpotFleetRequestHistoryResponsePrivate(
-    DescribeSpotFleetRequestHistoryResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSpotFleetRequestHistoryResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

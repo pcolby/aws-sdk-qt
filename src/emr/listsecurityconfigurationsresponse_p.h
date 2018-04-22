@@ -27,7 +27,7 @@ namespace EMR {
 
 class ListSecurityConfigurationsResponse;
 
-class QTAWS_EXPORT ListSecurityConfigurationsResponsePrivate : public EMRResponsePrivate {
+class QTAWS_EXPORT ListSecurityConfigurationsResponsePrivate : public EmrResponsePrivate {
     Q_OBJECT
 
 public:

@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 ListEndpointsByPlatformApplicationRequest::ListEndpointsByPlatformApplicationRequest(const ListEndpointsByPlatformApplicationRequest &other)
-    : SNSRequest(new ListEndpointsByPlatformApplicationRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new ListEndpointsByPlatformApplicationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ ListEndpointsByPlatformApplicationRequest::ListEndpointsByPlatformApplicationReq
  * Constructs a ListEndpointsByPlatformApplicationRequest object.
  */
 ListEndpointsByPlatformApplicationRequest::ListEndpointsByPlatformApplicationRequest()
-    : SNSRequest(new ListEndpointsByPlatformApplicationRequestPrivate(SNSRequest::ListEndpointsByPlatformApplicationAction, this))
+    : SnsRequest(new ListEndpointsByPlatformApplicationRequestPrivate(SnsRequest::ListEndpointsByPlatformApplicationAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::re
  */
 
 /*!
- * Constructs a ListEndpointsByPlatformApplicationRequestPrivate object for SNS \a action,
+ * Constructs a ListEndpointsByPlatformApplicationRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
-    const SNSRequest::Action action, ListEndpointsByPlatformApplicationRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, ListEndpointsByPlatformApplicationRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplica
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
     const ListEndpointsByPlatformApplicationRequestPrivate &other, ListEndpointsByPlatformApplicationRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeSubnetsRequest::DescribeSubnetsRequest(const DescribeSubnetsRequest &other)
-    : EC2Request(new DescribeSubnetsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeSubnetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeSubnetsRequest::DescribeSubnetsRequest(const DescribeSubnetsRequest &oth
  * Constructs a DescribeSubnetsRequest object.
  */
 DescribeSubnetsRequest::DescribeSubnetsRequest()
-    : EC2Request(new DescribeSubnetsRequestPrivate(EC2Request::DescribeSubnetsAction, this))
+    : Ec2Request(new DescribeSubnetsRequestPrivate(Ec2Request::DescribeSubnetsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DescribeSubnetsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeSubnetsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
-    const EC2Request::Action action, DescribeSubnetsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeSubnetsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
     const DescribeSubnetsRequestPrivate &other, DescribeSubnetsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

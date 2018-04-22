@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CancelConversionTaskRequest::CancelConversionTaskRequest(const CancelConversionTaskRequest &other)
-    : EC2Request(new CancelConversionTaskRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CancelConversionTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CancelConversionTaskRequest::CancelConversionTaskRequest(const CancelConversionT
  * Constructs a CancelConversionTaskRequest object.
  */
 CancelConversionTaskRequest::CancelConversionTaskRequest()
-    : EC2Request(new CancelConversionTaskRequestPrivate(EC2Request::CancelConversionTaskAction, this))
+    : Ec2Request(new CancelConversionTaskRequestPrivate(Ec2Request::CancelConversionTaskAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetwor
  */
 
 /*!
- * Constructs a CancelConversionTaskRequestPrivate object for EC2 \a action,
+ * Constructs a CancelConversionTaskRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
-    const EC2Request::Action action, CancelConversionTaskRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CancelConversionTaskRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
     const CancelConversionTaskRequestPrivate &other, CancelConversionTaskRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

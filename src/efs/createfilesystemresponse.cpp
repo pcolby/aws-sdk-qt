@@ -50,7 +50,7 @@ CreateFileSystemResponse::CreateFileSystemResponse(
         const CreateFileSystemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new CreateFileSystemResponsePrivate(this), parent)
+    : EfsResponse(new CreateFileSystemResponsePrivate(this), parent)
 {
     setRequest(new CreateFileSystemRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void CreateFileSystemResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateFileSystemResponsePrivate object with public implementation \a q.
  */
 CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
-    CreateFileSystemResponse * const q) : EFSResponsePrivate(q)
+    CreateFileSystemResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

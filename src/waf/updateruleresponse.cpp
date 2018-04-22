@@ -49,7 +49,7 @@ UpdateRuleResponse::UpdateRuleResponse(
         const UpdateRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateRuleResponsePrivate(this), parent)
+    : WafResponse(new UpdateRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRuleRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateRuleResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
-    UpdateRuleResponse * const q) : WAFResponsePrivate(q)
+    UpdateRuleResponse * const q) : WafResponsePrivate(q)
 {
 
 }

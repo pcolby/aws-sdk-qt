@@ -27,7 +27,7 @@ namespace SFN {
 
 class ListExecutionsRequestPrivate;
 
-class QTAWS_EXPORT ListExecutionsRequest : public SFNRequest {
+class QTAWS_EXPORT ListExecutionsRequest : public SfnRequest {
 
 public:
     ListExecutionsRequest(const ListExecutionsRequest &other);

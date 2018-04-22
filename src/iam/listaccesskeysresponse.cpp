@@ -109,7 +109,7 @@ ListAccessKeysResponse::ListAccessKeysResponse(
         const ListAccessKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListAccessKeysResponsePrivate(this), parent)
+    : IamResponse(new ListAccessKeysResponsePrivate(this), parent)
 {
     setRequest(new ListAccessKeysRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListAccessKeysResponse::parseSuccess(QIODevice &response)
  * Constructs a ListAccessKeysResponsePrivate object with public implementation \a q.
  */
 ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
-    ListAccessKeysResponse * const q) : IAMResponsePrivate(q)
+    ListAccessKeysResponse * const q) : IamResponsePrivate(q)
 {
 
 }

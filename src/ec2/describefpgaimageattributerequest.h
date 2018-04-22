@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeFpgaImageAttributeRequestPrivate;
 
-class QTAWS_EXPORT DescribeFpgaImageAttributeRequest : public EC2Request {
+class QTAWS_EXPORT DescribeFpgaImageAttributeRequest : public Ec2Request {
 
 public:
     DescribeFpgaImageAttributeRequest(const DescribeFpgaImageAttributeRequest &other);

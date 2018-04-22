@@ -108,7 +108,7 @@ DescribeDBClusterParametersResponse::DescribeDBClusterParametersResponse(
         const DescribeDBClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)
+    : RdsResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBClusterParametersRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeDBClusterParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDBClusterParametersResponsePrivate object with public implementation \a q.
  */
 DescribeDBClusterParametersResponsePrivate::DescribeDBClusterParametersResponsePrivate(
-    DescribeDBClusterParametersResponse * const q) : RDSResponsePrivate(q)
+    DescribeDBClusterParametersResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

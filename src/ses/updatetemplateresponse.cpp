@@ -55,7 +55,7 @@ UpdateTemplateResponse::UpdateTemplateResponse(
         const UpdateTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateTemplateResponsePrivate(this), parent)
+    : SesResponse(new UpdateTemplateResponsePrivate(this), parent)
 {
     setRequest(new UpdateTemplateRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateTemplateResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateTemplateResponsePrivate object with public implementation \a q.
  */
 UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
-    UpdateTemplateResponse * const q) : SESResponsePrivate(q)
+    UpdateTemplateResponse * const q) : SesResponsePrivate(q)
 {
 
 }

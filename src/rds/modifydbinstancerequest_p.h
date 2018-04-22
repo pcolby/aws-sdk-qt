@@ -28,10 +28,10 @@ namespace RDS {
 
 class ModifyDBInstanceRequest;
 
-class QTAWS_EXPORT ModifyDBInstanceRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT ModifyDBInstanceRequestPrivate : public RdsRequestPrivate {
 
 public:
-    ModifyDBInstanceRequestPrivate(const RDSRequest::Action action,
+    ModifyDBInstanceRequestPrivate(const RdsRequest::Action action,
                                    ModifyDBInstanceRequest * const q);
     ModifyDBInstanceRequestPrivate(const ModifyDBInstanceRequestPrivate &other,
                                    ModifyDBInstanceRequest * const q);

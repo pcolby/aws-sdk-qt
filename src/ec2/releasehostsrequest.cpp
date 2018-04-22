@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReleaseHostsRequest::ReleaseHostsRequest(const ReleaseHostsRequest &other)
-    : EC2Request(new ReleaseHostsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReleaseHostsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReleaseHostsRequest::ReleaseHostsRequest(const ReleaseHostsRequest &other)
  * Constructs a ReleaseHostsRequest object.
  */
 ReleaseHostsRequest::ReleaseHostsRequest()
-    : EC2Request(new ReleaseHostsRequestPrivate(EC2Request::ReleaseHostsAction, this))
+    : Ec2Request(new ReleaseHostsRequestPrivate(Ec2Request::ReleaseHostsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ReleaseHostsRequestPrivate object for EC2 \a action,
+ * Constructs a ReleaseHostsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
-    const EC2Request::Action action, ReleaseHostsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReleaseHostsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
     const ReleaseHostsRequestPrivate &other, ReleaseHostsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

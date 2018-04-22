@@ -48,7 +48,7 @@ PutLifecyclePolicyResponse::PutLifecyclePolicyResponse(
         const PutLifecyclePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new PutLifecyclePolicyResponsePrivate(this), parent)
+    : EcrResponse(new PutLifecyclePolicyResponsePrivate(this), parent)
 {
     setRequest(new PutLifecyclePolicyRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void PutLifecyclePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a PutLifecyclePolicyResponsePrivate object with public implementation \a q.
  */
 PutLifecyclePolicyResponsePrivate::PutLifecyclePolicyResponsePrivate(
-    PutLifecyclePolicyResponse * const q) : ECRResponsePrivate(q)
+    PutLifecyclePolicyResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
-    : EC2Request(new DescribeTagsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
  * Constructs a DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
-    : EC2Request(new DescribeTagsRequestPrivate(EC2Request::DescribeTagsAction, this))
+    : Ec2Request(new DescribeTagsRequestPrivate(Ec2Request::DescribeTagsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DescribeTagsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeTagsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
-    const EC2Request::Action action, DescribeTagsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeTagsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

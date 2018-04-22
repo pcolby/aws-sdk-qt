@@ -48,7 +48,7 @@ DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
         const DisableVgwRoutePropagationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisableVgwRoutePropagationResponsePrivate(this), parent)
+    : Ec2Response(new DisableVgwRoutePropagationResponsePrivate(this), parent)
 {
     setRequest(new DisableVgwRoutePropagationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DisableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
  * Constructs a DisableVgwRoutePropagationResponsePrivate object with public implementation \a q.
  */
 DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationResponsePrivate(
-    DisableVgwRoutePropagationResponse * const q) : EC2ResponsePrivate(q)
+    DisableVgwRoutePropagationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

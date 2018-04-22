@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetPolicyRequest : public FMSRequest {
+class QTAWS_EXPORT GetPolicyRequest : public FmsRequest {
 
 public:
     GetPolicyRequest(const GetPolicyRequest &other);

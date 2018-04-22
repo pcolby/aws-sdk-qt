@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 CountPendingActivityTasksRequest::CountPendingActivityTasksRequest(const CountPendingActivityTasksRequest &other)
-    : SWFRequest(new CountPendingActivityTasksRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new CountPendingActivityTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ CountPendingActivityTasksRequest::CountPendingActivityTasksRequest(const CountPe
  * Constructs a CountPendingActivityTasksRequest object.
  */
 CountPendingActivityTasksRequest::CountPendingActivityTasksRequest()
-    : SWFRequest(new CountPendingActivityTasksRequestPrivate(SWFRequest::CountPendingActivityTasksAction, this))
+    : SwfRequest(new CountPendingActivityTasksRequestPrivate(SwfRequest::CountPendingActivityTasksAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * CountPendingActivityTasksRequest::response(QN
  */
 
 /*!
- * Constructs a CountPendingActivityTasksRequestPrivate object for SWF \a action,
+ * Constructs a CountPendingActivityTasksRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
-    const SWFRequest::Action action, CountPendingActivityTasksRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, CountPendingActivityTasksRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate
  */
 CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
     const CountPendingActivityTasksRequestPrivate &other, CountPendingActivityTasksRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

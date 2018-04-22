@@ -58,7 +58,7 @@ CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
         const CreatePlatformEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new CreatePlatformEndpointResponsePrivate(this), parent)
+    : SnsResponse(new CreatePlatformEndpointResponsePrivate(this), parent)
 {
     setRequest(new CreatePlatformEndpointRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void CreatePlatformEndpointResponse::parseSuccess(QIODevice &response)
  * Constructs a CreatePlatformEndpointResponsePrivate object with public implementation \a q.
  */
 CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
-    CreatePlatformEndpointResponse * const q) : SNSResponsePrivate(q)
+    CreatePlatformEndpointResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

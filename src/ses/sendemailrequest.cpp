@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SendEmailRequest::SendEmailRequest(const SendEmailRequest &other)
-    : SESRequest(new SendEmailRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SendEmailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SendEmailRequest::SendEmailRequest(const SendEmailRequest &other)
  * Constructs a SendEmailRequest object.
  */
 SendEmailRequest::SendEmailRequest()
-    : SESRequest(new SendEmailRequestPrivate(SESRequest::SendEmailAction, this))
+    : SesRequest(new SendEmailRequestPrivate(SesRequest::SendEmailAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a SendEmailRequestPrivate object for SES \a action,
+ * Constructs a SendEmailRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SendEmailRequestPrivate::SendEmailRequestPrivate(
-    const SESRequest::Action action, SendEmailRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SendEmailRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendEmailRequestPrivate::SendEmailRequestPrivate(
  */
 SendEmailRequestPrivate::SendEmailRequestPrivate(
     const SendEmailRequestPrivate &other, SendEmailRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

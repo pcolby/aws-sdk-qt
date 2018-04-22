@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 CreateRuleGroupRequest::CreateRuleGroupRequest(const CreateRuleGroupRequest &other)
-    : WAFRequest(new CreateRuleGroupRequestPrivate(*other.d_func(), this))
+    : WafRequest(new CreateRuleGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateRuleGroupRequest::CreateRuleGroupRequest(const CreateRuleGroupRequest &oth
  * Constructs a CreateRuleGroupRequest object.
  */
 CreateRuleGroupRequest::CreateRuleGroupRequest()
-    : WAFRequest(new CreateRuleGroupRequestPrivate(WAFRequest::CreateRuleGroupAction, this))
+    : WafRequest(new CreateRuleGroupRequestPrivate(WafRequest::CreateRuleGroupAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * CreateRuleGroupRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a CreateRuleGroupRequestPrivate object for WAF \a action,
+ * Constructs a CreateRuleGroupRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
-    const WAFRequest::Action action, CreateRuleGroupRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, CreateRuleGroupRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
  */
 CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
     const CreateRuleGroupRequestPrivate &other, CreateRuleGroupRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace STS {
 
 class GetFederationTokenRequestPrivate;
 
-class QTAWS_EXPORT GetFederationTokenRequest : public STSRequest {
+class QTAWS_EXPORT GetFederationTokenRequest : public StsRequest {
 
 public:
     GetFederationTokenRequest(const GetFederationTokenRequest &other);

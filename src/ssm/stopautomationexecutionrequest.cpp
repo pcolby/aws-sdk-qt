@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 StopAutomationExecutionRequest::StopAutomationExecutionRequest(const StopAutomationExecutionRequest &other)
-    : SSMRequest(new StopAutomationExecutionRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new StopAutomationExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ StopAutomationExecutionRequest::StopAutomationExecutionRequest(const StopAutomat
  * Constructs a StopAutomationExecutionRequest object.
  */
 StopAutomationExecutionRequest::StopAutomationExecutionRequest()
-    : SSMRequest(new StopAutomationExecutionRequestPrivate(SSMRequest::StopAutomationExecutionAction, this))
+    : SsmRequest(new StopAutomationExecutionRequestPrivate(SsmRequest::StopAutomationExecutionAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * StopAutomationExecutionRequest::response(QNet
  */
 
 /*!
- * Constructs a StopAutomationExecutionRequestPrivate object for SSM \a action,
+ * Constructs a StopAutomationExecutionRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
-    const SSMRequest::Action action, StopAutomationExecutionRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, StopAutomationExecutionRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
  */
 StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
     const StopAutomationExecutionRequestPrivate &other, StopAutomationExecutionRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

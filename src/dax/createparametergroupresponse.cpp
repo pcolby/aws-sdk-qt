@@ -48,7 +48,7 @@ CreateParameterGroupResponse::CreateParameterGroupResponse(
         const CreateParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new CreateParameterGroupResponsePrivate(this), parent)
+    : DaxResponse(new CreateParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateParameterGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateParameterGroupResponsePrivate object with public implementation \a q.
  */
 CreateParameterGroupResponsePrivate::CreateParameterGroupResponsePrivate(
-    CreateParameterGroupResponse * const q) : DAXResponsePrivate(q)
+    CreateParameterGroupResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

@@ -60,7 +60,7 @@ RespondActivityTaskCompletedResponse::RespondActivityTaskCompletedResponse(
         const RespondActivityTaskCompletedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RespondActivityTaskCompletedResponsePrivate(this), parent)
+    : SwfResponse(new RespondActivityTaskCompletedResponsePrivate(this), parent)
 {
     setRequest(new RespondActivityTaskCompletedRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RespondActivityTaskCompletedResponse::parseSuccess(QIODevice &response)
  * Constructs a RespondActivityTaskCompletedResponsePrivate object with public implementation \a q.
  */
 RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedResponsePrivate(
-    RespondActivityTaskCompletedResponse * const q) : SWFResponsePrivate(q)
+    RespondActivityTaskCompletedResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

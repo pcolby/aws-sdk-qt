@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
-    : EC2Request(new DescribeImagesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeImagesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
  * Constructs a DescribeImagesRequest object.
  */
 DescribeImagesRequest::DescribeImagesRequest()
-    : EC2Request(new DescribeImagesRequestPrivate(EC2Request::DescribeImagesAction, this))
+    : Ec2Request(new DescribeImagesRequestPrivate(Ec2Request::DescribeImagesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DescribeImagesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeImagesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
-    const EC2Request::Action action, DescribeImagesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeImagesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const DescribeImagesRequestPrivate &other, DescribeImagesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

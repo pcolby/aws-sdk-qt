@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateNatGatewayRequest::CreateNatGatewayRequest(const CreateNatGatewayRequest &other)
-    : EC2Request(new CreateNatGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateNatGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateNatGatewayRequest::CreateNatGatewayRequest(const CreateNatGatewayRequest &
  * Constructs a CreateNatGatewayRequest object.
  */
 CreateNatGatewayRequest::CreateNatGatewayRequest()
-    : EC2Request(new CreateNatGatewayRequestPrivate(EC2Request::CreateNatGatewayAction, this))
+    : Ec2Request(new CreateNatGatewayRequestPrivate(Ec2Request::CreateNatGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateNatGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a CreateNatGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
-    const EC2Request::Action action, CreateNatGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateNatGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
     const CreateNatGatewayRequestPrivate &other, CreateNatGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

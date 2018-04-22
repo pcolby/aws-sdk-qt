@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifyVpcEndpointRequest;
 
-class QTAWS_EXPORT ModifyVpcEndpointRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifyVpcEndpointRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifyVpcEndpointRequestPrivate(const EC2Request::Action action,
+    ModifyVpcEndpointRequestPrivate(const Ec2Request::Action action,
                                    ModifyVpcEndpointRequest * const q);
     ModifyVpcEndpointRequestPrivate(const ModifyVpcEndpointRequestPrivate &other,
                                    ModifyVpcEndpointRequest * const q);

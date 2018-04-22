@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class TagCertificateAuthorityResponsePrivate;
 
-class QTAWS_EXPORT TagCertificateAuthorityResponse : public ACMPCAResponse {
+class QTAWS_EXPORT TagCertificateAuthorityResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

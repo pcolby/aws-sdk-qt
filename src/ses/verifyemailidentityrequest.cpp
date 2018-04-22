@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 VerifyEmailIdentityRequest::VerifyEmailIdentityRequest(const VerifyEmailIdentityRequest &other)
-    : SESRequest(new VerifyEmailIdentityRequestPrivate(*other.d_func(), this))
+    : SesRequest(new VerifyEmailIdentityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ VerifyEmailIdentityRequest::VerifyEmailIdentityRequest(const VerifyEmailIdentity
  * Constructs a VerifyEmailIdentityRequest object.
  */
 VerifyEmailIdentityRequest::VerifyEmailIdentityRequest()
-    : SESRequest(new VerifyEmailIdentityRequestPrivate(SESRequest::VerifyEmailIdentityAction, this))
+    : SesRequest(new VerifyEmailIdentityRequestPrivate(SesRequest::VerifyEmailIdentityAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetwork
  */
 
 /*!
- * Constructs a VerifyEmailIdentityRequestPrivate object for SES \a action,
+ * Constructs a VerifyEmailIdentityRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
-    const SESRequest::Action action, VerifyEmailIdentityRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, VerifyEmailIdentityRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
     const VerifyEmailIdentityRequestPrivate &other, VerifyEmailIdentityRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace SMS {
 
 class GetReplicationRunsResponse;
 
-class QTAWS_EXPORT GetReplicationRunsResponsePrivate : public SMSResponsePrivate {
+class QTAWS_EXPORT GetReplicationRunsResponsePrivate : public SmsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateDBClusterResponse;
 
-class QTAWS_EXPORT CreateDBClusterResponsePrivate : public RDSResponsePrivate {
+class QTAWS_EXPORT CreateDBClusterResponsePrivate : public RdsResponsePrivate {
     Q_OBJECT
 
 public:

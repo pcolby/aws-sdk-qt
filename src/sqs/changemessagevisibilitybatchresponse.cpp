@@ -110,7 +110,7 @@ ChangeMessageVisibilityBatchResponse::ChangeMessageVisibilityBatchResponse(
         const ChangeMessageVisibilityBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new ChangeMessageVisibilityBatchResponsePrivate(this), parent)
+    : SqsResponse(new ChangeMessageVisibilityBatchResponsePrivate(this), parent)
 {
     setRequest(new ChangeMessageVisibilityBatchRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void ChangeMessageVisibilityBatchResponse::parseSuccess(QIODevice &response)
  * Constructs a ChangeMessageVisibilityBatchResponsePrivate object with public implementation \a q.
  */
 ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchResponsePrivate(
-    ChangeMessageVisibilityBatchResponse * const q) : SQSResponsePrivate(q)
+    ChangeMessageVisibilityBatchResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

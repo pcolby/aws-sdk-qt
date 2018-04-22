@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateRequest &other)
-    : ACMRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateReques
  * Constructs a ImportCertificateRequest object.
  */
 ImportCertificateRequest::ImportCertificateRequest()
-    : ACMRequest(new ImportCertificateRequestPrivate(ACMRequest::ImportCertificateAction, this))
+    : AcmRequest(new ImportCertificateRequestPrivate(AcmRequest::ImportCertificateAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ImportCertificateRequestPrivate object for ACM \a action,
+ * Constructs a ImportCertificateRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
-    const ACMRequest::Action action, ImportCertificateRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, ImportCertificateRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

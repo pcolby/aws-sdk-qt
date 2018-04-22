@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 ListConfigurationSetsRequest::ListConfigurationSetsRequest(const ListConfigurationSetsRequest &other)
-    : SESRequest(new ListConfigurationSetsRequestPrivate(*other.d_func(), this))
+    : SesRequest(new ListConfigurationSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ListConfigurationSetsRequest::ListConfigurationSetsRequest(const ListConfigurati
  * Constructs a ListConfigurationSetsRequest object.
  */
 ListConfigurationSetsRequest::ListConfigurationSetsRequest()
-    : SESRequest(new ListConfigurationSetsRequestPrivate(SESRequest::ListConfigurationSetsAction, this))
+    : SesRequest(new ListConfigurationSetsRequestPrivate(SesRequest::ListConfigurationSetsAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationSetsRequest::response(QNetwo
  */
 
 /*!
- * Constructs a ListConfigurationSetsRequestPrivate object for SES \a action,
+ * Constructs a ListConfigurationSetsRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
-    const SESRequest::Action action, ListConfigurationSetsRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, ListConfigurationSetsRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
  */
 ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
     const ListConfigurationSetsRequestPrivate &other, ListConfigurationSetsRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

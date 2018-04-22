@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
-    : ACMPCARequest(new GetCertificateRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new GetCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ GetCertificateRequest::GetCertificateRequest(const GetCertificateRequest &other)
  * Constructs a GetCertificateRequest object.
  */
 GetCertificateRequest::GetCertificateRequest()
-    : ACMPCARequest(new GetCertificateRequestPrivate(ACMPCARequest::GetCertificateAction, this))
+    : AcmpcaRequest(new GetCertificateRequestPrivate(AcmpcaRequest::GetCertificateAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * GetCertificateRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a GetCertificateRequestPrivate object for ACMPCA \a action,
+ * Constructs a GetCertificateRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 GetCertificateRequestPrivate::GetCertificateRequestPrivate(
-    const ACMPCARequest::Action action, GetCertificateRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, GetCertificateRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ GetCertificateRequestPrivate::GetCertificateRequestPrivate(
  */
 GetCertificateRequestPrivate::GetCertificateRequestPrivate(
     const GetCertificateRequestPrivate &other, GetCertificateRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

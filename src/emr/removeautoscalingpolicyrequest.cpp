@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest(const RemoveAutoScalingPolicyRequest &other)
-    : EMRRequest(new RemoveAutoScalingPolicyRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new RemoveAutoScalingPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest(const RemoveAutoS
  * Constructs a RemoveAutoScalingPolicyRequest object.
  */
 RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest()
-    : EMRRequest(new RemoveAutoScalingPolicyRequestPrivate(EMRRequest::RemoveAutoScalingPolicyAction, this))
+    : EmrRequest(new RemoveAutoScalingPolicyRequestPrivate(EmrRequest::RemoveAutoScalingPolicyAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNet
  */
 
 /*!
- * Constructs a RemoveAutoScalingPolicyRequestPrivate object for EMR \a action,
+ * Constructs a RemoveAutoScalingPolicyRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
-    const EMRRequest::Action action, RemoveAutoScalingPolicyRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, RemoveAutoScalingPolicyRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
     const RemoveAutoScalingPolicyRequestPrivate &other, RemoveAutoScalingPolicyRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

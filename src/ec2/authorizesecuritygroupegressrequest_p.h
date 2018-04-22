@@ -28,10 +28,10 @@ namespace EC2 {
 
 class AuthorizeSecurityGroupEgressRequest;
 
-class QTAWS_EXPORT AuthorizeSecurityGroupEgressRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT AuthorizeSecurityGroupEgressRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    AuthorizeSecurityGroupEgressRequestPrivate(const EC2Request::Action action,
+    AuthorizeSecurityGroupEgressRequestPrivate(const Ec2Request::Action action,
                                    AuthorizeSecurityGroupEgressRequest * const q);
     AuthorizeSecurityGroupEgressRequestPrivate(const AuthorizeSecurityGroupEgressRequestPrivate &other,
                                    AuthorizeSecurityGroupEgressRequest * const q);

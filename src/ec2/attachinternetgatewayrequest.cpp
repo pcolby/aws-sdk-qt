@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AttachInternetGatewayRequest::AttachInternetGatewayRequest(const AttachInternetGatewayRequest &other)
-    : EC2Request(new AttachInternetGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AttachInternetGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AttachInternetGatewayRequest::AttachInternetGatewayRequest(const AttachInternetG
  * Constructs a AttachInternetGatewayRequest object.
  */
 AttachInternetGatewayRequest::AttachInternetGatewayRequest()
-    : EC2Request(new AttachInternetGatewayRequestPrivate(EC2Request::AttachInternetGatewayAction, this))
+    : Ec2Request(new AttachInternetGatewayRequestPrivate(Ec2Request::AttachInternetGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AttachInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- * Constructs a AttachInternetGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a AttachInternetGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
-    const EC2Request::Action action, AttachInternetGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AttachInternetGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
  */
 AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
     const AttachInternetGatewayRequestPrivate &other, AttachInternetGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

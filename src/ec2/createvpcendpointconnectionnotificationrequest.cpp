@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateVpcEndpointConnectionNotificationRequest::CreateVpcEndpointConnectionNotificationRequest(const CreateVpcEndpointConnectionNotificationRequest &other)
-    : EC2Request(new CreateVpcEndpointConnectionNotificationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateVpcEndpointConnectionNotificationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateVpcEndpointConnectionNotificationRequest::CreateVpcEndpointConnectionNotif
  * Constructs a CreateVpcEndpointConnectionNotificationRequest object.
  */
 CreateVpcEndpointConnectionNotificationRequest::CreateVpcEndpointConnectionNotificationRequest()
-    : EC2Request(new CreateVpcEndpointConnectionNotificationRequestPrivate(EC2Request::CreateVpcEndpointConnectionNotificationAction, this))
+    : Ec2Request(new CreateVpcEndpointConnectionNotificationRequestPrivate(Ec2Request::CreateVpcEndpointConnectionNotificationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointConnectionNotificationReques
  */
 
 /*!
- * Constructs a CreateVpcEndpointConnectionNotificationRequestPrivate object for EC2 \a action,
+ * Constructs a CreateVpcEndpointConnectionNotificationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnectionNotificationRequestPrivate(
-    const EC2Request::Action action, CreateVpcEndpointConnectionNotificationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateVpcEndpointConnectionNotificationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnecti
  */
 CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnectionNotificationRequestPrivate(
     const CreateVpcEndpointConnectionNotificationRequestPrivate &other, CreateVpcEndpointConnectionNotificationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other)
-    : WAFRequest(new DeletePermissionPolicyRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeletePermissionPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeletePermissionPolicyRequest::DeletePermissionPolicyRequest(const DeletePermiss
  * Constructs a DeletePermissionPolicyRequest object.
  */
 DeletePermissionPolicyRequest::DeletePermissionPolicyRequest()
-    : WAFRequest(new DeletePermissionPolicyRequestPrivate(WAFRequest::DeletePermissionPolicyAction, this))
+    : WafRequest(new DeletePermissionPolicyRequestPrivate(WafRequest::DeletePermissionPolicyAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeletePermissionPolicyRequestPrivate object for WAF \a action,
+ * Constructs a DeletePermissionPolicyRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
-    const WAFRequest::Action action, DeletePermissionPolicyRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeletePermissionPolicyRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const DeletePermissionPolicyRequestPrivate &other, DeletePermissionPolicyRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

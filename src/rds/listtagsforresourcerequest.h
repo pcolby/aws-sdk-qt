@@ -27,7 +27,7 @@ namespace RDS {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public RDSRequest {
+class QTAWS_EXPORT ListTagsForResourceRequest : public RdsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

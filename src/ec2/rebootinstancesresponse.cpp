@@ -48,7 +48,7 @@ RebootInstancesResponse::RebootInstancesResponse(
         const RebootInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RebootInstancesResponsePrivate(this), parent)
+    : Ec2Response(new RebootInstancesResponsePrivate(this), parent)
 {
     setRequest(new RebootInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RebootInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a RebootInstancesResponsePrivate object with public implementation \a q.
  */
 RebootInstancesResponsePrivate::RebootInstancesResponsePrivate(
-    RebootInstancesResponse * const q) : EC2ResponsePrivate(q)
+    RebootInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

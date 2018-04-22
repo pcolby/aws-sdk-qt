@@ -44,7 +44,7 @@ GetReplicationRunsResponse::GetReplicationRunsResponse(
         const GetReplicationRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new GetReplicationRunsResponsePrivate(this), parent)
+    : SmsResponse(new GetReplicationRunsResponsePrivate(this), parent)
 {
     setRequest(new GetReplicationRunsRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void GetReplicationRunsResponse::parseSuccess(QIODevice &response)
  * Constructs a GetReplicationRunsResponsePrivate object with public implementation \a q.
  */
 GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
-    GetReplicationRunsResponse * const q) : SMSResponsePrivate(q)
+    GetReplicationRunsResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

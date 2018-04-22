@@ -55,7 +55,7 @@ SendCustomVerificationEmailResponse::SendCustomVerificationEmailResponse(
         const SendCustomVerificationEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendCustomVerificationEmailResponsePrivate(this), parent)
+    : SesResponse(new SendCustomVerificationEmailResponsePrivate(this), parent)
 {
     setRequest(new SendCustomVerificationEmailRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
  * Constructs a SendCustomVerificationEmailResponsePrivate object with public implementation \a q.
  */
 SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponsePrivate(
-    SendCustomVerificationEmailResponse * const q) : SESResponsePrivate(q)
+    SendCustomVerificationEmailResponse * const q) : SesResponsePrivate(q)
 {
 
 }

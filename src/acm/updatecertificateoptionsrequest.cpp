@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest(const UpdateCertificateOptionsRequest &other)
-    : ACMRequest(new UpdateCertificateOptionsRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new UpdateCertificateOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest(const UpdateCer
  * Constructs a UpdateCertificateOptionsRequest object.
  */
 UpdateCertificateOptionsRequest::UpdateCertificateOptionsRequest()
-    : ACMRequest(new UpdateCertificateOptionsRequestPrivate(ACMRequest::UpdateCertificateOptionsAction, this))
+    : AcmRequest(new UpdateCertificateOptionsRequestPrivate(AcmRequest::UpdateCertificateOptionsAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNe
  */
 
 /*!
- * Constructs a UpdateCertificateOptionsRequestPrivate object for ACM \a action,
+ * Constructs a UpdateCertificateOptionsRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
-    const ACMRequest::Action action, UpdateCertificateOptionsRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, UpdateCertificateOptionsRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
     const UpdateCertificateOptionsRequestPrivate &other, UpdateCertificateOptionsRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

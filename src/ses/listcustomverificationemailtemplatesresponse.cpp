@@ -55,7 +55,7 @@ ListCustomVerificationEmailTemplatesResponse::ListCustomVerificationEmailTemplat
         const ListCustomVerificationEmailTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListCustomVerificationEmailTemplatesResponsePrivate(this), parent)
+    : SesResponse(new ListCustomVerificationEmailTemplatesResponsePrivate(this), parent)
 {
     setRequest(new ListCustomVerificationEmailTemplatesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void ListCustomVerificationEmailTemplatesResponse::parseSuccess(QIODevice &respo
  * Constructs a ListCustomVerificationEmailTemplatesResponsePrivate object with public implementation \a q.
  */
 ListCustomVerificationEmailTemplatesResponsePrivate::ListCustomVerificationEmailTemplatesResponsePrivate(
-    ListCustomVerificationEmailTemplatesResponse * const q) : SESResponsePrivate(q)
+    ListCustomVerificationEmailTemplatesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

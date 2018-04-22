@@ -28,10 +28,10 @@ namespace ECS {
 
 class StopTaskRequest;
 
-class QTAWS_EXPORT StopTaskRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT StopTaskRequestPrivate : public EcsRequestPrivate {
 
 public:
-    StopTaskRequestPrivate(const ECSRequest::Action action,
+    StopTaskRequestPrivate(const EcsRequest::Action action,
                                    StopTaskRequest * const q);
     StopTaskRequestPrivate(const StopTaskRequestPrivate &other,
                                    StopTaskRequest * const q);

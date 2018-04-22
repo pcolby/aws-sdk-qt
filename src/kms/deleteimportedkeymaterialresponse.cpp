@@ -143,7 +143,7 @@ DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
         const DeleteImportedKeyMaterialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new DeleteImportedKeyMaterialResponsePrivate(this), parent)
+    : KmsResponse(new DeleteImportedKeyMaterialResponsePrivate(this), parent)
 {
     setRequest(new DeleteImportedKeyMaterialRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void DeleteImportedKeyMaterialResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteImportedKeyMaterialResponsePrivate object with public implementation \a q.
  */
 DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponsePrivate(
-    DeleteImportedKeyMaterialResponse * const q) : KMSResponsePrivate(q)
+    DeleteImportedKeyMaterialResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

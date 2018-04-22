@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeNatGatewaysRequest;
 
-class QTAWS_EXPORT DescribeNatGatewaysRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeNatGatewaysRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeNatGatewaysRequestPrivate(const EC2Request::Action action,
+    DescribeNatGatewaysRequestPrivate(const Ec2Request::Action action,
                                    DescribeNatGatewaysRequest * const q);
     DescribeNatGatewaysRequestPrivate(const DescribeNatGatewaysRequestPrivate &other,
                                    DescribeNatGatewaysRequest * const q);

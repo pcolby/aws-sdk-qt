@@ -29,7 +29,7 @@ namespace {{NameSpaceName}} {
         const {{OperationName}}Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : {{ServiceName}}Response(new {{ClassName}}Private(this), parent)
+    : {{ServiceClassName}}Response(new {{ClassName}}Private(this), parent)
 {
     setRequest(new {{OperationName}}Request(request));
     setReply(reply);
@@ -67,7 +67,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
  * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{ClassName}} * const q) : {{ServiceName}}ResponsePrivate(q)
+    {{ClassName}} * const q) : {{ServiceClassName}}ResponsePrivate(q)
 {
 
 }

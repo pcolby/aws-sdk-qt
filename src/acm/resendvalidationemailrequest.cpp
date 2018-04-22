@@ -48,7 +48,7 @@ namespace ACM {
  * Constructs a copy of \a other.
  */
 ResendValidationEmailRequest::ResendValidationEmailRequest(const ResendValidationEmailRequest &other)
-    : ACMRequest(new ResendValidationEmailRequestPrivate(*other.d_func(), this))
+    : AcmRequest(new ResendValidationEmailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -57,7 +57,7 @@ ResendValidationEmailRequest::ResendValidationEmailRequest(const ResendValidatio
  * Constructs a ResendValidationEmailRequest object.
  */
 ResendValidationEmailRequest::ResendValidationEmailRequest()
-    : ACMRequest(new ResendValidationEmailRequestPrivate(ACMRequest::ResendValidationEmailAction, this))
+    : AcmRequest(new ResendValidationEmailRequestPrivate(AcmRequest::ResendValidationEmailAction, this))
 {
 
 }
@@ -90,12 +90,12 @@ QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetwo
  */
 
 /*!
- * Constructs a ResendValidationEmailRequestPrivate object for ACM \a action,
+ * Constructs a ResendValidationEmailRequestPrivate object for Acm \a action,
  * with public implementation \a q.
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
-    const ACMRequest::Action action, ResendValidationEmailRequest * const q)
-    : ACMRequestPrivate(action, q)
+    const AcmRequest::Action action, ResendValidationEmailRequest * const q)
+    : AcmRequestPrivate(action, q)
 {
 
 }
@@ -108,7 +108,7 @@ ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
     const ResendValidationEmailRequestPrivate &other, ResendValidationEmailRequest * const q)
-    : ACMRequestPrivate(other, q)
+    : AcmRequestPrivate(other, q)
 {
 
 }

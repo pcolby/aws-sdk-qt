@@ -61,7 +61,7 @@ DescribeTasksResponse::DescribeTasksResponse(
         const DescribeTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DescribeTasksResponsePrivate(this), parent)
+    : EcsResponse(new DescribeTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeTasksRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DescribeTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeTasksResponsePrivate object with public implementation \a q.
  */
 DescribeTasksResponsePrivate::DescribeTasksResponsePrivate(
-    DescribeTasksResponse * const q) : ECSResponsePrivate(q)
+    DescribeTasksResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

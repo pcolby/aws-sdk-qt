@@ -27,7 +27,7 @@ namespace KMS {
 
 class GenerateRandomRequestPrivate;
 
-class QTAWS_EXPORT GenerateRandomRequest : public KMSRequest {
+class QTAWS_EXPORT GenerateRandomRequest : public KmsRequest {
 
 public:
     GenerateRandomRequest(const GenerateRandomRequest &other);

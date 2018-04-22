@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 PutUserPolicyRequest::PutUserPolicyRequest(const PutUserPolicyRequest &other)
-    : IAMRequest(new PutUserPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new PutUserPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ PutUserPolicyRequest::PutUserPolicyRequest(const PutUserPolicyRequest &other)
  * Constructs a PutUserPolicyRequest object.
  */
 PutUserPolicyRequest::PutUserPolicyRequest()
-    : IAMRequest(new PutUserPolicyRequestPrivate(IAMRequest::PutUserPolicyAction, this))
+    : IamRequest(new PutUserPolicyRequestPrivate(IamRequest::PutUserPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * PutUserPolicyRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a PutUserPolicyRequestPrivate object for IAM \a action,
+ * Constructs a PutUserPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 PutUserPolicyRequestPrivate::PutUserPolicyRequestPrivate(
-    const IAMRequest::Action action, PutUserPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, PutUserPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ PutUserPolicyRequestPrivate::PutUserPolicyRequestPrivate(
  */
 PutUserPolicyRequestPrivate::PutUserPolicyRequestPrivate(
     const PutUserPolicyRequestPrivate &other, PutUserPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

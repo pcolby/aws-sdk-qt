@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 GetActivityTaskRequest::GetActivityTaskRequest(const GetActivityTaskRequest &other)
-    : SFNRequest(new GetActivityTaskRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new GetActivityTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ GetActivityTaskRequest::GetActivityTaskRequest(const GetActivityTaskRequest &oth
  * Constructs a GetActivityTaskRequest object.
  */
 GetActivityTaskRequest::GetActivityTaskRequest()
-    : SFNRequest(new GetActivityTaskRequestPrivate(SFNRequest::GetActivityTaskAction, this))
+    : SfnRequest(new GetActivityTaskRequestPrivate(SfnRequest::GetActivityTaskAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetActivityTaskRequestPrivate object for SFN \a action,
+ * Constructs a GetActivityTaskRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
-    const SFNRequest::Action action, GetActivityTaskRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, GetActivityTaskRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
     const GetActivityTaskRequestPrivate &other, GetActivityTaskRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

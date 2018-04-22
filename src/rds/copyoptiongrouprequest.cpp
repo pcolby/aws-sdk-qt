@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CopyOptionGroupRequest::CopyOptionGroupRequest(const CopyOptionGroupRequest &other)
-    : RDSRequest(new CopyOptionGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CopyOptionGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CopyOptionGroupRequest::CopyOptionGroupRequest(const CopyOptionGroupRequest &oth
  * Constructs a CopyOptionGroupRequest object.
  */
 CopyOptionGroupRequest::CopyOptionGroupRequest()
-    : RDSRequest(new CopyOptionGroupRequestPrivate(RDSRequest::CopyOptionGroupAction, this))
+    : RdsRequest(new CopyOptionGroupRequestPrivate(RdsRequest::CopyOptionGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a CopyOptionGroupRequestPrivate object for RDS \a action,
+ * Constructs a CopyOptionGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
-    const RDSRequest::Action action, CopyOptionGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CopyOptionGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
     const CopyOptionGroupRequestPrivate &other, CopyOptionGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

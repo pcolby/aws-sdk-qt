@@ -28,10 +28,10 @@ namespace RDS {
 
 class ModifyDBSnapshotRequest;
 
-class QTAWS_EXPORT ModifyDBSnapshotRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT ModifyDBSnapshotRequestPrivate : public RdsRequestPrivate {
 
 public:
-    ModifyDBSnapshotRequestPrivate(const RDSRequest::Action action,
+    ModifyDBSnapshotRequestPrivate(const RdsRequest::Action action,
                                    ModifyDBSnapshotRequest * const q);
     ModifyDBSnapshotRequestPrivate(const ModifyDBSnapshotRequestPrivate &other,
                                    ModifyDBSnapshotRequest * const q);

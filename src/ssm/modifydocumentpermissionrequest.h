@@ -27,7 +27,7 @@ namespace SSM {
 
 class ModifyDocumentPermissionRequestPrivate;
 
-class QTAWS_EXPORT ModifyDocumentPermissionRequest : public SSMRequest {
+class QTAWS_EXPORT ModifyDocumentPermissionRequest : public SsmRequest {
 
 public:
     ModifyDocumentPermissionRequest(const ModifyDocumentPermissionRequest &other);

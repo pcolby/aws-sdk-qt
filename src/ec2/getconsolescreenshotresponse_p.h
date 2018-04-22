@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetConsoleScreenshotResponse;
 
-class QTAWS_EXPORT GetConsoleScreenshotResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT GetConsoleScreenshotResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
-    : ECRRequest(new ListImagesRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new ListImagesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ListImagesRequest::ListImagesRequest(const ListImagesRequest &other)
  * Constructs a ListImagesRequest object.
  */
 ListImagesRequest::ListImagesRequest()
-    : ECRRequest(new ListImagesRequestPrivate(ECRRequest::ListImagesAction, this))
+    : EcrRequest(new ListImagesRequestPrivate(EcrRequest::ListImagesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a ListImagesRequestPrivate object for ECR \a action,
+ * Constructs a ListImagesRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
-    const ECRRequest::Action action, ListImagesRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, ListImagesRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ListImagesRequestPrivate &other, ListImagesRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

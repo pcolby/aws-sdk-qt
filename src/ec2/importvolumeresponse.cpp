@@ -48,7 +48,7 @@ ImportVolumeResponse::ImportVolumeResponse(
         const ImportVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ImportVolumeResponsePrivate(this), parent)
+    : Ec2Response(new ImportVolumeResponsePrivate(this), parent)
 {
     setRequest(new ImportVolumeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ImportVolumeResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportVolumeResponsePrivate object with public implementation \a q.
  */
 ImportVolumeResponsePrivate::ImportVolumeResponsePrivate(
-    ImportVolumeResponse * const q) : EC2ResponsePrivate(q)
+    ImportVolumeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

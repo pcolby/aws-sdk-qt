@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteAssociationRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssociationRequest : public SSMRequest {
+class QTAWS_EXPORT DeleteAssociationRequest : public SsmRequest {
 
 public:
     DeleteAssociationRequest(const DeleteAssociationRequest &other);

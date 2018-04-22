@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeElasticGpusRequest::DescribeElasticGpusRequest(const DescribeElasticGpusRequest &other)
-    : EC2Request(new DescribeElasticGpusRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeElasticGpusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeElasticGpusRequest::DescribeElasticGpusRequest(const DescribeElasticGpus
  * Constructs a DescribeElasticGpusRequest object.
  */
 DescribeElasticGpusRequest::DescribeElasticGpusRequest()
-    : EC2Request(new DescribeElasticGpusRequestPrivate(EC2Request::DescribeElasticGpusAction, this))
+    : Ec2Request(new DescribeElasticGpusRequestPrivate(Ec2Request::DescribeElasticGpusAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeElasticGpusRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeElasticGpusRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
-    const EC2Request::Action action, DescribeElasticGpusRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeElasticGpusRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
     const DescribeElasticGpusRequestPrivate &other, DescribeElasticGpusRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

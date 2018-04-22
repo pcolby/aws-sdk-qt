@@ -28,10 +28,10 @@ namespace IAM {
 
 class AddUserToGroupRequest;
 
-class QTAWS_EXPORT AddUserToGroupRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT AddUserToGroupRequestPrivate : public IamRequestPrivate {
 
 public:
-    AddUserToGroupRequestPrivate(const IAMRequest::Action action,
+    AddUserToGroupRequestPrivate(const IamRequest::Action action,
                                    AddUserToGroupRequest * const q);
     AddUserToGroupRequestPrivate(const AddUserToGroupRequestPrivate &other,
                                    AddUserToGroupRequest * const q);

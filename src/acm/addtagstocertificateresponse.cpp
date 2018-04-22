@@ -53,7 +53,7 @@ AddTagsToCertificateResponse::AddTagsToCertificateResponse(
         const AddTagsToCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new AddTagsToCertificateResponsePrivate(this), parent)
+    : AcmResponse(new AddTagsToCertificateResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToCertificateRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a AddTagsToCertificateResponsePrivate object with public implementation \a q.
  */
 AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
-    AddTagsToCertificateResponse * const q) : ACMResponsePrivate(q)
+    AddTagsToCertificateResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

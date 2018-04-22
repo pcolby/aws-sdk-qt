@@ -143,7 +143,7 @@ CreateKeyResponse::CreateKeyResponse(
         const CreateKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new CreateKeyResponsePrivate(this), parent)
+    : KmsResponse(new CreateKeyResponsePrivate(this), parent)
 {
     setRequest(new CreateKeyRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void CreateKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateKeyResponsePrivate object with public implementation \a q.
  */
 CreateKeyResponsePrivate::CreateKeyResponsePrivate(
-    CreateKeyResponse * const q) : KMSResponsePrivate(q)
+    CreateKeyResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

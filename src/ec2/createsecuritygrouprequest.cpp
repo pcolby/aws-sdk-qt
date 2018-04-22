@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateSecurityGroupRequest::CreateSecurityGroupRequest(const CreateSecurityGroupRequest &other)
-    : EC2Request(new CreateSecurityGroupRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateSecurityGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateSecurityGroupRequest::CreateSecurityGroupRequest(const CreateSecurityGroup
  * Constructs a CreateSecurityGroupRequest object.
  */
 CreateSecurityGroupRequest::CreateSecurityGroupRequest()
-    : EC2Request(new CreateSecurityGroupRequestPrivate(EC2Request::CreateSecurityGroupAction, this))
+    : Ec2Request(new CreateSecurityGroupRequestPrivate(Ec2Request::CreateSecurityGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetwork
  */
 
 /*!
- * Constructs a CreateSecurityGroupRequestPrivate object for EC2 \a action,
+ * Constructs a CreateSecurityGroupRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
-    const EC2Request::Action action, CreateSecurityGroupRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateSecurityGroupRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
     const CreateSecurityGroupRequestPrivate &other, CreateSecurityGroupRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

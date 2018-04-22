@@ -48,7 +48,7 @@ CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateTagsResponsePrivate(this), parent)
+    : Ec2Response(new CreateTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateTagsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateTagsResponsePrivate object with public implementation \a q.
  */
 CreateTagsResponsePrivate::CreateTagsResponsePrivate(
-    CreateTagsResponse * const q) : EC2ResponsePrivate(q)
+    CreateTagsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

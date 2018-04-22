@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest(const SetIdentityNotificationTopicRequest &other)
-    : SESRequest(new SetIdentityNotificationTopicRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SetIdentityNotificationTopicRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest(const S
  * Constructs a SetIdentityNotificationTopicRequest object.
  */
 SetIdentityNotificationTopicRequest::SetIdentityNotificationTopicRequest()
-    : SESRequest(new SetIdentityNotificationTopicRequestPrivate(SESRequest::SetIdentityNotificationTopicAction, this))
+    : SesRequest(new SetIdentityNotificationTopicRequestPrivate(SesRequest::SetIdentityNotificationTopicAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response
  */
 
 /*!
- * Constructs a SetIdentityNotificationTopicRequestPrivate object for SES \a action,
+ * Constructs a SetIdentityNotificationTopicRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
-    const SESRequest::Action action, SetIdentityNotificationTopicRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SetIdentityNotificationTopicRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestP
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
     const SetIdentityNotificationTopicRequestPrivate &other, SetIdentityNotificationTopicRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

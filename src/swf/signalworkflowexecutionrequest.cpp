@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 SignalWorkflowExecutionRequest::SignalWorkflowExecutionRequest(const SignalWorkflowExecutionRequest &other)
-    : SWFRequest(new SignalWorkflowExecutionRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new SignalWorkflowExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ SignalWorkflowExecutionRequest::SignalWorkflowExecutionRequest(const SignalWorkf
  * Constructs a SignalWorkflowExecutionRequest object.
  */
 SignalWorkflowExecutionRequest::SignalWorkflowExecutionRequest()
-    : SWFRequest(new SignalWorkflowExecutionRequestPrivate(SWFRequest::SignalWorkflowExecutionAction, this))
+    : SwfRequest(new SignalWorkflowExecutionRequestPrivate(SwfRequest::SignalWorkflowExecutionAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNet
  */
 
 /*!
- * Constructs a SignalWorkflowExecutionRequestPrivate object for SWF \a action,
+ * Constructs a SignalWorkflowExecutionRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
-    const SWFRequest::Action action, SignalWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, SignalWorkflowExecutionRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
     const SignalWorkflowExecutionRequestPrivate &other, SignalWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

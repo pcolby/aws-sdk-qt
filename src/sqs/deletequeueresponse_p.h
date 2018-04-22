@@ -27,7 +27,7 @@ namespace SQS {
 
 class DeleteQueueResponse;
 
-class QTAWS_EXPORT DeleteQueueResponsePrivate : public SQSResponsePrivate {
+class QTAWS_EXPORT DeleteQueueResponsePrivate : public SqsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest(const DeleteEgressOnlyInternetGatewayRequest &other)
-    : EC2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest(c
  * Constructs a DeleteEgressOnlyInternetGatewayRequest object.
  */
 DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest()
-    : EC2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(EC2Request::DeleteEgressOnlyInternetGatewayAction, this))
+    : Ec2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(Ec2Request::DeleteEgressOnlyInternetGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::respo
  */
 
 /*!
- * Constructs a DeleteEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteEgressOnlyInternetGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
-    const EC2Request::Action action, DeleteEgressOnlyInternetGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteEgressOnlyInternetGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRe
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
     const DeleteEgressOnlyInternetGatewayRequestPrivate &other, DeleteEgressOnlyInternetGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

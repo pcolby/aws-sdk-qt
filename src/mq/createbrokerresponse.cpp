@@ -46,7 +46,7 @@ CreateBrokerResponse::CreateBrokerResponse(
         const CreateBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new CreateBrokerResponsePrivate(this), parent)
+    : MqResponse(new CreateBrokerResponsePrivate(this), parent)
 {
     setRequest(new CreateBrokerRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void CreateBrokerResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateBrokerResponsePrivate object with public implementation \a q.
  */
 CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
-    CreateBrokerResponse * const q) : MQResponsePrivate(q)
+    CreateBrokerResponse * const q) : MqResponsePrivate(q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowsRequest::DescribeMaintenanceWindowsRequest(const DescribeMaintenanceWindowsRequest &other)
-    : SSMRequest(new DescribeMaintenanceWindowsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeMaintenanceWindowsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeMaintenanceWindowsRequest::DescribeMaintenanceWindowsRequest(const Descr
  * Constructs a DescribeMaintenanceWindowsRequest object.
  */
 DescribeMaintenanceWindowsRequest::DescribeMaintenanceWindowsRequest()
-    : SSMRequest(new DescribeMaintenanceWindowsRequestPrivate(SSMRequest::DescribeMaintenanceWindowsAction, this))
+    : SsmRequest(new DescribeMaintenanceWindowsRequestPrivate(SsmRequest::DescribeMaintenanceWindowsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowsRequest::response(Q
  */
 
 /*!
- * Constructs a DescribeMaintenanceWindowsRequestPrivate object for SSM \a action,
+ * Constructs a DescribeMaintenanceWindowsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPrivate(
-    const SSMRequest::Action action, DescribeMaintenanceWindowsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeMaintenanceWindowsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPriva
  */
 DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPrivate(
     const DescribeMaintenanceWindowsRequestPrivate &other, DescribeMaintenanceWindowsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

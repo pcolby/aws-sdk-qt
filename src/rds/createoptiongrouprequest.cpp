@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateOptionGroupRequest::CreateOptionGroupRequest(const CreateOptionGroupRequest &other)
-    : RDSRequest(new CreateOptionGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateOptionGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateOptionGroupRequest::CreateOptionGroupRequest(const CreateOptionGroupReques
  * Constructs a CreateOptionGroupRequest object.
  */
 CreateOptionGroupRequest::CreateOptionGroupRequest()
-    : RDSRequest(new CreateOptionGroupRequestPrivate(RDSRequest::CreateOptionGroupAction, this))
+    : RdsRequest(new CreateOptionGroupRequestPrivate(RdsRequest::CreateOptionGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a CreateOptionGroupRequestPrivate object for RDS \a action,
+ * Constructs a CreateOptionGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
-    const RDSRequest::Action action, CreateOptionGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateOptionGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
     const CreateOptionGroupRequestPrivate &other, CreateOptionGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

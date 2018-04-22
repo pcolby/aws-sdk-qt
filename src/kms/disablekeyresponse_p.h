@@ -27,7 +27,7 @@ namespace KMS {
 
 class DisableKeyResponse;
 
-class QTAWS_EXPORT DisableKeyResponsePrivate : public KMSResponsePrivate {
+class QTAWS_EXPORT DisableKeyResponsePrivate : public KmsResponsePrivate {
     Q_OBJECT
 
 public:

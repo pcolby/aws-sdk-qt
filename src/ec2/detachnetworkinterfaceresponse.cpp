@@ -48,7 +48,7 @@ DetachNetworkInterfaceResponse::DetachNetworkInterfaceResponse(
         const DetachNetworkInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachNetworkInterfaceResponsePrivate(this), parent)
+    : Ec2Response(new DetachNetworkInterfaceResponsePrivate(this), parent)
 {
     setRequest(new DetachNetworkInterfaceRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DetachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
  * Constructs a DetachNetworkInterfaceResponsePrivate object with public implementation \a q.
  */
 DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponsePrivate(
-    DetachNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
+    DetachNetworkInterfaceResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace FMS {
 
 class AssociateAdminAccountRequest;
 
-class QTAWS_EXPORT AssociateAdminAccountRequestPrivate : public FMSRequestPrivate {
+class QTAWS_EXPORT AssociateAdminAccountRequestPrivate : public FmsRequestPrivate {
 
 public:
-    AssociateAdminAccountRequestPrivate(const FMSRequest::Action action,
+    AssociateAdminAccountRequestPrivate(const FmsRequest::Action action,
                                    AssociateAdminAccountRequest * const q);
     AssociateAdminAccountRequestPrivate(const AssociateAdminAccountRequestPrivate &other,
                                    AssociateAdminAccountRequest * const q);

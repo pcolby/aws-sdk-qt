@@ -102,7 +102,8 @@ int Generator::generate(const QString &serviceFileName,
 
     Grantlee::Context context(description.toVariantHash());
     context.insert(QSL("ServiceName"), serviceName);
-    context.insert(QSL("TargetLibName"), serviceFileName);
+    context.insert(QSL("ServiceClassName"), serviceClassName);
+    context.insert(QSL("TargetLibName"), serviceFileName); /// @todo Use ModuleName?
     context.insert(QSL("NameSpaceName"), serviceName);
     context.insert(QSL("ClassDocumentation"),
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));

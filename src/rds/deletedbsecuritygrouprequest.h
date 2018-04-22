@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteDBSecurityGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBSecurityGroupRequest : public RDSRequest {
+class QTAWS_EXPORT DeleteDBSecurityGroupRequest : public RdsRequest {
 
 public:
     DeleteDBSecurityGroupRequest(const DeleteDBSecurityGroupRequest &other);

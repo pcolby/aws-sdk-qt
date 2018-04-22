@@ -28,10 +28,10 @@ namespace SSM {
 
 class SendCommandRequest;
 
-class QTAWS_EXPORT SendCommandRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT SendCommandRequestPrivate : public SsmRequestPrivate {
 
 public:
-    SendCommandRequestPrivate(const SSMRequest::Action action,
+    SendCommandRequestPrivate(const SsmRequest::Action action,
                                    SendCommandRequest * const q);
     SendCommandRequestPrivate(const SendCommandRequestPrivate &other,
                                    SendCommandRequest * const q);

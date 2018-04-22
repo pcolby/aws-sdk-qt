@@ -68,7 +68,7 @@ DeleteParametersResponse::DeleteParametersResponse(
         const DeleteParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteParametersResponsePrivate(this), parent)
+    : SsmResponse(new DeleteParametersResponsePrivate(this), parent)
 {
     setRequest(new DeleteParametersRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteParametersResponsePrivate object with public implementation \a q.
  */
 DeleteParametersResponsePrivate::DeleteParametersResponsePrivate(
-    DeleteParametersResponse * const q) : SSMResponsePrivate(q)
+    DeleteParametersResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

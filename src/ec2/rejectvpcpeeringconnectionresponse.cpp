@@ -48,7 +48,7 @@ RejectVpcPeeringConnectionResponse::RejectVpcPeeringConnectionResponse(
         const RejectVpcPeeringConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RejectVpcPeeringConnectionResponsePrivate(this), parent)
+    : Ec2Response(new RejectVpcPeeringConnectionResponsePrivate(this), parent)
 {
     setRequest(new RejectVpcPeeringConnectionRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RejectVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
  * Constructs a RejectVpcPeeringConnectionResponsePrivate object with public implementation \a q.
  */
 RejectVpcPeeringConnectionResponsePrivate::RejectVpcPeeringConnectionResponsePrivate(
-    RejectVpcPeeringConnectionResponse * const q) : EC2ResponsePrivate(q)
+    RejectVpcPeeringConnectionResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

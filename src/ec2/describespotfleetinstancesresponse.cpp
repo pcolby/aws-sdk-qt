@@ -48,7 +48,7 @@ DescribeSpotFleetInstancesResponse::DescribeSpotFleetInstancesResponse(
         const DescribeSpotFleetInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSpotFleetInstancesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSpotFleetInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotFleetInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSpotFleetInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSpotFleetInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeSpotFleetInstancesResponsePrivate::DescribeSpotFleetInstancesResponsePrivate(
-    DescribeSpotFleetInstancesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSpotFleetInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

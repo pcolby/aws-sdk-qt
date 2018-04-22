@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
-    : IAMRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
  * Constructs a GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
-    : IAMRequest(new GetPolicyRequestPrivate(IAMRequest::GetPolicyAction, this))
+    : IamRequest(new GetPolicyRequestPrivate(IamRequest::GetPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a GetPolicyRequestPrivate object for IAM \a action,
+ * Constructs a GetPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
-    const IAMRequest::Action action, GetPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const GetPolicyRequestPrivate &other, GetPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

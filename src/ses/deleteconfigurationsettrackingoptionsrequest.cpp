@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOptionsRequest(const DeleteConfigurationSetTrackingOptionsRequest &other)
-    : SESRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOpti
  * Constructs a DeleteConfigurationSetTrackingOptionsRequest object.
  */
 DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOptionsRequest()
-    : SESRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(SESRequest::DeleteConfigurationSetTrackingOptionsAction, this))
+    : SesRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(SesRequest::DeleteConfigurationSetTrackingOptionsAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest:
  */
 
 /*!
- * Constructs a DeleteConfigurationSetTrackingOptionsRequestPrivate object for SES \a action,
+ * Constructs a DeleteConfigurationSetTrackingOptionsRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
-    const SESRequest::Action action, DeleteConfigurationSetTrackingOptionsRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteConfigurationSetTrackingOptionsRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrack
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
     const DeleteConfigurationSetTrackingOptionsRequestPrivate &other, DeleteConfigurationSetTrackingOptionsRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

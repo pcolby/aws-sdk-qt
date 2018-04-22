@@ -55,7 +55,7 @@ DeleteCustomVerificationEmailTemplateResponse::DeleteCustomVerificationEmailTemp
         const DeleteCustomVerificationEmailTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteCustomVerificationEmailTemplateResponsePrivate(this), parent)
+    : SesResponse(new DeleteCustomVerificationEmailTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteCustomVerificationEmailTemplateRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &resp
  * Constructs a DeleteCustomVerificationEmailTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificationEmailTemplateResponsePrivate(
-    DeleteCustomVerificationEmailTemplateResponse * const q) : SESResponsePrivate(q)
+    DeleteCustomVerificationEmailTemplateResponse * const q) : SesResponsePrivate(q)
 {
 
 }

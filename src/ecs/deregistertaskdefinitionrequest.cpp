@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest(const DeregisterTaskDefinitionRequest &other)
-    : ECSRequest(new DeregisterTaskDefinitionRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DeregisterTaskDefinitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest(const Deregiste
  * Constructs a DeregisterTaskDefinitionRequest object.
  */
 DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest()
-    : ECSRequest(new DeregisterTaskDefinitionRequestPrivate(ECSRequest::DeregisterTaskDefinitionAction, this))
+    : EcsRequest(new DeregisterTaskDefinitionRequestPrivate(EcsRequest::DeregisterTaskDefinitionAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNe
  */
 
 /*!
- * Constructs a DeregisterTaskDefinitionRequestPrivate object for ECS \a action,
+ * Constructs a DeregisterTaskDefinitionRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
-    const ECSRequest::Action action, DeregisterTaskDefinitionRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DeregisterTaskDefinitionRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
     const DeregisterTaskDefinitionRequestPrivate &other, DeregisterTaskDefinitionRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

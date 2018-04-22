@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 SimulateCustomPolicyRequest::SimulateCustomPolicyRequest(const SimulateCustomPolicyRequest &other)
-    : IAMRequest(new SimulateCustomPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new SimulateCustomPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ SimulateCustomPolicyRequest::SimulateCustomPolicyRequest(const SimulateCustomPol
  * Constructs a SimulateCustomPolicyRequest object.
  */
 SimulateCustomPolicyRequest::SimulateCustomPolicyRequest()
-    : IAMRequest(new SimulateCustomPolicyRequestPrivate(IAMRequest::SimulateCustomPolicyAction, this))
+    : IamRequest(new SimulateCustomPolicyRequestPrivate(IamRequest::SimulateCustomPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetwor
  */
 
 /*!
- * Constructs a SimulateCustomPolicyRequestPrivate object for IAM \a action,
+ * Constructs a SimulateCustomPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
-    const IAMRequest::Action action, SimulateCustomPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, SimulateCustomPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
     const SimulateCustomPolicyRequestPrivate &other, SimulateCustomPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

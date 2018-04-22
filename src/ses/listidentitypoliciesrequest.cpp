@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 ListIdentityPoliciesRequest::ListIdentityPoliciesRequest(const ListIdentityPoliciesRequest &other)
-    : SESRequest(new ListIdentityPoliciesRequestPrivate(*other.d_func(), this))
+    : SesRequest(new ListIdentityPoliciesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ListIdentityPoliciesRequest::ListIdentityPoliciesRequest(const ListIdentityPolic
  * Constructs a ListIdentityPoliciesRequest object.
  */
 ListIdentityPoliciesRequest::ListIdentityPoliciesRequest()
-    : SESRequest(new ListIdentityPoliciesRequestPrivate(SESRequest::ListIdentityPoliciesAction, this))
+    : SesRequest(new ListIdentityPoliciesRequestPrivate(SesRequest::ListIdentityPoliciesAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListIdentityPoliciesRequestPrivate object for SES \a action,
+ * Constructs a ListIdentityPoliciesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
-    const SESRequest::Action action, ListIdentityPoliciesRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, ListIdentityPoliciesRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
  */
 ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
     const ListIdentityPoliciesRequestPrivate &other, ListIdentityPoliciesRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

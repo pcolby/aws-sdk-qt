@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
-    : ECSRequest(new DeleteClusterRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DeleteClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
  * Constructs a DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
-    : ECSRequest(new DeleteClusterRequestPrivate(ECSRequest::DeleteClusterAction, this))
+    : EcsRequest(new DeleteClusterRequestPrivate(EcsRequest::DeleteClusterAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a DeleteClusterRequestPrivate object for ECS \a action,
+ * Constructs a DeleteClusterRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
-    const ECSRequest::Action action, DeleteClusterRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DeleteClusterRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

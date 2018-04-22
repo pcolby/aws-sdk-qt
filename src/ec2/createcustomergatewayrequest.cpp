@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateCustomerGatewayRequest::CreateCustomerGatewayRequest(const CreateCustomerGatewayRequest &other)
-    : EC2Request(new CreateCustomerGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateCustomerGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateCustomerGatewayRequest::CreateCustomerGatewayRequest(const CreateCustomerG
  * Constructs a CreateCustomerGatewayRequest object.
  */
 CreateCustomerGatewayRequest::CreateCustomerGatewayRequest()
-    : EC2Request(new CreateCustomerGatewayRequestPrivate(EC2Request::CreateCustomerGatewayAction, this))
+    : Ec2Request(new CreateCustomerGatewayRequestPrivate(Ec2Request::CreateCustomerGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetwo
  */
 
 /*!
- * Constructs a CreateCustomerGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a CreateCustomerGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
-    const EC2Request::Action action, CreateCustomerGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateCustomerGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
     const CreateCustomerGatewayRequestPrivate &other, CreateCustomerGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

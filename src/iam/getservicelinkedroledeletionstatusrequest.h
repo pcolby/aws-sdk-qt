@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetServiceLinkedRoleDeletionStatusRequestPrivate;
 
-class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusRequest : public IAMRequest {
+class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusRequest : public IamRequest {
 
 public:
     GetServiceLinkedRoleDeletionStatusRequest(const GetServiceLinkedRoleDeletionStatusRequest &other);

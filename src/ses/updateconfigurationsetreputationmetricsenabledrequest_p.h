@@ -28,10 +28,10 @@ namespace SES {
 
 class UpdateConfigurationSetReputationMetricsEnabledRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SesRequestPrivate {
 
 public:
-    UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SESRequest::Action action,
+    UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SesRequest::Action action,
                                    UpdateConfigurationSetReputationMetricsEnabledRequest * const q);
     UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other,
                                    UpdateConfigurationSetReputationMetricsEnabledRequest * const q);

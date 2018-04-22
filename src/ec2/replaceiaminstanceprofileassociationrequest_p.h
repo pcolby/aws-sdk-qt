@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ReplaceIamInstanceProfileAssociationRequest;
 
-class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ReplaceIamInstanceProfileAssociationRequestPrivate(const EC2Request::Action action,
+    ReplaceIamInstanceProfileAssociationRequestPrivate(const Ec2Request::Action action,
                                    ReplaceIamInstanceProfileAssociationRequest * const q);
     ReplaceIamInstanceProfileAssociationRequestPrivate(const ReplaceIamInstanceProfileAssociationRequestPrivate &other,
                                    ReplaceIamInstanceProfileAssociationRequest * const q);

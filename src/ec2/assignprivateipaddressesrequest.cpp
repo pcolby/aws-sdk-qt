@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest(const AssignPrivateIpAddressesRequest &other)
-    : EC2Request(new AssignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest(const AssignPri
  * Constructs a AssignPrivateIpAddressesRequest object.
  */
 AssignPrivateIpAddressesRequest::AssignPrivateIpAddressesRequest()
-    : EC2Request(new AssignPrivateIpAddressesRequestPrivate(EC2Request::AssignPrivateIpAddressesAction, this))
+    : Ec2Request(new AssignPrivateIpAddressesRequestPrivate(Ec2Request::AssignPrivateIpAddressesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNe
  */
 
 /*!
- * Constructs a AssignPrivateIpAddressesRequestPrivate object for EC2 \a action,
+ * Constructs a AssignPrivateIpAddressesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
-    const EC2Request::Action action, AssignPrivateIpAddressesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssignPrivateIpAddressesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
     const AssignPrivateIpAddressesRequestPrivate &other, AssignPrivateIpAddressesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

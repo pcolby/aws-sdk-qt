@@ -28,7 +28,7 @@ namespace EC2 {
 
 class UnassignPrivateIpAddressesResponsePrivate;
 
-class QTAWS_EXPORT UnassignPrivateIpAddressesResponse : public EC2Response {
+class QTAWS_EXPORT UnassignPrivateIpAddressesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

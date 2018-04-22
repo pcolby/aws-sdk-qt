@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListResourceComplianceSummariesRequest::ListResourceComplianceSummariesRequest(const ListResourceComplianceSummariesRequest &other)
-    : SSMRequest(new ListResourceComplianceSummariesRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListResourceComplianceSummariesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListResourceComplianceSummariesRequest::ListResourceComplianceSummariesRequest(c
  * Constructs a ListResourceComplianceSummariesRequest object.
  */
 ListResourceComplianceSummariesRequest::ListResourceComplianceSummariesRequest()
-    : SSMRequest(new ListResourceComplianceSummariesRequestPrivate(SSMRequest::ListResourceComplianceSummariesAction, this))
+    : SsmRequest(new ListResourceComplianceSummariesRequestPrivate(SsmRequest::ListResourceComplianceSummariesAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListResourceComplianceSummariesRequest::respo
  */
 
 /*!
- * Constructs a ListResourceComplianceSummariesRequestPrivate object for SSM \a action,
+ * Constructs a ListResourceComplianceSummariesRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
-    const SSMRequest::Action action, ListResourceComplianceSummariesRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListResourceComplianceSummariesRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRe
  */
 ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
     const ListResourceComplianceSummariesRequestPrivate &other, ListResourceComplianceSummariesRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetUserRequest::GetUserRequest(const GetUserRequest &other)
-    : IAMRequest(new GetUserRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetUserRequest::GetUserRequest(const GetUserRequest &other)
  * Constructs a GetUserRequest object.
  */
 GetUserRequest::GetUserRequest()
-    : IAMRequest(new GetUserRequestPrivate(IAMRequest::GetUserAction, this))
+    : IamRequest(new GetUserRequestPrivate(IamRequest::GetUserAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
  */
 
 /*!
- * Constructs a GetUserRequestPrivate object for IAM \a action,
+ * Constructs a GetUserRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
-    const IAMRequest::Action action, GetUserRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetUserRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetUserRequestPrivate::GetUserRequestPrivate(
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const GetUserRequestPrivate &other, GetUserRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DeleteFileSystemRequest::DeleteFileSystemRequest(const DeleteFileSystemRequest &other)
-    : EFSRequest(new DeleteFileSystemRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DeleteFileSystemRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DeleteFileSystemRequest::DeleteFileSystemRequest(const DeleteFileSystemRequest &
  * Constructs a DeleteFileSystemRequest object.
  */
 DeleteFileSystemRequest::DeleteFileSystemRequest()
-    : EFSRequest(new DeleteFileSystemRequestPrivate(EFSRequest::DeleteFileSystemAction, this))
+    : EfsRequest(new DeleteFileSystemRequestPrivate(EfsRequest::DeleteFileSystemAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteFileSystemRequestPrivate object for EFS \a action,
+ * Constructs a DeleteFileSystemRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
-    const EFSRequest::Action action, DeleteFileSystemRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DeleteFileSystemRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
     const DeleteFileSystemRequestPrivate &other, DeleteFileSystemRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

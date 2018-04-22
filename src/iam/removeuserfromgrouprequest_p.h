@@ -28,10 +28,10 @@ namespace IAM {
 
 class RemoveUserFromGroupRequest;
 
-class QTAWS_EXPORT RemoveUserFromGroupRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT RemoveUserFromGroupRequestPrivate : public IamRequestPrivate {
 
 public:
-    RemoveUserFromGroupRequestPrivate(const IAMRequest::Action action,
+    RemoveUserFromGroupRequestPrivate(const IamRequest::Action action,
                                    RemoveUserFromGroupRequest * const q);
     RemoveUserFromGroupRequestPrivate(const RemoveUserFromGroupRequestPrivate &other,
                                    RemoveUserFromGroupRequest * const q);

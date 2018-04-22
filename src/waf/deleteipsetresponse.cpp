@@ -49,7 +49,7 @@ DeleteIPSetResponse::DeleteIPSetResponse(
         const DeleteIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteIPSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteIPSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteIPSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteIPSetResponsePrivate object with public implementation \a q.
  */
 DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
-    DeleteIPSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteIPSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

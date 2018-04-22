@@ -24,7 +24,7 @@ namespace {{NameSpaceName}} {
  * Constructs a copy of \a other.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
-    : {{ServiceName}}Request(new {{ClassName}}Private(*other.d_func(), this))
+    : {{ServiceClassName}}Request(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
@@ -33,7 +33,7 @@ namespace {{NameSpaceName}} {
  * Constructs a {{ClassName}} object.
  */
 {{ClassName}}::{{ClassName}}()
-    : {{ServiceName}}Request(new {{ClassName}}Private({{ServiceName}}Request::{{OperationName}}Action, this))
+    : {{ServiceClassName}}Request(new {{ClassName}}Private({{ServiceClassName}}Request::{{OperationName}}Action, this))
 {
 
 }
@@ -67,12 +67,12 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 
 /*!
- * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action,
+ * Constructs a {{ClassName}}Private object for {{ServiceClassName}} \a action,
  * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    const {{ServiceName}}Request::Action action, {{ClassName}} * const q)
-    : {{ServiceName}}RequestPrivate(action, q)
+    const {{ServiceClassName}}Request::Action action, {{ClassName}} * const q)
+    : {{ServiceClassName}}RequestPrivate(action, q)
 {
 
 }
@@ -85,7 +85,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ClassName}}Private &other, {{ClassName}} * const q)
-    : {{ServiceName}}RequestPrivate(other, q)
+    : {{ServiceClassName}}RequestPrivate(other, q)
 {
 
 }

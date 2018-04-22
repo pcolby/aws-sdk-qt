@@ -48,7 +48,7 @@ CancelReservedInstancesListingResponse::CancelReservedInstancesListingResponse(
         const CancelReservedInstancesListingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelReservedInstancesListingResponsePrivate(this), parent)
+    : Ec2Response(new CancelReservedInstancesListingResponsePrivate(this), parent)
 {
     setRequest(new CancelReservedInstancesListingRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CancelReservedInstancesListingResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelReservedInstancesListingResponsePrivate object with public implementation \a q.
  */
 CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingResponsePrivate(
-    CancelReservedInstancesListingResponse * const q) : EC2ResponsePrivate(q)
+    CancelReservedInstancesListingResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

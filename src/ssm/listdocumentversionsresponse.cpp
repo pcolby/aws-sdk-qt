@@ -68,7 +68,7 @@ ListDocumentVersionsResponse::ListDocumentVersionsResponse(
         const ListDocumentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListDocumentVersionsResponsePrivate(this), parent)
+    : SsmResponse(new ListDocumentVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListDocumentVersionsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ListDocumentVersionsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListDocumentVersionsResponsePrivate object with public implementation \a q.
  */
 ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponsePrivate(
-    ListDocumentVersionsResponse * const q) : SSMResponsePrivate(q)
+    ListDocumentVersionsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

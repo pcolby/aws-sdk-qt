@@ -49,7 +49,7 @@ ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
         const ListRegexPatternSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
+    : WafResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
 {
     setRequest(new ListRegexPatternSetsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListRegexPatternSetsResponsePrivate object with public implementation \a q.
  */
 ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
-    ListRegexPatternSetsResponse * const q) : WAFResponsePrivate(q)
+    ListRegexPatternSetsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

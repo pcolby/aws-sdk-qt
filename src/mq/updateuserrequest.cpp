@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
-    : MQRequest(new UpdateUserRequestPrivate(*other.d_func(), this))
+    : MqRequest(new UpdateUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
  * Constructs a UpdateUserRequest object.
  */
 UpdateUserRequest::UpdateUserRequest()
-    : MQRequest(new UpdateUserRequestPrivate(MQRequest::UpdateUserAction, this))
+    : MqRequest(new UpdateUserRequestPrivate(MqRequest::UpdateUserAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a UpdateUserRequestPrivate object for MQ \a action,
+ * Constructs a UpdateUserRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
-    const MQRequest::Action action, UpdateUserRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, UpdateUserRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const UpdateUserRequestPrivate &other, UpdateUserRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

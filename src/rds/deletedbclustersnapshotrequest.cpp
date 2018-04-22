@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest(const DeleteDBClusterSnapshotRequest &other)
-    : RDSRequest(new DeleteDBClusterSnapshotRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteDBClusterSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest(const DeleteDBClu
  * Constructs a DeleteDBClusterSnapshotRequest object.
  */
 DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest()
-    : RDSRequest(new DeleteDBClusterSnapshotRequestPrivate(RDSRequest::DeleteDBClusterSnapshotAction, this))
+    : RdsRequest(new DeleteDBClusterSnapshotRequestPrivate(RdsRequest::DeleteDBClusterSnapshotAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterSnapshotRequest::response(QNet
  */
 
 /*!
- * Constructs a DeleteDBClusterSnapshotRequestPrivate object for RDS \a action,
+ * Constructs a DeleteDBClusterSnapshotRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
-    const RDSRequest::Action action, DeleteDBClusterSnapshotRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteDBClusterSnapshotRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
  */
 DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
     const DeleteDBClusterSnapshotRequestPrivate &other, DeleteDBClusterSnapshotRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -68,7 +68,7 @@ GetMaintenanceWindowResponse::GetMaintenanceWindowResponse(
         const GetMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetMaintenanceWindowResponsePrivate(this), parent)
+    : SsmResponse(new GetMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new GetMaintenanceWindowRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetMaintenanceWindowResponse::parseSuccess(QIODevice &response)
  * Constructs a GetMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 GetMaintenanceWindowResponsePrivate::GetMaintenanceWindowResponsePrivate(
-    GetMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
+    GetMaintenanceWindowResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

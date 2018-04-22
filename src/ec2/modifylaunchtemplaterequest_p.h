@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifyLaunchTemplateRequest;
 
-class QTAWS_EXPORT ModifyLaunchTemplateRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifyLaunchTemplateRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifyLaunchTemplateRequestPrivate(const EC2Request::Action action,
+    ModifyLaunchTemplateRequestPrivate(const Ec2Request::Action action,
                                    ModifyLaunchTemplateRequest * const q);
     ModifyLaunchTemplateRequestPrivate(const ModifyLaunchTemplateRequestPrivate &other,
                                    ModifyLaunchTemplateRequest * const q);

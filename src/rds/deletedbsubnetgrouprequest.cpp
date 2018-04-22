@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroupRequest &other)
-    : RDSRequest(new DeleteDBSubnetGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteDBSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroup
  * Constructs a DeleteDBSubnetGroupRequest object.
  */
 DeleteDBSubnetGroupRequest::DeleteDBSubnetGroupRequest()
-    : RDSRequest(new DeleteDBSubnetGroupRequestPrivate(RDSRequest::DeleteDBSubnetGroupAction, this))
+    : RdsRequest(new DeleteDBSubnetGroupRequestPrivate(RdsRequest::DeleteDBSubnetGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeleteDBSubnetGroupRequestPrivate object for RDS \a action,
+ * Constructs a DeleteDBSubnetGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
-    const RDSRequest::Action action, DeleteDBSubnetGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteDBSubnetGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const DeleteDBSubnetGroupRequestPrivate &other, DeleteDBSubnetGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

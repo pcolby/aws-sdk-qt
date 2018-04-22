@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 CreateAssociationBatchRequest::CreateAssociationBatchRequest(const CreateAssociationBatchRequest &other)
-    : SSMRequest(new CreateAssociationBatchRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new CreateAssociationBatchRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ CreateAssociationBatchRequest::CreateAssociationBatchRequest(const CreateAssocia
  * Constructs a CreateAssociationBatchRequest object.
  */
 CreateAssociationBatchRequest::CreateAssociationBatchRequest()
-    : SSMRequest(new CreateAssociationBatchRequestPrivate(SSMRequest::CreateAssociationBatchAction, this))
+    : SsmRequest(new CreateAssociationBatchRequestPrivate(SsmRequest::CreateAssociationBatchAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * CreateAssociationBatchRequest::response(QNetw
  */
 
 /*!
- * Constructs a CreateAssociationBatchRequestPrivate object for SSM \a action,
+ * Constructs a CreateAssociationBatchRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
-    const SSMRequest::Action action, CreateAssociationBatchRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, CreateAssociationBatchRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
     const CreateAssociationBatchRequestPrivate &other, CreateAssociationBatchRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

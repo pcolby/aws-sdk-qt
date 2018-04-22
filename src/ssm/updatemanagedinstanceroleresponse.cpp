@@ -68,7 +68,7 @@ UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
         const UpdateManagedInstanceRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateManagedInstanceRoleResponsePrivate(this), parent)
+    : SsmResponse(new UpdateManagedInstanceRoleResponsePrivate(this), parent)
 {
     setRequest(new UpdateManagedInstanceRoleRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void UpdateManagedInstanceRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateManagedInstanceRoleResponsePrivate object with public implementation \a q.
  */
 UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponsePrivate(
-    UpdateManagedInstanceRoleResponse * const q) : SSMResponsePrivate(q)
+    UpdateManagedInstanceRoleResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

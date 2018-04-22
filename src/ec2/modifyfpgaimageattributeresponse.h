@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyFpgaImageAttributeResponsePrivate;
 
-class QTAWS_EXPORT ModifyFpgaImageAttributeResponse : public EC2Response {
+class QTAWS_EXPORT ModifyFpgaImageAttributeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

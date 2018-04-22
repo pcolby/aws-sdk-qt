@@ -28,10 +28,10 @@ namespace KMS {
 
 class DeleteAliasRequest;
 
-class QTAWS_EXPORT DeleteAliasRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT DeleteAliasRequestPrivate : public KmsRequestPrivate {
 
 public:
-    DeleteAliasRequestPrivate(const KMSRequest::Action action,
+    DeleteAliasRequestPrivate(const KmsRequest::Action action,
                                    DeleteAliasRequest * const q);
     DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
                                    DeleteAliasRequest * const q);

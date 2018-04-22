@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 CreateGrantRequest::CreateGrantRequest(const CreateGrantRequest &other)
-    : KMSRequest(new CreateGrantRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new CreateGrantRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ CreateGrantRequest::CreateGrantRequest(const CreateGrantRequest &other)
  * Constructs a CreateGrantRequest object.
  */
 CreateGrantRequest::CreateGrantRequest()
-    : KMSRequest(new CreateGrantRequestPrivate(KMSRequest::CreateGrantAction, this))
+    : KmsRequest(new CreateGrantRequestPrivate(KmsRequest::CreateGrantAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * CreateGrantRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CreateGrantRequestPrivate object for KMS \a action,
+ * Constructs a CreateGrantRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
-    const KMSRequest::Action action, CreateGrantRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, CreateGrantRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ CreateGrantRequestPrivate::CreateGrantRequestPrivate(
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
     const CreateGrantRequestPrivate &other, CreateGrantRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

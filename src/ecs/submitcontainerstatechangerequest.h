@@ -27,7 +27,7 @@ namespace ECS {
 
 class SubmitContainerStateChangeRequestPrivate;
 
-class QTAWS_EXPORT SubmitContainerStateChangeRequest : public ECSRequest {
+class QTAWS_EXPORT SubmitContainerStateChangeRequest : public EcsRequest {
 
 public:
     SubmitContainerStateChangeRequest(const SubmitContainerStateChangeRequest &other);

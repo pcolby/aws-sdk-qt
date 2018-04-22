@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest(const DescribeInstanceAttributeRequest &other)
-    : EC2Request(new DescribeInstanceAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeInstanceAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest(const Describ
  * Constructs a DescribeInstanceAttributeRequest object.
  */
 DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest()
-    : EC2Request(new DescribeInstanceAttributeRequestPrivate(EC2Request::DescribeInstanceAttributeAction, this))
+    : Ec2Request(new DescribeInstanceAttributeRequestPrivate(Ec2Request::DescribeInstanceAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeInstanceAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeInstanceAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
-    const EC2Request::Action action, DescribeInstanceAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeInstanceAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
     const DescribeInstanceAttributeRequestPrivate &other, DescribeInstanceAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

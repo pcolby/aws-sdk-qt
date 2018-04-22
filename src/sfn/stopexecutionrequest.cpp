@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 StopExecutionRequest::StopExecutionRequest(const StopExecutionRequest &other)
-    : SFNRequest(new StopExecutionRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new StopExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ StopExecutionRequest::StopExecutionRequest(const StopExecutionRequest &other)
  * Constructs a StopExecutionRequest object.
  */
 StopExecutionRequest::StopExecutionRequest()
-    : SFNRequest(new StopExecutionRequestPrivate(SFNRequest::StopExecutionAction, this))
+    : SfnRequest(new StopExecutionRequestPrivate(SfnRequest::StopExecutionAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a StopExecutionRequestPrivate object for SFN \a action,
+ * Constructs a StopExecutionRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 StopExecutionRequestPrivate::StopExecutionRequestPrivate(
-    const SFNRequest::Action action, StopExecutionRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, StopExecutionRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ StopExecutionRequestPrivate::StopExecutionRequestPrivate(
  */
 StopExecutionRequestPrivate::StopExecutionRequestPrivate(
     const StopExecutionRequestPrivate &other, StopExecutionRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace ECS {
 
 class CreateServiceRequestPrivate;
 
-class QTAWS_EXPORT CreateServiceRequest : public ECSRequest {
+class QTAWS_EXPORT CreateServiceRequest : public EcsRequest {
 
 public:
     CreateServiceRequest(const CreateServiceRequest &other);

@@ -44,7 +44,7 @@ GetConnectorsResponse::GetConnectorsResponse(
         const GetConnectorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new GetConnectorsResponsePrivate(this), parent)
+    : SmsResponse(new GetConnectorsResponsePrivate(this), parent)
 {
     setRequest(new GetConnectorsRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void GetConnectorsResponse::parseSuccess(QIODevice &response)
  * Constructs a GetConnectorsResponsePrivate object with public implementation \a q.
  */
 GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
-    GetConnectorsResponse * const q) : SMSResponsePrivate(q)
+    GetConnectorsResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

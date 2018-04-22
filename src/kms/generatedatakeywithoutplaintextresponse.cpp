@@ -143,7 +143,7 @@ GenerateDataKeyWithoutPlaintextResponse::GenerateDataKeyWithoutPlaintextResponse
         const GenerateDataKeyWithoutPlaintextRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GenerateDataKeyWithoutPlaintextResponsePrivate(this), parent)
+    : KmsResponse(new GenerateDataKeyWithoutPlaintextResponsePrivate(this), parent)
 {
     setRequest(new GenerateDataKeyWithoutPlaintextRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void GenerateDataKeyWithoutPlaintextResponse::parseSuccess(QIODevice &response)
  * Constructs a GenerateDataKeyWithoutPlaintextResponsePrivate object with public implementation \a q.
  */
 GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextResponsePrivate(
-    GenerateDataKeyWithoutPlaintextResponse * const q) : KMSResponsePrivate(q)
+    GenerateDataKeyWithoutPlaintextResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

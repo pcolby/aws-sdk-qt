@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RegisterDomainRequest::RegisterDomainRequest(const RegisterDomainRequest &other)
-    : SWFRequest(new RegisterDomainRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RegisterDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RegisterDomainRequest::RegisterDomainRequest(const RegisterDomainRequest &other)
  * Constructs a RegisterDomainRequest object.
  */
 RegisterDomainRequest::RegisterDomainRequest()
-    : SWFRequest(new RegisterDomainRequestPrivate(SWFRequest::RegisterDomainAction, this))
+    : SwfRequest(new RegisterDomainRequestPrivate(SwfRequest::RegisterDomainAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a RegisterDomainRequestPrivate object for SWF \a action,
+ * Constructs a RegisterDomainRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
-    const SWFRequest::Action action, RegisterDomainRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RegisterDomainRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const RegisterDomainRequestPrivate &other, RegisterDomainRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

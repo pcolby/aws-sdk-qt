@@ -109,7 +109,7 @@ CreatePolicyVersionResponse::CreatePolicyVersionResponse(
         const CreatePolicyVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreatePolicyVersionResponsePrivate(this), parent)
+    : IamResponse(new CreatePolicyVersionResponsePrivate(this), parent)
 {
     setRequest(new CreatePolicyVersionRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
  * Constructs a CreatePolicyVersionResponsePrivate object with public implementation \a q.
  */
 CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
-    CreatePolicyVersionResponse * const q) : IAMResponsePrivate(q)
+    CreatePolicyVersionResponse * const q) : IamResponsePrivate(q)
 {
 
 }

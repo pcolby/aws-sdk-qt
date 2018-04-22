@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RevokeSecurityGroupIngressRequestPrivate;
 
-class QTAWS_EXPORT RevokeSecurityGroupIngressRequest : public EC2Request {
+class QTAWS_EXPORT RevokeSecurityGroupIngressRequest : public Ec2Request {
 
 public:
     RevokeSecurityGroupIngressRequest(const RevokeSecurityGroupIngressRequest &other);

@@ -58,7 +58,7 @@ DeleteTopicResponse::DeleteTopicResponse(
         const DeleteTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new DeleteTopicResponsePrivate(this), parent)
+    : SnsResponse(new DeleteTopicResponsePrivate(this), parent)
 {
     setRequest(new DeleteTopicRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void DeleteTopicResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteTopicResponsePrivate object with public implementation \a q.
  */
 DeleteTopicResponsePrivate::DeleteTopicResponsePrivate(
-    DeleteTopicResponse * const q) : SNSResponsePrivate(q)
+    DeleteTopicResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

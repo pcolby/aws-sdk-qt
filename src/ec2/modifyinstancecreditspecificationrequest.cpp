@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationRequest(const ModifyInstanceCreditSpecificationRequest &other)
-    : EC2Request(new ModifyInstanceCreditSpecificationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyInstanceCreditSpecificationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationReque
  * Constructs a ModifyInstanceCreditSpecificationRequest object.
  */
 ModifyInstanceCreditSpecificationRequest::ModifyInstanceCreditSpecificationRequest()
-    : EC2Request(new ModifyInstanceCreditSpecificationRequestPrivate(EC2Request::ModifyInstanceCreditSpecificationAction, this))
+    : Ec2Request(new ModifyInstanceCreditSpecificationRequestPrivate(Ec2Request::ModifyInstanceCreditSpecificationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::res
  */
 
 /*!
- * Constructs a ModifyInstanceCreditSpecificationRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyInstanceCreditSpecificationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificationRequestPrivate(
-    const EC2Request::Action action, ModifyInstanceCreditSpecificationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyInstanceCreditSpecificationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificati
  */
 ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificationRequestPrivate(
     const ModifyInstanceCreditSpecificationRequestPrivate &other, ModifyInstanceCreditSpecificationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

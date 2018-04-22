@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest(const DescribeAggregateIdFormatRequest &other)
-    : EC2Request(new DescribeAggregateIdFormatRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeAggregateIdFormatRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest(const Describ
  * Constructs a DescribeAggregateIdFormatRequest object.
  */
 DescribeAggregateIdFormatRequest::DescribeAggregateIdFormatRequest()
-    : EC2Request(new DescribeAggregateIdFormatRequestPrivate(EC2Request::DescribeAggregateIdFormatAction, this))
+    : Ec2Request(new DescribeAggregateIdFormatRequestPrivate(Ec2Request::DescribeAggregateIdFormatAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeAggregateIdFormatRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeAggregateIdFormatRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
-    const EC2Request::Action action, DescribeAggregateIdFormatRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeAggregateIdFormatRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
     const DescribeAggregateIdFormatRequestPrivate &other, DescribeAggregateIdFormatRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ StopInstancesResponse::StopInstancesResponse(
         const StopInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new StopInstancesResponsePrivate(this), parent)
+    : Ec2Response(new StopInstancesResponsePrivate(this), parent)
 {
     setRequest(new StopInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void StopInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a StopInstancesResponsePrivate object with public implementation \a q.
  */
 StopInstancesResponsePrivate::StopInstancesResponsePrivate(
-    StopInstancesResponse * const q) : EC2ResponsePrivate(q)
+    StopInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

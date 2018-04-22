@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUploadRequest &other)
-    : ECRRequest(new CompleteLayerUploadRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new CompleteLayerUploadRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CompleteLayerUploadRequest::CompleteLayerUploadRequest(const CompleteLayerUpload
  * Constructs a CompleteLayerUploadRequest object.
  */
 CompleteLayerUploadRequest::CompleteLayerUploadRequest()
-    : ECRRequest(new CompleteLayerUploadRequestPrivate(ECRRequest::CompleteLayerUploadAction, this))
+    : EcrRequest(new CompleteLayerUploadRequestPrivate(EcrRequest::CompleteLayerUploadAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
  */
 
 /*!
- * Constructs a CompleteLayerUploadRequestPrivate object for ECR \a action,
+ * Constructs a CompleteLayerUploadRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
-    const ECRRequest::Action action, CompleteLayerUploadRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, CompleteLayerUploadRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const CompleteLayerUploadRequestPrivate &other, CompleteLayerUploadRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

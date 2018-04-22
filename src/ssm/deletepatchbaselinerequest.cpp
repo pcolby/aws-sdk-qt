@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeletePatchBaselineRequest::DeletePatchBaselineRequest(const DeletePatchBaselineRequest &other)
-    : SSMRequest(new DeletePatchBaselineRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeletePatchBaselineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeletePatchBaselineRequest::DeletePatchBaselineRequest(const DeletePatchBaseline
  * Constructs a DeletePatchBaselineRequest object.
  */
 DeletePatchBaselineRequest::DeletePatchBaselineRequest()
-    : SSMRequest(new DeletePatchBaselineRequestPrivate(SSMRequest::DeletePatchBaselineAction, this))
+    : SsmRequest(new DeletePatchBaselineRequestPrivate(SsmRequest::DeletePatchBaselineAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeletePatchBaselineRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeletePatchBaselineRequestPrivate object for SSM \a action,
+ * Constructs a DeletePatchBaselineRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
-    const SSMRequest::Action action, DeletePatchBaselineRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeletePatchBaselineRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
     const DeletePatchBaselineRequestPrivate &other, DeletePatchBaselineRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

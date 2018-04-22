@@ -27,7 +27,7 @@ namespace SQS {
 
 class UntagQueueRequestPrivate;
 
-class QTAWS_EXPORT UntagQueueRequest : public SQSRequest {
+class QTAWS_EXPORT UntagQueueRequest : public SqsRequest {
 
 public:
     UntagQueueRequest(const UntagQueueRequest &other);

@@ -49,7 +49,7 @@ ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
         const ListSqlInjectionMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListSqlInjectionMatchSetsResponsePrivate(this), parent)
+    : WafResponse(new ListSqlInjectionMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListSqlInjectionMatchSetsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListSqlInjectionMatchSetsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListSqlInjectionMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListSqlInjectionMatchSetsResponsePrivate::ListSqlInjectionMatchSetsResponsePrivate(
-    ListSqlInjectionMatchSetsResponse * const q) : WAFResponsePrivate(q)
+    ListSqlInjectionMatchSetsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

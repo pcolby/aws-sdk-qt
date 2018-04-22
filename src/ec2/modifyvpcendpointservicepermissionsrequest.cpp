@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest(const ModifyVpcEndpointServicePermissionsRequest &other)
-    : EC2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsR
  * Constructs a ModifyVpcEndpointServicePermissionsRequest object.
  */
 ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest()
-    : EC2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(EC2Request::ModifyVpcEndpointServicePermissionsAction, this))
+    : Ec2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(Ec2Request::ModifyVpcEndpointServicePermissionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::r
  */
 
 /*!
- * Constructs a ModifyVpcEndpointServicePermissionsRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVpcEndpointServicePermissionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
-    const EC2Request::Action action, ModifyVpcEndpointServicePermissionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVpcEndpointServicePermissionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermi
  */
 ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
     const ModifyVpcEndpointServicePermissionsRequestPrivate &other, ModifyVpcEndpointServicePermissionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

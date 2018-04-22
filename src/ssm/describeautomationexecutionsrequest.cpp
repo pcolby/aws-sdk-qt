@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeAutomationExecutionsRequest::DescribeAutomationExecutionsRequest(const DescribeAutomationExecutionsRequest &other)
-    : SSMRequest(new DescribeAutomationExecutionsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeAutomationExecutionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeAutomationExecutionsRequest::DescribeAutomationExecutionsRequest(const D
  * Constructs a DescribeAutomationExecutionsRequest object.
  */
 DescribeAutomationExecutionsRequest::DescribeAutomationExecutionsRequest()
-    : SSMRequest(new DescribeAutomationExecutionsRequestPrivate(SSMRequest::DescribeAutomationExecutionsAction, this))
+    : SsmRequest(new DescribeAutomationExecutionsRequestPrivate(SsmRequest::DescribeAutomationExecutionsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAutomationExecutionsRequest::response
  */
 
 /*!
- * Constructs a DescribeAutomationExecutionsRequestPrivate object for SSM \a action,
+ * Constructs a DescribeAutomationExecutionsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeAutomationExecutionsRequestPrivate::DescribeAutomationExecutionsRequestPrivate(
-    const SSMRequest::Action action, DescribeAutomationExecutionsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeAutomationExecutionsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeAutomationExecutionsRequestPrivate::DescribeAutomationExecutionsRequestP
  */
 DescribeAutomationExecutionsRequestPrivate::DescribeAutomationExecutionsRequestPrivate(
     const DescribeAutomationExecutionsRequestPrivate &other, DescribeAutomationExecutionsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

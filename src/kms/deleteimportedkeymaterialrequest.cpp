@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 DeleteImportedKeyMaterialRequest::DeleteImportedKeyMaterialRequest(const DeleteImportedKeyMaterialRequest &other)
-    : KMSRequest(new DeleteImportedKeyMaterialRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new DeleteImportedKeyMaterialRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ DeleteImportedKeyMaterialRequest::DeleteImportedKeyMaterialRequest(const DeleteI
  * Constructs a DeleteImportedKeyMaterialRequest object.
  */
 DeleteImportedKeyMaterialRequest::DeleteImportedKeyMaterialRequest()
-    : KMSRequest(new DeleteImportedKeyMaterialRequestPrivate(KMSRequest::DeleteImportedKeyMaterialAction, this))
+    : KmsRequest(new DeleteImportedKeyMaterialRequestPrivate(KmsRequest::DeleteImportedKeyMaterialAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * DeleteImportedKeyMaterialRequest::response(QN
  */
 
 /*!
- * Constructs a DeleteImportedKeyMaterialRequestPrivate object for KMS \a action,
+ * Constructs a DeleteImportedKeyMaterialRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
-    const KMSRequest::Action action, DeleteImportedKeyMaterialRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, DeleteImportedKeyMaterialRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate
  */
 DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
     const DeleteImportedKeyMaterialRequestPrivate &other, DeleteImportedKeyMaterialRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

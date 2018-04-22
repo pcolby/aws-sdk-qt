@@ -109,7 +109,7 @@ UpdateSigningCertificateResponse::UpdateSigningCertificateResponse(
         const UpdateSigningCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateSigningCertificateResponsePrivate(this), parent)
+    : IamResponse(new UpdateSigningCertificateResponsePrivate(this), parent)
 {
     setRequest(new UpdateSigningCertificateRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateSigningCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateSigningCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateSigningCertificateResponsePrivate::UpdateSigningCertificateResponsePrivate(
-    UpdateSigningCertificateResponse * const q) : IAMResponsePrivate(q)
+    UpdateSigningCertificateResponse * const q) : IamResponsePrivate(q)
 {
 
 }

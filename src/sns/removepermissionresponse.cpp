@@ -58,7 +58,7 @@ RemovePermissionResponse::RemovePermissionResponse(
         const RemovePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new RemovePermissionResponsePrivate(this), parent)
+    : SnsResponse(new RemovePermissionResponsePrivate(this), parent)
 {
     setRequest(new RemovePermissionRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
  * Constructs a RemovePermissionResponsePrivate object with public implementation \a q.
  */
 RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
-    RemovePermissionResponse * const q) : SNSResponsePrivate(q)
+    RemovePermissionResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

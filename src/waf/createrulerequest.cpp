@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 CreateRuleRequest::CreateRuleRequest(const CreateRuleRequest &other)
-    : WAFRequest(new CreateRuleRequestPrivate(*other.d_func(), this))
+    : WafRequest(new CreateRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateRuleRequest::CreateRuleRequest(const CreateRuleRequest &other)
  * Constructs a CreateRuleRequest object.
  */
 CreateRuleRequest::CreateRuleRequest()
-    : WAFRequest(new CreateRuleRequestPrivate(WAFRequest::CreateRuleAction, this))
+    : WafRequest(new CreateRuleRequestPrivate(WafRequest::CreateRuleAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a CreateRuleRequestPrivate object for WAF \a action,
+ * Constructs a CreateRuleRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
-    const WAFRequest::Action action, CreateRuleRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, CreateRuleRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ CreateRuleRequestPrivate::CreateRuleRequestPrivate(
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const CreateRuleRequestPrivate &other, CreateRuleRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

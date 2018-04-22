@@ -27,7 +27,7 @@ namespace SQS {
 
 class RemovePermissionRequestPrivate;
 
-class QTAWS_EXPORT RemovePermissionRequest : public SQSRequest {
+class QTAWS_EXPORT RemovePermissionRequest : public SqsRequest {
 
 public:
     RemovePermissionRequest(const RemovePermissionRequest &other);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RequestSpotFleetRequestPrivate;
 
-class QTAWS_EXPORT RequestSpotFleetRequest : public EC2Request {
+class QTAWS_EXPORT RequestSpotFleetRequest : public Ec2Request {
 
 public:
     RequestSpotFleetRequest(const RequestSpotFleetRequest &other);

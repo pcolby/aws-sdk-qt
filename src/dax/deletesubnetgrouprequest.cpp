@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DeleteSubnetGroupRequest::DeleteSubnetGroupRequest(const DeleteSubnetGroupRequest &other)
-    : DAXRequest(new DeleteSubnetGroupRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DeleteSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteSubnetGroupRequest::DeleteSubnetGroupRequest(const DeleteSubnetGroupReques
  * Constructs a DeleteSubnetGroupRequest object.
  */
 DeleteSubnetGroupRequest::DeleteSubnetGroupRequest()
-    : DAXRequest(new DeleteSubnetGroupRequestPrivate(DAXRequest::DeleteSubnetGroupAction, this))
+    : DaxRequest(new DeleteSubnetGroupRequestPrivate(DaxRequest::DeleteSubnetGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteSubnetGroupRequestPrivate object for DAX \a action,
+ * Constructs a DeleteSubnetGroupRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
-    const DAXRequest::Action action, DeleteSubnetGroupRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DeleteSubnetGroupRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
     const DeleteSubnetGroupRequestPrivate &other, DeleteSubnetGroupRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

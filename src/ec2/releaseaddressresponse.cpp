@@ -48,7 +48,7 @@ ReleaseAddressResponse::ReleaseAddressResponse(
         const ReleaseAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReleaseAddressResponsePrivate(this), parent)
+    : Ec2Response(new ReleaseAddressResponsePrivate(this), parent)
 {
     setRequest(new ReleaseAddressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ReleaseAddressResponse::parseSuccess(QIODevice &response)
  * Constructs a ReleaseAddressResponsePrivate object with public implementation \a q.
  */
 ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
-    ReleaseAddressResponse * const q) : EC2ResponsePrivate(q)
+    ReleaseAddressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

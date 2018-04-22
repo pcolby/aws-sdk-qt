@@ -49,7 +49,7 @@ UpdateWebACLResponse::UpdateWebACLResponse(
         const UpdateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateWebACLResponsePrivate(this), parent)
+    : WafResponse(new UpdateWebACLResponsePrivate(this), parent)
 {
     setRequest(new UpdateWebACLRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateWebACLResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateWebACLResponsePrivate object with public implementation \a q.
  */
 UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
-    UpdateWebACLResponse * const q) : WAFResponsePrivate(q)
+    UpdateWebACLResponse * const q) : WafResponsePrivate(q)
 {
 
 }

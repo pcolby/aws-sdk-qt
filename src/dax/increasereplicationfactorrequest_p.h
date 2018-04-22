@@ -28,10 +28,10 @@ namespace DAX {
 
 class IncreaseReplicationFactorRequest;
 
-class QTAWS_EXPORT IncreaseReplicationFactorRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT IncreaseReplicationFactorRequestPrivate : public DaxRequestPrivate {
 
 public:
-    IncreaseReplicationFactorRequestPrivate(const DAXRequest::Action action,
+    IncreaseReplicationFactorRequestPrivate(const DaxRequest::Action action,
                                    IncreaseReplicationFactorRequest * const q);
     IncreaseReplicationFactorRequestPrivate(const IncreaseReplicationFactorRequestPrivate &other,
                                    IncreaseReplicationFactorRequest * const q);

@@ -28,10 +28,10 @@ namespace IAM {
 
 class UpdateGroupRequest;
 
-class QTAWS_EXPORT UpdateGroupRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT UpdateGroupRequestPrivate : public IamRequestPrivate {
 
 public:
-    UpdateGroupRequestPrivate(const IAMRequest::Action action,
+    UpdateGroupRequestPrivate(const IamRequest::Action action,
                                    UpdateGroupRequest * const q);
     UpdateGroupRequestPrivate(const UpdateGroupRequestPrivate &other,
                                    UpdateGroupRequest * const q);

@@ -60,7 +60,7 @@ RegisterActivityTypeResponse::RegisterActivityTypeResponse(
         const RegisterActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RegisterActivityTypeResponsePrivate(this), parent)
+    : SwfResponse(new RegisterActivityTypeResponsePrivate(this), parent)
 {
     setRequest(new RegisterActivityTypeRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
  * Constructs a RegisterActivityTypeResponsePrivate object with public implementation \a q.
  */
 RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
-    RegisterActivityTypeResponse * const q) : SWFResponsePrivate(q)
+    RegisterActivityTypeResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

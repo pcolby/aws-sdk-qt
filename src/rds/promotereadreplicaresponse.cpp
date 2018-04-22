@@ -108,7 +108,7 @@ PromoteReadReplicaResponse::PromoteReadReplicaResponse(
         const PromoteReadReplicaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new PromoteReadReplicaResponsePrivate(this), parent)
+    : RdsResponse(new PromoteReadReplicaResponsePrivate(this), parent)
 {
     setRequest(new PromoteReadReplicaRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
  * Constructs a PromoteReadReplicaResponsePrivate object with public implementation \a q.
  */
 PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
-    PromoteReadReplicaResponse * const q) : RDSResponsePrivate(q)
+    PromoteReadReplicaResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

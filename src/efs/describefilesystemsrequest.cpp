@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DescribeFileSystemsRequest::DescribeFileSystemsRequest(const DescribeFileSystemsRequest &other)
-    : EFSRequest(new DescribeFileSystemsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DescribeFileSystemsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DescribeFileSystemsRequest::DescribeFileSystemsRequest(const DescribeFileSystems
  * Constructs a DescribeFileSystemsRequest object.
  */
 DescribeFileSystemsRequest::DescribeFileSystemsRequest()
-    : EFSRequest(new DescribeFileSystemsRequestPrivate(EFSRequest::DescribeFileSystemsAction, this))
+    : EfsRequest(new DescribeFileSystemsRequestPrivate(EfsRequest::DescribeFileSystemsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeFileSystemsRequestPrivate object for EFS \a action,
+ * Constructs a DescribeFileSystemsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
-    const EFSRequest::Action action, DescribeFileSystemsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DescribeFileSystemsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
     const DescribeFileSystemsRequestPrivate &other, DescribeFileSystemsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

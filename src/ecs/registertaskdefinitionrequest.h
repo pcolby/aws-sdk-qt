@@ -27,7 +27,7 @@ namespace ECS {
 
 class RegisterTaskDefinitionRequestPrivate;
 
-class QTAWS_EXPORT RegisterTaskDefinitionRequest : public ECSRequest {
+class QTAWS_EXPORT RegisterTaskDefinitionRequest : public EcsRequest {
 
 public:
     RegisterTaskDefinitionRequest(const RegisterTaskDefinitionRequest &other);

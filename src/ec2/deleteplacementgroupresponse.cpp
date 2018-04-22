@@ -48,7 +48,7 @@ DeletePlacementGroupResponse::DeletePlacementGroupResponse(
         const DeletePlacementGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeletePlacementGroupResponsePrivate(this), parent)
+    : Ec2Response(new DeletePlacementGroupResponsePrivate(this), parent)
 {
     setRequest(new DeletePlacementGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeletePlacementGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeletePlacementGroupResponsePrivate object with public implementation \a q.
  */
 DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponsePrivate(
-    DeletePlacementGroupResponse * const q) : EC2ResponsePrivate(q)
+    DeletePlacementGroupResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

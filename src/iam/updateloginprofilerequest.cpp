@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateLoginProfileRequest::UpdateLoginProfileRequest(const UpdateLoginProfileRequest &other)
-    : IAMRequest(new UpdateLoginProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateLoginProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateLoginProfileRequest::UpdateLoginProfileRequest(const UpdateLoginProfileReq
  * Constructs a UpdateLoginProfileRequest object.
  */
 UpdateLoginProfileRequest::UpdateLoginProfileRequest()
-    : IAMRequest(new UpdateLoginProfileRequestPrivate(IAMRequest::UpdateLoginProfileAction, this))
+    : IamRequest(new UpdateLoginProfileRequestPrivate(IamRequest::UpdateLoginProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UpdateLoginProfileRequestPrivate object for IAM \a action,
+ * Constructs a UpdateLoginProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
-    const IAMRequest::Action action, UpdateLoginProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateLoginProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
     const UpdateLoginProfileRequestPrivate &other, UpdateLoginProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

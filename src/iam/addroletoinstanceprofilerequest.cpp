@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 AddRoleToInstanceProfileRequest::AddRoleToInstanceProfileRequest(const AddRoleToInstanceProfileRequest &other)
-    : IAMRequest(new AddRoleToInstanceProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new AddRoleToInstanceProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ AddRoleToInstanceProfileRequest::AddRoleToInstanceProfileRequest(const AddRoleTo
  * Constructs a AddRoleToInstanceProfileRequest object.
  */
 AddRoleToInstanceProfileRequest::AddRoleToInstanceProfileRequest()
-    : IAMRequest(new AddRoleToInstanceProfileRequestPrivate(IAMRequest::AddRoleToInstanceProfileAction, this))
+    : IamRequest(new AddRoleToInstanceProfileRequestPrivate(IamRequest::AddRoleToInstanceProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNe
  */
 
 /*!
- * Constructs a AddRoleToInstanceProfileRequestPrivate object for IAM \a action,
+ * Constructs a AddRoleToInstanceProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
-    const IAMRequest::Action action, AddRoleToInstanceProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, AddRoleToInstanceProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
     const AddRoleToInstanceProfileRequestPrivate &other, AddRoleToInstanceProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

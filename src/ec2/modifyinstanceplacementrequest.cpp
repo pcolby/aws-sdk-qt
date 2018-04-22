@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyInstancePlacementRequest::ModifyInstancePlacementRequest(const ModifyInstancePlacementRequest &other)
-    : EC2Request(new ModifyInstancePlacementRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyInstancePlacementRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyInstancePlacementRequest::ModifyInstancePlacementRequest(const ModifyInsta
  * Constructs a ModifyInstancePlacementRequest object.
  */
 ModifyInstancePlacementRequest::ModifyInstancePlacementRequest()
-    : EC2Request(new ModifyInstancePlacementRequestPrivate(EC2Request::ModifyInstancePlacementAction, this))
+    : Ec2Request(new ModifyInstancePlacementRequestPrivate(Ec2Request::ModifyInstancePlacementAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNet
  */
 
 /*!
- * Constructs a ModifyInstancePlacementRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyInstancePlacementRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
-    const EC2Request::Action action, ModifyInstancePlacementRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyInstancePlacementRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
     const ModifyInstancePlacementRequestPrivate &other, ModifyInstancePlacementRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

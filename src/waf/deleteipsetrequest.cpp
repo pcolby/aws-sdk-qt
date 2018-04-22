@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
-    : WAFRequest(new DeleteIPSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteIPSetRequest::DeleteIPSetRequest(const DeleteIPSetRequest &other)
  * Constructs a DeleteIPSetRequest object.
  */
 DeleteIPSetRequest::DeleteIPSetRequest()
-    : WAFRequest(new DeleteIPSetRequestPrivate(WAFRequest::DeleteIPSetAction, this))
+    : WafRequest(new DeleteIPSetRequestPrivate(WafRequest::DeleteIPSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DeleteIPSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteIPSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
-    const WAFRequest::Action action, DeleteIPSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteIPSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const DeleteIPSetRequestPrivate &other, DeleteIPSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

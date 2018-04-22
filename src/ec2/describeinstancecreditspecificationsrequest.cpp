@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecificationsRequest(const DescribeInstanceCreditSpecificationsRequest &other)
-    : EC2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecification
  * Constructs a DescribeInstanceCreditSpecificationsRequest object.
  */
 DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecificationsRequest()
-    : EC2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(EC2Request::DescribeInstanceCreditSpecificationsAction, this))
+    : Ec2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(Ec2Request::DescribeInstanceCreditSpecificationsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceCreditSpecificationsRequest::
  */
 
 /*!
- * Constructs a DescribeInstanceCreditSpecificationsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeInstanceCreditSpecificationsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
-    const EC2Request::Action action, DescribeInstanceCreditSpecificationsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeInstanceCreditSpecificationsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecif
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
     const DescribeInstanceCreditSpecificationsRequestPrivate &other, DescribeInstanceCreditSpecificationsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

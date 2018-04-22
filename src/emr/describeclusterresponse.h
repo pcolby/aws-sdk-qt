@@ -28,7 +28,7 @@ namespace EMR {
 
 class DescribeClusterResponsePrivate;
 
-class QTAWS_EXPORT DescribeClusterResponse : public EMRResponse {
+class QTAWS_EXPORT DescribeClusterResponse : public EmrResponse {
     Q_OBJECT
 
 public:

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest(const ApplyPendingMaintenanceActionRequest &other)
-    : RDSRequest(new ApplyPendingMaintenanceActionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ApplyPendingMaintenanceActionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest(const
  * Constructs a ApplyPendingMaintenanceActionRequest object.
  */
 ApplyPendingMaintenanceActionRequest::ApplyPendingMaintenanceActionRequest()
-    : RDSRequest(new ApplyPendingMaintenanceActionRequestPrivate(RDSRequest::ApplyPendingMaintenanceActionAction, this))
+    : RdsRequest(new ApplyPendingMaintenanceActionRequestPrivate(RdsRequest::ApplyPendingMaintenanceActionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ApplyPendingMaintenanceActionRequest::respons
  */
 
 /*!
- * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for RDS \a action,
+ * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
-    const RDSRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionReques
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const ApplyPendingMaintenanceActionRequestPrivate &other, ApplyPendingMaintenanceActionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

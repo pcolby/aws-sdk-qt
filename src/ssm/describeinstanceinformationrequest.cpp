@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeInstanceInformationRequest::DescribeInstanceInformationRequest(const DescribeInstanceInformationRequest &other)
-    : SSMRequest(new DescribeInstanceInformationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeInstanceInformationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeInstanceInformationRequest::DescribeInstanceInformationRequest(const Des
  * Constructs a DescribeInstanceInformationRequest object.
  */
 DescribeInstanceInformationRequest::DescribeInstanceInformationRequest()
-    : SSMRequest(new DescribeInstanceInformationRequestPrivate(SSMRequest::DescribeInstanceInformationAction, this))
+    : SsmRequest(new DescribeInstanceInformationRequestPrivate(SsmRequest::DescribeInstanceInformationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceInformationRequest::response(
  */
 
 /*!
- * Constructs a DescribeInstanceInformationRequestPrivate object for SSM \a action,
+ * Constructs a DescribeInstanceInformationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
-    const SSMRequest::Action action, DescribeInstanceInformationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeInstanceInformationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPri
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
     const DescribeInstanceInformationRequestPrivate &other, DescribeInstanceInformationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

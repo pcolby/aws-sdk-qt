@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest(const RespondActivityTaskFailedRequest &other)
-    : SWFRequest(new RespondActivityTaskFailedRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RespondActivityTaskFailedRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest(const Respond
  * Constructs a RespondActivityTaskFailedRequest object.
  */
 RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest()
-    : SWFRequest(new RespondActivityTaskFailedRequestPrivate(SWFRequest::RespondActivityTaskFailedAction, this))
+    : SwfRequest(new RespondActivityTaskFailedRequestPrivate(SwfRequest::RespondActivityTaskFailedAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QN
  */
 
 /*!
- * Constructs a RespondActivityTaskFailedRequestPrivate object for SWF \a action,
+ * Constructs a RespondActivityTaskFailedRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
-    const SWFRequest::Action action, RespondActivityTaskFailedRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RespondActivityTaskFailedRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
     const RespondActivityTaskFailedRequestPrivate &other, RespondActivityTaskFailedRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

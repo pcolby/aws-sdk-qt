@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DescribeReceiptRuleRequest::DescribeReceiptRuleRequest(const DescribeReceiptRuleRequest &other)
-    : SESRequest(new DescribeReceiptRuleRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DescribeReceiptRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DescribeReceiptRuleRequest::DescribeReceiptRuleRequest(const DescribeReceiptRule
  * Constructs a DescribeReceiptRuleRequest object.
  */
 DescribeReceiptRuleRequest::DescribeReceiptRuleRequest()
-    : SESRequest(new DescribeReceiptRuleRequestPrivate(SESRequest::DescribeReceiptRuleAction, this))
+    : SesRequest(new DescribeReceiptRuleRequestPrivate(SesRequest::DescribeReceiptRuleAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DescribeReceiptRuleRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeReceiptRuleRequestPrivate object for SES \a action,
+ * Constructs a DescribeReceiptRuleRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DescribeReceiptRuleRequestPrivate::DescribeReceiptRuleRequestPrivate(
-    const SESRequest::Action action, DescribeReceiptRuleRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DescribeReceiptRuleRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DescribeReceiptRuleRequestPrivate::DescribeReceiptRuleRequestPrivate(
  */
 DescribeReceiptRuleRequestPrivate::DescribeReceiptRuleRequestPrivate(
     const DescribeReceiptRuleRequestPrivate &other, DescribeReceiptRuleRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

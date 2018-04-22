@@ -27,7 +27,7 @@ namespace STS {
 
 class AssumeRoleWithWebIdentityResponse;
 
-class QTAWS_EXPORT AssumeRoleWithWebIdentityResponsePrivate : public STSResponsePrivate {
+class QTAWS_EXPORT AssumeRoleWithWebIdentityResponsePrivate : public StsResponsePrivate {
     Q_OBJECT
 
 public:

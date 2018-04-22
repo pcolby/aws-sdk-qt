@@ -28,10 +28,10 @@ namespace RDS {
 
 class DescribeEventSubscriptionsRequest;
 
-class QTAWS_EXPORT DescribeEventSubscriptionsRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT DescribeEventSubscriptionsRequestPrivate : public RdsRequestPrivate {
 
 public:
-    DescribeEventSubscriptionsRequestPrivate(const RDSRequest::Action action,
+    DescribeEventSubscriptionsRequestPrivate(const RdsRequest::Action action,
                                    DescribeEventSubscriptionsRequest * const q);
     DescribeEventSubscriptionsRequestPrivate(const DescribeEventSubscriptionsRequestPrivate &other,
                                    DescribeEventSubscriptionsRequest * const q);

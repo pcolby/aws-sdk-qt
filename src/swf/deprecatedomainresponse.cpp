@@ -60,7 +60,7 @@ DeprecateDomainResponse::DeprecateDomainResponse(
         const DeprecateDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DeprecateDomainResponsePrivate(this), parent)
+    : SwfResponse(new DeprecateDomainResponsePrivate(this), parent)
 {
     setRequest(new DeprecateDomainRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void DeprecateDomainResponse::parseSuccess(QIODevice &response)
  * Constructs a DeprecateDomainResponsePrivate object with public implementation \a q.
  */
 DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
-    DeprecateDomainResponse * const q) : SWFResponsePrivate(q)
+    DeprecateDomainResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

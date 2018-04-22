@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBLogFilesRequest::DescribeDBLogFilesRequest(const DescribeDBLogFilesRequest &other)
-    : RDSRequest(new DescribeDBLogFilesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBLogFilesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBLogFilesRequest::DescribeDBLogFilesRequest(const DescribeDBLogFilesReq
  * Constructs a DescribeDBLogFilesRequest object.
  */
 DescribeDBLogFilesRequest::DescribeDBLogFilesRequest()
-    : RDSRequest(new DescribeDBLogFilesRequestPrivate(RDSRequest::DescribeDBLogFilesAction, this))
+    : RdsRequest(new DescribeDBLogFilesRequestPrivate(RdsRequest::DescribeDBLogFilesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DescribeDBLogFilesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBLogFilesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
-    const RDSRequest::Action action, DescribeDBLogFilesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBLogFilesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
     const DescribeDBLogFilesRequestPrivate &other, DescribeDBLogFilesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

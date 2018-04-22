@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 InitiateLayerUploadRequest::InitiateLayerUploadRequest(const InitiateLayerUploadRequest &other)
-    : ECRRequest(new InitiateLayerUploadRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new InitiateLayerUploadRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ InitiateLayerUploadRequest::InitiateLayerUploadRequest(const InitiateLayerUpload
  * Constructs a InitiateLayerUploadRequest object.
  */
 InitiateLayerUploadRequest::InitiateLayerUploadRequest()
-    : ECRRequest(new InitiateLayerUploadRequestPrivate(ECRRequest::InitiateLayerUploadAction, this))
+    : EcrRequest(new InitiateLayerUploadRequestPrivate(EcrRequest::InitiateLayerUploadAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
  */
 
 /*!
- * Constructs a InitiateLayerUploadRequestPrivate object for ECR \a action,
+ * Constructs a InitiateLayerUploadRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
-    const ECRRequest::Action action, InitiateLayerUploadRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, InitiateLayerUploadRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
     const InitiateLayerUploadRequestPrivate &other, InitiateLayerUploadRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

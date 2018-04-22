@@ -27,7 +27,7 @@ namespace FMS {
 
 class PutNotificationChannelResponse;
 
-class QTAWS_EXPORT PutNotificationChannelResponsePrivate : public FMSResponsePrivate {
+class QTAWS_EXPORT PutNotificationChannelResponsePrivate : public FmsResponsePrivate {
     Q_OBJECT
 
 public:

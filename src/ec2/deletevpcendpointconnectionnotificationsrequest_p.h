@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DeleteVpcEndpointConnectionNotificationsRequest;
 
-class QTAWS_EXPORT DeleteVpcEndpointConnectionNotificationsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DeleteVpcEndpointConnectionNotificationsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DeleteVpcEndpointConnectionNotificationsRequestPrivate(const EC2Request::Action action,
+    DeleteVpcEndpointConnectionNotificationsRequestPrivate(const Ec2Request::Action action,
                                    DeleteVpcEndpointConnectionNotificationsRequest * const q);
     DeleteVpcEndpointConnectionNotificationsRequestPrivate(const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other,
                                    DeleteVpcEndpointConnectionNotificationsRequest * const q);

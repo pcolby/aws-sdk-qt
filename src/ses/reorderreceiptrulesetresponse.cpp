@@ -55,7 +55,7 @@ ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
         const ReorderReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ReorderReceiptRuleSetResponsePrivate(this), parent)
+    : SesResponse(new ReorderReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new ReorderReceiptRuleSetRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
  * Constructs a ReorderReceiptRuleSetResponsePrivate object with public implementation \a q.
  */
 ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
-    ReorderReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
+    ReorderReceiptRuleSetResponse * const q) : SesResponsePrivate(q)
 {
 
 }

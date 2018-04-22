@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeImportImageTasksRequest::DescribeImportImageTasksRequest(const DescribeImportImageTasksRequest &other)
-    : EC2Request(new DescribeImportImageTasksRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeImportImageTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeImportImageTasksRequest::DescribeImportImageTasksRequest(const DescribeI
  * Constructs a DescribeImportImageTasksRequest object.
  */
 DescribeImportImageTasksRequest::DescribeImportImageTasksRequest()
-    : EC2Request(new DescribeImportImageTasksRequestPrivate(EC2Request::DescribeImportImageTasksAction, this))
+    : Ec2Request(new DescribeImportImageTasksRequestPrivate(Ec2Request::DescribeImportImageTasksAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeImportImageTasksRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeImportImageTasksRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
-    const EC2Request::Action action, DescribeImportImageTasksRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeImportImageTasksRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
     const DescribeImportImageTasksRequestPrivate &other, DescribeImportImageTasksRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

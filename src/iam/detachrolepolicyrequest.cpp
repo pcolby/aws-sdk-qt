@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DetachRolePolicyRequest::DetachRolePolicyRequest(const DetachRolePolicyRequest &other)
-    : IAMRequest(new DetachRolePolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DetachRolePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DetachRolePolicyRequest::DetachRolePolicyRequest(const DetachRolePolicyRequest &
  * Constructs a DetachRolePolicyRequest object.
  */
 DetachRolePolicyRequest::DetachRolePolicyRequest()
-    : IAMRequest(new DetachRolePolicyRequestPrivate(IAMRequest::DetachRolePolicyAction, this))
+    : IamRequest(new DetachRolePolicyRequestPrivate(IamRequest::DetachRolePolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DetachRolePolicyRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DetachRolePolicyRequestPrivate object for IAM \a action,
+ * Constructs a DetachRolePolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
-    const IAMRequest::Action action, DetachRolePolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DetachRolePolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
  */
 DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
     const DetachRolePolicyRequestPrivate &other, DetachRolePolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

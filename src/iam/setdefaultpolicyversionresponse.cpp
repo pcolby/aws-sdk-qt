@@ -109,7 +109,7 @@ SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
         const SetDefaultPolicyVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new SetDefaultPolicyVersionResponsePrivate(this), parent)
+    : IamResponse(new SetDefaultPolicyVersionResponsePrivate(this), parent)
 {
     setRequest(new SetDefaultPolicyVersionRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void SetDefaultPolicyVersionResponse::parseSuccess(QIODevice &response)
  * Constructs a SetDefaultPolicyVersionResponsePrivate object with public implementation \a q.
  */
 SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
-    SetDefaultPolicyVersionResponse * const q) : IAMResponsePrivate(q)
+    SetDefaultPolicyVersionResponse * const q) : IamResponsePrivate(q)
 {
 
 }

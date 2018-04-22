@@ -68,7 +68,7 @@ DeletePatchBaselineResponse::DeletePatchBaselineResponse(
         const DeletePatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeletePatchBaselineResponsePrivate(this), parent)
+    : SsmResponse(new DeletePatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new DeletePatchBaselineRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeletePatchBaselineResponse::parseSuccess(QIODevice &response)
  * Constructs a DeletePatchBaselineResponsePrivate object with public implementation \a q.
  */
 DeletePatchBaselineResponsePrivate::DeletePatchBaselineResponsePrivate(
-    DeletePatchBaselineResponse * const q) : SSMResponsePrivate(q)
+    DeletePatchBaselineResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

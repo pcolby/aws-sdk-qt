@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribePlacementGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribePlacementGroupsResponse : public EC2Response {
+class QTAWS_EXPORT DescribePlacementGroupsResponse : public Ec2Response {
     Q_OBJECT
 
 public:

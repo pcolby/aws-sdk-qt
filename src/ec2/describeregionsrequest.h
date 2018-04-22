@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeRegionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeRegionsRequest : public EC2Request {
+class QTAWS_EXPORT DescribeRegionsRequest : public Ec2Request {
 
 public:
     DescribeRegionsRequest(const DescribeRegionsRequest &other);

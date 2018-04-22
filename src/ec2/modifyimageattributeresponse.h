@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyImageAttributeResponsePrivate;
 
-class QTAWS_EXPORT ModifyImageAttributeResponse : public EC2Response {
+class QTAWS_EXPORT ModifyImageAttributeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

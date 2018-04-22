@@ -28,10 +28,10 @@ namespace IAM {
 
 class ListAccountAliasesRequest;
 
-class QTAWS_EXPORT ListAccountAliasesRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT ListAccountAliasesRequestPrivate : public IamRequestPrivate {
 
 public:
-    ListAccountAliasesRequestPrivate(const IAMRequest::Action action,
+    ListAccountAliasesRequestPrivate(const IamRequest::Action action,
                                    ListAccountAliasesRequest * const q);
     ListAccountAliasesRequestPrivate(const ListAccountAliasesRequestPrivate &other,
                                    ListAccountAliasesRequest * const q);

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterRequest &other)
-    : RDSRequest(new FailoverDBClusterRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new FailoverDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterReques
  * Constructs a FailoverDBClusterRequest object.
  */
 FailoverDBClusterRequest::FailoverDBClusterRequest()
-    : RDSRequest(new FailoverDBClusterRequestPrivate(RDSRequest::FailoverDBClusterAction, this))
+    : RdsRequest(new FailoverDBClusterRequestPrivate(RdsRequest::FailoverDBClusterAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a FailoverDBClusterRequestPrivate object for RDS \a action,
+ * Constructs a FailoverDBClusterRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
-    const RDSRequest::Action action, FailoverDBClusterRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, FailoverDBClusterRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const FailoverDBClusterRequestPrivate &other, FailoverDBClusterRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

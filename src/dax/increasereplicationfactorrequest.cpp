@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest(const IncreaseReplicationFactorRequest &other)
-    : DAXRequest(new IncreaseReplicationFactorRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new IncreaseReplicationFactorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest(const Increas
  * Constructs a IncreaseReplicationFactorRequest object.
  */
 IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest()
-    : DAXRequest(new IncreaseReplicationFactorRequestPrivate(DAXRequest::IncreaseReplicationFactorAction, this))
+    : DaxRequest(new IncreaseReplicationFactorRequestPrivate(DaxRequest::IncreaseReplicationFactorAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QN
  */
 
 /*!
- * Constructs a IncreaseReplicationFactorRequestPrivate object for DAX \a action,
+ * Constructs a IncreaseReplicationFactorRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
-    const DAXRequest::Action action, IncreaseReplicationFactorRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, IncreaseReplicationFactorRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate
  */
 IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
     const IncreaseReplicationFactorRequestPrivate &other, IncreaseReplicationFactorRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

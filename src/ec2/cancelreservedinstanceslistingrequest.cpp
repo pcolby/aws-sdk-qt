@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest(const CancelReservedInstancesListingRequest &other)
-    : EC2Request(new CancelReservedInstancesListingRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CancelReservedInstancesListingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest(con
  * Constructs a CancelReservedInstancesListingRequest object.
  */
 CancelReservedInstancesListingRequest::CancelReservedInstancesListingRequest()
-    : EC2Request(new CancelReservedInstancesListingRequestPrivate(EC2Request::CancelReservedInstancesListingAction, this))
+    : Ec2Request(new CancelReservedInstancesListingRequestPrivate(Ec2Request::CancelReservedInstancesListingAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::respon
  */
 
 /*!
- * Constructs a CancelReservedInstancesListingRequestPrivate object for EC2 \a action,
+ * Constructs a CancelReservedInstancesListingRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
-    const EC2Request::Action action, CancelReservedInstancesListingRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CancelReservedInstancesListingRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequ
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
     const CancelReservedInstancesListingRequestPrivate &other, CancelReservedInstancesListingRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

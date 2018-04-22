@@ -109,7 +109,7 @@ DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse
         const DeleteServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteServiceSpecificCredentialResponsePrivate(this), parent)
+    : IamResponse(new DeleteServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new DeleteServiceSpecificCredentialRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialResponsePrivate(
-    DeleteServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
+    DeleteServiceSpecificCredentialResponse * const q) : IamResponsePrivate(q)
 {
 
 }

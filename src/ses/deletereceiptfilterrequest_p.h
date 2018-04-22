@@ -28,10 +28,10 @@ namespace SES {
 
 class DeleteReceiptFilterRequest;
 
-class QTAWS_EXPORT DeleteReceiptFilterRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT DeleteReceiptFilterRequestPrivate : public SesRequestPrivate {
 
 public:
-    DeleteReceiptFilterRequestPrivate(const SESRequest::Action action,
+    DeleteReceiptFilterRequestPrivate(const SesRequest::Action action,
                                    DeleteReceiptFilterRequest * const q);
     DeleteReceiptFilterRequestPrivate(const DeleteReceiptFilterRequestPrivate &other,
                                    DeleteReceiptFilterRequest * const q);

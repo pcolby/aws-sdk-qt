@@ -58,7 +58,7 @@ ListTopicsResponse::ListTopicsResponse(
         const ListTopicsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListTopicsResponsePrivate(this), parent)
+    : SnsResponse(new ListTopicsResponsePrivate(this), parent)
 {
     setRequest(new ListTopicsRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void ListTopicsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListTopicsResponsePrivate object with public implementation \a q.
  */
 ListTopicsResponsePrivate::ListTopicsResponsePrivate(
-    ListTopicsResponse * const q) : SNSResponsePrivate(q)
+    ListTopicsResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroupRequest &other)
-    : RDSRequest(new ModifyDBSubnetGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyDBSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroup
  * Constructs a ModifyDBSubnetGroupRequest object.
  */
 ModifyDBSubnetGroupRequest::ModifyDBSubnetGroupRequest()
-    : RDSRequest(new ModifyDBSubnetGroupRequestPrivate(RDSRequest::ModifyDBSubnetGroupAction, this))
+    : RdsRequest(new ModifyDBSubnetGroupRequestPrivate(RdsRequest::ModifyDBSubnetGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetwork
  */
 
 /*!
- * Constructs a ModifyDBSubnetGroupRequestPrivate object for RDS \a action,
+ * Constructs a ModifyDBSubnetGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
-    const RDSRequest::Action action, ModifyDBSubnetGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyDBSubnetGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const ModifyDBSubnetGroupRequestPrivate &other, ModifyDBSubnetGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

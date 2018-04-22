@@ -109,7 +109,7 @@ UploadSSHPublicKeyResponse::UploadSSHPublicKeyResponse(
         const UploadSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UploadSSHPublicKeyResponsePrivate(this), parent)
+    : IamResponse(new UploadSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new UploadSSHPublicKeyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a UploadSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
-    UploadSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
+    UploadSSHPublicKeyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

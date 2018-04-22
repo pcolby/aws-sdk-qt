@@ -48,7 +48,7 @@ DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
         const DescribeSubnetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DescribeSubnetGroupsResponsePrivate(this), parent)
+    : DaxResponse(new DescribeSubnetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSubnetGroupsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponsePrivate(
-    DescribeSubnetGroupsResponse * const q) : DAXResponsePrivate(q)
+    DescribeSubnetGroupsResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

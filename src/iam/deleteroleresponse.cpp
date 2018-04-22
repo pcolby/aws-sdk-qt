@@ -109,7 +109,7 @@ DeleteRoleResponse::DeleteRoleResponse(
         const DeleteRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteRoleResponsePrivate(this), parent)
+    : IamResponse(new DeleteRoleResponsePrivate(this), parent)
 {
     setRequest(new DeleteRoleRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteRoleResponsePrivate object with public implementation \a q.
  */
 DeleteRoleResponsePrivate::DeleteRoleResponsePrivate(
-    DeleteRoleResponse * const q) : IAMResponsePrivate(q)
+    DeleteRoleResponse * const q) : IamResponsePrivate(q)
 {
 
 }

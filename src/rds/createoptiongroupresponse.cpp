@@ -108,7 +108,7 @@ CreateOptionGroupResponse::CreateOptionGroupResponse(
         const CreateOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateOptionGroupResponsePrivate(this), parent)
+    : RdsResponse(new CreateOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateOptionGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateOptionGroupResponsePrivate object with public implementation \a q.
  */
 CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
-    CreateOptionGroupResponse * const q) : RDSResponsePrivate(q)
+    CreateOptionGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

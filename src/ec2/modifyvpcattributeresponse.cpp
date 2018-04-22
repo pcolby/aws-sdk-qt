@@ -48,7 +48,7 @@ ModifyVpcAttributeResponse::ModifyVpcAttributeResponse(
         const ModifyVpcAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifyVpcAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyVpcAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyVpcAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponsePrivate(
-    ModifyVpcAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifyVpcAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

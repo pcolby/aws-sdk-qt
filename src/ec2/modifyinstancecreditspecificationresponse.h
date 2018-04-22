@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyInstanceCreditSpecificationResponsePrivate;
 
-class QTAWS_EXPORT ModifyInstanceCreditSpecificationResponse : public EC2Response {
+class QTAWS_EXPORT ModifyInstanceCreditSpecificationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetGroupPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetGroupPolicyResponse : public IAMResponse {
+class QTAWS_EXPORT GetGroupPolicyResponse : public IamResponse {
     Q_OBJECT
 
 public:

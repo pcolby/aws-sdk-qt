@@ -108,7 +108,7 @@ AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResp
         const AddSourceIdentifierToSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new AddSourceIdentifierToSubscriptionResponsePrivate(this), parent)
+    : RdsResponse(new AddSourceIdentifierToSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new AddSourceIdentifierToSubscriptionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response
  * Constructs a AddSourceIdentifierToSubscriptionResponsePrivate object with public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscriptionResponsePrivate(
-    AddSourceIdentifierToSubscriptionResponse * const q) : RDSResponsePrivate(q)
+    AddSourceIdentifierToSubscriptionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

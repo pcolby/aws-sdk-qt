@@ -46,7 +46,7 @@ CreateUserResponse::CreateUserResponse(
         const CreateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new CreateUserResponsePrivate(this), parent)
+    : MqResponse(new CreateUserResponsePrivate(this), parent)
 {
     setRequest(new CreateUserRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateUserResponsePrivate object with public implementation \a q.
  */
 CreateUserResponsePrivate::CreateUserResponsePrivate(
-    CreateUserResponse * const q) : MQResponsePrivate(q)
+    CreateUserResponse * const q) : MqResponsePrivate(q)
 {
 
 }

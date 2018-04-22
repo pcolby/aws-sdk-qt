@@ -61,7 +61,7 @@ SubmitTaskStateChangeResponse::SubmitTaskStateChangeResponse(
         const SubmitTaskStateChangeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new SubmitTaskStateChangeResponsePrivate(this), parent)
+    : EcsResponse(new SubmitTaskStateChangeResponsePrivate(this), parent)
 {
     setRequest(new SubmitTaskStateChangeRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void SubmitTaskStateChangeResponse::parseSuccess(QIODevice &response)
  * Constructs a SubmitTaskStateChangeResponsePrivate object with public implementation \a q.
  */
 SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
-    SubmitTaskStateChangeResponse * const q) : ECSResponsePrivate(q)
+    SubmitTaskStateChangeResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

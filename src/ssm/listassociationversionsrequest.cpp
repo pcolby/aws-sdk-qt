@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListAssociationVersionsRequest::ListAssociationVersionsRequest(const ListAssociationVersionsRequest &other)
-    : SSMRequest(new ListAssociationVersionsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListAssociationVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListAssociationVersionsRequest::ListAssociationVersionsRequest(const ListAssocia
  * Constructs a ListAssociationVersionsRequest object.
  */
 ListAssociationVersionsRequest::ListAssociationVersionsRequest()
-    : SSMRequest(new ListAssociationVersionsRequestPrivate(SSMRequest::ListAssociationVersionsAction, this))
+    : SsmRequest(new ListAssociationVersionsRequestPrivate(SsmRequest::ListAssociationVersionsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListAssociationVersionsRequest::response(QNet
  */
 
 /*!
- * Constructs a ListAssociationVersionsRequestPrivate object for SSM \a action,
+ * Constructs a ListAssociationVersionsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
-    const SSMRequest::Action action, ListAssociationVersionsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListAssociationVersionsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
     const ListAssociationVersionsRequestPrivate &other, ListAssociationVersionsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

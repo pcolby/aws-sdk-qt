@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsRequest &other)
-    : MQRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
+    : MqRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsReq
  * Constructs a ListConfigurationsRequest object.
  */
 ListConfigurationsRequest::ListConfigurationsRequest()
-    : MQRequest(new ListConfigurationsRequestPrivate(MQRequest::ListConfigurationsAction, this))
+    : MqRequest(new ListConfigurationsRequestPrivate(MqRequest::ListConfigurationsAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a ListConfigurationsRequestPrivate object for MQ \a action,
+ * Constructs a ListConfigurationsRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
-    const MQRequest::Action action, ListConfigurationsRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, ListConfigurationsRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

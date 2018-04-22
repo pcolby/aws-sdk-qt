@@ -109,7 +109,7 @@ ListGroupsForUserResponse::ListGroupsForUserResponse(
         const ListGroupsForUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListGroupsForUserResponsePrivate(this), parent)
+    : IamResponse(new ListGroupsForUserResponsePrivate(this), parent)
 {
     setRequest(new ListGroupsForUserRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
  * Constructs a ListGroupsForUserResponsePrivate object with public implementation \a q.
  */
 ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
-    ListGroupsForUserResponse * const q) : IAMResponsePrivate(q)
+    ListGroupsForUserResponse * const q) : IamResponsePrivate(q)
 {
 
 }

@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 PutNotificationChannelRequest::PutNotificationChannelRequest(const PutNotificationChannelRequest &other)
-    : FMSRequest(new PutNotificationChannelRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new PutNotificationChannelRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ PutNotificationChannelRequest::PutNotificationChannelRequest(const PutNotificati
  * Constructs a PutNotificationChannelRequest object.
  */
 PutNotificationChannelRequest::PutNotificationChannelRequest()
-    : FMSRequest(new PutNotificationChannelRequestPrivate(FMSRequest::PutNotificationChannelAction, this))
+    : FmsRequest(new PutNotificationChannelRequestPrivate(FmsRequest::PutNotificationChannelAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * PutNotificationChannelRequest::response(QNetw
  */
 
 /*!
- * Constructs a PutNotificationChannelRequestPrivate object for FMS \a action,
+ * Constructs a PutNotificationChannelRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
-    const FMSRequest::Action action, PutNotificationChannelRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, PutNotificationChannelRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
  */
 PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
     const PutNotificationChannelRequestPrivate &other, PutNotificationChannelRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

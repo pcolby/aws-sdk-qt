@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 StartLifecyclePolicyPreviewRequest::StartLifecyclePolicyPreviewRequest(const StartLifecyclePolicyPreviewRequest &other)
-    : ECRRequest(new StartLifecyclePolicyPreviewRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new StartLifecyclePolicyPreviewRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ StartLifecyclePolicyPreviewRequest::StartLifecyclePolicyPreviewRequest(const Sta
  * Constructs a StartLifecyclePolicyPreviewRequest object.
  */
 StartLifecyclePolicyPreviewRequest::StartLifecyclePolicyPreviewRequest()
-    : ECRRequest(new StartLifecyclePolicyPreviewRequestPrivate(ECRRequest::StartLifecyclePolicyPreviewAction, this))
+    : EcrRequest(new StartLifecyclePolicyPreviewRequestPrivate(EcrRequest::StartLifecyclePolicyPreviewAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * StartLifecyclePolicyPreviewRequest::response(
  */
 
 /*!
- * Constructs a StartLifecyclePolicyPreviewRequestPrivate object for ECR \a action,
+ * Constructs a StartLifecyclePolicyPreviewRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 StartLifecyclePolicyPreviewRequestPrivate::StartLifecyclePolicyPreviewRequestPrivate(
-    const ECRRequest::Action action, StartLifecyclePolicyPreviewRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, StartLifecyclePolicyPreviewRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ StartLifecyclePolicyPreviewRequestPrivate::StartLifecyclePolicyPreviewRequestPri
  */
 StartLifecyclePolicyPreviewRequestPrivate::StartLifecyclePolicyPreviewRequestPrivate(
     const StartLifecyclePolicyPreviewRequestPrivate &other, StartLifecyclePolicyPreviewRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

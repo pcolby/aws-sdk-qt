@@ -48,7 +48,7 @@ MonitorInstancesResponse::MonitorInstancesResponse(
         const MonitorInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new MonitorInstancesResponsePrivate(this), parent)
+    : Ec2Response(new MonitorInstancesResponsePrivate(this), parent)
 {
     setRequest(new MonitorInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void MonitorInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a MonitorInstancesResponsePrivate object with public implementation \a q.
  */
 MonitorInstancesResponsePrivate::MonitorInstancesResponsePrivate(
-    MonitorInstancesResponse * const q) : EC2ResponsePrivate(q)
+    MonitorInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

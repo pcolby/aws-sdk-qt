@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 AddJobFlowStepsRequest::AddJobFlowStepsRequest(const AddJobFlowStepsRequest &other)
-    : EMRRequest(new AddJobFlowStepsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new AddJobFlowStepsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ AddJobFlowStepsRequest::AddJobFlowStepsRequest(const AddJobFlowStepsRequest &oth
  * Constructs a AddJobFlowStepsRequest object.
  */
 AddJobFlowStepsRequest::AddJobFlowStepsRequest()
-    : EMRRequest(new AddJobFlowStepsRequestPrivate(EMRRequest::AddJobFlowStepsAction, this))
+    : EmrRequest(new AddJobFlowStepsRequestPrivate(EmrRequest::AddJobFlowStepsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a AddJobFlowStepsRequestPrivate object for EMR \a action,
+ * Constructs a AddJobFlowStepsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
-    const EMRRequest::Action action, AddJobFlowStepsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, AddJobFlowStepsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
     const AddJobFlowStepsRequestPrivate &other, AddJobFlowStepsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

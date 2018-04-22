@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 DeleteQueueRequest::DeleteQueueRequest(const DeleteQueueRequest &other)
-    : SQSRequest(new DeleteQueueRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new DeleteQueueRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ DeleteQueueRequest::DeleteQueueRequest(const DeleteQueueRequest &other)
  * Constructs a DeleteQueueRequest object.
  */
 DeleteQueueRequest::DeleteQueueRequest()
-    : SQSRequest(new DeleteQueueRequestPrivate(SQSRequest::DeleteQueueAction, this))
+    : SqsRequest(new DeleteQueueRequestPrivate(SqsRequest::DeleteQueueAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DeleteQueueRequestPrivate object for SQS \a action,
+ * Constructs a DeleteQueueRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
-    const SQSRequest::Action action, DeleteQueueRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, DeleteQueueRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const DeleteQueueRequestPrivate &other, DeleteQueueRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

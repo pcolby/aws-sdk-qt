@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListAttachedGroupPoliciesRequest::ListAttachedGroupPoliciesRequest(const ListAttachedGroupPoliciesRequest &other)
-    : IAMRequest(new ListAttachedGroupPoliciesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListAttachedGroupPoliciesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListAttachedGroupPoliciesRequest::ListAttachedGroupPoliciesRequest(const ListAtt
  * Constructs a ListAttachedGroupPoliciesRequest object.
  */
 ListAttachedGroupPoliciesRequest::ListAttachedGroupPoliciesRequest()
-    : IAMRequest(new ListAttachedGroupPoliciesRequestPrivate(IAMRequest::ListAttachedGroupPoliciesAction, this))
+    : IamRequest(new ListAttachedGroupPoliciesRequestPrivate(IamRequest::ListAttachedGroupPoliciesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListAttachedGroupPoliciesRequest::response(QN
  */
 
 /*!
- * Constructs a ListAttachedGroupPoliciesRequestPrivate object for IAM \a action,
+ * Constructs a ListAttachedGroupPoliciesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListAttachedGroupPoliciesRequestPrivate::ListAttachedGroupPoliciesRequestPrivate(
-    const IAMRequest::Action action, ListAttachedGroupPoliciesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListAttachedGroupPoliciesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListAttachedGroupPoliciesRequestPrivate::ListAttachedGroupPoliciesRequestPrivate
  */
 ListAttachedGroupPoliciesRequestPrivate::ListAttachedGroupPoliciesRequestPrivate(
     const ListAttachedGroupPoliciesRequestPrivate &other, ListAttachedGroupPoliciesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 ImportServerCatalogRequest::ImportServerCatalogRequest(const ImportServerCatalogRequest &other)
-    : SMSRequest(new ImportServerCatalogRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new ImportServerCatalogRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ ImportServerCatalogRequest::ImportServerCatalogRequest(const ImportServerCatalog
  * Constructs a ImportServerCatalogRequest object.
  */
 ImportServerCatalogRequest::ImportServerCatalogRequest()
-    : SMSRequest(new ImportServerCatalogRequestPrivate(SMSRequest::ImportServerCatalogAction, this))
+    : SmsRequest(new ImportServerCatalogRequestPrivate(SmsRequest::ImportServerCatalogAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetwork
  */
 
 /*!
- * Constructs a ImportServerCatalogRequestPrivate object for SMS \a action,
+ * Constructs a ImportServerCatalogRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
-    const SMSRequest::Action action, ImportServerCatalogRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, ImportServerCatalogRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
     const ImportServerCatalogRequestPrivate &other, ImportServerCatalogRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

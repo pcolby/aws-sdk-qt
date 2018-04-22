@@ -49,7 +49,7 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
         const GetSampledRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetSampledRequestsResponsePrivate(this), parent)
+    : WafResponse(new GetSampledRequestsResponsePrivate(this), parent)
 {
     setRequest(new GetSampledRequestsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
  * Constructs a GetSampledRequestsResponsePrivate object with public implementation \a q.
  */
 GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
-    GetSampledRequestsResponse * const q) : WAFResponsePrivate(q)
+    GetSampledRequestsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

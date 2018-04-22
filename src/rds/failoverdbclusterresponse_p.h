@@ -27,7 +27,7 @@ namespace RDS {
 
 class FailoverDBClusterResponse;
 
-class QTAWS_EXPORT FailoverDBClusterResponsePrivate : public RDSResponsePrivate {
+class QTAWS_EXPORT FailoverDBClusterResponsePrivate : public RdsResponsePrivate {
     Q_OBJECT
 
 public:

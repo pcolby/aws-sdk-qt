@@ -28,7 +28,7 @@ namespace SWF {
 
 class RegisterDomainResponsePrivate;
 
-class QTAWS_EXPORT RegisterDomainResponse : public SWFResponse {
+class QTAWS_EXPORT RegisterDomainResponse : public SwfResponse {
     Q_OBJECT
 
 public:

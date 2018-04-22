@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 RunJobFlowRequest::RunJobFlowRequest(const RunJobFlowRequest &other)
-    : EMRRequest(new RunJobFlowRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new RunJobFlowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ RunJobFlowRequest::RunJobFlowRequest(const RunJobFlowRequest &other)
  * Constructs a RunJobFlowRequest object.
  */
 RunJobFlowRequest::RunJobFlowRequest()
-    : EMRRequest(new RunJobFlowRequestPrivate(EMRRequest::RunJobFlowAction, this))
+    : EmrRequest(new RunJobFlowRequestPrivate(EmrRequest::RunJobFlowAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a RunJobFlowRequestPrivate object for EMR \a action,
+ * Constructs a RunJobFlowRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
-    const EMRRequest::Action action, RunJobFlowRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, RunJobFlowRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
  */
 RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
     const RunJobFlowRequestPrivate &other, RunJobFlowRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

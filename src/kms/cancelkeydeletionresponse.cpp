@@ -143,7 +143,7 @@ CancelKeyDeletionResponse::CancelKeyDeletionResponse(
         const CancelKeyDeletionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new CancelKeyDeletionResponsePrivate(this), parent)
+    : KmsResponse(new CancelKeyDeletionResponsePrivate(this), parent)
 {
     setRequest(new CancelKeyDeletionRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void CancelKeyDeletionResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelKeyDeletionResponsePrivate object with public implementation \a q.
  */
 CancelKeyDeletionResponsePrivate::CancelKeyDeletionResponsePrivate(
-    CancelKeyDeletionResponse * const q) : KMSResponsePrivate(q)
+    CancelKeyDeletionResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

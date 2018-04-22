@@ -143,7 +143,7 @@ DescribeKeyResponse::DescribeKeyResponse(
         const DescribeKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new DescribeKeyResponsePrivate(this), parent)
+    : KmsResponse(new DescribeKeyResponsePrivate(this), parent)
 {
     setRequest(new DescribeKeyRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void DescribeKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeKeyResponsePrivate object with public implementation \a q.
  */
 DescribeKeyResponsePrivate::DescribeKeyResponsePrivate(
-    DescribeKeyResponse * const q) : KMSResponsePrivate(q)
+    DescribeKeyResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &other)
-    : RDSRequest(new CreateDBClusterRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateDBClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &oth
  * Constructs a CreateDBClusterRequest object.
  */
 CreateDBClusterRequest::CreateDBClusterRequest()
-    : RDSRequest(new CreateDBClusterRequestPrivate(RDSRequest::CreateDBClusterAction, this))
+    : RdsRequest(new CreateDBClusterRequestPrivate(RdsRequest::CreateDBClusterAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a CreateDBClusterRequestPrivate object for RDS \a action,
+ * Constructs a CreateDBClusterRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
-    const RDSRequest::Action action, CreateDBClusterRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateDBClusterRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const CreateDBClusterRequestPrivate &other, CreateDBClusterRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

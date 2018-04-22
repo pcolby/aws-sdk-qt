@@ -28,10 +28,10 @@ namespace KMS {
 
 class RevokeGrantRequest;
 
-class QTAWS_EXPORT RevokeGrantRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT RevokeGrantRequestPrivate : public KmsRequestPrivate {
 
 public:
-    RevokeGrantRequestPrivate(const KMSRequest::Action action,
+    RevokeGrantRequestPrivate(const KmsRequest::Action action,
                                    RevokeGrantRequest * const q);
     RevokeGrantRequestPrivate(const RevokeGrantRequestPrivate &other,
                                    RevokeGrantRequest * const q);

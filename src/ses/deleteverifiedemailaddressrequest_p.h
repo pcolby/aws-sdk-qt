@@ -28,10 +28,10 @@ namespace SES {
 
 class DeleteVerifiedEmailAddressRequest;
 
-class QTAWS_EXPORT DeleteVerifiedEmailAddressRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT DeleteVerifiedEmailAddressRequestPrivate : public SesRequestPrivate {
 
 public:
-    DeleteVerifiedEmailAddressRequestPrivate(const SESRequest::Action action,
+    DeleteVerifiedEmailAddressRequestPrivate(const SesRequest::Action action,
                                    DeleteVerifiedEmailAddressRequest * const q);
     DeleteVerifiedEmailAddressRequestPrivate(const DeleteVerifiedEmailAddressRequestPrivate &other,
                                    DeleteVerifiedEmailAddressRequest * const q);

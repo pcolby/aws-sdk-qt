@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeSpotFleetRequestHistoryRequest;
 
-class QTAWS_EXPORT DescribeSpotFleetRequestHistoryRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeSpotFleetRequestHistoryRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeSpotFleetRequestHistoryRequestPrivate(const EC2Request::Action action,
+    DescribeSpotFleetRequestHistoryRequestPrivate(const Ec2Request::Action action,
                                    DescribeSpotFleetRequestHistoryRequest * const q);
     DescribeSpotFleetRequestHistoryRequestPrivate(const DescribeSpotFleetRequestHistoryRequestPrivate &other,
                                    DescribeSpotFleetRequestHistoryRequest * const q);

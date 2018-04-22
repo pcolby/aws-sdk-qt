@@ -28,10 +28,10 @@ namespace SES {
 
 class DeleteCustomVerificationEmailTemplateRequest;
 
-class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateRequestPrivate : public SesRequestPrivate {
 
 public:
-    DeleteCustomVerificationEmailTemplateRequestPrivate(const SESRequest::Action action,
+    DeleteCustomVerificationEmailTemplateRequestPrivate(const SesRequest::Action action,
                                    DeleteCustomVerificationEmailTemplateRequest * const q);
     DeleteCustomVerificationEmailTemplateRequestPrivate(const DeleteCustomVerificationEmailTemplateRequestPrivate &other,
                                    DeleteCustomVerificationEmailTemplateRequest * const q);

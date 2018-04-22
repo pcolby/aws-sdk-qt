@@ -27,7 +27,7 @@ namespace SWF {
 
 class DeprecateWorkflowTypeRequestPrivate;
 
-class QTAWS_EXPORT DeprecateWorkflowTypeRequest : public SWFRequest {
+class QTAWS_EXPORT DeprecateWorkflowTypeRequest : public SwfRequest {
 
 public:
     DeprecateWorkflowTypeRequest(const DeprecateWorkflowTypeRequest &other);

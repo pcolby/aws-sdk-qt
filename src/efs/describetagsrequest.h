@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeTagsRequestPrivate;
 
-class QTAWS_EXPORT DescribeTagsRequest : public EFSRequest {
+class QTAWS_EXPORT DescribeTagsRequest : public EfsRequest {
 
 public:
     DescribeTagsRequest(const DescribeTagsRequest &other);

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest(const DeleteRegexMatchSetRequest &other)
-    : WAFRequest(new DeleteRegexMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteRegexMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest(const DeleteRegexMatchSet
  * Constructs a DeleteRegexMatchSetRequest object.
  */
 DeleteRegexMatchSetRequest::DeleteRegexMatchSetRequest()
-    : WAFRequest(new DeleteRegexMatchSetRequestPrivate(WAFRequest::DeleteRegexMatchSetAction, this))
+    : WafRequest(new DeleteRegexMatchSetRequestPrivate(WafRequest::DeleteRegexMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeleteRegexMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteRegexMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
-    const WAFRequest::Action action, DeleteRegexMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteRegexMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
     const DeleteRegexMatchSetRequestPrivate &other, DeleteRegexMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 TagCertificateAuthorityRequest::TagCertificateAuthorityRequest(const TagCertificateAuthorityRequest &other)
-    : ACMPCARequest(new TagCertificateAuthorityRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new TagCertificateAuthorityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ TagCertificateAuthorityRequest::TagCertificateAuthorityRequest(const TagCertific
  * Constructs a TagCertificateAuthorityRequest object.
  */
 TagCertificateAuthorityRequest::TagCertificateAuthorityRequest()
-    : ACMPCARequest(new TagCertificateAuthorityRequestPrivate(ACMPCARequest::TagCertificateAuthorityAction, this))
+    : AcmpcaRequest(new TagCertificateAuthorityRequestPrivate(AcmpcaRequest::TagCertificateAuthorityAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * TagCertificateAuthorityRequest::response(QNet
  */
 
 /*!
- * Constructs a TagCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * Constructs a TagCertificateAuthorityRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
-    const ACMPCARequest::Action action, TagCertificateAuthorityRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, TagCertificateAuthorityRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
  */
 TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
     const TagCertificateAuthorityRequestPrivate &other, TagCertificateAuthorityRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

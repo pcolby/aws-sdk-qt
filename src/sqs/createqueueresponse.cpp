@@ -110,7 +110,7 @@ CreateQueueResponse::CreateQueueResponse(
         const CreateQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new CreateQueueResponsePrivate(this), parent)
+    : SqsResponse(new CreateQueueResponsePrivate(this), parent)
 {
     setRequest(new CreateQueueRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void CreateQueueResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateQueueResponsePrivate object with public implementation \a q.
  */
 CreateQueueResponsePrivate::CreateQueueResponsePrivate(
-    CreateQueueResponse * const q) : SQSResponsePrivate(q)
+    CreateQueueResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

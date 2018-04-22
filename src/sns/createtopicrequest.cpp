@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 CreateTopicRequest::CreateTopicRequest(const CreateTopicRequest &other)
-    : SNSRequest(new CreateTopicRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new CreateTopicRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ CreateTopicRequest::CreateTopicRequest(const CreateTopicRequest &other)
  * Constructs a CreateTopicRequest object.
  */
 CreateTopicRequest::CreateTopicRequest()
-    : SNSRequest(new CreateTopicRequestPrivate(SNSRequest::CreateTopicAction, this))
+    : SnsRequest(new CreateTopicRequestPrivate(SnsRequest::CreateTopicAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CreateTopicRequestPrivate object for SNS \a action,
+ * Constructs a CreateTopicRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
-    const SNSRequest::Action action, CreateTopicRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, CreateTopicRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ CreateTopicRequestPrivate::CreateTopicRequestPrivate(
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
     const CreateTopicRequestPrivate &other, CreateTopicRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

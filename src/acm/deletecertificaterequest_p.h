@@ -28,10 +28,10 @@ namespace ACM {
 
 class DeleteCertificateRequest;
 
-class QTAWS_EXPORT DeleteCertificateRequestPrivate : public ACMRequestPrivate {
+class QTAWS_EXPORT DeleteCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
-    DeleteCertificateRequestPrivate(const ACMRequest::Action action,
+    DeleteCertificateRequestPrivate(const AcmRequest::Action action,
                                    DeleteCertificateRequest * const q);
     DeleteCertificateRequestPrivate(const DeleteCertificateRequestPrivate &other,
                                    DeleteCertificateRequest * const q);

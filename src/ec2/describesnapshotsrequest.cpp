@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeSnapshotsRequest::DescribeSnapshotsRequest(const DescribeSnapshotsRequest &other)
-    : EC2Request(new DescribeSnapshotsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeSnapshotsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeSnapshotsRequest::DescribeSnapshotsRequest(const DescribeSnapshotsReques
  * Constructs a DescribeSnapshotsRequest object.
  */
 DescribeSnapshotsRequest::DescribeSnapshotsRequest()
-    : EC2Request(new DescribeSnapshotsRequestPrivate(EC2Request::DescribeSnapshotsAction, this))
+    : Ec2Request(new DescribeSnapshotsRequestPrivate(Ec2Request::DescribeSnapshotsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DescribeSnapshotsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeSnapshotsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
-    const EC2Request::Action action, DescribeSnapshotsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeSnapshotsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
  */
 DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
     const DescribeSnapshotsRequestPrivate &other, DescribeSnapshotsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

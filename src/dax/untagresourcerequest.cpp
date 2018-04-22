@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : DAXRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : DAXRequest(new UntagResourceRequestPrivate(DAXRequest::UntagResourceAction, this))
+    : DaxRequest(new UntagResourceRequestPrivate(DaxRequest::UntagResourceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for DAX \a action,
+ * Constructs a UntagResourceRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const DAXRequest::Action action, UntagResourceRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, UntagResourceRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

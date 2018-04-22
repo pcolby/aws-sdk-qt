@@ -48,7 +48,7 @@ CopySnapshotResponse::CopySnapshotResponse(
         const CopySnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CopySnapshotResponsePrivate(this), parent)
+    : Ec2Response(new CopySnapshotResponsePrivate(this), parent)
 {
     setRequest(new CopySnapshotRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CopySnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a CopySnapshotResponsePrivate object with public implementation \a q.
  */
 CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
-    CopySnapshotResponse * const q) : EC2ResponsePrivate(q)
+    CopySnapshotResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

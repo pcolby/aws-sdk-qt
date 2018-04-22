@@ -102,7 +102,7 @@ GetFederationTokenResponse::GetFederationTokenResponse(
         const GetFederationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new GetFederationTokenResponsePrivate(this), parent)
+    : StsResponse(new GetFederationTokenResponsePrivate(this), parent)
 {
     setRequest(new GetFederationTokenRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ void GetFederationTokenResponse::parseSuccess(QIODevice &response)
  * Constructs a GetFederationTokenResponsePrivate object with public implementation \a q.
  */
 GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
-    GetFederationTokenResponse * const q) : STSResponsePrivate(q)
+    GetFederationTokenResponse * const q) : StsResponsePrivate(q)
 {
 
 }

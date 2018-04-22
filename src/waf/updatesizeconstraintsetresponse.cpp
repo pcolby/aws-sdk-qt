@@ -49,7 +49,7 @@ UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
         const UpdateSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
+    : WafResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateSizeConstraintSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
-    UpdateSizeConstraintSetResponse * const q) : WAFResponsePrivate(q)
+    UpdateSizeConstraintSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

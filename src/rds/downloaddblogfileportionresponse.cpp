@@ -108,7 +108,7 @@ DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
         const DownloadDBLogFilePortionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DownloadDBLogFilePortionResponsePrivate(this), parent)
+    : RdsResponse(new DownloadDBLogFilePortionResponsePrivate(this), parent)
 {
     setRequest(new DownloadDBLogFilePortionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
  * Constructs a DownloadDBLogFilePortionResponsePrivate object with public implementation \a q.
  */
 DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate(
-    DownloadDBLogFilePortionResponse * const q) : RDSResponsePrivate(q)
+    DownloadDBLogFilePortionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DetachVolumeRequest::DetachVolumeRequest(const DetachVolumeRequest &other)
-    : EC2Request(new DetachVolumeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DetachVolumeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DetachVolumeRequest::DetachVolumeRequest(const DetachVolumeRequest &other)
  * Constructs a DetachVolumeRequest object.
  */
 DetachVolumeRequest::DetachVolumeRequest()
-    : EC2Request(new DetachVolumeRequestPrivate(EC2Request::DetachVolumeAction, this))
+    : Ec2Request(new DetachVolumeRequestPrivate(Ec2Request::DetachVolumeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DetachVolumeRequestPrivate object for EC2 \a action,
+ * Constructs a DetachVolumeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
-    const EC2Request::Action action, DetachVolumeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DetachVolumeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
     const DetachVolumeRequestPrivate &other, DetachVolumeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SES {
 
 class DeleteConfigurationSetRequest;
 
-class QTAWS_EXPORT DeleteConfigurationSetRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT DeleteConfigurationSetRequestPrivate : public SesRequestPrivate {
 
 public:
-    DeleteConfigurationSetRequestPrivate(const SESRequest::Action action,
+    DeleteConfigurationSetRequestPrivate(const SesRequest::Action action,
                                    DeleteConfigurationSetRequest * const q);
     DeleteConfigurationSetRequestPrivate(const DeleteConfigurationSetRequestPrivate &other,
                                    DeleteConfigurationSetRequest * const q);

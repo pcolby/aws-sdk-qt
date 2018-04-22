@@ -61,7 +61,7 @@ StopTaskResponse::StopTaskResponse(
         const StopTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new StopTaskResponsePrivate(this), parent)
+    : EcsResponse(new StopTaskResponsePrivate(this), parent)
 {
     setRequest(new StopTaskRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void StopTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a StopTaskResponsePrivate object with public implementation \a q.
  */
 StopTaskResponsePrivate::StopTaskResponsePrivate(
-    StopTaskResponse * const q) : ECSResponsePrivate(q)
+    StopTaskResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

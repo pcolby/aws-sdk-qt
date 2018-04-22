@@ -48,7 +48,7 @@ UpdateClusterResponse::UpdateClusterResponse(
         const UpdateClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new UpdateClusterResponsePrivate(this), parent)
+    : DaxResponse(new UpdateClusterResponsePrivate(this), parent)
 {
     setRequest(new UpdateClusterRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UpdateClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateClusterResponsePrivate object with public implementation \a q.
  */
 UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
-    UpdateClusterResponse * const q) : DAXResponsePrivate(q)
+    UpdateClusterResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

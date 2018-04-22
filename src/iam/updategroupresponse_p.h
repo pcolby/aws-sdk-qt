@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateGroupResponse;
 
-class QTAWS_EXPORT UpdateGroupResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT UpdateGroupResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

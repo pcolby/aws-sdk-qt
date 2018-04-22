@@ -109,7 +109,7 @@ RemoveRoleFromInstanceProfileResponse::RemoveRoleFromInstanceProfileResponse(
         const RemoveRoleFromInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new RemoveRoleFromInstanceProfileResponsePrivate(this), parent)
+    : IamResponse(new RemoveRoleFromInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new RemoveRoleFromInstanceProfileRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void RemoveRoleFromInstanceProfileResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveRoleFromInstanceProfileResponsePrivate object with public implementation \a q.
  */
 RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileResponsePrivate(
-    RemoveRoleFromInstanceProfileResponse * const q) : IAMResponsePrivate(q)
+    RemoveRoleFromInstanceProfileResponse * const q) : IamResponsePrivate(q)
 {
 
 }

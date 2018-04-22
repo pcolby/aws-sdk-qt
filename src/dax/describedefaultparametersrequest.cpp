@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DescribeDefaultParametersRequest::DescribeDefaultParametersRequest(const DescribeDefaultParametersRequest &other)
-    : DAXRequest(new DescribeDefaultParametersRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DescribeDefaultParametersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeDefaultParametersRequest::DescribeDefaultParametersRequest(const Describ
  * Constructs a DescribeDefaultParametersRequest object.
  */
 DescribeDefaultParametersRequest::DescribeDefaultParametersRequest()
-    : DAXRequest(new DescribeDefaultParametersRequestPrivate(DAXRequest::DescribeDefaultParametersAction, this))
+    : DaxRequest(new DescribeDefaultParametersRequestPrivate(DaxRequest::DescribeDefaultParametersAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeDefaultParametersRequestPrivate object for DAX \a action,
+ * Constructs a DescribeDefaultParametersRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
-    const DAXRequest::Action action, DescribeDefaultParametersRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DescribeDefaultParametersRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
     const DescribeDefaultParametersRequestPrivate &other, DescribeDefaultParametersRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

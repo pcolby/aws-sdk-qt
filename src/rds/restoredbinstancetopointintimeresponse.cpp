@@ -108,7 +108,7 @@ RestoreDBInstanceToPointInTimeResponse::RestoreDBInstanceToPointInTimeResponse(
         const RestoreDBInstanceToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBInstanceToPointInTimeResponsePrivate(this), parent)
+    : RdsResponse(new RestoreDBInstanceToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBInstanceToPointInTimeRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RestoreDBInstanceToPointInTimeResponse::parseSuccess(QIODevice &response)
  * Constructs a RestoreDBInstanceToPointInTimeResponsePrivate object with public implementation \a q.
  */
 RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTimeResponsePrivate(
-    RestoreDBInstanceToPointInTimeResponse * const q) : RDSResponsePrivate(q)
+    RestoreDBInstanceToPointInTimeResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

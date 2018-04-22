@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeDBParameterGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDBParameterGroupsRequest : public RDSRequest {
+class QTAWS_EXPORT DescribeDBParameterGroupsRequest : public RdsRequest {
 
 public:
     DescribeDBParameterGroupsRequest(const DescribeDBParameterGroupsRequest &other);

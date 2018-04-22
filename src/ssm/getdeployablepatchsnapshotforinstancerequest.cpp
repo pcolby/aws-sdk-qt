@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInstanceRequest(const GetDeployablePatchSnapshotForInstanceRequest &other)
-    : SSMRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInsta
  * Constructs a GetDeployablePatchSnapshotForInstanceRequest object.
  */
 GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInstanceRequest()
-    : SSMRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(SSMRequest::GetDeployablePatchSnapshotForInstanceAction, this))
+    : SsmRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(SsmRequest::GetDeployablePatchSnapshotForInstanceAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest:
  */
 
 /*!
- * Constructs a GetDeployablePatchSnapshotForInstanceRequestPrivate object for SSM \a action,
+ * Constructs a GetDeployablePatchSnapshotForInstanceRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
-    const SSMRequest::Action action, GetDeployablePatchSnapshotForInstanceRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetDeployablePatchSnapshotForInstanceRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotF
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
     const GetDeployablePatchSnapshotForInstanceRequestPrivate &other, GetDeployablePatchSnapshotForInstanceRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

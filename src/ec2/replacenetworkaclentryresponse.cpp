@@ -48,7 +48,7 @@ ReplaceNetworkAclEntryResponse::ReplaceNetworkAclEntryResponse(
         const ReplaceNetworkAclEntryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReplaceNetworkAclEntryResponsePrivate(this), parent)
+    : Ec2Response(new ReplaceNetworkAclEntryResponsePrivate(this), parent)
 {
     setRequest(new ReplaceNetworkAclEntryRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ReplaceNetworkAclEntryResponse::parseSuccess(QIODevice &response)
  * Constructs a ReplaceNetworkAclEntryResponsePrivate object with public implementation \a q.
  */
 ReplaceNetworkAclEntryResponsePrivate::ReplaceNetworkAclEntryResponsePrivate(
-    ReplaceNetworkAclEntryResponse * const q) : EC2ResponsePrivate(q)
+    ReplaceNetworkAclEntryResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

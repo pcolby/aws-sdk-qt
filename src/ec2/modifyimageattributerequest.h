@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyImageAttributeRequestPrivate;
 
-class QTAWS_EXPORT ModifyImageAttributeRequest : public EC2Request {
+class QTAWS_EXPORT ModifyImageAttributeRequest : public Ec2Request {
 
 public:
     ModifyImageAttributeRequest(const ModifyImageAttributeRequest &other);

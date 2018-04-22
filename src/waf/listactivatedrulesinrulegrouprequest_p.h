@@ -28,10 +28,10 @@ namespace WAF {
 
 class ListActivatedRulesInRuleGroupRequest;
 
-class QTAWS_EXPORT ListActivatedRulesInRuleGroupRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT ListActivatedRulesInRuleGroupRequestPrivate : public WafRequestPrivate {
 
 public:
-    ListActivatedRulesInRuleGroupRequestPrivate(const WAFRequest::Action action,
+    ListActivatedRulesInRuleGroupRequestPrivate(const WafRequest::Action action,
                                    ListActivatedRulesInRuleGroupRequest * const q);
     ListActivatedRulesInRuleGroupRequestPrivate(const ListActivatedRulesInRuleGroupRequestPrivate &other,
                                    ListActivatedRulesInRuleGroupRequest * const q);

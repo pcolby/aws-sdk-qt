@@ -55,7 +55,7 @@ UpdateConfigurationSetTrackingOptionsResponse::UpdateConfigurationSetTrackingOpt
         const UpdateConfigurationSetTrackingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateConfigurationSetTrackingOptionsResponsePrivate(this), parent)
+    : SesResponse(new UpdateConfigurationSetTrackingOptionsResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationSetTrackingOptionsRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
  * Constructs a UpdateConfigurationSetTrackingOptionsResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetTrackingOptionsResponsePrivate::UpdateConfigurationSetTrackingOptionsResponsePrivate(
-    UpdateConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
+    UpdateConfigurationSetTrackingOptionsResponse * const q) : SesResponsePrivate(q)
 {
 
 }

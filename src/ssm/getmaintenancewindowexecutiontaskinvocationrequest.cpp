@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutionTaskInvocationRequest(const GetMaintenanceWindowExecutionTaskInvocationRequest &other)
-    : SSMRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutio
  * Constructs a GetMaintenanceWindowExecutionTaskInvocationRequest object.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutionTaskInvocationRequest()
-    : SSMRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(SSMRequest::GetMaintenanceWindowExecutionTaskInvocationAction, this))
+    : SsmRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(SsmRequest::GetMaintenanceWindowExecutionTaskInvocationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetMaintenanceWindowExecutionTaskInvocationRe
  */
 
 /*!
- * Constructs a GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object for SSM \a action,
+ * Constructs a GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(
-    const SSMRequest::Action action, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowE
  */
 GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(
     const GetMaintenanceWindowExecutionTaskInvocationRequestPrivate &other, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ReplaceRouteResponse;
 
-class QTAWS_EXPORT ReplaceRouteResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT ReplaceRouteResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

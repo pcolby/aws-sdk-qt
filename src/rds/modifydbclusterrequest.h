@@ -27,7 +27,7 @@ namespace RDS {
 
 class ModifyDBClusterRequestPrivate;
 
-class QTAWS_EXPORT ModifyDBClusterRequest : public RDSRequest {
+class QTAWS_EXPORT ModifyDBClusterRequest : public RdsRequest {
 
 public:
     ModifyDBClusterRequest(const ModifyDBClusterRequest &other);

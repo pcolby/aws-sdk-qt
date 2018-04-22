@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest(const GetContextKeysForCustomPolicyRequest &other)
-    : IAMRequest(new GetContextKeysForCustomPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetContextKeysForCustomPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest(const
  * Constructs a GetContextKeysForCustomPolicyRequest object.
  */
 GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest()
-    : IAMRequest(new GetContextKeysForCustomPolicyRequestPrivate(IAMRequest::GetContextKeysForCustomPolicyAction, this))
+    : IamRequest(new GetContextKeysForCustomPolicyRequestPrivate(IamRequest::GetContextKeysForCustomPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetContextKeysForCustomPolicyRequest::respons
  */
 
 /*!
- * Constructs a GetContextKeysForCustomPolicyRequestPrivate object for IAM \a action,
+ * Constructs a GetContextKeysForCustomPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyRequestPrivate(
-    const IAMRequest::Action action, GetContextKeysForCustomPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetContextKeysForCustomPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyReques
  */
 GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyRequestPrivate(
     const GetContextKeysForCustomPolicyRequestPrivate &other, GetContextKeysForCustomPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

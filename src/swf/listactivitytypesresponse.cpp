@@ -60,7 +60,7 @@ ListActivityTypesResponse::ListActivityTypesResponse(
         const ListActivityTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new ListActivityTypesResponsePrivate(this), parent)
+    : SwfResponse(new ListActivityTypesResponsePrivate(this), parent)
 {
     setRequest(new ListActivityTypesRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void ListActivityTypesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListActivityTypesResponsePrivate object with public implementation \a q.
  */
 ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
-    ListActivityTypesResponse * const q) : SWFResponsePrivate(q)
+    ListActivityTypesResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

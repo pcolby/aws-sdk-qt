@@ -48,7 +48,7 @@ CreateNetworkInterfaceResponse::CreateNetworkInterfaceResponse(
         const CreateNetworkInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateNetworkInterfaceResponsePrivate(this), parent)
+    : Ec2Response(new CreateNetworkInterfaceResponsePrivate(this), parent)
 {
     setRequest(new CreateNetworkInterfaceRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateNetworkInterfaceResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateNetworkInterfaceResponsePrivate object with public implementation \a q.
  */
 CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
-    CreateNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
+    CreateNetworkInterfaceResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ DescribeSecurityGroupsResponse::DescribeSecurityGroupsResponse(
         const DescribeSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSecurityGroupsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSecurityGroupsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSecurityGroupsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeSecurityGroupsResponsePrivate::DescribeSecurityGroupsResponsePrivate(
-    DescribeSecurityGroupsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSecurityGroupsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

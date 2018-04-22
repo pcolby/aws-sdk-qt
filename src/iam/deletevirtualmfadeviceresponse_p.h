@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteVirtualMFADeviceResponse;
 
-class QTAWS_EXPORT DeleteVirtualMFADeviceResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT DeleteVirtualMFADeviceResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

@@ -28,10 +28,10 @@ namespace SSM {
 
 class CreateActivationRequest;
 
-class QTAWS_EXPORT CreateActivationRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT CreateActivationRequestPrivate : public SsmRequestPrivate {
 
 public:
-    CreateActivationRequestPrivate(const SSMRequest::Action action,
+    CreateActivationRequestPrivate(const SsmRequest::Action action,
                                    CreateActivationRequest * const q);
     CreateActivationRequestPrivate(const CreateActivationRequestPrivate &other,
                                    CreateActivationRequest * const q);

@@ -28,7 +28,7 @@ namespace SFN {
 
 class DescribeStateMachineForExecutionResponsePrivate;
 
-class QTAWS_EXPORT DescribeStateMachineForExecutionResponse : public SFNResponse {
+class QTAWS_EXPORT DescribeStateMachineForExecutionResponse : public SfnResponse {
     Q_OBJECT
 
 public:

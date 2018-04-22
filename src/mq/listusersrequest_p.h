@@ -28,10 +28,10 @@ namespace MQ {
 
 class ListUsersRequest;
 
-class QTAWS_EXPORT ListUsersRequestPrivate : public MQRequestPrivate {
+class QTAWS_EXPORT ListUsersRequestPrivate : public MqRequestPrivate {
 
 public:
-    ListUsersRequestPrivate(const MQRequest::Action action,
+    ListUsersRequestPrivate(const MqRequest::Action action,
                                    ListUsersRequest * const q);
     ListUsersRequestPrivate(const ListUsersRequestPrivate &other,
                                    ListUsersRequest * const q);

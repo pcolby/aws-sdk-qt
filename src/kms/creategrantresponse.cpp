@@ -143,7 +143,7 @@ CreateGrantResponse::CreateGrantResponse(
         const CreateGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new CreateGrantResponsePrivate(this), parent)
+    : KmsResponse(new CreateGrantResponsePrivate(this), parent)
 {
     setRequest(new CreateGrantRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void CreateGrantResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateGrantResponsePrivate object with public implementation \a q.
  */
 CreateGrantResponsePrivate::CreateGrantResponsePrivate(
-    CreateGrantResponse * const q) : KMSResponsePrivate(q)
+    CreateGrantResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteInstanceProfileRequest::DeleteInstanceProfileRequest(const DeleteInstanceProfileRequest &other)
-    : IAMRequest(new DeleteInstanceProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteInstanceProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteInstanceProfileRequest::DeleteInstanceProfileRequest(const DeleteInstanceP
  * Constructs a DeleteInstanceProfileRequest object.
  */
 DeleteInstanceProfileRequest::DeleteInstanceProfileRequest()
-    : IAMRequest(new DeleteInstanceProfileRequestPrivate(IAMRequest::DeleteInstanceProfileAction, this))
+    : IamRequest(new DeleteInstanceProfileRequestPrivate(IamRequest::DeleteInstanceProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeleteInstanceProfileRequestPrivate object for IAM \a action,
+ * Constructs a DeleteInstanceProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
-    const IAMRequest::Action action, DeleteInstanceProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteInstanceProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const DeleteInstanceProfileRequestPrivate &other, DeleteInstanceProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

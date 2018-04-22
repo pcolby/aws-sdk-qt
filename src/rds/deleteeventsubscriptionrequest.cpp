@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other)
-    : RDSRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEvent
  * Constructs a DeleteEventSubscriptionRequest object.
  */
 DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest()
-    : RDSRequest(new DeleteEventSubscriptionRequestPrivate(RDSRequest::DeleteEventSubscriptionAction, this))
+    : RdsRequest(new DeleteEventSubscriptionRequestPrivate(RdsRequest::DeleteEventSubscriptionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
  */
 
 /*!
- * Constructs a DeleteEventSubscriptionRequestPrivate object for RDS \a action,
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
-    const RDSRequest::Action action, DeleteEventSubscriptionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteEventSubscriptionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

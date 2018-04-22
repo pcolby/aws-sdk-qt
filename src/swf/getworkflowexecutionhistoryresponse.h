@@ -28,7 +28,7 @@ namespace SWF {
 
 class GetWorkflowExecutionHistoryResponsePrivate;
 
-class QTAWS_EXPORT GetWorkflowExecutionHistoryResponse : public SWFResponse {
+class QTAWS_EXPORT GetWorkflowExecutionHistoryResponse : public SwfResponse {
     Q_OBJECT
 
 public:

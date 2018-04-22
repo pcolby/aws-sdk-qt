@@ -60,7 +60,7 @@ PollForActivityTaskResponse::PollForActivityTaskResponse(
         const PollForActivityTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new PollForActivityTaskResponsePrivate(this), parent)
+    : SwfResponse(new PollForActivityTaskResponsePrivate(this), parent)
 {
     setRequest(new PollForActivityTaskRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void PollForActivityTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a PollForActivityTaskResponsePrivate object with public implementation \a q.
  */
 PollForActivityTaskResponsePrivate::PollForActivityTaskResponsePrivate(
-    PollForActivityTaskResponse * const q) : SWFResponsePrivate(q)
+    PollForActivityTaskResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

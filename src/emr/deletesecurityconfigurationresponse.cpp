@@ -47,7 +47,7 @@ DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
         const DeleteSecurityConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new DeleteSecurityConfigurationResponsePrivate(this), parent)
+    : EmrResponse(new DeleteSecurityConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteSecurityConfigurationRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSecurityConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResponsePrivate(
-    DeleteSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
+    DeleteSecurityConfigurationResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

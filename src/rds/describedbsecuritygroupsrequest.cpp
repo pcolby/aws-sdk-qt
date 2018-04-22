@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest(const DescribeDBSecurityGroupsRequest &other)
-    : RDSRequest(new DescribeDBSecurityGroupsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBSecurityGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest(const DescribeD
  * Constructs a DescribeDBSecurityGroupsRequest object.
  */
 DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest()
-    : RDSRequest(new DescribeDBSecurityGroupsRequestPrivate(RDSRequest::DescribeDBSecurityGroupsAction, this))
+    : RdsRequest(new DescribeDBSecurityGroupsRequestPrivate(RdsRequest::DescribeDBSecurityGroupsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeDBSecurityGroupsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBSecurityGroupsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
-    const RDSRequest::Action action, DescribeDBSecurityGroupsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBSecurityGroupsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
  */
 DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
     const DescribeDBSecurityGroupsRequestPrivate &other, DescribeDBSecurityGroupsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

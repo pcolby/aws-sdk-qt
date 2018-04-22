@@ -109,7 +109,7 @@ GetUserPolicyResponse::GetUserPolicyResponse(
         const GetUserPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetUserPolicyResponsePrivate(this), parent)
+    : IamResponse(new GetUserPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetUserPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetUserPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a GetUserPolicyResponsePrivate object with public implementation \a q.
  */
 GetUserPolicyResponsePrivate::GetUserPolicyResponsePrivate(
-    GetUserPolicyResponse * const q) : IAMResponsePrivate(q)
+    GetUserPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

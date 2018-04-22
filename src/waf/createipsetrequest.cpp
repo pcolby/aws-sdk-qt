@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
-    : WAFRequest(new CreateIPSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new CreateIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateIPSetRequest::CreateIPSetRequest(const CreateIPSetRequest &other)
  * Constructs a CreateIPSetRequest object.
  */
 CreateIPSetRequest::CreateIPSetRequest()
-    : WAFRequest(new CreateIPSetRequestPrivate(WAFRequest::CreateIPSetAction, this))
+    : WafRequest(new CreateIPSetRequestPrivate(WafRequest::CreateIPSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CreateIPSetRequestPrivate object for WAF \a action,
+ * Constructs a CreateIPSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
-    const WAFRequest::Action action, CreateIPSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, CreateIPSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const CreateIPSetRequestPrivate &other, CreateIPSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

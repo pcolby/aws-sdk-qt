@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest(const DescribeSpotFleetRequestHistoryRequest &other)
-    : EC2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest(c
  * Constructs a DescribeSpotFleetRequestHistoryRequest object.
  */
 DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest()
-    : EC2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(EC2Request::DescribeSpotFleetRequestHistoryAction, this))
+    : Ec2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(Ec2Request::DescribeSpotFleetRequestHistoryAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestHistoryRequest::respo
  */
 
 /*!
- * Constructs a DescribeSpotFleetRequestHistoryRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeSpotFleetRequestHistoryRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRequestPrivate(
-    const EC2Request::Action action, DescribeSpotFleetRequestHistoryRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeSpotFleetRequestHistoryRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRe
  */
 DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRequestPrivate(
     const DescribeSpotFleetRequestHistoryRequestPrivate &other, DescribeSpotFleetRequestHistoryRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

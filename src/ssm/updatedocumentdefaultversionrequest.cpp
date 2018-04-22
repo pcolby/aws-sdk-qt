@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest(const UpdateDocumentDefaultVersionRequest &other)
-    : SSMRequest(new UpdateDocumentDefaultVersionRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new UpdateDocumentDefaultVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest(const U
  * Constructs a UpdateDocumentDefaultVersionRequest object.
  */
 UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest()
-    : SSMRequest(new UpdateDocumentDefaultVersionRequestPrivate(SSMRequest::UpdateDocumentDefaultVersionAction, this))
+    : SsmRequest(new UpdateDocumentDefaultVersionRequestPrivate(SsmRequest::UpdateDocumentDefaultVersionAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response
  */
 
 /*!
- * Constructs a UpdateDocumentDefaultVersionRequestPrivate object for SSM \a action,
+ * Constructs a UpdateDocumentDefaultVersionRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
-    const SSMRequest::Action action, UpdateDocumentDefaultVersionRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, UpdateDocumentDefaultVersionRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestP
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
     const UpdateDocumentDefaultVersionRequestPrivate &other, UpdateDocumentDefaultVersionRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

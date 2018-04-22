@@ -68,7 +68,7 @@ ListResourceComplianceSummariesResponse::ListResourceComplianceSummariesResponse
         const ListResourceComplianceSummariesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListResourceComplianceSummariesResponsePrivate(this), parent)
+    : SsmResponse(new ListResourceComplianceSummariesResponsePrivate(this), parent)
 {
     setRequest(new ListResourceComplianceSummariesRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void ListResourceComplianceSummariesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListResourceComplianceSummariesResponsePrivate object with public implementation \a q.
  */
 ListResourceComplianceSummariesResponsePrivate::ListResourceComplianceSummariesResponsePrivate(
-    ListResourceComplianceSummariesResponse * const q) : SSMResponsePrivate(q)
+    ListResourceComplianceSummariesResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

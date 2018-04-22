@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 StopDBInstanceRequest::StopDBInstanceRequest(const StopDBInstanceRequest &other)
-    : RDSRequest(new StopDBInstanceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new StopDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ StopDBInstanceRequest::StopDBInstanceRequest(const StopDBInstanceRequest &other)
  * Constructs a StopDBInstanceRequest object.
  */
 StopDBInstanceRequest::StopDBInstanceRequest()
-    : RDSRequest(new StopDBInstanceRequestPrivate(RDSRequest::StopDBInstanceAction, this))
+    : RdsRequest(new StopDBInstanceRequestPrivate(RdsRequest::StopDBInstanceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a StopDBInstanceRequestPrivate object for RDS \a action,
+ * Constructs a StopDBInstanceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
-    const RDSRequest::Action action, StopDBInstanceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, StopDBInstanceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
     const StopDBInstanceRequestPrivate &other, StopDBInstanceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

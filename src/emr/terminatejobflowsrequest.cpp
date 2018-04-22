@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 TerminateJobFlowsRequest::TerminateJobFlowsRequest(const TerminateJobFlowsRequest &other)
-    : EMRRequest(new TerminateJobFlowsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new TerminateJobFlowsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ TerminateJobFlowsRequest::TerminateJobFlowsRequest(const TerminateJobFlowsReques
  * Constructs a TerminateJobFlowsRequest object.
  */
 TerminateJobFlowsRequest::TerminateJobFlowsRequest()
-    : EMRRequest(new TerminateJobFlowsRequestPrivate(EMRRequest::TerminateJobFlowsAction, this))
+    : EmrRequest(new TerminateJobFlowsRequestPrivate(EmrRequest::TerminateJobFlowsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a TerminateJobFlowsRequestPrivate object for EMR \a action,
+ * Constructs a TerminateJobFlowsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
-    const EMRRequest::Action action, TerminateJobFlowsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, TerminateJobFlowsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
     const TerminateJobFlowsRequestPrivate &other, TerminateJobFlowsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

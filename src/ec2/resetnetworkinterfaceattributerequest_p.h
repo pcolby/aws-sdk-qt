@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ResetNetworkInterfaceAttributeRequest;
 
-class QTAWS_EXPORT ResetNetworkInterfaceAttributeRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ResetNetworkInterfaceAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ResetNetworkInterfaceAttributeRequestPrivate(const EC2Request::Action action,
+    ResetNetworkInterfaceAttributeRequestPrivate(const Ec2Request::Action action,
                                    ResetNetworkInterfaceAttributeRequest * const q);
     ResetNetworkInterfaceAttributeRequestPrivate(const ResetNetworkInterfaceAttributeRequestPrivate &other,
                                    ResetNetworkInterfaceAttributeRequest * const q);

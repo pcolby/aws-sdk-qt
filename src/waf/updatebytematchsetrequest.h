@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateByteMatchSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateByteMatchSetRequest : public WAFRequest {
+class QTAWS_EXPORT UpdateByteMatchSetRequest : public WafRequest {
 
 public:
     UpdateByteMatchSetRequest(const UpdateByteMatchSetRequest &other);

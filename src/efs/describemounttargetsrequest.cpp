@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DescribeMountTargetsRequest::DescribeMountTargetsRequest(const DescribeMountTargetsRequest &other)
-    : EFSRequest(new DescribeMountTargetsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DescribeMountTargetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DescribeMountTargetsRequest::DescribeMountTargetsRequest(const DescribeMountTarg
  * Constructs a DescribeMountTargetsRequest object.
  */
 DescribeMountTargetsRequest::DescribeMountTargetsRequest()
-    : EFSRequest(new DescribeMountTargetsRequestPrivate(EFSRequest::DescribeMountTargetsAction, this))
+    : EfsRequest(new DescribeMountTargetsRequestPrivate(EfsRequest::DescribeMountTargetsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeMountTargetsRequestPrivate object for EFS \a action,
+ * Constructs a DescribeMountTargetsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
-    const EFSRequest::Action action, DescribeMountTargetsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DescribeMountTargetsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
  */
 DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
     const DescribeMountTargetsRequestPrivate &other, DescribeMountTargetsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

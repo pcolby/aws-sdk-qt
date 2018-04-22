@@ -47,7 +47,7 @@ DescribeJobFlowsResponse::DescribeJobFlowsResponse(
         const DescribeJobFlowsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new DescribeJobFlowsResponsePrivate(this), parent)
+    : EmrResponse(new DescribeJobFlowsResponsePrivate(this), parent)
 {
     setRequest(new DescribeJobFlowsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeJobFlowsResponsePrivate object with public implementation \a q.
  */
 DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
-    DescribeJobFlowsResponse * const q) : EMRResponsePrivate(q)
+    DescribeJobFlowsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

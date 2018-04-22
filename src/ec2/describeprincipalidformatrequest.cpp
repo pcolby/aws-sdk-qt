@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest(const DescribePrincipalIdFormatRequest &other)
-    : EC2Request(new DescribePrincipalIdFormatRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribePrincipalIdFormatRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest(const Describ
  * Constructs a DescribePrincipalIdFormatRequest object.
  */
 DescribePrincipalIdFormatRequest::DescribePrincipalIdFormatRequest()
-    : EC2Request(new DescribePrincipalIdFormatRequestPrivate(EC2Request::DescribePrincipalIdFormatAction, this))
+    : Ec2Request(new DescribePrincipalIdFormatRequestPrivate(Ec2Request::DescribePrincipalIdFormatAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QN
  */
 
 /*!
- * Constructs a DescribePrincipalIdFormatRequestPrivate object for EC2 \a action,
+ * Constructs a DescribePrincipalIdFormatRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate(
-    const EC2Request::Action action, DescribePrincipalIdFormatRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribePrincipalIdFormatRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate
  */
 DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate(
     const DescribePrincipalIdFormatRequestPrivate &other, DescribePrincipalIdFormatRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

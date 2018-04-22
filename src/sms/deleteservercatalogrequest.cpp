@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 DeleteServerCatalogRequest::DeleteServerCatalogRequest(const DeleteServerCatalogRequest &other)
-    : SMSRequest(new DeleteServerCatalogRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new DeleteServerCatalogRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ DeleteServerCatalogRequest::DeleteServerCatalogRequest(const DeleteServerCatalog
  * Constructs a DeleteServerCatalogRequest object.
  */
 DeleteServerCatalogRequest::DeleteServerCatalogRequest()
-    : SMSRequest(new DeleteServerCatalogRequestPrivate(SMSRequest::DeleteServerCatalogAction, this))
+    : SmsRequest(new DeleteServerCatalogRequestPrivate(SmsRequest::DeleteServerCatalogAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeleteServerCatalogRequestPrivate object for SMS \a action,
+ * Constructs a DeleteServerCatalogRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
-    const SMSRequest::Action action, DeleteServerCatalogRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, DeleteServerCatalogRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
     const DeleteServerCatalogRequestPrivate &other, DeleteServerCatalogRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

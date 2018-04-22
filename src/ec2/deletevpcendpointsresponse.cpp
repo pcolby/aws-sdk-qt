@@ -48,7 +48,7 @@ DeleteVpcEndpointsResponse::DeleteVpcEndpointsResponse(
         const DeleteVpcEndpointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVpcEndpointsResponsePrivate(this), parent)
+    : Ec2Response(new DeleteVpcEndpointsResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcEndpointsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteVpcEndpointsResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteVpcEndpointsResponsePrivate object with public implementation \a q.
  */
 DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponsePrivate(
-    DeleteVpcEndpointsResponse * const q) : EC2ResponsePrivate(q)
+    DeleteVpcEndpointsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

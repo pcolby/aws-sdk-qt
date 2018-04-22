@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateAccessKeyRequest::UpdateAccessKeyRequest(const UpdateAccessKeyRequest &other)
-    : IAMRequest(new UpdateAccessKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateAccessKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateAccessKeyRequest::UpdateAccessKeyRequest(const UpdateAccessKeyRequest &oth
  * Constructs a UpdateAccessKeyRequest object.
  */
 UpdateAccessKeyRequest::UpdateAccessKeyRequest()
-    : IAMRequest(new UpdateAccessKeyRequestPrivate(IAMRequest::UpdateAccessKeyAction, this))
+    : IamRequest(new UpdateAccessKeyRequestPrivate(IamRequest::UpdateAccessKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a UpdateAccessKeyRequestPrivate object for IAM \a action,
+ * Constructs a UpdateAccessKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
-    const IAMRequest::Action action, UpdateAccessKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateAccessKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
     const UpdateAccessKeyRequestPrivate &other, UpdateAccessKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

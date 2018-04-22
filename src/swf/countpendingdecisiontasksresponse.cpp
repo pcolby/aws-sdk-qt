@@ -60,7 +60,7 @@ CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
         const CountPendingDecisionTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new CountPendingDecisionTasksResponsePrivate(this), parent)
+    : SwfResponse(new CountPendingDecisionTasksResponsePrivate(this), parent)
 {
     setRequest(new CountPendingDecisionTasksRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void CountPendingDecisionTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a CountPendingDecisionTasksResponsePrivate object with public implementation \a q.
  */
 CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponsePrivate(
-    CountPendingDecisionTasksResponse * const q) : SWFResponsePrivate(q)
+    CountPendingDecisionTasksResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

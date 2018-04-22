@@ -60,7 +60,7 @@ ListDomainsResponse::ListDomainsResponse(
         const ListDomainsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new ListDomainsResponsePrivate(this), parent)
+    : SwfResponse(new ListDomainsResponsePrivate(this), parent)
 {
     setRequest(new ListDomainsRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListDomainsResponsePrivate object with public implementation \a q.
  */
 ListDomainsResponsePrivate::ListDomainsResponsePrivate(
-    ListDomainsResponse * const q) : SWFResponsePrivate(q)
+    ListDomainsResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

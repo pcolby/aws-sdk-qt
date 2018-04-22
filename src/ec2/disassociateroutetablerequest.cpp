@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisassociateRouteTableRequest::DisassociateRouteTableRequest(const DisassociateRouteTableRequest &other)
-    : EC2Request(new DisassociateRouteTableRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisassociateRouteTableRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisassociateRouteTableRequest::DisassociateRouteTableRequest(const DisassociateR
  * Constructs a DisassociateRouteTableRequest object.
  */
 DisassociateRouteTableRequest::DisassociateRouteTableRequest()
-    : EC2Request(new DisassociateRouteTableRequestPrivate(EC2Request::DisassociateRouteTableAction, this))
+    : Ec2Request(new DisassociateRouteTableRequestPrivate(Ec2Request::DisassociateRouteTableAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetw
  */
 
 /*!
- * Constructs a DisassociateRouteTableRequestPrivate object for EC2 \a action,
+ * Constructs a DisassociateRouteTableRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
-    const EC2Request::Action action, DisassociateRouteTableRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisassociateRouteTableRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
     const DisassociateRouteTableRequestPrivate &other, DisassociateRouteTableRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

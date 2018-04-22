@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGroupRequest(const DeregisterPatchBaselineForPatchGroupRequest &other)
-    : SSMRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGrou
  * Constructs a DeregisterPatchBaselineForPatchGroupRequest object.
  */
 DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGroupRequest()
-    : SSMRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(SSMRequest::DeregisterPatchBaselineForPatchGroupAction, this))
+    : SsmRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(SsmRequest::DeregisterPatchBaselineForPatchGroupAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::
  */
 
 /*!
- * Constructs a DeregisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action,
+ * Constructs a DeregisterPatchBaselineForPatchGroupRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
-    const SSMRequest::Action action, DeregisterPatchBaselineForPatchGroupRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeregisterPatchBaselineForPatchGroupRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPa
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
     const DeregisterPatchBaselineForPatchGroupRequestPrivate &other, DeregisterPatchBaselineForPatchGroupRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

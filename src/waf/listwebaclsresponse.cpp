@@ -49,7 +49,7 @@ ListWebACLsResponse::ListWebACLsResponse(
         const ListWebACLsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListWebACLsResponsePrivate(this), parent)
+    : WafResponse(new ListWebACLsResponsePrivate(this), parent)
 {
     setRequest(new ListWebACLsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListWebACLsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListWebACLsResponsePrivate object with public implementation \a q.
  */
 ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
-    ListWebACLsResponse * const q) : WAFResponsePrivate(q)
+    ListWebACLsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

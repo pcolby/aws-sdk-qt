@@ -68,7 +68,7 @@ GetMaintenanceWindowExecutionTaskResponse::GetMaintenanceWindowExecutionTaskResp
         const GetMaintenanceWindowExecutionTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetMaintenanceWindowExecutionTaskResponsePrivate(this), parent)
+    : SsmResponse(new GetMaintenanceWindowExecutionTaskResponsePrivate(this), parent)
 {
     setRequest(new GetMaintenanceWindowExecutionTaskRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetMaintenanceWindowExecutionTaskResponse::parseSuccess(QIODevice &response
  * Constructs a GetMaintenanceWindowExecutionTaskResponsePrivate object with public implementation \a q.
  */
 GetMaintenanceWindowExecutionTaskResponsePrivate::GetMaintenanceWindowExecutionTaskResponsePrivate(
-    GetMaintenanceWindowExecutionTaskResponse * const q) : SSMResponsePrivate(q)
+    GetMaintenanceWindowExecutionTaskResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsRequest &other)
-    : WAFRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsReq
  * Constructs a GetSampledRequestsRequest object.
  */
 GetSampledRequestsRequest::GetSampledRequestsRequest()
-    : WAFRequest(new GetSampledRequestsRequestPrivate(WAFRequest::GetSampledRequestsAction, this))
+    : WafRequest(new GetSampledRequestsRequestPrivate(WafRequest::GetSampledRequestsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a GetSampledRequestsRequestPrivate object for WAF \a action,
+ * Constructs a GetSampledRequestsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
-    const WAFRequest::Action action, GetSampledRequestsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetSampledRequestsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const GetSampledRequestsRequestPrivate &other, GetSampledRequestsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

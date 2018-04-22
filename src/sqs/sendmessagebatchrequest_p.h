@@ -28,10 +28,10 @@ namespace SQS {
 
 class SendMessageBatchRequest;
 
-class QTAWS_EXPORT SendMessageBatchRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT SendMessageBatchRequestPrivate : public SqsRequestPrivate {
 
 public:
-    SendMessageBatchRequestPrivate(const SQSRequest::Action action,
+    SendMessageBatchRequestPrivate(const SqsRequest::Action action,
                                    SendMessageBatchRequest * const q);
     SendMessageBatchRequestPrivate(const SendMessageBatchRequestPrivate &other,
                                    SendMessageBatchRequest * const q);

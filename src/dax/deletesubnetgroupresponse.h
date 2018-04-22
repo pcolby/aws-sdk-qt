@@ -28,7 +28,7 @@ namespace DAX {
 
 class DeleteSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteSubnetGroupResponse : public DAXResponse {
+class QTAWS_EXPORT DeleteSubnetGroupResponse : public DaxResponse {
     Q_OBJECT
 
 public:

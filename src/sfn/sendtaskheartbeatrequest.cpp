@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 SendTaskHeartbeatRequest::SendTaskHeartbeatRequest(const SendTaskHeartbeatRequest &other)
-    : SFNRequest(new SendTaskHeartbeatRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new SendTaskHeartbeatRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ SendTaskHeartbeatRequest::SendTaskHeartbeatRequest(const SendTaskHeartbeatReques
  * Constructs a SendTaskHeartbeatRequest object.
  */
 SendTaskHeartbeatRequest::SendTaskHeartbeatRequest()
-    : SFNRequest(new SendTaskHeartbeatRequestPrivate(SFNRequest::SendTaskHeartbeatAction, this))
+    : SfnRequest(new SendTaskHeartbeatRequestPrivate(SfnRequest::SendTaskHeartbeatAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a SendTaskHeartbeatRequestPrivate object for SFN \a action,
+ * Constructs a SendTaskHeartbeatRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
-    const SFNRequest::Action action, SendTaskHeartbeatRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, SendTaskHeartbeatRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
     const SendTaskHeartbeatRequestPrivate &other, SendTaskHeartbeatRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

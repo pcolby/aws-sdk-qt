@@ -109,7 +109,7 @@ ListInstanceProfilesForRoleResponse::ListInstanceProfilesForRoleResponse(
         const ListInstanceProfilesForRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListInstanceProfilesForRoleResponsePrivate(this), parent)
+    : IamResponse(new ListInstanceProfilesForRoleResponsePrivate(this), parent)
 {
     setRequest(new ListInstanceProfilesForRoleRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a ListInstanceProfilesForRoleResponsePrivate object with public implementation \a q.
  */
 ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponsePrivate(
-    ListInstanceProfilesForRoleResponse * const q) : IAMResponsePrivate(q)
+    ListInstanceProfilesForRoleResponse * const q) : IamResponsePrivate(q)
 {
 
 }

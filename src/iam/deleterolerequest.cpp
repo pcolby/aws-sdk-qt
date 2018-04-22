@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteRoleRequest::DeleteRoleRequest(const DeleteRoleRequest &other)
-    : IAMRequest(new DeleteRoleRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteRoleRequest::DeleteRoleRequest(const DeleteRoleRequest &other)
  * Constructs a DeleteRoleRequest object.
  */
 DeleteRoleRequest::DeleteRoleRequest()
-    : IAMRequest(new DeleteRoleRequestPrivate(IAMRequest::DeleteRoleAction, this))
+    : IamRequest(new DeleteRoleRequestPrivate(IamRequest::DeleteRoleAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a DeleteRoleRequestPrivate object for IAM \a action,
+ * Constructs a DeleteRoleRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
-    const IAMRequest::Action action, DeleteRoleRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteRoleRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
     const DeleteRoleRequestPrivate &other, DeleteRoleRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

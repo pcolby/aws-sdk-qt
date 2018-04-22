@@ -97,7 +97,7 @@ namespace STS {
  * Constructs a copy of \a other.
  */
 AssumeRoleWithWebIdentityRequest::AssumeRoleWithWebIdentityRequest(const AssumeRoleWithWebIdentityRequest &other)
-    : STSRequest(new AssumeRoleWithWebIdentityRequestPrivate(*other.d_func(), this))
+    : StsRequest(new AssumeRoleWithWebIdentityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +106,7 @@ AssumeRoleWithWebIdentityRequest::AssumeRoleWithWebIdentityRequest(const AssumeR
  * Constructs a AssumeRoleWithWebIdentityRequest object.
  */
 AssumeRoleWithWebIdentityRequest::AssumeRoleWithWebIdentityRequest()
-    : STSRequest(new AssumeRoleWithWebIdentityRequestPrivate(STSRequest::AssumeRoleWithWebIdentityAction, this))
+    : StsRequest(new AssumeRoleWithWebIdentityRequestPrivate(StsRequest::AssumeRoleWithWebIdentityAction, this))
 {
 
 }
@@ -139,12 +139,12 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QN
  */
 
 /*!
- * Constructs a AssumeRoleWithWebIdentityRequestPrivate object for STS \a action,
+ * Constructs a AssumeRoleWithWebIdentityRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
-    const STSRequest::Action action, AssumeRoleWithWebIdentityRequest * const q)
-    : STSRequestPrivate(action, q)
+    const StsRequest::Action action, AssumeRoleWithWebIdentityRequest * const q)
+    : StsRequestPrivate(action, q)
 {
 
 }
@@ -157,7 +157,7 @@ AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
     const AssumeRoleWithWebIdentityRequestPrivate &other, AssumeRoleWithWebIdentityRequest * const q)
-    : STSRequestPrivate(other, q)
+    : StsRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace WAF {
 
 class GetByteMatchSetRequest;
 
-class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    GetByteMatchSetRequestPrivate(const WAFRequest::Action action,
+    GetByteMatchSetRequestPrivate(const WafRequest::Action action,
                                    GetByteMatchSetRequest * const q);
     GetByteMatchSetRequestPrivate(const GetByteMatchSetRequestPrivate &other,
                                    GetByteMatchSetRequest * const q);

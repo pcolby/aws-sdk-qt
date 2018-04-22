@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const DescribeVpcPeeringConnectionsRequest &other)
-    : EC2Request(new DescribeVpcPeeringConnectionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVpcPeeringConnectionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest(const
  * Constructs a DescribeVpcPeeringConnectionsRequest object.
  */
 DescribeVpcPeeringConnectionsRequest::DescribeVpcPeeringConnectionsRequest()
-    : EC2Request(new DescribeVpcPeeringConnectionsRequestPrivate(EC2Request::DescribeVpcPeeringConnectionsAction, this))
+    : Ec2Request(new DescribeVpcPeeringConnectionsRequestPrivate(Ec2Request::DescribeVpcPeeringConnectionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
  */
 
 /*!
- * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
-    const EC2Request::Action action, DescribeVpcPeeringConnectionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVpcPeeringConnectionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const DescribeVpcPeeringConnectionsRequestPrivate &other, DescribeVpcPeeringConnectionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

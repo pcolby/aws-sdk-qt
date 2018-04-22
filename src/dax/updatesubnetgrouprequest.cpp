@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 UpdateSubnetGroupRequest::UpdateSubnetGroupRequest(const UpdateSubnetGroupRequest &other)
-    : DAXRequest(new UpdateSubnetGroupRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new UpdateSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UpdateSubnetGroupRequest::UpdateSubnetGroupRequest(const UpdateSubnetGroupReques
  * Constructs a UpdateSubnetGroupRequest object.
  */
 UpdateSubnetGroupRequest::UpdateSubnetGroupRequest()
-    : DAXRequest(new UpdateSubnetGroupRequestPrivate(DAXRequest::UpdateSubnetGroupAction, this))
+    : DaxRequest(new UpdateSubnetGroupRequestPrivate(DaxRequest::UpdateSubnetGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a UpdateSubnetGroupRequestPrivate object for DAX \a action,
+ * Constructs a UpdateSubnetGroupRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
-    const DAXRequest::Action action, UpdateSubnetGroupRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, UpdateSubnetGroupRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
     const UpdateSubnetGroupRequestPrivate &other, UpdateSubnetGroupRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest(const CreateDBSubnetGroupRequest &other)
-    : RDSRequest(new CreateDBSubnetGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CreateDBSubnetGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest(const CreateDBSubnetGroup
  * Constructs a CreateDBSubnetGroupRequest object.
  */
 CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest()
-    : RDSRequest(new CreateDBSubnetGroupRequestPrivate(RDSRequest::CreateDBSubnetGroupAction, this))
+    : RdsRequest(new CreateDBSubnetGroupRequestPrivate(RdsRequest::CreateDBSubnetGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CreateDBSubnetGroupRequest::response(QNetwork
  */
 
 /*!
- * Constructs a CreateDBSubnetGroupRequestPrivate object for RDS \a action,
+ * Constructs a CreateDBSubnetGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
-    const RDSRequest::Action action, CreateDBSubnetGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CreateDBSubnetGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
  */
 CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
     const CreateDBSubnetGroupRequestPrivate &other, CreateDBSubnetGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

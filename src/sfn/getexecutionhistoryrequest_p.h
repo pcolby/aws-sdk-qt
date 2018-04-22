@@ -28,10 +28,10 @@ namespace SFN {
 
 class GetExecutionHistoryRequest;
 
-class QTAWS_EXPORT GetExecutionHistoryRequestPrivate : public SFNRequestPrivate {
+class QTAWS_EXPORT GetExecutionHistoryRequestPrivate : public SfnRequestPrivate {
 
 public:
-    GetExecutionHistoryRequestPrivate(const SFNRequest::Action action,
+    GetExecutionHistoryRequestPrivate(const SfnRequest::Action action,
                                    GetExecutionHistoryRequest * const q);
     GetExecutionHistoryRequestPrivate(const GetExecutionHistoryRequestPrivate &other,
                                    GetExecutionHistoryRequest * const q);

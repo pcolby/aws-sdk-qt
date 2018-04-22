@@ -28,10 +28,10 @@ namespace EMR {
 
 class RemoveAutoScalingPolicyRequest;
 
-class QTAWS_EXPORT RemoveAutoScalingPolicyRequestPrivate : public EMRRequestPrivate {
+class QTAWS_EXPORT RemoveAutoScalingPolicyRequestPrivate : public EmrRequestPrivate {
 
 public:
-    RemoveAutoScalingPolicyRequestPrivate(const EMRRequest::Action action,
+    RemoveAutoScalingPolicyRequestPrivate(const EmrRequest::Action action,
                                    RemoveAutoScalingPolicyRequest * const q);
     RemoveAutoScalingPolicyRequestPrivate(const RemoveAutoScalingPolicyRequestPrivate &other,
                                    RemoveAutoScalingPolicyRequest * const q);

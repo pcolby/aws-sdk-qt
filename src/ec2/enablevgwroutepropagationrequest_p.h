@@ -28,10 +28,10 @@ namespace EC2 {
 
 class EnableVgwRoutePropagationRequest;
 
-class QTAWS_EXPORT EnableVgwRoutePropagationRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT EnableVgwRoutePropagationRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    EnableVgwRoutePropagationRequestPrivate(const EC2Request::Action action,
+    EnableVgwRoutePropagationRequestPrivate(const Ec2Request::Action action,
                                    EnableVgwRoutePropagationRequest * const q);
     EnableVgwRoutePropagationRequestPrivate(const EnableVgwRoutePropagationRequestPrivate &other,
                                    EnableVgwRoutePropagationRequest * const q);

@@ -28,10 +28,10 @@ namespace SFN {
 
 class ListStateMachinesRequest;
 
-class QTAWS_EXPORT ListStateMachinesRequestPrivate : public SFNRequestPrivate {
+class QTAWS_EXPORT ListStateMachinesRequestPrivate : public SfnRequestPrivate {
 
 public:
-    ListStateMachinesRequestPrivate(const SFNRequest::Action action,
+    ListStateMachinesRequestPrivate(const SfnRequest::Action action,
                                    ListStateMachinesRequest * const q);
     ListStateMachinesRequestPrivate(const ListStateMachinesRequestPrivate &other,
                                    ListStateMachinesRequest * const q);

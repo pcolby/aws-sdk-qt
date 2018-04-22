@@ -28,7 +28,7 @@ namespace ECR {
 
 class DescribeImagesResponsePrivate;
 
-class QTAWS_EXPORT DescribeImagesResponse : public ECRResponse {
+class QTAWS_EXPORT DescribeImagesResponse : public EcrResponse {
     Q_OBJECT
 
 public:

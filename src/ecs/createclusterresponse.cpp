@@ -61,7 +61,7 @@ CreateClusterResponse::CreateClusterResponse(
         const CreateClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new CreateClusterResponsePrivate(this), parent)
+    : EcsResponse(new CreateClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateClusterRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateClusterResponsePrivate object with public implementation \a q.
  */
 CreateClusterResponsePrivate::CreateClusterResponsePrivate(
-    CreateClusterResponse * const q) : ECSResponsePrivate(q)
+    CreateClusterResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

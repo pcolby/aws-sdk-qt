@@ -28,10 +28,10 @@ namespace DAX {
 
 class DeleteClusterRequest;
 
-class QTAWS_EXPORT DeleteClusterRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT DeleteClusterRequestPrivate : public DaxRequestPrivate {
 
 public:
-    DeleteClusterRequestPrivate(const DAXRequest::Action action,
+    DeleteClusterRequestPrivate(const DaxRequest::Action action,
                                    DeleteClusterRequest * const q);
     DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
                                    DeleteClusterRequest * const q);

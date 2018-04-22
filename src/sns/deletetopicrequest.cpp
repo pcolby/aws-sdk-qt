@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 DeleteTopicRequest::DeleteTopicRequest(const DeleteTopicRequest &other)
-    : SNSRequest(new DeleteTopicRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new DeleteTopicRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ DeleteTopicRequest::DeleteTopicRequest(const DeleteTopicRequest &other)
  * Constructs a DeleteTopicRequest object.
  */
 DeleteTopicRequest::DeleteTopicRequest()
-    : SNSRequest(new DeleteTopicRequestPrivate(SNSRequest::DeleteTopicAction, this))
+    : SnsRequest(new DeleteTopicRequestPrivate(SnsRequest::DeleteTopicAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DeleteTopicRequestPrivate object for SNS \a action,
+ * Constructs a DeleteTopicRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
-    const SNSRequest::Action action, DeleteTopicRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, DeleteTopicRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
     const DeleteTopicRequestPrivate &other, DeleteTopicRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

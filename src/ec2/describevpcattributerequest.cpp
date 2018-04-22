@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeVpcAttributeRequest::DescribeVpcAttributeRequest(const DescribeVpcAttributeRequest &other)
-    : EC2Request(new DescribeVpcAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeVpcAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeVpcAttributeRequest::DescribeVpcAttributeRequest(const DescribeVpcAttrib
  * Constructs a DescribeVpcAttributeRequest object.
  */
 DescribeVpcAttributeRequest::DescribeVpcAttributeRequest()
-    : EC2Request(new DescribeVpcAttributeRequestPrivate(EC2Request::DescribeVpcAttributeAction, this))
+    : Ec2Request(new DescribeVpcAttributeRequestPrivate(Ec2Request::DescribeVpcAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcAttributeRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeVpcAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeVpcAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
-    const EC2Request::Action action, DescribeVpcAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeVpcAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
  */
 DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
     const DescribeVpcAttributeRequestPrivate &other, DescribeVpcAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

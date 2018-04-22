@@ -108,7 +108,7 @@ DeleteOptionGroupResponse::DeleteOptionGroupResponse(
         const DeleteOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteOptionGroupResponsePrivate(this), parent)
+    : RdsResponse(new DeleteOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteOptionGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteOptionGroupResponsePrivate object with public implementation \a q.
  */
 DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
-    DeleteOptionGroupResponse * const q) : RDSResponsePrivate(q)
+    DeleteOptionGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

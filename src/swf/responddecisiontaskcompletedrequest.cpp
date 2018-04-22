@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RespondDecisionTaskCompletedRequest::RespondDecisionTaskCompletedRequest(const RespondDecisionTaskCompletedRequest &other)
-    : SWFRequest(new RespondDecisionTaskCompletedRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RespondDecisionTaskCompletedRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RespondDecisionTaskCompletedRequest::RespondDecisionTaskCompletedRequest(const R
  * Constructs a RespondDecisionTaskCompletedRequest object.
  */
 RespondDecisionTaskCompletedRequest::RespondDecisionTaskCompletedRequest()
-    : SWFRequest(new RespondDecisionTaskCompletedRequestPrivate(SWFRequest::RespondDecisionTaskCompletedAction, this))
+    : SwfRequest(new RespondDecisionTaskCompletedRequestPrivate(SwfRequest::RespondDecisionTaskCompletedAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RespondDecisionTaskCompletedRequest::response
  */
 
 /*!
- * Constructs a RespondDecisionTaskCompletedRequestPrivate object for SWF \a action,
+ * Constructs a RespondDecisionTaskCompletedRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestPrivate(
-    const SWFRequest::Action action, RespondDecisionTaskCompletedRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RespondDecisionTaskCompletedRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestP
  */
 RespondDecisionTaskCompletedRequestPrivate::RespondDecisionTaskCompletedRequestPrivate(
     const RespondDecisionTaskCompletedRequestPrivate &other, RespondDecisionTaskCompletedRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

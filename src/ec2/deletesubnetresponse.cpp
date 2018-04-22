@@ -48,7 +48,7 @@ DeleteSubnetResponse::DeleteSubnetResponse(
         const DeleteSubnetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteSubnetResponsePrivate(this), parent)
+    : Ec2Response(new DeleteSubnetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubnetRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteSubnetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSubnetResponsePrivate object with public implementation \a q.
  */
 DeleteSubnetResponsePrivate::DeleteSubnetResponsePrivate(
-    DeleteSubnetResponse * const q) : EC2ResponsePrivate(q)
+    DeleteSubnetResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

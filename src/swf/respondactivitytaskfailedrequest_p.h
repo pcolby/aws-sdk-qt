@@ -28,10 +28,10 @@ namespace SWF {
 
 class RespondActivityTaskFailedRequest;
 
-class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SwfRequestPrivate {
 
 public:
-    RespondActivityTaskFailedRequestPrivate(const SWFRequest::Action action,
+    RespondActivityTaskFailedRequestPrivate(const SwfRequest::Action action,
                                    RespondActivityTaskFailedRequest * const q);
     RespondActivityTaskFailedRequestPrivate(const RespondActivityTaskFailedRequestPrivate &other,
                                    RespondActivityTaskFailedRequest * const q);

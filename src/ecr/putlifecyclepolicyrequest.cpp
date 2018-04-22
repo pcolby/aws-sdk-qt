@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 PutLifecyclePolicyRequest::PutLifecyclePolicyRequest(const PutLifecyclePolicyRequest &other)
-    : ECRRequest(new PutLifecyclePolicyRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new PutLifecyclePolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PutLifecyclePolicyRequest::PutLifecyclePolicyRequest(const PutLifecyclePolicyReq
  * Constructs a PutLifecyclePolicyRequest object.
  */
 PutLifecyclePolicyRequest::PutLifecyclePolicyRequest()
-    : ECRRequest(new PutLifecyclePolicyRequestPrivate(ECRRequest::PutLifecyclePolicyAction, this))
+    : EcrRequest(new PutLifecyclePolicyRequestPrivate(EcrRequest::PutLifecyclePolicyAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a PutLifecyclePolicyRequestPrivate object for ECR \a action,
+ * Constructs a PutLifecyclePolicyRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
-    const ECRRequest::Action action, PutLifecyclePolicyRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, PutLifecyclePolicyRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
     const PutLifecyclePolicyRequestPrivate &other, PutLifecyclePolicyRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

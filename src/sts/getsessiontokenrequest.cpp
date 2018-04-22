@@ -97,7 +97,7 @@ namespace STS {
  * Constructs a copy of \a other.
  */
 GetSessionTokenRequest::GetSessionTokenRequest(const GetSessionTokenRequest &other)
-    : STSRequest(new GetSessionTokenRequestPrivate(*other.d_func(), this))
+    : StsRequest(new GetSessionTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +106,7 @@ GetSessionTokenRequest::GetSessionTokenRequest(const GetSessionTokenRequest &oth
  * Constructs a GetSessionTokenRequest object.
  */
 GetSessionTokenRequest::GetSessionTokenRequest()
-    : STSRequest(new GetSessionTokenRequestPrivate(STSRequest::GetSessionTokenAction, this))
+    : StsRequest(new GetSessionTokenRequestPrivate(StsRequest::GetSessionTokenAction, this))
 {
 
 }
@@ -139,12 +139,12 @@ QtAws::Core::AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetSessionTokenRequestPrivate object for STS \a action,
+ * Constructs a GetSessionTokenRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
-    const STSRequest::Action action, GetSessionTokenRequest * const q)
-    : STSRequestPrivate(action, q)
+    const StsRequest::Action action, GetSessionTokenRequest * const q)
+    : StsRequestPrivate(action, q)
 {
 
 }
@@ -157,7 +157,7 @@ GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
     const GetSessionTokenRequestPrivate &other, GetSessionTokenRequest * const q)
-    : STSRequestPrivate(other, q)
+    : StsRequestPrivate(other, q)
 {
 
 }

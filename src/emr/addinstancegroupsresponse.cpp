@@ -47,7 +47,7 @@ AddInstanceGroupsResponse::AddInstanceGroupsResponse(
         const AddInstanceGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new AddInstanceGroupsResponsePrivate(this), parent)
+    : EmrResponse(new AddInstanceGroupsResponsePrivate(this), parent)
 {
     setRequest(new AddInstanceGroupsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
  * Constructs a AddInstanceGroupsResponsePrivate object with public implementation \a q.
  */
 AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponsePrivate(
-    AddInstanceGroupsResponse * const q) : EMRResponsePrivate(q)
+    AddInstanceGroupsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

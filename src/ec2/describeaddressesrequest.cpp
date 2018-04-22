@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeAddressesRequest::DescribeAddressesRequest(const DescribeAddressesRequest &other)
-    : EC2Request(new DescribeAddressesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeAddressesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeAddressesRequest::DescribeAddressesRequest(const DescribeAddressesReques
  * Constructs a DescribeAddressesRequest object.
  */
 DescribeAddressesRequest::DescribeAddressesRequest()
-    : EC2Request(new DescribeAddressesRequestPrivate(EC2Request::DescribeAddressesAction, this))
+    : Ec2Request(new DescribeAddressesRequestPrivate(Ec2Request::DescribeAddressesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DescribeAddressesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeAddressesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
-    const EC2Request::Action action, DescribeAddressesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeAddressesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
  */
 DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
     const DescribeAddressesRequestPrivate &other, DescribeAddressesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

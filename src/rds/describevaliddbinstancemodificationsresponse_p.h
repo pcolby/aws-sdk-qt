@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeValidDBInstanceModificationsResponse;
 
-class QTAWS_EXPORT DescribeValidDBInstanceModificationsResponsePrivate : public RDSResponsePrivate {
+class QTAWS_EXPORT DescribeValidDBInstanceModificationsResponsePrivate : public RdsResponsePrivate {
     Q_OBJECT
 
 public:

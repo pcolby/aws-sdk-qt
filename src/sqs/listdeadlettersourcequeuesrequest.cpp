@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 ListDeadLetterSourceQueuesRequest::ListDeadLetterSourceQueuesRequest(const ListDeadLetterSourceQueuesRequest &other)
-    : SQSRequest(new ListDeadLetterSourceQueuesRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new ListDeadLetterSourceQueuesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ ListDeadLetterSourceQueuesRequest::ListDeadLetterSourceQueuesRequest(const ListD
  * Constructs a ListDeadLetterSourceQueuesRequest object.
  */
 ListDeadLetterSourceQueuesRequest::ListDeadLetterSourceQueuesRequest()
-    : SQSRequest(new ListDeadLetterSourceQueuesRequestPrivate(SQSRequest::ListDeadLetterSourceQueuesAction, this))
+    : SqsRequest(new ListDeadLetterSourceQueuesRequestPrivate(SqsRequest::ListDeadLetterSourceQueuesAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(Q
  */
 
 /*!
- * Constructs a ListDeadLetterSourceQueuesRequestPrivate object for SQS \a action,
+ * Constructs a ListDeadLetterSourceQueuesRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
-    const SQSRequest::Action action, ListDeadLetterSourceQueuesRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, ListDeadLetterSourceQueuesRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPriva
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
     const ListDeadLetterSourceQueuesRequestPrivate &other, ListDeadLetterSourceQueuesRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

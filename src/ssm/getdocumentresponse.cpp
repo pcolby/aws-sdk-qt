@@ -68,7 +68,7 @@ GetDocumentResponse::GetDocumentResponse(
         const GetDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetDocumentResponsePrivate(this), parent)
+    : SsmResponse(new GetDocumentResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetDocumentResponse::parseSuccess(QIODevice &response)
  * Constructs a GetDocumentResponsePrivate object with public implementation \a q.
  */
 GetDocumentResponsePrivate::GetDocumentResponsePrivate(
-    GetDocumentResponse * const q) : SSMResponsePrivate(q)
+    GetDocumentResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

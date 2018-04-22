@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest(const DescribeEngineDefaultClusterParametersRequest &other)
-    : RDSRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParam
  * Constructs a DescribeEngineDefaultClusterParametersRequest object.
  */
 DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest()
-    : RDSRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(RDSRequest::DescribeEngineDefaultClusterParametersAction, this))
+    : RdsRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(RdsRequest::DescribeEngineDefaultClusterParametersAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest
  */
 
 /*!
- * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for RDS \a action,
+ * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
-    const RDSRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClust
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const DescribeEngineDefaultClusterParametersRequestPrivate &other, DescribeEngineDefaultClusterParametersRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

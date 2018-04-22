@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateNetworkAclRequest::CreateNetworkAclRequest(const CreateNetworkAclRequest &other)
-    : EC2Request(new CreateNetworkAclRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateNetworkAclRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateNetworkAclRequest::CreateNetworkAclRequest(const CreateNetworkAclRequest &
  * Constructs a CreateNetworkAclRequest object.
  */
 CreateNetworkAclRequest::CreateNetworkAclRequest()
-    : EC2Request(new CreateNetworkAclRequestPrivate(EC2Request::CreateNetworkAclAction, this))
+    : Ec2Request(new CreateNetworkAclRequestPrivate(Ec2Request::CreateNetworkAclAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateNetworkAclRequestPrivate object for EC2 \a action,
+ * Constructs a CreateNetworkAclRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
-    const EC2Request::Action action, CreateNetworkAclRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateNetworkAclRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
  */
 CreateNetworkAclRequestPrivate::CreateNetworkAclRequestPrivate(
     const CreateNetworkAclRequestPrivate &other, CreateNetworkAclRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

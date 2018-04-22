@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListAssociationsRequest::ListAssociationsRequest(const ListAssociationsRequest &other)
-    : SSMRequest(new ListAssociationsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListAssociationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListAssociationsRequest::ListAssociationsRequest(const ListAssociationsRequest &
  * Constructs a ListAssociationsRequest object.
  */
 ListAssociationsRequest::ListAssociationsRequest()
-    : SSMRequest(new ListAssociationsRequestPrivate(SSMRequest::ListAssociationsAction, this))
+    : SsmRequest(new ListAssociationsRequestPrivate(SsmRequest::ListAssociationsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListAssociationsRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ListAssociationsRequestPrivate object for SSM \a action,
+ * Constructs a ListAssociationsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
-    const SSMRequest::Action action, ListAssociationsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListAssociationsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
     const ListAssociationsRequestPrivate &other, ListAssociationsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

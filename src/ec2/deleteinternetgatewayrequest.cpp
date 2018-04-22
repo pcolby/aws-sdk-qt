@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteInternetGatewayRequest::DeleteInternetGatewayRequest(const DeleteInternetGatewayRequest &other)
-    : EC2Request(new DeleteInternetGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteInternetGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteInternetGatewayRequest::DeleteInternetGatewayRequest(const DeleteInternetG
  * Constructs a DeleteInternetGatewayRequest object.
  */
 DeleteInternetGatewayRequest::DeleteInternetGatewayRequest()
-    : EC2Request(new DeleteInternetGatewayRequestPrivate(EC2Request::DeleteInternetGatewayAction, this))
+    : Ec2Request(new DeleteInternetGatewayRequestPrivate(Ec2Request::DeleteInternetGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeleteInternetGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteInternetGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
-    const EC2Request::Action action, DeleteInternetGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteInternetGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
     const DeleteInternetGatewayRequestPrivate &other, DeleteInternetGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

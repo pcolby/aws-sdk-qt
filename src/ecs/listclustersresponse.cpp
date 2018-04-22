@@ -61,7 +61,7 @@ ListClustersResponse::ListClustersResponse(
         const ListClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new ListClustersResponsePrivate(this), parent)
+    : EcsResponse(new ListClustersResponsePrivate(this), parent)
 {
     setRequest(new ListClustersRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void ListClustersResponse::parseSuccess(QIODevice &response)
  * Constructs a ListClustersResponsePrivate object with public implementation \a q.
  */
 ListClustersResponsePrivate::ListClustersResponsePrivate(
-    ListClustersResponse * const q) : ECSResponsePrivate(q)
+    ListClustersResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

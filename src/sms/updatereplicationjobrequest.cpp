@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 UpdateReplicationJobRequest::UpdateReplicationJobRequest(const UpdateReplicationJobRequest &other)
-    : SMSRequest(new UpdateReplicationJobRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new UpdateReplicationJobRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ UpdateReplicationJobRequest::UpdateReplicationJobRequest(const UpdateReplication
  * Constructs a UpdateReplicationJobRequest object.
  */
 UpdateReplicationJobRequest::UpdateReplicationJobRequest()
-    : SMSRequest(new UpdateReplicationJobRequestPrivate(SMSRequest::UpdateReplicationJobAction, this))
+    : SmsRequest(new UpdateReplicationJobRequestPrivate(SmsRequest::UpdateReplicationJobAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetwor
  */
 
 /*!
- * Constructs a UpdateReplicationJobRequestPrivate object for SMS \a action,
+ * Constructs a UpdateReplicationJobRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
-    const SMSRequest::Action action, UpdateReplicationJobRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, UpdateReplicationJobRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
     const UpdateReplicationJobRequestPrivate &other, UpdateReplicationJobRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

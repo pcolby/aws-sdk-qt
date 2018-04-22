@@ -50,7 +50,7 @@ DeleteFileSystemResponse::DeleteFileSystemResponse(
         const DeleteFileSystemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DeleteFileSystemResponsePrivate(this), parent)
+    : EfsResponse(new DeleteFileSystemResponsePrivate(this), parent)
 {
     setRequest(new DeleteFileSystemRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteFileSystemResponsePrivate object with public implementation \a q.
  */
 DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
-    DeleteFileSystemResponse * const q) : EFSResponsePrivate(q)
+    DeleteFileSystemResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

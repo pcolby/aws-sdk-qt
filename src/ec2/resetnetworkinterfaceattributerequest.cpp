@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest(const ResetNetworkInterfaceAttributeRequest &other)
-    : EC2Request(new ResetNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ResetNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest(con
  * Constructs a ResetNetworkInterfaceAttributeRequest object.
  */
 ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest()
-    : EC2Request(new ResetNetworkInterfaceAttributeRequestPrivate(EC2Request::ResetNetworkInterfaceAttributeAction, this))
+    : Ec2Request(new ResetNetworkInterfaceAttributeRequestPrivate(Ec2Request::ResetNetworkInterfaceAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::respon
  */
 
 /*!
- * Constructs a ResetNetworkInterfaceAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ResetNetworkInterfaceAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
-    const EC2Request::Action action, ResetNetworkInterfaceAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ResetNetworkInterfaceAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequ
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
     const ResetNetworkInterfaceAttributeRequestPrivate &other, ResetNetworkInterfaceAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

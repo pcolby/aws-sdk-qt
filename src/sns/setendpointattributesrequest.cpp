@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 SetEndpointAttributesRequest::SetEndpointAttributesRequest(const SetEndpointAttributesRequest &other)
-    : SNSRequest(new SetEndpointAttributesRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new SetEndpointAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ SetEndpointAttributesRequest::SetEndpointAttributesRequest(const SetEndpointAttr
  * Constructs a SetEndpointAttributesRequest object.
  */
 SetEndpointAttributesRequest::SetEndpointAttributesRequest()
-    : SNSRequest(new SetEndpointAttributesRequestPrivate(SNSRequest::SetEndpointAttributesAction, this))
+    : SnsRequest(new SetEndpointAttributesRequestPrivate(SnsRequest::SetEndpointAttributesAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * SetEndpointAttributesRequest::response(QNetwo
  */
 
 /*!
- * Constructs a SetEndpointAttributesRequestPrivate object for SNS \a action,
+ * Constructs a SetEndpointAttributesRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
-    const SNSRequest::Action action, SetEndpointAttributesRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, SetEndpointAttributesRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
  */
 SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
     const SetEndpointAttributesRequestPrivate &other, SetEndpointAttributesRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

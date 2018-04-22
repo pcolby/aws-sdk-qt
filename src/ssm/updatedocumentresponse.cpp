@@ -68,7 +68,7 @@ UpdateDocumentResponse::UpdateDocumentResponse(
         const UpdateDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateDocumentResponsePrivate(this), parent)
+    : SsmResponse(new UpdateDocumentResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void UpdateDocumentResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateDocumentResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentResponsePrivate::UpdateDocumentResponsePrivate(
-    UpdateDocumentResponse * const q) : SSMResponsePrivate(q)
+    UpdateDocumentResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

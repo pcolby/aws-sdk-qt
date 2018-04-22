@@ -108,7 +108,7 @@ FailoverDBClusterResponse::FailoverDBClusterResponse(
         const FailoverDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new FailoverDBClusterResponsePrivate(this), parent)
+    : RdsResponse(new FailoverDBClusterResponsePrivate(this), parent)
 {
     setRequest(new FailoverDBClusterRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a FailoverDBClusterResponsePrivate object with public implementation \a q.
  */
 FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
-    FailoverDBClusterResponse * const q) : RDSResponsePrivate(q)
+    FailoverDBClusterResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

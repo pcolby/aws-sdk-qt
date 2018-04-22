@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 CountOpenWorkflowExecutionsRequest::CountOpenWorkflowExecutionsRequest(const CountOpenWorkflowExecutionsRequest &other)
-    : SWFRequest(new CountOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new CountOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ CountOpenWorkflowExecutionsRequest::CountOpenWorkflowExecutionsRequest(const Cou
  * Constructs a CountOpenWorkflowExecutionsRequest object.
  */
 CountOpenWorkflowExecutionsRequest::CountOpenWorkflowExecutionsRequest()
-    : SWFRequest(new CountOpenWorkflowExecutionsRequestPrivate(SWFRequest::CountOpenWorkflowExecutionsAction, this))
+    : SwfRequest(new CountOpenWorkflowExecutionsRequestPrivate(SwfRequest::CountOpenWorkflowExecutionsAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * CountOpenWorkflowExecutionsRequest::response(
  */
 
 /*!
- * Constructs a CountOpenWorkflowExecutionsRequestPrivate object for SWF \a action,
+ * Constructs a CountOpenWorkflowExecutionsRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPrivate(
-    const SWFRequest::Action action, CountOpenWorkflowExecutionsRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, CountOpenWorkflowExecutionsRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPri
  */
 CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPrivate(
     const CountOpenWorkflowExecutionsRequestPrivate &other, CountOpenWorkflowExecutionsRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

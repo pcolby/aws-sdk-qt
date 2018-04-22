@@ -27,7 +27,7 @@ namespace SWF {
 
 class ListActivityTypesRequestPrivate;
 
-class QTAWS_EXPORT ListActivityTypesRequest : public SWFRequest {
+class QTAWS_EXPORT ListActivityTypesRequest : public SwfRequest {
 
 public:
     ListActivityTypesRequest(const ListActivityTypesRequest &other);

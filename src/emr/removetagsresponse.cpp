@@ -47,7 +47,7 @@ RemoveTagsResponse::RemoveTagsResponse(
         const RemoveTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new RemoveTagsResponsePrivate(this), parent)
+    : EmrResponse(new RemoveTagsResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveTagsResponsePrivate object with public implementation \a q.
  */
 RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
-    RemoveTagsResponse * const q) : EMRResponsePrivate(q)
+    RemoveTagsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

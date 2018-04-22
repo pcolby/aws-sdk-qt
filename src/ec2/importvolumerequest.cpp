@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ImportVolumeRequest::ImportVolumeRequest(const ImportVolumeRequest &other)
-    : EC2Request(new ImportVolumeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ImportVolumeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ImportVolumeRequest::ImportVolumeRequest(const ImportVolumeRequest &other)
  * Constructs a ImportVolumeRequest object.
  */
 ImportVolumeRequest::ImportVolumeRequest()
-    : EC2Request(new ImportVolumeRequestPrivate(EC2Request::ImportVolumeAction, this))
+    : Ec2Request(new ImportVolumeRequestPrivate(Ec2Request::ImportVolumeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ImportVolumeRequestPrivate object for EC2 \a action,
+ * Constructs a ImportVolumeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
-    const EC2Request::Action action, ImportVolumeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ImportVolumeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
     const ImportVolumeRequestPrivate &other, ImportVolumeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

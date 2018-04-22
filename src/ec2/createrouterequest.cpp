@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateRouteRequest::CreateRouteRequest(const CreateRouteRequest &other)
-    : EC2Request(new CreateRouteRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateRouteRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateRouteRequest::CreateRouteRequest(const CreateRouteRequest &other)
  * Constructs a CreateRouteRequest object.
  */
 CreateRouteRequest::CreateRouteRequest()
-    : EC2Request(new CreateRouteRequestPrivate(EC2Request::CreateRouteAction, this))
+    : Ec2Request(new CreateRouteRequestPrivate(Ec2Request::CreateRouteAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateRouteRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CreateRouteRequestPrivate object for EC2 \a action,
+ * Constructs a CreateRouteRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateRouteRequestPrivate::CreateRouteRequestPrivate(
-    const EC2Request::Action action, CreateRouteRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateRouteRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateRouteRequestPrivate::CreateRouteRequestPrivate(
  */
 CreateRouteRequestPrivate::CreateRouteRequestPrivate(
     const CreateRouteRequestPrivate &other, CreateRouteRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -109,7 +109,7 @@ ChangePasswordResponse::ChangePasswordResponse(
         const ChangePasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ChangePasswordResponsePrivate(this), parent)
+    : IamResponse(new ChangePasswordResponsePrivate(this), parent)
 {
     setRequest(new ChangePasswordRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ChangePasswordResponse::parseSuccess(QIODevice &response)
  * Constructs a ChangePasswordResponsePrivate object with public implementation \a q.
  */
 ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
-    ChangePasswordResponse * const q) : IAMResponsePrivate(q)
+    ChangePasswordResponse * const q) : IamResponsePrivate(q)
 {
 
 }

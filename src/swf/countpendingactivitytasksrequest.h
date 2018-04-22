@@ -27,7 +27,7 @@ namespace SWF {
 
 class CountPendingActivityTasksRequestPrivate;
 
-class QTAWS_EXPORT CountPendingActivityTasksRequest : public SWFRequest {
+class QTAWS_EXPORT CountPendingActivityTasksRequest : public SwfRequest {
 
 public:
     CountPendingActivityTasksRequest(const CountPendingActivityTasksRequest &other);

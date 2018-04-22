@@ -27,7 +27,7 @@ namespace MQ {
 
 class CreateConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateConfigurationRequest : public MQRequest {
+class QTAWS_EXPORT CreateConfigurationRequest : public MqRequest {
 
 public:
     CreateConfigurationRequest(const CreateConfigurationRequest &other);

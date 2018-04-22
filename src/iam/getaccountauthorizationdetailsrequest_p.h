@@ -28,10 +28,10 @@ namespace IAM {
 
 class GetAccountAuthorizationDetailsRequest;
 
-class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IamRequestPrivate {
 
 public:
-    GetAccountAuthorizationDetailsRequestPrivate(const IAMRequest::Action action,
+    GetAccountAuthorizationDetailsRequestPrivate(const IamRequest::Action action,
                                    GetAccountAuthorizationDetailsRequest * const q);
     GetAccountAuthorizationDetailsRequestPrivate(const GetAccountAuthorizationDetailsRequestPrivate &other,
                                    GetAccountAuthorizationDetailsRequest * const q);

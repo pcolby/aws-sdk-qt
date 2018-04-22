@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 StopTaskRequest::StopTaskRequest(const StopTaskRequest &other)
-    : ECSRequest(new StopTaskRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new StopTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ StopTaskRequest::StopTaskRequest(const StopTaskRequest &other)
  * Constructs a StopTaskRequest object.
  */
 StopTaskRequest::StopTaskRequest()
-    : ECSRequest(new StopTaskRequestPrivate(ECSRequest::StopTaskAction, this))
+    : EcsRequest(new StopTaskRequestPrivate(EcsRequest::StopTaskAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * StopTaskRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a StopTaskRequestPrivate object for ECS \a action,
+ * Constructs a StopTaskRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
-    const ECSRequest::Action action, StopTaskRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, StopTaskRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ StopTaskRequestPrivate::StopTaskRequestPrivate(
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
     const StopTaskRequestPrivate &other, StopTaskRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

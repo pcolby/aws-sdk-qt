@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 StartWorkflowExecutionRequest::StartWorkflowExecutionRequest(const StartWorkflowExecutionRequest &other)
-    : SWFRequest(new StartWorkflowExecutionRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new StartWorkflowExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ StartWorkflowExecutionRequest::StartWorkflowExecutionRequest(const StartWorkflow
  * Constructs a StartWorkflowExecutionRequest object.
  */
 StartWorkflowExecutionRequest::StartWorkflowExecutionRequest()
-    : SWFRequest(new StartWorkflowExecutionRequestPrivate(SWFRequest::StartWorkflowExecutionAction, this))
+    : SwfRequest(new StartWorkflowExecutionRequestPrivate(SwfRequest::StartWorkflowExecutionAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetw
  */
 
 /*!
- * Constructs a StartWorkflowExecutionRequestPrivate object for SWF \a action,
+ * Constructs a StartWorkflowExecutionRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
-    const SWFRequest::Action action, StartWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, StartWorkflowExecutionRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
     const StartWorkflowExecutionRequestPrivate &other, StartWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

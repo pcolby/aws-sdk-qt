@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest(const AssociateDhcpOptionsRequest &other)
-    : EC2Request(new AssociateDhcpOptionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssociateDhcpOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest(const AssociateDhcpOpti
  * Constructs a AssociateDhcpOptionsRequest object.
  */
 AssociateDhcpOptionsRequest::AssociateDhcpOptionsRequest()
-    : EC2Request(new AssociateDhcpOptionsRequestPrivate(EC2Request::AssociateDhcpOptionsAction, this))
+    : Ec2Request(new AssociateDhcpOptionsRequestPrivate(Ec2Request::AssociateDhcpOptionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetwor
  */
 
 /*!
- * Constructs a AssociateDhcpOptionsRequestPrivate object for EC2 \a action,
+ * Constructs a AssociateDhcpOptionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
-    const EC2Request::Action action, AssociateDhcpOptionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssociateDhcpOptionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
     const AssociateDhcpOptionsRequestPrivate &other, AssociateDhcpOptionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

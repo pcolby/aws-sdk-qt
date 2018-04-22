@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateRoleDescriptionResponsePrivate;
 
-class QTAWS_EXPORT UpdateRoleDescriptionResponse : public IAMResponse {
+class QTAWS_EXPORT UpdateRoleDescriptionResponse : public IamResponse {
     Q_OBJECT
 
 public:

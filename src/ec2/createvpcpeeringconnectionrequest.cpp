@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest(const CreateVpcPeeringConnectionRequest &other)
-    : EC2Request(new CreateVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest(const Creat
  * Constructs a CreateVpcPeeringConnectionRequest object.
  */
 CreateVpcPeeringConnectionRequest::CreateVpcPeeringConnectionRequest()
-    : EC2Request(new CreateVpcPeeringConnectionRequestPrivate(EC2Request::CreateVpcPeeringConnectionAction, this))
+    : Ec2Request(new CreateVpcPeeringConnectionRequestPrivate(Ec2Request::CreateVpcPeeringConnectionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- * Constructs a CreateVpcPeeringConnectionRequestPrivate object for EC2 \a action,
+ * Constructs a CreateVpcPeeringConnectionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPrivate(
-    const EC2Request::Action action, CreateVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateVpcPeeringConnectionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPriva
  */
 CreateVpcPeeringConnectionRequestPrivate::CreateVpcPeeringConnectionRequestPrivate(
     const CreateVpcPeeringConnectionRequestPrivate &other, CreateVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -49,7 +49,7 @@ ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
         const ListSubscribedRuleGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
+    : WafResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListSubscribedRuleGroupsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListSubscribedRuleGroupsResponsePrivate object with public implementation \a q.
  */
 ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate(
-    ListSubscribedRuleGroupsResponse * const q) : WAFResponsePrivate(q)
+    ListSubscribedRuleGroupsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

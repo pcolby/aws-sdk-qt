@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateImageRequest::CreateImageRequest(const CreateImageRequest &other)
-    : EC2Request(new CreateImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateImageRequest::CreateImageRequest(const CreateImageRequest &other)
  * Constructs a CreateImageRequest object.
  */
 CreateImageRequest::CreateImageRequest()
-    : EC2Request(new CreateImageRequestPrivate(EC2Request::CreateImageAction, this))
+    : Ec2Request(new CreateImageRequestPrivate(Ec2Request::CreateImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CreateImageRequestPrivate object for EC2 \a action,
+ * Constructs a CreateImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
-    const EC2Request::Action action, CreateImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateImageRequestPrivate::CreateImageRequestPrivate(
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
     const CreateImageRequestPrivate &other, CreateImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

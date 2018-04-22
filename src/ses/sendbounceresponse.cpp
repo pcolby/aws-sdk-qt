@@ -55,7 +55,7 @@ SendBounceResponse::SendBounceResponse(
         const SendBounceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendBounceResponsePrivate(this), parent)
+    : SesResponse(new SendBounceResponsePrivate(this), parent)
 {
     setRequest(new SendBounceRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SendBounceResponse::parseSuccess(QIODevice &response)
  * Constructs a SendBounceResponsePrivate object with public implementation \a q.
  */
 SendBounceResponsePrivate::SendBounceResponsePrivate(
-    SendBounceResponse * const q) : SESResponsePrivate(q)
+    SendBounceResponse * const q) : SesResponsePrivate(q)
 {
 
 }

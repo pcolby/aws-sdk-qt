@@ -55,7 +55,7 @@ VerifyEmailIdentityResponse::VerifyEmailIdentityResponse(
         const VerifyEmailIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyEmailIdentityResponsePrivate(this), parent)
+    : SesResponse(new VerifyEmailIdentityResponsePrivate(this), parent)
 {
     setRequest(new VerifyEmailIdentityRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
  * Constructs a VerifyEmailIdentityResponsePrivate object with public implementation \a q.
  */
 VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
-    VerifyEmailIdentityResponse * const q) : SESResponsePrivate(q)
+    VerifyEmailIdentityResponse * const q) : SesResponsePrivate(q)
 {
 
 }

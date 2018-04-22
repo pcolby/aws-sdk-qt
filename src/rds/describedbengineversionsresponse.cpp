@@ -108,7 +108,7 @@ DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
         const DescribeDBEngineVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
+    : RdsResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBEngineVersionsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeDBEngineVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate(
-    DescribeDBEngineVersionsResponse * const q) : RDSResponsePrivate(q)
+    DescribeDBEngineVersionsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

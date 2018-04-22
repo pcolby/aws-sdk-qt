@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 GetConsoleScreenshotRequest::GetConsoleScreenshotRequest(const GetConsoleScreenshotRequest &other)
-    : EC2Request(new GetConsoleScreenshotRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new GetConsoleScreenshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetConsoleScreenshotRequest::GetConsoleScreenshotRequest(const GetConsoleScreens
  * Constructs a GetConsoleScreenshotRequest object.
  */
 GetConsoleScreenshotRequest::GetConsoleScreenshotRequest()
-    : EC2Request(new GetConsoleScreenshotRequestPrivate(EC2Request::GetConsoleScreenshotAction, this))
+    : Ec2Request(new GetConsoleScreenshotRequestPrivate(Ec2Request::GetConsoleScreenshotAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetConsoleScreenshotRequestPrivate object for EC2 \a action,
+ * Constructs a GetConsoleScreenshotRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
-    const EC2Request::Action action, GetConsoleScreenshotRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, GetConsoleScreenshotRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
     const GetConsoleScreenshotRequestPrivate &other, GetConsoleScreenshotRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

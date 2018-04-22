@@ -48,7 +48,7 @@ AssociateRouteTableResponse::AssociateRouteTableResponse(
         const AssociateRouteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateRouteTableResponsePrivate(this), parent)
+    : Ec2Response(new AssociateRouteTableResponsePrivate(this), parent)
 {
     setRequest(new AssociateRouteTableRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AssociateRouteTableResponse::parseSuccess(QIODevice &response)
  * Constructs a AssociateRouteTableResponsePrivate object with public implementation \a q.
  */
 AssociateRouteTableResponsePrivate::AssociateRouteTableResponsePrivate(
-    AssociateRouteTableResponse * const q) : EC2ResponsePrivate(q)
+    AssociateRouteTableResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

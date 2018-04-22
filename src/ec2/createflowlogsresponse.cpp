@@ -48,7 +48,7 @@ CreateFlowLogsResponse::CreateFlowLogsResponse(
         const CreateFlowLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateFlowLogsResponsePrivate(this), parent)
+    : Ec2Response(new CreateFlowLogsResponsePrivate(this), parent)
 {
     setRequest(new CreateFlowLogsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateFlowLogsResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateFlowLogsResponsePrivate object with public implementation \a q.
  */
 CreateFlowLogsResponsePrivate::CreateFlowLogsResponsePrivate(
-    CreateFlowLogsResponse * const q) : EC2ResponsePrivate(q)
+    CreateFlowLogsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

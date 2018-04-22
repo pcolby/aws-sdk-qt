@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 DisassociateAdminAccountRequest::DisassociateAdminAccountRequest(const DisassociateAdminAccountRequest &other)
-    : FMSRequest(new DisassociateAdminAccountRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new DisassociateAdminAccountRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DisassociateAdminAccountRequest::DisassociateAdminAccountRequest(const Disassoci
  * Constructs a DisassociateAdminAccountRequest object.
  */
 DisassociateAdminAccountRequest::DisassociateAdminAccountRequest()
-    : FMSRequest(new DisassociateAdminAccountRequestPrivate(FMSRequest::DisassociateAdminAccountAction, this))
+    : FmsRequest(new DisassociateAdminAccountRequestPrivate(FmsRequest::DisassociateAdminAccountAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateAdminAccountRequest::response(QNe
  */
 
 /*!
- * Constructs a DisassociateAdminAccountRequestPrivate object for FMS \a action,
+ * Constructs a DisassociateAdminAccountRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
-    const FMSRequest::Action action, DisassociateAdminAccountRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, DisassociateAdminAccountRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
  */
 DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
     const DisassociateAdminAccountRequestPrivate &other, DisassociateAdminAccountRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

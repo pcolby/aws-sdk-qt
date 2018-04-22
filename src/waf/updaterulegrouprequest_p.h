@@ -28,10 +28,10 @@ namespace WAF {
 
 class UpdateRuleGroupRequest;
 
-class QTAWS_EXPORT UpdateRuleGroupRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT UpdateRuleGroupRequestPrivate : public WafRequestPrivate {
 
 public:
-    UpdateRuleGroupRequestPrivate(const WAFRequest::Action action,
+    UpdateRuleGroupRequestPrivate(const WafRequest::Action action,
                                    UpdateRuleGroupRequest * const q);
     UpdateRuleGroupRequestPrivate(const UpdateRuleGroupRequestPrivate &other,
                                    UpdateRuleGroupRequest * const q);

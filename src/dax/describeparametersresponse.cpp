@@ -48,7 +48,7 @@ DescribeParametersResponse::DescribeParametersResponse(
         const DescribeParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DescribeParametersResponsePrivate(this), parent)
+    : DaxResponse(new DescribeParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeParametersRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeParametersResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeParametersResponsePrivate object with public implementation \a q.
  */
 DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
-    DescribeParametersResponse * const q) : DAXResponsePrivate(q)
+    DescribeParametersResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

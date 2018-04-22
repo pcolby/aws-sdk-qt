@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubscribedRuleGroupsRequest &other)
-    : WAFRequest(new ListSubscribedRuleGroupsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListSubscribedRuleGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest(const ListSubsc
  * Constructs a ListSubscribedRuleGroupsRequest object.
  */
 ListSubscribedRuleGroupsRequest::ListSubscribedRuleGroupsRequest()
-    : WAFRequest(new ListSubscribedRuleGroupsRequestPrivate(WAFRequest::ListSubscribedRuleGroupsAction, this))
+    : WafRequest(new ListSubscribedRuleGroupsRequestPrivate(WafRequest::ListSubscribedRuleGroupsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
  */
 
 /*!
- * Constructs a ListSubscribedRuleGroupsRequestPrivate object for WAF \a action,
+ * Constructs a ListSubscribedRuleGroupsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
-    const WAFRequest::Action action, ListSubscribedRuleGroupsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListSubscribedRuleGroupsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
     const ListSubscribedRuleGroupsRequestPrivate &other, ListSubscribedRuleGroupsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

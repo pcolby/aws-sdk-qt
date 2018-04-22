@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest(const DisassociateSubnetCidrBlockRequest &other)
-    : EC2Request(new DisassociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisassociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest(const Dis
  * Constructs a DisassociateSubnetCidrBlockRequest object.
  */
 DisassociateSubnetCidrBlockRequest::DisassociateSubnetCidrBlockRequest()
-    : EC2Request(new DisassociateSubnetCidrBlockRequestPrivate(EC2Request::DisassociateSubnetCidrBlockAction, this))
+    : Ec2Request(new DisassociateSubnetCidrBlockRequestPrivate(Ec2Request::DisassociateSubnetCidrBlockAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateSubnetCidrBlockRequest::response(
  */
 
 /*!
- * Constructs a DisassociateSubnetCidrBlockRequestPrivate object for EC2 \a action,
+ * Constructs a DisassociateSubnetCidrBlockRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPrivate(
-    const EC2Request::Action action, DisassociateSubnetCidrBlockRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisassociateSubnetCidrBlockRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPri
  */
 DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPrivate(
     const DisassociateSubnetCidrBlockRequestPrivate &other, DisassociateSubnetCidrBlockRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

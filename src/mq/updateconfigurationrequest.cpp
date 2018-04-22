@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 UpdateConfigurationRequest::UpdateConfigurationRequest(const UpdateConfigurationRequest &other)
-    : MQRequest(new UpdateConfigurationRequestPrivate(*other.d_func(), this))
+    : MqRequest(new UpdateConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ UpdateConfigurationRequest::UpdateConfigurationRequest(const UpdateConfiguration
  * Constructs a UpdateConfigurationRequest object.
  */
 UpdateConfigurationRequest::UpdateConfigurationRequest()
-    : MQRequest(new UpdateConfigurationRequestPrivate(MQRequest::UpdateConfigurationAction, this))
+    : MqRequest(new UpdateConfigurationRequestPrivate(MqRequest::UpdateConfigurationAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationRequest::response(QNetwork
  */
 
 /*!
- * Constructs a UpdateConfigurationRequestPrivate object for MQ \a action,
+ * Constructs a UpdateConfigurationRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
-    const MQRequest::Action action, UpdateConfigurationRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, UpdateConfigurationRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
     const UpdateConfigurationRequestPrivate &other, UpdateConfigurationRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

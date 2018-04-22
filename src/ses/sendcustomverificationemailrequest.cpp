@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SendCustomVerificationEmailRequest::SendCustomVerificationEmailRequest(const SendCustomVerificationEmailRequest &other)
-    : SESRequest(new SendCustomVerificationEmailRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SendCustomVerificationEmailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SendCustomVerificationEmailRequest::SendCustomVerificationEmailRequest(const Sen
  * Constructs a SendCustomVerificationEmailRequest object.
  */
 SendCustomVerificationEmailRequest::SendCustomVerificationEmailRequest()
-    : SESRequest(new SendCustomVerificationEmailRequestPrivate(SESRequest::SendCustomVerificationEmailAction, this))
+    : SesRequest(new SendCustomVerificationEmailRequestPrivate(SesRequest::SendCustomVerificationEmailAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SendCustomVerificationEmailRequest::response(
  */
 
 /*!
- * Constructs a SendCustomVerificationEmailRequestPrivate object for SES \a action,
+ * Constructs a SendCustomVerificationEmailRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPrivate(
-    const SESRequest::Action action, SendCustomVerificationEmailRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SendCustomVerificationEmailRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPri
  */
 SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPrivate(
     const SendCustomVerificationEmailRequestPrivate &other, SendCustomVerificationEmailRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

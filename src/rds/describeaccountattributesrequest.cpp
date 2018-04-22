@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other)
-    : RDSRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeAccountAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeAccountAttributesRequest::DescribeAccountAttributesRequest(const Describ
  * Constructs a DescribeAccountAttributesRequest object.
  */
 DescribeAccountAttributesRequest::DescribeAccountAttributesRequest()
-    : RDSRequest(new DescribeAccountAttributesRequestPrivate(RDSRequest::DescribeAccountAttributesAction, this))
+    : RdsRequest(new DescribeAccountAttributesRequestPrivate(RdsRequest::DescribeAccountAttributesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 
 /*!
- * Constructs a DescribeAccountAttributesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeAccountAttributesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
-    const RDSRequest::Action action, DescribeAccountAttributesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeAccountAttributesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DescribeAccountAttributesRequestPrivate &other, DescribeAccountAttributesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

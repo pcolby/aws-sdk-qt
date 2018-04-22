@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteVpcEndpointServiceConfigurationsResponse;
 
-class QTAWS_EXPORT DeleteVpcEndpointServiceConfigurationsResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT DeleteVpcEndpointServiceConfigurationsResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowExecutionTasksRequest::DescribeMaintenanceWindowExecutionTasksRequest(const DescribeMaintenanceWindowExecutionTasksRequest &other)
-    : SSMRequest(new DescribeMaintenanceWindowExecutionTasksRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeMaintenanceWindowExecutionTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeMaintenanceWindowExecutionTasksRequest::DescribeMaintenanceWindowExecuti
  * Constructs a DescribeMaintenanceWindowExecutionTasksRequest object.
  */
 DescribeMaintenanceWindowExecutionTasksRequest::DescribeMaintenanceWindowExecutionTasksRequest()
-    : SSMRequest(new DescribeMaintenanceWindowExecutionTasksRequestPrivate(SSMRequest::DescribeMaintenanceWindowExecutionTasksAction, this))
+    : SsmRequest(new DescribeMaintenanceWindowExecutionTasksRequestPrivate(SsmRequest::DescribeMaintenanceWindowExecutionTasksAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowExecutionTasksReques
  */
 
 /*!
- * Constructs a DescribeMaintenanceWindowExecutionTasksRequestPrivate object for SSM \a action,
+ * Constructs a DescribeMaintenanceWindowExecutionTasksRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeMaintenanceWindowExecutionTasksRequestPrivate::DescribeMaintenanceWindowExecutionTasksRequestPrivate(
-    const SSMRequest::Action action, DescribeMaintenanceWindowExecutionTasksRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeMaintenanceWindowExecutionTasksRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeMaintenanceWindowExecutionTasksRequestPrivate::DescribeMaintenanceWindow
  */
 DescribeMaintenanceWindowExecutionTasksRequestPrivate::DescribeMaintenanceWindowExecutionTasksRequestPrivate(
     const DescribeMaintenanceWindowExecutionTasksRequestPrivate &other, DescribeMaintenanceWindowExecutionTasksRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

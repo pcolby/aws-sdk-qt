@@ -49,7 +49,7 @@ ListRateBasedRulesResponse::ListRateBasedRulesResponse(
         const ListRateBasedRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListRateBasedRulesResponsePrivate(this), parent)
+    : WafResponse(new ListRateBasedRulesResponsePrivate(this), parent)
 {
     setRequest(new ListRateBasedRulesRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListRateBasedRulesResponsePrivate object with public implementation \a q.
  */
 ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
-    ListRateBasedRulesResponse * const q) : WAFResponsePrivate(q)
+    ListRateBasedRulesResponse * const q) : WafResponsePrivate(q)
 {
 
 }

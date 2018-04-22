@@ -28,10 +28,10 @@ namespace IAM {
 
 class UpdateAccountPasswordPolicyRequest;
 
-class QTAWS_EXPORT UpdateAccountPasswordPolicyRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT UpdateAccountPasswordPolicyRequestPrivate : public IamRequestPrivate {
 
 public:
-    UpdateAccountPasswordPolicyRequestPrivate(const IAMRequest::Action action,
+    UpdateAccountPasswordPolicyRequestPrivate(const IamRequest::Action action,
                                    UpdateAccountPasswordPolicyRequest * const q);
     UpdateAccountPasswordPolicyRequestPrivate(const UpdateAccountPasswordPolicyRequestPrivate &other,
                                    UpdateAccountPasswordPolicyRequest * const q);

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const DeleteVpcPeeringConnectionRequest &other)
-    : EC2Request(new DeleteVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const Delet
  * Constructs a DeleteVpcPeeringConnectionRequest object.
  */
 DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest()
-    : EC2Request(new DeleteVpcPeeringConnectionRequestPrivate(EC2Request::DeleteVpcPeeringConnectionAction, this))
+    : Ec2Request(new DeleteVpcPeeringConnectionRequestPrivate(Ec2Request::DeleteVpcPeeringConnectionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
-    const EC2Request::Action action, DeleteVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVpcPeeringConnectionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const DeleteVpcPeeringConnectionRequestPrivate &other, DeleteVpcPeeringConnectionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

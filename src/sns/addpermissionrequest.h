@@ -27,7 +27,7 @@ namespace SNS {
 
 class AddPermissionRequestPrivate;
 
-class QTAWS_EXPORT AddPermissionRequest : public SNSRequest {
+class QTAWS_EXPORT AddPermissionRequest : public SnsRequest {
 
 public:
     AddPermissionRequest(const AddPermissionRequest &other);

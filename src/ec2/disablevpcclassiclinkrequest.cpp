@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest(const DisableVpcClassicLinkRequest &other)
-    : EC2Request(new DisableVpcClassicLinkRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisableVpcClassicLinkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest(const DisableVpcClass
  * Constructs a DisableVpcClassicLinkRequest object.
  */
 DisableVpcClassicLinkRequest::DisableVpcClassicLinkRequest()
-    : EC2Request(new DisableVpcClassicLinkRequestPrivate(EC2Request::DisableVpcClassicLinkAction, this))
+    : Ec2Request(new DisableVpcClassicLinkRequestPrivate(Ec2Request::DisableVpcClassicLinkAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisableVpcClassicLinkRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DisableVpcClassicLinkRequestPrivate object for EC2 \a action,
+ * Constructs a DisableVpcClassicLinkRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
-    const EC2Request::Action action, DisableVpcClassicLinkRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisableVpcClassicLinkRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
  */
 DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
     const DisableVpcClassicLinkRequestPrivate &other, DisableVpcClassicLinkRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

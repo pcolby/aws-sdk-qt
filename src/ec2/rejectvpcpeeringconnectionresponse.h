@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RejectVpcPeeringConnectionResponsePrivate;
 
-class QTAWS_EXPORT RejectVpcPeeringConnectionResponse : public EC2Response {
+class QTAWS_EXPORT RejectVpcPeeringConnectionResponse : public Ec2Response {
     Q_OBJECT
 
 public:

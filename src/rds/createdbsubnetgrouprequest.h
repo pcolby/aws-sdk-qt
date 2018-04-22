@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateDBSubnetGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateDBSubnetGroupRequest : public RDSRequest {
+class QTAWS_EXPORT CreateDBSubnetGroupRequest : public RdsRequest {
 
 public:
     CreateDBSubnetGroupRequest(const CreateDBSubnetGroupRequest &other);

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWindowExecutionTaskInvocationsRequest(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &other)
-    : SSMRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWin
  * Constructs a DescribeMaintenanceWindowExecutionTaskInvocationsRequest object.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWindowExecutionTaskInvocationsRequest()
-    : SSMRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(SSMRequest::DescribeMaintenanceWindowExecutionTaskInvocationsAction, this))
+    : SsmRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(SsmRequest::DescribeMaintenanceWindowExecutionTaskInvocationsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowExecutionTaskInvocat
  */
 
 /*!
- * Constructs a DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object for SSM \a action,
+ * Constructs a DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(
-    const SSMRequest::Action action, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMainten
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(
     const DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate &other, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

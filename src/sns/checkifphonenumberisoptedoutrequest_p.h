@@ -28,10 +28,10 @@ namespace SNS {
 
 class CheckIfPhoneNumberIsOptedOutRequest;
 
-class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutRequestPrivate : public SnsRequestPrivate {
 
 public:
-    CheckIfPhoneNumberIsOptedOutRequestPrivate(const SNSRequest::Action action,
+    CheckIfPhoneNumberIsOptedOutRequestPrivate(const SnsRequest::Action action,
                                    CheckIfPhoneNumberIsOptedOutRequest * const q);
     CheckIfPhoneNumberIsOptedOutRequestPrivate(const CheckIfPhoneNumberIsOptedOutRequestPrivate &other,
                                    CheckIfPhoneNumberIsOptedOutRequest * const q);

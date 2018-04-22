@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
-    : EC2Request(new CreateKeyPairRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateKeyPairRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateKeyPairRequest::CreateKeyPairRequest(const CreateKeyPairRequest &other)
  * Constructs a CreateKeyPairRequest object.
  */
 CreateKeyPairRequest::CreateKeyPairRequest()
-    : EC2Request(new CreateKeyPairRequestPrivate(EC2Request::CreateKeyPairAction, this))
+    : Ec2Request(new CreateKeyPairRequestPrivate(Ec2Request::CreateKeyPairAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateKeyPairRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a CreateKeyPairRequestPrivate object for EC2 \a action,
+ * Constructs a CreateKeyPairRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
-    const EC2Request::Action action, CreateKeyPairRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateKeyPairRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
  */
 CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
     const CreateKeyPairRequestPrivate &other, CreateKeyPairRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

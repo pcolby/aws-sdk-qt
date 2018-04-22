@@ -48,7 +48,7 @@ AssociateSubnetCidrBlockResponse::AssociateSubnetCidrBlockResponse(
         const AssociateSubnetCidrBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateSubnetCidrBlockResponsePrivate(this), parent)
+    : Ec2Response(new AssociateSubnetCidrBlockResponsePrivate(this), parent)
 {
     setRequest(new AssociateSubnetCidrBlockRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
  * Constructs a AssociateSubnetCidrBlockResponsePrivate object with public implementation \a q.
  */
 AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate(
-    AssociateSubnetCidrBlockResponse * const q) : EC2ResponsePrivate(q)
+    AssociateSubnetCidrBlockResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

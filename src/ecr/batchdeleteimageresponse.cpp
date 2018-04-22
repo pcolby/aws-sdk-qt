@@ -48,7 +48,7 @@ BatchDeleteImageResponse::BatchDeleteImageResponse(
         const BatchDeleteImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new BatchDeleteImageResponsePrivate(this), parent)
+    : EcrResponse(new BatchDeleteImageResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
  * Constructs a BatchDeleteImageResponsePrivate object with public implementation \a q.
  */
 BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
-    BatchDeleteImageResponse * const q) : ECRResponsePrivate(q)
+    BatchDeleteImageResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

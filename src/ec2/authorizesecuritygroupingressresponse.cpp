@@ -48,7 +48,7 @@ AuthorizeSecurityGroupIngressResponse::AuthorizeSecurityGroupIngressResponse(
         const AuthorizeSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AuthorizeSecurityGroupIngressResponsePrivate(this), parent)
+    : Ec2Response(new AuthorizeSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeSecurityGroupIngressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AuthorizeSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
  * Constructs a AuthorizeSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 AuthorizeSecurityGroupIngressResponsePrivate::AuthorizeSecurityGroupIngressResponsePrivate(
-    AuthorizeSecurityGroupIngressResponse * const q) : EC2ResponsePrivate(q)
+    AuthorizeSecurityGroupIngressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

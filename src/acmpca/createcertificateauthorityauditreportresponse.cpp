@@ -74,7 +74,7 @@ CreateCertificateAuthorityAuditReportResponse::CreateCertificateAuthorityAuditRe
         const CreateCertificateAuthorityAuditReportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new CreateCertificateAuthorityAuditReportResponsePrivate(this), parent)
+    : AcmpcaResponse(new CreateCertificateAuthorityAuditReportResponsePrivate(this), parent)
 {
     setRequest(new CreateCertificateAuthorityAuditReportRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void CreateCertificateAuthorityAuditReportResponse::parseSuccess(QIODevice &resp
  * Constructs a CreateCertificateAuthorityAuditReportResponsePrivate object with public implementation \a q.
  */
 CreateCertificateAuthorityAuditReportResponsePrivate::CreateCertificateAuthorityAuditReportResponsePrivate(
-    CreateCertificateAuthorityAuditReportResponse * const q) : ACMPCAResponsePrivate(q)
+    CreateCertificateAuthorityAuditReportResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

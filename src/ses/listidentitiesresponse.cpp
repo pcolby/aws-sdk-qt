@@ -55,7 +55,7 @@ ListIdentitiesResponse::ListIdentitiesResponse(
         const ListIdentitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListIdentitiesResponsePrivate(this), parent)
+    : SesResponse(new ListIdentitiesResponsePrivate(this), parent)
 {
     setRequest(new ListIdentitiesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void ListIdentitiesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListIdentitiesResponsePrivate object with public implementation \a q.
  */
 ListIdentitiesResponsePrivate::ListIdentitiesResponsePrivate(
-    ListIdentitiesResponse * const q) : SESResponsePrivate(q)
+    ListIdentitiesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

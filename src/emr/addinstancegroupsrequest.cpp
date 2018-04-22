@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 AddInstanceGroupsRequest::AddInstanceGroupsRequest(const AddInstanceGroupsRequest &other)
-    : EMRRequest(new AddInstanceGroupsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new AddInstanceGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ AddInstanceGroupsRequest::AddInstanceGroupsRequest(const AddInstanceGroupsReques
  * Constructs a AddInstanceGroupsRequest object.
  */
 AddInstanceGroupsRequest::AddInstanceGroupsRequest()
-    : EMRRequest(new AddInstanceGroupsRequestPrivate(EMRRequest::AddInstanceGroupsAction, this))
+    : EmrRequest(new AddInstanceGroupsRequestPrivate(EmrRequest::AddInstanceGroupsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a AddInstanceGroupsRequestPrivate object for EMR \a action,
+ * Constructs a AddInstanceGroupsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
-    const EMRRequest::Action action, AddInstanceGroupsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, AddInstanceGroupsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
     const AddInstanceGroupsRequestPrivate &other, AddInstanceGroupsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

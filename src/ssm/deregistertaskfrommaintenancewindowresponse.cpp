@@ -68,7 +68,7 @@ DeregisterTaskFromMaintenanceWindowResponse::DeregisterTaskFromMaintenanceWindow
         const DeregisterTaskFromMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeregisterTaskFromMaintenanceWindowResponsePrivate(this), parent)
+    : SsmResponse(new DeregisterTaskFromMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new DeregisterTaskFromMaintenanceWindowRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeregisterTaskFromMaintenanceWindowResponse::parseSuccess(QIODevice &respon
  * Constructs a DeregisterTaskFromMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 DeregisterTaskFromMaintenanceWindowResponsePrivate::DeregisterTaskFromMaintenanceWindowResponsePrivate(
-    DeregisterTaskFromMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
+    DeregisterTaskFromMaintenanceWindowResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

@@ -58,7 +58,7 @@ SetSMSAttributesResponse::SetSMSAttributesResponse(
         const SetSMSAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SetSMSAttributesResponsePrivate(this), parent)
+    : SnsResponse(new SetSMSAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetSMSAttributesRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void SetSMSAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a SetSMSAttributesResponsePrivate object with public implementation \a q.
  */
 SetSMSAttributesResponsePrivate::SetSMSAttributesResponsePrivate(
-    SetSMSAttributesResponse * const q) : SNSResponsePrivate(q)
+    SetSMSAttributesResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

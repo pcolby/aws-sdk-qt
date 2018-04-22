@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UploadSSHPublicKeyRequest::UploadSSHPublicKeyRequest(const UploadSSHPublicKeyRequest &other)
-    : IAMRequest(new UploadSSHPublicKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UploadSSHPublicKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UploadSSHPublicKeyRequest::UploadSSHPublicKeyRequest(const UploadSSHPublicKeyReq
  * Constructs a UploadSSHPublicKeyRequest object.
  */
 UploadSSHPublicKeyRequest::UploadSSHPublicKeyRequest()
-    : IAMRequest(new UploadSSHPublicKeyRequestPrivate(IAMRequest::UploadSSHPublicKeyAction, this))
+    : IamRequest(new UploadSSHPublicKeyRequestPrivate(IamRequest::UploadSSHPublicKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UploadSSHPublicKeyRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UploadSSHPublicKeyRequestPrivate object for IAM \a action,
+ * Constructs a UploadSSHPublicKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
-    const IAMRequest::Action action, UploadSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UploadSSHPublicKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
     const UploadSSHPublicKeyRequestPrivate &other, UploadSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

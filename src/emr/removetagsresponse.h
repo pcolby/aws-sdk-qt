@@ -28,7 +28,7 @@ namespace EMR {
 
 class RemoveTagsResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsResponse : public EMRResponse {
+class QTAWS_EXPORT RemoveTagsResponse : public EmrResponse {
     Q_OBJECT
 
 public:

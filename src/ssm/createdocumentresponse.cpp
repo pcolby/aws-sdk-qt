@@ -68,7 +68,7 @@ CreateDocumentResponse::CreateDocumentResponse(
         const CreateDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateDocumentResponsePrivate(this), parent)
+    : SsmResponse(new CreateDocumentResponsePrivate(this), parent)
 {
     setRequest(new CreateDocumentRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void CreateDocumentResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDocumentResponsePrivate object with public implementation \a q.
  */
 CreateDocumentResponsePrivate::CreateDocumentResponsePrivate(
-    CreateDocumentResponse * const q) : SSMResponsePrivate(q)
+    CreateDocumentResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

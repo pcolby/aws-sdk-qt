@@ -27,7 +27,7 @@ namespace SSM {
 
 class StartAutomationExecutionRequestPrivate;
 
-class QTAWS_EXPORT StartAutomationExecutionRequest : public SSMRequest {
+class QTAWS_EXPORT StartAutomationExecutionRequest : public SsmRequest {
 
 public:
     StartAutomationExecutionRequest(const StartAutomationExecutionRequest &other);

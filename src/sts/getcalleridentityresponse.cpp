@@ -102,7 +102,7 @@ GetCallerIdentityResponse::GetCallerIdentityResponse(
         const GetCallerIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new GetCallerIdentityResponsePrivate(this), parent)
+    : StsResponse(new GetCallerIdentityResponsePrivate(this), parent)
 {
     setRequest(new GetCallerIdentityRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
  * Constructs a GetCallerIdentityResponsePrivate object with public implementation \a q.
  */
 GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
-    GetCallerIdentityResponse * const q) : STSResponsePrivate(q)
+    GetCallerIdentityResponse * const q) : StsResponsePrivate(q)
 {
 
 }

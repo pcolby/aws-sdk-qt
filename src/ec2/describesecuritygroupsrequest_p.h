@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeSecurityGroupsRequest;
 
-class QTAWS_EXPORT DescribeSecurityGroupsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeSecurityGroupsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeSecurityGroupsRequestPrivate(const EC2Request::Action action,
+    DescribeSecurityGroupsRequestPrivate(const Ec2Request::Action action,
                                    DescribeSecurityGroupsRequest * const q);
     DescribeSecurityGroupsRequestPrivate(const DescribeSecurityGroupsRequestPrivate &other,
                                    DescribeSecurityGroupsRequest * const q);

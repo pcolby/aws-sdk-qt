@@ -28,10 +28,10 @@ namespace DAX {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT ListTagsRequestPrivate : public DaxRequestPrivate {
 
 public:
-    ListTagsRequestPrivate(const DAXRequest::Action action,
+    ListTagsRequestPrivate(const DaxRequest::Action action,
                                    ListTagsRequest * const q);
     ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
                                    ListTagsRequest * const q);

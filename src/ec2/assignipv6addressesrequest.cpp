@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssignIpv6AddressesRequest::AssignIpv6AddressesRequest(const AssignIpv6AddressesRequest &other)
-    : EC2Request(new AssignIpv6AddressesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssignIpv6AddressesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssignIpv6AddressesRequest::AssignIpv6AddressesRequest(const AssignIpv6Addresses
  * Constructs a AssignIpv6AddressesRequest object.
  */
 AssignIpv6AddressesRequest::AssignIpv6AddressesRequest()
-    : EC2Request(new AssignIpv6AddressesRequestPrivate(EC2Request::AssignIpv6AddressesAction, this))
+    : Ec2Request(new AssignIpv6AddressesRequestPrivate(Ec2Request::AssignIpv6AddressesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetwork
  */
 
 /*!
- * Constructs a AssignIpv6AddressesRequestPrivate object for EC2 \a action,
+ * Constructs a AssignIpv6AddressesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
-    const EC2Request::Action action, AssignIpv6AddressesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssignIpv6AddressesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
     const AssignIpv6AddressesRequestPrivate &other, AssignIpv6AddressesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

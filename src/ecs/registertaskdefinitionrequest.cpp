@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest(const RegisterTaskDefinitionRequest &other)
-    : ECSRequest(new RegisterTaskDefinitionRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new RegisterTaskDefinitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest(const RegisterTaskD
  * Constructs a RegisterTaskDefinitionRequest object.
  */
 RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest()
-    : ECSRequest(new RegisterTaskDefinitionRequestPrivate(ECSRequest::RegisterTaskDefinitionAction, this))
+    : EcsRequest(new RegisterTaskDefinitionRequestPrivate(EcsRequest::RegisterTaskDefinitionAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetw
  */
 
 /*!
- * Constructs a RegisterTaskDefinitionRequestPrivate object for ECS \a action,
+ * Constructs a RegisterTaskDefinitionRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
-    const ECSRequest::Action action, RegisterTaskDefinitionRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, RegisterTaskDefinitionRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
     const RegisterTaskDefinitionRequestPrivate &other, RegisterTaskDefinitionRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

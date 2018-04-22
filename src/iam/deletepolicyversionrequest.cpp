@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other)
-    : IAMRequest(new DeletePolicyVersionRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeletePolicyVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersion
  * Constructs a DeletePolicyVersionRequest object.
  */
 DeletePolicyVersionRequest::DeletePolicyVersionRequest()
-    : IAMRequest(new DeletePolicyVersionRequestPrivate(IAMRequest::DeletePolicyVersionAction, this))
+    : IamRequest(new DeletePolicyVersionRequestPrivate(IamRequest::DeletePolicyVersionAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeletePolicyVersionRequestPrivate object for IAM \a action,
+ * Constructs a DeletePolicyVersionRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
-    const IAMRequest::Action action, DeletePolicyVersionRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeletePolicyVersionRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const DeletePolicyVersionRequestPrivate &other, DeletePolicyVersionRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

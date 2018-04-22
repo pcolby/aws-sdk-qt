@@ -44,7 +44,7 @@ DisassociateConnectorResponse::DisassociateConnectorResponse(
         const DisassociateConnectorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new DisassociateConnectorResponsePrivate(this), parent)
+    : SmsResponse(new DisassociateConnectorResponsePrivate(this), parent)
 {
     setRequest(new DisassociateConnectorRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
  * Constructs a DisassociateConnectorResponsePrivate object with public implementation \a q.
  */
 DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
-    DisassociateConnectorResponse * const q) : SMSResponsePrivate(q)
+    DisassociateConnectorResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

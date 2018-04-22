@@ -28,10 +28,10 @@ namespace SWF {
 
 class SignalWorkflowExecutionRequest;
 
-class QTAWS_EXPORT SignalWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT SignalWorkflowExecutionRequestPrivate : public SwfRequestPrivate {
 
 public:
-    SignalWorkflowExecutionRequestPrivate(const SWFRequest::Action action,
+    SignalWorkflowExecutionRequestPrivate(const SwfRequest::Action action,
                                    SignalWorkflowExecutionRequest * const q);
     SignalWorkflowExecutionRequestPrivate(const SignalWorkflowExecutionRequestPrivate &other,
                                    SignalWorkflowExecutionRequest * const q);

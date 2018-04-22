@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateAccountAliasRequest::CreateAccountAliasRequest(const CreateAccountAliasRequest &other)
-    : IAMRequest(new CreateAccountAliasRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateAccountAliasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateAccountAliasRequest::CreateAccountAliasRequest(const CreateAccountAliasReq
  * Constructs a CreateAccountAliasRequest object.
  */
 CreateAccountAliasRequest::CreateAccountAliasRequest()
-    : IAMRequest(new CreateAccountAliasRequestPrivate(IAMRequest::CreateAccountAliasAction, this))
+    : IamRequest(new CreateAccountAliasRequestPrivate(IamRequest::CreateAccountAliasAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateAccountAliasRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a CreateAccountAliasRequestPrivate object for IAM \a action,
+ * Constructs a CreateAccountAliasRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
-    const IAMRequest::Action action, CreateAccountAliasRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateAccountAliasRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
     const CreateAccountAliasRequestPrivate &other, CreateAccountAliasRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

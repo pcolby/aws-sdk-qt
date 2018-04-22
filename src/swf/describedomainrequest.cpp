@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 DescribeDomainRequest::DescribeDomainRequest(const DescribeDomainRequest &other)
-    : SWFRequest(new DescribeDomainRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new DescribeDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ DescribeDomainRequest::DescribeDomainRequest(const DescribeDomainRequest &other)
  * Constructs a DescribeDomainRequest object.
  */
 DescribeDomainRequest::DescribeDomainRequest()
-    : SWFRequest(new DescribeDomainRequestPrivate(SWFRequest::DescribeDomainAction, this))
+    : SwfRequest(new DescribeDomainRequestPrivate(SwfRequest::DescribeDomainAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DescribeDomainRequestPrivate object for SWF \a action,
+ * Constructs a DescribeDomainRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
-    const SWFRequest::Action action, DescribeDomainRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, DescribeDomainRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
     const DescribeDomainRequestPrivate &other, DescribeDomainRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

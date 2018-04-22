@@ -28,7 +28,7 @@ namespace ECS {
 
 class StopTaskResponsePrivate;
 
-class QTAWS_EXPORT StopTaskResponse : public ECSResponse {
+class QTAWS_EXPORT StopTaskResponse : public EcsResponse {
     Q_OBJECT
 
 public:

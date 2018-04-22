@@ -109,7 +109,7 @@ UpdateLoginProfileResponse::UpdateLoginProfileResponse(
         const UpdateLoginProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateLoginProfileResponsePrivate(this), parent)
+    : IamResponse(new UpdateLoginProfileResponsePrivate(this), parent)
 {
     setRequest(new UpdateLoginProfileRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateLoginProfileResponsePrivate object with public implementation \a q.
  */
 UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
-    UpdateLoginProfileResponse * const q) : IAMResponsePrivate(q)
+    UpdateLoginProfileResponse * const q) : IamResponsePrivate(q)
 {
 
 }

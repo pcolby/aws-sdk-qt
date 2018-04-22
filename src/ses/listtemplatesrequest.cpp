@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 ListTemplatesRequest::ListTemplatesRequest(const ListTemplatesRequest &other)
-    : SESRequest(new ListTemplatesRequestPrivate(*other.d_func(), this))
+    : SesRequest(new ListTemplatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ ListTemplatesRequest::ListTemplatesRequest(const ListTemplatesRequest &other)
  * Constructs a ListTemplatesRequest object.
  */
 ListTemplatesRequest::ListTemplatesRequest()
-    : SESRequest(new ListTemplatesRequestPrivate(SESRequest::ListTemplatesAction, this))
+    : SesRequest(new ListTemplatesRequestPrivate(SesRequest::ListTemplatesAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a ListTemplatesRequestPrivate object for SES \a action,
+ * Constructs a ListTemplatesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
-    const SESRequest::Action action, ListTemplatesRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, ListTemplatesRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
     const ListTemplatesRequestPrivate &other, ListTemplatesRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

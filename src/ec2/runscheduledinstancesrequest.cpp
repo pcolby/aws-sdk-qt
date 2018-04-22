@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RunScheduledInstancesRequest::RunScheduledInstancesRequest(const RunScheduledInstancesRequest &other)
-    : EC2Request(new RunScheduledInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RunScheduledInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RunScheduledInstancesRequest::RunScheduledInstancesRequest(const RunScheduledIns
  * Constructs a RunScheduledInstancesRequest object.
  */
 RunScheduledInstancesRequest::RunScheduledInstancesRequest()
-    : EC2Request(new RunScheduledInstancesRequestPrivate(EC2Request::RunScheduledInstancesAction, this))
+    : Ec2Request(new RunScheduledInstancesRequestPrivate(Ec2Request::RunScheduledInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetwo
  */
 
 /*!
- * Constructs a RunScheduledInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a RunScheduledInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
-    const EC2Request::Action action, RunScheduledInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RunScheduledInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
     const RunScheduledInstancesRequestPrivate &other, RunScheduledInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -44,7 +44,7 @@ StartOnDemandReplicationRunResponse::StartOnDemandReplicationRunResponse(
         const StartOnDemandReplicationRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new StartOnDemandReplicationRunResponsePrivate(this), parent)
+    : SmsResponse(new StartOnDemandReplicationRunResponsePrivate(this), parent)
 {
     setRequest(new StartOnDemandReplicationRunRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void StartOnDemandReplicationRunResponse::parseSuccess(QIODevice &response)
  * Constructs a StartOnDemandReplicationRunResponsePrivate object with public implementation \a q.
  */
 StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponsePrivate(
-    StartOnDemandReplicationRunResponse * const q) : SMSResponsePrivate(q)
+    StartOnDemandReplicationRunResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

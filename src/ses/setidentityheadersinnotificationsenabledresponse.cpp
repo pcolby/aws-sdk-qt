@@ -55,7 +55,7 @@ SetIdentityHeadersInNotificationsEnabledResponse::SetIdentityHeadersInNotificati
         const SetIdentityHeadersInNotificationsEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityHeadersInNotificationsEnabledResponsePrivate(this), parent)
+    : SesResponse(new SetIdentityHeadersInNotificationsEnabledResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityHeadersInNotificationsEnabledRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &r
  * Constructs a SetIdentityHeadersInNotificationsEnabledResponsePrivate object with public implementation \a q.
  */
 SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNotificationsEnabledResponsePrivate(
-    SetIdentityHeadersInNotificationsEnabledResponse * const q) : SESResponsePrivate(q)
+    SetIdentityHeadersInNotificationsEnabledResponse * const q) : SesResponsePrivate(q)
 {
 
 }

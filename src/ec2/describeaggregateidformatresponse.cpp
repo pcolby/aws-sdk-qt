@@ -48,7 +48,7 @@ DescribeAggregateIdFormatResponse::DescribeAggregateIdFormatResponse(
         const DescribeAggregateIdFormatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeAggregateIdFormatResponsePrivate(this), parent)
+    : Ec2Response(new DescribeAggregateIdFormatResponsePrivate(this), parent)
 {
     setRequest(new DescribeAggregateIdFormatRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeAggregateIdFormatResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeAggregateIdFormatResponsePrivate object with public implementation \a q.
  */
 DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponsePrivate(
-    DescribeAggregateIdFormatResponse * const q) : EC2ResponsePrivate(q)
+    DescribeAggregateIdFormatResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

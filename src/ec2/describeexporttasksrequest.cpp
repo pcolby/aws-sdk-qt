@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasksRequest &other)
-    : EC2Request(new DescribeExportTasksRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeExportTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasks
  * Constructs a DescribeExportTasksRequest object.
  */
 DescribeExportTasksRequest::DescribeExportTasksRequest()
-    : EC2Request(new DescribeExportTasksRequestPrivate(EC2Request::DescribeExportTasksAction, this))
+    : Ec2Request(new DescribeExportTasksRequestPrivate(Ec2Request::DescribeExportTasksAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeExportTasksRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeExportTasksRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
-    const EC2Request::Action action, DescribeExportTasksRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeExportTasksRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const DescribeExportTasksRequestPrivate &other, DescribeExportTasksRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

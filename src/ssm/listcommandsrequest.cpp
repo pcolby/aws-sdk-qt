@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListCommandsRequest::ListCommandsRequest(const ListCommandsRequest &other)
-    : SSMRequest(new ListCommandsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListCommandsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListCommandsRequest::ListCommandsRequest(const ListCommandsRequest &other)
  * Constructs a ListCommandsRequest object.
  */
 ListCommandsRequest::ListCommandsRequest()
-    : SSMRequest(new ListCommandsRequestPrivate(SSMRequest::ListCommandsAction, this))
+    : SsmRequest(new ListCommandsRequestPrivate(SsmRequest::ListCommandsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ListCommandsRequestPrivate object for SSM \a action,
+ * Constructs a ListCommandsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListCommandsRequestPrivate::ListCommandsRequestPrivate(
-    const SSMRequest::Action action, ListCommandsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListCommandsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListCommandsRequestPrivate::ListCommandsRequestPrivate(
  */
 ListCommandsRequestPrivate::ListCommandsRequestPrivate(
     const ListCommandsRequestPrivate &other, ListCommandsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

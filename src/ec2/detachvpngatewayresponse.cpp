@@ -48,7 +48,7 @@ DetachVpnGatewayResponse::DetachVpnGatewayResponse(
         const DetachVpnGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachVpnGatewayResponsePrivate(this), parent)
+    : Ec2Response(new DetachVpnGatewayResponsePrivate(this), parent)
 {
     setRequest(new DetachVpnGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a DetachVpnGatewayResponsePrivate object with public implementation \a q.
  */
 DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
-    DetachVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
+    DetachVpnGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

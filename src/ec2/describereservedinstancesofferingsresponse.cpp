@@ -48,7 +48,7 @@ DescribeReservedInstancesOfferingsResponse::DescribeReservedInstancesOfferingsRe
         const DescribeReservedInstancesOfferingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeReservedInstancesOfferingsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeReservedInstancesOfferingsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedInstancesOfferingsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeReservedInstancesOfferingsResponse::parseSuccess(QIODevice &respons
  * Constructs a DescribeReservedInstancesOfferingsResponsePrivate object with public implementation \a q.
  */
 DescribeReservedInstancesOfferingsResponsePrivate::DescribeReservedInstancesOfferingsResponsePrivate(
-    DescribeReservedInstancesOfferingsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeReservedInstancesOfferingsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

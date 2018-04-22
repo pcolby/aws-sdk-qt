@@ -58,7 +58,7 @@ ListPlatformApplicationsResponse::ListPlatformApplicationsResponse(
         const ListPlatformApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListPlatformApplicationsResponsePrivate(this), parent)
+    : SnsResponse(new ListPlatformApplicationsResponsePrivate(this), parent)
 {
     setRequest(new ListPlatformApplicationsRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListPlatformApplicationsResponsePrivate object with public implementation \a q.
  */
 ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate(
-    ListPlatformApplicationsResponse * const q) : SNSResponsePrivate(q)
+    ListPlatformApplicationsResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

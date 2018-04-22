@@ -47,7 +47,7 @@ DescribeSecurityConfigurationResponse::DescribeSecurityConfigurationResponse(
         const DescribeSecurityConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new DescribeSecurityConfigurationResponsePrivate(this), parent)
+    : EmrResponse(new DescribeSecurityConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DescribeSecurityConfigurationRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void DescribeSecurityConfigurationResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSecurityConfigurationResponsePrivate object with public implementation \a q.
  */
 DescribeSecurityConfigurationResponsePrivate::DescribeSecurityConfigurationResponsePrivate(
-    DescribeSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
+    DescribeSecurityConfigurationResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

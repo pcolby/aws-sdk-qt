@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
-    : DAXRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new TagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
  * Constructs a TagResourceRequest object.
  */
 TagResourceRequest::TagResourceRequest()
-    : DAXRequest(new TagResourceRequestPrivate(DAXRequest::TagResourceAction, this))
+    : DaxRequest(new TagResourceRequestPrivate(DaxRequest::TagResourceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a TagResourceRequestPrivate object for DAX \a action,
+ * Constructs a TagResourceRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
-    const DAXRequest::Action action, TagResourceRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, TagResourceRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const TagResourceRequestPrivate &other, TagResourceRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

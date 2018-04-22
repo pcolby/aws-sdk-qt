@@ -28,10 +28,10 @@ namespace WAF {
 
 class GetChangeTokenRequest;
 
-class QTAWS_EXPORT GetChangeTokenRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT GetChangeTokenRequestPrivate : public WafRequestPrivate {
 
 public:
-    GetChangeTokenRequestPrivate(const WAFRequest::Action action,
+    GetChangeTokenRequestPrivate(const WafRequest::Action action,
                                    GetChangeTokenRequest * const q);
     GetChangeTokenRequestPrivate(const GetChangeTokenRequestPrivate &other,
                                    GetChangeTokenRequest * const q);

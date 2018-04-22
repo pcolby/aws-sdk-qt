@@ -28,10 +28,10 @@ namespace RDS {
 
 class DescribeDBLogFilesRequest;
 
-class QTAWS_EXPORT DescribeDBLogFilesRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT DescribeDBLogFilesRequestPrivate : public RdsRequestPrivate {
 
 public:
-    DescribeDBLogFilesRequestPrivate(const RDSRequest::Action action,
+    DescribeDBLogFilesRequestPrivate(const RdsRequest::Action action,
                                    DescribeDBLogFilesRequest * const q);
     DescribeDBLogFilesRequestPrivate(const DescribeDBLogFilesRequestPrivate &other,
                                    DescribeDBLogFilesRequest * const q);

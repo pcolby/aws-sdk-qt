@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 DescribeBrokerRequest::DescribeBrokerRequest(const DescribeBrokerRequest &other)
-    : MQRequest(new DescribeBrokerRequestPrivate(*other.d_func(), this))
+    : MqRequest(new DescribeBrokerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeBrokerRequest::DescribeBrokerRequest(const DescribeBrokerRequest &other)
  * Constructs a DescribeBrokerRequest object.
  */
 DescribeBrokerRequest::DescribeBrokerRequest()
-    : MQRequest(new DescribeBrokerRequestPrivate(MQRequest::DescribeBrokerAction, this))
+    : MqRequest(new DescribeBrokerRequestPrivate(MqRequest::DescribeBrokerAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DescribeBrokerRequestPrivate object for MQ \a action,
+ * Constructs a DescribeBrokerRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
-    const MQRequest::Action action, DescribeBrokerRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, DescribeBrokerRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
     const DescribeBrokerRequestPrivate &other, DescribeBrokerRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

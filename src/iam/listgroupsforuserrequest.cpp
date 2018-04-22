@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListGroupsForUserRequest::ListGroupsForUserRequest(const ListGroupsForUserRequest &other)
-    : IAMRequest(new ListGroupsForUserRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListGroupsForUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListGroupsForUserRequest::ListGroupsForUserRequest(const ListGroupsForUserReques
  * Constructs a ListGroupsForUserRequest object.
  */
 ListGroupsForUserRequest::ListGroupsForUserRequest()
-    : IAMRequest(new ListGroupsForUserRequestPrivate(IAMRequest::ListGroupsForUserAction, this))
+    : IamRequest(new ListGroupsForUserRequestPrivate(IamRequest::ListGroupsForUserAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListGroupsForUserRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ListGroupsForUserRequestPrivate object for IAM \a action,
+ * Constructs a ListGroupsForUserRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
-    const IAMRequest::Action action, ListGroupsForUserRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListGroupsForUserRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
  */
 ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
     const ListGroupsForUserRequestPrivate &other, ListGroupsForUserRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

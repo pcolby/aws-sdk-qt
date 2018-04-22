@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
-    : WAFRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
  * Constructs a UpdateIPSetRequest object.
  */
 UpdateIPSetRequest::UpdateIPSetRequest()
-    : WAFRequest(new UpdateIPSetRequestPrivate(WAFRequest::UpdateIPSetAction, this))
+    : WafRequest(new UpdateIPSetRequestPrivate(WafRequest::UpdateIPSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a UpdateIPSetRequestPrivate object for WAF \a action,
+ * Constructs a UpdateIPSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
-    const WAFRequest::Action action, UpdateIPSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateIPSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const UpdateIPSetRequestPrivate &other, UpdateIPSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

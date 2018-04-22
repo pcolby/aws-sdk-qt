@@ -48,7 +48,7 @@ CopyFpgaImageResponse::CopyFpgaImageResponse(
         const CopyFpgaImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CopyFpgaImageResponsePrivate(this), parent)
+    : Ec2Response(new CopyFpgaImageResponsePrivate(this), parent)
 {
     setRequest(new CopyFpgaImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CopyFpgaImageResponse::parseSuccess(QIODevice &response)
  * Constructs a CopyFpgaImageResponsePrivate object with public implementation \a q.
  */
 CopyFpgaImageResponsePrivate::CopyFpgaImageResponsePrivate(
-    CopyFpgaImageResponse * const q) : EC2ResponsePrivate(q)
+    CopyFpgaImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &other)
-    : ECSRequest(new DescribeClustersRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DescribeClustersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &
  * Constructs a DescribeClustersRequest object.
  */
 DescribeClustersRequest::DescribeClustersRequest()
-    : ECSRequest(new DescribeClustersRequestPrivate(ECSRequest::DescribeClustersAction, this))
+    : EcsRequest(new DescribeClustersRequestPrivate(EcsRequest::DescribeClustersAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DescribeClustersRequestPrivate object for ECS \a action,
+ * Constructs a DescribeClustersRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
-    const ECSRequest::Action action, DescribeClustersRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DescribeClustersRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

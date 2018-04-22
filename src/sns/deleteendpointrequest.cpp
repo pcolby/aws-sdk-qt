@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
-    : SNSRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new DeleteEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ DeleteEndpointRequest::DeleteEndpointRequest(const DeleteEndpointRequest &other)
  * Constructs a DeleteEndpointRequest object.
  */
 DeleteEndpointRequest::DeleteEndpointRequest()
-    : SNSRequest(new DeleteEndpointRequestPrivate(SNSRequest::DeleteEndpointAction, this))
+    : SnsRequest(new DeleteEndpointRequestPrivate(SnsRequest::DeleteEndpointAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DeleteEndpointRequestPrivate object for SNS \a action,
+ * Constructs a DeleteEndpointRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
-    const SNSRequest::Action action, DeleteEndpointRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, DeleteEndpointRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DeleteEndpointRequestPrivate &other, DeleteEndpointRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

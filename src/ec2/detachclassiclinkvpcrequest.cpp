@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest(const DetachClassicLinkVpcRequest &other)
-    : EC2Request(new DetachClassicLinkVpcRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DetachClassicLinkVpcRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest(const DetachClassicLink
  * Constructs a DetachClassicLinkVpcRequest object.
  */
 DetachClassicLinkVpcRequest::DetachClassicLinkVpcRequest()
-    : EC2Request(new DetachClassicLinkVpcRequestPrivate(EC2Request::DetachClassicLinkVpcAction, this))
+    : Ec2Request(new DetachClassicLinkVpcRequestPrivate(Ec2Request::DetachClassicLinkVpcAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DetachClassicLinkVpcRequestPrivate object for EC2 \a action,
+ * Constructs a DetachClassicLinkVpcRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
-    const EC2Request::Action action, DetachClassicLinkVpcRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DetachClassicLinkVpcRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
     const DetachClassicLinkVpcRequestPrivate &other, DetachClassicLinkVpcRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

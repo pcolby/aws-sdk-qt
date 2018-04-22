@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest(const CreateInstanceExportTaskRequest &other)
-    : EC2Request(new CreateInstanceExportTaskRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateInstanceExportTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest(const CreateIns
  * Constructs a CreateInstanceExportTaskRequest object.
  */
 CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest()
-    : EC2Request(new CreateInstanceExportTaskRequestPrivate(EC2Request::CreateInstanceExportTaskAction, this))
+    : Ec2Request(new CreateInstanceExportTaskRequestPrivate(Ec2Request::CreateInstanceExportTaskAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNe
  */
 
 /*!
- * Constructs a CreateInstanceExportTaskRequestPrivate object for EC2 \a action,
+ * Constructs a CreateInstanceExportTaskRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
-    const EC2Request::Action action, CreateInstanceExportTaskRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateInstanceExportTaskRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
     const CreateInstanceExportTaskRequestPrivate &other, CreateInstanceExportTaskRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

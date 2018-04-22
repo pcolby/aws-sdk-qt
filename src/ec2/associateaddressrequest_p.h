@@ -28,10 +28,10 @@ namespace EC2 {
 
 class AssociateAddressRequest;
 
-class QTAWS_EXPORT AssociateAddressRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT AssociateAddressRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    AssociateAddressRequestPrivate(const EC2Request::Action action,
+    AssociateAddressRequestPrivate(const Ec2Request::Action action,
                                    AssociateAddressRequest * const q);
     AssociateAddressRequestPrivate(const AssociateAddressRequestPrivate &other,
                                    AssociateAddressRequest * const q);

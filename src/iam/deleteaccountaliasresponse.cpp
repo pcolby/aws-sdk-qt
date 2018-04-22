@@ -109,7 +109,7 @@ DeleteAccountAliasResponse::DeleteAccountAliasResponse(
         const DeleteAccountAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteAccountAliasResponsePrivate(this), parent)
+    : IamResponse(new DeleteAccountAliasResponsePrivate(this), parent)
 {
     setRequest(new DeleteAccountAliasRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteAccountAliasResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteAccountAliasResponsePrivate object with public implementation \a q.
  */
 DeleteAccountAliasResponsePrivate::DeleteAccountAliasResponsePrivate(
-    DeleteAccountAliasResponse * const q) : IAMResponsePrivate(q)
+    DeleteAccountAliasResponse * const q) : IamResponsePrivate(q)
 {
 
 }

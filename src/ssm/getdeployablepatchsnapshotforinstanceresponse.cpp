@@ -68,7 +68,7 @@ GetDeployablePatchSnapshotForInstanceResponse::GetDeployablePatchSnapshotForInst
         const GetDeployablePatchSnapshotForInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetDeployablePatchSnapshotForInstanceResponsePrivate(this), parent)
+    : SsmResponse(new GetDeployablePatchSnapshotForInstanceResponsePrivate(this), parent)
 {
     setRequest(new GetDeployablePatchSnapshotForInstanceRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetDeployablePatchSnapshotForInstanceResponse::parseSuccess(QIODevice &resp
  * Constructs a GetDeployablePatchSnapshotForInstanceResponsePrivate object with public implementation \a q.
  */
 GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshotForInstanceResponsePrivate(
-    GetDeployablePatchSnapshotForInstanceResponse * const q) : SSMResponsePrivate(q)
+    GetDeployablePatchSnapshotForInstanceResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

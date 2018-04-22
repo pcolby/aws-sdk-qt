@@ -27,7 +27,7 @@ namespace SSM {
 
 class ListAssociationVersionsResponse;
 
-class QTAWS_EXPORT ListAssociationVersionsResponsePrivate : public SSMResponsePrivate {
+class QTAWS_EXPORT ListAssociationVersionsResponsePrivate : public SsmResponsePrivate {
     Q_OBJECT
 
 public:

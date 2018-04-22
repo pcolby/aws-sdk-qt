@@ -48,7 +48,7 @@ CreateSpotDatafeedSubscriptionResponse::CreateSpotDatafeedSubscriptionResponse(
         const CreateSpotDatafeedSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateSpotDatafeedSubscriptionResponsePrivate(this), parent)
+    : Ec2Response(new CreateSpotDatafeedSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateSpotDatafeedSubscriptionRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateSpotDatafeedSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateSpotDatafeedSubscriptionResponsePrivate::CreateSpotDatafeedSubscriptionResponsePrivate(
-    CreateSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
+    CreateSpotDatafeedSubscriptionResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

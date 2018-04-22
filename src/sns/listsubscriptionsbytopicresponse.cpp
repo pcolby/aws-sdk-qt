@@ -58,7 +58,7 @@ ListSubscriptionsByTopicResponse::ListSubscriptionsByTopicResponse(
         const ListSubscriptionsByTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListSubscriptionsByTopicResponsePrivate(this), parent)
+    : SnsResponse(new ListSubscriptionsByTopicResponsePrivate(this), parent)
 {
     setRequest(new ListSubscriptionsByTopicRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void ListSubscriptionsByTopicResponse::parseSuccess(QIODevice &response)
  * Constructs a ListSubscriptionsByTopicResponsePrivate object with public implementation \a q.
  */
 ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponsePrivate(
-    ListSubscriptionsByTopicResponse * const q) : SNSResponsePrivate(q)
+    ListSubscriptionsByTopicResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -109,7 +109,7 @@ DeleteSigningCertificateResponse::DeleteSigningCertificateResponse(
         const DeleteSigningCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteSigningCertificateResponsePrivate(this), parent)
+    : IamResponse(new DeleteSigningCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteSigningCertificateRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteSigningCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSigningCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteSigningCertificateResponsePrivate::DeleteSigningCertificateResponsePrivate(
-    DeleteSigningCertificateResponse * const q) : IAMResponsePrivate(q)
+    DeleteSigningCertificateResponse * const q) : IamResponsePrivate(q)
 {
 
 }

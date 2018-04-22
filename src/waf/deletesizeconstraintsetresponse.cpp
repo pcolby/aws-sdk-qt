@@ -49,7 +49,7 @@ DeleteSizeConstraintSetResponse::DeleteSizeConstraintSetResponse(
         const DeleteSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteSizeConstraintSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSizeConstraintSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteSizeConstraintSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponsePrivate(
-    DeleteSizeConstraintSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteSizeConstraintSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

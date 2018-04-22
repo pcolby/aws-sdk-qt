@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateVpnConnectionRouteRequest::CreateVpnConnectionRouteRequest(const CreateVpnConnectionRouteRequest &other)
-    : EC2Request(new CreateVpnConnectionRouteRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateVpnConnectionRouteRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateVpnConnectionRouteRequest::CreateVpnConnectionRouteRequest(const CreateVpn
  * Constructs a CreateVpnConnectionRouteRequest object.
  */
 CreateVpnConnectionRouteRequest::CreateVpnConnectionRouteRequest()
-    : EC2Request(new CreateVpnConnectionRouteRequestPrivate(EC2Request::CreateVpnConnectionRouteAction, this))
+    : Ec2Request(new CreateVpnConnectionRouteRequestPrivate(Ec2Request::CreateVpnConnectionRouteAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRouteRequest::response(QNe
  */
 
 /*!
- * Constructs a CreateVpnConnectionRouteRequestPrivate object for EC2 \a action,
+ * Constructs a CreateVpnConnectionRouteRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
-    const EC2Request::Action action, CreateVpnConnectionRouteRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateVpnConnectionRouteRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
     const CreateVpnConnectionRouteRequestPrivate &other, CreateVpnConnectionRouteRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

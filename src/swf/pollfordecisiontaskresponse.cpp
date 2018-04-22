@@ -60,7 +60,7 @@ PollForDecisionTaskResponse::PollForDecisionTaskResponse(
         const PollForDecisionTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new PollForDecisionTaskResponsePrivate(this), parent)
+    : SwfResponse(new PollForDecisionTaskResponsePrivate(this), parent)
 {
     setRequest(new PollForDecisionTaskRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void PollForDecisionTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a PollForDecisionTaskResponsePrivate object with public implementation \a q.
  */
 PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponsePrivate(
-    PollForDecisionTaskResponse * const q) : SWFResponsePrivate(q)
+    PollForDecisionTaskResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

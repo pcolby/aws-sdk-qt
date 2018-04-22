@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 StopInstancesRequest::StopInstancesRequest(const StopInstancesRequest &other)
-    : EC2Request(new StopInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new StopInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ StopInstancesRequest::StopInstancesRequest(const StopInstancesRequest &other)
  * Constructs a StopInstancesRequest object.
  */
 StopInstancesRequest::StopInstancesRequest()
-    : EC2Request(new StopInstancesRequestPrivate(EC2Request::StopInstancesAction, this))
+    : Ec2Request(new StopInstancesRequestPrivate(Ec2Request::StopInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a StopInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a StopInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
-    const EC2Request::Action action, StopInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, StopInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ StopInstancesRequestPrivate::StopInstancesRequestPrivate(
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
     const StopInstancesRequestPrivate &other, StopInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

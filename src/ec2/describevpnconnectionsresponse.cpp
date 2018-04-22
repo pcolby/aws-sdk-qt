@@ -48,7 +48,7 @@ DescribeVpnConnectionsResponse::DescribeVpnConnectionsResponse(
         const DescribeVpnConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpnConnectionsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeVpnConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpnConnectionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeVpnConnectionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeVpnConnectionsResponsePrivate object with public implementation \a q.
  */
 DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponsePrivate(
-    DescribeVpnConnectionsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeVpnConnectionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

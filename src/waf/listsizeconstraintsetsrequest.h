@@ -27,7 +27,7 @@ namespace WAF {
 
 class ListSizeConstraintSetsRequestPrivate;
 
-class QTAWS_EXPORT ListSizeConstraintSetsRequest : public WAFRequest {
+class QTAWS_EXPORT ListSizeConstraintSetsRequest : public WafRequest {
 
 public:
     ListSizeConstraintSetsRequest(const ListSizeConstraintSetsRequest &other);

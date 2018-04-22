@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateCustomerGatewayRequestPrivate;
 
-class QTAWS_EXPORT CreateCustomerGatewayRequest : public EC2Request {
+class QTAWS_EXPORT CreateCustomerGatewayRequest : public Ec2Request {
 
 public:
     CreateCustomerGatewayRequest(const CreateCustomerGatewayRequest &other);

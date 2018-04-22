@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest(const UpdateSecurityGroupRuleDescriptionsIngressRequest &other)
-    : EC2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescri
  * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequest object.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest()
-    : EC2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(EC2Request::UpdateSecurityGroupRuleDescriptionsIngressAction, this))
+    : Ec2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(Ec2Request::UpdateSecurityGroupRuleDescriptionsIngressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressReq
  */
 
 /*!
- * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object for EC2 \a action,
+ * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
-    const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRul
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
     const UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate &other, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

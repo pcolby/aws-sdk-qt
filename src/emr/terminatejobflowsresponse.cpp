@@ -47,7 +47,7 @@ TerminateJobFlowsResponse::TerminateJobFlowsResponse(
         const TerminateJobFlowsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new TerminateJobFlowsResponsePrivate(this), parent)
+    : EmrResponse(new TerminateJobFlowsResponsePrivate(this), parent)
 {
     setRequest(new TerminateJobFlowsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
  * Constructs a TerminateJobFlowsResponsePrivate object with public implementation \a q.
  */
 TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
-    TerminateJobFlowsResponse * const q) : EMRResponsePrivate(q)
+    TerminateJobFlowsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

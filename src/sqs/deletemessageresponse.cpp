@@ -110,7 +110,7 @@ DeleteMessageResponse::DeleteMessageResponse(
         const DeleteMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new DeleteMessageResponsePrivate(this), parent)
+    : SqsResponse(new DeleteMessageResponsePrivate(this), parent)
 {
     setRequest(new DeleteMessageRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void DeleteMessageResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteMessageResponsePrivate object with public implementation \a q.
  */
 DeleteMessageResponsePrivate::DeleteMessageResponsePrivate(
-    DeleteMessageResponse * const q) : SQSResponsePrivate(q)
+    DeleteMessageResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

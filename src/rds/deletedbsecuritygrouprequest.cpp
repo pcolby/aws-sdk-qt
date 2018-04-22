@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteDBSecurityGroupRequest::DeleteDBSecurityGroupRequest(const DeleteDBSecurityGroupRequest &other)
-    : RDSRequest(new DeleteDBSecurityGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteDBSecurityGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteDBSecurityGroupRequest::DeleteDBSecurityGroupRequest(const DeleteDBSecurit
  * Constructs a DeleteDBSecurityGroupRequest object.
  */
 DeleteDBSecurityGroupRequest::DeleteDBSecurityGroupRequest()
-    : RDSRequest(new DeleteDBSecurityGroupRequestPrivate(RDSRequest::DeleteDBSecurityGroupAction, this))
+    : RdsRequest(new DeleteDBSecurityGroupRequestPrivate(RdsRequest::DeleteDBSecurityGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetwo
  */
 
 /*!
- * Constructs a DeleteDBSecurityGroupRequestPrivate object for RDS \a action,
+ * Constructs a DeleteDBSecurityGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
-    const RDSRequest::Action action, DeleteDBSecurityGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteDBSecurityGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
     const DeleteDBSecurityGroupRequestPrivate &other, DeleteDBSecurityGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SWF {
 
 class ListClosedWorkflowExecutionsRequest;
 
-class QTAWS_EXPORT ListClosedWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT ListClosedWorkflowExecutionsRequestPrivate : public SwfRequestPrivate {
 
 public:
-    ListClosedWorkflowExecutionsRequestPrivate(const SWFRequest::Action action,
+    ListClosedWorkflowExecutionsRequestPrivate(const SwfRequest::Action action,
                                    ListClosedWorkflowExecutionsRequest * const q);
     ListClosedWorkflowExecutionsRequestPrivate(const ListClosedWorkflowExecutionsRequestPrivate &other,
                                    ListClosedWorkflowExecutionsRequest * const q);

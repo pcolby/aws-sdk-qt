@@ -27,7 +27,7 @@ namespace RDS {
 
 class AddRoleToDBClusterRequestPrivate;
 
-class QTAWS_EXPORT AddRoleToDBClusterRequest : public RDSRequest {
+class QTAWS_EXPORT AddRoleToDBClusterRequest : public RdsRequest {
 
 public:
     AddRoleToDBClusterRequest(const AddRoleToDBClusterRequest &other);

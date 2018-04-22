@@ -55,7 +55,7 @@ ListTemplatesResponse::ListTemplatesResponse(
         const ListTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListTemplatesResponsePrivate(this), parent)
+    : SesResponse(new ListTemplatesResponsePrivate(this), parent)
 {
     setRequest(new ListTemplatesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void ListTemplatesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListTemplatesResponsePrivate object with public implementation \a q.
  */
 ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
-    ListTemplatesResponse * const q) : SESResponsePrivate(q)
+    ListTemplatesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

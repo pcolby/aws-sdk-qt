@@ -48,7 +48,7 @@ DescribeScheduledInstancesResponse::DescribeScheduledInstancesResponse(
         const DescribeScheduledInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeScheduledInstancesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeScheduledInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeScheduledInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeScheduledInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeScheduledInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeScheduledInstancesResponsePrivate::DescribeScheduledInstancesResponsePrivate(
-    DescribeScheduledInstancesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeScheduledInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

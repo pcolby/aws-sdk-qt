@@ -53,7 +53,7 @@ ResendValidationEmailResponse::ResendValidationEmailResponse(
         const ResendValidationEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new ResendValidationEmailResponsePrivate(this), parent)
+    : AcmResponse(new ResendValidationEmailResponsePrivate(this), parent)
 {
     setRequest(new ResendValidationEmailRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
  * Constructs a ResendValidationEmailResponsePrivate object with public implementation \a q.
  */
 ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
-    ResendValidationEmailResponse * const q) : ACMResponsePrivate(q)
+    ResendValidationEmailResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderRequest(const AddClientIDToOpenIDConnectProviderRequest &other)
-    : IAMRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
+    : IamRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderReq
  * Constructs a AddClientIDToOpenIDConnectProviderRequest object.
  */
 AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderRequest()
-    : IAMRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(IAMRequest::AddClientIDToOpenIDConnectProviderAction, this))
+    : IamRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(IamRequest::AddClientIDToOpenIDConnectProviderAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * AddClientIDToOpenIDConnectProviderRequest::re
  */
 
 /*!
- * Constructs a AddClientIDToOpenIDConnectProviderRequestPrivate object for IAM \a action,
+ * Constructs a AddClientIDToOpenIDConnectProviderRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProviderRequestPrivate(
-    const IAMRequest::Action action, AddClientIDToOpenIDConnectProviderRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, AddClientIDToOpenIDConnectProviderRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProv
  */
 AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProviderRequestPrivate(
     const AddClientIDToOpenIDConnectProviderRequestPrivate &other, AddClientIDToOpenIDConnectProviderRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

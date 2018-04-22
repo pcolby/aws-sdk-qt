@@ -68,7 +68,7 @@ SendAutomationSignalResponse::SendAutomationSignalResponse(
         const SendAutomationSignalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new SendAutomationSignalResponsePrivate(this), parent)
+    : SsmResponse(new SendAutomationSignalResponsePrivate(this), parent)
 {
     setRequest(new SendAutomationSignalRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void SendAutomationSignalResponse::parseSuccess(QIODevice &response)
  * Constructs a SendAutomationSignalResponsePrivate object with public implementation \a q.
  */
 SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
-    SendAutomationSignalResponse * const q) : SSMResponsePrivate(q)
+    SendAutomationSignalResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

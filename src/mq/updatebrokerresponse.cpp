@@ -46,7 +46,7 @@ UpdateBrokerResponse::UpdateBrokerResponse(
         const UpdateBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new UpdateBrokerResponsePrivate(this), parent)
+    : MqResponse(new UpdateBrokerResponsePrivate(this), parent)
 {
     setRequest(new UpdateBrokerRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void UpdateBrokerResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateBrokerResponsePrivate object with public implementation \a q.
  */
 UpdateBrokerResponsePrivate::UpdateBrokerResponsePrivate(
-    UpdateBrokerResponse * const q) : MQResponsePrivate(q)
+    UpdateBrokerResponse * const q) : MqResponsePrivate(q)
 {
 
 }

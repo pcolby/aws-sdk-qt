@@ -28,10 +28,10 @@ namespace EC2 {
 
 class RejectVpcEndpointConnectionsRequest;
 
-class QTAWS_EXPORT RejectVpcEndpointConnectionsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT RejectVpcEndpointConnectionsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    RejectVpcEndpointConnectionsRequestPrivate(const EC2Request::Action action,
+    RejectVpcEndpointConnectionsRequestPrivate(const Ec2Request::Action action,
                                    RejectVpcEndpointConnectionsRequest * const q);
     RejectVpcEndpointConnectionsRequestPrivate(const RejectVpcEndpointConnectionsRequestPrivate &other,
                                    RejectVpcEndpointConnectionsRequest * const q);

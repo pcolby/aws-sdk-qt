@@ -50,7 +50,7 @@ AssociateAdminAccountResponse::AssociateAdminAccountResponse(
         const AssociateAdminAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new AssociateAdminAccountResponsePrivate(this), parent)
+    : FmsResponse(new AssociateAdminAccountResponsePrivate(this), parent)
 {
     setRequest(new AssociateAdminAccountRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void AssociateAdminAccountResponse::parseSuccess(QIODevice &response)
  * Constructs a AssociateAdminAccountResponsePrivate object with public implementation \a q.
  */
 AssociateAdminAccountResponsePrivate::AssociateAdminAccountResponsePrivate(
-    AssociateAdminAccountResponse * const q) : FMSResponsePrivate(q)
+    AssociateAdminAccountResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

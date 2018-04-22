@@ -109,7 +109,7 @@ UploadSigningCertificateResponse::UploadSigningCertificateResponse(
         const UploadSigningCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UploadSigningCertificateResponsePrivate(this), parent)
+    : IamResponse(new UploadSigningCertificateResponsePrivate(this), parent)
 {
     setRequest(new UploadSigningCertificateRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UploadSigningCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a UploadSigningCertificateResponsePrivate object with public implementation \a q.
  */
 UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponsePrivate(
-    UploadSigningCertificateResponse * const q) : IAMResponsePrivate(q)
+    UploadSigningCertificateResponse * const q) : IamResponsePrivate(q)
 {
 
 }

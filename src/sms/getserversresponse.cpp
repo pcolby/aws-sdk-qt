@@ -44,7 +44,7 @@ GetServersResponse::GetServersResponse(
         const GetServersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new GetServersResponsePrivate(this), parent)
+    : SmsResponse(new GetServersResponsePrivate(this), parent)
 {
     setRequest(new GetServersRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void GetServersResponse::parseSuccess(QIODevice &response)
  * Constructs a GetServersResponsePrivate object with public implementation \a q.
  */
 GetServersResponsePrivate::GetServersResponsePrivate(
-    GetServersResponse * const q) : SMSResponsePrivate(q)
+    GetServersResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

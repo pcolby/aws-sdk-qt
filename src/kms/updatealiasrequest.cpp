@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 UpdateAliasRequest::UpdateAliasRequest(const UpdateAliasRequest &other)
-    : KMSRequest(new UpdateAliasRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new UpdateAliasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ UpdateAliasRequest::UpdateAliasRequest(const UpdateAliasRequest &other)
  * Constructs a UpdateAliasRequest object.
  */
 UpdateAliasRequest::UpdateAliasRequest()
-    : KMSRequest(new UpdateAliasRequestPrivate(KMSRequest::UpdateAliasAction, this))
+    : KmsRequest(new UpdateAliasRequestPrivate(KmsRequest::UpdateAliasAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a UpdateAliasRequestPrivate object for KMS \a action,
+ * Constructs a UpdateAliasRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
-    const KMSRequest::Action action, UpdateAliasRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, UpdateAliasRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const UpdateAliasRequestPrivate &other, UpdateAliasRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

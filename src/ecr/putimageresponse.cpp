@@ -48,7 +48,7 @@ PutImageResponse::PutImageResponse(
         const PutImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new PutImageResponsePrivate(this), parent)
+    : EcrResponse(new PutImageResponsePrivate(this), parent)
 {
     setRequest(new PutImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void PutImageResponse::parseSuccess(QIODevice &response)
  * Constructs a PutImageResponsePrivate object with public implementation \a q.
  */
 PutImageResponsePrivate::PutImageResponsePrivate(
-    PutImageResponse * const q) : ECRResponsePrivate(q)
+    PutImageResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteConfigurationSetTrackingOptionsResponsePrivate;
 
-class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsResponse : public SESResponse {
+class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsResponse : public SesResponse {
     Q_OBJECT
 
 public:

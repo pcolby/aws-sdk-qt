@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeEffectivePatchesForPatchBaselineRequestPrivate;
 
-class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequest : public SSMRequest {
+class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequest : public SsmRequest {
 
 public:
     DescribeEffectivePatchesForPatchBaselineRequest(const DescribeEffectivePatchesForPatchBaselineRequest &other);

@@ -74,7 +74,7 @@ TagCertificateAuthorityResponse::TagCertificateAuthorityResponse(
         const TagCertificateAuthorityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new TagCertificateAuthorityResponsePrivate(this), parent)
+    : AcmpcaResponse(new TagCertificateAuthorityResponsePrivate(this), parent)
 {
     setRequest(new TagCertificateAuthorityRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void TagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
  * Constructs a TagCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 TagCertificateAuthorityResponsePrivate::TagCertificateAuthorityResponsePrivate(
-    TagCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
+    TagCertificateAuthorityResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListMFADevicesRequest::ListMFADevicesRequest(const ListMFADevicesRequest &other)
-    : IAMRequest(new ListMFADevicesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListMFADevicesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListMFADevicesRequest::ListMFADevicesRequest(const ListMFADevicesRequest &other)
  * Constructs a ListMFADevicesRequest object.
  */
 ListMFADevicesRequest::ListMFADevicesRequest()
-    : IAMRequest(new ListMFADevicesRequestPrivate(IAMRequest::ListMFADevicesAction, this))
+    : IamRequest(new ListMFADevicesRequestPrivate(IamRequest::ListMFADevicesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListMFADevicesRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ListMFADevicesRequestPrivate object for IAM \a action,
+ * Constructs a ListMFADevicesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
-    const IAMRequest::Action action, ListMFADevicesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListMFADevicesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
  */
 ListMFADevicesRequestPrivate::ListMFADevicesRequestPrivate(
     const ListMFADevicesRequestPrivate &other, ListMFADevicesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

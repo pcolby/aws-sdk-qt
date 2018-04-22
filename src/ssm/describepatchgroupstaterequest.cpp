@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribePatchGroupStateRequest::DescribePatchGroupStateRequest(const DescribePatchGroupStateRequest &other)
-    : SSMRequest(new DescribePatchGroupStateRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribePatchGroupStateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribePatchGroupStateRequest::DescribePatchGroupStateRequest(const DescribePat
  * Constructs a DescribePatchGroupStateRequest object.
  */
 DescribePatchGroupStateRequest::DescribePatchGroupStateRequest()
-    : SSMRequest(new DescribePatchGroupStateRequestPrivate(SSMRequest::DescribePatchGroupStateAction, this))
+    : SsmRequest(new DescribePatchGroupStateRequestPrivate(SsmRequest::DescribePatchGroupStateAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribePatchGroupStateRequest::response(QNet
  */
 
 /*!
- * Constructs a DescribePatchGroupStateRequestPrivate object for SSM \a action,
+ * Constructs a DescribePatchGroupStateRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribePatchGroupStateRequestPrivate::DescribePatchGroupStateRequestPrivate(
-    const SSMRequest::Action action, DescribePatchGroupStateRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribePatchGroupStateRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribePatchGroupStateRequestPrivate::DescribePatchGroupStateRequestPrivate(
  */
 DescribePatchGroupStateRequestPrivate::DescribePatchGroupStateRequestPrivate(
     const DescribePatchGroupStateRequestPrivate &other, DescribePatchGroupStateRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

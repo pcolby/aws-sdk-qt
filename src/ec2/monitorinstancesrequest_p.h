@@ -28,10 +28,10 @@ namespace EC2 {
 
 class MonitorInstancesRequest;
 
-class QTAWS_EXPORT MonitorInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT MonitorInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    MonitorInstancesRequestPrivate(const EC2Request::Action action,
+    MonitorInstancesRequestPrivate(const Ec2Request::Action action,
                                    MonitorInstancesRequest * const q);
     MonitorInstancesRequestPrivate(const MonitorInstancesRequestPrivate &other,
                                    MonitorInstancesRequest * const q);

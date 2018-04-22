@@ -28,10 +28,10 @@ namespace SNS {
 
 class PublishRequest;
 
-class QTAWS_EXPORT PublishRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT PublishRequestPrivate : public SnsRequestPrivate {
 
 public:
-    PublishRequestPrivate(const SNSRequest::Action action,
+    PublishRequestPrivate(const SnsRequest::Action action,
                                    PublishRequest * const q);
     PublishRequestPrivate(const PublishRequestPrivate &other,
                                    PublishRequest * const q);

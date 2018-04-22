@@ -48,7 +48,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new TagResourceResponsePrivate(this), parent)
+    : DaxResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : DAXResponsePrivate(q)
+    TagResourceResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

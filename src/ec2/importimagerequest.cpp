@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ImportImageRequest::ImportImageRequest(const ImportImageRequest &other)
-    : EC2Request(new ImportImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ImportImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ImportImageRequest::ImportImageRequest(const ImportImageRequest &other)
  * Constructs a ImportImageRequest object.
  */
 ImportImageRequest::ImportImageRequest()
-    : EC2Request(new ImportImageRequestPrivate(EC2Request::ImportImageAction, this))
+    : Ec2Request(new ImportImageRequestPrivate(Ec2Request::ImportImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ImportImageRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a ImportImageRequestPrivate object for EC2 \a action,
+ * Constructs a ImportImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ImportImageRequestPrivate::ImportImageRequestPrivate(
-    const EC2Request::Action action, ImportImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ImportImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ImportImageRequestPrivate::ImportImageRequestPrivate(
  */
 ImportImageRequestPrivate::ImportImageRequestPrivate(
     const ImportImageRequestPrivate &other, ImportImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

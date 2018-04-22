@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CopyFpgaImageRequest::CopyFpgaImageRequest(const CopyFpgaImageRequest &other)
-    : EC2Request(new CopyFpgaImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CopyFpgaImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CopyFpgaImageRequest::CopyFpgaImageRequest(const CopyFpgaImageRequest &other)
  * Constructs a CopyFpgaImageRequest object.
  */
 CopyFpgaImageRequest::CopyFpgaImageRequest()
-    : EC2Request(new CopyFpgaImageRequestPrivate(EC2Request::CopyFpgaImageAction, this))
+    : Ec2Request(new CopyFpgaImageRequestPrivate(Ec2Request::CopyFpgaImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a CopyFpgaImageRequestPrivate object for EC2 \a action,
+ * Constructs a CopyFpgaImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
-    const EC2Request::Action action, CopyFpgaImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CopyFpgaImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
     const CopyFpgaImageRequestPrivate &other, CopyFpgaImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

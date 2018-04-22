@@ -143,7 +143,7 @@ ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
         const ScheduleKeyDeletionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ScheduleKeyDeletionResponsePrivate(this), parent)
+    : KmsResponse(new ScheduleKeyDeletionResponsePrivate(this), parent)
 {
     setRequest(new ScheduleKeyDeletionRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ScheduleKeyDeletionResponse::parseSuccess(QIODevice &response)
  * Constructs a ScheduleKeyDeletionResponsePrivate object with public implementation \a q.
  */
 ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
-    ScheduleKeyDeletionResponse * const q) : KMSResponsePrivate(q)
+    ScheduleKeyDeletionResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

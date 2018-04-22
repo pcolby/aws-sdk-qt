@@ -28,10 +28,10 @@ namespace SSM {
 
 class CreateDocumentRequest;
 
-class QTAWS_EXPORT CreateDocumentRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT CreateDocumentRequestPrivate : public SsmRequestPrivate {
 
 public:
-    CreateDocumentRequestPrivate(const SSMRequest::Action action,
+    CreateDocumentRequestPrivate(const SsmRequest::Action action,
                                    CreateDocumentRequest * const q);
     CreateDocumentRequestPrivate(const CreateDocumentRequestPrivate &other,
                                    CreateDocumentRequest * const q);

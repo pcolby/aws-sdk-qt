@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeDBEngineVersionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsRequest : public RDSRequest {
+class QTAWS_EXPORT DescribeDBEngineVersionsRequest : public RdsRequest {
 
 public:
     DescribeDBEngineVersionsRequest(const DescribeDBEngineVersionsRequest &other);

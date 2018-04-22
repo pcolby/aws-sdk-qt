@@ -48,7 +48,7 @@ DescribeImportImageTasksResponse::DescribeImportImageTasksResponse(
         const DescribeImportImageTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeImportImageTasksResponsePrivate(this), parent)
+    : Ec2Response(new DescribeImportImageTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeImportImageTasksRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeImportImageTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeImportImageTasksResponsePrivate object with public implementation \a q.
  */
 DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponsePrivate(
-    DescribeImportImageTasksResponse * const q) : EC2ResponsePrivate(q)
+    DescribeImportImageTasksResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

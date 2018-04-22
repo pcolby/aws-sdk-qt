@@ -68,7 +68,7 @@ UpdateMaintenanceWindowTargetResponse::UpdateMaintenanceWindowTargetResponse(
         const UpdateMaintenanceWindowTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateMaintenanceWindowTargetResponsePrivate(this), parent)
+    : SsmResponse(new UpdateMaintenanceWindowTargetResponsePrivate(this), parent)
 {
     setRequest(new UpdateMaintenanceWindowTargetRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void UpdateMaintenanceWindowTargetResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateMaintenanceWindowTargetResponsePrivate object with public implementation \a q.
  */
 UpdateMaintenanceWindowTargetResponsePrivate::UpdateMaintenanceWindowTargetResponsePrivate(
-    UpdateMaintenanceWindowTargetResponse * const q) : SSMResponsePrivate(q)
+    UpdateMaintenanceWindowTargetResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

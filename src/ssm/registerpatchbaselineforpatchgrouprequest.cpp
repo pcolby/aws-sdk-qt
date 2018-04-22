@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 RegisterPatchBaselineForPatchGroupRequest::RegisterPatchBaselineForPatchGroupRequest(const RegisterPatchBaselineForPatchGroupRequest &other)
-    : SSMRequest(new RegisterPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new RegisterPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ RegisterPatchBaselineForPatchGroupRequest::RegisterPatchBaselineForPatchGroupReq
  * Constructs a RegisterPatchBaselineForPatchGroupRequest object.
  */
 RegisterPatchBaselineForPatchGroupRequest::RegisterPatchBaselineForPatchGroupRequest()
-    : SSMRequest(new RegisterPatchBaselineForPatchGroupRequestPrivate(SSMRequest::RegisterPatchBaselineForPatchGroupAction, this))
+    : SsmRequest(new RegisterPatchBaselineForPatchGroupRequestPrivate(SsmRequest::RegisterPatchBaselineForPatchGroupAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * RegisterPatchBaselineForPatchGroupRequest::re
  */
 
 /*!
- * Constructs a RegisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action,
+ * Constructs a RegisterPatchBaselineForPatchGroupRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 RegisterPatchBaselineForPatchGroupRequestPrivate::RegisterPatchBaselineForPatchGroupRequestPrivate(
-    const SSMRequest::Action action, RegisterPatchBaselineForPatchGroupRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, RegisterPatchBaselineForPatchGroupRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ RegisterPatchBaselineForPatchGroupRequestPrivate::RegisterPatchBaselineForPatchG
  */
 RegisterPatchBaselineForPatchGroupRequestPrivate::RegisterPatchBaselineForPatchGroupRequestPrivate(
     const RegisterPatchBaselineForPatchGroupRequestPrivate &other, RegisterPatchBaselineForPatchGroupRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

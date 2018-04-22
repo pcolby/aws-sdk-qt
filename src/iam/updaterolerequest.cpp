@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateRoleRequest::UpdateRoleRequest(const UpdateRoleRequest &other)
-    : IAMRequest(new UpdateRoleRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateRoleRequest::UpdateRoleRequest(const UpdateRoleRequest &other)
  * Constructs a UpdateRoleRequest object.
  */
 UpdateRoleRequest::UpdateRoleRequest()
-    : IAMRequest(new UpdateRoleRequestPrivate(IAMRequest::UpdateRoleAction, this))
+    : IamRequest(new UpdateRoleRequestPrivate(IamRequest::UpdateRoleAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a UpdateRoleRequestPrivate object for IAM \a action,
+ * Constructs a UpdateRoleRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
-    const IAMRequest::Action action, UpdateRoleRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateRoleRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
  */
 UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
     const UpdateRoleRequestPrivate &other, UpdateRoleRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -143,7 +143,7 @@ ListGrantsResponse::ListGrantsResponse(
         const ListGrantsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListGrantsResponsePrivate(this), parent)
+    : KmsResponse(new ListGrantsResponsePrivate(this), parent)
 {
     setRequest(new ListGrantsRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ListGrantsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListGrantsResponsePrivate object with public implementation \a q.
  */
 ListGrantsResponsePrivate::ListGrantsResponsePrivate(
-    ListGrantsResponse * const q) : KMSResponsePrivate(q)
+    ListGrantsResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

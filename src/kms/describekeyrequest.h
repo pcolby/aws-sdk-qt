@@ -27,7 +27,7 @@ namespace KMS {
 
 class DescribeKeyRequestPrivate;
 
-class QTAWS_EXPORT DescribeKeyRequest : public KMSRequest {
+class QTAWS_EXPORT DescribeKeyRequest : public KmsRequest {
 
 public:
     DescribeKeyRequest(const DescribeKeyRequest &other);

@@ -48,7 +48,7 @@ DescribeSubnetsResponse::DescribeSubnetsResponse(
         const DescribeSubnetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSubnetsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeSubnetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSubnetsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSubnetsResponsePrivate object with public implementation \a q.
  */
 DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
-    DescribeSubnetsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeSubnetsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

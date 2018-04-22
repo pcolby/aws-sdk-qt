@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest(const DeleteDhcpOptionsRequest &other)
-    : EC2Request(new DeleteDhcpOptionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteDhcpOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest(const DeleteDhcpOptionsReques
  * Constructs a DeleteDhcpOptionsRequest object.
  */
 DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest()
-    : EC2Request(new DeleteDhcpOptionsRequestPrivate(EC2Request::DeleteDhcpOptionsAction, this))
+    : Ec2Request(new DeleteDhcpOptionsRequestPrivate(Ec2Request::DeleteDhcpOptionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteDhcpOptionsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteDhcpOptionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
-    const EC2Request::Action action, DeleteDhcpOptionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteDhcpOptionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
     const DeleteDhcpOptionsRequestPrivate &other, DeleteDhcpOptionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

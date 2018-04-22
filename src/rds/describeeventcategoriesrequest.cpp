@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEventCategoriesRequest &other)
-    : RDSRequest(new DescribeEventCategoriesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeEventCategoriesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEve
  * Constructs a DescribeEventCategoriesRequest object.
  */
 DescribeEventCategoriesRequest::DescribeEventCategoriesRequest()
-    : RDSRequest(new DescribeEventCategoriesRequestPrivate(RDSRequest::DescribeEventCategoriesAction, this))
+    : RdsRequest(new DescribeEventCategoriesRequestPrivate(RdsRequest::DescribeEventCategoriesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
  */
 
 /*!
- * Constructs a DescribeEventCategoriesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeEventCategoriesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
-    const RDSRequest::Action action, DescribeEventCategoriesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeEventCategoriesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const DescribeEventCategoriesRequestPrivate &other, DescribeEventCategoriesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -68,7 +68,7 @@ StopAutomationExecutionResponse::StopAutomationExecutionResponse(
         const StopAutomationExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new StopAutomationExecutionResponsePrivate(this), parent)
+    : SsmResponse(new StopAutomationExecutionResponsePrivate(this), parent)
 {
     setRequest(new StopAutomationExecutionRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void StopAutomationExecutionResponse::parseSuccess(QIODevice &response)
  * Constructs a StopAutomationExecutionResponsePrivate object with public implementation \a q.
  */
 StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponsePrivate(
-    StopAutomationExecutionResponse * const q) : SSMResponsePrivate(q)
+    StopAutomationExecutionResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

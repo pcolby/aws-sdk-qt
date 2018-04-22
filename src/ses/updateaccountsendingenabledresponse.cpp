@@ -55,7 +55,7 @@ UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
         const UpdateAccountSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateAccountSendingEnabledResponsePrivate(this), parent)
+    : SesResponse(new UpdateAccountSendingEnabledResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccountSendingEnabledRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateAccountSendingEnabledResponsePrivate object with public implementation \a q.
  */
 UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResponsePrivate(
-    UpdateAccountSendingEnabledResponse * const q) : SESResponsePrivate(q)
+    UpdateAccountSendingEnabledResponse * const q) : SesResponsePrivate(q)
 {
 
 }

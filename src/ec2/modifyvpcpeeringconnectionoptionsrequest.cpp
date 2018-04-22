@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest(const ModifyVpcPeeringConnectionOptionsRequest &other)
-    : EC2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsReque
  * Constructs a ModifyVpcPeeringConnectionOptionsRequest object.
  */
 ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest()
-    : EC2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(EC2Request::ModifyVpcPeeringConnectionOptionsAction, this))
+    : Ec2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(Ec2Request::ModifyVpcPeeringConnectionOptionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::res
  */
 
 /*!
- * Constructs a ModifyVpcPeeringConnectionOptionsRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVpcPeeringConnectionOptionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
-    const EC2Request::Action action, ModifyVpcPeeringConnectionOptionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVpcPeeringConnectionOptionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptio
  */
 ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
     const ModifyVpcPeeringConnectionOptionsRequestPrivate &other, ModifyVpcPeeringConnectionOptionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

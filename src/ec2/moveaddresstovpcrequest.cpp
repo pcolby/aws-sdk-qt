@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 MoveAddressToVpcRequest::MoveAddressToVpcRequest(const MoveAddressToVpcRequest &other)
-    : EC2Request(new MoveAddressToVpcRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new MoveAddressToVpcRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ MoveAddressToVpcRequest::MoveAddressToVpcRequest(const MoveAddressToVpcRequest &
  * Constructs a MoveAddressToVpcRequest object.
  */
 MoveAddressToVpcRequest::MoveAddressToVpcRequest()
-    : EC2Request(new MoveAddressToVpcRequestPrivate(EC2Request::MoveAddressToVpcAction, this))
+    : Ec2Request(new MoveAddressToVpcRequestPrivate(Ec2Request::MoveAddressToVpcAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a MoveAddressToVpcRequestPrivate object for EC2 \a action,
+ * Constructs a MoveAddressToVpcRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
-    const EC2Request::Action action, MoveAddressToVpcRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, MoveAddressToVpcRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
     const MoveAddressToVpcRequestPrivate &other, MoveAddressToVpcRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateSubnetCidrBlockRequestPrivate;
 
-class QTAWS_EXPORT AssociateSubnetCidrBlockRequest : public EC2Request {
+class QTAWS_EXPORT AssociateSubnetCidrBlockRequest : public Ec2Request {
 
 public:
     AssociateSubnetCidrBlockRequest(const AssociateSubnetCidrBlockRequest &other);

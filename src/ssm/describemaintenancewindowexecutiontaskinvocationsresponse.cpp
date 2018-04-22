@@ -68,7 +68,7 @@ DescribeMaintenanceWindowExecutionTaskInvocationsResponse::DescribeMaintenanceWi
         const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(this), parent)
+    : SsmResponse(new DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeMaintenanceWindowExecutionTaskInvocationsResponse::parseSuccess(QIO
  * Constructs a DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate object with public implementation \a q.
  */
 DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate::DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(
-    DescribeMaintenanceWindowExecutionTaskInvocationsResponse * const q) : SSMResponsePrivate(q)
+    DescribeMaintenanceWindowExecutionTaskInvocationsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

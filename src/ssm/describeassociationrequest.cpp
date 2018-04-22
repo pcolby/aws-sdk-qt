@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeAssociationRequest::DescribeAssociationRequest(const DescribeAssociationRequest &other)
-    : SSMRequest(new DescribeAssociationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeAssociationRequest::DescribeAssociationRequest(const DescribeAssociation
  * Constructs a DescribeAssociationRequest object.
  */
 DescribeAssociationRequest::DescribeAssociationRequest()
-    : SSMRequest(new DescribeAssociationRequestPrivate(SSMRequest::DescribeAssociationAction, this))
+    : SsmRequest(new DescribeAssociationRequestPrivate(SsmRequest::DescribeAssociationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAssociationRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeAssociationRequestPrivate object for SSM \a action,
+ * Constructs a DescribeAssociationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
-    const SSMRequest::Action action, DescribeAssociationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeAssociationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
     const DescribeAssociationRequestPrivate &other, DescribeAssociationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

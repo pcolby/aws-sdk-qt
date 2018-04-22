@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 GetConsoleOutputRequest::GetConsoleOutputRequest(const GetConsoleOutputRequest &other)
-    : EC2Request(new GetConsoleOutputRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new GetConsoleOutputRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetConsoleOutputRequest::GetConsoleOutputRequest(const GetConsoleOutputRequest &
  * Constructs a GetConsoleOutputRequest object.
  */
 GetConsoleOutputRequest::GetConsoleOutputRequest()
-    : EC2Request(new GetConsoleOutputRequestPrivate(EC2Request::GetConsoleOutputAction, this))
+    : Ec2Request(new GetConsoleOutputRequestPrivate(Ec2Request::GetConsoleOutputAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a GetConsoleOutputRequestPrivate object for EC2 \a action,
+ * Constructs a GetConsoleOutputRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
-    const EC2Request::Action action, GetConsoleOutputRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, GetConsoleOutputRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
     const GetConsoleOutputRequestPrivate &other, GetConsoleOutputRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -109,7 +109,7 @@ GetContextKeysForPrincipalPolicyResponse::GetContextKeysForPrincipalPolicyRespon
         const GetContextKeysForPrincipalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetContextKeysForPrincipalPolicyResponsePrivate(this), parent)
+    : IamResponse(new GetContextKeysForPrincipalPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetContextKeysForPrincipalPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetContextKeysForPrincipalPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a GetContextKeysForPrincipalPolicyResponsePrivate object with public implementation \a q.
  */
 GetContextKeysForPrincipalPolicyResponsePrivate::GetContextKeysForPrincipalPolicyResponsePrivate(
-    GetContextKeysForPrincipalPolicyResponse * const q) : IAMResponsePrivate(q)
+    GetContextKeysForPrincipalPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

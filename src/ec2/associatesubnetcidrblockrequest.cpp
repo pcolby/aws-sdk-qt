@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest(const AssociateSubnetCidrBlockRequest &other)
-    : EC2Request(new AssociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest(const Associate
  * Constructs a AssociateSubnetCidrBlockRequest object.
  */
 AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest()
-    : EC2Request(new AssociateSubnetCidrBlockRequestPrivate(EC2Request::AssociateSubnetCidrBlockAction, this))
+    : Ec2Request(new AssociateSubnetCidrBlockRequestPrivate(Ec2Request::AssociateSubnetCidrBlockAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNe
  */
 
 /*!
- * Constructs a AssociateSubnetCidrBlockRequestPrivate object for EC2 \a action,
+ * Constructs a AssociateSubnetCidrBlockRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
-    const EC2Request::Action action, AssociateSubnetCidrBlockRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssociateSubnetCidrBlockRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
     const AssociateSubnetCidrBlockRequestPrivate &other, AssociateSubnetCidrBlockRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

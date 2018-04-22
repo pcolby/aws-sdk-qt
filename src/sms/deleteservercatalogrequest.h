@@ -27,7 +27,7 @@ namespace SMS {
 
 class DeleteServerCatalogRequestPrivate;
 
-class QTAWS_EXPORT DeleteServerCatalogRequest : public SMSRequest {
+class QTAWS_EXPORT DeleteServerCatalogRequest : public SmsRequest {
 
 public:
     DeleteServerCatalogRequest(const DeleteServerCatalogRequest &other);

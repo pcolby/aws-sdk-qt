@@ -28,10 +28,10 @@ namespace SSM {
 
 class ListResourceDataSyncRequest;
 
-class QTAWS_EXPORT ListResourceDataSyncRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT ListResourceDataSyncRequestPrivate : public SsmRequestPrivate {
 
 public:
-    ListResourceDataSyncRequestPrivate(const SSMRequest::Action action,
+    ListResourceDataSyncRequestPrivate(const SsmRequest::Action action,
                                    ListResourceDataSyncRequest * const q);
     ListResourceDataSyncRequestPrivate(const ListResourceDataSyncRequestPrivate &other,
                                    ListResourceDataSyncRequest * const q);

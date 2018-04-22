@@ -28,10 +28,10 @@ namespace WAF {
 
 class GetRateBasedRuleManagedKeysRequest;
 
-class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequestPrivate : public WafRequestPrivate {
 
 public:
-    GetRateBasedRuleManagedKeysRequestPrivate(const WAFRequest::Action action,
+    GetRateBasedRuleManagedKeysRequestPrivate(const WafRequest::Action action,
                                    GetRateBasedRuleManagedKeysRequest * const q);
     GetRateBasedRuleManagedKeysRequestPrivate(const GetRateBasedRuleManagedKeysRequestPrivate &other,
                                    GetRateBasedRuleManagedKeysRequest * const q);

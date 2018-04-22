@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SendBounceRequest::SendBounceRequest(const SendBounceRequest &other)
-    : SESRequest(new SendBounceRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SendBounceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SendBounceRequest::SendBounceRequest(const SendBounceRequest &other)
  * Constructs a SendBounceRequest object.
  */
 SendBounceRequest::SendBounceRequest()
-    : SESRequest(new SendBounceRequestPrivate(SESRequest::SendBounceAction, this))
+    : SesRequest(new SendBounceRequestPrivate(SesRequest::SendBounceAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a SendBounceRequestPrivate object for SES \a action,
+ * Constructs a SendBounceRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
-    const SESRequest::Action action, SendBounceRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SendBounceRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendBounceRequestPrivate::SendBounceRequestPrivate(
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
     const SendBounceRequestPrivate &other, SendBounceRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

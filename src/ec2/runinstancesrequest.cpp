@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RunInstancesRequest::RunInstancesRequest(const RunInstancesRequest &other)
-    : EC2Request(new RunInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RunInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RunInstancesRequest::RunInstancesRequest(const RunInstancesRequest &other)
  * Constructs a RunInstancesRequest object.
  */
 RunInstancesRequest::RunInstancesRequest()
-    : EC2Request(new RunInstancesRequestPrivate(EC2Request::RunInstancesAction, this))
+    : Ec2Request(new RunInstancesRequestPrivate(Ec2Request::RunInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a RunInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a RunInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
-    const EC2Request::Action action, RunInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RunInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RunInstancesRequestPrivate::RunInstancesRequestPrivate(
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
     const RunInstancesRequestPrivate &other, RunInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

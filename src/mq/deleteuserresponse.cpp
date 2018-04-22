@@ -46,7 +46,7 @@ DeleteUserResponse::DeleteUserResponse(
         const DeleteUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new DeleteUserResponsePrivate(this), parent)
+    : MqResponse(new DeleteUserResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void DeleteUserResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteUserResponsePrivate object with public implementation \a q.
  */
 DeleteUserResponsePrivate::DeleteUserResponsePrivate(
-    DeleteUserResponse * const q) : MQResponsePrivate(q)
+    DeleteUserResponse * const q) : MqResponsePrivate(q)
 {
 
 }

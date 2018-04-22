@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
-    : WAFRequest(new GetChangeTokenRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetChangeTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetChangeTokenRequest::GetChangeTokenRequest(const GetChangeTokenRequest &other)
  * Constructs a GetChangeTokenRequest object.
  */
 GetChangeTokenRequest::GetChangeTokenRequest()
-    : WAFRequest(new GetChangeTokenRequestPrivate(WAFRequest::GetChangeTokenAction, this))
+    : WafRequest(new GetChangeTokenRequestPrivate(WafRequest::GetChangeTokenAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a GetChangeTokenRequestPrivate object for WAF \a action,
+ * Constructs a GetChangeTokenRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
-    const WAFRequest::Action action, GetChangeTokenRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetChangeTokenRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const GetChangeTokenRequestPrivate &other, GetChangeTokenRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

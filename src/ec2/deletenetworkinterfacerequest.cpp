@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest(const DeleteNetworkInterfaceRequest &other)
-    : EC2Request(new DeleteNetworkInterfaceRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteNetworkInterfaceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest(const DeleteNetwork
  * Constructs a DeleteNetworkInterfaceRequest object.
  */
 DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest()
-    : EC2Request(new DeleteNetworkInterfaceRequestPrivate(EC2Request::DeleteNetworkInterfaceAction, this))
+    : Ec2Request(new DeleteNetworkInterfaceRequestPrivate(Ec2Request::DeleteNetworkInterfaceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeleteNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteNetworkInterfaceRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
-    const EC2Request::Action action, DeleteNetworkInterfaceRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteNetworkInterfaceRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
     const DeleteNetworkInterfaceRequestPrivate &other, DeleteNetworkInterfaceRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

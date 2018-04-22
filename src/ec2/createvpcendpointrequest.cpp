@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateVpcEndpointRequest::CreateVpcEndpointRequest(const CreateVpcEndpointRequest &other)
-    : EC2Request(new CreateVpcEndpointRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateVpcEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateVpcEndpointRequest::CreateVpcEndpointRequest(const CreateVpcEndpointReques
  * Constructs a CreateVpcEndpointRequest object.
  */
 CreateVpcEndpointRequest::CreateVpcEndpointRequest()
-    : EC2Request(new CreateVpcEndpointRequestPrivate(EC2Request::CreateVpcEndpointAction, this))
+    : Ec2Request(new CreateVpcEndpointRequestPrivate(Ec2Request::CreateVpcEndpointAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a CreateVpcEndpointRequestPrivate object for EC2 \a action,
+ * Constructs a CreateVpcEndpointRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateVpcEndpointRequestPrivate::CreateVpcEndpointRequestPrivate(
-    const EC2Request::Action action, CreateVpcEndpointRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateVpcEndpointRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateVpcEndpointRequestPrivate::CreateVpcEndpointRequestPrivate(
  */
 CreateVpcEndpointRequestPrivate::CreateVpcEndpointRequestPrivate(
     const CreateVpcEndpointRequestPrivate &other, CreateVpcEndpointRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

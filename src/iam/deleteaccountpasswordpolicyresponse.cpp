@@ -109,7 +109,7 @@ DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
         const DeleteAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteAccountPasswordPolicyResponsePrivate(this), parent)
+    : IamResponse(new DeleteAccountPasswordPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteAccountPasswordPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteAccountPasswordPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponsePrivate(
-    DeleteAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
+    DeleteAccountPasswordPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

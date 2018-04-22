@@ -49,7 +49,7 @@ GetPermissionPolicyResponse::GetPermissionPolicyResponse(
         const GetPermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetPermissionPolicyResponsePrivate(this), parent)
+    : WafResponse(new GetPermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetPermissionPolicyRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a GetPermissionPolicyResponsePrivate object with public implementation \a q.
  */
 GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponsePrivate(
-    GetPermissionPolicyResponse * const q) : WAFResponsePrivate(q)
+    GetPermissionPolicyResponse * const q) : WafResponsePrivate(q)
 {
 
 }

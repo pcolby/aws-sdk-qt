@@ -61,7 +61,7 @@ DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
         const DeregisterContainerInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DeregisterContainerInstanceResponsePrivate(this), parent)
+    : EcsResponse(new DeregisterContainerInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterContainerInstanceRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DeregisterContainerInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a DeregisterContainerInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponsePrivate(
-    DeregisterContainerInstanceResponse * const q) : ECSResponsePrivate(q)
+    DeregisterContainerInstanceResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

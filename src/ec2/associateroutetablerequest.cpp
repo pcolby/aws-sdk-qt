@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssociateRouteTableRequest::AssociateRouteTableRequest(const AssociateRouteTableRequest &other)
-    : EC2Request(new AssociateRouteTableRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssociateRouteTableRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssociateRouteTableRequest::AssociateRouteTableRequest(const AssociateRouteTable
  * Constructs a AssociateRouteTableRequest object.
  */
 AssociateRouteTableRequest::AssociateRouteTableRequest()
-    : EC2Request(new AssociateRouteTableRequestPrivate(EC2Request::AssociateRouteTableAction, this))
+    : Ec2Request(new AssociateRouteTableRequestPrivate(Ec2Request::AssociateRouteTableAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetwork
  */
 
 /*!
- * Constructs a AssociateRouteTableRequestPrivate object for EC2 \a action,
+ * Constructs a AssociateRouteTableRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
-    const EC2Request::Action action, AssociateRouteTableRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssociateRouteTableRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
     const AssociateRouteTableRequestPrivate &other, AssociateRouteTableRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

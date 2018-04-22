@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest(const DetachNetworkInterfaceRequest &other)
-    : EC2Request(new DetachNetworkInterfaceRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DetachNetworkInterfaceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest(const DetachNetwork
  * Constructs a DetachNetworkInterfaceRequest object.
  */
 DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest()
-    : EC2Request(new DetachNetworkInterfaceRequestPrivate(EC2Request::DetachNetworkInterfaceAction, this))
+    : Ec2Request(new DetachNetworkInterfaceRequestPrivate(Ec2Request::DetachNetworkInterfaceAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- * Constructs a DetachNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * Constructs a DetachNetworkInterfaceRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
-    const EC2Request::Action action, DetachNetworkInterfaceRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DetachNetworkInterfaceRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
  */
 DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
     const DetachNetworkInterfaceRequestPrivate &other, DetachNetworkInterfaceRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ResetDBParameterGroupRequest::ResetDBParameterGroupRequest(const ResetDBParameterGroupRequest &other)
-    : RDSRequest(new ResetDBParameterGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ResetDBParameterGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ResetDBParameterGroupRequest::ResetDBParameterGroupRequest(const ResetDBParamete
  * Constructs a ResetDBParameterGroupRequest object.
  */
 ResetDBParameterGroupRequest::ResetDBParameterGroupRequest()
-    : RDSRequest(new ResetDBParameterGroupRequestPrivate(RDSRequest::ResetDBParameterGroupAction, this))
+    : RdsRequest(new ResetDBParameterGroupRequestPrivate(RdsRequest::ResetDBParameterGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetwo
  */
 
 /*!
- * Constructs a ResetDBParameterGroupRequestPrivate object for RDS \a action,
+ * Constructs a ResetDBParameterGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
-    const RDSRequest::Action action, ResetDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ResetDBParameterGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
     const ResetDBParameterGroupRequestPrivate &other, ResetDBParameterGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

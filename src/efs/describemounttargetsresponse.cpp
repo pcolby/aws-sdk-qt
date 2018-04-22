@@ -50,7 +50,7 @@ DescribeMountTargetsResponse::DescribeMountTargetsResponse(
         const DescribeMountTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DescribeMountTargetsResponsePrivate(this), parent)
+    : EfsResponse(new DescribeMountTargetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMountTargetsRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeMountTargetsResponsePrivate object with public implementation \a q.
  */
 DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
-    DescribeMountTargetsResponse * const q) : EFSResponsePrivate(q)
+    DescribeMountTargetsResponse * const q) : EfsResponsePrivate(q)
 {
 
 }

@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RequestCancelWorkflowExecutionRequest::RequestCancelWorkflowExecutionRequest(const RequestCancelWorkflowExecutionRequest &other)
-    : SWFRequest(new RequestCancelWorkflowExecutionRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RequestCancelWorkflowExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RequestCancelWorkflowExecutionRequest::RequestCancelWorkflowExecutionRequest(con
  * Constructs a RequestCancelWorkflowExecutionRequest object.
  */
 RequestCancelWorkflowExecutionRequest::RequestCancelWorkflowExecutionRequest()
-    : SWFRequest(new RequestCancelWorkflowExecutionRequestPrivate(SWFRequest::RequestCancelWorkflowExecutionAction, this))
+    : SwfRequest(new RequestCancelWorkflowExecutionRequestPrivate(SwfRequest::RequestCancelWorkflowExecutionAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::respon
  */
 
 /*!
- * Constructs a RequestCancelWorkflowExecutionRequestPrivate object for SWF \a action,
+ * Constructs a RequestCancelWorkflowExecutionRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
-    const SWFRequest::Action action, RequestCancelWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RequestCancelWorkflowExecutionRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequ
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
     const RequestCancelWorkflowExecutionRequestPrivate &other, RequestCancelWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

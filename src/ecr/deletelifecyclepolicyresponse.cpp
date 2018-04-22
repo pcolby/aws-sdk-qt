@@ -48,7 +48,7 @@ DeleteLifecyclePolicyResponse::DeleteLifecyclePolicyResponse(
         const DeleteLifecyclePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new DeleteLifecyclePolicyResponsePrivate(this), parent)
+    : EcrResponse(new DeleteLifecyclePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteLifecyclePolicyRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteLifecyclePolicyResponsePrivate object with public implementation \a q.
  */
 DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponsePrivate(
-    DeleteLifecyclePolicyResponse * const q) : ECRResponsePrivate(q)
+    DeleteLifecyclePolicyResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

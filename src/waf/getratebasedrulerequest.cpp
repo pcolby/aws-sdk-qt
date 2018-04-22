@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &other)
-    : WAFRequest(new GetRateBasedRuleRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetRateBasedRuleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetRateBasedRuleRequest::GetRateBasedRuleRequest(const GetRateBasedRuleRequest &
  * Constructs a GetRateBasedRuleRequest object.
  */
 GetRateBasedRuleRequest::GetRateBasedRuleRequest()
-    : WAFRequest(new GetRateBasedRuleRequestPrivate(WAFRequest::GetRateBasedRuleAction, this))
+    : WafRequest(new GetRateBasedRuleRequestPrivate(WafRequest::GetRateBasedRuleAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a GetRateBasedRuleRequestPrivate object for WAF \a action,
+ * Constructs a GetRateBasedRuleRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
-    const WAFRequest::Action action, GetRateBasedRuleRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetRateBasedRuleRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
  */
 GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
     const GetRateBasedRuleRequestPrivate &other, GetRateBasedRuleRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

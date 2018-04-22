@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest(const ModifyFpgaImageAttributeRequest &other)
-    : EC2Request(new ModifyFpgaImageAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyFpgaImageAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest(const ModifyFpg
  * Constructs a ModifyFpgaImageAttributeRequest object.
  */
 ModifyFpgaImageAttributeRequest::ModifyFpgaImageAttributeRequest()
-    : EC2Request(new ModifyFpgaImageAttributeRequestPrivate(EC2Request::ModifyFpgaImageAttributeAction, this))
+    : Ec2Request(new ModifyFpgaImageAttributeRequestPrivate(Ec2Request::ModifyFpgaImageAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNe
  */
 
 /*!
- * Constructs a ModifyFpgaImageAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyFpgaImageAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
-    const EC2Request::Action action, ModifyFpgaImageAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyFpgaImageAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
  */
 ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
     const ModifyFpgaImageAttributeRequestPrivate &other, ModifyFpgaImageAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

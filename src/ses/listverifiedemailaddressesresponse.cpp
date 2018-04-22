@@ -55,7 +55,7 @@ ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
         const ListVerifiedEmailAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListVerifiedEmailAddressesResponsePrivate(this), parent)
+    : SesResponse(new ListVerifiedEmailAddressesResponsePrivate(this), parent)
 {
     setRequest(new ListVerifiedEmailAddressesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListVerifiedEmailAddressesResponsePrivate object with public implementation \a q.
  */
 ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePrivate(
-    ListVerifiedEmailAddressesResponse * const q) : SESResponsePrivate(q)
+    ListVerifiedEmailAddressesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

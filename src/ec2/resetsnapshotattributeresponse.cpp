@@ -48,7 +48,7 @@ ResetSnapshotAttributeResponse::ResetSnapshotAttributeResponse(
         const ResetSnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetSnapshotAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ResetSnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetSnapshotAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ResetSnapshotAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetSnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
-    ResetSnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ResetSnapshotAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

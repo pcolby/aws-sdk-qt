@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest(const SetVisibleToAllUsersRequest &other)
-    : EMRRequest(new SetVisibleToAllUsersRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new SetVisibleToAllUsersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest(const SetVisibleToAllUs
  * Constructs a SetVisibleToAllUsersRequest object.
  */
 SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest()
-    : EMRRequest(new SetVisibleToAllUsersRequestPrivate(EMRRequest::SetVisibleToAllUsersAction, this))
+    : EmrRequest(new SetVisibleToAllUsersRequestPrivate(EmrRequest::SetVisibleToAllUsersAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
  */
 
 /*!
- * Constructs a SetVisibleToAllUsersRequestPrivate object for EMR \a action,
+ * Constructs a SetVisibleToAllUsersRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
-    const EMRRequest::Action action, SetVisibleToAllUsersRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, SetVisibleToAllUsersRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
     const SetVisibleToAllUsersRequestPrivate &other, SetVisibleToAllUsersRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

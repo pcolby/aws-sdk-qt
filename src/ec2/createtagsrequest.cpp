@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
-    : EC2Request(new CreateTagsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
  * Constructs a CreateTagsRequest object.
  */
 CreateTagsRequest::CreateTagsRequest()
-    : EC2Request(new CreateTagsRequestPrivate(EC2Request::CreateTagsAction, this))
+    : Ec2Request(new CreateTagsRequestPrivate(Ec2Request::CreateTagsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a CreateTagsRequestPrivate object for EC2 \a action,
+ * Constructs a CreateTagsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
-    const EC2Request::Action action, CreateTagsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateTagsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

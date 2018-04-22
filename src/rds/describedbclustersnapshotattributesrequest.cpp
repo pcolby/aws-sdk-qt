@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBClusterSnapshotAttributesRequest::DescribeDBClusterSnapshotAttributesRequest(const DescribeDBClusterSnapshotAttributesRequest &other)
-    : RDSRequest(new DescribeDBClusterSnapshotAttributesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBClusterSnapshotAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBClusterSnapshotAttributesRequest::DescribeDBClusterSnapshotAttributesR
  * Constructs a DescribeDBClusterSnapshotAttributesRequest object.
  */
 DescribeDBClusterSnapshotAttributesRequest::DescribeDBClusterSnapshotAttributesRequest()
-    : RDSRequest(new DescribeDBClusterSnapshotAttributesRequestPrivate(RDSRequest::DescribeDBClusterSnapshotAttributesAction, this))
+    : RdsRequest(new DescribeDBClusterSnapshotAttributesRequestPrivate(RdsRequest::DescribeDBClusterSnapshotAttributesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterSnapshotAttributesRequest::r
  */
 
 /*!
- * Constructs a DescribeDBClusterSnapshotAttributesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBClusterSnapshotAttributesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBClusterSnapshotAttributesRequestPrivate::DescribeDBClusterSnapshotAttributesRequestPrivate(
-    const RDSRequest::Action action, DescribeDBClusterSnapshotAttributesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBClusterSnapshotAttributesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBClusterSnapshotAttributesRequestPrivate::DescribeDBClusterSnapshotAttr
  */
 DescribeDBClusterSnapshotAttributesRequestPrivate::DescribeDBClusterSnapshotAttributesRequestPrivate(
     const DescribeDBClusterSnapshotAttributesRequestPrivate &other, DescribeDBClusterSnapshotAttributesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

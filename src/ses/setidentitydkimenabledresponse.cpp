@@ -55,7 +55,7 @@ SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
         const SetIdentityDkimEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityDkimEnabledResponsePrivate(this), parent)
+    : SesResponse(new SetIdentityDkimEnabledResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityDkimEnabledRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SetIdentityDkimEnabledResponse::parseSuccess(QIODevice &response)
  * Constructs a SetIdentityDkimEnabledResponsePrivate object with public implementation \a q.
  */
 SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponsePrivate(
-    SetIdentityDkimEnabledResponse * const q) : SESResponsePrivate(q)
+    SetIdentityDkimEnabledResponse * const q) : SesResponsePrivate(q)
 {
 
 }

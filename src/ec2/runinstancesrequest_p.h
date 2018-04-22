@@ -28,10 +28,10 @@ namespace EC2 {
 
 class RunInstancesRequest;
 
-class QTAWS_EXPORT RunInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT RunInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    RunInstancesRequestPrivate(const EC2Request::Action action,
+    RunInstancesRequestPrivate(const Ec2Request::Action action,
                                    RunInstancesRequest * const q);
     RunInstancesRequestPrivate(const RunInstancesRequestPrivate &other,
                                    RunInstancesRequest * const q);

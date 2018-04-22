@@ -48,7 +48,7 @@ ModifyLaunchTemplateResponse::ModifyLaunchTemplateResponse(
         const ModifyLaunchTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyLaunchTemplateResponsePrivate(this), parent)
+    : Ec2Response(new ModifyLaunchTemplateResponsePrivate(this), parent)
 {
     setRequest(new ModifyLaunchTemplateRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyLaunchTemplateResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyLaunchTemplateResponsePrivate object with public implementation \a q.
  */
 ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
-    ModifyLaunchTemplateResponse * const q) : EC2ResponsePrivate(q)
+    ModifyLaunchTemplateResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

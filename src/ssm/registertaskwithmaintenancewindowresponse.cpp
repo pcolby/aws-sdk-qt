@@ -68,7 +68,7 @@ RegisterTaskWithMaintenanceWindowResponse::RegisterTaskWithMaintenanceWindowResp
         const RegisterTaskWithMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new RegisterTaskWithMaintenanceWindowResponsePrivate(this), parent)
+    : SsmResponse(new RegisterTaskWithMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new RegisterTaskWithMaintenanceWindowRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void RegisterTaskWithMaintenanceWindowResponse::parseSuccess(QIODevice &response
  * Constructs a RegisterTaskWithMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenanceWindowResponsePrivate(
-    RegisterTaskWithMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
+    RegisterTaskWithMaintenanceWindowResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

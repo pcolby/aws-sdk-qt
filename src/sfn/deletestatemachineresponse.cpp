@@ -63,7 +63,7 @@ DeleteStateMachineResponse::DeleteStateMachineResponse(
         const DeleteStateMachineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DeleteStateMachineResponsePrivate(this), parent)
+    : SfnResponse(new DeleteStateMachineResponsePrivate(this), parent)
 {
     setRequest(new DeleteStateMachineRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteStateMachineResponsePrivate object with public implementation \a q.
  */
 DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
-    DeleteStateMachineResponse * const q) : SFNResponsePrivate(q)
+    DeleteStateMachineResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

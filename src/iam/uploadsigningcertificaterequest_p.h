@@ -28,10 +28,10 @@ namespace IAM {
 
 class UploadSigningCertificateRequest;
 
-class QTAWS_EXPORT UploadSigningCertificateRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT UploadSigningCertificateRequestPrivate : public IamRequestPrivate {
 
 public:
-    UploadSigningCertificateRequestPrivate(const IAMRequest::Action action,
+    UploadSigningCertificateRequestPrivate(const IamRequest::Action action,
                                    UploadSigningCertificateRequest * const q);
     UploadSigningCertificateRequestPrivate(const UploadSigningCertificateRequestPrivate &other,
                                    UploadSigningCertificateRequest * const q);

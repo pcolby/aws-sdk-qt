@@ -55,7 +55,7 @@ GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributes
         const GetIdentityMailFromDomainAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetIdentityMailFromDomainAttributesResponsePrivate(this), parent)
+    : SesResponse(new GetIdentityMailFromDomainAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityMailFromDomainAttributesRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &respon
  * Constructs a GetIdentityMailFromDomainAttributesResponsePrivate object with public implementation \a q.
  */
 GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAttributesResponsePrivate(
-    GetIdentityMailFromDomainAttributesResponse * const q) : SESResponsePrivate(q)
+    GetIdentityMailFromDomainAttributesResponse * const q) : SesResponsePrivate(q)
 {
 
 }

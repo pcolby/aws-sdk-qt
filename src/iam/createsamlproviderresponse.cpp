@@ -109,7 +109,7 @@ CreateSAMLProviderResponse::CreateSAMLProviderResponse(
         const CreateSAMLProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateSAMLProviderResponsePrivate(this), parent)
+    : IamResponse(new CreateSAMLProviderResponsePrivate(this), parent)
 {
     setRequest(new CreateSAMLProviderRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void CreateSAMLProviderResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateSAMLProviderResponsePrivate object with public implementation \a q.
  */
 CreateSAMLProviderResponsePrivate::CreateSAMLProviderResponsePrivate(
-    CreateSAMLProviderResponse * const q) : IAMResponsePrivate(q)
+    CreateSAMLProviderResponse * const q) : IamResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SSM {
 
 class DescribeInventoryDeletionsRequest;
 
-class QTAWS_EXPORT DescribeInventoryDeletionsRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DescribeInventoryDeletionsRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DescribeInventoryDeletionsRequestPrivate(const SSMRequest::Action action,
+    DescribeInventoryDeletionsRequestPrivate(const SsmRequest::Action action,
                                    DescribeInventoryDeletionsRequest * const q);
     DescribeInventoryDeletionsRequestPrivate(const DescribeInventoryDeletionsRequestPrivate &other,
                                    DescribeInventoryDeletionsRequest * const q);

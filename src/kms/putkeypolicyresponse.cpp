@@ -143,7 +143,7 @@ PutKeyPolicyResponse::PutKeyPolicyResponse(
         const PutKeyPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new PutKeyPolicyResponsePrivate(this), parent)
+    : KmsResponse(new PutKeyPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutKeyPolicyRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void PutKeyPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a PutKeyPolicyResponsePrivate object with public implementation \a q.
  */
 PutKeyPolicyResponsePrivate::PutKeyPolicyResponsePrivate(
-    PutKeyPolicyResponse * const q) : KMSResponsePrivate(q)
+    PutKeyPolicyResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

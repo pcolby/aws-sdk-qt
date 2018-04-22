@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateRouteTableRequestPrivate;
 
-class QTAWS_EXPORT CreateRouteTableRequest : public EC2Request {
+class QTAWS_EXPORT CreateRouteTableRequest : public Ec2Request {
 
 public:
     CreateRouteTableRequest(const CreateRouteTableRequest &other);

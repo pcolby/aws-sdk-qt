@@ -108,7 +108,7 @@ DeleteDBInstanceResponse::DeleteDBInstanceResponse(
         const DeleteDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBInstanceResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBInstanceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
-    DeleteDBInstanceResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBInstanceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

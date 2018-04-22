@@ -28,10 +28,10 @@ namespace STS {
 
 class DecodeAuthorizationMessageRequest;
 
-class QTAWS_EXPORT DecodeAuthorizationMessageRequestPrivate : public STSRequestPrivate {
+class QTAWS_EXPORT DecodeAuthorizationMessageRequestPrivate : public StsRequestPrivate {
 
 public:
-    DecodeAuthorizationMessageRequestPrivate(const STSRequest::Action action,
+    DecodeAuthorizationMessageRequestPrivate(const StsRequest::Action action,
                                    DecodeAuthorizationMessageRequest * const q);
     DecodeAuthorizationMessageRequestPrivate(const DecodeAuthorizationMessageRequestPrivate &other,
                                    DecodeAuthorizationMessageRequest * const q);

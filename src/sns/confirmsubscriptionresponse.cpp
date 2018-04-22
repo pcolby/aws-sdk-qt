@@ -58,7 +58,7 @@ ConfirmSubscriptionResponse::ConfirmSubscriptionResponse(
         const ConfirmSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ConfirmSubscriptionResponsePrivate(this), parent)
+    : SnsResponse(new ConfirmSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new ConfirmSubscriptionRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a ConfirmSubscriptionResponsePrivate object with public implementation \a q.
  */
 ConfirmSubscriptionResponsePrivate::ConfirmSubscriptionResponsePrivate(
-    ConfirmSubscriptionResponse * const q) : SNSResponsePrivate(q)
+    ConfirmSubscriptionResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace SNS {
 
 class DeleteTopicResponse;
 
-class QTAWS_EXPORT DeleteTopicResponsePrivate : public SNSResponsePrivate {
+class QTAWS_EXPORT DeleteTopicResponsePrivate : public SnsResponsePrivate {
     Q_OBJECT
 
 public:

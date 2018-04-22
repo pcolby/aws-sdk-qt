@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
-    : EFSRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
  * Constructs a DescribeTagsRequest object.
  */
 DescribeTagsRequest::DescribeTagsRequest()
-    : EFSRequest(new DescribeTagsRequestPrivate(EFSRequest::DescribeTagsAction, this))
+    : EfsRequest(new DescribeTagsRequestPrivate(EfsRequest::DescribeTagsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DescribeTagsRequestPrivate object for EFS \a action,
+ * Constructs a DescribeTagsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
-    const EFSRequest::Action action, DescribeTagsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DescribeTagsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

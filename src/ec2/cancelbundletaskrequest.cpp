@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CancelBundleTaskRequest::CancelBundleTaskRequest(const CancelBundleTaskRequest &other)
-    : EC2Request(new CancelBundleTaskRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CancelBundleTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CancelBundleTaskRequest::CancelBundleTaskRequest(const CancelBundleTaskRequest &
  * Constructs a CancelBundleTaskRequest object.
  */
 CancelBundleTaskRequest::CancelBundleTaskRequest()
-    : EC2Request(new CancelBundleTaskRequestPrivate(EC2Request::CancelBundleTaskAction, this))
+    : Ec2Request(new CancelBundleTaskRequestPrivate(Ec2Request::CancelBundleTaskAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CancelBundleTaskRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CancelBundleTaskRequestPrivate object for EC2 \a action,
+ * Constructs a CancelBundleTaskRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
-    const EC2Request::Action action, CancelBundleTaskRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CancelBundleTaskRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
     const CancelBundleTaskRequestPrivate &other, CancelBundleTaskRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

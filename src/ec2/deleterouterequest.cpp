@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteRouteRequest::DeleteRouteRequest(const DeleteRouteRequest &other)
-    : EC2Request(new DeleteRouteRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteRouteRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteRouteRequest::DeleteRouteRequest(const DeleteRouteRequest &other)
  * Constructs a DeleteRouteRequest object.
  */
 DeleteRouteRequest::DeleteRouteRequest()
-    : EC2Request(new DeleteRouteRequestPrivate(EC2Request::DeleteRouteAction, this))
+    : Ec2Request(new DeleteRouteRequestPrivate(Ec2Request::DeleteRouteAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DeleteRouteRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteRouteRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
-    const EC2Request::Action action, DeleteRouteRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteRouteRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
  */
 DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
     const DeleteRouteRequestPrivate &other, DeleteRouteRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

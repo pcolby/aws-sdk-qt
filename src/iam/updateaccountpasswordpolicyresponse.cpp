@@ -109,7 +109,7 @@ UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
         const UpdateAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateAccountPasswordPolicyResponsePrivate(this), parent)
+    : IamResponse(new UpdateAccountPasswordPolicyResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccountPasswordPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateAccountPasswordPolicyResponsePrivate object with public implementation \a q.
  */
 UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponsePrivate(
-    UpdateAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
+    UpdateAccountPasswordPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

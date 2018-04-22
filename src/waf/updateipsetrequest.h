@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateIPSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateIPSetRequest : public WAFRequest {
+class QTAWS_EXPORT UpdateIPSetRequest : public WafRequest {
 
 public:
     UpdateIPSetRequest(const UpdateIPSetRequest &other);

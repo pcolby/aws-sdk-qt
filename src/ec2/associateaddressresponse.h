@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AssociateAddressResponsePrivate;
 
-class QTAWS_EXPORT AssociateAddressResponse : public EC2Response {
+class QTAWS_EXPORT AssociateAddressResponse : public Ec2Response {
     Q_OBJECT
 
 public:

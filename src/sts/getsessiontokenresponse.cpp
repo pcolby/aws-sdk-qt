@@ -102,7 +102,7 @@ GetSessionTokenResponse::GetSessionTokenResponse(
         const GetSessionTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new GetSessionTokenResponsePrivate(this), parent)
+    : StsResponse(new GetSessionTokenResponsePrivate(this), parent)
 {
     setRequest(new GetSessionTokenRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ void GetSessionTokenResponse::parseSuccess(QIODevice &response)
  * Constructs a GetSessionTokenResponsePrivate object with public implementation \a q.
  */
 GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
-    GetSessionTokenResponse * const q) : STSResponsePrivate(q)
+    GetSessionTokenResponse * const q) : StsResponsePrivate(q)
 {
 
 }

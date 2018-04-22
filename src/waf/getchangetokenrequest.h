@@ -27,7 +27,7 @@ namespace WAF {
 
 class GetChangeTokenRequestPrivate;
 
-class QTAWS_EXPORT GetChangeTokenRequest : public WAFRequest {
+class QTAWS_EXPORT GetChangeTokenRequest : public WafRequest {
 
 public:
     GetChangeTokenRequest(const GetChangeTokenRequest &other);

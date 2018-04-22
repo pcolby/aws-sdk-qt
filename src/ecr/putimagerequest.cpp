@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 PutImageRequest::PutImageRequest(const PutImageRequest &other)
-    : ECRRequest(new PutImageRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new PutImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ PutImageRequest::PutImageRequest(const PutImageRequest &other)
  * Constructs a PutImageRequest object.
  */
 PutImageRequest::PutImageRequest()
-    : ECRRequest(new PutImageRequestPrivate(ECRRequest::PutImageAction, this))
+    : EcrRequest(new PutImageRequestPrivate(EcrRequest::PutImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a PutImageRequestPrivate object for ECR \a action,
+ * Constructs a PutImageRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
-    const ECRRequest::Action action, PutImageRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, PutImageRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ PutImageRequestPrivate::PutImageRequestPrivate(
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
     const PutImageRequestPrivate &other, PutImageRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

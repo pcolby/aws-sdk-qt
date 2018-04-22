@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AllocateHostsRequest::AllocateHostsRequest(const AllocateHostsRequest &other)
-    : EC2Request(new AllocateHostsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AllocateHostsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AllocateHostsRequest::AllocateHostsRequest(const AllocateHostsRequest &other)
  * Constructs a AllocateHostsRequest object.
  */
 AllocateHostsRequest::AllocateHostsRequest()
-    : EC2Request(new AllocateHostsRequestPrivate(EC2Request::AllocateHostsAction, this))
+    : Ec2Request(new AllocateHostsRequestPrivate(Ec2Request::AllocateHostsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a AllocateHostsRequestPrivate object for EC2 \a action,
+ * Constructs a AllocateHostsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
-    const EC2Request::Action action, AllocateHostsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AllocateHostsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
     const AllocateHostsRequestPrivate &other, AllocateHostsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBInstancesRequest::DescribeDBInstancesRequest(const DescribeDBInstancesRequest &other)
-    : RDSRequest(new DescribeDBInstancesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBInstancesRequest::DescribeDBInstancesRequest(const DescribeDBInstances
  * Constructs a DescribeDBInstancesRequest object.
  */
 DescribeDBInstancesRequest::DescribeDBInstancesRequest()
-    : RDSRequest(new DescribeDBInstancesRequestPrivate(RDSRequest::DescribeDBInstancesAction, this))
+    : RdsRequest(new DescribeDBInstancesRequestPrivate(RdsRequest::DescribeDBInstancesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBInstancesRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeDBInstancesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBInstancesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
-    const RDSRequest::Action action, DescribeDBInstancesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBInstancesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
  */
 DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
     const DescribeDBInstancesRequestPrivate &other, DescribeDBInstancesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

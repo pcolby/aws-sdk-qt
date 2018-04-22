@@ -28,10 +28,10 @@ namespace SQS {
 
 class ListQueuesRequest;
 
-class QTAWS_EXPORT ListQueuesRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT ListQueuesRequestPrivate : public SqsRequestPrivate {
 
 public:
-    ListQueuesRequestPrivate(const SQSRequest::Action action,
+    ListQueuesRequestPrivate(const SqsRequest::Action action,
                                    ListQueuesRequest * const q);
     ListQueuesRequestPrivate(const ListQueuesRequestPrivate &other,
                                    ListQueuesRequest * const q);

@@ -27,7 +27,7 @@ namespace SMS {
 
 class UpdateReplicationJobRequestPrivate;
 
-class QTAWS_EXPORT UpdateReplicationJobRequest : public SMSRequest {
+class QTAWS_EXPORT UpdateReplicationJobRequest : public SmsRequest {
 
 public:
     UpdateReplicationJobRequest(const UpdateReplicationJobRequest &other);

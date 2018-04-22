@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVpcAttributeRequest::ModifyVpcAttributeRequest(const ModifyVpcAttributeRequest &other)
-    : EC2Request(new ModifyVpcAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVpcAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVpcAttributeRequest::ModifyVpcAttributeRequest(const ModifyVpcAttributeReq
  * Constructs a ModifyVpcAttributeRequest object.
  */
 ModifyVpcAttributeRequest::ModifyVpcAttributeRequest()
-    : EC2Request(new ModifyVpcAttributeRequestPrivate(EC2Request::ModifyVpcAttributeAction, this))
+    : Ec2Request(new ModifyVpcAttributeRequestPrivate(Ec2Request::ModifyVpcAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a ModifyVpcAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVpcAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
-    const EC2Request::Action action, ModifyVpcAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVpcAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
     const ModifyVpcAttributeRequestPrivate &other, ModifyVpcAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

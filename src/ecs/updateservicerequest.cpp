@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
-    : ECSRequest(new UpdateServiceRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new UpdateServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
  * Constructs a UpdateServiceRequest object.
  */
 UpdateServiceRequest::UpdateServiceRequest()
-    : ECSRequest(new UpdateServiceRequestPrivate(ECSRequest::UpdateServiceAction, this))
+    : EcsRequest(new UpdateServiceRequestPrivate(EcsRequest::UpdateServiceAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a UpdateServiceRequestPrivate object for ECS \a action,
+ * Constructs a UpdateServiceRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
-    const ECSRequest::Action action, UpdateServiceRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, UpdateServiceRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const UpdateServiceRequestPrivate &other, UpdateServiceRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

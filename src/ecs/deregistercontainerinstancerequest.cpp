@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest(const DeregisterContainerInstanceRequest &other)
-    : ECSRequest(new DeregisterContainerInstanceRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DeregisterContainerInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest(const Der
  * Constructs a DeregisterContainerInstanceRequest object.
  */
 DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest()
-    : ECSRequest(new DeregisterContainerInstanceRequestPrivate(ECSRequest::DeregisterContainerInstanceAction, this))
+    : EcsRequest(new DeregisterContainerInstanceRequestPrivate(EcsRequest::DeregisterContainerInstanceAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterContainerInstanceRequest::response(
  */
 
 /*!
- * Constructs a DeregisterContainerInstanceRequestPrivate object for ECS \a action,
+ * Constructs a DeregisterContainerInstanceRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
-    const ECSRequest::Action action, DeregisterContainerInstanceRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DeregisterContainerInstanceRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPri
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
     const DeregisterContainerInstanceRequestPrivate &other, DeregisterContainerInstanceRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

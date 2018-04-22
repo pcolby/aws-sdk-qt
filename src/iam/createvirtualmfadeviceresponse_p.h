@@ -27,7 +27,7 @@ namespace IAM {
 
 class CreateVirtualMFADeviceResponse;
 
-class QTAWS_EXPORT CreateVirtualMFADeviceResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT CreateVirtualMFADeviceResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

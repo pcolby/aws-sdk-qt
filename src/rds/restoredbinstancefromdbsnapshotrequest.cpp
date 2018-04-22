@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest(const RestoreDBInstanceFromDBSnapshotRequest &other)
-    : RDSRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest(c
  * Constructs a RestoreDBInstanceFromDBSnapshotRequest object.
  */
 RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest()
-    : RDSRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(RDSRequest::RestoreDBInstanceFromDBSnapshotAction, this))
+    : RdsRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(RdsRequest::RestoreDBInstanceFromDBSnapshotAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::respo
  */
 
 /*!
- * Constructs a RestoreDBInstanceFromDBSnapshotRequestPrivate object for RDS \a action,
+ * Constructs a RestoreDBInstanceFromDBSnapshotRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
-    const RDSRequest::Action action, RestoreDBInstanceFromDBSnapshotRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RestoreDBInstanceFromDBSnapshotRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRe
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
     const RestoreDBInstanceFromDBSnapshotRequestPrivate &other, RestoreDBInstanceFromDBSnapshotRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

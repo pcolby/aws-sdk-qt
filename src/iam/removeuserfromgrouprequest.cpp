@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 RemoveUserFromGroupRequest::RemoveUserFromGroupRequest(const RemoveUserFromGroupRequest &other)
-    : IAMRequest(new RemoveUserFromGroupRequestPrivate(*other.d_func(), this))
+    : IamRequest(new RemoveUserFromGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ RemoveUserFromGroupRequest::RemoveUserFromGroupRequest(const RemoveUserFromGroup
  * Constructs a RemoveUserFromGroupRequest object.
  */
 RemoveUserFromGroupRequest::RemoveUserFromGroupRequest()
-    : IAMRequest(new RemoveUserFromGroupRequestPrivate(IAMRequest::RemoveUserFromGroupAction, this))
+    : IamRequest(new RemoveUserFromGroupRequestPrivate(IamRequest::RemoveUserFromGroupAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * RemoveUserFromGroupRequest::response(QNetwork
  */
 
 /*!
- * Constructs a RemoveUserFromGroupRequestPrivate object for IAM \a action,
+ * Constructs a RemoveUserFromGroupRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
-    const IAMRequest::Action action, RemoveUserFromGroupRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, RemoveUserFromGroupRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
     const RemoveUserFromGroupRequestPrivate &other, RemoveUserFromGroupRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

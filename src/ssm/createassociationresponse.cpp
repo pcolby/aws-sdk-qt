@@ -68,7 +68,7 @@ CreateAssociationResponse::CreateAssociationResponse(
         const CreateAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateAssociationResponsePrivate(this), parent)
+    : SsmResponse(new CreateAssociationResponsePrivate(this), parent)
 {
     setRequest(new CreateAssociationRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void CreateAssociationResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateAssociationResponsePrivate object with public implementation \a q.
  */
 CreateAssociationResponsePrivate::CreateAssociationResponsePrivate(
-    CreateAssociationResponse * const q) : SSMResponsePrivate(q)
+    CreateAssociationResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

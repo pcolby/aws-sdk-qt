@@ -102,7 +102,7 @@ DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
         const DecodeAuthorizationMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new DecodeAuthorizationMessageResponsePrivate(this), parent)
+    : StsResponse(new DecodeAuthorizationMessageResponsePrivate(this), parent)
 {
     setRequest(new DecodeAuthorizationMessageRequest(request));
     setReply(reply);
@@ -140,7 +140,7 @@ void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
  * Constructs a DecodeAuthorizationMessageResponsePrivate object with public implementation \a q.
  */
 DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePrivate(
-    DecodeAuthorizationMessageResponse * const q) : STSResponsePrivate(q)
+    DecodeAuthorizationMessageResponse * const q) : StsResponsePrivate(q)
 {
 
 }

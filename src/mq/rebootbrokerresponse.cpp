@@ -46,7 +46,7 @@ RebootBrokerResponse::RebootBrokerResponse(
         const RebootBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new RebootBrokerResponsePrivate(this), parent)
+    : MqResponse(new RebootBrokerResponsePrivate(this), parent)
 {
     setRequest(new RebootBrokerRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void RebootBrokerResponse::parseSuccess(QIODevice &response)
  * Constructs a RebootBrokerResponsePrivate object with public implementation \a q.
  */
 RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
-    RebootBrokerResponse * const q) : MQResponsePrivate(q)
+    RebootBrokerResponse * const q) : MqResponsePrivate(q)
 {
 
 }

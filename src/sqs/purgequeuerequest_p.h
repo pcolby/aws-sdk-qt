@@ -28,10 +28,10 @@ namespace SQS {
 
 class PurgeQueueRequest;
 
-class QTAWS_EXPORT PurgeQueueRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT PurgeQueueRequestPrivate : public SqsRequestPrivate {
 
 public:
-    PurgeQueueRequestPrivate(const SQSRequest::Action action,
+    PurgeQueueRequestPrivate(const SqsRequest::Action action,
                                    PurgeQueueRequest * const q);
     PurgeQueueRequestPrivate(const PurgeQueueRequestPrivate &other,
                                    PurgeQueueRequest * const q);

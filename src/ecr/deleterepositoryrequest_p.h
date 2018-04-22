@@ -28,10 +28,10 @@ namespace ECR {
 
 class DeleteRepositoryRequest;
 
-class QTAWS_EXPORT DeleteRepositoryRequestPrivate : public ECRRequestPrivate {
+class QTAWS_EXPORT DeleteRepositoryRequestPrivate : public EcrRequestPrivate {
 
 public:
-    DeleteRepositoryRequestPrivate(const ECRRequest::Action action,
+    DeleteRepositoryRequestPrivate(const EcrRequest::Action action,
                                    DeleteRepositoryRequest * const q);
     DeleteRepositoryRequestPrivate(const DeleteRepositoryRequestPrivate &other,
                                    DeleteRepositoryRequest * const q);

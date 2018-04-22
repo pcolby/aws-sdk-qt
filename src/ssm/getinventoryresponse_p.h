@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetInventoryResponse;
 
-class QTAWS_EXPORT GetInventoryResponsePrivate : public SSMResponsePrivate {
+class QTAWS_EXPORT GetInventoryResponsePrivate : public SsmResponsePrivate {
     Q_OBJECT
 
 public:

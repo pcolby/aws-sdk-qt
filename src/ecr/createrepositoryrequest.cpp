@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 CreateRepositoryRequest::CreateRepositoryRequest(const CreateRepositoryRequest &other)
-    : ECRRequest(new CreateRepositoryRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new CreateRepositoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateRepositoryRequest::CreateRepositoryRequest(const CreateRepositoryRequest &
  * Constructs a CreateRepositoryRequest object.
  */
 CreateRepositoryRequest::CreateRepositoryRequest()
-    : ECRRequest(new CreateRepositoryRequestPrivate(ECRRequest::CreateRepositoryAction, this))
+    : EcrRequest(new CreateRepositoryRequestPrivate(EcrRequest::CreateRepositoryAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateRepositoryRequestPrivate object for ECR \a action,
+ * Constructs a CreateRepositoryRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
-    const ECRRequest::Action action, CreateRepositoryRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, CreateRepositoryRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const CreateRepositoryRequestPrivate &other, CreateRepositoryRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

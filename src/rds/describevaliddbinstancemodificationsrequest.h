@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeValidDBInstanceModificationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequest : public RDSRequest {
+class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequest : public RdsRequest {
 
 public:
     DescribeValidDBInstanceModificationsRequest(const DescribeValidDBInstanceModificationsRequest &other);

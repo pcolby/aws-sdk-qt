@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest(const ModifySpotFleetRequestRequest &other)
-    : EC2Request(new ModifySpotFleetRequestRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifySpotFleetRequestRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest(const ModifySpotFle
  * Constructs a ModifySpotFleetRequestRequest object.
  */
 ModifySpotFleetRequestRequest::ModifySpotFleetRequestRequest()
-    : EC2Request(new ModifySpotFleetRequestRequestPrivate(EC2Request::ModifySpotFleetRequestAction, this))
+    : Ec2Request(new ModifySpotFleetRequestRequestPrivate(Ec2Request::ModifySpotFleetRequestAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifySpotFleetRequestRequest::response(QNetw
  */
 
 /*!
- * Constructs a ModifySpotFleetRequestRequestPrivate object for EC2 \a action,
+ * Constructs a ModifySpotFleetRequestRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
-    const EC2Request::Action action, ModifySpotFleetRequestRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifySpotFleetRequestRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
  */
 ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
     const ModifySpotFleetRequestRequestPrivate &other, ModifySpotFleetRequestRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

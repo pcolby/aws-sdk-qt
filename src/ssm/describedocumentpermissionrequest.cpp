@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeDocumentPermissionRequest::DescribeDocumentPermissionRequest(const DescribeDocumentPermissionRequest &other)
-    : SSMRequest(new DescribeDocumentPermissionRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeDocumentPermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeDocumentPermissionRequest::DescribeDocumentPermissionRequest(const Descr
  * Constructs a DescribeDocumentPermissionRequest object.
  */
 DescribeDocumentPermissionRequest::DescribeDocumentPermissionRequest()
-    : SSMRequest(new DescribeDocumentPermissionRequestPrivate(SSMRequest::DescribeDocumentPermissionAction, this))
+    : SsmRequest(new DescribeDocumentPermissionRequestPrivate(SsmRequest::DescribeDocumentPermissionAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentPermissionRequest::response(Q
  */
 
 /*!
- * Constructs a DescribeDocumentPermissionRequestPrivate object for SSM \a action,
+ * Constructs a DescribeDocumentPermissionRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
-    const SSMRequest::Action action, DescribeDocumentPermissionRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeDocumentPermissionRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPriva
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
     const DescribeDocumentPermissionRequestPrivate &other, DescribeDocumentPermissionRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -58,7 +58,7 @@ SubscribeResponse::SubscribeResponse(
         const SubscribeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SubscribeResponsePrivate(this), parent)
+    : SnsResponse(new SubscribeResponsePrivate(this), parent)
 {
     setRequest(new SubscribeRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void SubscribeResponse::parseSuccess(QIODevice &response)
  * Constructs a SubscribeResponsePrivate object with public implementation \a q.
  */
 SubscribeResponsePrivate::SubscribeResponsePrivate(
-    SubscribeResponse * const q) : SNSResponsePrivate(q)
+    SubscribeResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

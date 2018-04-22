@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribePatchBaselinesRequest::DescribePatchBaselinesRequest(const DescribePatchBaselinesRequest &other)
-    : SSMRequest(new DescribePatchBaselinesRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribePatchBaselinesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribePatchBaselinesRequest::DescribePatchBaselinesRequest(const DescribePatch
  * Constructs a DescribePatchBaselinesRequest object.
  */
 DescribePatchBaselinesRequest::DescribePatchBaselinesRequest()
-    : SSMRequest(new DescribePatchBaselinesRequestPrivate(SSMRequest::DescribePatchBaselinesAction, this))
+    : SsmRequest(new DescribePatchBaselinesRequestPrivate(SsmRequest::DescribePatchBaselinesAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribePatchBaselinesRequest::response(QNetw
  */
 
 /*!
- * Constructs a DescribePatchBaselinesRequestPrivate object for SSM \a action,
+ * Constructs a DescribePatchBaselinesRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
-    const SSMRequest::Action action, DescribePatchBaselinesRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribePatchBaselinesRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
  */
 DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
     const DescribePatchBaselinesRequestPrivate &other, DescribePatchBaselinesRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

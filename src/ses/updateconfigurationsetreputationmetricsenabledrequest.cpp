@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest(const UpdateConfigurationSetReputationMetricsEnabledRequest &other)
-    : SESRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(*other.d_func(), this))
+    : SesRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetRep
  * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequest object.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest()
-    : SESRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(SESRequest::UpdateConfigurationSetReputationMetricsEnabledAction, this))
+    : SesRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(SesRequest::UpdateConfigurationSetReputationMetricsEnabledAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
  */
 
 /*!
- * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object for SES \a action,
+ * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
-    const SESRequest::Action action, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfiguratio
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
     const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

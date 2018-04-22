@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest(const DeregisterManagedInstanceRequest &other)
-    : SSMRequest(new DeregisterManagedInstanceRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeregisterManagedInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest(const Deregis
  * Constructs a DeregisterManagedInstanceRequest object.
  */
 DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest()
-    : SSMRequest(new DeregisterManagedInstanceRequestPrivate(SSMRequest::DeregisterManagedInstanceAction, this))
+    : SsmRequest(new DeregisterManagedInstanceRequestPrivate(SsmRequest::DeregisterManagedInstanceAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QN
  */
 
 /*!
- * Constructs a DeregisterManagedInstanceRequestPrivate object for SSM \a action,
+ * Constructs a DeregisterManagedInstanceRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
-    const SSMRequest::Action action, DeregisterManagedInstanceRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeregisterManagedInstanceRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
     const DeregisterManagedInstanceRequestPrivate &other, DeregisterManagedInstanceRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

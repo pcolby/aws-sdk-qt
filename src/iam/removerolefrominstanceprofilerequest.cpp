@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 RemoveRoleFromInstanceProfileRequest::RemoveRoleFromInstanceProfileRequest(const RemoveRoleFromInstanceProfileRequest &other)
-    : IAMRequest(new RemoveRoleFromInstanceProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new RemoveRoleFromInstanceProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ RemoveRoleFromInstanceProfileRequest::RemoveRoleFromInstanceProfileRequest(const
  * Constructs a RemoveRoleFromInstanceProfileRequest object.
  */
 RemoveRoleFromInstanceProfileRequest::RemoveRoleFromInstanceProfileRequest()
-    : IAMRequest(new RemoveRoleFromInstanceProfileRequestPrivate(IAMRequest::RemoveRoleFromInstanceProfileAction, this))
+    : IamRequest(new RemoveRoleFromInstanceProfileRequestPrivate(IamRequest::RemoveRoleFromInstanceProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromInstanceProfileRequest::respons
  */
 
 /*!
- * Constructs a RemoveRoleFromInstanceProfileRequestPrivate object for IAM \a action,
+ * Constructs a RemoveRoleFromInstanceProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
-    const IAMRequest::Action action, RemoveRoleFromInstanceProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, RemoveRoleFromInstanceProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileReques
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
     const RemoveRoleFromInstanceProfileRequestPrivate &other, RemoveRoleFromInstanceProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

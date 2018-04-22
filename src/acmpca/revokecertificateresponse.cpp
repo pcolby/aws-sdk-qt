@@ -74,7 +74,7 @@ RevokeCertificateResponse::RevokeCertificateResponse(
         const RevokeCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new RevokeCertificateResponsePrivate(this), parent)
+    : AcmpcaResponse(new RevokeCertificateResponsePrivate(this), parent)
 {
     setRequest(new RevokeCertificateRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void RevokeCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a RevokeCertificateResponsePrivate object with public implementation \a q.
  */
 RevokeCertificateResponsePrivate::RevokeCertificateResponsePrivate(
-    RevokeCertificateResponse * const q) : ACMPCAResponsePrivate(q)
+    RevokeCertificateResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

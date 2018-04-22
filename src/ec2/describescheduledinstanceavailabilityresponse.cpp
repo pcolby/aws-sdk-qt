@@ -48,7 +48,7 @@ DescribeScheduledInstanceAvailabilityResponse::DescribeScheduledInstanceAvailabi
         const DescribeScheduledInstanceAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeScheduledInstanceAvailabilityResponsePrivate(this), parent)
+    : Ec2Response(new DescribeScheduledInstanceAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new DescribeScheduledInstanceAvailabilityRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeScheduledInstanceAvailabilityResponse::parseSuccess(QIODevice &resp
  * Constructs a DescribeScheduledInstanceAvailabilityResponsePrivate object with public implementation \a q.
  */
 DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceAvailabilityResponsePrivate(
-    DescribeScheduledInstanceAvailabilityResponse * const q) : EC2ResponsePrivate(q)
+    DescribeScheduledInstanceAvailabilityResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

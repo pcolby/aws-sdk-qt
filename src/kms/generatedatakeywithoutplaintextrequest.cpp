@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 GenerateDataKeyWithoutPlaintextRequest::GenerateDataKeyWithoutPlaintextRequest(const GenerateDataKeyWithoutPlaintextRequest &other)
-    : KMSRequest(new GenerateDataKeyWithoutPlaintextRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new GenerateDataKeyWithoutPlaintextRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ GenerateDataKeyWithoutPlaintextRequest::GenerateDataKeyWithoutPlaintextRequest(c
  * Constructs a GenerateDataKeyWithoutPlaintextRequest object.
  */
 GenerateDataKeyWithoutPlaintextRequest::GenerateDataKeyWithoutPlaintextRequest()
-    : KMSRequest(new GenerateDataKeyWithoutPlaintextRequestPrivate(KMSRequest::GenerateDataKeyWithoutPlaintextAction, this))
+    : KmsRequest(new GenerateDataKeyWithoutPlaintextRequestPrivate(KmsRequest::GenerateDataKeyWithoutPlaintextAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::respo
  */
 
 /*!
- * Constructs a GenerateDataKeyWithoutPlaintextRequestPrivate object for KMS \a action,
+ * Constructs a GenerateDataKeyWithoutPlaintextRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
-    const KMSRequest::Action action, GenerateDataKeyWithoutPlaintextRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, GenerateDataKeyWithoutPlaintextRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRe
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
     const GenerateDataKeyWithoutPlaintextRequestPrivate &other, GenerateDataKeyWithoutPlaintextRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

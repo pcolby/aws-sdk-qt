@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 PurchaseReservedDBInstancesOfferingRequest::PurchaseReservedDBInstancesOfferingRequest(const PurchaseReservedDBInstancesOfferingRequest &other)
-    : RDSRequest(new PurchaseReservedDBInstancesOfferingRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new PurchaseReservedDBInstancesOfferingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ PurchaseReservedDBInstancesOfferingRequest::PurchaseReservedDBInstancesOfferingR
  * Constructs a PurchaseReservedDBInstancesOfferingRequest object.
  */
 PurchaseReservedDBInstancesOfferingRequest::PurchaseReservedDBInstancesOfferingRequest()
-    : RDSRequest(new PurchaseReservedDBInstancesOfferingRequestPrivate(RDSRequest::PurchaseReservedDBInstancesOfferingAction, this))
+    : RdsRequest(new PurchaseReservedDBInstancesOfferingRequestPrivate(RdsRequest::PurchaseReservedDBInstancesOfferingAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedDBInstancesOfferingRequest::r
  */
 
 /*!
- * Constructs a PurchaseReservedDBInstancesOfferingRequestPrivate object for RDS \a action,
+ * Constructs a PurchaseReservedDBInstancesOfferingRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOfferingRequestPrivate(
-    const RDSRequest::Action action, PurchaseReservedDBInstancesOfferingRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, PurchaseReservedDBInstancesOfferingRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOf
  */
 PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOfferingRequestPrivate(
     const PurchaseReservedDBInstancesOfferingRequestPrivate &other, PurchaseReservedDBInstancesOfferingRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

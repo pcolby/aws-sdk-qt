@@ -28,7 +28,7 @@ namespace SSM {
 
 class CreateMaintenanceWindowResponsePrivate;
 
-class QTAWS_EXPORT CreateMaintenanceWindowResponse : public SSMResponse {
+class QTAWS_EXPORT CreateMaintenanceWindowResponse : public SsmResponse {
     Q_OBJECT
 
 public:

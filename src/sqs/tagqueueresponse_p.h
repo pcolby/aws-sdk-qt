@@ -27,7 +27,7 @@ namespace SQS {
 
 class TagQueueResponse;
 
-class QTAWS_EXPORT TagQueueResponsePrivate : public SQSResponsePrivate {
+class QTAWS_EXPORT TagQueueResponsePrivate : public SqsResponsePrivate {
     Q_OBJECT
 
 public:

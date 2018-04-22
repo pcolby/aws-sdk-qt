@@ -28,10 +28,10 @@ namespace SSM {
 
 class DeleteParameterRequest;
 
-class QTAWS_EXPORT DeleteParameterRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DeleteParameterRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DeleteParameterRequestPrivate(const SSMRequest::Action action,
+    DeleteParameterRequestPrivate(const SsmRequest::Action action,
                                    DeleteParameterRequest * const q);
     DeleteParameterRequestPrivate(const DeleteParameterRequestPrivate &other,
                                    DeleteParameterRequest * const q);

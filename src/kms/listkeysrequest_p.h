@@ -28,10 +28,10 @@ namespace KMS {
 
 class ListKeysRequest;
 
-class QTAWS_EXPORT ListKeysRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT ListKeysRequestPrivate : public KmsRequestPrivate {
 
 public:
-    ListKeysRequestPrivate(const KMSRequest::Action action,
+    ListKeysRequestPrivate(const KmsRequest::Action action,
                                    ListKeysRequest * const q);
     ListKeysRequestPrivate(const ListKeysRequestPrivate &other,
                                    ListKeysRequest * const q);

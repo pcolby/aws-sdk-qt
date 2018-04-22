@@ -28,7 +28,7 @@ namespace KMS {
 
 class DeleteImportedKeyMaterialResponsePrivate;
 
-class QTAWS_EXPORT DeleteImportedKeyMaterialResponse : public KMSResponse {
+class QTAWS_EXPORT DeleteImportedKeyMaterialResponse : public KmsResponse {
     Q_OBJECT
 
 public:

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest(const ListSizeConstraintSetsRequest &other)
-    : WAFRequest(new ListSizeConstraintSetsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListSizeConstraintSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest(const ListSizeConst
  * Constructs a ListSizeConstraintSetsRequest object.
  */
 ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest()
-    : WAFRequest(new ListSizeConstraintSetsRequestPrivate(WAFRequest::ListSizeConstraintSetsAction, this))
+    : WafRequest(new ListSizeConstraintSetsRequestPrivate(WafRequest::ListSizeConstraintSetsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetw
  */
 
 /*!
- * Constructs a ListSizeConstraintSetsRequestPrivate object for WAF \a action,
+ * Constructs a ListSizeConstraintSetsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
-    const WAFRequest::Action action, ListSizeConstraintSetsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListSizeConstraintSetsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
     const ListSizeConstraintSetsRequestPrivate &other, ListSizeConstraintSetsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

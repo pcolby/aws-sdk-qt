@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
-    : WAFRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
+    : WafRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
  * Constructs a CreateWebACLRequest object.
  */
 CreateWebACLRequest::CreateWebACLRequest()
-    : WAFRequest(new CreateWebACLRequestPrivate(WAFRequest::CreateWebACLAction, this))
+    : WafRequest(new CreateWebACLRequestPrivate(WafRequest::CreateWebACLAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a CreateWebACLRequestPrivate object for WAF \a action,
+ * Constructs a CreateWebACLRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
-    const WAFRequest::Action action, CreateWebACLRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, CreateWebACLRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
  */
 CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
     const CreateWebACLRequestPrivate &other, CreateWebACLRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

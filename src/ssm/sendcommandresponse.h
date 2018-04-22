@@ -28,7 +28,7 @@ namespace SSM {
 
 class SendCommandResponsePrivate;
 
-class QTAWS_EXPORT SendCommandResponse : public SSMResponse {
+class QTAWS_EXPORT SendCommandResponse : public SsmResponse {
     Q_OBJECT
 
 public:

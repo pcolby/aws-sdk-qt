@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 TagQueueRequest::TagQueueRequest(const TagQueueRequest &other)
-    : SQSRequest(new TagQueueRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new TagQueueRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ TagQueueRequest::TagQueueRequest(const TagQueueRequest &other)
  * Constructs a TagQueueRequest object.
  */
 TagQueueRequest::TagQueueRequest()
-    : SQSRequest(new TagQueueRequestPrivate(SQSRequest::TagQueueAction, this))
+    : SqsRequest(new TagQueueRequestPrivate(SqsRequest::TagQueueAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a TagQueueRequestPrivate object for SQS \a action,
+ * Constructs a TagQueueRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
-    const SQSRequest::Action action, TagQueueRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, TagQueueRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ TagQueueRequestPrivate::TagQueueRequestPrivate(
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
     const TagQueueRequestPrivate &other, TagQueueRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

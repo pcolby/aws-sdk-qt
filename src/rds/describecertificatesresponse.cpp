@@ -108,7 +108,7 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
         const DescribeCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeCertificatesResponsePrivate(this), parent)
+    : RdsResponse(new DescribeCertificatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeCertificatesRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
-    DescribeCertificatesResponse * const q) : RDSResponsePrivate(q)
+    DescribeCertificatesResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

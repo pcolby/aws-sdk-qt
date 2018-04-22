@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest(const AttachClassicLinkVpcRequest &other)
-    : EC2Request(new AttachClassicLinkVpcRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AttachClassicLinkVpcRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest(const AttachClassicLink
  * Constructs a AttachClassicLinkVpcRequest object.
  */
 AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest()
-    : EC2Request(new AttachClassicLinkVpcRequestPrivate(EC2Request::AttachClassicLinkVpcAction, this))
+    : Ec2Request(new AttachClassicLinkVpcRequestPrivate(Ec2Request::AttachClassicLinkVpcAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetwor
  */
 
 /*!
- * Constructs a AttachClassicLinkVpcRequestPrivate object for EC2 \a action,
+ * Constructs a AttachClassicLinkVpcRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
-    const EC2Request::Action action, AttachClassicLinkVpcRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AttachClassicLinkVpcRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
     const AttachClassicLinkVpcRequestPrivate &other, AttachClassicLinkVpcRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

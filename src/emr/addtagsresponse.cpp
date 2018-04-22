@@ -47,7 +47,7 @@ AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new AddTagsResponsePrivate(this), parent)
+    : EmrResponse(new AddTagsResponsePrivate(this), parent)
 {
     setRequest(new AddTagsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a AddTagsResponsePrivate object with public implementation \a q.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
-    AddTagsResponse * const q) : EMRResponsePrivate(q)
+    AddTagsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

@@ -109,7 +109,7 @@ DeletePolicyVersionResponse::DeletePolicyVersionResponse(
         const DeletePolicyVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeletePolicyVersionResponsePrivate(this), parent)
+    : IamResponse(new DeletePolicyVersionResponsePrivate(this), parent)
 {
     setRequest(new DeletePolicyVersionRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
  * Constructs a DeletePolicyVersionResponsePrivate object with public implementation \a q.
  */
 DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
-    DeletePolicyVersionResponse * const q) : IAMResponsePrivate(q)
+    DeletePolicyVersionResponse * const q) : IamResponsePrivate(q)
 {
 
 }

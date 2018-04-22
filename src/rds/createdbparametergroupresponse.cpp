@@ -108,7 +108,7 @@ CreateDBParameterGroupResponse::CreateDBParameterGroupResponse(
         const CreateDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new CreateDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
-    CreateDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    CreateDBParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

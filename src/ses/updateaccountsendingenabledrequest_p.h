@@ -28,10 +28,10 @@ namespace SES {
 
 class UpdateAccountSendingEnabledRequest;
 
-class QTAWS_EXPORT UpdateAccountSendingEnabledRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT UpdateAccountSendingEnabledRequestPrivate : public SesRequestPrivate {
 
 public:
-    UpdateAccountSendingEnabledRequestPrivate(const SESRequest::Action action,
+    UpdateAccountSendingEnabledRequestPrivate(const SesRequest::Action action,
                                    UpdateAccountSendingEnabledRequest * const q);
     UpdateAccountSendingEnabledRequestPrivate(const UpdateAccountSendingEnabledRequestPrivate &other,
                                    UpdateAccountSendingEnabledRequest * const q);

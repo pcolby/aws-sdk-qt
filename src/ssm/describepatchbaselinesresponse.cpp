@@ -68,7 +68,7 @@ DescribePatchBaselinesResponse::DescribePatchBaselinesResponse(
         const DescribePatchBaselinesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribePatchBaselinesResponsePrivate(this), parent)
+    : SsmResponse(new DescribePatchBaselinesResponsePrivate(this), parent)
 {
     setRequest(new DescribePatchBaselinesRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribePatchBaselinesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribePatchBaselinesResponsePrivate object with public implementation \a q.
  */
 DescribePatchBaselinesResponsePrivate::DescribePatchBaselinesResponsePrivate(
-    DescribePatchBaselinesResponse * const q) : SSMResponsePrivate(q)
+    DescribePatchBaselinesResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

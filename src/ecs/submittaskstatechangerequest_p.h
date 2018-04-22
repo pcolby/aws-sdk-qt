@@ -28,10 +28,10 @@ namespace ECS {
 
 class SubmitTaskStateChangeRequest;
 
-class QTAWS_EXPORT SubmitTaskStateChangeRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT SubmitTaskStateChangeRequestPrivate : public EcsRequestPrivate {
 
 public:
-    SubmitTaskStateChangeRequestPrivate(const ECSRequest::Action action,
+    SubmitTaskStateChangeRequestPrivate(const EcsRequest::Action action,
                                    SubmitTaskStateChangeRequest * const q);
     SubmitTaskStateChangeRequestPrivate(const SubmitTaskStateChangeRequestPrivate &other,
                                    SubmitTaskStateChangeRequest * const q);

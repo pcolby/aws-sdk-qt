@@ -108,7 +108,7 @@ DeleteDBSubnetGroupResponse::DeleteDBSubnetGroupResponse(
         const DeleteDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSubnetGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
-    DeleteDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBSubnetGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UploadServerCertificateRequest::UploadServerCertificateRequest(const UploadServerCertificateRequest &other)
-    : IAMRequest(new UploadServerCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UploadServerCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UploadServerCertificateRequest::UploadServerCertificateRequest(const UploadServe
  * Constructs a UploadServerCertificateRequest object.
  */
 UploadServerCertificateRequest::UploadServerCertificateRequest()
-    : IAMRequest(new UploadServerCertificateRequestPrivate(IAMRequest::UploadServerCertificateAction, this))
+    : IamRequest(new UploadServerCertificateRequestPrivate(IamRequest::UploadServerCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UploadServerCertificateRequest::response(QNet
  */
 
 /*!
- * Constructs a UploadServerCertificateRequestPrivate object for IAM \a action,
+ * Constructs a UploadServerCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
-    const IAMRequest::Action action, UploadServerCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UploadServerCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
     const UploadServerCertificateRequestPrivate &other, UploadServerCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateServerCertificateRequest::UpdateServerCertificateRequest(const UpdateServerCertificateRequest &other)
-    : IAMRequest(new UpdateServerCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateServerCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateServerCertificateRequest::UpdateServerCertificateRequest(const UpdateServe
  * Constructs a UpdateServerCertificateRequest object.
  */
 UpdateServerCertificateRequest::UpdateServerCertificateRequest()
-    : IAMRequest(new UpdateServerCertificateRequestPrivate(IAMRequest::UpdateServerCertificateAction, this))
+    : IamRequest(new UpdateServerCertificateRequestPrivate(IamRequest::UpdateServerCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateServerCertificateRequest::response(QNet
  */
 
 /*!
- * Constructs a UpdateServerCertificateRequestPrivate object for IAM \a action,
+ * Constructs a UpdateServerCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
-    const IAMRequest::Action action, UpdateServerCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateServerCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
  */
 UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
     const UpdateServerCertificateRequestPrivate &other, UpdateServerCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

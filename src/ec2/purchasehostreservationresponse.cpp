@@ -48,7 +48,7 @@ PurchaseHostReservationResponse::PurchaseHostReservationResponse(
         const PurchaseHostReservationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new PurchaseHostReservationResponsePrivate(this), parent)
+    : Ec2Response(new PurchaseHostReservationResponsePrivate(this), parent)
 {
     setRequest(new PurchaseHostReservationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void PurchaseHostReservationResponse::parseSuccess(QIODevice &response)
  * Constructs a PurchaseHostReservationResponsePrivate object with public implementation \a q.
  */
 PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponsePrivate(
-    PurchaseHostReservationResponse * const q) : EC2ResponsePrivate(q)
+    PurchaseHostReservationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

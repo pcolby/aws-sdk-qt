@@ -55,7 +55,7 @@ SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabl
         const SetIdentityFeedbackForwardingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityFeedbackForwardingEnabledResponsePrivate(this), parent)
+    : SesResponse(new SetIdentityFeedbackForwardingEnabledResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityFeedbackForwardingEnabledRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &respo
  * Constructs a SetIdentityFeedbackForwardingEnabledResponsePrivate object with public implementation \a q.
  */
 SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardingEnabledResponsePrivate(
-    SetIdentityFeedbackForwardingEnabledResponse * const q) : SESResponsePrivate(q)
+    SetIdentityFeedbackForwardingEnabledResponse * const q) : SesResponsePrivate(q)
 {
 
 }

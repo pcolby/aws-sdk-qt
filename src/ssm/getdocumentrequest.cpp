@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetDocumentRequest::GetDocumentRequest(const GetDocumentRequest &other)
-    : SSMRequest(new GetDocumentRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetDocumentRequest::GetDocumentRequest(const GetDocumentRequest &other)
  * Constructs a GetDocumentRequest object.
  */
 GetDocumentRequest::GetDocumentRequest()
-    : SSMRequest(new GetDocumentRequestPrivate(SSMRequest::GetDocumentAction, this))
+    : SsmRequest(new GetDocumentRequestPrivate(SsmRequest::GetDocumentAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a GetDocumentRequestPrivate object for SSM \a action,
+ * Constructs a GetDocumentRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
-    const SSMRequest::Action action, GetDocumentRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetDocumentRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetDocumentRequestPrivate::GetDocumentRequestPrivate(
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const GetDocumentRequestPrivate &other, GetDocumentRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

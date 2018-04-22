@@ -28,10 +28,10 @@ namespace MQ {
 
 class UpdateUserRequest;
 
-class QTAWS_EXPORT UpdateUserRequestPrivate : public MQRequestPrivate {
+class QTAWS_EXPORT UpdateUserRequestPrivate : public MqRequestPrivate {
 
 public:
-    UpdateUserRequestPrivate(const MQRequest::Action action,
+    UpdateUserRequestPrivate(const MqRequest::Action action,
                                    UpdateUserRequest * const q);
     UpdateUserRequestPrivate(const UpdateUserRequestPrivate &other,
                                    UpdateUserRequest * const q);

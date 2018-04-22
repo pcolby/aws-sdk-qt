@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 SubmitContainerStateChangeRequest::SubmitContainerStateChangeRequest(const SubmitContainerStateChangeRequest &other)
-    : ECSRequest(new SubmitContainerStateChangeRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new SubmitContainerStateChangeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ SubmitContainerStateChangeRequest::SubmitContainerStateChangeRequest(const Submi
  * Constructs a SubmitContainerStateChangeRequest object.
  */
 SubmitContainerStateChangeRequest::SubmitContainerStateChangeRequest()
-    : ECSRequest(new SubmitContainerStateChangeRequestPrivate(ECSRequest::SubmitContainerStateChangeAction, this))
+    : EcsRequest(new SubmitContainerStateChangeRequestPrivate(EcsRequest::SubmitContainerStateChangeAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * SubmitContainerStateChangeRequest::response(Q
  */
 
 /*!
- * Constructs a SubmitContainerStateChangeRequestPrivate object for ECS \a action,
+ * Constructs a SubmitContainerStateChangeRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPrivate(
-    const ECSRequest::Action action, SubmitContainerStateChangeRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, SubmitContainerStateChangeRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPriva
  */
 SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPrivate(
     const SubmitContainerStateChangeRequestPrivate &other, SubmitContainerStateChangeRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

@@ -109,7 +109,7 @@ GetOpenIDConnectProviderResponse::GetOpenIDConnectProviderResponse(
         const GetOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetOpenIDConnectProviderResponsePrivate(this), parent)
+    : IamResponse(new GetOpenIDConnectProviderResponsePrivate(this), parent)
 {
     setRequest(new GetOpenIDConnectProviderRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
  * Constructs a GetOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate(
-    GetOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
+    GetOpenIDConnectProviderResponse * const q) : IamResponsePrivate(q)
 {
 
 }

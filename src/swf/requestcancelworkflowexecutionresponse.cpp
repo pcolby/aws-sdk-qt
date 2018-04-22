@@ -60,7 +60,7 @@ RequestCancelWorkflowExecutionResponse::RequestCancelWorkflowExecutionResponse(
         const RequestCancelWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RequestCancelWorkflowExecutionResponsePrivate(this), parent)
+    : SwfResponse(new RequestCancelWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new RequestCancelWorkflowExecutionRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * Constructs a RequestCancelWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionResponsePrivate(
-    RequestCancelWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
+    RequestCancelWorkflowExecutionResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

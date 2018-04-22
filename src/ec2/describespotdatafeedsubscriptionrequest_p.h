@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeSpotDatafeedSubscriptionRequest;
 
-class QTAWS_EXPORT DescribeSpotDatafeedSubscriptionRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeSpotDatafeedSubscriptionRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeSpotDatafeedSubscriptionRequestPrivate(const EC2Request::Action action,
+    DescribeSpotDatafeedSubscriptionRequestPrivate(const Ec2Request::Action action,
                                    DescribeSpotDatafeedSubscriptionRequest * const q);
     DescribeSpotDatafeedSubscriptionRequestPrivate(const DescribeSpotDatafeedSubscriptionRequestPrivate &other,
                                    DescribeSpotDatafeedSubscriptionRequest * const q);

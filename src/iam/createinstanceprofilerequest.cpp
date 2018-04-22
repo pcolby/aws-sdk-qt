@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateInstanceProfileRequest::CreateInstanceProfileRequest(const CreateInstanceProfileRequest &other)
-    : IAMRequest(new CreateInstanceProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateInstanceProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateInstanceProfileRequest::CreateInstanceProfileRequest(const CreateInstanceP
  * Constructs a CreateInstanceProfileRequest object.
  */
 CreateInstanceProfileRequest::CreateInstanceProfileRequest()
-    : IAMRequest(new CreateInstanceProfileRequestPrivate(IAMRequest::CreateInstanceProfileAction, this))
+    : IamRequest(new CreateInstanceProfileRequestPrivate(IamRequest::CreateInstanceProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetwo
  */
 
 /*!
- * Constructs a CreateInstanceProfileRequestPrivate object for IAM \a action,
+ * Constructs a CreateInstanceProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
-    const IAMRequest::Action action, CreateInstanceProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateInstanceProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
     const CreateInstanceProfileRequestPrivate &other, CreateInstanceProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

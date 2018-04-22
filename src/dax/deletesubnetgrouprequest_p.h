@@ -28,10 +28,10 @@ namespace DAX {
 
 class DeleteSubnetGroupRequest;
 
-class QTAWS_EXPORT DeleteSubnetGroupRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT DeleteSubnetGroupRequestPrivate : public DaxRequestPrivate {
 
 public:
-    DeleteSubnetGroupRequestPrivate(const DAXRequest::Action action,
+    DeleteSubnetGroupRequestPrivate(const DaxRequest::Action action,
                                    DeleteSubnetGroupRequest * const q);
     DeleteSubnetGroupRequestPrivate(const DeleteSubnetGroupRequestPrivate &other,
                                    DeleteSubnetGroupRequest * const q);

@@ -28,10 +28,10 @@ namespace IAM {
 
 class ListGroupsForUserRequest;
 
-class QTAWS_EXPORT ListGroupsForUserRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT ListGroupsForUserRequestPrivate : public IamRequestPrivate {
 
 public:
-    ListGroupsForUserRequestPrivate(const IAMRequest::Action action,
+    ListGroupsForUserRequestPrivate(const IamRequest::Action action,
                                    ListGroupsForUserRequest * const q);
     ListGroupsForUserRequestPrivate(const ListGroupsForUserRequestPrivate &other,
                                    ListGroupsForUserRequest * const q);

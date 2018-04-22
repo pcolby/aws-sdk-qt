@@ -48,7 +48,7 @@ RestoreAddressToClassicResponse::RestoreAddressToClassicResponse(
         const RestoreAddressToClassicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RestoreAddressToClassicResponsePrivate(this), parent)
+    : Ec2Response(new RestoreAddressToClassicResponsePrivate(this), parent)
 {
     setRequest(new RestoreAddressToClassicRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RestoreAddressToClassicResponse::parseSuccess(QIODevice &response)
  * Constructs a RestoreAddressToClassicResponsePrivate object with public implementation \a q.
  */
 RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
-    RestoreAddressToClassicResponse * const q) : EC2ResponsePrivate(q)
+    RestoreAddressToClassicResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

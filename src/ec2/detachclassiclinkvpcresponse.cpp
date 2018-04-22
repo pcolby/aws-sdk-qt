@@ -48,7 +48,7 @@ DetachClassicLinkVpcResponse::DetachClassicLinkVpcResponse(
         const DetachClassicLinkVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachClassicLinkVpcResponsePrivate(this), parent)
+    : Ec2Response(new DetachClassicLinkVpcResponsePrivate(this), parent)
 {
     setRequest(new DetachClassicLinkVpcRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DetachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
  * Constructs a DetachClassicLinkVpcResponsePrivate object with public implementation \a q.
  */
 DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
-    DetachClassicLinkVpcResponse * const q) : EC2ResponsePrivate(q)
+    DetachClassicLinkVpcResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

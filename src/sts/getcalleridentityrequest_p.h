@@ -28,10 +28,10 @@ namespace STS {
 
 class GetCallerIdentityRequest;
 
-class QTAWS_EXPORT GetCallerIdentityRequestPrivate : public STSRequestPrivate {
+class QTAWS_EXPORT GetCallerIdentityRequestPrivate : public StsRequestPrivate {
 
 public:
-    GetCallerIdentityRequestPrivate(const STSRequest::Action action,
+    GetCallerIdentityRequestPrivate(const StsRequest::Action action,
                                    GetCallerIdentityRequest * const q);
     GetCallerIdentityRequestPrivate(const GetCallerIdentityRequestPrivate &other,
                                    GetCallerIdentityRequest * const q);

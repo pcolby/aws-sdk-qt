@@ -28,7 +28,7 @@ namespace SES {
 
 class SetIdentityMailFromDomainResponsePrivate;
 
-class QTAWS_EXPORT SetIdentityMailFromDomainResponse : public SESResponse {
+class QTAWS_EXPORT SetIdentityMailFromDomainResponse : public SesResponse {
     Q_OBJECT
 
 public:

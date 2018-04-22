@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest(const ListServiceSpecificCredentialsRequest &other)
-    : IAMRequest(new ListServiceSpecificCredentialsRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListServiceSpecificCredentialsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest(con
  * Constructs a ListServiceSpecificCredentialsRequest object.
  */
 ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest()
-    : IAMRequest(new ListServiceSpecificCredentialsRequestPrivate(IAMRequest::ListServiceSpecificCredentialsAction, this))
+    : IamRequest(new ListServiceSpecificCredentialsRequestPrivate(IamRequest::ListServiceSpecificCredentialsAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListServiceSpecificCredentialsRequest::respon
  */
 
 /*!
- * Constructs a ListServiceSpecificCredentialsRequestPrivate object for IAM \a action,
+ * Constructs a ListServiceSpecificCredentialsRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
-    const IAMRequest::Action action, ListServiceSpecificCredentialsRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListServiceSpecificCredentialsRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequ
  */
 ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
     const ListServiceSpecificCredentialsRequestPrivate &other, ListServiceSpecificCredentialsRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

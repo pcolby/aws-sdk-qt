@@ -49,7 +49,7 @@ GetWebACLResponse::GetWebACLResponse(
         const GetWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetWebACLResponsePrivate(this), parent)
+    : WafResponse(new GetWebACLResponsePrivate(this), parent)
 {
     setRequest(new GetWebACLRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetWebACLResponse::parseSuccess(QIODevice &response)
  * Constructs a GetWebACLResponsePrivate object with public implementation \a q.
  */
 GetWebACLResponsePrivate::GetWebACLResponsePrivate(
-    GetWebACLResponse * const q) : WAFResponsePrivate(q)
+    GetWebACLResponse * const q) : WafResponsePrivate(q)
 {
 
 }

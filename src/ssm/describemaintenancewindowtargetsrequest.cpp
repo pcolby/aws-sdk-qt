@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeMaintenanceWindowTargetsRequest::DescribeMaintenanceWindowTargetsRequest(const DescribeMaintenanceWindowTargetsRequest &other)
-    : SSMRequest(new DescribeMaintenanceWindowTargetsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeMaintenanceWindowTargetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeMaintenanceWindowTargetsRequest::DescribeMaintenanceWindowTargetsRequest
  * Constructs a DescribeMaintenanceWindowTargetsRequest object.
  */
 DescribeMaintenanceWindowTargetsRequest::DescribeMaintenanceWindowTargetsRequest()
-    : SSMRequest(new DescribeMaintenanceWindowTargetsRequestPrivate(SSMRequest::DescribeMaintenanceWindowTargetsAction, this))
+    : SsmRequest(new DescribeMaintenanceWindowTargetsRequestPrivate(SsmRequest::DescribeMaintenanceWindowTargetsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowTargetsRequest::resp
  */
 
 /*!
- * Constructs a DescribeMaintenanceWindowTargetsRequestPrivate object for SSM \a action,
+ * Constructs a DescribeMaintenanceWindowTargetsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargetsRequestPrivate(
-    const SSMRequest::Action action, DescribeMaintenanceWindowTargetsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeMaintenanceWindowTargetsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargets
  */
 DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargetsRequestPrivate(
     const DescribeMaintenanceWindowTargetsRequestPrivate &other, DescribeMaintenanceWindowTargetsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

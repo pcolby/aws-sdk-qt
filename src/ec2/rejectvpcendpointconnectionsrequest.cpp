@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest(const RejectVpcEndpointConnectionsRequest &other)
-    : EC2Request(new RejectVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RejectVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest(const R
  * Constructs a RejectVpcEndpointConnectionsRequest object.
  */
 RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest()
-    : EC2Request(new RejectVpcEndpointConnectionsRequestPrivate(EC2Request::RejectVpcEndpointConnectionsAction, this))
+    : Ec2Request(new RejectVpcEndpointConnectionsRequestPrivate(Ec2Request::RejectVpcEndpointConnectionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
  */
 
 /*!
- * Constructs a RejectVpcEndpointConnectionsRequestPrivate object for EC2 \a action,
+ * Constructs a RejectVpcEndpointConnectionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
-    const EC2Request::Action action, RejectVpcEndpointConnectionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RejectVpcEndpointConnectionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestP
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
     const RejectVpcEndpointConnectionsRequestPrivate &other, RejectVpcEndpointConnectionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

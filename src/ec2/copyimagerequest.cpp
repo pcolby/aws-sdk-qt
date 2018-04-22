@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
-    : EC2Request(new CopyImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CopyImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
  * Constructs a CopyImageRequest object.
  */
 CopyImageRequest::CopyImageRequest()
-    : EC2Request(new CopyImageRequestPrivate(EC2Request::CopyImageAction, this))
+    : Ec2Request(new CopyImageRequestPrivate(Ec2Request::CopyImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a CopyImageRequestPrivate object for EC2 \a action,
+ * Constructs a CopyImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
-    const EC2Request::Action action, CopyImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CopyImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const CopyImageRequestPrivate &other, CopyImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

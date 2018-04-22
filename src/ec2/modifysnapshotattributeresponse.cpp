@@ -48,7 +48,7 @@ ModifySnapshotAttributeResponse::ModifySnapshotAttributeResponse(
         const ModifySnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifySnapshotAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifySnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifySnapshotAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifySnapshotAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifySnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponsePrivate(
-    ModifySnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifySnapshotAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

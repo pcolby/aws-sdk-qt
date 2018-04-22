@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
-    : DAXRequest(new DeleteClusterRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new DeleteClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteClusterRequest::DeleteClusterRequest(const DeleteClusterRequest &other)
  * Constructs a DeleteClusterRequest object.
  */
 DeleteClusterRequest::DeleteClusterRequest()
-    : DAXRequest(new DeleteClusterRequestPrivate(DAXRequest::DeleteClusterAction, this))
+    : DaxRequest(new DeleteClusterRequestPrivate(DaxRequest::DeleteClusterAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a DeleteClusterRequestPrivate object for DAX \a action,
+ * Constructs a DeleteClusterRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
-    const DAXRequest::Action action, DeleteClusterRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, DeleteClusterRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DeleteClusterRequestPrivate &other, DeleteClusterRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

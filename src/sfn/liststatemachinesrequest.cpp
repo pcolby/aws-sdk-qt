@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 ListStateMachinesRequest::ListStateMachinesRequest(const ListStateMachinesRequest &other)
-    : SFNRequest(new ListStateMachinesRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new ListStateMachinesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ ListStateMachinesRequest::ListStateMachinesRequest(const ListStateMachinesReques
  * Constructs a ListStateMachinesRequest object.
  */
 ListStateMachinesRequest::ListStateMachinesRequest()
-    : SFNRequest(new ListStateMachinesRequestPrivate(SFNRequest::ListStateMachinesAction, this))
+    : SfnRequest(new ListStateMachinesRequestPrivate(SfnRequest::ListStateMachinesAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ListStateMachinesRequestPrivate object for SFN \a action,
+ * Constructs a ListStateMachinesRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
-    const SFNRequest::Action action, ListStateMachinesRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, ListStateMachinesRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
     const ListStateMachinesRequestPrivate &other, ListStateMachinesRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

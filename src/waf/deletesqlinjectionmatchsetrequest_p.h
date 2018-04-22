@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteSqlInjectionMatchSetRequest;
 
-class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteSqlInjectionMatchSetRequestPrivate(const WAFRequest::Action action,
+    DeleteSqlInjectionMatchSetRequestPrivate(const WafRequest::Action action,
                                    DeleteSqlInjectionMatchSetRequest * const q);
     DeleteSqlInjectionMatchSetRequestPrivate(const DeleteSqlInjectionMatchSetRequestPrivate &other,
                                    DeleteSqlInjectionMatchSetRequest * const q);

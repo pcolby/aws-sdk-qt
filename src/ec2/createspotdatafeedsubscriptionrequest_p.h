@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CreateSpotDatafeedSubscriptionRequest;
 
-class QTAWS_EXPORT CreateSpotDatafeedSubscriptionRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CreateSpotDatafeedSubscriptionRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CreateSpotDatafeedSubscriptionRequestPrivate(const EC2Request::Action action,
+    CreateSpotDatafeedSubscriptionRequestPrivate(const Ec2Request::Action action,
                                    CreateSpotDatafeedSubscriptionRequest * const q);
     CreateSpotDatafeedSubscriptionRequestPrivate(const CreateSpotDatafeedSubscriptionRequestPrivate &other,
                                    CreateSpotDatafeedSubscriptionRequest * const q);

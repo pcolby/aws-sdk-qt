@@ -48,7 +48,7 @@ DeleteSnapshotResponse::DeleteSnapshotResponse(
         const DeleteSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteSnapshotResponsePrivate(this), parent)
+    : Ec2Response(new DeleteSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteSnapshotRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
-    DeleteSnapshotResponse * const q) : EC2ResponsePrivate(q)
+    DeleteSnapshotResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

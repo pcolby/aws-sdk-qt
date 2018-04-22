@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CancelExportTaskRequest::CancelExportTaskRequest(const CancelExportTaskRequest &other)
-    : EC2Request(new CancelExportTaskRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CancelExportTaskRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CancelExportTaskRequest::CancelExportTaskRequest(const CancelExportTaskRequest &
  * Constructs a CancelExportTaskRequest object.
  */
 CancelExportTaskRequest::CancelExportTaskRequest()
-    : EC2Request(new CancelExportTaskRequestPrivate(EC2Request::CancelExportTaskAction, this))
+    : Ec2Request(new CancelExportTaskRequestPrivate(Ec2Request::CancelExportTaskAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CancelExportTaskRequestPrivate object for EC2 \a action,
+ * Constructs a CancelExportTaskRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
-    const EC2Request::Action action, CancelExportTaskRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CancelExportTaskRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const CancelExportTaskRequestPrivate &other, CancelExportTaskRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

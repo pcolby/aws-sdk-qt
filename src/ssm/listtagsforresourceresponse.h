@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public SSMResponse {
+class QTAWS_EXPORT ListTagsForResourceResponse : public SsmResponse {
     Q_OBJECT
 
 public:

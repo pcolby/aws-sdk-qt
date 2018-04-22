@@ -28,10 +28,10 @@ namespace IAM {
 
 class ResetServiceSpecificCredentialRequest;
 
-class QTAWS_EXPORT ResetServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT ResetServiceSpecificCredentialRequestPrivate : public IamRequestPrivate {
 
 public:
-    ResetServiceSpecificCredentialRequestPrivate(const IAMRequest::Action action,
+    ResetServiceSpecificCredentialRequestPrivate(const IamRequest::Action action,
                                    ResetServiceSpecificCredentialRequest * const q);
     ResetServiceSpecificCredentialRequestPrivate(const ResetServiceSpecificCredentialRequestPrivate &other,
                                    ResetServiceSpecificCredentialRequest * const q);

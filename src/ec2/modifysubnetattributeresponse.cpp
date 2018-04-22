@@ -48,7 +48,7 @@ ModifySubnetAttributeResponse::ModifySubnetAttributeResponse(
         const ModifySubnetAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifySubnetAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ModifySubnetAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifySubnetAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifySubnetAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifySubnetAttributeResponsePrivate object with public implementation \a q.
  */
 ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponsePrivate(
-    ModifySubnetAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ModifySubnetAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

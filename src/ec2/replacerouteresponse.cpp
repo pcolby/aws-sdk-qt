@@ -48,7 +48,7 @@ ReplaceRouteResponse::ReplaceRouteResponse(
         const ReplaceRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReplaceRouteResponsePrivate(this), parent)
+    : Ec2Response(new ReplaceRouteResponsePrivate(this), parent)
 {
     setRequest(new ReplaceRouteRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ReplaceRouteResponse::parseSuccess(QIODevice &response)
  * Constructs a ReplaceRouteResponsePrivate object with public implementation \a q.
  */
 ReplaceRouteResponsePrivate::ReplaceRouteResponsePrivate(
-    ReplaceRouteResponse * const q) : EC2ResponsePrivate(q)
+    ReplaceRouteResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

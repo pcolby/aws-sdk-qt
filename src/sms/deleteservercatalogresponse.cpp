@@ -44,7 +44,7 @@ DeleteServerCatalogResponse::DeleteServerCatalogResponse(
         const DeleteServerCatalogRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new DeleteServerCatalogResponsePrivate(this), parent)
+    : SmsResponse(new DeleteServerCatalogResponsePrivate(this), parent)
 {
     setRequest(new DeleteServerCatalogRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void DeleteServerCatalogResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteServerCatalogResponsePrivate object with public implementation \a q.
  */
 DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponsePrivate(
-    DeleteServerCatalogResponse * const q) : SMSResponsePrivate(q)
+    DeleteServerCatalogResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

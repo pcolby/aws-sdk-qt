@@ -28,10 +28,10 @@ namespace SSM {
 
 class DeleteActivationRequest;
 
-class QTAWS_EXPORT DeleteActivationRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DeleteActivationRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DeleteActivationRequestPrivate(const SSMRequest::Action action,
+    DeleteActivationRequestPrivate(const SsmRequest::Action action,
                                    DeleteActivationRequest * const q);
     DeleteActivationRequestPrivate(const DeleteActivationRequestPrivate &other,
                                    DeleteActivationRequest * const q);

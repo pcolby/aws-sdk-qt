@@ -48,7 +48,7 @@ CreateReservedInstancesListingResponse::CreateReservedInstancesListingResponse(
         const CreateReservedInstancesListingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateReservedInstancesListingResponsePrivate(this), parent)
+    : Ec2Response(new CreateReservedInstancesListingResponsePrivate(this), parent)
 {
     setRequest(new CreateReservedInstancesListingRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateReservedInstancesListingResponsePrivate object with public implementation \a q.
  */
 CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingResponsePrivate(
-    CreateReservedInstancesListingResponse * const q) : EC2ResponsePrivate(q)
+    CreateReservedInstancesListingResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

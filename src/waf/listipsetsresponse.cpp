@@ -49,7 +49,7 @@ ListIPSetsResponse::ListIPSetsResponse(
         const ListIPSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListIPSetsResponsePrivate(this), parent)
+    : WafResponse(new ListIPSetsResponsePrivate(this), parent)
 {
     setRequest(new ListIPSetsRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListIPSetsResponsePrivate object with public implementation \a q.
  */
 ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
-    ListIPSetsResponse * const q) : WAFResponsePrivate(q)
+    ListIPSetsResponse * const q) : WafResponsePrivate(q)
 {
 
 }

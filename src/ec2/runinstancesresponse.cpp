@@ -48,7 +48,7 @@ RunInstancesResponse::RunInstancesResponse(
         const RunInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RunInstancesResponsePrivate(this), parent)
+    : Ec2Response(new RunInstancesResponsePrivate(this), parent)
 {
     setRequest(new RunInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RunInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a RunInstancesResponsePrivate object with public implementation \a q.
  */
 RunInstancesResponsePrivate::RunInstancesResponsePrivate(
-    RunInstancesResponse * const q) : EC2ResponsePrivate(q)
+    RunInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

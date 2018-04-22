@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteTagsRequestPrivate;
 
-class QTAWS_EXPORT DeleteTagsRequest : public EC2Request {
+class QTAWS_EXPORT DeleteTagsRequest : public Ec2Request {
 
 public:
     DeleteTagsRequest(const DeleteTagsRequest &other);

@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 ListActivitiesRequest::ListActivitiesRequest(const ListActivitiesRequest &other)
-    : SFNRequest(new ListActivitiesRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new ListActivitiesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ ListActivitiesRequest::ListActivitiesRequest(const ListActivitiesRequest &other)
  * Constructs a ListActivitiesRequest object.
  */
 ListActivitiesRequest::ListActivitiesRequest()
-    : SFNRequest(new ListActivitiesRequestPrivate(SFNRequest::ListActivitiesAction, this))
+    : SfnRequest(new ListActivitiesRequestPrivate(SfnRequest::ListActivitiesAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * ListActivitiesRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ListActivitiesRequestPrivate object for SFN \a action,
+ * Constructs a ListActivitiesRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 ListActivitiesRequestPrivate::ListActivitiesRequestPrivate(
-    const SFNRequest::Action action, ListActivitiesRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, ListActivitiesRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ ListActivitiesRequestPrivate::ListActivitiesRequestPrivate(
  */
 ListActivitiesRequestPrivate::ListActivitiesRequestPrivate(
     const ListActivitiesRequestPrivate &other, ListActivitiesRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

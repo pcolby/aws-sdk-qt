@@ -61,7 +61,7 @@ ListAttributesResponse::ListAttributesResponse(
         const ListAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new ListAttributesResponsePrivate(this), parent)
+    : EcsResponse(new ListAttributesResponsePrivate(this), parent)
 {
     setRequest(new ListAttributesRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void ListAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListAttributesResponsePrivate object with public implementation \a q.
  */
 ListAttributesResponsePrivate::ListAttributesResponsePrivate(
-    ListAttributesResponse * const q) : ECSResponsePrivate(q)
+    ListAttributesResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

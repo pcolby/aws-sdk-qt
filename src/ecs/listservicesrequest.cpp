@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
-    : ECSRequest(new ListServicesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new ListServicesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
  * Constructs a ListServicesRequest object.
  */
 ListServicesRequest::ListServicesRequest()
-    : ECSRequest(new ListServicesRequestPrivate(ECSRequest::ListServicesAction, this))
+    : EcsRequest(new ListServicesRequestPrivate(EcsRequest::ListServicesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * ListServicesRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ListServicesRequestPrivate object for ECS \a action,
+ * Constructs a ListServicesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 ListServicesRequestPrivate::ListServicesRequestPrivate(
-    const ECSRequest::Action action, ListServicesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, ListServicesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ ListServicesRequestPrivate::ListServicesRequestPrivate(
  */
 ListServicesRequestPrivate::ListServicesRequestPrivate(
     const ListServicesRequestPrivate &other, ListServicesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

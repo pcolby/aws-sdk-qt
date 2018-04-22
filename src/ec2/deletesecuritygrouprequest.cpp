@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteSecurityGroupRequest::DeleteSecurityGroupRequest(const DeleteSecurityGroupRequest &other)
-    : EC2Request(new DeleteSecurityGroupRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteSecurityGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteSecurityGroupRequest::DeleteSecurityGroupRequest(const DeleteSecurityGroup
  * Constructs a DeleteSecurityGroupRequest object.
  */
 DeleteSecurityGroupRequest::DeleteSecurityGroupRequest()
-    : EC2Request(new DeleteSecurityGroupRequestPrivate(EC2Request::DeleteSecurityGroupAction, this))
+    : Ec2Request(new DeleteSecurityGroupRequestPrivate(Ec2Request::DeleteSecurityGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityGroupRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeleteSecurityGroupRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteSecurityGroupRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
-    const EC2Request::Action action, DeleteSecurityGroupRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteSecurityGroupRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
  */
 DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
     const DeleteSecurityGroupRequestPrivate &other, DeleteSecurityGroupRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

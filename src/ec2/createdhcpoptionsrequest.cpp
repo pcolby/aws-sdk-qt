@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateDhcpOptionsRequest::CreateDhcpOptionsRequest(const CreateDhcpOptionsRequest &other)
-    : EC2Request(new CreateDhcpOptionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateDhcpOptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateDhcpOptionsRequest::CreateDhcpOptionsRequest(const CreateDhcpOptionsReques
  * Constructs a CreateDhcpOptionsRequest object.
  */
 CreateDhcpOptionsRequest::CreateDhcpOptionsRequest()
-    : EC2Request(new CreateDhcpOptionsRequestPrivate(EC2Request::CreateDhcpOptionsAction, this))
+    : Ec2Request(new CreateDhcpOptionsRequestPrivate(Ec2Request::CreateDhcpOptionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateDhcpOptionsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a CreateDhcpOptionsRequestPrivate object for EC2 \a action,
+ * Constructs a CreateDhcpOptionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateDhcpOptionsRequestPrivate::CreateDhcpOptionsRequestPrivate(
-    const EC2Request::Action action, CreateDhcpOptionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateDhcpOptionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateDhcpOptionsRequestPrivate::CreateDhcpOptionsRequestPrivate(
  */
 CreateDhcpOptionsRequestPrivate::CreateDhcpOptionsRequestPrivate(
     const CreateDhcpOptionsRequestPrivate &other, CreateDhcpOptionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

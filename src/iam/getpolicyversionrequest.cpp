@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetPolicyVersionRequest::GetPolicyVersionRequest(const GetPolicyVersionRequest &other)
-    : IAMRequest(new GetPolicyVersionRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetPolicyVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetPolicyVersionRequest::GetPolicyVersionRequest(const GetPolicyVersionRequest &
  * Constructs a GetPolicyVersionRequest object.
  */
 GetPolicyVersionRequest::GetPolicyVersionRequest()
-    : IAMRequest(new GetPolicyVersionRequestPrivate(IAMRequest::GetPolicyVersionAction, this))
+    : IamRequest(new GetPolicyVersionRequestPrivate(IamRequest::GetPolicyVersionAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetPolicyVersionRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a GetPolicyVersionRequestPrivate object for IAM \a action,
+ * Constructs a GetPolicyVersionRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
-    const IAMRequest::Action action, GetPolicyVersionRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetPolicyVersionRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
  */
 GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
     const GetPolicyVersionRequestPrivate &other, GetPolicyVersionRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

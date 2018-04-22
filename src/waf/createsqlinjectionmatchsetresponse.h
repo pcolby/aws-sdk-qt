@@ -28,7 +28,7 @@ namespace WAF {
 
 class CreateSqlInjectionMatchSetResponsePrivate;
 
-class QTAWS_EXPORT CreateSqlInjectionMatchSetResponse : public WAFResponse {
+class QTAWS_EXPORT CreateSqlInjectionMatchSetResponse : public WafResponse {
     Q_OBJECT
 
 public:

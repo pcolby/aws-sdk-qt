@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReleaseAddressRequest::ReleaseAddressRequest(const ReleaseAddressRequest &other)
-    : EC2Request(new ReleaseAddressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReleaseAddressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReleaseAddressRequest::ReleaseAddressRequest(const ReleaseAddressRequest &other)
  * Constructs a ReleaseAddressRequest object.
  */
 ReleaseAddressRequest::ReleaseAddressRequest()
-    : EC2Request(new ReleaseAddressRequestPrivate(EC2Request::ReleaseAddressAction, this))
+    : Ec2Request(new ReleaseAddressRequestPrivate(Ec2Request::ReleaseAddressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ReleaseAddressRequestPrivate object for EC2 \a action,
+ * Constructs a ReleaseAddressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
-    const EC2Request::Action action, ReleaseAddressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReleaseAddressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
     const ReleaseAddressRequestPrivate &other, ReleaseAddressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

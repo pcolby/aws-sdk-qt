@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &other)
-    : RDSRequest(new ModifyDBInstanceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &
  * Constructs a ModifyDBInstanceRequest object.
  */
 ModifyDBInstanceRequest::ModifyDBInstanceRequest()
-    : RDSRequest(new ModifyDBInstanceRequestPrivate(RDSRequest::ModifyDBInstanceAction, this))
+    : RdsRequest(new ModifyDBInstanceRequestPrivate(RdsRequest::ModifyDBInstanceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a ModifyDBInstanceRequestPrivate object for RDS \a action,
+ * Constructs a ModifyDBInstanceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
-    const RDSRequest::Action action, ModifyDBInstanceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyDBInstanceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const ModifyDBInstanceRequestPrivate &other, ModifyDBInstanceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

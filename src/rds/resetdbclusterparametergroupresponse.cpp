@@ -108,7 +108,7 @@ ResetDBClusterParameterGroupResponse::ResetDBClusterParameterGroupResponse(
         const ResetDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetDBClusterParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ResetDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupResponsePrivate(
-    ResetDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    ResetDBClusterParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

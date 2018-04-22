@@ -49,7 +49,7 @@ DeleteByteMatchSetResponse::DeleteByteMatchSetResponse(
         const DeleteByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteByteMatchSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteByteMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteByteMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteByteMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteByteMatchSetResponsePrivate::DeleteByteMatchSetResponsePrivate(
-    DeleteByteMatchSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteByteMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

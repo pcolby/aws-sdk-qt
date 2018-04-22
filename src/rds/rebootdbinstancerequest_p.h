@@ -28,10 +28,10 @@ namespace RDS {
 
 class RebootDBInstanceRequest;
 
-class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public RdsRequestPrivate {
 
 public:
-    RebootDBInstanceRequestPrivate(const RDSRequest::Action action,
+    RebootDBInstanceRequestPrivate(const RdsRequest::Action action,
                                    RebootDBInstanceRequest * const q);
     RebootDBInstanceRequestPrivate(const RebootDBInstanceRequestPrivate &other,
                                    RebootDBInstanceRequest * const q);

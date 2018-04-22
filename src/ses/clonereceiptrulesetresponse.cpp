@@ -55,7 +55,7 @@ CloneReceiptRuleSetResponse::CloneReceiptRuleSetResponse(
         const CloneReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CloneReceiptRuleSetResponsePrivate(this), parent)
+    : SesResponse(new CloneReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new CloneReceiptRuleSetRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
  * Constructs a CloneReceiptRuleSetResponsePrivate object with public implementation \a q.
  */
 CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
-    CloneReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
+    CloneReceiptRuleSetResponse * const q) : SesResponsePrivate(q)
 {
 
 }

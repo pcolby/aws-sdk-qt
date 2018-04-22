@@ -28,10 +28,10 @@ namespace IAM {
 
 class DeleteUserRequest;
 
-class QTAWS_EXPORT DeleteUserRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT DeleteUserRequestPrivate : public IamRequestPrivate {
 
 public:
-    DeleteUserRequestPrivate(const IAMRequest::Action action,
+    DeleteUserRequestPrivate(const IamRequest::Action action,
                                    DeleteUserRequest * const q);
     DeleteUserRequestPrivate(const DeleteUserRequestPrivate &other,
                                    DeleteUserRequest * const q);

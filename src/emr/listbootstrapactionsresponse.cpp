@@ -47,7 +47,7 @@ ListBootstrapActionsResponse::ListBootstrapActionsResponse(
         const ListBootstrapActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListBootstrapActionsResponsePrivate(this), parent)
+    : EmrResponse(new ListBootstrapActionsResponsePrivate(this), parent)
 {
     setRequest(new ListBootstrapActionsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListBootstrapActionsResponsePrivate object with public implementation \a q.
  */
 ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
-    ListBootstrapActionsResponse * const q) : EMRResponsePrivate(q)
+    ListBootstrapActionsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

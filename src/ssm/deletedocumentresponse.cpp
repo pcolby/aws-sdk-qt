@@ -68,7 +68,7 @@ DeleteDocumentResponse::DeleteDocumentResponse(
         const DeleteDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteDocumentResponsePrivate(this), parent)
+    : SsmResponse(new DeleteDocumentResponsePrivate(this), parent)
 {
     setRequest(new DeleteDocumentRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteDocumentResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDocumentResponsePrivate object with public implementation \a q.
  */
 DeleteDocumentResponsePrivate::DeleteDocumentResponsePrivate(
-    DeleteDocumentResponse * const q) : SSMResponsePrivate(q)
+    DeleteDocumentResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

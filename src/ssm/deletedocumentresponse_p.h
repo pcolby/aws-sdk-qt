@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteDocumentResponse;
 
-class QTAWS_EXPORT DeleteDocumentResponsePrivate : public SSMResponsePrivate {
+class QTAWS_EXPORT DeleteDocumentResponsePrivate : public SsmResponsePrivate {
     Q_OBJECT
 
 public:

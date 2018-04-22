@@ -68,7 +68,7 @@ DeleteMaintenanceWindowResponse::DeleteMaintenanceWindowResponse(
         const DeleteMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteMaintenanceWindowResponsePrivate(this), parent)
+    : SsmResponse(new DeleteMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new DeleteMaintenanceWindowRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteMaintenanceWindowResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
-    DeleteMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
+    DeleteMaintenanceWindowResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

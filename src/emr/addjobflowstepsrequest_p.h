@@ -28,10 +28,10 @@ namespace EMR {
 
 class AddJobFlowStepsRequest;
 
-class QTAWS_EXPORT AddJobFlowStepsRequestPrivate : public EMRRequestPrivate {
+class QTAWS_EXPORT AddJobFlowStepsRequestPrivate : public EmrRequestPrivate {
 
 public:
-    AddJobFlowStepsRequestPrivate(const EMRRequest::Action action,
+    AddJobFlowStepsRequestPrivate(const EmrRequest::Action action,
                                    AddJobFlowStepsRequest * const q);
     AddJobFlowStepsRequestPrivate(const AddJobFlowStepsRequestPrivate &other,
                                    AddJobFlowStepsRequest * const q);

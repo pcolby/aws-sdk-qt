@@ -49,7 +49,7 @@ GetChangeTokenResponse::GetChangeTokenResponse(
         const GetChangeTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetChangeTokenResponsePrivate(this), parent)
+    : WafResponse(new GetChangeTokenResponsePrivate(this), parent)
 {
     setRequest(new GetChangeTokenRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetChangeTokenResponse::parseSuccess(QIODevice &response)
  * Constructs a GetChangeTokenResponsePrivate object with public implementation \a q.
  */
 GetChangeTokenResponsePrivate::GetChangeTokenResponsePrivate(
-    GetChangeTokenResponse * const q) : WAFResponsePrivate(q)
+    GetChangeTokenResponse * const q) : WafResponsePrivate(q)
 {
 
 }

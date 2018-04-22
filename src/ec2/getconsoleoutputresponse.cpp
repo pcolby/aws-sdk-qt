@@ -48,7 +48,7 @@ GetConsoleOutputResponse::GetConsoleOutputResponse(
         const GetConsoleOutputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetConsoleOutputResponsePrivate(this), parent)
+    : Ec2Response(new GetConsoleOutputResponsePrivate(this), parent)
 {
     setRequest(new GetConsoleOutputRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetConsoleOutputResponse::parseSuccess(QIODevice &response)
  * Constructs a GetConsoleOutputResponsePrivate object with public implementation \a q.
  */
 GetConsoleOutputResponsePrivate::GetConsoleOutputResponsePrivate(
-    GetConsoleOutputResponse * const q) : EC2ResponsePrivate(q)
+    GetConsoleOutputResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

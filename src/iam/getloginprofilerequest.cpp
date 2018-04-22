@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetLoginProfileRequest::GetLoginProfileRequest(const GetLoginProfileRequest &other)
-    : IAMRequest(new GetLoginProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetLoginProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetLoginProfileRequest::GetLoginProfileRequest(const GetLoginProfileRequest &oth
  * Constructs a GetLoginProfileRequest object.
  */
 GetLoginProfileRequest::GetLoginProfileRequest()
-    : IAMRequest(new GetLoginProfileRequestPrivate(IAMRequest::GetLoginProfileAction, this))
+    : IamRequest(new GetLoginProfileRequestPrivate(IamRequest::GetLoginProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetLoginProfileRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetLoginProfileRequestPrivate object for IAM \a action,
+ * Constructs a GetLoginProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetLoginProfileRequestPrivate::GetLoginProfileRequestPrivate(
-    const IAMRequest::Action action, GetLoginProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetLoginProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetLoginProfileRequestPrivate::GetLoginProfileRequestPrivate(
  */
 GetLoginProfileRequestPrivate::GetLoginProfileRequestPrivate(
     const GetLoginProfileRequestPrivate &other, GetLoginProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

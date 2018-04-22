@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest(const CreateLaunchTemplateVersionRequest &other)
-    : EC2Request(new CreateLaunchTemplateVersionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateLaunchTemplateVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest(const Cre
  * Constructs a CreateLaunchTemplateVersionRequest object.
  */
 CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest()
-    : EC2Request(new CreateLaunchTemplateVersionRequestPrivate(EC2Request::CreateLaunchTemplateVersionAction, this))
+    : Ec2Request(new CreateLaunchTemplateVersionRequestPrivate(Ec2Request::CreateLaunchTemplateVersionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateLaunchTemplateVersionRequest::response(
  */
 
 /*!
- * Constructs a CreateLaunchTemplateVersionRequestPrivate object for EC2 \a action,
+ * Constructs a CreateLaunchTemplateVersionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPrivate(
-    const EC2Request::Action action, CreateLaunchTemplateVersionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateLaunchTemplateVersionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPri
  */
 CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPrivate(
     const CreateLaunchTemplateVersionRequestPrivate &other, CreateLaunchTemplateVersionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

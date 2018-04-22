@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVpcEndpointServiceConfigurationRequest::ModifyVpcEndpointServiceConfigurationRequest(const ModifyVpcEndpointServiceConfigurationRequest &other)
-    : EC2Request(new ModifyVpcEndpointServiceConfigurationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVpcEndpointServiceConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVpcEndpointServiceConfigurationRequest::ModifyVpcEndpointServiceConfigurat
  * Constructs a ModifyVpcEndpointServiceConfigurationRequest object.
  */
 ModifyVpcEndpointServiceConfigurationRequest::ModifyVpcEndpointServiceConfigurationRequest()
-    : EC2Request(new ModifyVpcEndpointServiceConfigurationRequestPrivate(EC2Request::ModifyVpcEndpointServiceConfigurationAction, this))
+    : Ec2Request(new ModifyVpcEndpointServiceConfigurationRequestPrivate(Ec2Request::ModifyVpcEndpointServiceConfigurationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServiceConfigurationRequest:
  */
 
 /*!
- * Constructs a ModifyVpcEndpointServiceConfigurationRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVpcEndpointServiceConfigurationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVpcEndpointServiceConfigurationRequestPrivate::ModifyVpcEndpointServiceConfigurationRequestPrivate(
-    const EC2Request::Action action, ModifyVpcEndpointServiceConfigurationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVpcEndpointServiceConfigurationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVpcEndpointServiceConfigurationRequestPrivate::ModifyVpcEndpointServiceCon
  */
 ModifyVpcEndpointServiceConfigurationRequestPrivate::ModifyVpcEndpointServiceConfigurationRequestPrivate(
     const ModifyVpcEndpointServiceConfigurationRequestPrivate &other, ModifyVpcEndpointServiceConfigurationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

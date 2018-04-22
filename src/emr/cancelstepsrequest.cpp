@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 CancelStepsRequest::CancelStepsRequest(const CancelStepsRequest &other)
-    : EMRRequest(new CancelStepsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new CancelStepsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ CancelStepsRequest::CancelStepsRequest(const CancelStepsRequest &other)
  * Constructs a CancelStepsRequest object.
  */
 CancelStepsRequest::CancelStepsRequest()
-    : EMRRequest(new CancelStepsRequestPrivate(EMRRequest::CancelStepsAction, this))
+    : EmrRequest(new CancelStepsRequestPrivate(EmrRequest::CancelStepsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CancelStepsRequestPrivate object for EMR \a action,
+ * Constructs a CancelStepsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
-    const EMRRequest::Action action, CancelStepsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, CancelStepsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ CancelStepsRequestPrivate::CancelStepsRequestPrivate(
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
     const CancelStepsRequestPrivate &other, CancelStepsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

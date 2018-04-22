@@ -53,7 +53,7 @@ UpdateCertificateOptionsResponse::UpdateCertificateOptionsResponse(
         const UpdateCertificateOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new UpdateCertificateOptionsResponsePrivate(this), parent)
+    : AcmResponse(new UpdateCertificateOptionsResponsePrivate(this), parent)
 {
     setRequest(new UpdateCertificateOptionsRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void UpdateCertificateOptionsResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateCertificateOptionsResponsePrivate object with public implementation \a q.
  */
 UpdateCertificateOptionsResponsePrivate::UpdateCertificateOptionsResponsePrivate(
-    UpdateCertificateOptionsResponse * const q) : ACMResponsePrivate(q)
+    UpdateCertificateOptionsResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

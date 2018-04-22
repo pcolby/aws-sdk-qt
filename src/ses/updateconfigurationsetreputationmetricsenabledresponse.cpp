@@ -55,7 +55,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetRe
         const UpdateConfigurationSetReputationMetricsEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(this), parent)
+    : SesResponse(new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationSetReputationMetricsEnabledRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODev
  * Constructs a UpdateConfigurationSetReputationMetricsEnabledResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(
-    UpdateConfigurationSetReputationMetricsEnabledResponse * const q) : SESResponsePrivate(q)
+    UpdateConfigurationSetReputationMetricsEnabledResponse * const q) : SesResponsePrivate(q)
 {
 
 }

@@ -50,7 +50,7 @@ PutPolicyResponse::PutPolicyResponse(
         const PutPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new PutPolicyResponsePrivate(this), parent)
+    : FmsResponse(new PutPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutPolicyRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void PutPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a PutPolicyResponsePrivate object with public implementation \a q.
  */
 PutPolicyResponsePrivate::PutPolicyResponsePrivate(
-    PutPolicyResponse * const q) : FMSResponsePrivate(q)
+    PutPolicyResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

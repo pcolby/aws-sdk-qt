@@ -55,7 +55,7 @@ DescribeActiveReceiptRuleSetResponse::DescribeActiveReceiptRuleSetResponse(
         const DescribeActiveReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DescribeActiveReceiptRuleSetResponsePrivate(this), parent)
+    : SesResponse(new DescribeActiveReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new DescribeActiveReceiptRuleSetRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DescribeActiveReceiptRuleSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeActiveReceiptRuleSetResponsePrivate object with public implementation \a q.
  */
 DescribeActiveReceiptRuleSetResponsePrivate::DescribeActiveReceiptRuleSetResponsePrivate(
-    DescribeActiveReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
+    DescribeActiveReceiptRuleSetResponse * const q) : SesResponsePrivate(q)
 {
 
 }

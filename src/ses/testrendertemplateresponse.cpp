@@ -55,7 +55,7 @@ TestRenderTemplateResponse::TestRenderTemplateResponse(
         const TestRenderTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new TestRenderTemplateResponsePrivate(this), parent)
+    : SesResponse(new TestRenderTemplateResponsePrivate(this), parent)
 {
     setRequest(new TestRenderTemplateRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
  * Constructs a TestRenderTemplateResponsePrivate object with public implementation \a q.
  */
 TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
-    TestRenderTemplateResponse * const q) : SESResponsePrivate(q)
+    TestRenderTemplateResponse * const q) : SesResponsePrivate(q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteLoginProfileRequest::DeleteLoginProfileRequest(const DeleteLoginProfileRequest &other)
-    : IAMRequest(new DeleteLoginProfileRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteLoginProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteLoginProfileRequest::DeleteLoginProfileRequest(const DeleteLoginProfileReq
  * Constructs a DeleteLoginProfileRequest object.
  */
 DeleteLoginProfileRequest::DeleteLoginProfileRequest()
-    : IAMRequest(new DeleteLoginProfileRequestPrivate(IAMRequest::DeleteLoginProfileAction, this))
+    : IamRequest(new DeleteLoginProfileRequestPrivate(IamRequest::DeleteLoginProfileAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteLoginProfileRequestPrivate object for IAM \a action,
+ * Constructs a DeleteLoginProfileRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
-    const IAMRequest::Action action, DeleteLoginProfileRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteLoginProfileRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
  */
 DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
     const DeleteLoginProfileRequestPrivate &other, DeleteLoginProfileRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

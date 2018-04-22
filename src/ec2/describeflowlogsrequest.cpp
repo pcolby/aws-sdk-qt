@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeFlowLogsRequest::DescribeFlowLogsRequest(const DescribeFlowLogsRequest &other)
-    : EC2Request(new DescribeFlowLogsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeFlowLogsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeFlowLogsRequest::DescribeFlowLogsRequest(const DescribeFlowLogsRequest &
  * Constructs a DescribeFlowLogsRequest object.
  */
 DescribeFlowLogsRequest::DescribeFlowLogsRequest()
-    : EC2Request(new DescribeFlowLogsRequestPrivate(EC2Request::DescribeFlowLogsAction, this))
+    : Ec2Request(new DescribeFlowLogsRequestPrivate(Ec2Request::DescribeFlowLogsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DescribeFlowLogsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeFlowLogsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
-    const EC2Request::Action action, DescribeFlowLogsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeFlowLogsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
     const DescribeFlowLogsRequestPrivate &other, DescribeFlowLogsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

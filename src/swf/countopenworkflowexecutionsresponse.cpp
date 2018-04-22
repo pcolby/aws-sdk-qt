@@ -60,7 +60,7 @@ CountOpenWorkflowExecutionsResponse::CountOpenWorkflowExecutionsResponse(
         const CountOpenWorkflowExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new CountOpenWorkflowExecutionsResponsePrivate(this), parent)
+    : SwfResponse(new CountOpenWorkflowExecutionsResponsePrivate(this), parent)
 {
     setRequest(new CountOpenWorkflowExecutionsRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void CountOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
  * Constructs a CountOpenWorkflowExecutionsResponsePrivate object with public implementation \a q.
  */
 CountOpenWorkflowExecutionsResponsePrivate::CountOpenWorkflowExecutionsResponsePrivate(
-    CountOpenWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
+    CountOpenWorkflowExecutionsResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

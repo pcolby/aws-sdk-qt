@@ -108,7 +108,7 @@ RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
         const RemoveRoleFromDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RemoveRoleFromDBClusterResponsePrivate(this), parent)
+    : RdsResponse(new RemoveRoleFromDBClusterResponsePrivate(this), parent)
 {
     setRequest(new RemoveRoleFromDBClusterRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveRoleFromDBClusterResponsePrivate object with public implementation \a q.
  */
 RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
-    RemoveRoleFromDBClusterResponse * const q) : RDSResponsePrivate(q)
+    RemoveRoleFromDBClusterResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

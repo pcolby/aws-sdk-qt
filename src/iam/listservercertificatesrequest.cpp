@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListServerCertificatesRequest::ListServerCertificatesRequest(const ListServerCertificatesRequest &other)
-    : IAMRequest(new ListServerCertificatesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListServerCertificatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListServerCertificatesRequest::ListServerCertificatesRequest(const ListServerCer
  * Constructs a ListServerCertificatesRequest object.
  */
 ListServerCertificatesRequest::ListServerCertificatesRequest()
-    : IAMRequest(new ListServerCertificatesRequestPrivate(IAMRequest::ListServerCertificatesAction, this))
+    : IamRequest(new ListServerCertificatesRequestPrivate(IamRequest::ListServerCertificatesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListServerCertificatesRequest::response(QNetw
  */
 
 /*!
- * Constructs a ListServerCertificatesRequestPrivate object for IAM \a action,
+ * Constructs a ListServerCertificatesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
-    const IAMRequest::Action action, ListServerCertificatesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListServerCertificatesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
  */
 ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
     const ListServerCertificatesRequestPrivate &other, ListServerCertificatesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

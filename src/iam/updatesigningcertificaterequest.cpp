@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateSigningCertificateRequest::UpdateSigningCertificateRequest(const UpdateSigningCertificateRequest &other)
-    : IAMRequest(new UpdateSigningCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateSigningCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateSigningCertificateRequest::UpdateSigningCertificateRequest(const UpdateSig
  * Constructs a UpdateSigningCertificateRequest object.
  */
 UpdateSigningCertificateRequest::UpdateSigningCertificateRequest()
-    : IAMRequest(new UpdateSigningCertificateRequestPrivate(IAMRequest::UpdateSigningCertificateAction, this))
+    : IamRequest(new UpdateSigningCertificateRequestPrivate(IamRequest::UpdateSigningCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateSigningCertificateRequest::response(QNe
  */
 
 /*!
- * Constructs a UpdateSigningCertificateRequestPrivate object for IAM \a action,
+ * Constructs a UpdateSigningCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
-    const IAMRequest::Action action, UpdateSigningCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateSigningCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
  */
 UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
     const UpdateSigningCertificateRequestPrivate &other, UpdateSigningCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

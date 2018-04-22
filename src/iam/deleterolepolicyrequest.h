@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteRolePolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteRolePolicyRequest : public IAMRequest {
+class QTAWS_EXPORT DeleteRolePolicyRequest : public IamRequest {
 
 public:
     DeleteRolePolicyRequest(const DeleteRolePolicyRequest &other);

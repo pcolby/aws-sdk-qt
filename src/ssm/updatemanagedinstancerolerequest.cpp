@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest(const UpdateManagedInstanceRoleRequest &other)
-    : SSMRequest(new UpdateManagedInstanceRoleRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new UpdateManagedInstanceRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest(const UpdateM
  * Constructs a UpdateManagedInstanceRoleRequest object.
  */
 UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest()
-    : SSMRequest(new UpdateManagedInstanceRoleRequestPrivate(SSMRequest::UpdateManagedInstanceRoleAction, this))
+    : SsmRequest(new UpdateManagedInstanceRoleRequestPrivate(SsmRequest::UpdateManagedInstanceRoleAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QN
  */
 
 /*!
- * Constructs a UpdateManagedInstanceRoleRequestPrivate object for SSM \a action,
+ * Constructs a UpdateManagedInstanceRoleRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
-    const SSMRequest::Action action, UpdateManagedInstanceRoleRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, UpdateManagedInstanceRoleRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
     const UpdateManagedInstanceRoleRequestPrivate &other, UpdateManagedInstanceRoleRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

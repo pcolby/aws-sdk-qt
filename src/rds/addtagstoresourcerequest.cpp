@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
-    : RDSRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceReques
  * Constructs a AddTagsToResourceRequest object.
  */
 AddTagsToResourceRequest::AddTagsToResourceRequest()
-    : RDSRequest(new AddTagsToResourceRequestPrivate(RDSRequest::AddTagsToResourceAction, this))
+    : RdsRequest(new AddTagsToResourceRequestPrivate(RdsRequest::AddTagsToResourceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a AddTagsToResourceRequestPrivate object for RDS \a action,
+ * Constructs a AddTagsToResourceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
-    const RDSRequest::Action action, AddTagsToResourceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, AddTagsToResourceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

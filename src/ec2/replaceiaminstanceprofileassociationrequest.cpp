@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociationRequest(const ReplaceIamInstanceProfileAssociationRequest &other)
-    : EC2Request(new ReplaceIamInstanceProfileAssociationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReplaceIamInstanceProfileAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociatio
  * Constructs a ReplaceIamInstanceProfileAssociationRequest object.
  */
 ReplaceIamInstanceProfileAssociationRequest::ReplaceIamInstanceProfileAssociationRequest()
-    : EC2Request(new ReplaceIamInstanceProfileAssociationRequestPrivate(EC2Request::ReplaceIamInstanceProfileAssociationAction, this))
+    : Ec2Request(new ReplaceIamInstanceProfileAssociationRequestPrivate(Ec2Request::ReplaceIamInstanceProfileAssociationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReplaceIamInstanceProfileAssociationRequest::
  */
 
 /*!
- * Constructs a ReplaceIamInstanceProfileAssociationRequestPrivate object for EC2 \a action,
+ * Constructs a ReplaceIamInstanceProfileAssociationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAssociationRequestPrivate(
-    const EC2Request::Action action, ReplaceIamInstanceProfileAssociationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReplaceIamInstanceProfileAssociationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAss
  */
 ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAssociationRequestPrivate(
     const ReplaceIamInstanceProfileAssociationRequestPrivate &other, ReplaceIamInstanceProfileAssociationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

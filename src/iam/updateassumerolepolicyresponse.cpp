@@ -109,7 +109,7 @@ UpdateAssumeRolePolicyResponse::UpdateAssumeRolePolicyResponse(
         const UpdateAssumeRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateAssumeRolePolicyResponsePrivate(this), parent)
+    : IamResponse(new UpdateAssumeRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new UpdateAssumeRolePolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateAssumeRolePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateAssumeRolePolicyResponsePrivate object with public implementation \a q.
  */
 UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponsePrivate(
-    UpdateAssumeRolePolicyResponse * const q) : IAMResponsePrivate(q)
+    UpdateAssumeRolePolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

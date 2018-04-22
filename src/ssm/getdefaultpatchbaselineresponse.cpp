@@ -68,7 +68,7 @@ GetDefaultPatchBaselineResponse::GetDefaultPatchBaselineResponse(
         const GetDefaultPatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetDefaultPatchBaselineResponsePrivate(this), parent)
+    : SsmResponse(new GetDefaultPatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new GetDefaultPatchBaselineRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetDefaultPatchBaselineResponse::parseSuccess(QIODevice &response)
  * Constructs a GetDefaultPatchBaselineResponsePrivate object with public implementation \a q.
  */
 GetDefaultPatchBaselineResponsePrivate::GetDefaultPatchBaselineResponsePrivate(
-    GetDefaultPatchBaselineResponse * const q) : SSMResponsePrivate(q)
+    GetDefaultPatchBaselineResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

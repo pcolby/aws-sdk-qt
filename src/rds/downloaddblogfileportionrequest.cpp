@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest(const DownloadDBLogFilePortionRequest &other)
-    : RDSRequest(new DownloadDBLogFilePortionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DownloadDBLogFilePortionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest(const DownloadD
  * Constructs a DownloadDBLogFilePortionRequest object.
  */
 DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest()
-    : RDSRequest(new DownloadDBLogFilePortionRequestPrivate(RDSRequest::DownloadDBLogFilePortionAction, this))
+    : RdsRequest(new DownloadDBLogFilePortionRequestPrivate(RdsRequest::DownloadDBLogFilePortionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNe
  */
 
 /*!
- * Constructs a DownloadDBLogFilePortionRequestPrivate object for RDS \a action,
+ * Constructs a DownloadDBLogFilePortionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
-    const RDSRequest::Action action, DownloadDBLogFilePortionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DownloadDBLogFilePortionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
     const DownloadDBLogFilePortionRequestPrivate &other, DownloadDBLogFilePortionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

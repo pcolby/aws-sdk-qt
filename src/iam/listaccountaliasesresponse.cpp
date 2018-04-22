@@ -109,7 +109,7 @@ ListAccountAliasesResponse::ListAccountAliasesResponse(
         const ListAccountAliasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListAccountAliasesResponsePrivate(this), parent)
+    : IamResponse(new ListAccountAliasesResponsePrivate(this), parent)
 {
     setRequest(new ListAccountAliasesRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListAccountAliasesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListAccountAliasesResponsePrivate object with public implementation \a q.
  */
 ListAccountAliasesResponsePrivate::ListAccountAliasesResponsePrivate(
-    ListAccountAliasesResponse * const q) : IAMResponsePrivate(q)
+    ListAccountAliasesResponse * const q) : IamResponsePrivate(q)
 {
 
 }

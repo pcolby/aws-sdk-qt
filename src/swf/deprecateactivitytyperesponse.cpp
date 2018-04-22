@@ -60,7 +60,7 @@ DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
         const DeprecateActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DeprecateActivityTypeResponsePrivate(this), parent)
+    : SwfResponse(new DeprecateActivityTypeResponsePrivate(this), parent)
 {
     setRequest(new DeprecateActivityTypeRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void DeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
  * Constructs a DeprecateActivityTypeResponsePrivate object with public implementation \a q.
  */
 DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
-    DeprecateActivityTypeResponse * const q) : SWFResponsePrivate(q)
+    DeprecateActivityTypeResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

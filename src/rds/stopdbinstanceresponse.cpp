@@ -108,7 +108,7 @@ StopDBInstanceResponse::StopDBInstanceResponse(
         const StopDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new StopDBInstanceResponsePrivate(this), parent)
+    : RdsResponse(new StopDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new StopDBInstanceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void StopDBInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a StopDBInstanceResponsePrivate object with public implementation \a q.
  */
 StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
-    StopDBInstanceResponse * const q) : RDSResponsePrivate(q)
+    StopDBInstanceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

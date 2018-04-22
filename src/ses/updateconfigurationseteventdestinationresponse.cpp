@@ -55,7 +55,7 @@ UpdateConfigurationSetEventDestinationResponse::UpdateConfigurationSetEventDesti
         const UpdateConfigurationSetEventDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateConfigurationSetEventDestinationResponsePrivate(this), parent)
+    : SesResponse(new UpdateConfigurationSetEventDestinationResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationSetEventDestinationRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
  * Constructs a UpdateConfigurationSetEventDestinationResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetEventDestinationResponsePrivate::UpdateConfigurationSetEventDestinationResponsePrivate(
-    UpdateConfigurationSetEventDestinationResponse * const q) : SESResponsePrivate(q)
+    UpdateConfigurationSetEventDestinationResponse * const q) : SesResponsePrivate(q)
 {
 
 }

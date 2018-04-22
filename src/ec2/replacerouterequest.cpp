@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReplaceRouteRequest::ReplaceRouteRequest(const ReplaceRouteRequest &other)
-    : EC2Request(new ReplaceRouteRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReplaceRouteRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReplaceRouteRequest::ReplaceRouteRequest(const ReplaceRouteRequest &other)
  * Constructs a ReplaceRouteRequest object.
  */
 ReplaceRouteRequest::ReplaceRouteRequest()
-    : EC2Request(new ReplaceRouteRequestPrivate(EC2Request::ReplaceRouteAction, this))
+    : Ec2Request(new ReplaceRouteRequestPrivate(Ec2Request::ReplaceRouteAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ReplaceRouteRequestPrivate object for EC2 \a action,
+ * Constructs a ReplaceRouteRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
-    const EC2Request::Action action, ReplaceRouteRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReplaceRouteRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
     const ReplaceRouteRequestPrivate &other, ReplaceRouteRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

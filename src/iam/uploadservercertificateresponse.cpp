@@ -109,7 +109,7 @@ UploadServerCertificateResponse::UploadServerCertificateResponse(
         const UploadServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UploadServerCertificateResponsePrivate(this), parent)
+    : IamResponse(new UploadServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new UploadServerCertificateRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UploadServerCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a UploadServerCertificateResponsePrivate object with public implementation \a q.
  */
 UploadServerCertificateResponsePrivate::UploadServerCertificateResponsePrivate(
-    UploadServerCertificateResponse * const q) : IAMResponsePrivate(q)
+    UploadServerCertificateResponse * const q) : IamResponsePrivate(q)
 {
 
 }

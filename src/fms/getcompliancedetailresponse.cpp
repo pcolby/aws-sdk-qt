@@ -50,7 +50,7 @@ GetComplianceDetailResponse::GetComplianceDetailResponse(
         const GetComplianceDetailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new GetComplianceDetailResponsePrivate(this), parent)
+    : FmsResponse(new GetComplianceDetailResponsePrivate(this), parent)
 {
     setRequest(new GetComplianceDetailRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void GetComplianceDetailResponse::parseSuccess(QIODevice &response)
  * Constructs a GetComplianceDetailResponsePrivate object with public implementation \a q.
  */
 GetComplianceDetailResponsePrivate::GetComplianceDetailResponsePrivate(
-    GetComplianceDetailResponse * const q) : FMSResponsePrivate(q)
+    GetComplianceDetailResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

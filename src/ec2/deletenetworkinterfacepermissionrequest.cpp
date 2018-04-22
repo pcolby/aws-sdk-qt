@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteNetworkInterfacePermissionRequest::DeleteNetworkInterfacePermissionRequest(const DeleteNetworkInterfacePermissionRequest &other)
-    : EC2Request(new DeleteNetworkInterfacePermissionRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteNetworkInterfacePermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteNetworkInterfacePermissionRequest::DeleteNetworkInterfacePermissionRequest
  * Constructs a DeleteNetworkInterfacePermissionRequest object.
  */
 DeleteNetworkInterfacePermissionRequest::DeleteNetworkInterfacePermissionRequest()
-    : EC2Request(new DeleteNetworkInterfacePermissionRequestPrivate(EC2Request::DeleteNetworkInterfacePermissionAction, this))
+    : Ec2Request(new DeleteNetworkInterfacePermissionRequestPrivate(Ec2Request::DeleteNetworkInterfacePermissionAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfacePermissionRequest::resp
  */
 
 /*!
- * Constructs a DeleteNetworkInterfacePermissionRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteNetworkInterfacePermissionRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteNetworkInterfacePermissionRequestPrivate::DeleteNetworkInterfacePermissionRequestPrivate(
-    const EC2Request::Action action, DeleteNetworkInterfacePermissionRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteNetworkInterfacePermissionRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteNetworkInterfacePermissionRequestPrivate::DeleteNetworkInterfacePermission
  */
 DeleteNetworkInterfacePermissionRequestPrivate::DeleteNetworkInterfacePermissionRequestPrivate(
     const DeleteNetworkInterfacePermissionRequestPrivate &other, DeleteNetworkInterfacePermissionRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

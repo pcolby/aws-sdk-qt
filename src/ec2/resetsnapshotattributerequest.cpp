@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest(const ResetSnapshotAttributeRequest &other)
-    : EC2Request(new ResetSnapshotAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ResetSnapshotAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest(const ResetSnapshot
  * Constructs a ResetSnapshotAttributeRequest object.
  */
 ResetSnapshotAttributeRequest::ResetSnapshotAttributeRequest()
-    : EC2Request(new ResetSnapshotAttributeRequestPrivate(EC2Request::ResetSnapshotAttributeAction, this))
+    : Ec2Request(new ResetSnapshotAttributeRequestPrivate(Ec2Request::ResetSnapshotAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetw
  */
 
 /*!
- * Constructs a ResetSnapshotAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ResetSnapshotAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
-    const EC2Request::Action action, ResetSnapshotAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ResetSnapshotAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
     const ResetSnapshotAttributeRequestPrivate &other, ResetSnapshotAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

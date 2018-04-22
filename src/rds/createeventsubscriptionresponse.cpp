@@ -108,7 +108,7 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
         const CreateEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateEventSubscriptionResponsePrivate(this), parent)
+    : RdsResponse(new CreateEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateEventSubscriptionRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
-    CreateEventSubscriptionResponse * const q) : RDSResponsePrivate(q)
+    CreateEventSubscriptionResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

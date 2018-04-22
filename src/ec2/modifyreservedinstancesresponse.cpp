@@ -48,7 +48,7 @@ ModifyReservedInstancesResponse::ModifyReservedInstancesResponse(
         const ModifyReservedInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyReservedInstancesResponsePrivate(this), parent)
+    : Ec2Response(new ModifyReservedInstancesResponsePrivate(this), parent)
 {
     setRequest(new ModifyReservedInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyReservedInstancesResponsePrivate object with public implementation \a q.
  */
 ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
-    ModifyReservedInstancesResponse * const q) : EC2ResponsePrivate(q)
+    ModifyReservedInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -28,7 +28,7 @@ namespace MQ {
 
 class CreateBrokerResponsePrivate;
 
-class QTAWS_EXPORT CreateBrokerResponse : public MQResponse {
+class QTAWS_EXPORT CreateBrokerResponse : public MqResponse {
     Q_OBJECT
 
 public:

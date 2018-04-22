@@ -55,7 +55,7 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
         const DeleteConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
+    : SesResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteConfigurationSetResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
-    DeleteConfigurationSetResponse * const q) : SESResponsePrivate(q)
+    DeleteConfigurationSetResponse * const q) : SesResponsePrivate(q)
 {
 
 }

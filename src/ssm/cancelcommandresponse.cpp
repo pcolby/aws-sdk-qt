@@ -68,7 +68,7 @@ CancelCommandResponse::CancelCommandResponse(
         const CancelCommandRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CancelCommandResponsePrivate(this), parent)
+    : SsmResponse(new CancelCommandResponsePrivate(this), parent)
 {
     setRequest(new CancelCommandRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void CancelCommandResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelCommandResponsePrivate object with public implementation \a q.
  */
 CancelCommandResponsePrivate::CancelCommandResponsePrivate(
-    CancelCommandResponse * const q) : SSMResponsePrivate(q)
+    CancelCommandResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

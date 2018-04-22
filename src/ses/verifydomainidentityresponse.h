@@ -28,7 +28,7 @@ namespace SES {
 
 class VerifyDomainIdentityResponsePrivate;
 
-class QTAWS_EXPORT VerifyDomainIdentityResponse : public SESResponse {
+class QTAWS_EXPORT VerifyDomainIdentityResponse : public SesResponse {
     Q_OBJECT
 
 public:

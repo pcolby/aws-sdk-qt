@@ -28,10 +28,10 @@ namespace SSM {
 
 class RegisterTargetWithMaintenanceWindowRequest;
 
-class QTAWS_EXPORT RegisterTargetWithMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT RegisterTargetWithMaintenanceWindowRequestPrivate : public SsmRequestPrivate {
 
 public:
-    RegisterTargetWithMaintenanceWindowRequestPrivate(const SSMRequest::Action action,
+    RegisterTargetWithMaintenanceWindowRequestPrivate(const SsmRequest::Action action,
                                    RegisterTargetWithMaintenanceWindowRequest * const q);
     RegisterTargetWithMaintenanceWindowRequestPrivate(const RegisterTargetWithMaintenanceWindowRequestPrivate &other,
                                    RegisterTargetWithMaintenanceWindowRequest * const q);

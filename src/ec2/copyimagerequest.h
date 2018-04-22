@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CopyImageRequestPrivate;
 
-class QTAWS_EXPORT CopyImageRequest : public EC2Request {
+class QTAWS_EXPORT CopyImageRequest : public Ec2Request {
 
 public:
     CopyImageRequest(const CopyImageRequest &other);

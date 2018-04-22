@@ -48,7 +48,7 @@ DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermiss
         const DescribeVpcEndpointServicePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpcEndpointServicePermissionsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeVpcEndpointServicePermissionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcEndpointServicePermissionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &resp
  * Constructs a DescribeVpcEndpointServicePermissionsResponsePrivate object with public implementation \a q.
  */
 DescribeVpcEndpointServicePermissionsResponsePrivate::DescribeVpcEndpointServicePermissionsResponsePrivate(
-    DescribeVpcEndpointServicePermissionsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeVpcEndpointServicePermissionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 PutPolicyRequest::PutPolicyRequest(const PutPolicyRequest &other)
-    : FMSRequest(new PutPolicyRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new PutPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ PutPolicyRequest::PutPolicyRequest(const PutPolicyRequest &other)
  * Constructs a PutPolicyRequest object.
  */
 PutPolicyRequest::PutPolicyRequest()
-    : FMSRequest(new PutPolicyRequestPrivate(FMSRequest::PutPolicyAction, this))
+    : FmsRequest(new PutPolicyRequestPrivate(FmsRequest::PutPolicyAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * PutPolicyRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a PutPolicyRequestPrivate object for FMS \a action,
+ * Constructs a PutPolicyRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 PutPolicyRequestPrivate::PutPolicyRequestPrivate(
-    const FMSRequest::Action action, PutPolicyRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, PutPolicyRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ PutPolicyRequestPrivate::PutPolicyRequestPrivate(
  */
 PutPolicyRequestPrivate::PutPolicyRequestPrivate(
     const PutPolicyRequestPrivate &other, PutPolicyRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

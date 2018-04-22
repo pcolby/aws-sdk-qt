@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest(const ModifyMountTargetSecurityGroupsRequest &other)
-    : EFSRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest(c
  * Constructs a ModifyMountTargetSecurityGroupsRequest object.
  */
 ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest()
-    : EFSRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(EFSRequest::ModifyMountTargetSecurityGroupsAction, this))
+    : EfsRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(EfsRequest::ModifyMountTargetSecurityGroupsAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::respo
  */
 
 /*!
- * Constructs a ModifyMountTargetSecurityGroupsRequestPrivate object for EFS \a action,
+ * Constructs a ModifyMountTargetSecurityGroupsRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
-    const EFSRequest::Action action, ModifyMountTargetSecurityGroupsRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, ModifyMountTargetSecurityGroupsRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRe
  */
 ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
     const ModifyMountTargetSecurityGroupsRequestPrivate &other, ModifyMountTargetSecurityGroupsRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

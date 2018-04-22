@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 ModifyOptionGroupRequest::ModifyOptionGroupRequest(const ModifyOptionGroupRequest &other)
-    : RDSRequest(new ModifyOptionGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new ModifyOptionGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ ModifyOptionGroupRequest::ModifyOptionGroupRequest(const ModifyOptionGroupReques
  * Constructs a ModifyOptionGroupRequest object.
  */
 ModifyOptionGroupRequest::ModifyOptionGroupRequest()
-    : RDSRequest(new ModifyOptionGroupRequestPrivate(RDSRequest::ModifyOptionGroupAction, this))
+    : RdsRequest(new ModifyOptionGroupRequestPrivate(RdsRequest::ModifyOptionGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ModifyOptionGroupRequestPrivate object for RDS \a action,
+ * Constructs a ModifyOptionGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
-    const RDSRequest::Action action, ModifyOptionGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, ModifyOptionGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
  */
 ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
     const ModifyOptionGroupRequestPrivate &other, ModifyOptionGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

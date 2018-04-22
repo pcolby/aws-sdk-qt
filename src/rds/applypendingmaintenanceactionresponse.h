@@ -28,7 +28,7 @@ namespace RDS {
 
 class ApplyPendingMaintenanceActionResponsePrivate;
 
-class QTAWS_EXPORT ApplyPendingMaintenanceActionResponse : public RDSResponse {
+class QTAWS_EXPORT ApplyPendingMaintenanceActionResponse : public RdsResponse {
     Q_OBJECT
 
 public:

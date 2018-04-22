@@ -28,10 +28,10 @@ namespace EC2 {
 
 class AssociateSubnetCidrBlockRequest;
 
-class QTAWS_EXPORT AssociateSubnetCidrBlockRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT AssociateSubnetCidrBlockRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    AssociateSubnetCidrBlockRequestPrivate(const EC2Request::Action action,
+    AssociateSubnetCidrBlockRequestPrivate(const Ec2Request::Action action,
                                    AssociateSubnetCidrBlockRequest * const q);
     AssociateSubnetCidrBlockRequestPrivate(const AssociateSubnetCidrBlockRequestPrivate &other,
                                    AssociateSubnetCidrBlockRequest * const q);

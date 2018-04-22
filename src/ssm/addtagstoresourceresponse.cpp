@@ -68,7 +68,7 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
         const AddTagsToResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new AddTagsToResourceResponsePrivate(this), parent)
+    : SsmResponse(new AddTagsToResourceResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToResourceRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
  * Constructs a AddTagsToResourceResponsePrivate object with public implementation \a q.
  */
 AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
-    AddTagsToResourceResponse * const q) : SSMResponsePrivate(q)
+    AddTagsToResourceResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

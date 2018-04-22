@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 UpdateContainerAgentRequest::UpdateContainerAgentRequest(const UpdateContainerAgentRequest &other)
-    : ECSRequest(new UpdateContainerAgentRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new UpdateContainerAgentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ UpdateContainerAgentRequest::UpdateContainerAgentRequest(const UpdateContainerAg
  * Constructs a UpdateContainerAgentRequest object.
  */
 UpdateContainerAgentRequest::UpdateContainerAgentRequest()
-    : ECSRequest(new UpdateContainerAgentRequestPrivate(ECSRequest::UpdateContainerAgentAction, this))
+    : EcsRequest(new UpdateContainerAgentRequestPrivate(EcsRequest::UpdateContainerAgentAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetwor
  */
 
 /*!
- * Constructs a UpdateContainerAgentRequestPrivate object for ECS \a action,
+ * Constructs a UpdateContainerAgentRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
-    const ECSRequest::Action action, UpdateContainerAgentRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, UpdateContainerAgentRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
     const UpdateContainerAgentRequestPrivate &other, UpdateContainerAgentRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

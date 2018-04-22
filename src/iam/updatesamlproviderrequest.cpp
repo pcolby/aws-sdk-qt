@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateSAMLProviderRequest::UpdateSAMLProviderRequest(const UpdateSAMLProviderRequest &other)
-    : IAMRequest(new UpdateSAMLProviderRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateSAMLProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateSAMLProviderRequest::UpdateSAMLProviderRequest(const UpdateSAMLProviderReq
  * Constructs a UpdateSAMLProviderRequest object.
  */
 UpdateSAMLProviderRequest::UpdateSAMLProviderRequest()
-    : IAMRequest(new UpdateSAMLProviderRequestPrivate(IAMRequest::UpdateSAMLProviderAction, this))
+    : IamRequest(new UpdateSAMLProviderRequestPrivate(IamRequest::UpdateSAMLProviderAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateSAMLProviderRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UpdateSAMLProviderRequestPrivate object for IAM \a action,
+ * Constructs a UpdateSAMLProviderRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
-    const IAMRequest::Action action, UpdateSAMLProviderRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateSAMLProviderRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
  */
 UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
     const UpdateSAMLProviderRequestPrivate &other, UpdateSAMLProviderRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

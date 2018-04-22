@@ -27,7 +27,7 @@ namespace ACM {
 
 class ResendValidationEmailRequestPrivate;
 
-class QTAWS_EXPORT ResendValidationEmailRequest : public ACMRequest {
+class QTAWS_EXPORT ResendValidationEmailRequest : public AcmRequest {
 
 public:
     ResendValidationEmailRequest(const ResendValidationEmailRequest &other);

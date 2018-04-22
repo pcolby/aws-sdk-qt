@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest(const ModifyDocumentPermissionRequest &other)
-    : SSMRequest(new ModifyDocumentPermissionRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ModifyDocumentPermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest(const ModifyDoc
  * Constructs a ModifyDocumentPermissionRequest object.
  */
 ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest()
-    : SSMRequest(new ModifyDocumentPermissionRequestPrivate(SSMRequest::ModifyDocumentPermissionAction, this))
+    : SsmRequest(new ModifyDocumentPermissionRequestPrivate(SsmRequest::ModifyDocumentPermissionAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNe
  */
 
 /*!
- * Constructs a ModifyDocumentPermissionRequestPrivate object for SSM \a action,
+ * Constructs a ModifyDocumentPermissionRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
-    const SSMRequest::Action action, ModifyDocumentPermissionRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ModifyDocumentPermissionRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
     const ModifyDocumentPermissionRequestPrivate &other, ModifyDocumentPermissionRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

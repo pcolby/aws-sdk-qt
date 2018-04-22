@@ -28,10 +28,10 @@ namespace KMS {
 
 class GetKeyRotationStatusRequest;
 
-class QTAWS_EXPORT GetKeyRotationStatusRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT GetKeyRotationStatusRequestPrivate : public KmsRequestPrivate {
 
 public:
-    GetKeyRotationStatusRequestPrivate(const KMSRequest::Action action,
+    GetKeyRotationStatusRequestPrivate(const KmsRequest::Action action,
                                    GetKeyRotationStatusRequest * const q);
     GetKeyRotationStatusRequestPrivate(const GetKeyRotationStatusRequestPrivate &other,
                                    GetKeyRotationStatusRequest * const q);

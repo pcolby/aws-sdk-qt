@@ -28,7 +28,7 @@ namespace ECS {
 
 class SubmitContainerStateChangeResponsePrivate;
 
-class QTAWS_EXPORT SubmitContainerStateChangeResponse : public ECSResponse {
+class QTAWS_EXPORT SubmitContainerStateChangeResponse : public EcsResponse {
     Q_OBJECT
 
 public:

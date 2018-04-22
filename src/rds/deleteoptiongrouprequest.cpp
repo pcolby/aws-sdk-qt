@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DeleteOptionGroupRequest::DeleteOptionGroupRequest(const DeleteOptionGroupRequest &other)
-    : RDSRequest(new DeleteOptionGroupRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DeleteOptionGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DeleteOptionGroupRequest::DeleteOptionGroupRequest(const DeleteOptionGroupReques
  * Constructs a DeleteOptionGroupRequest object.
  */
 DeleteOptionGroupRequest::DeleteOptionGroupRequest()
-    : RDSRequest(new DeleteOptionGroupRequestPrivate(RDSRequest::DeleteOptionGroupAction, this))
+    : RdsRequest(new DeleteOptionGroupRequestPrivate(RdsRequest::DeleteOptionGroupAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteOptionGroupRequestPrivate object for RDS \a action,
+ * Constructs a DeleteOptionGroupRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
-    const RDSRequest::Action action, DeleteOptionGroupRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DeleteOptionGroupRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
     const DeleteOptionGroupRequestPrivate &other, DeleteOptionGroupRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

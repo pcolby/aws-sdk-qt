@@ -28,10 +28,10 @@ namespace ACM {
 
 class ExportCertificateRequest;
 
-class QTAWS_EXPORT ExportCertificateRequestPrivate : public ACMRequestPrivate {
+class QTAWS_EXPORT ExportCertificateRequestPrivate : public AcmRequestPrivate {
 
 public:
-    ExportCertificateRequestPrivate(const ACMRequest::Action action,
+    ExportCertificateRequestPrivate(const AcmRequest::Action action,
                                    ExportCertificateRequest * const q);
     ExportCertificateRequestPrivate(const ExportCertificateRequestPrivate &other,
                                    ExportCertificateRequest * const q);

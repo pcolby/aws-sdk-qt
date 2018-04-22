@@ -49,7 +49,7 @@ GetRuleGroupResponse::GetRuleGroupResponse(
         const GetRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetRuleGroupResponsePrivate(this), parent)
+    : WafResponse(new GetRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new GetRuleGroupRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void GetRuleGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a GetRuleGroupResponsePrivate object with public implementation \a q.
  */
 GetRuleGroupResponsePrivate::GetRuleGroupResponsePrivate(
-    GetRuleGroupResponse * const q) : WAFResponsePrivate(q)
+    GetRuleGroupResponse * const q) : WafResponsePrivate(q)
 {
 
 }

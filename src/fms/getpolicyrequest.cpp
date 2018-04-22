@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
-    : FMSRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
  * Constructs a GetPolicyRequest object.
  */
 GetPolicyRequest::GetPolicyRequest()
-    : FMSRequest(new GetPolicyRequestPrivate(FMSRequest::GetPolicyAction, this))
+    : FmsRequest(new GetPolicyRequestPrivate(FmsRequest::GetPolicyAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a GetPolicyRequestPrivate object for FMS \a action,
+ * Constructs a GetPolicyRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
-    const FMSRequest::Action action, GetPolicyRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, GetPolicyRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const GetPolicyRequestPrivate &other, GetPolicyRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

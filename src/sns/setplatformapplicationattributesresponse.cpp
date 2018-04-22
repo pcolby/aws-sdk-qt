@@ -58,7 +58,7 @@ SetPlatformApplicationAttributesResponse::SetPlatformApplicationAttributesRespon
         const SetPlatformApplicationAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SetPlatformApplicationAttributesResponsePrivate(this), parent)
+    : SnsResponse(new SetPlatformApplicationAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetPlatformApplicationAttributesRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void SetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a SetPlatformApplicationAttributesResponsePrivate object with public implementation \a q.
  */
 SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttributesResponsePrivate(
-    SetPlatformApplicationAttributesResponse * const q) : SNSResponsePrivate(q)
+    SetPlatformApplicationAttributesResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

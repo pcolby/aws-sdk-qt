@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest(const ListConfigurationRevisionsRequest &other)
-    : MQRequest(new ListConfigurationRevisionsRequestPrivate(*other.d_func(), this))
+    : MqRequest(new ListConfigurationRevisionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest(const ListC
  * Constructs a ListConfigurationRevisionsRequest object.
  */
 ListConfigurationRevisionsRequest::ListConfigurationRevisionsRequest()
-    : MQRequest(new ListConfigurationRevisionsRequestPrivate(MQRequest::ListConfigurationRevisionsAction, this))
+    : MqRequest(new ListConfigurationRevisionsRequestPrivate(MqRequest::ListConfigurationRevisionsAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
  */
 
 /*!
- * Constructs a ListConfigurationRevisionsRequestPrivate object for MQ \a action,
+ * Constructs a ListConfigurationRevisionsRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
-    const MQRequest::Action action, ListConfigurationRevisionsRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, ListConfigurationRevisionsRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPriva
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
     const ListConfigurationRevisionsRequestPrivate &other, ListConfigurationRevisionsRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

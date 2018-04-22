@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeNetworkInterfaceAttributeRequest::DescribeNetworkInterfaceAttributeRequest(const DescribeNetworkInterfaceAttributeRequest &other)
-    : EC2Request(new DescribeNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeNetworkInterfaceAttributeRequest::DescribeNetworkInterfaceAttributeReque
  * Constructs a DescribeNetworkInterfaceAttributeRequest object.
  */
 DescribeNetworkInterfaceAttributeRequest::DescribeNetworkInterfaceAttributeRequest()
-    : EC2Request(new DescribeNetworkInterfaceAttributeRequestPrivate(EC2Request::DescribeNetworkInterfaceAttributeAction, this))
+    : Ec2Request(new DescribeNetworkInterfaceAttributeRequestPrivate(Ec2Request::DescribeNetworkInterfaceAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfaceAttributeRequest::res
  */
 
 /*!
- * Constructs a DescribeNetworkInterfaceAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeNetworkInterfaceAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeNetworkInterfaceAttributeRequestPrivate::DescribeNetworkInterfaceAttributeRequestPrivate(
-    const EC2Request::Action action, DescribeNetworkInterfaceAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeNetworkInterfaceAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeNetworkInterfaceAttributeRequestPrivate::DescribeNetworkInterfaceAttribu
  */
 DescribeNetworkInterfaceAttributeRequestPrivate::DescribeNetworkInterfaceAttributeRequestPrivate(
     const DescribeNetworkInterfaceAttributeRequestPrivate &other, DescribeNetworkInterfaceAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

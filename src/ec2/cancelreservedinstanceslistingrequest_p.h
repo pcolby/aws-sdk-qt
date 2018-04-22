@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CancelReservedInstancesListingRequest;
 
-class QTAWS_EXPORT CancelReservedInstancesListingRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CancelReservedInstancesListingRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CancelReservedInstancesListingRequestPrivate(const EC2Request::Action action,
+    CancelReservedInstancesListingRequestPrivate(const Ec2Request::Action action,
                                    CancelReservedInstancesListingRequest * const q);
     CancelReservedInstancesListingRequestPrivate(const CancelReservedInstancesListingRequestPrivate &other,
                                    CancelReservedInstancesListingRequest * const q);

@@ -48,7 +48,7 @@ GetConsoleScreenshotResponse::GetConsoleScreenshotResponse(
         const GetConsoleScreenshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetConsoleScreenshotResponsePrivate(this), parent)
+    : Ec2Response(new GetConsoleScreenshotResponsePrivate(this), parent)
 {
     setRequest(new GetConsoleScreenshotRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
  * Constructs a GetConsoleScreenshotResponsePrivate object with public implementation \a q.
  */
 GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
-    GetConsoleScreenshotResponse * const q) : EC2ResponsePrivate(q)
+    GetConsoleScreenshotResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

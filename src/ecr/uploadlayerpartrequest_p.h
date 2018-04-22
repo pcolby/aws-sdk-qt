@@ -28,10 +28,10 @@ namespace ECR {
 
 class UploadLayerPartRequest;
 
-class QTAWS_EXPORT UploadLayerPartRequestPrivate : public ECRRequestPrivate {
+class QTAWS_EXPORT UploadLayerPartRequestPrivate : public EcrRequestPrivate {
 
 public:
-    UploadLayerPartRequestPrivate(const ECRRequest::Action action,
+    UploadLayerPartRequestPrivate(const EcrRequest::Action action,
                                    UploadLayerPartRequest * const q);
     UploadLayerPartRequestPrivate(const UploadLayerPartRequestPrivate &other,
                                    UploadLayerPartRequest * const q);

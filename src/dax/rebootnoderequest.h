@@ -27,7 +27,7 @@ namespace DAX {
 
 class RebootNodeRequestPrivate;
 
-class QTAWS_EXPORT RebootNodeRequest : public DAXRequest {
+class QTAWS_EXPORT RebootNodeRequest : public DaxRequest {
 
 public:
     RebootNodeRequest(const RebootNodeRequest &other);

@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
-    : EMRRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new RemoveTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
  * Constructs a RemoveTagsRequest object.
  */
 RemoveTagsRequest::RemoveTagsRequest()
-    : EMRRequest(new RemoveTagsRequestPrivate(EMRRequest::RemoveTagsAction, this))
+    : EmrRequest(new RemoveTagsRequestPrivate(EmrRequest::RemoveTagsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a RemoveTagsRequestPrivate object for EMR \a action,
+ * Constructs a RemoveTagsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
-    const EMRRequest::Action action, RemoveTagsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, RemoveTagsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

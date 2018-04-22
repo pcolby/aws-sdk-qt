@@ -48,7 +48,7 @@ CancelConversionTaskResponse::CancelConversionTaskResponse(
         const CancelConversionTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelConversionTaskResponsePrivate(this), parent)
+    : Ec2Response(new CancelConversionTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelConversionTaskRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CancelConversionTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelConversionTaskResponsePrivate object with public implementation \a q.
  */
 CancelConversionTaskResponsePrivate::CancelConversionTaskResponsePrivate(
-    CancelConversionTaskResponse * const q) : EC2ResponsePrivate(q)
+    CancelConversionTaskResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

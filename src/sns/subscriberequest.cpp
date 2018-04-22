@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
-    : SNSRequest(new SubscribeRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new SubscribeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
  * Constructs a SubscribeRequest object.
  */
 SubscribeRequest::SubscribeRequest()
-    : SNSRequest(new SubscribeRequestPrivate(SNSRequest::SubscribeAction, this))
+    : SnsRequest(new SubscribeRequestPrivate(SnsRequest::SubscribeAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a SubscribeRequestPrivate object for SNS \a action,
+ * Constructs a SubscribeRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
-    const SNSRequest::Action action, SubscribeRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, SubscribeRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ SubscribeRequestPrivate::SubscribeRequestPrivate(
  */
 SubscribeRequestPrivate::SubscribeRequestPrivate(
     const SubscribeRequestPrivate &other, SubscribeRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

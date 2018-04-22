@@ -48,7 +48,7 @@ DetachVolumeResponse::DetachVolumeResponse(
         const DetachVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachVolumeResponsePrivate(this), parent)
+    : Ec2Response(new DetachVolumeResponsePrivate(this), parent)
 {
     setRequest(new DetachVolumeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DetachVolumeResponse::parseSuccess(QIODevice &response)
  * Constructs a DetachVolumeResponsePrivate object with public implementation \a q.
  */
 DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
-    DetachVolumeResponse * const q) : EC2ResponsePrivate(q)
+    DetachVolumeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -58,7 +58,7 @@ PublishResponse::PublishResponse(
         const PublishRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new PublishResponsePrivate(this), parent)
+    : SnsResponse(new PublishResponsePrivate(this), parent)
 {
     setRequest(new PublishRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void PublishResponse::parseSuccess(QIODevice &response)
  * Constructs a PublishResponsePrivate object with public implementation \a q.
  */
 PublishResponsePrivate::PublishResponsePrivate(
-    PublishResponse * const q) : SNSResponsePrivate(q)
+    PublishResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

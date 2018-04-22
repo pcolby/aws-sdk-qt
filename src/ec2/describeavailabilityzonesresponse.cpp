@@ -48,7 +48,7 @@ DescribeAvailabilityZonesResponse::DescribeAvailabilityZonesResponse(
         const DescribeAvailabilityZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeAvailabilityZonesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeAvailabilityZonesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAvailabilityZonesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeAvailabilityZonesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeAvailabilityZonesResponsePrivate object with public implementation \a q.
  */
 DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePrivate(
-    DescribeAvailabilityZonesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeAvailabilityZonesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 RegisterTaskWithMaintenanceWindowRequest::RegisterTaskWithMaintenanceWindowRequest(const RegisterTaskWithMaintenanceWindowRequest &other)
-    : SSMRequest(new RegisterTaskWithMaintenanceWindowRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new RegisterTaskWithMaintenanceWindowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ RegisterTaskWithMaintenanceWindowRequest::RegisterTaskWithMaintenanceWindowReque
  * Constructs a RegisterTaskWithMaintenanceWindowRequest object.
  */
 RegisterTaskWithMaintenanceWindowRequest::RegisterTaskWithMaintenanceWindowRequest()
-    : SSMRequest(new RegisterTaskWithMaintenanceWindowRequestPrivate(SSMRequest::RegisterTaskWithMaintenanceWindowAction, this))
+    : SsmRequest(new RegisterTaskWithMaintenanceWindowRequestPrivate(SsmRequest::RegisterTaskWithMaintenanceWindowAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * RegisterTaskWithMaintenanceWindowRequest::res
  */
 
 /*!
- * Constructs a RegisterTaskWithMaintenanceWindowRequestPrivate object for SSM \a action,
+ * Constructs a RegisterTaskWithMaintenanceWindowRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWindowRequestPrivate(
-    const SSMRequest::Action action, RegisterTaskWithMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, RegisterTaskWithMaintenanceWindowRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWind
  */
 RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWindowRequestPrivate(
     const RegisterTaskWithMaintenanceWindowRequestPrivate &other, RegisterTaskWithMaintenanceWindowRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

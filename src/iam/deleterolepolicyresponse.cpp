@@ -109,7 +109,7 @@ DeleteRolePolicyResponse::DeleteRolePolicyResponse(
         const DeleteRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteRolePolicyResponsePrivate(this), parent)
+    : IamResponse(new DeleteRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteRolePolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteRolePolicyResponsePrivate object with public implementation \a q.
  */
 DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponsePrivate(
-    DeleteRolePolicyResponse * const q) : IAMResponsePrivate(q)
+    DeleteRolePolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

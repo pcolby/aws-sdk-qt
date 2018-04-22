@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscriptionRequest(const RemoveSourceIdentifierFromSubscriptionRequest &other)
-    : RDSRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscri
  * Constructs a RemoveSourceIdentifierFromSubscriptionRequest object.
  */
 RemoveSourceIdentifierFromSubscriptionRequest::RemoveSourceIdentifierFromSubscriptionRequest()
-    : RDSRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(RDSRequest::RemoveSourceIdentifierFromSubscriptionAction, this))
+    : RdsRequest(new RemoveSourceIdentifierFromSubscriptionRequestPrivate(RdsRequest::RemoveSourceIdentifierFromSubscriptionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest
  */
 
 /*!
- * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for RDS \a action,
+ * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
-    const RDSRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFrom
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RemoveSourceIdentifierFromSubscriptionRequestPrivate &other, RemoveSourceIdentifierFromSubscriptionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

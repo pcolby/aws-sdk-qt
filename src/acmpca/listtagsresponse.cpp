@@ -74,7 +74,7 @@ ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new ListTagsResponsePrivate(this), parent)
+    : AcmpcaResponse(new ListTagsResponsePrivate(this), parent)
 {
     setRequest(new ListTagsRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
-    ListTagsResponse * const q) : ACMPCAResponsePrivate(q)
+    ListTagsResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

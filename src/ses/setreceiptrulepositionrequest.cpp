@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SetReceiptRulePositionRequest::SetReceiptRulePositionRequest(const SetReceiptRulePositionRequest &other)
-    : SESRequest(new SetReceiptRulePositionRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SetReceiptRulePositionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SetReceiptRulePositionRequest::SetReceiptRulePositionRequest(const SetReceiptRul
  * Constructs a SetReceiptRulePositionRequest object.
  */
 SetReceiptRulePositionRequest::SetReceiptRulePositionRequest()
-    : SESRequest(new SetReceiptRulePositionRequestPrivate(SESRequest::SetReceiptRulePositionAction, this))
+    : SesRequest(new SetReceiptRulePositionRequestPrivate(SesRequest::SetReceiptRulePositionAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetw
  */
 
 /*!
- * Constructs a SetReceiptRulePositionRequestPrivate object for SES \a action,
+ * Constructs a SetReceiptRulePositionRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
-    const SESRequest::Action action, SetReceiptRulePositionRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SetReceiptRulePositionRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
  */
 SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
     const SetReceiptRulePositionRequestPrivate &other, SetReceiptRulePositionRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeScheduledInstanceAvailabilityRequest;
 
-class QTAWS_EXPORT DescribeScheduledInstanceAvailabilityRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeScheduledInstanceAvailabilityRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeScheduledInstanceAvailabilityRequestPrivate(const EC2Request::Action action,
+    DescribeScheduledInstanceAvailabilityRequestPrivate(const Ec2Request::Action action,
                                    DescribeScheduledInstanceAvailabilityRequest * const q);
     DescribeScheduledInstanceAvailabilityRequestPrivate(const DescribeScheduledInstanceAvailabilityRequestPrivate &other,
                                    DescribeScheduledInstanceAvailabilityRequest * const q);

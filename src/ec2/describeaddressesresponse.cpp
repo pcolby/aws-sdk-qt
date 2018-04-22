@@ -48,7 +48,7 @@ DescribeAddressesResponse::DescribeAddressesResponse(
         const DescribeAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeAddressesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeAddressesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAddressesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeAddressesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeAddressesResponsePrivate object with public implementation \a q.
  */
 DescribeAddressesResponsePrivate::DescribeAddressesResponsePrivate(
-    DescribeAddressesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeAddressesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

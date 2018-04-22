@@ -28,10 +28,10 @@ namespace EMR {
 
 class ListInstanceFleetsRequest;
 
-class QTAWS_EXPORT ListInstanceFleetsRequestPrivate : public EMRRequestPrivate {
+class QTAWS_EXPORT ListInstanceFleetsRequestPrivate : public EmrRequestPrivate {
 
 public:
-    ListInstanceFleetsRequestPrivate(const EMRRequest::Action action,
+    ListInstanceFleetsRequestPrivate(const EmrRequest::Action action,
                                    ListInstanceFleetsRequest * const q);
     ListInstanceFleetsRequestPrivate(const ListInstanceFleetsRequestPrivate &other,
                                    ListInstanceFleetsRequest * const q);

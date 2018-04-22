@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ReleaseHostsRequest;
 
-class QTAWS_EXPORT ReleaseHostsRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ReleaseHostsRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ReleaseHostsRequestPrivate(const EC2Request::Action action,
+    ReleaseHostsRequestPrivate(const Ec2Request::Action action,
                                    ReleaseHostsRequest * const q);
     ReleaseHostsRequestPrivate(const ReleaseHostsRequestPrivate &other,
                                    ReleaseHostsRequest * const q);

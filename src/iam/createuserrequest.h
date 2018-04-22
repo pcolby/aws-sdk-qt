@@ -27,7 +27,7 @@ namespace IAM {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public IAMRequest {
+class QTAWS_EXPORT CreateUserRequest : public IamRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

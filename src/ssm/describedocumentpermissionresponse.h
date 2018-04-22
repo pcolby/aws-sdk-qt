@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeDocumentPermissionResponsePrivate;
 
-class QTAWS_EXPORT DescribeDocumentPermissionResponse : public SSMResponse {
+class QTAWS_EXPORT DescribeDocumentPermissionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

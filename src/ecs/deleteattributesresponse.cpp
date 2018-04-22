@@ -61,7 +61,7 @@ DeleteAttributesResponse::DeleteAttributesResponse(
         const DeleteAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DeleteAttributesResponsePrivate(this), parent)
+    : EcsResponse(new DeleteAttributesResponsePrivate(this), parent)
 {
     setRequest(new DeleteAttributesRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DeleteAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteAttributesResponsePrivate object with public implementation \a q.
  */
 DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
-    DeleteAttributesResponse * const q) : ECSResponsePrivate(q)
+    DeleteAttributesResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

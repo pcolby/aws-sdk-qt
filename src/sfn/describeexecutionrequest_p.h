@@ -28,10 +28,10 @@ namespace SFN {
 
 class DescribeExecutionRequest;
 
-class QTAWS_EXPORT DescribeExecutionRequestPrivate : public SFNRequestPrivate {
+class QTAWS_EXPORT DescribeExecutionRequestPrivate : public SfnRequestPrivate {
 
 public:
-    DescribeExecutionRequestPrivate(const SFNRequest::Action action,
+    DescribeExecutionRequestPrivate(const SfnRequest::Action action,
                                    DescribeExecutionRequest * const q);
     DescribeExecutionRequestPrivate(const DescribeExecutionRequestPrivate &other,
                                    DescribeExecutionRequest * const q);

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RevokeSecurityGroupEgressRequest::RevokeSecurityGroupEgressRequest(const RevokeSecurityGroupEgressRequest &other)
-    : EC2Request(new RevokeSecurityGroupEgressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RevokeSecurityGroupEgressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RevokeSecurityGroupEgressRequest::RevokeSecurityGroupEgressRequest(const RevokeS
  * Constructs a RevokeSecurityGroupEgressRequest object.
  */
 RevokeSecurityGroupEgressRequest::RevokeSecurityGroupEgressRequest()
-    : EC2Request(new RevokeSecurityGroupEgressRequestPrivate(EC2Request::RevokeSecurityGroupEgressAction, this))
+    : Ec2Request(new RevokeSecurityGroupEgressRequestPrivate(Ec2Request::RevokeSecurityGroupEgressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupEgressRequest::response(QN
  */
 
 /*!
- * Constructs a RevokeSecurityGroupEgressRequestPrivate object for EC2 \a action,
+ * Constructs a RevokeSecurityGroupEgressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate(
-    const EC2Request::Action action, RevokeSecurityGroupEgressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RevokeSecurityGroupEgressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate
  */
 RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate(
     const RevokeSecurityGroupEgressRequestPrivate &other, RevokeSecurityGroupEgressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

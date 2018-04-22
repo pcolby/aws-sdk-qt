@@ -48,7 +48,7 @@ CancelExportTaskResponse::CancelExportTaskResponse(
         const CancelExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelExportTaskResponsePrivate(this), parent)
+    : Ec2Response(new CancelExportTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelExportTaskRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CancelExportTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a CancelExportTaskResponsePrivate object with public implementation \a q.
  */
 CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
-    CancelExportTaskResponse * const q) : EC2ResponsePrivate(q)
+    CancelExportTaskResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

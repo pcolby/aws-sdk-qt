@@ -61,7 +61,7 @@ DeleteServiceResponse::DeleteServiceResponse(
         const DeleteServiceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DeleteServiceResponsePrivate(this), parent)
+    : EcsResponse(new DeleteServiceResponsePrivate(this), parent)
 {
     setRequest(new DeleteServiceRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DeleteServiceResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteServiceResponsePrivate object with public implementation \a q.
  */
 DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
-    DeleteServiceResponse * const q) : ECSResponsePrivate(q)
+    DeleteServiceResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

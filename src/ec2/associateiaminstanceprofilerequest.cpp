@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest(const AssociateIamInstanceProfileRequest &other)
-    : EC2Request(new AssociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest(const Ass
  * Constructs a AssociateIamInstanceProfileRequest object.
  */
 AssociateIamInstanceProfileRequest::AssociateIamInstanceProfileRequest()
-    : EC2Request(new AssociateIamInstanceProfileRequestPrivate(EC2Request::AssociateIamInstanceProfileAction, this))
+    : Ec2Request(new AssociateIamInstanceProfileRequestPrivate(Ec2Request::AssociateIamInstanceProfileAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssociateIamInstanceProfileRequest::response(
  */
 
 /*!
- * Constructs a AssociateIamInstanceProfileRequestPrivate object for EC2 \a action,
+ * Constructs a AssociateIamInstanceProfileRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPrivate(
-    const EC2Request::Action action, AssociateIamInstanceProfileRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssociateIamInstanceProfileRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPri
  */
 AssociateIamInstanceProfileRequestPrivate::AssociateIamInstanceProfileRequestPrivate(
     const AssociateIamInstanceProfileRequestPrivate &other, AssociateIamInstanceProfileRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ DescribeRouteTablesResponse::DescribeRouteTablesResponse(
         const DescribeRouteTablesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeRouteTablesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeRouteTablesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRouteTablesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeRouteTablesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeRouteTablesResponsePrivate object with public implementation \a q.
  */
 DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
-    DescribeRouteTablesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeRouteTablesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest(const UpdateRegexMatchSetRequest &other)
-    : WAFRequest(new UpdateRegexMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateRegexMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest(const UpdateRegexMatchSet
  * Constructs a UpdateRegexMatchSetRequest object.
  */
 UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest()
-    : WAFRequest(new UpdateRegexMatchSetRequestPrivate(WAFRequest::UpdateRegexMatchSetAction, this))
+    : WafRequest(new UpdateRegexMatchSetRequestPrivate(WafRequest::UpdateRegexMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexMatchSetRequest::response(QNetwork
  */
 
 /*!
- * Constructs a UpdateRegexMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a UpdateRegexMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
-    const WAFRequest::Action action, UpdateRegexMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateRegexMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
  */
 UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
     const UpdateRegexMatchSetRequestPrivate &other, UpdateRegexMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

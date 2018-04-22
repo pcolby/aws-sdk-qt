@@ -46,7 +46,7 @@ ListBrokersResponse::ListBrokersResponse(
         const ListBrokersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new ListBrokersResponsePrivate(this), parent)
+    : MqResponse(new ListBrokersResponsePrivate(this), parent)
 {
     setRequest(new ListBrokersRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void ListBrokersResponse::parseSuccess(QIODevice &response)
  * Constructs a ListBrokersResponsePrivate object with public implementation \a q.
  */
 ListBrokersResponsePrivate::ListBrokersResponsePrivate(
-    ListBrokersResponse * const q) : MQResponsePrivate(q)
+    ListBrokersResponse * const q) : MqResponsePrivate(q)
 {
 
 }

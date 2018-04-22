@@ -27,7 +27,7 @@ namespace SQS {
 
 class SendMessageResponse;
 
-class QTAWS_EXPORT SendMessageResponsePrivate : public SQSResponsePrivate {
+class QTAWS_EXPORT SendMessageResponsePrivate : public SqsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
-    : MQRequest(new CreateUserRequestPrivate(*other.d_func(), this))
+    : MqRequest(new CreateUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
  * Constructs a CreateUserRequest object.
  */
 CreateUserRequest::CreateUserRequest()
-    : MQRequest(new CreateUserRequestPrivate(MQRequest::CreateUserAction, this))
+    : MqRequest(new CreateUserRequestPrivate(MqRequest::CreateUserAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a CreateUserRequestPrivate object for MQ \a action,
+ * Constructs a CreateUserRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
-    const MQRequest::Action action, CreateUserRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, CreateUserRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const CreateUserRequestPrivate &other, CreateUserRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

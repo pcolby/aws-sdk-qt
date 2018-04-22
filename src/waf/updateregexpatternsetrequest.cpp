@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatternSetRequest &other)
-    : WAFRequest(new UpdateRegexPatternSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new UpdateRegexPatternSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest(const UpdateRegexPatt
  * Constructs a UpdateRegexPatternSetRequest object.
  */
 UpdateRegexPatternSetRequest::UpdateRegexPatternSetRequest()
-    : WAFRequest(new UpdateRegexPatternSetRequestPrivate(WAFRequest::UpdateRegexPatternSetAction, this))
+    : WafRequest(new UpdateRegexPatternSetRequestPrivate(WafRequest::UpdateRegexPatternSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetwo
  */
 
 /*!
- * Constructs a UpdateRegexPatternSetRequestPrivate object for WAF \a action,
+ * Constructs a UpdateRegexPatternSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
-    const WAFRequest::Action action, UpdateRegexPatternSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, UpdateRegexPatternSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
     const UpdateRegexPatternSetRequestPrivate &other, UpdateRegexPatternSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ EnableVolumeIOResponse::EnableVolumeIOResponse(
         const EnableVolumeIORequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new EnableVolumeIOResponsePrivate(this), parent)
+    : Ec2Response(new EnableVolumeIOResponsePrivate(this), parent)
 {
     setRequest(new EnableVolumeIORequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void EnableVolumeIOResponse::parseSuccess(QIODevice &response)
  * Constructs a EnableVolumeIOResponsePrivate object with public implementation \a q.
  */
 EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
-    EnableVolumeIOResponse * const q) : EC2ResponsePrivate(q)
+    EnableVolumeIOResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

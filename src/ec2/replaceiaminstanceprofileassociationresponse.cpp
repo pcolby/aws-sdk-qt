@@ -48,7 +48,7 @@ ReplaceIamInstanceProfileAssociationResponse::ReplaceIamInstanceProfileAssociati
         const ReplaceIamInstanceProfileAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReplaceIamInstanceProfileAssociationResponsePrivate(this), parent)
+    : Ec2Response(new ReplaceIamInstanceProfileAssociationResponsePrivate(this), parent)
 {
     setRequest(new ReplaceIamInstanceProfileAssociationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ReplaceIamInstanceProfileAssociationResponse::parseSuccess(QIODevice &respo
  * Constructs a ReplaceIamInstanceProfileAssociationResponsePrivate object with public implementation \a q.
  */
 ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAssociationResponsePrivate(
-    ReplaceIamInstanceProfileAssociationResponse * const q) : EC2ResponsePrivate(q)
+    ReplaceIamInstanceProfileAssociationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

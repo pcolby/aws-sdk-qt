@@ -108,7 +108,7 @@ DescribeSourceRegionsResponse::DescribeSourceRegionsResponse(
         const DescribeSourceRegionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeSourceRegionsResponsePrivate(this), parent)
+    : RdsResponse(new DescribeSourceRegionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSourceRegionsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeSourceRegionsResponsePrivate object with public implementation \a q.
  */
 DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponsePrivate(
-    DescribeSourceRegionsResponse * const q) : RDSResponsePrivate(q)
+    DescribeSourceRegionsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

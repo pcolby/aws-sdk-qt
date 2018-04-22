@@ -48,7 +48,7 @@ UploadLayerPartResponse::UploadLayerPartResponse(
         const UploadLayerPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new UploadLayerPartResponsePrivate(this), parent)
+    : EcrResponse(new UploadLayerPartResponsePrivate(this), parent)
 {
     setRequest(new UploadLayerPartRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void UploadLayerPartResponse::parseSuccess(QIODevice &response)
  * Constructs a UploadLayerPartResponsePrivate object with public implementation \a q.
  */
 UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
-    UploadLayerPartResponse * const q) : ECRResponsePrivate(q)
+    UploadLayerPartResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

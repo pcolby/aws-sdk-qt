@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBSnapshotAttributesResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBSnapshotAttributesResponse : public RDSResponse {
+class QTAWS_EXPORT DescribeDBSnapshotAttributesResponse : public RdsResponse {
     Q_OBJECT
 
 public:

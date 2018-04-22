@@ -43,7 +43,7 @@ namespace DAX {
  * Constructs a copy of \a other.
  */
 CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
-    : DAXRequest(new CreateClusterRequestPrivate(*other.d_func(), this))
+    : DaxRequest(new CreateClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
  * Constructs a CreateClusterRequest object.
  */
 CreateClusterRequest::CreateClusterRequest()
-    : DAXRequest(new CreateClusterRequestPrivate(DAXRequest::CreateClusterAction, this))
+    : DaxRequest(new CreateClusterRequestPrivate(DaxRequest::CreateClusterAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a CreateClusterRequestPrivate object for DAX \a action,
+ * Constructs a CreateClusterRequestPrivate object for Dax \a action,
  * with public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
-    const DAXRequest::Action action, CreateClusterRequest * const q)
-    : DAXRequestPrivate(action, q)
+    const DaxRequest::Action action, CreateClusterRequest * const q)
+    : DaxRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)
-    : DAXRequestPrivate(other, q)
+    : DaxRequestPrivate(other, q)
 {
 
 }

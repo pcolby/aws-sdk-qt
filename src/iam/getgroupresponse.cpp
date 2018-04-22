@@ -109,7 +109,7 @@ GetGroupResponse::GetGroupResponse(
         const GetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetGroupResponsePrivate(this), parent)
+    : IamResponse(new GetGroupResponsePrivate(this), parent)
 {
     setRequest(new GetGroupRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a GetGroupResponsePrivate object with public implementation \a q.
  */
 GetGroupResponsePrivate::GetGroupResponsePrivate(
-    GetGroupResponse * const q) : IAMResponsePrivate(q)
+    GetGroupResponse * const q) : IamResponsePrivate(q)
 {
 
 }

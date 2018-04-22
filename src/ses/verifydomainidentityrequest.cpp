@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 VerifyDomainIdentityRequest::VerifyDomainIdentityRequest(const VerifyDomainIdentityRequest &other)
-    : SESRequest(new VerifyDomainIdentityRequestPrivate(*other.d_func(), this))
+    : SesRequest(new VerifyDomainIdentityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ VerifyDomainIdentityRequest::VerifyDomainIdentityRequest(const VerifyDomainIdent
  * Constructs a VerifyDomainIdentityRequest object.
  */
 VerifyDomainIdentityRequest::VerifyDomainIdentityRequest()
-    : SESRequest(new VerifyDomainIdentityRequestPrivate(SESRequest::VerifyDomainIdentityAction, this))
+    : SesRequest(new VerifyDomainIdentityRequestPrivate(SesRequest::VerifyDomainIdentityAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainIdentityRequest::response(QNetwor
  */
 
 /*!
- * Constructs a VerifyDomainIdentityRequestPrivate object for SES \a action,
+ * Constructs a VerifyDomainIdentityRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
-    const SESRequest::Action action, VerifyDomainIdentityRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, VerifyDomainIdentityRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
     const VerifyDomainIdentityRequestPrivate &other, VerifyDomainIdentityRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

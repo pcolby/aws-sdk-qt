@@ -48,7 +48,7 @@ DescribeBundleTasksResponse::DescribeBundleTasksResponse(
         const DescribeBundleTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeBundleTasksResponsePrivate(this), parent)
+    : Ec2Response(new DescribeBundleTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeBundleTasksRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeBundleTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeBundleTasksResponsePrivate object with public implementation \a q.
  */
 DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
-    DescribeBundleTasksResponse * const q) : EC2ResponsePrivate(q)
+    DescribeBundleTasksResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

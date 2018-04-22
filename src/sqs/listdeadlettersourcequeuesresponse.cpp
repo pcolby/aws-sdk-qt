@@ -110,7 +110,7 @@ ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
         const ListDeadLetterSourceQueuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new ListDeadLetterSourceQueuesResponsePrivate(this), parent)
+    : SqsResponse(new ListDeadLetterSourceQueuesResponsePrivate(this), parent)
 {
     setRequest(new ListDeadLetterSourceQueuesRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void ListDeadLetterSourceQueuesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListDeadLetterSourceQueuesResponsePrivate object with public implementation \a q.
  */
 ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponsePrivate(
-    ListDeadLetterSourceQueuesResponse * const q) : SQSResponsePrivate(q)
+    ListDeadLetterSourceQueuesResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

@@ -68,7 +68,7 @@ DescribeAvailablePatchesResponse::DescribeAvailablePatchesResponse(
         const DescribeAvailablePatchesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeAvailablePatchesResponsePrivate(this), parent)
+    : SsmResponse(new DescribeAvailablePatchesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAvailablePatchesRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeAvailablePatchesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeAvailablePatchesResponsePrivate object with public implementation \a q.
  */
 DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate(
-    DescribeAvailablePatchesResponse * const q) : SSMResponsePrivate(q)
+    DescribeAvailablePatchesResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

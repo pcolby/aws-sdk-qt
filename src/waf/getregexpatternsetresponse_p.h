@@ -27,7 +27,7 @@ namespace WAF {
 
 class GetRegexPatternSetResponse;
 
-class QTAWS_EXPORT GetRegexPatternSetResponsePrivate : public WAFResponsePrivate {
+class QTAWS_EXPORT GetRegexPatternSetResponsePrivate : public WafResponsePrivate {
     Q_OBJECT
 
 public:

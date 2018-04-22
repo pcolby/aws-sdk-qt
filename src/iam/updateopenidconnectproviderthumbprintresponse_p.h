@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateOpenIDConnectProviderThumbprintResponse;
 
-class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintResponsePrivate : public IAMResponsePrivate {
+class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintResponsePrivate : public IamResponsePrivate {
     Q_OBJECT
 
 public:

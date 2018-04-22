@@ -108,7 +108,7 @@ RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
         const RestoreDBClusterFromS3Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBClusterFromS3ResponsePrivate(this), parent)
+    : RdsResponse(new RestoreDBClusterFromS3ResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterFromS3Request(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RestoreDBClusterFromS3Response::parseSuccess(QIODevice &response)
  * Constructs a RestoreDBClusterFromS3ResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3ResponsePrivate(
-    RestoreDBClusterFromS3Response * const q) : RDSResponsePrivate(q)
+    RestoreDBClusterFromS3Response * const q) : RdsResponsePrivate(q)
 {
 
 }

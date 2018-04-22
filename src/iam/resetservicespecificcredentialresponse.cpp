@@ -109,7 +109,7 @@ ResetServiceSpecificCredentialResponse::ResetServiceSpecificCredentialResponse(
         const ResetServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ResetServiceSpecificCredentialResponsePrivate(this), parent)
+    : IamResponse(new ResetServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new ResetServiceSpecificCredentialRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ResetServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialResponsePrivate(
-    ResetServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
+    ResetServiceSpecificCredentialResponse * const q) : IamResponsePrivate(q)
 {
 
 }

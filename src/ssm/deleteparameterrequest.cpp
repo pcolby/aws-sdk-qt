@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteParameterRequest::DeleteParameterRequest(const DeleteParameterRequest &other)
-    : SSMRequest(new DeleteParameterRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteParameterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteParameterRequest::DeleteParameterRequest(const DeleteParameterRequest &oth
  * Constructs a DeleteParameterRequest object.
  */
 DeleteParameterRequest::DeleteParameterRequest()
-    : SSMRequest(new DeleteParameterRequestPrivate(SSMRequest::DeleteParameterAction, this))
+    : SsmRequest(new DeleteParameterRequestPrivate(SsmRequest::DeleteParameterAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeleteParameterRequestPrivate object for SSM \a action,
+ * Constructs a DeleteParameterRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
-    const SSMRequest::Action action, DeleteParameterRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteParameterRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
  */
 DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
     const DeleteParameterRequestPrivate &other, DeleteParameterRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ ResetFpgaImageAttributeResponse::ResetFpgaImageAttributeResponse(
         const ResetFpgaImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetFpgaImageAttributeResponsePrivate(this), parent)
+    : Ec2Response(new ResetFpgaImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetFpgaImageAttributeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ResetFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
  * Constructs a ResetFpgaImageAttributeResponsePrivate object with public implementation \a q.
  */
 ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
-    ResetFpgaImageAttributeResponse * const q) : EC2ResponsePrivate(q)
+    ResetFpgaImageAttributeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

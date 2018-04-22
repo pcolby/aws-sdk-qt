@@ -109,7 +109,7 @@ CreateRoleResponse::CreateRoleResponse(
         const CreateRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateRoleResponsePrivate(this), parent)
+    : IamResponse(new CreateRoleResponsePrivate(this), parent)
 {
     setRequest(new CreateRoleRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void CreateRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateRoleResponsePrivate object with public implementation \a q.
  */
 CreateRoleResponsePrivate::CreateRoleResponsePrivate(
-    CreateRoleResponse * const q) : IAMResponsePrivate(q)
+    CreateRoleResponse * const q) : IamResponsePrivate(q)
 {
 
 }

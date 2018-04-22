@@ -55,7 +55,7 @@ UpdateReceiptRuleResponse::UpdateReceiptRuleResponse(
         const UpdateReceiptRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateReceiptRuleResponsePrivate(this), parent)
+    : SesResponse(new UpdateReceiptRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateReceiptRuleRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void UpdateReceiptRuleResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateReceiptRuleResponsePrivate object with public implementation \a q.
  */
 UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponsePrivate(
-    UpdateReceiptRuleResponse * const q) : SESResponsePrivate(q)
+    UpdateReceiptRuleResponse * const q) : SesResponsePrivate(q)
 {
 
 }

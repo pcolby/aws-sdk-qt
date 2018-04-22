@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest(const DeleteSecurityConfigurationRequest &other)
-    : EMRRequest(new DeleteSecurityConfigurationRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new DeleteSecurityConfigurationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest(const Del
  * Constructs a DeleteSecurityConfigurationRequest object.
  */
 DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest()
-    : EMRRequest(new DeleteSecurityConfigurationRequestPrivate(EMRRequest::DeleteSecurityConfigurationAction, this))
+    : EmrRequest(new DeleteSecurityConfigurationRequestPrivate(EmrRequest::DeleteSecurityConfigurationAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(
  */
 
 /*!
- * Constructs a DeleteSecurityConfigurationRequestPrivate object for EMR \a action,
+ * Constructs a DeleteSecurityConfigurationRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
-    const EMRRequest::Action action, DeleteSecurityConfigurationRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, DeleteSecurityConfigurationRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPri
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
     const DeleteSecurityConfigurationRequestPrivate &other, DeleteSecurityConfigurationRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

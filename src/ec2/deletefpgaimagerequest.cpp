@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteFpgaImageRequest::DeleteFpgaImageRequest(const DeleteFpgaImageRequest &other)
-    : EC2Request(new DeleteFpgaImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteFpgaImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteFpgaImageRequest::DeleteFpgaImageRequest(const DeleteFpgaImageRequest &oth
  * Constructs a DeleteFpgaImageRequest object.
  */
 DeleteFpgaImageRequest::DeleteFpgaImageRequest()
-    : EC2Request(new DeleteFpgaImageRequestPrivate(EC2Request::DeleteFpgaImageAction, this))
+    : Ec2Request(new DeleteFpgaImageRequestPrivate(Ec2Request::DeleteFpgaImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeleteFpgaImageRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteFpgaImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
-    const EC2Request::Action action, DeleteFpgaImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteFpgaImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
     const DeleteFpgaImageRequestPrivate &other, DeleteFpgaImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 DescribeUserRequest::DescribeUserRequest(const DescribeUserRequest &other)
-    : MQRequest(new DescribeUserRequestPrivate(*other.d_func(), this))
+    : MqRequest(new DescribeUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DescribeUserRequest::DescribeUserRequest(const DescribeUserRequest &other)
  * Constructs a DescribeUserRequest object.
  */
 DescribeUserRequest::DescribeUserRequest()
-    : MQRequest(new DescribeUserRequestPrivate(MQRequest::DescribeUserAction, this))
+    : MqRequest(new DescribeUserRequestPrivate(MqRequest::DescribeUserAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DescribeUserRequestPrivate object for MQ \a action,
+ * Constructs a DescribeUserRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
-    const MQRequest::Action action, DescribeUserRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, DescribeUserRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ DescribeUserRequestPrivate::DescribeUserRequestPrivate(
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const DescribeUserRequestPrivate &other, DescribeUserRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

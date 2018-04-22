@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeSourceRegionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeSourceRegionsResponse : public RDSResponse {
+class QTAWS_EXPORT DescribeSourceRegionsResponse : public RdsResponse {
     Q_OBJECT
 
 public:

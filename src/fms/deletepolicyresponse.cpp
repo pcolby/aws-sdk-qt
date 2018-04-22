@@ -50,7 +50,7 @@ DeletePolicyResponse::DeletePolicyResponse(
         const DeletePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new DeletePolicyResponsePrivate(this), parent)
+    : FmsResponse(new DeletePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeletePolicyRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void DeletePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeletePolicyResponsePrivate object with public implementation \a q.
  */
 DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
-    DeletePolicyResponse * const q) : FMSResponsePrivate(q)
+    DeletePolicyResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 DeleteBrokerRequest::DeleteBrokerRequest(const DeleteBrokerRequest &other)
-    : MQRequest(new DeleteBrokerRequestPrivate(*other.d_func(), this))
+    : MqRequest(new DeleteBrokerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DeleteBrokerRequest::DeleteBrokerRequest(const DeleteBrokerRequest &other)
  * Constructs a DeleteBrokerRequest object.
  */
 DeleteBrokerRequest::DeleteBrokerRequest()
-    : MQRequest(new DeleteBrokerRequestPrivate(MQRequest::DeleteBrokerAction, this))
+    : MqRequest(new DeleteBrokerRequestPrivate(MqRequest::DeleteBrokerAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * DeleteBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DeleteBrokerRequestPrivate object for MQ \a action,
+ * Constructs a DeleteBrokerRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
-    const MQRequest::Action action, DeleteBrokerRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, DeleteBrokerRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
  */
 DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
     const DeleteBrokerRequestPrivate &other, DeleteBrokerRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

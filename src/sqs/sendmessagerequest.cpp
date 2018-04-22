@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 SendMessageRequest::SendMessageRequest(const SendMessageRequest &other)
-    : SQSRequest(new SendMessageRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new SendMessageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ SendMessageRequest::SendMessageRequest(const SendMessageRequest &other)
  * Constructs a SendMessageRequest object.
  */
 SendMessageRequest::SendMessageRequest()
-    : SQSRequest(new SendMessageRequestPrivate(SQSRequest::SendMessageAction, this))
+    : SqsRequest(new SendMessageRequestPrivate(SqsRequest::SendMessageAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a SendMessageRequestPrivate object for SQS \a action,
+ * Constructs a SendMessageRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 SendMessageRequestPrivate::SendMessageRequestPrivate(
-    const SQSRequest::Action action, SendMessageRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, SendMessageRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ SendMessageRequestPrivate::SendMessageRequestPrivate(
  */
 SendMessageRequestPrivate::SendMessageRequestPrivate(
     const SendMessageRequestPrivate &other, SendMessageRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

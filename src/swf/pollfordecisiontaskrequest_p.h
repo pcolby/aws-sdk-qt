@@ -28,10 +28,10 @@ namespace SWF {
 
 class PollForDecisionTaskRequest;
 
-class QTAWS_EXPORT PollForDecisionTaskRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT PollForDecisionTaskRequestPrivate : public SwfRequestPrivate {
 
 public:
-    PollForDecisionTaskRequestPrivate(const SWFRequest::Action action,
+    PollForDecisionTaskRequestPrivate(const SwfRequest::Action action,
                                    PollForDecisionTaskRequest * const q);
     PollForDecisionTaskRequestPrivate(const PollForDecisionTaskRequestPrivate &other,
                                    PollForDecisionTaskRequest * const q);

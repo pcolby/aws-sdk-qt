@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeHostsRequest::DescribeHostsRequest(const DescribeHostsRequest &other)
-    : EC2Request(new DescribeHostsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeHostsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeHostsRequest::DescribeHostsRequest(const DescribeHostsRequest &other)
  * Constructs a DescribeHostsRequest object.
  */
 DescribeHostsRequest::DescribeHostsRequest()
-    : EC2Request(new DescribeHostsRequestPrivate(EC2Request::DescribeHostsAction, this))
+    : Ec2Request(new DescribeHostsRequestPrivate(Ec2Request::DescribeHostsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a DescribeHostsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeHostsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
-    const EC2Request::Action action, DescribeHostsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeHostsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
     const DescribeHostsRequestPrivate &other, DescribeHostsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -97,7 +97,7 @@ namespace STS {
  * Constructs a copy of \a other.
  */
 GetCallerIdentityRequest::GetCallerIdentityRequest(const GetCallerIdentityRequest &other)
-    : STSRequest(new GetCallerIdentityRequestPrivate(*other.d_func(), this))
+    : StsRequest(new GetCallerIdentityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +106,7 @@ GetCallerIdentityRequest::GetCallerIdentityRequest(const GetCallerIdentityReques
  * Constructs a GetCallerIdentityRequest object.
  */
 GetCallerIdentityRequest::GetCallerIdentityRequest()
-    : STSRequest(new GetCallerIdentityRequestPrivate(STSRequest::GetCallerIdentityAction, this))
+    : StsRequest(new GetCallerIdentityRequestPrivate(StsRequest::GetCallerIdentityAction, this))
 {
 
 }
@@ -139,12 +139,12 @@ QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a GetCallerIdentityRequestPrivate object for STS \a action,
+ * Constructs a GetCallerIdentityRequestPrivate object for Sts \a action,
  * with public implementation \a q.
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
-    const STSRequest::Action action, GetCallerIdentityRequest * const q)
-    : STSRequestPrivate(action, q)
+    const StsRequest::Action action, GetCallerIdentityRequest * const q)
+    : StsRequestPrivate(action, q)
 {
 
 }
@@ -157,7 +157,7 @@ GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
     const GetCallerIdentityRequestPrivate &other, GetCallerIdentityRequest * const q)
-    : STSRequestPrivate(other, q)
+    : StsRequestPrivate(other, q)
 {
 
 }

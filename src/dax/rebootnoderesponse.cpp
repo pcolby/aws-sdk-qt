@@ -48,7 +48,7 @@ RebootNodeResponse::RebootNodeResponse(
         const RebootNodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new RebootNodeResponsePrivate(this), parent)
+    : DaxResponse(new RebootNodeResponsePrivate(this), parent)
 {
     setRequest(new RebootNodeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RebootNodeResponse::parseSuccess(QIODevice &response)
  * Constructs a RebootNodeResponsePrivate object with public implementation \a q.
  */
 RebootNodeResponsePrivate::RebootNodeResponsePrivate(
-    RebootNodeResponse * const q) : DAXResponsePrivate(q)
+    RebootNodeResponse * const q) : DaxResponsePrivate(q)
 {
 
 }

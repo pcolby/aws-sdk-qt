@@ -48,7 +48,7 @@ DeleteVpcEndpointServiceConfigurationsResponse::DeleteVpcEndpointServiceConfigur
         const DeleteVpcEndpointServiceConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVpcEndpointServiceConfigurationsResponsePrivate(this), parent)
+    : Ec2Response(new DeleteVpcEndpointServiceConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcEndpointServiceConfigurationsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteVpcEndpointServiceConfigurationsResponse::parseSuccess(QIODevice &res
  * Constructs a DeleteVpcEndpointServiceConfigurationsResponsePrivate object with public implementation \a q.
  */
 DeleteVpcEndpointServiceConfigurationsResponsePrivate::DeleteVpcEndpointServiceConfigurationsResponsePrivate(
-    DeleteVpcEndpointServiceConfigurationsResponse * const q) : EC2ResponsePrivate(q)
+    DeleteVpcEndpointServiceConfigurationsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

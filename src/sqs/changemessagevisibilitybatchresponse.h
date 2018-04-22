@@ -28,7 +28,7 @@ namespace SQS {
 
 class ChangeMessageVisibilityBatchResponsePrivate;
 
-class QTAWS_EXPORT ChangeMessageVisibilityBatchResponse : public SQSResponse {
+class QTAWS_EXPORT ChangeMessageVisibilityBatchResponse : public SqsResponse {
     Q_OBJECT
 
 public:

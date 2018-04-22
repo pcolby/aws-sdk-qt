@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 UpdateAssociationRequest::UpdateAssociationRequest(const UpdateAssociationRequest &other)
-    : SSMRequest(new UpdateAssociationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new UpdateAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ UpdateAssociationRequest::UpdateAssociationRequest(const UpdateAssociationReques
  * Constructs a UpdateAssociationRequest object.
  */
 UpdateAssociationRequest::UpdateAssociationRequest()
-    : SSMRequest(new UpdateAssociationRequestPrivate(SSMRequest::UpdateAssociationAction, this))
+    : SsmRequest(new UpdateAssociationRequestPrivate(SsmRequest::UpdateAssociationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a UpdateAssociationRequestPrivate object for SSM \a action,
+ * Constructs a UpdateAssociationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
-    const SSMRequest::Action action, UpdateAssociationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, UpdateAssociationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
     const UpdateAssociationRequestPrivate &other, UpdateAssociationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

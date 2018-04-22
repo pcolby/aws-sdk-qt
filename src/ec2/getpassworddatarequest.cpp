@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 GetPasswordDataRequest::GetPasswordDataRequest(const GetPasswordDataRequest &other)
-    : EC2Request(new GetPasswordDataRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new GetPasswordDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetPasswordDataRequest::GetPasswordDataRequest(const GetPasswordDataRequest &oth
  * Constructs a GetPasswordDataRequest object.
  */
 GetPasswordDataRequest::GetPasswordDataRequest()
-    : EC2Request(new GetPasswordDataRequestPrivate(EC2Request::GetPasswordDataAction, this))
+    : Ec2Request(new GetPasswordDataRequestPrivate(Ec2Request::GetPasswordDataAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a GetPasswordDataRequestPrivate object for EC2 \a action,
+ * Constructs a GetPasswordDataRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
-    const EC2Request::Action action, GetPasswordDataRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, GetPasswordDataRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
     const GetPasswordDataRequestPrivate &other, GetPasswordDataRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

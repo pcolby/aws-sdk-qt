@@ -27,7 +27,7 @@ namespace SES {
 
 class SetIdentityNotificationTopicRequestPrivate;
 
-class QTAWS_EXPORT SetIdentityNotificationTopicRequest : public SESRequest {
+class QTAWS_EXPORT SetIdentityNotificationTopicRequest : public SesRequest {
 
 public:
     SetIdentityNotificationTopicRequest(const SetIdentityNotificationTopicRequest &other);

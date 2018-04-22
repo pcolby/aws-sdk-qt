@@ -109,7 +109,7 @@ UpdateSAMLProviderResponse::UpdateSAMLProviderResponse(
         const UpdateSAMLProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateSAMLProviderResponsePrivate(this), parent)
+    : IamResponse(new UpdateSAMLProviderResponsePrivate(this), parent)
 {
     setRequest(new UpdateSAMLProviderRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateSAMLProviderResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateSAMLProviderResponsePrivate object with public implementation \a q.
  */
 UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
-    UpdateSAMLProviderResponse * const q) : IAMResponsePrivate(q)
+    UpdateSAMLProviderResponse * const q) : IamResponsePrivate(q)
 {
 
 }

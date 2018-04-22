@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest(const DescribeSecurityGroupsRequest &other)
-    : EC2Request(new DescribeSecurityGroupsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeSecurityGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest(const DescribeSecur
  * Constructs a DescribeSecurityGroupsRequest object.
  */
 DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest()
-    : EC2Request(new DescribeSecurityGroupsRequestPrivate(EC2Request::DescribeSecurityGroupsAction, this))
+    : Ec2Request(new DescribeSecurityGroupsRequestPrivate(Ec2Request::DescribeSecurityGroupsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupsRequest::response(QNetw
  */
 
 /*!
- * Constructs a DescribeSecurityGroupsRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeSecurityGroupsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeSecurityGroupsRequestPrivate::DescribeSecurityGroupsRequestPrivate(
-    const EC2Request::Action action, DescribeSecurityGroupsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeSecurityGroupsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeSecurityGroupsRequestPrivate::DescribeSecurityGroupsRequestPrivate(
  */
 DescribeSecurityGroupsRequestPrivate::DescribeSecurityGroupsRequestPrivate(
     const DescribeSecurityGroupsRequestPrivate &other, DescribeSecurityGroupsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

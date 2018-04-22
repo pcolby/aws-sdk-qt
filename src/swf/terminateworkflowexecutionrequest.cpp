@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest(const TerminateWorkflowExecutionRequest &other)
-    : SWFRequest(new TerminateWorkflowExecutionRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new TerminateWorkflowExecutionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest(const Termi
  * Constructs a TerminateWorkflowExecutionRequest object.
  */
 TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest()
-    : SWFRequest(new TerminateWorkflowExecutionRequestPrivate(SWFRequest::TerminateWorkflowExecutionAction, this))
+    : SwfRequest(new TerminateWorkflowExecutionRequestPrivate(SwfRequest::TerminateWorkflowExecutionAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
  */
 
 /*!
- * Constructs a TerminateWorkflowExecutionRequestPrivate object for SWF \a action,
+ * Constructs a TerminateWorkflowExecutionRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
-    const SWFRequest::Action action, TerminateWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, TerminateWorkflowExecutionRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPriva
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
     const TerminateWorkflowExecutionRequestPrivate &other, TerminateWorkflowExecutionRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

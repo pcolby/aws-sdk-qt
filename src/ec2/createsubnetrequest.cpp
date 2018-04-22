@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateSubnetRequest::CreateSubnetRequest(const CreateSubnetRequest &other)
-    : EC2Request(new CreateSubnetRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateSubnetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateSubnetRequest::CreateSubnetRequest(const CreateSubnetRequest &other)
  * Constructs a CreateSubnetRequest object.
  */
 CreateSubnetRequest::CreateSubnetRequest()
-    : EC2Request(new CreateSubnetRequestPrivate(EC2Request::CreateSubnetAction, this))
+    : Ec2Request(new CreateSubnetRequestPrivate(Ec2Request::CreateSubnetAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a CreateSubnetRequestPrivate object for EC2 \a action,
+ * Constructs a CreateSubnetRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
-    const EC2Request::Action action, CreateSubnetRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateSubnetRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
  */
 CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
     const CreateSubnetRequestPrivate &other, CreateSubnetRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SSM {
 
 class GetParameterHistoryRequest;
 
-class QTAWS_EXPORT GetParameterHistoryRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT GetParameterHistoryRequestPrivate : public SsmRequestPrivate {
 
 public:
-    GetParameterHistoryRequestPrivate(const SSMRequest::Action action,
+    GetParameterHistoryRequestPrivate(const SsmRequest::Action action,
                                    GetParameterHistoryRequest * const q);
     GetParameterHistoryRequestPrivate(const GetParameterHistoryRequestPrivate &other,
                                    GetParameterHistoryRequest * const q);

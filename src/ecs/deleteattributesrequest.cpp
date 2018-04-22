@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &other)
-    : ECSRequest(new DeleteAttributesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new DeleteAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &
  * Constructs a DeleteAttributesRequest object.
  */
 DeleteAttributesRequest::DeleteAttributesRequest()
-    : ECSRequest(new DeleteAttributesRequestPrivate(ECSRequest::DeleteAttributesAction, this))
+    : EcsRequest(new DeleteAttributesRequestPrivate(EcsRequest::DeleteAttributesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteAttributesRequestPrivate object for ECS \a action,
+ * Constructs a DeleteAttributesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
-    const ECSRequest::Action action, DeleteAttributesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, DeleteAttributesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const DeleteAttributesRequestPrivate &other, DeleteAttributesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

@@ -109,7 +109,7 @@ RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
         const RemoveUserFromGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new RemoveUserFromGroupResponsePrivate(this), parent)
+    : IamResponse(new RemoveUserFromGroupResponsePrivate(this), parent)
 {
     setRequest(new RemoveUserFromGroupRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void RemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveUserFromGroupResponsePrivate object with public implementation \a q.
  */
 RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
-    RemoveUserFromGroupResponse * const q) : IAMResponsePrivate(q)
+    RemoveUserFromGroupResponse * const q) : IamResponsePrivate(q)
 {
 
 }

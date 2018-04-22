@@ -48,7 +48,7 @@ DisassociateAddressResponse::DisassociateAddressResponse(
         const DisassociateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisassociateAddressResponsePrivate(this), parent)
+    : Ec2Response(new DisassociateAddressResponsePrivate(this), parent)
 {
     setRequest(new DisassociateAddressRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DisassociateAddressResponse::parseSuccess(QIODevice &response)
  * Constructs a DisassociateAddressResponsePrivate object with public implementation \a q.
  */
 DisassociateAddressResponsePrivate::DisassociateAddressResponsePrivate(
-    DisassociateAddressResponse * const q) : EC2ResponsePrivate(q)
+    DisassociateAddressResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

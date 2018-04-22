@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AssociateAddressRequest::AssociateAddressRequest(const AssociateAddressRequest &other)
-    : EC2Request(new AssociateAddressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AssociateAddressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AssociateAddressRequest::AssociateAddressRequest(const AssociateAddressRequest &
  * Constructs a AssociateAddressRequest object.
  */
 AssociateAddressRequest::AssociateAddressRequest()
-    : EC2Request(new AssociateAddressRequestPrivate(EC2Request::AssociateAddressAction, this))
+    : Ec2Request(new AssociateAddressRequestPrivate(Ec2Request::AssociateAddressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AssociateAddressRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a AssociateAddressRequestPrivate object for EC2 \a action,
+ * Constructs a AssociateAddressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
-    const EC2Request::Action action, AssociateAddressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AssociateAddressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
  */
 AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
     const AssociateAddressRequestPrivate &other, AssociateAddressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

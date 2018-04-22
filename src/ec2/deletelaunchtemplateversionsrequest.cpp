@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteLaunchTemplateVersionsRequest::DeleteLaunchTemplateVersionsRequest(const DeleteLaunchTemplateVersionsRequest &other)
-    : EC2Request(new DeleteLaunchTemplateVersionsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteLaunchTemplateVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteLaunchTemplateVersionsRequest::DeleteLaunchTemplateVersionsRequest(const D
  * Constructs a DeleteLaunchTemplateVersionsRequest object.
  */
 DeleteLaunchTemplateVersionsRequest::DeleteLaunchTemplateVersionsRequest()
-    : EC2Request(new DeleteLaunchTemplateVersionsRequestPrivate(EC2Request::DeleteLaunchTemplateVersionsAction, this))
+    : Ec2Request(new DeleteLaunchTemplateVersionsRequestPrivate(Ec2Request::DeleteLaunchTemplateVersionsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateVersionsRequest::response
  */
 
 /*!
- * Constructs a DeleteLaunchTemplateVersionsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteLaunchTemplateVersionsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestPrivate(
-    const EC2Request::Action action, DeleteLaunchTemplateVersionsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteLaunchTemplateVersionsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestP
  */
 DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestPrivate(
     const DeleteLaunchTemplateVersionsRequestPrivate &other, DeleteLaunchTemplateVersionsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 GetEndpointAttributesRequest::GetEndpointAttributesRequest(const GetEndpointAttributesRequest &other)
-    : SNSRequest(new GetEndpointAttributesRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new GetEndpointAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ GetEndpointAttributesRequest::GetEndpointAttributesRequest(const GetEndpointAttr
  * Constructs a GetEndpointAttributesRequest object.
  */
 GetEndpointAttributesRequest::GetEndpointAttributesRequest()
-    : SNSRequest(new GetEndpointAttributesRequestPrivate(SNSRequest::GetEndpointAttributesAction, this))
+    : SnsRequest(new GetEndpointAttributesRequestPrivate(SnsRequest::GetEndpointAttributesAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * GetEndpointAttributesRequest::response(QNetwo
  */
 
 /*!
- * Constructs a GetEndpointAttributesRequestPrivate object for SNS \a action,
+ * Constructs a GetEndpointAttributesRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
-    const SNSRequest::Action action, GetEndpointAttributesRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, GetEndpointAttributesRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
  */
 GetEndpointAttributesRequestPrivate::GetEndpointAttributesRequestPrivate(
     const GetEndpointAttributesRequestPrivate &other, GetEndpointAttributesRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

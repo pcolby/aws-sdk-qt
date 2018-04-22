@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
-    : IAMRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
  * Constructs a DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
-    : IAMRequest(new DeleteUserRequestPrivate(IAMRequest::DeleteUserAction, this))
+    : IamRequest(new DeleteUserRequestPrivate(IamRequest::DeleteUserAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a DeleteUserRequestPrivate object for IAM \a action,
+ * Constructs a DeleteUserRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
-    const IAMRequest::Action action, DeleteUserRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteUserRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const DeleteUserRequestPrivate &other, DeleteUserRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

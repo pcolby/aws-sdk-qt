@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 RevokeGrantRequest::RevokeGrantRequest(const RevokeGrantRequest &other)
-    : KMSRequest(new RevokeGrantRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new RevokeGrantRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ RevokeGrantRequest::RevokeGrantRequest(const RevokeGrantRequest &other)
  * Constructs a RevokeGrantRequest object.
  */
 RevokeGrantRequest::RevokeGrantRequest()
-    : KMSRequest(new RevokeGrantRequestPrivate(KMSRequest::RevokeGrantAction, this))
+    : KmsRequest(new RevokeGrantRequestPrivate(KmsRequest::RevokeGrantAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a RevokeGrantRequestPrivate object for KMS \a action,
+ * Constructs a RevokeGrantRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
-    const KMSRequest::Action action, RevokeGrantRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, RevokeGrantRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
     const RevokeGrantRequestPrivate &other, RevokeGrantRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

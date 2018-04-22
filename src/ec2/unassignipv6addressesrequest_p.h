@@ -28,10 +28,10 @@ namespace EC2 {
 
 class UnassignIpv6AddressesRequest;
 
-class QTAWS_EXPORT UnassignIpv6AddressesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT UnassignIpv6AddressesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    UnassignIpv6AddressesRequestPrivate(const EC2Request::Action action,
+    UnassignIpv6AddressesRequestPrivate(const Ec2Request::Action action,
                                    UnassignIpv6AddressesRequest * const q);
     UnassignIpv6AddressesRequestPrivate(const UnassignIpv6AddressesRequestPrivate &other,
                                    UnassignIpv6AddressesRequest * const q);

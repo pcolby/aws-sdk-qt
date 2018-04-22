@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 OptInPhoneNumberRequest::OptInPhoneNumberRequest(const OptInPhoneNumberRequest &other)
-    : SNSRequest(new OptInPhoneNumberRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new OptInPhoneNumberRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ OptInPhoneNumberRequest::OptInPhoneNumberRequest(const OptInPhoneNumberRequest &
  * Constructs a OptInPhoneNumberRequest object.
  */
 OptInPhoneNumberRequest::OptInPhoneNumberRequest()
-    : SNSRequest(new OptInPhoneNumberRequestPrivate(SNSRequest::OptInPhoneNumberAction, this))
+    : SnsRequest(new OptInPhoneNumberRequestPrivate(SnsRequest::OptInPhoneNumberAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a OptInPhoneNumberRequestPrivate object for SNS \a action,
+ * Constructs a OptInPhoneNumberRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
-    const SNSRequest::Action action, OptInPhoneNumberRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, OptInPhoneNumberRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
     const OptInPhoneNumberRequestPrivate &other, OptInPhoneNumberRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SMS {
 
 class GetReplicationRunsRequest;
 
-class QTAWS_EXPORT GetReplicationRunsRequestPrivate : public SMSRequestPrivate {
+class QTAWS_EXPORT GetReplicationRunsRequestPrivate : public SmsRequestPrivate {
 
 public:
-    GetReplicationRunsRequestPrivate(const SMSRequest::Action action,
+    GetReplicationRunsRequestPrivate(const SmsRequest::Action action,
                                    GetReplicationRunsRequest * const q);
     GetReplicationRunsRequestPrivate(const GetReplicationRunsRequestPrivate &other,
                                    GetReplicationRunsRequest * const q);

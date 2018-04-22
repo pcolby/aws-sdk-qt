@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ModifySnapshotAttributeRequest;
 
-class QTAWS_EXPORT ModifySnapshotAttributeRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ModifySnapshotAttributeRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ModifySnapshotAttributeRequestPrivate(const EC2Request::Action action,
+    ModifySnapshotAttributeRequestPrivate(const Ec2Request::Action action,
                                    ModifySnapshotAttributeRequest * const q);
     ModifySnapshotAttributeRequestPrivate(const ModifySnapshotAttributeRequestPrivate &other,
                                    ModifySnapshotAttributeRequest * const q);

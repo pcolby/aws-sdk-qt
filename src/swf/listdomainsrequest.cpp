@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
-    : SWFRequest(new ListDomainsRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new ListDomainsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
  * Constructs a ListDomainsRequest object.
  */
 ListDomainsRequest::ListDomainsRequest()
-    : SWFRequest(new ListDomainsRequestPrivate(SWFRequest::ListDomainsAction, this))
+    : SwfRequest(new ListDomainsRequestPrivate(SwfRequest::ListDomainsAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a ListDomainsRequestPrivate object for SWF \a action,
+ * Constructs a ListDomainsRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
-    const SWFRequest::Action action, ListDomainsRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, ListDomainsRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ ListDomainsRequestPrivate::ListDomainsRequestPrivate(
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const ListDomainsRequestPrivate &other, ListDomainsRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

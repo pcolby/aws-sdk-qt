@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigurationSetRequest &other)
-    : SESRequest(new CreateConfigurationSetRequestPrivate(*other.d_func(), this))
+    : SesRequest(new CreateConfigurationSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ CreateConfigurationSetRequest::CreateConfigurationSetRequest(const CreateConfigu
  * Constructs a CreateConfigurationSetRequest object.
  */
 CreateConfigurationSetRequest::CreateConfigurationSetRequest()
-    : SESRequest(new CreateConfigurationSetRequestPrivate(SESRequest::CreateConfigurationSetAction, this))
+    : SesRequest(new CreateConfigurationSetRequestPrivate(SesRequest::CreateConfigurationSetAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
  */
 
 /*!
- * Constructs a CreateConfigurationSetRequestPrivate object for SES \a action,
+ * Constructs a CreateConfigurationSetRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
-    const SESRequest::Action action, CreateConfigurationSetRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, CreateConfigurationSetRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const CreateConfigurationSetRequestPrivate &other, CreateConfigurationSetRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

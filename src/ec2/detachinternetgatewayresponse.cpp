@@ -48,7 +48,7 @@ DetachInternetGatewayResponse::DetachInternetGatewayResponse(
         const DetachInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachInternetGatewayResponsePrivate(this), parent)
+    : Ec2Response(new DetachInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new DetachInternetGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a DetachInternetGatewayResponsePrivate object with public implementation \a q.
  */
 DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
-    DetachInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
+    DetachInternetGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

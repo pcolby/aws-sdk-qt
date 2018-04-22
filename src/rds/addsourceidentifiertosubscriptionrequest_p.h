@@ -28,10 +28,10 @@ namespace RDS {
 
 class AddSourceIdentifierToSubscriptionRequest;
 
-class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequestPrivate : public RdsRequestPrivate {
 
 public:
-    AddSourceIdentifierToSubscriptionRequestPrivate(const RDSRequest::Action action,
+    AddSourceIdentifierToSubscriptionRequestPrivate(const RdsRequest::Action action,
                                    AddSourceIdentifierToSubscriptionRequest * const q);
     AddSourceIdentifierToSubscriptionRequestPrivate(const AddSourceIdentifierToSubscriptionRequestPrivate &other,
                                    AddSourceIdentifierToSubscriptionRequest * const q);

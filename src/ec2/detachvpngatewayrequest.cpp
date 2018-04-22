@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DetachVpnGatewayRequest::DetachVpnGatewayRequest(const DetachVpnGatewayRequest &other)
-    : EC2Request(new DetachVpnGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DetachVpnGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DetachVpnGatewayRequest::DetachVpnGatewayRequest(const DetachVpnGatewayRequest &
  * Constructs a DetachVpnGatewayRequest object.
  */
 DetachVpnGatewayRequest::DetachVpnGatewayRequest()
-    : EC2Request(new DetachVpnGatewayRequestPrivate(EC2Request::DetachVpnGatewayAction, this))
+    : Ec2Request(new DetachVpnGatewayRequestPrivate(Ec2Request::DetachVpnGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DetachVpnGatewayRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DetachVpnGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a DetachVpnGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
-    const EC2Request::Action action, DetachVpnGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DetachVpnGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
  */
 DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
     const DetachVpnGatewayRequestPrivate &other, DetachVpnGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

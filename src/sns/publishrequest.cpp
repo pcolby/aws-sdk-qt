@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 PublishRequest::PublishRequest(const PublishRequest &other)
-    : SNSRequest(new PublishRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new PublishRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ PublishRequest::PublishRequest(const PublishRequest &other)
  * Constructs a PublishRequest object.
  */
 PublishRequest::PublishRequest()
-    : SNSRequest(new PublishRequestPrivate(SNSRequest::PublishAction, this))
+    : SnsRequest(new PublishRequestPrivate(SnsRequest::PublishAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
  */
 
 /*!
- * Constructs a PublishRequestPrivate object for SNS \a action,
+ * Constructs a PublishRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 PublishRequestPrivate::PublishRequestPrivate(
-    const SNSRequest::Action action, PublishRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, PublishRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ PublishRequestPrivate::PublishRequestPrivate(
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const PublishRequestPrivate &other, PublishRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

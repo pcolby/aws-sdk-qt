@@ -48,7 +48,7 @@ DeleteVpcEndpointConnectionNotificationsResponse::DeleteVpcEndpointConnectionNot
         const DeleteVpcEndpointConnectionNotificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVpcEndpointConnectionNotificationsResponsePrivate(this), parent)
+    : Ec2Response(new DeleteVpcEndpointConnectionNotificationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcEndpointConnectionNotificationsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &r
  * Constructs a DeleteVpcEndpointConnectionNotificationsResponsePrivate object with public implementation \a q.
  */
 DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointConnectionNotificationsResponsePrivate(
-    DeleteVpcEndpointConnectionNotificationsResponse * const q) : EC2ResponsePrivate(q)
+    DeleteVpcEndpointConnectionNotificationsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

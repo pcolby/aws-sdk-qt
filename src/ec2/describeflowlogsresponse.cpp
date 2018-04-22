@@ -48,7 +48,7 @@ DescribeFlowLogsResponse::DescribeFlowLogsResponse(
         const DescribeFlowLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeFlowLogsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeFlowLogsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFlowLogsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeFlowLogsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeFlowLogsResponsePrivate object with public implementation \a q.
  */
 DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponsePrivate(
-    DescribeFlowLogsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeFlowLogsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -143,7 +143,7 @@ EnableKeyRotationResponse::EnableKeyRotationResponse(
         const EnableKeyRotationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new EnableKeyRotationResponsePrivate(this), parent)
+    : KmsResponse(new EnableKeyRotationResponsePrivate(this), parent)
 {
     setRequest(new EnableKeyRotationRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void EnableKeyRotationResponse::parseSuccess(QIODevice &response)
  * Constructs a EnableKeyRotationResponsePrivate object with public implementation \a q.
  */
 EnableKeyRotationResponsePrivate::EnableKeyRotationResponsePrivate(
-    EnableKeyRotationResponse * const q) : KMSResponsePrivate(q)
+    EnableKeyRotationResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

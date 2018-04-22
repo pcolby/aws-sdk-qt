@@ -28,10 +28,10 @@ namespace SSM {
 
 class GetAutomationExecutionRequest;
 
-class QTAWS_EXPORT GetAutomationExecutionRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT GetAutomationExecutionRequestPrivate : public SsmRequestPrivate {
 
 public:
-    GetAutomationExecutionRequestPrivate(const SSMRequest::Action action,
+    GetAutomationExecutionRequestPrivate(const SsmRequest::Action action,
                                    GetAutomationExecutionRequest * const q);
     GetAutomationExecutionRequestPrivate(const GetAutomationExecutionRequestPrivate &other,
                                    GetAutomationExecutionRequest * const q);

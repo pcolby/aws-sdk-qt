@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateRequest(const GetCustomVerificationEmailTemplateRequest &other)
-    : SESRequest(new GetCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
+    : SesRequest(new GetCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateReq
  * Constructs a GetCustomVerificationEmailTemplateRequest object.
  */
 GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateRequest()
-    : SESRequest(new GetCustomVerificationEmailTemplateRequestPrivate(SESRequest::GetCustomVerificationEmailTemplateAction, this))
+    : SesRequest(new GetCustomVerificationEmailTemplateRequestPrivate(SesRequest::GetCustomVerificationEmailTemplateAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * GetCustomVerificationEmailTemplateRequest::re
  */
 
 /*!
- * Constructs a GetCustomVerificationEmailTemplateRequestPrivate object for SES \a action,
+ * Constructs a GetCustomVerificationEmailTemplateRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
-    const SESRequest::Action action, GetCustomVerificationEmailTemplateRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, GetCustomVerificationEmailTemplateRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemp
  */
 GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
     const GetCustomVerificationEmailTemplateRequestPrivate &other, GetCustomVerificationEmailTemplateRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

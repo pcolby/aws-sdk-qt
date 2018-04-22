@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 GetContextKeysForPrincipalPolicyRequest::GetContextKeysForPrincipalPolicyRequest(const GetContextKeysForPrincipalPolicyRequest &other)
-    : IAMRequest(new GetContextKeysForPrincipalPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new GetContextKeysForPrincipalPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ GetContextKeysForPrincipalPolicyRequest::GetContextKeysForPrincipalPolicyRequest
  * Constructs a GetContextKeysForPrincipalPolicyRequest object.
  */
 GetContextKeysForPrincipalPolicyRequest::GetContextKeysForPrincipalPolicyRequest()
-    : IAMRequest(new GetContextKeysForPrincipalPolicyRequestPrivate(IAMRequest::GetContextKeysForPrincipalPolicyAction, this))
+    : IamRequest(new GetContextKeysForPrincipalPolicyRequestPrivate(IamRequest::GetContextKeysForPrincipalPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * GetContextKeysForPrincipalPolicyRequest::resp
  */
 
 /*!
- * Constructs a GetContextKeysForPrincipalPolicyRequestPrivate object for IAM \a action,
+ * Constructs a GetContextKeysForPrincipalPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
-    const IAMRequest::Action action, GetContextKeysForPrincipalPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, GetContextKeysForPrincipalPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicy
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
     const GetContextKeysForPrincipalPolicyRequestPrivate &other, GetContextKeysForPrincipalPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

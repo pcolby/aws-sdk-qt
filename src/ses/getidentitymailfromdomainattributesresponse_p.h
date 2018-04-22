@@ -27,7 +27,7 @@ namespace SES {
 
 class GetIdentityMailFromDomainAttributesResponse;
 
-class QTAWS_EXPORT GetIdentityMailFromDomainAttributesResponsePrivate : public SESResponsePrivate {
+class QTAWS_EXPORT GetIdentityMailFromDomainAttributesResponsePrivate : public SesResponsePrivate {
     Q_OBJECT
 
 public:

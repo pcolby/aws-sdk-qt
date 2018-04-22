@@ -28,10 +28,10 @@ namespace KMS {
 
 class EnableKeyRotationRequest;
 
-class QTAWS_EXPORT EnableKeyRotationRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT EnableKeyRotationRequestPrivate : public KmsRequestPrivate {
 
 public:
-    EnableKeyRotationRequestPrivate(const KMSRequest::Action action,
+    EnableKeyRotationRequestPrivate(const KmsRequest::Action action,
                                    EnableKeyRotationRequest * const q);
     EnableKeyRotationRequestPrivate(const EnableKeyRotationRequestPrivate &other,
                                    EnableKeyRotationRequest * const q);

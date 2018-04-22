@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 GetComplianceDetailRequest::GetComplianceDetailRequest(const GetComplianceDetailRequest &other)
-    : FMSRequest(new GetComplianceDetailRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new GetComplianceDetailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ GetComplianceDetailRequest::GetComplianceDetailRequest(const GetComplianceDetail
  * Constructs a GetComplianceDetailRequest object.
  */
 GetComplianceDetailRequest::GetComplianceDetailRequest()
-    : FMSRequest(new GetComplianceDetailRequestPrivate(FMSRequest::GetComplianceDetailAction, this))
+    : FmsRequest(new GetComplianceDetailRequestPrivate(FmsRequest::GetComplianceDetailAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailRequest::response(QNetwork
  */
 
 /*!
- * Constructs a GetComplianceDetailRequestPrivate object for FMS \a action,
+ * Constructs a GetComplianceDetailRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
-    const FMSRequest::Action action, GetComplianceDetailRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, GetComplianceDetailRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
  */
 GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
     const GetComplianceDetailRequestPrivate &other, GetComplianceDetailRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

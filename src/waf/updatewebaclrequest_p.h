@@ -28,10 +28,10 @@ namespace WAF {
 
 class UpdateWebACLRequest;
 
-class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WafRequestPrivate {
 
 public:
-    UpdateWebACLRequestPrivate(const WAFRequest::Action action,
+    UpdateWebACLRequestPrivate(const WafRequest::Action action,
                                    UpdateWebACLRequest * const q);
     UpdateWebACLRequestPrivate(const UpdateWebACLRequestPrivate &other,
                                    UpdateWebACLRequest * const q);

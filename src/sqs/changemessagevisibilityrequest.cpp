@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest(const ChangeMessageVisibilityRequest &other)
-    : SQSRequest(new ChangeMessageVisibilityRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new ChangeMessageVisibilityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest(const ChangeMessa
  * Constructs a ChangeMessageVisibilityRequest object.
  */
 ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest()
-    : SQSRequest(new ChangeMessageVisibilityRequestPrivate(SQSRequest::ChangeMessageVisibilityAction, this))
+    : SqsRequest(new ChangeMessageVisibilityRequestPrivate(SqsRequest::ChangeMessageVisibilityAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNet
  */
 
 /*!
- * Constructs a ChangeMessageVisibilityRequestPrivate object for SQS \a action,
+ * Constructs a ChangeMessageVisibilityRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
-    const SQSRequest::Action action, ChangeMessageVisibilityRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, ChangeMessageVisibilityRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
     const ChangeMessageVisibilityRequestPrivate &other, ChangeMessageVisibilityRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

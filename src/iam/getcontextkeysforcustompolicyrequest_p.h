@@ -28,10 +28,10 @@ namespace IAM {
 
 class GetContextKeysForCustomPolicyRequest;
 
-class QTAWS_EXPORT GetContextKeysForCustomPolicyRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT GetContextKeysForCustomPolicyRequestPrivate : public IamRequestPrivate {
 
 public:
-    GetContextKeysForCustomPolicyRequestPrivate(const IAMRequest::Action action,
+    GetContextKeysForCustomPolicyRequestPrivate(const IamRequest::Action action,
                                    GetContextKeysForCustomPolicyRequest * const q);
     GetContextKeysForCustomPolicyRequestPrivate(const GetContextKeysForCustomPolicyRequestPrivate &other,
                                    GetContextKeysForCustomPolicyRequest * const q);

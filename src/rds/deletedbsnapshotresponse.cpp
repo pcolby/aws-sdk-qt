@@ -108,7 +108,7 @@ DeleteDBSnapshotResponse::DeleteDBSnapshotResponse(
         const DeleteDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBSnapshotResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSnapshotRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteDBSnapshotResponsePrivate::DeleteDBSnapshotResponsePrivate(
-    DeleteDBSnapshotResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBSnapshotResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

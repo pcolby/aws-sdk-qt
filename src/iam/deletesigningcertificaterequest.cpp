@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteSigningCertificateRequest::DeleteSigningCertificateRequest(const DeleteSigningCertificateRequest &other)
-    : IAMRequest(new DeleteSigningCertificateRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteSigningCertificateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteSigningCertificateRequest::DeleteSigningCertificateRequest(const DeleteSig
  * Constructs a DeleteSigningCertificateRequest object.
  */
 DeleteSigningCertificateRequest::DeleteSigningCertificateRequest()
-    : IAMRequest(new DeleteSigningCertificateRequestPrivate(IAMRequest::DeleteSigningCertificateAction, this))
+    : IamRequest(new DeleteSigningCertificateRequestPrivate(IamRequest::DeleteSigningCertificateAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNe
  */
 
 /*!
- * Constructs a DeleteSigningCertificateRequestPrivate object for IAM \a action,
+ * Constructs a DeleteSigningCertificateRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
-    const IAMRequest::Action action, DeleteSigningCertificateRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteSigningCertificateRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
     const DeleteSigningCertificateRequestPrivate &other, DeleteSigningCertificateRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -48,7 +48,7 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
         const DescribeExportTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeExportTasksResponsePrivate(this), parent)
+    : Ec2Response(new DescribeExportTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeExportTasksRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeExportTasksResponsePrivate object with public implementation \a q.
  */
 DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
-    DescribeExportTasksResponse * const q) : EC2ResponsePrivate(q)
+    DescribeExportTasksResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

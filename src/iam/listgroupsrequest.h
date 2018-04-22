@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListGroupsRequestPrivate;
 
-class QTAWS_EXPORT ListGroupsRequest : public IAMRequest {
+class QTAWS_EXPORT ListGroupsRequest : public IamRequest {
 
 public:
     ListGroupsRequest(const ListGroupsRequest &other);

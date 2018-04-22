@@ -27,7 +27,7 @@ namespace SSM {
 
 class RegisterDefaultPatchBaselineRequestPrivate;
 
-class QTAWS_EXPORT RegisterDefaultPatchBaselineRequest : public SSMRequest {
+class QTAWS_EXPORT RegisterDefaultPatchBaselineRequest : public SsmRequest {
 
 public:
     RegisterDefaultPatchBaselineRequest(const RegisterDefaultPatchBaselineRequest &other);

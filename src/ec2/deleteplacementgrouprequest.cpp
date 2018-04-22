@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeletePlacementGroupRequest::DeletePlacementGroupRequest(const DeletePlacementGroupRequest &other)
-    : EC2Request(new DeletePlacementGroupRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeletePlacementGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeletePlacementGroupRequest::DeletePlacementGroupRequest(const DeletePlacementGr
  * Constructs a DeletePlacementGroupRequest object.
  */
 DeletePlacementGroupRequest::DeletePlacementGroupRequest()
-    : EC2Request(new DeletePlacementGroupRequestPrivate(EC2Request::DeletePlacementGroupAction, this))
+    : Ec2Request(new DeletePlacementGroupRequestPrivate(Ec2Request::DeletePlacementGroupAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DeletePlacementGroupRequestPrivate object for EC2 \a action,
+ * Constructs a DeletePlacementGroupRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
-    const EC2Request::Action action, DeletePlacementGroupRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeletePlacementGroupRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
     const DeletePlacementGroupRequestPrivate &other, DeletePlacementGroupRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

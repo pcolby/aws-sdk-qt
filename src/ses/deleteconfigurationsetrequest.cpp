@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigurationSetRequest &other)
-    : SESRequest(new DeleteConfigurationSetRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteConfigurationSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigu
  * Constructs a DeleteConfigurationSetRequest object.
  */
 DeleteConfigurationSetRequest::DeleteConfigurationSetRequest()
-    : SESRequest(new DeleteConfigurationSetRequestPrivate(SESRequest::DeleteConfigurationSetAction, this))
+    : SesRequest(new DeleteConfigurationSetRequestPrivate(SesRequest::DeleteConfigurationSetAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeleteConfigurationSetRequestPrivate object for SES \a action,
+ * Constructs a DeleteConfigurationSetRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
-    const SESRequest::Action action, DeleteConfigurationSetRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteConfigurationSetRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const DeleteConfigurationSetRequestPrivate &other, DeleteConfigurationSetRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

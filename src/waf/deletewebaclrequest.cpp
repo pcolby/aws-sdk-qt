@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
-    : WAFRequest(new DeleteWebACLRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteWebACLRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
  * Constructs a DeleteWebACLRequest object.
  */
 DeleteWebACLRequest::DeleteWebACLRequest()
-    : WAFRequest(new DeleteWebACLRequestPrivate(WAFRequest::DeleteWebACLAction, this))
+    : WafRequest(new DeleteWebACLRequestPrivate(WafRequest::DeleteWebACLAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DeleteWebACLRequestPrivate object for WAF \a action,
+ * Constructs a DeleteWebACLRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
-    const WAFRequest::Action action, DeleteWebACLRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteWebACLRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const DeleteWebACLRequestPrivate &other, DeleteWebACLRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

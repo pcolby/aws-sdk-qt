@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest(const UpdateKeyDescriptionRequest &other)
-    : KMSRequest(new UpdateKeyDescriptionRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new UpdateKeyDescriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest(const UpdateKeyDescript
  * Constructs a UpdateKeyDescriptionRequest object.
  */
 UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest()
-    : KMSRequest(new UpdateKeyDescriptionRequestPrivate(KMSRequest::UpdateKeyDescriptionAction, this))
+    : KmsRequest(new UpdateKeyDescriptionRequestPrivate(KmsRequest::UpdateKeyDescriptionAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetwor
  */
 
 /*!
- * Constructs a UpdateKeyDescriptionRequestPrivate object for KMS \a action,
+ * Constructs a UpdateKeyDescriptionRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
-    const KMSRequest::Action action, UpdateKeyDescriptionRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, UpdateKeyDescriptionRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
     const UpdateKeyDescriptionRequestPrivate &other, UpdateKeyDescriptionRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

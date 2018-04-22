@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteDhcpOptionsRequestPrivate;
 
-class QTAWS_EXPORT DeleteDhcpOptionsRequest : public EC2Request {
+class QTAWS_EXPORT DeleteDhcpOptionsRequest : public Ec2Request {
 
 public:
     DeleteDhcpOptionsRequest(const DeleteDhcpOptionsRequest &other);

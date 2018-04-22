@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 AssociateAdminAccountRequest::AssociateAdminAccountRequest(const AssociateAdminAccountRequest &other)
-    : FMSRequest(new AssociateAdminAccountRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new AssociateAdminAccountRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ AssociateAdminAccountRequest::AssociateAdminAccountRequest(const AssociateAdminA
  * Constructs a AssociateAdminAccountRequest object.
  */
 AssociateAdminAccountRequest::AssociateAdminAccountRequest()
-    : FMSRequest(new AssociateAdminAccountRequestPrivate(FMSRequest::AssociateAdminAccountAction, this))
+    : FmsRequest(new AssociateAdminAccountRequestPrivate(FmsRequest::AssociateAdminAccountAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * AssociateAdminAccountRequest::response(QNetwo
  */
 
 /*!
- * Constructs a AssociateAdminAccountRequestPrivate object for FMS \a action,
+ * Constructs a AssociateAdminAccountRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
-    const FMSRequest::Action action, AssociateAdminAccountRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, AssociateAdminAccountRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
  */
 AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
     const AssociateAdminAccountRequestPrivate &other, AssociateAdminAccountRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

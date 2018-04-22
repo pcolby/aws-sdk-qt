@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest(const UpdateAccountSendingEnabledRequest &other)
-    : SESRequest(new UpdateAccountSendingEnabledRequestPrivate(*other.d_func(), this))
+    : SesRequest(new UpdateAccountSendingEnabledRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest(const Upd
  * Constructs a UpdateAccountSendingEnabledRequest object.
  */
 UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest()
-    : SESRequest(new UpdateAccountSendingEnabledRequestPrivate(SESRequest::UpdateAccountSendingEnabledAction, this))
+    : SesRequest(new UpdateAccountSendingEnabledRequestPrivate(SesRequest::UpdateAccountSendingEnabledAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountSendingEnabledRequest::response(
  */
 
 /*!
- * Constructs a UpdateAccountSendingEnabledRequestPrivate object for SES \a action,
+ * Constructs a UpdateAccountSendingEnabledRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
-    const SESRequest::Action action, UpdateAccountSendingEnabledRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, UpdateAccountSendingEnabledRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPri
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
     const UpdateAccountSendingEnabledRequestPrivate &other, UpdateAccountSendingEnabledRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

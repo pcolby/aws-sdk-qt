@@ -68,7 +68,7 @@ DescribeMaintenanceWindowsResponse::DescribeMaintenanceWindowsResponse(
         const DescribeMaintenanceWindowsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeMaintenanceWindowsResponsePrivate(this), parent)
+    : SsmResponse(new DescribeMaintenanceWindowsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMaintenanceWindowsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeMaintenanceWindowsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeMaintenanceWindowsResponsePrivate object with public implementation \a q.
  */
 DescribeMaintenanceWindowsResponsePrivate::DescribeMaintenanceWindowsResponsePrivate(
-    DescribeMaintenanceWindowsResponse * const q) : SSMResponsePrivate(q)
+    DescribeMaintenanceWindowsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

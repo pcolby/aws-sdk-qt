@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeVpcClassicLinkDnsSupportRequest;
 
-class QTAWS_EXPORT DescribeVpcClassicLinkDnsSupportRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeVpcClassicLinkDnsSupportRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeVpcClassicLinkDnsSupportRequestPrivate(const EC2Request::Action action,
+    DescribeVpcClassicLinkDnsSupportRequestPrivate(const Ec2Request::Action action,
                                    DescribeVpcClassicLinkDnsSupportRequest * const q);
     DescribeVpcClassicLinkDnsSupportRequestPrivate(const DescribeVpcClassicLinkDnsSupportRequestPrivate &other,
                                    DescribeVpcClassicLinkDnsSupportRequest * const q);

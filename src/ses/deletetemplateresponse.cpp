@@ -55,7 +55,7 @@ DeleteTemplateResponse::DeleteTemplateResponse(
         const DeleteTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteTemplateResponsePrivate(this), parent)
+    : SesResponse(new DeleteTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteTemplateRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void DeleteTemplateResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteTemplateResponsePrivate::DeleteTemplateResponsePrivate(
-    DeleteTemplateResponse * const q) : SESResponsePrivate(q)
+    DeleteTemplateResponse * const q) : SesResponsePrivate(q)
 {
 
 }

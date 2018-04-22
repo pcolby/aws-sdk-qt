@@ -28,7 +28,7 @@ namespace ACM {
 
 class ExportCertificateResponsePrivate;
 
-class QTAWS_EXPORT ExportCertificateResponse : public ACMResponse {
+class QTAWS_EXPORT ExportCertificateResponse : public AcmResponse {
     Q_OBJECT
 
 public:

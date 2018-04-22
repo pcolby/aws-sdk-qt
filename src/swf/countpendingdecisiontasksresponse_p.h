@@ -27,7 +27,7 @@ namespace SWF {
 
 class CountPendingDecisionTasksResponse;
 
-class QTAWS_EXPORT CountPendingDecisionTasksResponsePrivate : public SWFResponsePrivate {
+class QTAWS_EXPORT CountPendingDecisionTasksResponsePrivate : public SwfResponsePrivate {
     Q_OBJECT
 
 public:

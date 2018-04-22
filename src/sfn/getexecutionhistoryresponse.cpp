@@ -63,7 +63,7 @@ GetExecutionHistoryResponse::GetExecutionHistoryResponse(
         const GetExecutionHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new GetExecutionHistoryResponsePrivate(this), parent)
+    : SfnResponse(new GetExecutionHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetExecutionHistoryRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
  * Constructs a GetExecutionHistoryResponsePrivate object with public implementation \a q.
  */
 GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
-    GetExecutionHistoryResponse * const q) : SFNResponsePrivate(q)
+    GetExecutionHistoryResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

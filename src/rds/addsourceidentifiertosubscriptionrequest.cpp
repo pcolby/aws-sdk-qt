@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other)
-    : RDSRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionReque
  * Constructs a AddSourceIdentifierToSubscriptionRequest object.
  */
 AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest()
-    : RDSRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(RDSRequest::AddSourceIdentifierToSubscriptionAction, this))
+    : RdsRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(RdsRequest::AddSourceIdentifierToSubscriptionAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::res
  */
 
 /*!
- * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for RDS \a action,
+ * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
-    const RDSRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const AddSourceIdentifierToSubscriptionRequestPrivate &other, AddSourceIdentifierToSubscriptionRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

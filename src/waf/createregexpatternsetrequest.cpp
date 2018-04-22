@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 CreateRegexPatternSetRequest::CreateRegexPatternSetRequest(const CreateRegexPatternSetRequest &other)
-    : WAFRequest(new CreateRegexPatternSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new CreateRegexPatternSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ CreateRegexPatternSetRequest::CreateRegexPatternSetRequest(const CreateRegexPatt
  * Constructs a CreateRegexPatternSetRequest object.
  */
 CreateRegexPatternSetRequest::CreateRegexPatternSetRequest()
-    : WAFRequest(new CreateRegexPatternSetRequestPrivate(WAFRequest::CreateRegexPatternSetAction, this))
+    : WafRequest(new CreateRegexPatternSetRequestPrivate(WafRequest::CreateRegexPatternSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetwo
  */
 
 /*!
- * Constructs a CreateRegexPatternSetRequestPrivate object for WAF \a action,
+ * Constructs a CreateRegexPatternSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
-    const WAFRequest::Action action, CreateRegexPatternSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, CreateRegexPatternSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
     const CreateRegexPatternSetRequestPrivate &other, CreateRegexPatternSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

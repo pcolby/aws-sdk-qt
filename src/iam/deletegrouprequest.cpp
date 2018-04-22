@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
-    : IAMRequest(new DeleteGroupRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
  * Constructs a DeleteGroupRequest object.
  */
 DeleteGroupRequest::DeleteGroupRequest()
-    : IAMRequest(new DeleteGroupRequestPrivate(IAMRequest::DeleteGroupAction, this))
+    : IamRequest(new DeleteGroupRequestPrivate(IamRequest::DeleteGroupAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a DeleteGroupRequestPrivate object for IAM \a action,
+ * Constructs a DeleteGroupRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
-    const IAMRequest::Action action, DeleteGroupRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteGroupRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const DeleteGroupRequestPrivate &other, DeleteGroupRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -49,7 +49,7 @@ ListActivatedRulesInRuleGroupResponse::ListActivatedRulesInRuleGroupResponse(
         const ListActivatedRulesInRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
+    : WafResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new ListActivatedRulesInRuleGroupRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void ListActivatedRulesInRuleGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a ListActivatedRulesInRuleGroupResponsePrivate object with public implementation \a q.
  */
 ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupResponsePrivate(
-    ListActivatedRulesInRuleGroupResponse * const q) : WAFResponsePrivate(q)
+    ListActivatedRulesInRuleGroupResponse * const q) : WafResponsePrivate(q)
 {
 
 }

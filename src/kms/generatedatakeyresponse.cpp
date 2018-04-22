@@ -143,7 +143,7 @@ GenerateDataKeyResponse::GenerateDataKeyResponse(
         const GenerateDataKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GenerateDataKeyResponsePrivate(this), parent)
+    : KmsResponse(new GenerateDataKeyResponsePrivate(this), parent)
 {
     setRequest(new GenerateDataKeyRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void GenerateDataKeyResponse::parseSuccess(QIODevice &response)
  * Constructs a GenerateDataKeyResponsePrivate object with public implementation \a q.
  */
 GenerateDataKeyResponsePrivate::GenerateDataKeyResponsePrivate(
-    GenerateDataKeyResponse * const q) : KMSResponsePrivate(q)
+    GenerateDataKeyResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

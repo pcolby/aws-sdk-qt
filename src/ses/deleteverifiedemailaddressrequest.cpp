@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteVerifiedEmailAddressRequest::DeleteVerifiedEmailAddressRequest(const DeleteVerifiedEmailAddressRequest &other)
-    : SESRequest(new DeleteVerifiedEmailAddressRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteVerifiedEmailAddressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteVerifiedEmailAddressRequest::DeleteVerifiedEmailAddressRequest(const Delet
  * Constructs a DeleteVerifiedEmailAddressRequest object.
  */
 DeleteVerifiedEmailAddressRequest::DeleteVerifiedEmailAddressRequest()
-    : SESRequest(new DeleteVerifiedEmailAddressRequestPrivate(SESRequest::DeleteVerifiedEmailAddressAction, this))
+    : SesRequest(new DeleteVerifiedEmailAddressRequestPrivate(SesRequest::DeleteVerifiedEmailAddressAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVerifiedEmailAddressRequest::response(Q
  */
 
 /*!
- * Constructs a DeleteVerifiedEmailAddressRequestPrivate object for SES \a action,
+ * Constructs a DeleteVerifiedEmailAddressRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPrivate(
-    const SESRequest::Action action, DeleteVerifiedEmailAddressRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteVerifiedEmailAddressRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPriva
  */
 DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPrivate(
     const DeleteVerifiedEmailAddressRequestPrivate &other, DeleteVerifiedEmailAddressRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

@@ -45,7 +45,7 @@ namespace FMS {
  * Constructs a copy of \a other.
  */
 ListComplianceStatusRequest::ListComplianceStatusRequest(const ListComplianceStatusRequest &other)
-    : FMSRequest(new ListComplianceStatusRequestPrivate(*other.d_func(), this))
+    : FmsRequest(new ListComplianceStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ ListComplianceStatusRequest::ListComplianceStatusRequest(const ListComplianceSta
  * Constructs a ListComplianceStatusRequest object.
  */
 ListComplianceStatusRequest::ListComplianceStatusRequest()
-    : FMSRequest(new ListComplianceStatusRequestPrivate(FMSRequest::ListComplianceStatusAction, this))
+    : FmsRequest(new ListComplianceStatusRequestPrivate(FmsRequest::ListComplianceStatusAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * ListComplianceStatusRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListComplianceStatusRequestPrivate object for FMS \a action,
+ * Constructs a ListComplianceStatusRequestPrivate object for Fms \a action,
  * with public implementation \a q.
  */
 ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
-    const FMSRequest::Action action, ListComplianceStatusRequest * const q)
-    : FMSRequestPrivate(action, q)
+    const FmsRequest::Action action, ListComplianceStatusRequest * const q)
+    : FmsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
  */
 ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
     const ListComplianceStatusRequestPrivate &other, ListComplianceStatusRequest * const q)
-    : FMSRequestPrivate(other, q)
+    : FmsRequestPrivate(other, q)
 {
 
 }

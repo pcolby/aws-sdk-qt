@@ -110,7 +110,7 @@ SendMessageBatchResponse::SendMessageBatchResponse(
         const SendMessageBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new SendMessageBatchResponsePrivate(this), parent)
+    : SqsResponse(new SendMessageBatchResponsePrivate(this), parent)
 {
     setRequest(new SendMessageBatchRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void SendMessageBatchResponse::parseSuccess(QIODevice &response)
  * Constructs a SendMessageBatchResponsePrivate object with public implementation \a q.
  */
 SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
-    SendMessageBatchResponse * const q) : SQSResponsePrivate(q)
+    SendMessageBatchResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

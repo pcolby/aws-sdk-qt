@@ -143,7 +143,7 @@ ImportKeyMaterialResponse::ImportKeyMaterialResponse(
         const ImportKeyMaterialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ImportKeyMaterialResponsePrivate(this), parent)
+    : KmsResponse(new ImportKeyMaterialResponsePrivate(this), parent)
 {
     setRequest(new ImportKeyMaterialRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void ImportKeyMaterialResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportKeyMaterialResponsePrivate object with public implementation \a q.
  */
 ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponsePrivate(
-    ImportKeyMaterialResponse * const q) : KMSResponsePrivate(q)
+    ImportKeyMaterialResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

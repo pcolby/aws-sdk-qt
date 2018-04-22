@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest(const GetRateBasedRuleManagedKeysRequest &other)
-    : WAFRequest(new GetRateBasedRuleManagedKeysRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetRateBasedRuleManagedKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest(const Get
  * Constructs a GetRateBasedRuleManagedKeysRequest object.
  */
 GetRateBasedRuleManagedKeysRequest::GetRateBasedRuleManagedKeysRequest()
-    : WAFRequest(new GetRateBasedRuleManagedKeysRequestPrivate(WAFRequest::GetRateBasedRuleManagedKeysAction, this))
+    : WafRequest(new GetRateBasedRuleManagedKeysRequestPrivate(WafRequest::GetRateBasedRuleManagedKeysAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(
  */
 
 /*!
- * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for WAF \a action,
+ * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
-    const WAFRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPri
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const GetRateBasedRuleManagedKeysRequestPrivate &other, GetRateBasedRuleManagedKeysRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

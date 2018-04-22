@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateEgressOnlyInternetGatewayRequestPrivate;
 
-class QTAWS_EXPORT CreateEgressOnlyInternetGatewayRequest : public EC2Request {
+class QTAWS_EXPORT CreateEgressOnlyInternetGatewayRequest : public Ec2Request {
 
 public:
     CreateEgressOnlyInternetGatewayRequest(const CreateEgressOnlyInternetGatewayRequest &other);

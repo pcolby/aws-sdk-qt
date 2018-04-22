@@ -109,7 +109,7 @@ UpdateRoleResponse::UpdateRoleResponse(
         const UpdateRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateRoleResponsePrivate(this), parent)
+    : IamResponse(new UpdateRoleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRoleRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateRoleResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateRoleResponsePrivate object with public implementation \a q.
  */
 UpdateRoleResponsePrivate::UpdateRoleResponsePrivate(
-    UpdateRoleResponse * const q) : IAMResponsePrivate(q)
+    UpdateRoleResponse * const q) : IamResponsePrivate(q)
 {
 
 }

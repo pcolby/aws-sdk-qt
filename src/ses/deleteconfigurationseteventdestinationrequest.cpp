@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest(const DeleteConfigurationSetEventDestinationRequest &other)
-    : SESRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestin
  * Constructs a DeleteConfigurationSetEventDestinationRequest object.
  */
 DeleteConfigurationSetEventDestinationRequest::DeleteConfigurationSetEventDestinationRequest()
-    : SESRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(SESRequest::DeleteConfigurationSetEventDestinationAction, this))
+    : SesRequest(new DeleteConfigurationSetEventDestinationRequestPrivate(SesRequest::DeleteConfigurationSetEventDestinationAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest
  */
 
 /*!
- * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for SES \a action,
+ * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
-    const SESRequest::Action action, DeleteConfigurationSetEventDestinationRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteConfigurationSetEventDestinationRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEven
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
     const DeleteConfigurationSetEventDestinationRequestPrivate &other, DeleteConfigurationSetEventDestinationRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

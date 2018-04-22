@@ -28,10 +28,10 @@ namespace WAF {
 
 class ListSizeConstraintSetsRequest;
 
-class QTAWS_EXPORT ListSizeConstraintSetsRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT ListSizeConstraintSetsRequestPrivate : public WafRequestPrivate {
 
 public:
-    ListSizeConstraintSetsRequestPrivate(const WAFRequest::Action action,
+    ListSizeConstraintSetsRequestPrivate(const WafRequest::Action action,
                                    ListSizeConstraintSetsRequest * const q);
     ListSizeConstraintSetsRequestPrivate(const ListSizeConstraintSetsRequestPrivate &other,
                                    ListSizeConstraintSetsRequest * const q);

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RebootInstancesRequest::RebootInstancesRequest(const RebootInstancesRequest &other)
-    : EC2Request(new RebootInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RebootInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RebootInstancesRequest::RebootInstancesRequest(const RebootInstancesRequest &oth
  * Constructs a RebootInstancesRequest object.
  */
 RebootInstancesRequest::RebootInstancesRequest()
-    : EC2Request(new RebootInstancesRequestPrivate(EC2Request::RebootInstancesAction, this))
+    : Ec2Request(new RebootInstancesRequestPrivate(Ec2Request::RebootInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a RebootInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a RebootInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
-    const EC2Request::Action action, RebootInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RebootInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
     const RebootInstancesRequestPrivate &other, RebootInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

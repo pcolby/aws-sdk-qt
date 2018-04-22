@@ -28,10 +28,10 @@ namespace SQS {
 
 class ReceiveMessageRequest;
 
-class QTAWS_EXPORT ReceiveMessageRequestPrivate : public SQSRequestPrivate {
+class QTAWS_EXPORT ReceiveMessageRequestPrivate : public SqsRequestPrivate {
 
 public:
-    ReceiveMessageRequestPrivate(const SQSRequest::Action action,
+    ReceiveMessageRequestPrivate(const SqsRequest::Action action,
                                    ReceiveMessageRequest * const q);
     ReceiveMessageRequestPrivate(const ReceiveMessageRequestPrivate &other,
                                    ReceiveMessageRequest * const q);

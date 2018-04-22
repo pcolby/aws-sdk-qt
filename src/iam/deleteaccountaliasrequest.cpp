@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteAccountAliasRequest::DeleteAccountAliasRequest(const DeleteAccountAliasRequest &other)
-    : IAMRequest(new DeleteAccountAliasRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteAccountAliasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteAccountAliasRequest::DeleteAccountAliasRequest(const DeleteAccountAliasReq
  * Constructs a DeleteAccountAliasRequest object.
  */
 DeleteAccountAliasRequest::DeleteAccountAliasRequest()
-    : IAMRequest(new DeleteAccountAliasRequestPrivate(IAMRequest::DeleteAccountAliasAction, this))
+    : IamRequest(new DeleteAccountAliasRequestPrivate(IamRequest::DeleteAccountAliasAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteAccountAliasRequestPrivate object for IAM \a action,
+ * Constructs a DeleteAccountAliasRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
-    const IAMRequest::Action action, DeleteAccountAliasRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteAccountAliasRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
     const DeleteAccountAliasRequestPrivate &other, DeleteAccountAliasRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

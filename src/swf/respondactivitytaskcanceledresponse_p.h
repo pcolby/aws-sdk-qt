@@ -27,7 +27,7 @@ namespace SWF {
 
 class RespondActivityTaskCanceledResponse;
 
-class QTAWS_EXPORT RespondActivityTaskCanceledResponsePrivate : public SWFResponsePrivate {
+class QTAWS_EXPORT RespondActivityTaskCanceledResponsePrivate : public SwfResponsePrivate {
     Q_OBJECT
 
 public:

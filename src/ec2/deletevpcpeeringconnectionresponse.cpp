@@ -48,7 +48,7 @@ DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
         const DeleteVpcPeeringConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVpcPeeringConnectionResponsePrivate(this), parent)
+    : Ec2Response(new DeleteVpcPeeringConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcPeeringConnectionRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteVpcPeeringConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponsePrivate(
-    DeleteVpcPeeringConnectionResponse * const q) : EC2ResponsePrivate(q)
+    DeleteVpcPeeringConnectionResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

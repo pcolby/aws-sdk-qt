@@ -48,7 +48,7 @@ RequestSpotInstancesResponse::RequestSpotInstancesResponse(
         const RequestSpotInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RequestSpotInstancesResponsePrivate(this), parent)
+    : Ec2Response(new RequestSpotInstancesResponsePrivate(this), parent)
 {
     setRequest(new RequestSpotInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void RequestSpotInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a RequestSpotInstancesResponsePrivate object with public implementation \a q.
  */
 RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
-    RequestSpotInstancesResponse * const q) : EC2ResponsePrivate(q)
+    RequestSpotInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

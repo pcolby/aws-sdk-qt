@@ -28,10 +28,10 @@ namespace RDS {
 
 class ResetDBParameterGroupRequest;
 
-class QTAWS_EXPORT ResetDBParameterGroupRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT ResetDBParameterGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
-    ResetDBParameterGroupRequestPrivate(const RDSRequest::Action action,
+    ResetDBParameterGroupRequestPrivate(const RdsRequest::Action action,
                                    ResetDBParameterGroupRequest * const q);
     ResetDBParameterGroupRequestPrivate(const ResetDBParameterGroupRequestPrivate &other,
                                    ResetDBParameterGroupRequest * const q);

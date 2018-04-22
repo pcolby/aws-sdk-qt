@@ -28,10 +28,10 @@ namespace SES {
 
 class UpdateTemplateRequest;
 
-class QTAWS_EXPORT UpdateTemplateRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT UpdateTemplateRequestPrivate : public SesRequestPrivate {
 
 public:
-    UpdateTemplateRequestPrivate(const SESRequest::Action action,
+    UpdateTemplateRequestPrivate(const SesRequest::Action action,
                                    UpdateTemplateRequest * const q);
     UpdateTemplateRequestPrivate(const UpdateTemplateRequestPrivate &other,
                                    UpdateTemplateRequest * const q);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class EnableVgwRoutePropagationRequestPrivate;
 
-class QTAWS_EXPORT EnableVgwRoutePropagationRequest : public EC2Request {
+class QTAWS_EXPORT EnableVgwRoutePropagationRequest : public Ec2Request {
 
 public:
     EnableVgwRoutePropagationRequest(const EnableVgwRoutePropagationRequest &other);

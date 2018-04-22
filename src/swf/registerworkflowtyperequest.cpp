@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest(const RegisterWorkflowTypeRequest &other)
-    : SWFRequest(new RegisterWorkflowTypeRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RegisterWorkflowTypeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest(const RegisterWorkflowT
  * Constructs a RegisterWorkflowTypeRequest object.
  */
 RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest()
-    : SWFRequest(new RegisterWorkflowTypeRequestPrivate(SWFRequest::RegisterWorkflowTypeAction, this))
+    : SwfRequest(new RegisterWorkflowTypeRequestPrivate(SwfRequest::RegisterWorkflowTypeAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetwor
  */
 
 /*!
- * Constructs a RegisterWorkflowTypeRequestPrivate object for SWF \a action,
+ * Constructs a RegisterWorkflowTypeRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
-    const SWFRequest::Action action, RegisterWorkflowTypeRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RegisterWorkflowTypeRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
     const RegisterWorkflowTypeRequestPrivate &other, RegisterWorkflowTypeRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

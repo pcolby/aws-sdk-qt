@@ -28,10 +28,10 @@ namespace EC2 {
 
 class PurchaseHostReservationRequest;
 
-class QTAWS_EXPORT PurchaseHostReservationRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT PurchaseHostReservationRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    PurchaseHostReservationRequestPrivate(const EC2Request::Action action,
+    PurchaseHostReservationRequestPrivate(const Ec2Request::Action action,
                                    PurchaseHostReservationRequest * const q);
     PurchaseHostReservationRequestPrivate(const PurchaseHostReservationRequestPrivate &other,
                                    PurchaseHostReservationRequest * const q);

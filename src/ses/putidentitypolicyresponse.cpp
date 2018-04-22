@@ -55,7 +55,7 @@ PutIdentityPolicyResponse::PutIdentityPolicyResponse(
         const PutIdentityPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new PutIdentityPolicyResponsePrivate(this), parent)
+    : SesResponse(new PutIdentityPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutIdentityPolicyRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a PutIdentityPolicyResponsePrivate object with public implementation \a q.
  */
 PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
-    PutIdentityPolicyResponse * const q) : SESResponsePrivate(q)
+    PutIdentityPolicyResponse * const q) : SesResponsePrivate(q)
 {
 
 }

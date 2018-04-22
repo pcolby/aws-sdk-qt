@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteRepositoryPolicyRequest &other)
-    : ECRRequest(new DeleteRepositoryPolicyRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new DeleteRepositoryPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteReposit
  * Constructs a DeleteRepositoryPolicyRequest object.
  */
 DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest()
-    : ECRRequest(new DeleteRepositoryPolicyRequestPrivate(ECRRequest::DeleteRepositoryPolicyAction, this))
+    : EcrRequest(new DeleteRepositoryPolicyRequestPrivate(EcrRequest::DeleteRepositoryPolicyAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeleteRepositoryPolicyRequestPrivate object for ECR \a action,
+ * Constructs a DeleteRepositoryPolicyRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
-    const ECRRequest::Action action, DeleteRepositoryPolicyRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, DeleteRepositoryPolicyRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
  */
 DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
     const DeleteRepositoryPolicyRequestPrivate &other, DeleteRepositoryPolicyRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

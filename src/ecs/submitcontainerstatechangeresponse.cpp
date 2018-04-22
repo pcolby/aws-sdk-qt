@@ -61,7 +61,7 @@ SubmitContainerStateChangeResponse::SubmitContainerStateChangeResponse(
         const SubmitContainerStateChangeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new SubmitContainerStateChangeResponsePrivate(this), parent)
+    : EcsResponse(new SubmitContainerStateChangeResponsePrivate(this), parent)
 {
     setRequest(new SubmitContainerStateChangeRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void SubmitContainerStateChangeResponse::parseSuccess(QIODevice &response)
  * Constructs a SubmitContainerStateChangeResponsePrivate object with public implementation \a q.
  */
 SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePrivate(
-    SubmitContainerStateChangeResponse * const q) : ECSResponsePrivate(q)
+    SubmitContainerStateChangeResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
-    : MQRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
+    : MqRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
  * Constructs a DeleteUserRequest object.
  */
 DeleteUserRequest::DeleteUserRequest()
-    : MQRequest(new DeleteUserRequestPrivate(MQRequest::DeleteUserAction, this))
+    : MqRequest(new DeleteUserRequestPrivate(MqRequest::DeleteUserAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a DeleteUserRequestPrivate object for MQ \a action,
+ * Constructs a DeleteUserRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
-    const MQRequest::Action action, DeleteUserRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, DeleteUserRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const DeleteUserRequestPrivate &other, DeleteUserRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &other)
-    : SQSRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &
  * Constructs a RemovePermissionRequest object.
  */
 RemovePermissionRequest::RemovePermissionRequest()
-    : SQSRequest(new RemovePermissionRequestPrivate(SQSRequest::RemovePermissionAction, this))
+    : SqsRequest(new RemovePermissionRequestPrivate(SqsRequest::RemovePermissionAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a RemovePermissionRequestPrivate object for SQS \a action,
+ * Constructs a RemovePermissionRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
-    const SQSRequest::Action action, RemovePermissionRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, RemovePermissionRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const RemovePermissionRequestPrivate &other, RemovePermissionRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

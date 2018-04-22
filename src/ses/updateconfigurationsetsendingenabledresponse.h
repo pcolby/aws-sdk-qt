@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetSendingEnabledResponsePrivate;
 
-class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledResponse : public SESResponse {
+class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledResponse : public SesResponse {
     Q_OBJECT
 
 public:

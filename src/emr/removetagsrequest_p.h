@@ -28,10 +28,10 @@ namespace EMR {
 
 class RemoveTagsRequest;
 
-class QTAWS_EXPORT RemoveTagsRequestPrivate : public EMRRequestPrivate {
+class QTAWS_EXPORT RemoveTagsRequestPrivate : public EmrRequestPrivate {
 
 public:
-    RemoveTagsRequestPrivate(const EMRRequest::Action action,
+    RemoveTagsRequestPrivate(const EmrRequest::Action action,
                                    RemoveTagsRequest * const q);
     RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
                                    RemoveTagsRequest * const q);

@@ -27,7 +27,7 @@ namespace RDS {
 
 class RevokeDBSecurityGroupIngressRequestPrivate;
 
-class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequest : public RDSRequest {
+class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequest : public RdsRequest {
 
 public:
     RevokeDBSecurityGroupIngressRequest(const RevokeDBSecurityGroupIngressRequest &other);

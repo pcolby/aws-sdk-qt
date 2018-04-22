@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 RegisterContainerInstanceRequest::RegisterContainerInstanceRequest(const RegisterContainerInstanceRequest &other)
-    : ECSRequest(new RegisterContainerInstanceRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new RegisterContainerInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ RegisterContainerInstanceRequest::RegisterContainerInstanceRequest(const Registe
  * Constructs a RegisterContainerInstanceRequest object.
  */
 RegisterContainerInstanceRequest::RegisterContainerInstanceRequest()
-    : ECSRequest(new RegisterContainerInstanceRequestPrivate(ECSRequest::RegisterContainerInstanceAction, this))
+    : EcsRequest(new RegisterContainerInstanceRequestPrivate(EcsRequest::RegisterContainerInstanceAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * RegisterContainerInstanceRequest::response(QN
  */
 
 /*!
- * Constructs a RegisterContainerInstanceRequestPrivate object for ECS \a action,
+ * Constructs a RegisterContainerInstanceRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
-    const ECSRequest::Action action, RegisterContainerInstanceRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, RegisterContainerInstanceRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
     const RegisterContainerInstanceRequestPrivate &other, RegisterContainerInstanceRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

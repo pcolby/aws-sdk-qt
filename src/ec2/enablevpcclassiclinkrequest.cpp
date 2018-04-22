@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest(const EnableVpcClassicLinkRequest &other)
-    : EC2Request(new EnableVpcClassicLinkRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new EnableVpcClassicLinkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest(const EnableVpcClassicL
  * Constructs a EnableVpcClassicLinkRequest object.
  */
 EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest()
-    : EC2Request(new EnableVpcClassicLinkRequestPrivate(EC2Request::EnableVpcClassicLinkAction, this))
+    : Ec2Request(new EnableVpcClassicLinkRequestPrivate(Ec2Request::EnableVpcClassicLinkAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkRequest::response(QNetwor
  */
 
 /*!
- * Constructs a EnableVpcClassicLinkRequestPrivate object for EC2 \a action,
+ * Constructs a EnableVpcClassicLinkRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
-    const EC2Request::Action action, EnableVpcClassicLinkRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, EnableVpcClassicLinkRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
  */
 EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
     const EnableVpcClassicLinkRequestPrivate &other, EnableVpcClassicLinkRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

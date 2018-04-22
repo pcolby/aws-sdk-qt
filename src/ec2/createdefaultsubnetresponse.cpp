@@ -48,7 +48,7 @@ CreateDefaultSubnetResponse::CreateDefaultSubnetResponse(
         const CreateDefaultSubnetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateDefaultSubnetResponsePrivate(this), parent)
+    : Ec2Response(new CreateDefaultSubnetResponsePrivate(this), parent)
 {
     setRequest(new CreateDefaultSubnetRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateDefaultSubnetResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDefaultSubnetResponsePrivate object with public implementation \a q.
  */
 CreateDefaultSubnetResponsePrivate::CreateDefaultSubnetResponsePrivate(
-    CreateDefaultSubnetResponse * const q) : EC2ResponsePrivate(q)
+    CreateDefaultSubnetResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

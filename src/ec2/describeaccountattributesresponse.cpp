@@ -48,7 +48,7 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeAccountAttributesResponsePrivate(this), parent)
+    : Ec2Response(new DescribeAccountAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountAttributesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
-    DescribeAccountAttributesResponse * const q) : EC2ResponsePrivate(q)
+    DescribeAccountAttributesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ CreatePlacementGroupResponse::CreatePlacementGroupResponse(
         const CreatePlacementGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreatePlacementGroupResponsePrivate(this), parent)
+    : Ec2Response(new CreatePlacementGroupResponsePrivate(this), parent)
 {
     setRequest(new CreatePlacementGroupRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreatePlacementGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CreatePlacementGroupResponsePrivate object with public implementation \a q.
  */
 CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponsePrivate(
-    CreatePlacementGroupResponse * const q) : EC2ResponsePrivate(q)
+    CreatePlacementGroupResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

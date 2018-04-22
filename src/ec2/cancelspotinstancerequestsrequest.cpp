@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest(const CancelSpotInstanceRequestsRequest &other)
-    : EC2Request(new CancelSpotInstanceRequestsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CancelSpotInstanceRequestsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest(const Cance
  * Constructs a CancelSpotInstanceRequestsRequest object.
  */
 CancelSpotInstanceRequestsRequest::CancelSpotInstanceRequestsRequest()
-    : EC2Request(new CancelSpotInstanceRequestsRequestPrivate(EC2Request::CancelSpotInstanceRequestsAction, this))
+    : Ec2Request(new CancelSpotInstanceRequestsRequestPrivate(Ec2Request::CancelSpotInstanceRequestsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(Q
  */
 
 /*!
- * Constructs a CancelSpotInstanceRequestsRequestPrivate object for EC2 \a action,
+ * Constructs a CancelSpotInstanceRequestsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
-    const EC2Request::Action action, CancelSpotInstanceRequestsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CancelSpotInstanceRequestsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPriva
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
     const CancelSpotInstanceRequestsRequestPrivate &other, CancelSpotInstanceRequestsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

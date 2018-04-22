@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatchBaselineRequest(const DescribeEffectivePatchesForPatchBaselineRequest &other)
-    : SSMRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatc
  * Constructs a DescribeEffectivePatchesForPatchBaselineRequest object.
  */
 DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatchBaselineRequest()
-    : SSMRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(SSMRequest::DescribeEffectivePatchesForPatchBaselineAction, this))
+    : SsmRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(SsmRequest::DescribeEffectivePatchesForPatchBaselineAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectivePatchesForPatchBaselineReque
  */
 
 /*!
- * Constructs a DescribeEffectivePatchesForPatchBaselineRequestPrivate object for SSM \a action,
+ * Constructs a DescribeEffectivePatchesForPatchBaselineRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
-    const SSMRequest::Action action, DescribeEffectivePatchesForPatchBaselineRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeEffectivePatchesForPatchBaselineRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatches
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
     const DescribeEffectivePatchesForPatchBaselineRequestPrivate &other, DescribeEffectivePatchesForPatchBaselineRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

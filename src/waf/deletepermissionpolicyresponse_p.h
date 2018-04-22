@@ -27,7 +27,7 @@ namespace WAF {
 
 class DeletePermissionPolicyResponse;
 
-class QTAWS_EXPORT DeletePermissionPolicyResponsePrivate : public WAFResponsePrivate {
+class QTAWS_EXPORT DeletePermissionPolicyResponsePrivate : public WafResponsePrivate {
     Q_OBJECT
 
 public:

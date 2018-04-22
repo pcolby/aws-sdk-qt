@@ -28,7 +28,7 @@ namespace SMS {
 
 class GetConnectorsResponsePrivate;
 
-class QTAWS_EXPORT GetConnectorsResponse : public SMSResponse {
+class QTAWS_EXPORT GetConnectorsResponse : public SmsResponse {
     Q_OBJECT
 
 public:

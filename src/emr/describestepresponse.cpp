@@ -47,7 +47,7 @@ DescribeStepResponse::DescribeStepResponse(
         const DescribeStepRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new DescribeStepResponsePrivate(this), parent)
+    : EmrResponse(new DescribeStepResponsePrivate(this), parent)
 {
     setRequest(new DescribeStepRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void DescribeStepResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeStepResponsePrivate object with public implementation \a q.
  */
 DescribeStepResponsePrivate::DescribeStepResponsePrivate(
-    DescribeStepResponse * const q) : EMRResponsePrivate(q)
+    DescribeStepResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

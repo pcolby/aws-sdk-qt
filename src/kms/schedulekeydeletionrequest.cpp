@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest(const ScheduleKeyDeletionRequest &other)
-    : KMSRequest(new ScheduleKeyDeletionRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new ScheduleKeyDeletionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest(const ScheduleKeyDeletion
  * Constructs a ScheduleKeyDeletionRequest object.
  */
 ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest()
-    : KMSRequest(new ScheduleKeyDeletionRequestPrivate(KMSRequest::ScheduleKeyDeletionAction, this))
+    : KmsRequest(new ScheduleKeyDeletionRequestPrivate(KmsRequest::ScheduleKeyDeletionAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetwork
  */
 
 /*!
- * Constructs a ScheduleKeyDeletionRequestPrivate object for KMS \a action,
+ * Constructs a ScheduleKeyDeletionRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
-    const KMSRequest::Action action, ScheduleKeyDeletionRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, ScheduleKeyDeletionRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
     const ScheduleKeyDeletionRequestPrivate &other, ScheduleKeyDeletionRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

@@ -68,7 +68,7 @@ DescribeInventoryDeletionsResponse::DescribeInventoryDeletionsResponse(
         const DescribeInventoryDeletionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeInventoryDeletionsResponsePrivate(this), parent)
+    : SsmResponse(new DescribeInventoryDeletionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeInventoryDeletionsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeInventoryDeletionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeInventoryDeletionsResponsePrivate object with public implementation \a q.
  */
 DescribeInventoryDeletionsResponsePrivate::DescribeInventoryDeletionsResponsePrivate(
-    DescribeInventoryDeletionsResponse * const q) : SSMResponsePrivate(q)
+    DescribeInventoryDeletionsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

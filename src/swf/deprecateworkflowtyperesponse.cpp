@@ -60,7 +60,7 @@ DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
         const DeprecateWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DeprecateWorkflowTypeResponsePrivate(this), parent)
+    : SwfResponse(new DeprecateWorkflowTypeResponsePrivate(this), parent)
 {
     setRequest(new DeprecateWorkflowTypeRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void DeprecateWorkflowTypeResponse::parseSuccess(QIODevice &response)
  * Constructs a DeprecateWorkflowTypeResponsePrivate object with public implementation \a q.
  */
 DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
-    DeprecateWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
+    DeprecateWorkflowTypeResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

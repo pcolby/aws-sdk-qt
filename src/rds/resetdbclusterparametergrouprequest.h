@@ -27,7 +27,7 @@ namespace RDS {
 
 class ResetDBClusterParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT ResetDBClusterParameterGroupRequest : public RDSRequest {
+class QTAWS_EXPORT ResetDBClusterParameterGroupRequest : public RdsRequest {
 
 public:
     ResetDBClusterParameterGroupRequest(const ResetDBClusterParameterGroupRequest &other);

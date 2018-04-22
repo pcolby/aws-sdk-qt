@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 RegisterDefaultPatchBaselineRequest::RegisterDefaultPatchBaselineRequest(const RegisterDefaultPatchBaselineRequest &other)
-    : SSMRequest(new RegisterDefaultPatchBaselineRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new RegisterDefaultPatchBaselineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ RegisterDefaultPatchBaselineRequest::RegisterDefaultPatchBaselineRequest(const R
  * Constructs a RegisterDefaultPatchBaselineRequest object.
  */
 RegisterDefaultPatchBaselineRequest::RegisterDefaultPatchBaselineRequest()
-    : SSMRequest(new RegisterDefaultPatchBaselineRequestPrivate(SSMRequest::RegisterDefaultPatchBaselineAction, this))
+    : SsmRequest(new RegisterDefaultPatchBaselineRequestPrivate(SsmRequest::RegisterDefaultPatchBaselineAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * RegisterDefaultPatchBaselineRequest::response
  */
 
 /*!
- * Constructs a RegisterDefaultPatchBaselineRequestPrivate object for SSM \a action,
+ * Constructs a RegisterDefaultPatchBaselineRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestPrivate(
-    const SSMRequest::Action action, RegisterDefaultPatchBaselineRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, RegisterDefaultPatchBaselineRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestP
  */
 RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestPrivate(
     const RegisterDefaultPatchBaselineRequestPrivate &other, RegisterDefaultPatchBaselineRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

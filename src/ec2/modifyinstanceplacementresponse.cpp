@@ -48,7 +48,7 @@ ModifyInstancePlacementResponse::ModifyInstancePlacementResponse(
         const ModifyInstancePlacementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyInstancePlacementResponsePrivate(this), parent)
+    : Ec2Response(new ModifyInstancePlacementResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstancePlacementRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyInstancePlacementResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyInstancePlacementResponsePrivate object with public implementation \a q.
  */
 ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponsePrivate(
-    ModifyInstancePlacementResponse * const q) : EC2ResponsePrivate(q)
+    ModifyInstancePlacementResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

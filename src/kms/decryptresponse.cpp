@@ -143,7 +143,7 @@ DecryptResponse::DecryptResponse(
         const DecryptRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new DecryptResponsePrivate(this), parent)
+    : KmsResponse(new DecryptResponsePrivate(this), parent)
 {
     setRequest(new DecryptRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void DecryptResponse::parseSuccess(QIODevice &response)
  * Constructs a DecryptResponsePrivate object with public implementation \a q.
  */
 DecryptResponsePrivate::DecryptResponsePrivate(
-    DecryptResponse * const q) : KMSResponsePrivate(q)
+    DecryptResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

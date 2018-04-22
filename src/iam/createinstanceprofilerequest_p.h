@@ -28,10 +28,10 @@ namespace IAM {
 
 class CreateInstanceProfileRequest;
 
-class QTAWS_EXPORT CreateInstanceProfileRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT CreateInstanceProfileRequestPrivate : public IamRequestPrivate {
 
 public:
-    CreateInstanceProfileRequestPrivate(const IAMRequest::Action action,
+    CreateInstanceProfileRequestPrivate(const IamRequest::Action action,
                                    CreateInstanceProfileRequest * const q);
     CreateInstanceProfileRequestPrivate(const CreateInstanceProfileRequestPrivate &other,
                                    CreateInstanceProfileRequest * const q);

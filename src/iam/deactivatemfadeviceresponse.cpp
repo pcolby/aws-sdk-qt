@@ -109,7 +109,7 @@ DeactivateMFADeviceResponse::DeactivateMFADeviceResponse(
         const DeactivateMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeactivateMFADeviceResponsePrivate(this), parent)
+    : IamResponse(new DeactivateMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new DeactivateMFADeviceRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
  * Constructs a DeactivateMFADeviceResponsePrivate object with public implementation \a q.
  */
 DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
-    DeactivateMFADeviceResponse * const q) : IAMResponsePrivate(q)
+    DeactivateMFADeviceResponse * const q) : IamResponsePrivate(q)
 {
 
 }

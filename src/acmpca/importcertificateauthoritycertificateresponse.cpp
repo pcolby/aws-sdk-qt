@@ -74,7 +74,7 @@ ImportCertificateAuthorityCertificateResponse::ImportCertificateAuthorityCertifi
         const ImportCertificateAuthorityCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new ImportCertificateAuthorityCertificateResponsePrivate(this), parent)
+    : AcmpcaResponse(new ImportCertificateAuthorityCertificateResponsePrivate(this), parent)
 {
     setRequest(new ImportCertificateAuthorityCertificateRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void ImportCertificateAuthorityCertificateResponse::parseSuccess(QIODevice &resp
  * Constructs a ImportCertificateAuthorityCertificateResponsePrivate object with public implementation \a q.
  */
 ImportCertificateAuthorityCertificateResponsePrivate::ImportCertificateAuthorityCertificateResponsePrivate(
-    ImportCertificateAuthorityCertificateResponse * const q) : ACMPCAResponsePrivate(q)
+    ImportCertificateAuthorityCertificateResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

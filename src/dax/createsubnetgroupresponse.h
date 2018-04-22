@@ -28,7 +28,7 @@ namespace DAX {
 
 class CreateSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateSubnetGroupResponse : public DAXResponse {
+class QTAWS_EXPORT CreateSubnetGroupResponse : public DaxResponse {
     Q_OBJECT
 
 public:

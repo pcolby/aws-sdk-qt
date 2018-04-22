@@ -108,7 +108,7 @@ DescribeReservedDBInstancesResponse::DescribeReservedDBInstancesResponse(
         const DescribeReservedDBInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeReservedDBInstancesResponsePrivate(this), parent)
+    : RdsResponse(new DescribeReservedDBInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedDBInstancesRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeReservedDBInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponsePrivate(
-    DescribeReservedDBInstancesResponse * const q) : RDSResponsePrivate(q)
+    DescribeReservedDBInstancesResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

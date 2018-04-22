@@ -108,7 +108,7 @@ CopyDBSnapshotResponse::CopyDBSnapshotResponse(
         const CopyDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyDBSnapshotResponsePrivate(this), parent)
+    : RdsResponse(new CopyDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CopyDBSnapshotRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CopyDBSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a CopyDBSnapshotResponsePrivate object with public implementation \a q.
  */
 CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponsePrivate(
-    CopyDBSnapshotResponse * const q) : RDSResponsePrivate(q)
+    CopyDBSnapshotResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
-    : ECSRequest(new PutAttributesRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new PutAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ PutAttributesRequest::PutAttributesRequest(const PutAttributesRequest &other)
  * Constructs a PutAttributesRequest object.
  */
 PutAttributesRequest::PutAttributesRequest()
-    : ECSRequest(new PutAttributesRequestPrivate(ECSRequest::PutAttributesAction, this))
+    : EcsRequest(new PutAttributesRequestPrivate(EcsRequest::PutAttributesAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a PutAttributesRequestPrivate object for ECS \a action,
+ * Constructs a PutAttributesRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
-    const ECSRequest::Action action, PutAttributesRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, PutAttributesRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const PutAttributesRequestPrivate &other, PutAttributesRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

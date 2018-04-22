@@ -110,7 +110,7 @@ PurgeQueueResponse::PurgeQueueResponse(
         const PurgeQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new PurgeQueueResponsePrivate(this), parent)
+    : SqsResponse(new PurgeQueueResponsePrivate(this), parent)
 {
     setRequest(new PurgeQueueRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void PurgeQueueResponse::parseSuccess(QIODevice &response)
  * Constructs a PurgeQueueResponsePrivate object with public implementation \a q.
  */
 PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
-    PurgeQueueResponse * const q) : SQSResponsePrivate(q)
+    PurgeQueueResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

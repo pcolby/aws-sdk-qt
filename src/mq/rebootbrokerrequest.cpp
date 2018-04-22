@@ -41,7 +41,7 @@ namespace MQ {
  * Constructs a copy of \a other.
  */
 RebootBrokerRequest::RebootBrokerRequest(const RebootBrokerRequest &other)
-    : MQRequest(new RebootBrokerRequestPrivate(*other.d_func(), this))
+    : MqRequest(new RebootBrokerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -50,7 +50,7 @@ RebootBrokerRequest::RebootBrokerRequest(const RebootBrokerRequest &other)
  * Constructs a RebootBrokerRequest object.
  */
 RebootBrokerRequest::RebootBrokerRequest()
-    : MQRequest(new RebootBrokerRequestPrivate(MQRequest::RebootBrokerAction, this))
+    : MqRequest(new RebootBrokerRequestPrivate(MqRequest::RebootBrokerAction, this))
 {
 
 }
@@ -83,12 +83,12 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a RebootBrokerRequestPrivate object for MQ \a action,
+ * Constructs a RebootBrokerRequestPrivate object for Mq \a action,
  * with public implementation \a q.
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
-    const MQRequest::Action action, RebootBrokerRequest * const q)
-    : MQRequestPrivate(action, q)
+    const MqRequest::Action action, RebootBrokerRequest * const q)
+    : MqRequestPrivate(action, q)
 {
 
 }
@@ -101,7 +101,7 @@ RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
     const RebootBrokerRequestPrivate &other, RebootBrokerRequest * const q)
-    : MQRequestPrivate(other, q)
+    : MqRequestPrivate(other, q)
 {
 
 }

@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 DeleteActivityRequest::DeleteActivityRequest(const DeleteActivityRequest &other)
-    : SFNRequest(new DeleteActivityRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new DeleteActivityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ DeleteActivityRequest::DeleteActivityRequest(const DeleteActivityRequest &other)
  * Constructs a DeleteActivityRequest object.
  */
 DeleteActivityRequest::DeleteActivityRequest()
-    : SFNRequest(new DeleteActivityRequestPrivate(SFNRequest::DeleteActivityAction, this))
+    : SfnRequest(new DeleteActivityRequestPrivate(SfnRequest::DeleteActivityAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DeleteActivityRequestPrivate object for SFN \a action,
+ * Constructs a DeleteActivityRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
-    const SFNRequest::Action action, DeleteActivityRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, DeleteActivityRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
     const DeleteActivityRequestPrivate &other, DeleteActivityRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

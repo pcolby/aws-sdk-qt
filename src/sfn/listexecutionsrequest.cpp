@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 ListExecutionsRequest::ListExecutionsRequest(const ListExecutionsRequest &other)
-    : SFNRequest(new ListExecutionsRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new ListExecutionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ ListExecutionsRequest::ListExecutionsRequest(const ListExecutionsRequest &other)
  * Constructs a ListExecutionsRequest object.
  */
 ListExecutionsRequest::ListExecutionsRequest()
-    : SFNRequest(new ListExecutionsRequestPrivate(SFNRequest::ListExecutionsAction, this))
+    : SfnRequest(new ListExecutionsRequestPrivate(SfnRequest::ListExecutionsAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * ListExecutionsRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a ListExecutionsRequestPrivate object for SFN \a action,
+ * Constructs a ListExecutionsRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
-    const SFNRequest::Action action, ListExecutionsRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, ListExecutionsRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
  */
 ListExecutionsRequestPrivate::ListExecutionsRequestPrivate(
     const ListExecutionsRequestPrivate &other, ListExecutionsRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

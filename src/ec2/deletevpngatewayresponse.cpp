@@ -48,7 +48,7 @@ DeleteVpnGatewayResponse::DeleteVpnGatewayResponse(
         const DeleteVpnGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVpnGatewayResponsePrivate(this), parent)
+    : Ec2Response(new DeleteVpnGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpnGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteVpnGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteVpnGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponsePrivate(
-    DeleteVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
+    DeleteVpnGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

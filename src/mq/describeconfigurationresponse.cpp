@@ -46,7 +46,7 @@ DescribeConfigurationResponse::DescribeConfigurationResponse(
         const DescribeConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new DescribeConfigurationResponsePrivate(this), parent)
+    : MqResponse(new DescribeConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void DescribeConfigurationResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeConfigurationResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationResponsePrivate::DescribeConfigurationResponsePrivate(
-    DescribeConfigurationResponse * const q) : MQResponsePrivate(q)
+    DescribeConfigurationResponse * const q) : MqResponsePrivate(q)
 {
 
 }

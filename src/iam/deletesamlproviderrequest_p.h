@@ -28,10 +28,10 @@ namespace IAM {
 
 class DeleteSAMLProviderRequest;
 
-class QTAWS_EXPORT DeleteSAMLProviderRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT DeleteSAMLProviderRequestPrivate : public IamRequestPrivate {
 
 public:
-    DeleteSAMLProviderRequestPrivate(const IAMRequest::Action action,
+    DeleteSAMLProviderRequestPrivate(const IamRequest::Action action,
                                    DeleteSAMLProviderRequest * const q);
     DeleteSAMLProviderRequestPrivate(const DeleteSAMLProviderRequestPrivate &other,
                                    DeleteSAMLProviderRequest * const q);

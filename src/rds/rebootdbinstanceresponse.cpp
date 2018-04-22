@@ -108,7 +108,7 @@ RebootDBInstanceResponse::RebootDBInstanceResponse(
         const RebootDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RebootDBInstanceResponsePrivate(this), parent)
+    : RdsResponse(new RebootDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new RebootDBInstanceRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
  * Constructs a RebootDBInstanceResponsePrivate object with public implementation \a q.
  */
 RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
-    RebootDBInstanceResponse * const q) : RDSResponsePrivate(q)
+    RebootDBInstanceResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

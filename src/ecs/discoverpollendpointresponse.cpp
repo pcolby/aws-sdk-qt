@@ -61,7 +61,7 @@ DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
         const DiscoverPollEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DiscoverPollEndpointResponsePrivate(this), parent)
+    : EcsResponse(new DiscoverPollEndpointResponsePrivate(this), parent)
 {
     setRequest(new DiscoverPollEndpointRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
  * Constructs a DiscoverPollEndpointResponsePrivate object with public implementation \a q.
  */
 DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
-    DiscoverPollEndpointResponse * const q) : ECSResponsePrivate(q)
+    DiscoverPollEndpointResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

@@ -68,7 +68,7 @@ CreateResourceDataSyncResponse::CreateResourceDataSyncResponse(
         const CreateResourceDataSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateResourceDataSyncResponsePrivate(this), parent)
+    : SsmResponse(new CreateResourceDataSyncResponsePrivate(this), parent)
 {
     setRequest(new CreateResourceDataSyncRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void CreateResourceDataSyncResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateResourceDataSyncResponsePrivate object with public implementation \a q.
  */
 CreateResourceDataSyncResponsePrivate::CreateResourceDataSyncResponsePrivate(
-    CreateResourceDataSyncResponse * const q) : SSMResponsePrivate(q)
+    CreateResourceDataSyncResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

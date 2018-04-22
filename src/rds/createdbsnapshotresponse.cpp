@@ -108,7 +108,7 @@ CreateDBSnapshotResponse::CreateDBSnapshotResponse(
         const CreateDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBSnapshotResponsePrivate(this), parent)
+    : RdsResponse(new CreateDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSnapshotRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CreateDBSnapshotResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateDBSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
-    CreateDBSnapshotResponse * const q) : RDSResponsePrivate(q)
+    CreateDBSnapshotResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

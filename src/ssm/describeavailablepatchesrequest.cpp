@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeAvailablePatchesRequest::DescribeAvailablePatchesRequest(const DescribeAvailablePatchesRequest &other)
-    : SSMRequest(new DescribeAvailablePatchesRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeAvailablePatchesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeAvailablePatchesRequest::DescribeAvailablePatchesRequest(const DescribeA
  * Constructs a DescribeAvailablePatchesRequest object.
  */
 DescribeAvailablePatchesRequest::DescribeAvailablePatchesRequest()
-    : SSMRequest(new DescribeAvailablePatchesRequestPrivate(SSMRequest::DescribeAvailablePatchesAction, this))
+    : SsmRequest(new DescribeAvailablePatchesRequestPrivate(SsmRequest::DescribeAvailablePatchesAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailablePatchesRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeAvailablePatchesRequestPrivate object for SSM \a action,
+ * Constructs a DescribeAvailablePatchesRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
-    const SSMRequest::Action action, DescribeAvailablePatchesRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeAvailablePatchesRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
  */
 DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
     const DescribeAvailablePatchesRequestPrivate &other, DescribeAvailablePatchesRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

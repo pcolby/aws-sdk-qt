@@ -60,7 +60,7 @@ DescribeWorkflowTypeResponse::DescribeWorkflowTypeResponse(
         const DescribeWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DescribeWorkflowTypeResponsePrivate(this), parent)
+    : SwfResponse(new DescribeWorkflowTypeResponsePrivate(this), parent)
 {
     setRequest(new DescribeWorkflowTypeRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void DescribeWorkflowTypeResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeWorkflowTypeResponsePrivate object with public implementation \a q.
  */
 DescribeWorkflowTypeResponsePrivate::DescribeWorkflowTypeResponsePrivate(
-    DescribeWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
+    DescribeWorkflowTypeResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

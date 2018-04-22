@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 CreateActivationRequest::CreateActivationRequest(const CreateActivationRequest &other)
-    : SSMRequest(new CreateActivationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new CreateActivationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ CreateActivationRequest::CreateActivationRequest(const CreateActivationRequest &
  * Constructs a CreateActivationRequest object.
  */
 CreateActivationRequest::CreateActivationRequest()
-    : SSMRequest(new CreateActivationRequestPrivate(SSMRequest::CreateActivationAction, this))
+    : SsmRequest(new CreateActivationRequestPrivate(SsmRequest::CreateActivationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * CreateActivationRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateActivationRequestPrivate object for SSM \a action,
+ * Constructs a CreateActivationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
-    const SSMRequest::Action action, CreateActivationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, CreateActivationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ CreateActivationRequestPrivate::CreateActivationRequestPrivate(
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
     const CreateActivationRequestPrivate &other, CreateActivationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const DescribeEventSubscriptionsRequest &other)
-    : RDSRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeEventSubscriptionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest(const Descr
  * Constructs a DescribeEventSubscriptionsRequest object.
  */
 DescribeEventSubscriptionsRequest::DescribeEventSubscriptionsRequest()
-    : RDSRequest(new DescribeEventSubscriptionsRequestPrivate(RDSRequest::DescribeEventSubscriptionsAction, this))
+    : RdsRequest(new DescribeEventSubscriptionsRequestPrivate(RdsRequest::DescribeEventSubscriptionsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
  */
 
 /*!
- * Constructs a DescribeEventSubscriptionsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeEventSubscriptionsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
-    const RDSRequest::Action action, DescribeEventSubscriptionsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeEventSubscriptionsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const DescribeEventSubscriptionsRequestPrivate &other, DescribeEventSubscriptionsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

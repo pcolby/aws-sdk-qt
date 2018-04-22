@@ -108,7 +108,7 @@ DescribeOptionGroupsResponse::DescribeOptionGroupsResponse(
         const DescribeOptionGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeOptionGroupsResponsePrivate(this), parent)
+    : RdsResponse(new DescribeOptionGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOptionGroupsRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeOptionGroupsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeOptionGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponsePrivate(
-    DescribeOptionGroupsResponse * const q) : RDSResponsePrivate(q)
+    DescribeOptionGroupsResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

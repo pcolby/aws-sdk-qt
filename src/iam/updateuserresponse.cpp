@@ -109,7 +109,7 @@ UpdateUserResponse::UpdateUserResponse(
         const UpdateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateUserResponsePrivate(this), parent)
+    : IamResponse(new UpdateUserResponsePrivate(this), parent)
 {
     setRequest(new UpdateUserRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateUserResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateUserResponsePrivate object with public implementation \a q.
  */
 UpdateUserResponsePrivate::UpdateUserResponsePrivate(
-    UpdateUserResponse * const q) : IAMResponsePrivate(q)
+    UpdateUserResponse * const q) : IamResponsePrivate(q)
 {
 
 }

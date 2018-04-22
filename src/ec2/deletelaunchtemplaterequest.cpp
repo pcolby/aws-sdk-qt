@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest(const DeleteLaunchTemplateRequest &other)
-    : EC2Request(new DeleteLaunchTemplateRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteLaunchTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest(const DeleteLaunchTempl
  * Constructs a DeleteLaunchTemplateRequest object.
  */
 DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest()
-    : EC2Request(new DeleteLaunchTemplateRequestPrivate(EC2Request::DeleteLaunchTemplateAction, this))
+    : Ec2Request(new DeleteLaunchTemplateRequestPrivate(Ec2Request::DeleteLaunchTemplateAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DeleteLaunchTemplateRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteLaunchTemplateRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
-    const EC2Request::Action action, DeleteLaunchTemplateRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteLaunchTemplateRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
  */
 DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
     const DeleteLaunchTemplateRequestPrivate &other, DeleteLaunchTemplateRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

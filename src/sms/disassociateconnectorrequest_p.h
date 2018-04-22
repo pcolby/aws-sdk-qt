@@ -28,10 +28,10 @@ namespace SMS {
 
 class DisassociateConnectorRequest;
 
-class QTAWS_EXPORT DisassociateConnectorRequestPrivate : public SMSRequestPrivate {
+class QTAWS_EXPORT DisassociateConnectorRequestPrivate : public SmsRequestPrivate {
 
 public:
-    DisassociateConnectorRequestPrivate(const SMSRequest::Action action,
+    DisassociateConnectorRequestPrivate(const SmsRequest::Action action,
                                    DisassociateConnectorRequest * const q);
     DisassociateConnectorRequestPrivate(const DisassociateConnectorRequestPrivate &other,
                                    DisassociateConnectorRequest * const q);

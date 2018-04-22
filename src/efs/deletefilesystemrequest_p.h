@@ -28,10 +28,10 @@ namespace EFS {
 
 class DeleteFileSystemRequest;
 
-class QTAWS_EXPORT DeleteFileSystemRequestPrivate : public EFSRequestPrivate {
+class QTAWS_EXPORT DeleteFileSystemRequestPrivate : public EfsRequestPrivate {
 
 public:
-    DeleteFileSystemRequestPrivate(const EFSRequest::Action action,
+    DeleteFileSystemRequestPrivate(const EfsRequest::Action action,
                                    DeleteFileSystemRequest * const q);
     DeleteFileSystemRequestPrivate(const DeleteFileSystemRequestPrivate &other,
                                    DeleteFileSystemRequest * const q);

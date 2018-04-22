@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteVirtualMFADeviceRequestPrivate;
 
-class QTAWS_EXPORT DeleteVirtualMFADeviceRequest : public IAMRequest {
+class QTAWS_EXPORT DeleteVirtualMFADeviceRequest : public IamRequest {
 
 public:
     DeleteVirtualMFADeviceRequest(const DeleteVirtualMFADeviceRequest &other);

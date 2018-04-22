@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
-    : EMRRequest(new AddTagsRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new AddTagsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ AddTagsRequest::AddTagsRequest(const AddTagsRequest &other)
  * Constructs a AddTagsRequest object.
  */
 AddTagsRequest::AddTagsRequest()
-    : EMRRequest(new AddTagsRequestPrivate(EMRRequest::AddTagsAction, this))
+    : EmrRequest(new AddTagsRequestPrivate(EmrRequest::AddTagsAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- * Constructs a AddTagsRequestPrivate object for EMR \a action,
+ * Constructs a AddTagsRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
-    const EMRRequest::Action action, AddTagsRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, AddTagsRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const AddTagsRequestPrivate &other, AddTagsRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace KMS {
 
 class ListGrantsRequestPrivate;
 
-class QTAWS_EXPORT ListGrantsRequest : public KMSRequest {
+class QTAWS_EXPORT ListGrantsRequest : public KmsRequest {
 
 public:
     ListGrantsRequest(const ListGrantsRequest &other);

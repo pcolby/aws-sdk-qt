@@ -143,7 +143,7 @@ DeleteAliasResponse::DeleteAliasResponse(
         const DeleteAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new DeleteAliasResponsePrivate(this), parent)
+    : KmsResponse(new DeleteAliasResponsePrivate(this), parent)
 {
     setRequest(new DeleteAliasRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void DeleteAliasResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteAliasResponsePrivate object with public implementation \a q.
  */
 DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
-    DeleteAliasResponse * const q) : KMSResponsePrivate(q)
+    DeleteAliasResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

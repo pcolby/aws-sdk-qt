@@ -48,7 +48,7 @@ DeleteFlowLogsResponse::DeleteFlowLogsResponse(
         const DeleteFlowLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteFlowLogsResponsePrivate(this), parent)
+    : Ec2Response(new DeleteFlowLogsResponsePrivate(this), parent)
 {
     setRequest(new DeleteFlowLogsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteFlowLogsResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteFlowLogsResponsePrivate object with public implementation \a q.
  */
 DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
-    DeleteFlowLogsResponse * const q) : EC2ResponsePrivate(q)
+    DeleteFlowLogsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

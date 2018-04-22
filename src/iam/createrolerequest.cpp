@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateRoleRequest::CreateRoleRequest(const CreateRoleRequest &other)
-    : IAMRequest(new CreateRoleRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateRoleRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateRoleRequest::CreateRoleRequest(const CreateRoleRequest &other)
  * Constructs a CreateRoleRequest object.
  */
 CreateRoleRequest::CreateRoleRequest()
-    : IAMRequest(new CreateRoleRequestPrivate(IAMRequest::CreateRoleAction, this))
+    : IamRequest(new CreateRoleRequestPrivate(IamRequest::CreateRoleAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateRoleRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a CreateRoleRequestPrivate object for IAM \a action,
+ * Constructs a CreateRoleRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateRoleRequestPrivate::CreateRoleRequestPrivate(
-    const IAMRequest::Action action, CreateRoleRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateRoleRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateRoleRequestPrivate::CreateRoleRequestPrivate(
  */
 CreateRoleRequestPrivate::CreateRoleRequestPrivate(
     const CreateRoleRequestPrivate &other, CreateRoleRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

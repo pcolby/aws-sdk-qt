@@ -27,7 +27,7 @@ namespace RDS {
 
 class PromoteReadReplicaDBClusterResponse;
 
-class QTAWS_EXPORT PromoteReadReplicaDBClusterResponsePrivate : public RDSResponsePrivate {
+class QTAWS_EXPORT PromoteReadReplicaDBClusterResponsePrivate : public RdsResponsePrivate {
     Q_OBJECT
 
 public:

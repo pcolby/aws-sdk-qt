@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 GetReplicationJobsRequest::GetReplicationJobsRequest(const GetReplicationJobsRequest &other)
-    : SMSRequest(new GetReplicationJobsRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new GetReplicationJobsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ GetReplicationJobsRequest::GetReplicationJobsRequest(const GetReplicationJobsReq
  * Constructs a GetReplicationJobsRequest object.
  */
 GetReplicationJobsRequest::GetReplicationJobsRequest()
-    : SMSRequest(new GetReplicationJobsRequestPrivate(SMSRequest::GetReplicationJobsAction, this))
+    : SmsRequest(new GetReplicationJobsRequestPrivate(SmsRequest::GetReplicationJobsAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * GetReplicationJobsRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a GetReplicationJobsRequestPrivate object for SMS \a action,
+ * Constructs a GetReplicationJobsRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 GetReplicationJobsRequestPrivate::GetReplicationJobsRequestPrivate(
-    const SMSRequest::Action action, GetReplicationJobsRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, GetReplicationJobsRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ GetReplicationJobsRequestPrivate::GetReplicationJobsRequestPrivate(
  */
 GetReplicationJobsRequestPrivate::GetReplicationJobsRequestPrivate(
     const GetReplicationJobsRequestPrivate &other, GetReplicationJobsRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

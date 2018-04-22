@@ -48,7 +48,7 @@ DisassociateRouteTableResponse::DisassociateRouteTableResponse(
         const DisassociateRouteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisassociateRouteTableResponsePrivate(this), parent)
+    : Ec2Response(new DisassociateRouteTableResponsePrivate(this), parent)
 {
     setRequest(new DisassociateRouteTableRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DisassociateRouteTableResponse::parseSuccess(QIODevice &response)
  * Constructs a DisassociateRouteTableResponsePrivate object with public implementation \a q.
  */
 DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
-    DisassociateRouteTableResponse * const q) : EC2ResponsePrivate(q)
+    DisassociateRouteTableResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

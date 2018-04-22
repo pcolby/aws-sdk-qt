@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
-    : IAMRequest(new ListUsersRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListUsersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListUsersRequest::ListUsersRequest(const ListUsersRequest &other)
  * Constructs a ListUsersRequest object.
  */
 ListUsersRequest::ListUsersRequest()
-    : IAMRequest(new ListUsersRequestPrivate(IAMRequest::ListUsersAction, this))
+    : IamRequest(new ListUsersRequestPrivate(IamRequest::ListUsersAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
  */
 
 /*!
- * Constructs a ListUsersRequestPrivate object for IAM \a action,
+ * Constructs a ListUsersRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
-    const IAMRequest::Action action, ListUsersRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListUsersRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const ListUsersRequestPrivate &other, ListUsersRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

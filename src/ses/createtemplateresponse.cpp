@@ -55,7 +55,7 @@ CreateTemplateResponse::CreateTemplateResponse(
         const CreateTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CreateTemplateResponsePrivate(this), parent)
+    : SesResponse(new CreateTemplateResponsePrivate(this), parent)
 {
     setRequest(new CreateTemplateRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void CreateTemplateResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateTemplateResponsePrivate object with public implementation \a q.
  */
 CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
-    CreateTemplateResponse * const q) : SESResponsePrivate(q)
+    CreateTemplateResponse * const q) : SesResponsePrivate(q)
 {
 
 }

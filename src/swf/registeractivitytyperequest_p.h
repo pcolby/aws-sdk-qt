@@ -28,10 +28,10 @@ namespace SWF {
 
 class RegisterActivityTypeRequest;
 
-class QTAWS_EXPORT RegisterActivityTypeRequestPrivate : public SWFRequestPrivate {
+class QTAWS_EXPORT RegisterActivityTypeRequestPrivate : public SwfRequestPrivate {
 
 public:
-    RegisterActivityTypeRequestPrivate(const SWFRequest::Action action,
+    RegisterActivityTypeRequestPrivate(const SwfRequest::Action action,
                                    RegisterActivityTypeRequest * const q);
     RegisterActivityTypeRequestPrivate(const RegisterActivityTypeRequestPrivate &other,
                                    RegisterActivityTypeRequest * const q);

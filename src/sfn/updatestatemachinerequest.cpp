@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 UpdateStateMachineRequest::UpdateStateMachineRequest(const UpdateStateMachineRequest &other)
-    : SFNRequest(new UpdateStateMachineRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new UpdateStateMachineRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ UpdateStateMachineRequest::UpdateStateMachineRequest(const UpdateStateMachineReq
  * Constructs a UpdateStateMachineRequest object.
  */
 UpdateStateMachineRequest::UpdateStateMachineRequest()
-    : SFNRequest(new UpdateStateMachineRequestPrivate(SFNRequest::UpdateStateMachineAction, this))
+    : SfnRequest(new UpdateStateMachineRequestPrivate(SfnRequest::UpdateStateMachineAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a UpdateStateMachineRequestPrivate object for SFN \a action,
+ * Constructs a UpdateStateMachineRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
-    const SFNRequest::Action action, UpdateStateMachineRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, UpdateStateMachineRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
     const UpdateStateMachineRequestPrivate &other, UpdateStateMachineRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

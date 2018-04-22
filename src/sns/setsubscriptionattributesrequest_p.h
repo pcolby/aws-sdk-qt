@@ -28,10 +28,10 @@ namespace SNS {
 
 class SetSubscriptionAttributesRequest;
 
-class QTAWS_EXPORT SetSubscriptionAttributesRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT SetSubscriptionAttributesRequestPrivate : public SnsRequestPrivate {
 
 public:
-    SetSubscriptionAttributesRequestPrivate(const SNSRequest::Action action,
+    SetSubscriptionAttributesRequestPrivate(const SnsRequest::Action action,
                                    SetSubscriptionAttributesRequest * const q);
     SetSubscriptionAttributesRequestPrivate(const SetSubscriptionAttributesRequestPrivate &other,
                                    SetSubscriptionAttributesRequest * const q);

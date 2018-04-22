@@ -27,7 +27,7 @@ namespace RDS {
 
 class CopyOptionGroupRequestPrivate;
 
-class QTAWS_EXPORT CopyOptionGroupRequest : public RDSRequest {
+class QTAWS_EXPORT CopyOptionGroupRequest : public RdsRequest {
 
 public:
     CopyOptionGroupRequest(const CopyOptionGroupRequest &other);

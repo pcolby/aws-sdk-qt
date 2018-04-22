@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateInstanceExportTaskRequestPrivate;
 
-class QTAWS_EXPORT CreateInstanceExportTaskRequest : public EC2Request {
+class QTAWS_EXPORT CreateInstanceExportTaskRequest : public Ec2Request {
 
 public:
     CreateInstanceExportTaskRequest(const CreateInstanceExportTaskRequest &other);

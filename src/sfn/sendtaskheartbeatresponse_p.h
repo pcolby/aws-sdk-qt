@@ -27,7 +27,7 @@ namespace SFN {
 
 class SendTaskHeartbeatResponse;
 
-class QTAWS_EXPORT SendTaskHeartbeatResponsePrivate : public SFNResponsePrivate {
+class QTAWS_EXPORT SendTaskHeartbeatResponsePrivate : public SfnResponsePrivate {
     Q_OBJECT
 
 public:

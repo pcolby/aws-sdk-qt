@@ -60,7 +60,7 @@ CountPendingActivityTasksResponse::CountPendingActivityTasksResponse(
         const CountPendingActivityTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new CountPendingActivityTasksResponsePrivate(this), parent)
+    : SwfResponse(new CountPendingActivityTasksResponsePrivate(this), parent)
 {
     setRequest(new CountPendingActivityTasksRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
  * Constructs a CountPendingActivityTasksResponsePrivate object with public implementation \a q.
  */
 CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePrivate(
-    CountPendingActivityTasksResponse * const q) : SWFResponsePrivate(q)
+    CountPendingActivityTasksResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 CreateMountTargetRequest::CreateMountTargetRequest(const CreateMountTargetRequest &other)
-    : EFSRequest(new CreateMountTargetRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new CreateMountTargetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ CreateMountTargetRequest::CreateMountTargetRequest(const CreateMountTargetReques
  * Constructs a CreateMountTargetRequest object.
  */
 CreateMountTargetRequest::CreateMountTargetRequest()
-    : EFSRequest(new CreateMountTargetRequestPrivate(EFSRequest::CreateMountTargetAction, this))
+    : EfsRequest(new CreateMountTargetRequestPrivate(EfsRequest::CreateMountTargetAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a CreateMountTargetRequestPrivate object for EFS \a action,
+ * Constructs a CreateMountTargetRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
-    const EFSRequest::Action action, CreateMountTargetRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, CreateMountTargetRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
  */
 CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
     const CreateMountTargetRequestPrivate &other, CreateMountTargetRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

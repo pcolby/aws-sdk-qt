@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DeleteVpnGatewayRequest;
 
-class QTAWS_EXPORT DeleteVpnGatewayRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DeleteVpnGatewayRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DeleteVpnGatewayRequestPrivate(const EC2Request::Action action,
+    DeleteVpnGatewayRequestPrivate(const Ec2Request::Action action,
                                    DeleteVpnGatewayRequest * const q);
     DeleteVpnGatewayRequestPrivate(const DeleteVpnGatewayRequestPrivate &other,
                                    DeleteVpnGatewayRequest * const q);

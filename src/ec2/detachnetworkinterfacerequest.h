@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DetachNetworkInterfaceRequestPrivate;
 
-class QTAWS_EXPORT DetachNetworkInterfaceRequest : public EC2Request {
+class QTAWS_EXPORT DetachNetworkInterfaceRequest : public Ec2Request {
 
 public:
     DetachNetworkInterfaceRequest(const DetachNetworkInterfaceRequest &other);

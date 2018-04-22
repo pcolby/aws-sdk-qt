@@ -47,7 +47,7 @@ ListStepsResponse::ListStepsResponse(
         const ListStepsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListStepsResponsePrivate(this), parent)
+    : EmrResponse(new ListStepsResponsePrivate(this), parent)
 {
     setRequest(new ListStepsRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void ListStepsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListStepsResponsePrivate object with public implementation \a q.
  */
 ListStepsResponsePrivate::ListStepsResponsePrivate(
-    ListStepsResponse * const q) : EMRResponsePrivate(q)
+    ListStepsResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

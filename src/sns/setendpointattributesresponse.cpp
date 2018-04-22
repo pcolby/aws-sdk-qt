@@ -58,7 +58,7 @@ SetEndpointAttributesResponse::SetEndpointAttributesResponse(
         const SetEndpointAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SetEndpointAttributesResponsePrivate(this), parent)
+    : SnsResponse(new SetEndpointAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetEndpointAttributesRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a SetEndpointAttributesResponsePrivate object with public implementation \a q.
  */
 SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
-    SetEndpointAttributesResponse * const q) : SNSResponsePrivate(q)
+    SetEndpointAttributesResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

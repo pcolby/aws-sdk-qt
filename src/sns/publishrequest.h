@@ -27,7 +27,7 @@ namespace SNS {
 
 class PublishRequestPrivate;
 
-class QTAWS_EXPORT PublishRequest : public SNSRequest {
+class QTAWS_EXPORT PublishRequest : public SnsRequest {
 
 public:
     PublishRequest(const PublishRequest &other);

@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 CopyDBSnapshotRequest::CopyDBSnapshotRequest(const CopyDBSnapshotRequest &other)
-    : RDSRequest(new CopyDBSnapshotRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new CopyDBSnapshotRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ CopyDBSnapshotRequest::CopyDBSnapshotRequest(const CopyDBSnapshotRequest &other)
  * Constructs a CopyDBSnapshotRequest object.
  */
 CopyDBSnapshotRequest::CopyDBSnapshotRequest()
-    : RDSRequest(new CopyDBSnapshotRequestPrivate(RDSRequest::CopyDBSnapshotAction, this))
+    : RdsRequest(new CopyDBSnapshotRequestPrivate(RdsRequest::CopyDBSnapshotAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a CopyDBSnapshotRequestPrivate object for RDS \a action,
+ * Constructs a CopyDBSnapshotRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
-    const RDSRequest::Action action, CopyDBSnapshotRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, CopyDBSnapshotRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
     const CopyDBSnapshotRequestPrivate &other, CopyDBSnapshotRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeregisterImageRequest::DeregisterImageRequest(const DeregisterImageRequest &other)
-    : EC2Request(new DeregisterImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeregisterImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeregisterImageRequest::DeregisterImageRequest(const DeregisterImageRequest &oth
  * Constructs a DeregisterImageRequest object.
  */
 DeregisterImageRequest::DeregisterImageRequest()
-    : EC2Request(new DeregisterImageRequestPrivate(EC2Request::DeregisterImageAction, this))
+    : Ec2Request(new DeregisterImageRequestPrivate(Ec2Request::DeregisterImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DeregisterImageRequestPrivate object for EC2 \a action,
+ * Constructs a DeregisterImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
-    const EC2Request::Action action, DeregisterImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeregisterImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
     const DeregisterImageRequestPrivate &other, DeregisterImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest(const ReplaceNetworkAclAssociationRequest &other)
-    : EC2Request(new ReplaceNetworkAclAssociationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReplaceNetworkAclAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest(const R
  * Constructs a ReplaceNetworkAclAssociationRequest object.
  */
 ReplaceNetworkAclAssociationRequest::ReplaceNetworkAclAssociationRequest()
-    : EC2Request(new ReplaceNetworkAclAssociationRequestPrivate(EC2Request::ReplaceNetworkAclAssociationAction, this))
+    : Ec2Request(new ReplaceNetworkAclAssociationRequestPrivate(Ec2Request::ReplaceNetworkAclAssociationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response
  */
 
 /*!
- * Constructs a ReplaceNetworkAclAssociationRequestPrivate object for EC2 \a action,
+ * Constructs a ReplaceNetworkAclAssociationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
-    const EC2Request::Action action, ReplaceNetworkAclAssociationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReplaceNetworkAclAssociationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestP
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
     const ReplaceNetworkAclAssociationRequestPrivate &other, ReplaceNetworkAclAssociationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

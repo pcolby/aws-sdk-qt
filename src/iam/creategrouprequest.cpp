@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
-    : IAMRequest(new CreateGroupRequestPrivate(*other.d_func(), this))
+    : IamRequest(new CreateGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ CreateGroupRequest::CreateGroupRequest(const CreateGroupRequest &other)
  * Constructs a CreateGroupRequest object.
  */
 CreateGroupRequest::CreateGroupRequest()
-    : IAMRequest(new CreateGroupRequestPrivate(IAMRequest::CreateGroupAction, this))
+    : IamRequest(new CreateGroupRequestPrivate(IamRequest::CreateGroupAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a CreateGroupRequestPrivate object for IAM \a action,
+ * Constructs a CreateGroupRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
-    const IAMRequest::Action action, CreateGroupRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, CreateGroupRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const CreateGroupRequestPrivate &other, CreateGroupRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

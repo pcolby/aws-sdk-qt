@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteAssociationRequest::DeleteAssociationRequest(const DeleteAssociationRequest &other)
-    : SSMRequest(new DeleteAssociationRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteAssociationRequest::DeleteAssociationRequest(const DeleteAssociationReques
  * Constructs a DeleteAssociationRequest object.
  */
 DeleteAssociationRequest::DeleteAssociationRequest()
-    : SSMRequest(new DeleteAssociationRequestPrivate(SSMRequest::DeleteAssociationAction, this))
+    : SsmRequest(new DeleteAssociationRequestPrivate(SsmRequest::DeleteAssociationAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteAssociationRequestPrivate object for SSM \a action,
+ * Constructs a DeleteAssociationRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
-    const SSMRequest::Action action, DeleteAssociationRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteAssociationRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
     const DeleteAssociationRequestPrivate &other, DeleteAssociationRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateDhcpOptionsResponse;
 
-class QTAWS_EXPORT AssociateDhcpOptionsResponsePrivate : public EC2ResponsePrivate {
+class QTAWS_EXPORT AssociateDhcpOptionsResponsePrivate : public Ec2ResponsePrivate {
     Q_OBJECT
 
 public:

@@ -108,7 +108,7 @@ ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
         const ModifyDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new ModifyDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a ModifyDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
-    ModifyDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    ModifyDBParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

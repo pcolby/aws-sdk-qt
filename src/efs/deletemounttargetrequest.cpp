@@ -45,7 +45,7 @@ namespace EFS {
  * Constructs a copy of \a other.
  */
 DeleteMountTargetRequest::DeleteMountTargetRequest(const DeleteMountTargetRequest &other)
-    : EFSRequest(new DeleteMountTargetRequestPrivate(*other.d_func(), this))
+    : EfsRequest(new DeleteMountTargetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -54,7 +54,7 @@ DeleteMountTargetRequest::DeleteMountTargetRequest(const DeleteMountTargetReques
  * Constructs a DeleteMountTargetRequest object.
  */
 DeleteMountTargetRequest::DeleteMountTargetRequest()
-    : EFSRequest(new DeleteMountTargetRequestPrivate(EFSRequest::DeleteMountTargetAction, this))
+    : EfsRequest(new DeleteMountTargetRequestPrivate(EfsRequest::DeleteMountTargetAction, this))
 {
 
 }
@@ -87,12 +87,12 @@ QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteMountTargetRequestPrivate object for EFS \a action,
+ * Constructs a DeleteMountTargetRequestPrivate object for Efs \a action,
  * with public implementation \a q.
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
-    const EFSRequest::Action action, DeleteMountTargetRequest * const q)
-    : EFSRequestPrivate(action, q)
+    const EfsRequest::Action action, DeleteMountTargetRequest * const q)
+    : EfsRequestPrivate(action, q)
 {
 
 }
@@ -105,7 +105,7 @@ DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
     const DeleteMountTargetRequestPrivate &other, DeleteMountTargetRequest * const q)
-    : EFSRequestPrivate(other, q)
+    : EfsRequestPrivate(other, q)
 {
 
 }

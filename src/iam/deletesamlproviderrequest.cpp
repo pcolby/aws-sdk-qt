@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteSAMLProviderRequest::DeleteSAMLProviderRequest(const DeleteSAMLProviderRequest &other)
-    : IAMRequest(new DeleteSAMLProviderRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteSAMLProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteSAMLProviderRequest::DeleteSAMLProviderRequest(const DeleteSAMLProviderReq
  * Constructs a DeleteSAMLProviderRequest object.
  */
 DeleteSAMLProviderRequest::DeleteSAMLProviderRequest()
-    : IAMRequest(new DeleteSAMLProviderRequestPrivate(IAMRequest::DeleteSAMLProviderAction, this))
+    : IamRequest(new DeleteSAMLProviderRequestPrivate(IamRequest::DeleteSAMLProviderAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteSAMLProviderRequestPrivate object for IAM \a action,
+ * Constructs a DeleteSAMLProviderRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
-    const IAMRequest::Action action, DeleteSAMLProviderRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteSAMLProviderRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
     const DeleteSAMLProviderRequestPrivate &other, DeleteSAMLProviderRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

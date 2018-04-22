@@ -55,7 +55,7 @@ SetIdentityMailFromDomainResponse::SetIdentityMailFromDomainResponse(
         const SetIdentityMailFromDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityMailFromDomainResponsePrivate(this), parent)
+    : SesResponse(new SetIdentityMailFromDomainResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityMailFromDomainRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
  * Constructs a SetIdentityMailFromDomainResponsePrivate object with public implementation \a q.
  */
 SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePrivate(
-    SetIdentityMailFromDomainResponse * const q) : SESResponsePrivate(q)
+    SetIdentityMailFromDomainResponse * const q) : SesResponsePrivate(q)
 {
 
 }

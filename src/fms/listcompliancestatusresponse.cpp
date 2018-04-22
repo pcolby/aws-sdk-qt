@@ -50,7 +50,7 @@ ListComplianceStatusResponse::ListComplianceStatusResponse(
         const ListComplianceStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FMSResponse(new ListComplianceStatusResponsePrivate(this), parent)
+    : FmsResponse(new ListComplianceStatusResponsePrivate(this), parent)
 {
     setRequest(new ListComplianceStatusRequest(request));
     setReply(reply);
@@ -88,7 +88,7 @@ void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
  * Constructs a ListComplianceStatusResponsePrivate object with public implementation \a q.
  */
 ListComplianceStatusResponsePrivate::ListComplianceStatusResponsePrivate(
-    ListComplianceStatusResponse * const q) : FMSResponsePrivate(q)
+    ListComplianceStatusResponse * const q) : FmsResponsePrivate(q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace EC2 {
 
 class PurchaseScheduledInstancesRequest;
 
-class QTAWS_EXPORT PurchaseScheduledInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT PurchaseScheduledInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    PurchaseScheduledInstancesRequestPrivate(const EC2Request::Action action,
+    PurchaseScheduledInstancesRequestPrivate(const Ec2Request::Action action,
                                    PurchaseScheduledInstancesRequest * const q);
     PurchaseScheduledInstancesRequestPrivate(const PurchaseScheduledInstancesRequestPrivate &other,
                                    PurchaseScheduledInstancesRequest * const q);

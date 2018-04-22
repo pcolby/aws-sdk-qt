@@ -28,10 +28,10 @@ namespace EC2 {
 
 class CreateVpnConnectionRouteRequest;
 
-class QTAWS_EXPORT CreateVpnConnectionRouteRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT CreateVpnConnectionRouteRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    CreateVpnConnectionRouteRequestPrivate(const EC2Request::Action action,
+    CreateVpnConnectionRouteRequestPrivate(const Ec2Request::Action action,
                                    CreateVpnConnectionRouteRequest * const q);
     CreateVpnConnectionRouteRequestPrivate(const CreateVpnConnectionRouteRequestPrivate &other,
                                    CreateVpnConnectionRouteRequest * const q);

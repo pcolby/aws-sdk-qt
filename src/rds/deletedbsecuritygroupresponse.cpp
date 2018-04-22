@@ -108,7 +108,7 @@ DeleteDBSecurityGroupResponse::DeleteDBSecurityGroupResponse(
         const DeleteDBSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBSecurityGroupResponsePrivate(this), parent)
+    : RdsResponse(new DeleteDBSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSecurityGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteDBSecurityGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
-    DeleteDBSecurityGroupResponse * const q) : RDSResponsePrivate(q)
+    DeleteDBSecurityGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

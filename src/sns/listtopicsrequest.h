@@ -27,7 +27,7 @@ namespace SNS {
 
 class ListTopicsRequestPrivate;
 
-class QTAWS_EXPORT ListTopicsRequest : public SNSRequest {
+class QTAWS_EXPORT ListTopicsRequest : public SnsRequest {
 
 public:
     ListTopicsRequest(const ListTopicsRequest &other);

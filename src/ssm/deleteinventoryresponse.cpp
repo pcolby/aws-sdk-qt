@@ -68,7 +68,7 @@ DeleteInventoryResponse::DeleteInventoryResponse(
         const DeleteInventoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteInventoryResponsePrivate(this), parent)
+    : SsmResponse(new DeleteInventoryResponsePrivate(this), parent)
 {
     setRequest(new DeleteInventoryRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteInventoryResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteInventoryResponsePrivate object with public implementation \a q.
  */
 DeleteInventoryResponsePrivate::DeleteInventoryResponsePrivate(
-    DeleteInventoryResponse * const q) : SSMResponsePrivate(q)
+    DeleteInventoryResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

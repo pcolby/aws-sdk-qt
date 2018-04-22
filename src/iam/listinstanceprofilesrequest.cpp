@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListInstanceProfilesRequest::ListInstanceProfilesRequest(const ListInstanceProfilesRequest &other)
-    : IAMRequest(new ListInstanceProfilesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListInstanceProfilesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListInstanceProfilesRequest::ListInstanceProfilesRequest(const ListInstanceProfi
  * Constructs a ListInstanceProfilesRequest object.
  */
 ListInstanceProfilesRequest::ListInstanceProfilesRequest()
-    : IAMRequest(new ListInstanceProfilesRequestPrivate(IAMRequest::ListInstanceProfilesAction, this))
+    : IamRequest(new ListInstanceProfilesRequestPrivate(IamRequest::ListInstanceProfilesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListInstanceProfilesRequestPrivate object for IAM \a action,
+ * Constructs a ListInstanceProfilesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
-    const IAMRequest::Action action, ListInstanceProfilesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListInstanceProfilesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
  */
 ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
     const ListInstanceProfilesRequestPrivate &other, ListInstanceProfilesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

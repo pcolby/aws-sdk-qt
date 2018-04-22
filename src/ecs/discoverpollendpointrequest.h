@@ -27,7 +27,7 @@ namespace ECS {
 
 class DiscoverPollEndpointRequestPrivate;
 
-class QTAWS_EXPORT DiscoverPollEndpointRequest : public ECSRequest {
+class QTAWS_EXPORT DiscoverPollEndpointRequest : public EcsRequest {
 
 public:
     DiscoverPollEndpointRequest(const DiscoverPollEndpointRequest &other);

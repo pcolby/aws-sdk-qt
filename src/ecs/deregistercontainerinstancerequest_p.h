@@ -28,10 +28,10 @@ namespace ECS {
 
 class DeregisterContainerInstanceRequest;
 
-class QTAWS_EXPORT DeregisterContainerInstanceRequestPrivate : public ECSRequestPrivate {
+class QTAWS_EXPORT DeregisterContainerInstanceRequestPrivate : public EcsRequestPrivate {
 
 public:
-    DeregisterContainerInstanceRequestPrivate(const ECSRequest::Action action,
+    DeregisterContainerInstanceRequestPrivate(const EcsRequest::Action action,
                                    DeregisterContainerInstanceRequest * const q);
     DeregisterContainerInstanceRequestPrivate(const DeregisterContainerInstanceRequestPrivate &other,
                                    DeregisterContainerInstanceRequest * const q);

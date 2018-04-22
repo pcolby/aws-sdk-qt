@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
-    : SQSRequest(new AddPermissionRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new AddPermissionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ AddPermissionRequest::AddPermissionRequest(const AddPermissionRequest &other)
  * Constructs a AddPermissionRequest object.
  */
 AddPermissionRequest::AddPermissionRequest()
-    : SQSRequest(new AddPermissionRequestPrivate(SQSRequest::AddPermissionAction, this))
+    : SqsRequest(new AddPermissionRequestPrivate(SqsRequest::AddPermissionAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a AddPermissionRequestPrivate object for SQS \a action,
+ * Constructs a AddPermissionRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
-    const SQSRequest::Action action, AddPermissionRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, AddPermissionRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const AddPermissionRequestPrivate &other, AddPermissionRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

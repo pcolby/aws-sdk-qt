@@ -28,10 +28,10 @@ namespace WAF {
 
 class DeleteIPSetRequest;
 
-class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WafRequestPrivate {
 
 public:
-    DeleteIPSetRequestPrivate(const WAFRequest::Action action,
+    DeleteIPSetRequestPrivate(const WafRequest::Action action,
                                    DeleteIPSetRequest * const q);
     DeleteIPSetRequestPrivate(const DeleteIPSetRequestPrivate &other,
                                    DeleteIPSetRequest * const q);

@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
-    : SQSRequest(new ListQueuesRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new ListQueuesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ ListQueuesRequest::ListQueuesRequest(const ListQueuesRequest &other)
  * Constructs a ListQueuesRequest object.
  */
 ListQueuesRequest::ListQueuesRequest()
-    : SQSRequest(new ListQueuesRequestPrivate(SQSRequest::ListQueuesAction, this))
+    : SqsRequest(new ListQueuesRequestPrivate(SqsRequest::ListQueuesAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * ListQueuesRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a ListQueuesRequestPrivate object for SQS \a action,
+ * Constructs a ListQueuesRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
-    const SQSRequest::Action action, ListQueuesRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, ListQueuesRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
  */
 ListQueuesRequestPrivate::ListQueuesRequestPrivate(
     const ListQueuesRequestPrivate &other, ListQueuesRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

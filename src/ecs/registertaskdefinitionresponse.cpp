@@ -61,7 +61,7 @@ RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
         const RegisterTaskDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new RegisterTaskDefinitionResponsePrivate(this), parent)
+    : EcsResponse(new RegisterTaskDefinitionResponsePrivate(this), parent)
 {
     setRequest(new RegisterTaskDefinitionRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void RegisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
  * Constructs a RegisterTaskDefinitionResponsePrivate object with public implementation \a q.
  */
 RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponsePrivate(
-    RegisterTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
+    RegisterTaskDefinitionResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

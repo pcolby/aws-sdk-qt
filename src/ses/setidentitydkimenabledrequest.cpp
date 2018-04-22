@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SetIdentityDkimEnabledRequest::SetIdentityDkimEnabledRequest(const SetIdentityDkimEnabledRequest &other)
-    : SESRequest(new SetIdentityDkimEnabledRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SetIdentityDkimEnabledRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SetIdentityDkimEnabledRequest::SetIdentityDkimEnabledRequest(const SetIdentityDk
  * Constructs a SetIdentityDkimEnabledRequest object.
  */
 SetIdentityDkimEnabledRequest::SetIdentityDkimEnabledRequest()
-    : SESRequest(new SetIdentityDkimEnabledRequestPrivate(SESRequest::SetIdentityDkimEnabledAction, this))
+    : SesRequest(new SetIdentityDkimEnabledRequestPrivate(SesRequest::SetIdentityDkimEnabledAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SetIdentityDkimEnabledRequest::response(QNetw
  */
 
 /*!
- * Constructs a SetIdentityDkimEnabledRequestPrivate object for SES \a action,
+ * Constructs a SetIdentityDkimEnabledRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
-    const SESRequest::Action action, SetIdentityDkimEnabledRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SetIdentityDkimEnabledRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
     const SetIdentityDkimEnabledRequestPrivate &other, SetIdentityDkimEnabledRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

@@ -49,7 +49,7 @@ UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
         const UpdateRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateRateBasedRuleResponsePrivate(this), parent)
+    : WafResponse(new UpdateRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRateBasedRuleRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
-    UpdateRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
+    UpdateRateBasedRuleResponse * const q) : WafResponsePrivate(q)
 {
 
 }

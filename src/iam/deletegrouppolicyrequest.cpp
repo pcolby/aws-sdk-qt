@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteGroupPolicyRequest::DeleteGroupPolicyRequest(const DeleteGroupPolicyRequest &other)
-    : IAMRequest(new DeleteGroupPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteGroupPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteGroupPolicyRequest::DeleteGroupPolicyRequest(const DeleteGroupPolicyReques
  * Constructs a DeleteGroupPolicyRequest object.
  */
 DeleteGroupPolicyRequest::DeleteGroupPolicyRequest()
-    : IAMRequest(new DeleteGroupPolicyRequestPrivate(IAMRequest::DeleteGroupPolicyAction, this))
+    : IamRequest(new DeleteGroupPolicyRequestPrivate(IamRequest::DeleteGroupPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a DeleteGroupPolicyRequestPrivate object for IAM \a action,
+ * Constructs a DeleteGroupPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
-    const IAMRequest::Action action, DeleteGroupPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteGroupPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
     const DeleteGroupPolicyRequestPrivate &other, DeleteGroupPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeactivateMFADeviceRequest::DeactivateMFADeviceRequest(const DeactivateMFADeviceRequest &other)
-    : IAMRequest(new DeactivateMFADeviceRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeactivateMFADeviceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeactivateMFADeviceRequest::DeactivateMFADeviceRequest(const DeactivateMFADevice
  * Constructs a DeactivateMFADeviceRequest object.
  */
 DeactivateMFADeviceRequest::DeactivateMFADeviceRequest()
-    : IAMRequest(new DeactivateMFADeviceRequestPrivate(IAMRequest::DeactivateMFADeviceAction, this))
+    : IamRequest(new DeactivateMFADeviceRequestPrivate(IamRequest::DeactivateMFADeviceAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeactivateMFADeviceRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DeactivateMFADeviceRequestPrivate object for IAM \a action,
+ * Constructs a DeactivateMFADeviceRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
-    const IAMRequest::Action action, DeactivateMFADeviceRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeactivateMFADeviceRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
     const DeactivateMFADeviceRequestPrivate &other, DeactivateMFADeviceRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

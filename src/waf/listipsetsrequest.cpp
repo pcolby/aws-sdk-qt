@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
-    : WAFRequest(new ListIPSetsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListIPSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListIPSetsRequest::ListIPSetsRequest(const ListIPSetsRequest &other)
  * Constructs a ListIPSetsRequest object.
  */
 ListIPSetsRequest::ListIPSetsRequest()
-    : WAFRequest(new ListIPSetsRequestPrivate(WAFRequest::ListIPSetsAction, this))
+    : WafRequest(new ListIPSetsRequestPrivate(WafRequest::ListIPSetsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a ListIPSetsRequestPrivate object for WAF \a action,
+ * Constructs a ListIPSetsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
-    const WAFRequest::Action action, ListIPSetsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListIPSetsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const ListIPSetsRequestPrivate &other, ListIPSetsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

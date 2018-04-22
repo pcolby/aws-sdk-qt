@@ -42,7 +42,7 @@ namespace EMR {
  * Constructs a copy of \a other.
  */
 DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &other)
-    : EMRRequest(new DescribeClusterRequestPrivate(*other.d_func(), this))
+    : EmrRequest(new DescribeClusterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -51,7 +51,7 @@ DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &oth
  * Constructs a DescribeClusterRequest object.
  */
 DescribeClusterRequest::DescribeClusterRequest()
-    : EMRRequest(new DescribeClusterRequestPrivate(EMRRequest::DescribeClusterAction, this))
+    : EmrRequest(new DescribeClusterRequestPrivate(EmrRequest::DescribeClusterAction, this))
 {
 
 }
@@ -84,12 +84,12 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a DescribeClusterRequestPrivate object for EMR \a action,
+ * Constructs a DescribeClusterRequestPrivate object for Emr \a action,
  * with public implementation \a q.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
-    const EMRRequest::Action action, DescribeClusterRequest * const q)
-    : EMRRequestPrivate(action, q)
+    const EmrRequest::Action action, DescribeClusterRequest * const q)
+    : EmrRequestPrivate(action, q)
 {
 
 }
@@ -102,7 +102,7 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const DescribeClusterRequestPrivate &other, DescribeClusterRequest * const q)
-    : EMRRequestPrivate(other, q)
+    : EmrRequestPrivate(other, q)
 {
 
 }

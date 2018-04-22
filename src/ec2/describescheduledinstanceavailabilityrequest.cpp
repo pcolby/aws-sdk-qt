@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest(const DescribeScheduledInstanceAvailabilityRequest &other)
-    : EC2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabil
  * Constructs a DescribeScheduledInstanceAvailabilityRequest object.
  */
 DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest()
-    : EC2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(EC2Request::DescribeScheduledInstanceAvailabilityAction, this))
+    : Ec2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(Ec2Request::DescribeScheduledInstanceAvailabilityAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest:
  */
 
 /*!
- * Constructs a DescribeScheduledInstanceAvailabilityRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeScheduledInstanceAvailabilityRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
-    const EC2Request::Action action, DescribeScheduledInstanceAvailabilityRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeScheduledInstanceAvailabilityRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAv
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
     const DescribeScheduledInstanceAvailabilityRequestPrivate &other, DescribeScheduledInstanceAvailabilityRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

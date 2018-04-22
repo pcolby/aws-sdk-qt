@@ -108,7 +108,7 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
         const DescribeEventCategoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
+    : RdsResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventCategoriesRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeEventCategoriesResponsePrivate object with public implementation \a q.
  */
 DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponsePrivate(
-    DescribeEventCategoriesResponse * const q) : RDSResponsePrivate(q)
+    DescribeEventCategoriesResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

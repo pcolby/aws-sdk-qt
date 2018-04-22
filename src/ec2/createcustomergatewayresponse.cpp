@@ -48,7 +48,7 @@ CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
         const CreateCustomerGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateCustomerGatewayResponsePrivate(this), parent)
+    : Ec2Response(new CreateCustomerGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateCustomerGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateCustomerGatewayResponsePrivate object with public implementation \a q.
  */
 CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
-    CreateCustomerGatewayResponse * const q) : EC2ResponsePrivate(q)
+    CreateCustomerGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

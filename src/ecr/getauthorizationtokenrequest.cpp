@@ -43,7 +43,7 @@ namespace ECR {
  * Constructs a copy of \a other.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other)
-    : ECRRequest(new GetAuthorizationTokenRequestPrivate(*other.d_func(), this))
+    : EcrRequest(new GetAuthorizationTokenRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizatio
  * Constructs a GetAuthorizationTokenRequest object.
  */
 GetAuthorizationTokenRequest::GetAuthorizationTokenRequest()
-    : ECRRequest(new GetAuthorizationTokenRequestPrivate(ECRRequest::GetAuthorizationTokenAction, this))
+    : EcrRequest(new GetAuthorizationTokenRequestPrivate(EcrRequest::GetAuthorizationTokenAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
  */
 
 /*!
- * Constructs a GetAuthorizationTokenRequestPrivate object for ECR \a action,
+ * Constructs a GetAuthorizationTokenRequestPrivate object for Ecr \a action,
  * with public implementation \a q.
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
-    const ECRRequest::Action action, GetAuthorizationTokenRequest * const q)
-    : ECRRequestPrivate(action, q)
+    const EcrRequest::Action action, GetAuthorizationTokenRequest * const q)
+    : EcrRequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const GetAuthorizationTokenRequestPrivate &other, GetAuthorizationTokenRequest * const q)
-    : ECRRequestPrivate(other, q)
+    : EcrRequestPrivate(other, q)
 {
 
 }

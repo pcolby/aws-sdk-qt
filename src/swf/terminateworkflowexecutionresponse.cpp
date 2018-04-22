@@ -60,7 +60,7 @@ TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
         const TerminateWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new TerminateWorkflowExecutionResponsePrivate(this), parent)
+    : SwfResponse(new TerminateWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new TerminateWorkflowExecutionRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
  * Constructs a TerminateWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePrivate(
-    TerminateWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
+    TerminateWorkflowExecutionResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

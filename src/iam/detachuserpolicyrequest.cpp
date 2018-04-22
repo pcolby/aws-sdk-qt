@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DetachUserPolicyRequest::DetachUserPolicyRequest(const DetachUserPolicyRequest &other)
-    : IAMRequest(new DetachUserPolicyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DetachUserPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DetachUserPolicyRequest::DetachUserPolicyRequest(const DetachUserPolicyRequest &
  * Constructs a DetachUserPolicyRequest object.
  */
 DetachUserPolicyRequest::DetachUserPolicyRequest()
-    : IAMRequest(new DetachUserPolicyRequestPrivate(IAMRequest::DetachUserPolicyAction, this))
+    : IamRequest(new DetachUserPolicyRequestPrivate(IamRequest::DetachUserPolicyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DetachUserPolicyRequestPrivate object for IAM \a action,
+ * Constructs a DetachUserPolicyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
-    const IAMRequest::Action action, DetachUserPolicyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DetachUserPolicyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
  */
 DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
     const DetachUserPolicyRequestPrivate &other, DetachUserPolicyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

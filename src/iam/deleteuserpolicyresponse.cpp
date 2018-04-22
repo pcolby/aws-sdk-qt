@@ -109,7 +109,7 @@ DeleteUserPolicyResponse::DeleteUserPolicyResponse(
         const DeleteUserPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteUserPolicyResponsePrivate(this), parent)
+    : IamResponse(new DeleteUserPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteUserPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteUserPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteUserPolicyResponsePrivate::DeleteUserPolicyResponsePrivate(
-    DeleteUserPolicyResponse * const q) : IAMResponsePrivate(q)
+    DeleteUserPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

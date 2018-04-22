@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RegisterImageRequest::RegisterImageRequest(const RegisterImageRequest &other)
-    : EC2Request(new RegisterImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RegisterImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RegisterImageRequest::RegisterImageRequest(const RegisterImageRequest &other)
  * Constructs a RegisterImageRequest object.
  */
 RegisterImageRequest::RegisterImageRequest()
-    : EC2Request(new RegisterImageRequestPrivate(EC2Request::RegisterImageAction, this))
+    : Ec2Request(new RegisterImageRequestPrivate(Ec2Request::RegisterImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RegisterImageRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a RegisterImageRequestPrivate object for EC2 \a action,
+ * Constructs a RegisterImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RegisterImageRequestPrivate::RegisterImageRequestPrivate(
-    const EC2Request::Action action, RegisterImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RegisterImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RegisterImageRequestPrivate::RegisterImageRequestPrivate(
  */
 RegisterImageRequestPrivate::RegisterImageRequestPrivate(
     const RegisterImageRequestPrivate &other, RegisterImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

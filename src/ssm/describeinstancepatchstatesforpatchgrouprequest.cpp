@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeInstancePatchStatesForPatchGroupRequest::DescribeInstancePatchStatesForPatchGroupRequest(const DescribeInstancePatchStatesForPatchGroupRequest &other)
-    : SSMRequest(new DescribeInstancePatchStatesForPatchGroupRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeInstancePatchStatesForPatchGroupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeInstancePatchStatesForPatchGroupRequest::DescribeInstancePatchStatesForP
  * Constructs a DescribeInstancePatchStatesForPatchGroupRequest object.
  */
 DescribeInstancePatchStatesForPatchGroupRequest::DescribeInstancePatchStatesForPatchGroupRequest()
-    : SSMRequest(new DescribeInstancePatchStatesForPatchGroupRequestPrivate(SSMRequest::DescribeInstancePatchStatesForPatchGroupAction, this))
+    : SsmRequest(new DescribeInstancePatchStatesForPatchGroupRequestPrivate(SsmRequest::DescribeInstancePatchStatesForPatchGroupAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancePatchStatesForPatchGroupReque
  */
 
 /*!
- * Constructs a DescribeInstancePatchStatesForPatchGroupRequestPrivate object for SSM \a action,
+ * Constructs a DescribeInstancePatchStatesForPatchGroupRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchStatesForPatchGroupRequestPrivate(
-    const SSMRequest::Action action, DescribeInstancePatchStatesForPatchGroupRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeInstancePatchStatesForPatchGroupRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchSta
  */
 DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchStatesForPatchGroupRequestPrivate(
     const DescribeInstancePatchStatesForPatchGroupRequestPrivate &other, DescribeInstancePatchStatesForPatchGroupRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

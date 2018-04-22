@@ -28,10 +28,10 @@ namespace WAF {
 
 class ListWebACLsRequest;
 
-class QTAWS_EXPORT ListWebACLsRequestPrivate : public WAFRequestPrivate {
+class QTAWS_EXPORT ListWebACLsRequestPrivate : public WafRequestPrivate {
 
 public:
-    ListWebACLsRequestPrivate(const WAFRequest::Action action,
+    ListWebACLsRequestPrivate(const WafRequest::Action action,
                                    ListWebACLsRequest * const q);
     ListWebACLsRequestPrivate(const ListWebACLsRequestPrivate &other,
                                    ListWebACLsRequest * const q);

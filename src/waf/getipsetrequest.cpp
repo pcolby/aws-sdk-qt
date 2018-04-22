@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
-    : WAFRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
  * Constructs a GetIPSetRequest object.
  */
 GetIPSetRequest::GetIPSetRequest()
-    : WAFRequest(new GetIPSetRequestPrivate(WAFRequest::GetIPSetAction, this))
+    : WafRequest(new GetIPSetRequestPrivate(WafRequest::GetIPSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a GetIPSetRequestPrivate object for WAF \a action,
+ * Constructs a GetIPSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
-    const WAFRequest::Action action, GetIPSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetIPSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
  */
 GetIPSetRequestPrivate::GetIPSetRequestPrivate(
     const GetIPSetRequestPrivate &other, GetIPSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

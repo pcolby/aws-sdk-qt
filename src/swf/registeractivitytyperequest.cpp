@@ -55,7 +55,7 @@ namespace SWF {
  * Constructs a copy of \a other.
  */
 RegisterActivityTypeRequest::RegisterActivityTypeRequest(const RegisterActivityTypeRequest &other)
-    : SWFRequest(new RegisterActivityTypeRequestPrivate(*other.d_func(), this))
+    : SwfRequest(new RegisterActivityTypeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -64,7 +64,7 @@ RegisterActivityTypeRequest::RegisterActivityTypeRequest(const RegisterActivityT
  * Constructs a RegisterActivityTypeRequest object.
  */
 RegisterActivityTypeRequest::RegisterActivityTypeRequest()
-    : SWFRequest(new RegisterActivityTypeRequestPrivate(SWFRequest::RegisterActivityTypeAction, this))
+    : SwfRequest(new RegisterActivityTypeRequestPrivate(SwfRequest::RegisterActivityTypeAction, this))
 {
 
 }
@@ -97,12 +97,12 @@ QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetwor
  */
 
 /*!
- * Constructs a RegisterActivityTypeRequestPrivate object for SWF \a action,
+ * Constructs a RegisterActivityTypeRequestPrivate object for Swf \a action,
  * with public implementation \a q.
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
-    const SWFRequest::Action action, RegisterActivityTypeRequest * const q)
-    : SWFRequestPrivate(action, q)
+    const SwfRequest::Action action, RegisterActivityTypeRequest * const q)
+    : SwfRequestPrivate(action, q)
 {
 
 }
@@ -115,7 +115,7 @@ RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
     const RegisterActivityTypeRequestPrivate &other, RegisterActivityTypeRequest * const q)
-    : SWFRequestPrivate(other, q)
+    : SwfRequestPrivate(other, q)
 {
 
 }

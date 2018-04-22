@@ -28,7 +28,7 @@ namespace SES {
 
 class ListCustomVerificationEmailTemplatesResponsePrivate;
 
-class QTAWS_EXPORT ListCustomVerificationEmailTemplatesResponse : public SESResponse {
+class QTAWS_EXPORT ListCustomVerificationEmailTemplatesResponse : public SesResponse {
     Q_OBJECT
 
 public:

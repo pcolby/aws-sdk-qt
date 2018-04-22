@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ReportInstanceStatusRequest;
 
-class QTAWS_EXPORT ReportInstanceStatusRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ReportInstanceStatusRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ReportInstanceStatusRequestPrivate(const EC2Request::Action action,
+    ReportInstanceStatusRequestPrivate(const Ec2Request::Action action,
                                    ReportInstanceStatusRequest * const q);
     ReportInstanceStatusRequestPrivate(const ReportInstanceStatusRequestPrivate &other,
                                    ReportInstanceStatusRequest * const q);

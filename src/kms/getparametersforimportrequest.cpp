@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 GetParametersForImportRequest::GetParametersForImportRequest(const GetParametersForImportRequest &other)
-    : KMSRequest(new GetParametersForImportRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new GetParametersForImportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ GetParametersForImportRequest::GetParametersForImportRequest(const GetParameters
  * Constructs a GetParametersForImportRequest object.
  */
 GetParametersForImportRequest::GetParametersForImportRequest()
-    : KMSRequest(new GetParametersForImportRequestPrivate(KMSRequest::GetParametersForImportAction, this))
+    : KmsRequest(new GetParametersForImportRequestPrivate(KmsRequest::GetParametersForImportAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * GetParametersForImportRequest::response(QNetw
  */
 
 /*!
- * Constructs a GetParametersForImportRequestPrivate object for KMS \a action,
+ * Constructs a GetParametersForImportRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
-    const KMSRequest::Action action, GetParametersForImportRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, GetParametersForImportRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
     const GetParametersForImportRequestPrivate &other, GetParametersForImportRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

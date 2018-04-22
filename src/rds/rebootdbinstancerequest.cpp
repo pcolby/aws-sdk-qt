@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 RebootDBInstanceRequest::RebootDBInstanceRequest(const RebootDBInstanceRequest &other)
-    : RDSRequest(new RebootDBInstanceRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new RebootDBInstanceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ RebootDBInstanceRequest::RebootDBInstanceRequest(const RebootDBInstanceRequest &
  * Constructs a RebootDBInstanceRequest object.
  */
 RebootDBInstanceRequest::RebootDBInstanceRequest()
-    : RDSRequest(new RebootDBInstanceRequestPrivate(RDSRequest::RebootDBInstanceAction, this))
+    : RdsRequest(new RebootDBInstanceRequestPrivate(RdsRequest::RebootDBInstanceAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a RebootDBInstanceRequestPrivate object for RDS \a action,
+ * Constructs a RebootDBInstanceRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
-    const RDSRequest::Action action, RebootDBInstanceRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, RebootDBInstanceRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RebootDBInstanceRequestPrivate &other, RebootDBInstanceRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

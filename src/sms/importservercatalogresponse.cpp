@@ -44,7 +44,7 @@ ImportServerCatalogResponse::ImportServerCatalogResponse(
         const ImportServerCatalogRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new ImportServerCatalogResponsePrivate(this), parent)
+    : SmsResponse(new ImportServerCatalogResponsePrivate(this), parent)
 {
     setRequest(new ImportServerCatalogRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void ImportServerCatalogResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportServerCatalogResponsePrivate object with public implementation \a q.
  */
 ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
-    ImportServerCatalogResponse * const q) : SMSResponsePrivate(q)
+    ImportServerCatalogResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

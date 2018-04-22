@@ -69,7 +69,7 @@ namespace ACMPCA {
  * Constructs a copy of \a other.
  */
 ListCertificateAuthoritiesRequest::ListCertificateAuthoritiesRequest(const ListCertificateAuthoritiesRequest &other)
-    : ACMPCARequest(new ListCertificateAuthoritiesRequestPrivate(*other.d_func(), this))
+    : AcmpcaRequest(new ListCertificateAuthoritiesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +78,7 @@ ListCertificateAuthoritiesRequest::ListCertificateAuthoritiesRequest(const ListC
  * Constructs a ListCertificateAuthoritiesRequest object.
  */
 ListCertificateAuthoritiesRequest::ListCertificateAuthoritiesRequest()
-    : ACMPCARequest(new ListCertificateAuthoritiesRequestPrivate(ACMPCARequest::ListCertificateAuthoritiesAction, this))
+    : AcmpcaRequest(new ListCertificateAuthoritiesRequestPrivate(AcmpcaRequest::ListCertificateAuthoritiesAction, this))
 {
 
 }
@@ -111,12 +111,12 @@ QtAws::Core::AwsAbstractResponse * ListCertificateAuthoritiesRequest::response(Q
  */
 
 /*!
- * Constructs a ListCertificateAuthoritiesRequestPrivate object for ACMPCA \a action,
+ * Constructs a ListCertificateAuthoritiesRequestPrivate object for Acmpca \a action,
  * with public implementation \a q.
  */
 ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPrivate(
-    const ACMPCARequest::Action action, ListCertificateAuthoritiesRequest * const q)
-    : ACMPCARequestPrivate(action, q)
+    const AcmpcaRequest::Action action, ListCertificateAuthoritiesRequest * const q)
+    : AcmpcaRequestPrivate(action, q)
 {
 
 }
@@ -129,7 +129,7 @@ ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPriva
  */
 ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPrivate(
     const ListCertificateAuthoritiesRequestPrivate &other, ListCertificateAuthoritiesRequest * const q)
-    : ACMPCARequestPrivate(other, q)
+    : AcmpcaRequestPrivate(other, q)
 {
 
 }

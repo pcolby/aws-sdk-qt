@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeDocumentRequestPrivate;
 
-class QTAWS_EXPORT DescribeDocumentRequest : public SSMRequest {
+class QTAWS_EXPORT DescribeDocumentRequest : public SsmRequest {
 
 public:
     DescribeDocumentRequest(const DescribeDocumentRequest &other);

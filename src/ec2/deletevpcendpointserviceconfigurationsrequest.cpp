@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVpcEndpointServiceConfigurationsRequest::DeleteVpcEndpointServiceConfigurationsRequest(const DeleteVpcEndpointServiceConfigurationsRequest &other)
-    : EC2Request(new DeleteVpcEndpointServiceConfigurationsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVpcEndpointServiceConfigurationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVpcEndpointServiceConfigurationsRequest::DeleteVpcEndpointServiceConfigura
  * Constructs a DeleteVpcEndpointServiceConfigurationsRequest object.
  */
 DeleteVpcEndpointServiceConfigurationsRequest::DeleteVpcEndpointServiceConfigurationsRequest()
-    : EC2Request(new DeleteVpcEndpointServiceConfigurationsRequestPrivate(EC2Request::DeleteVpcEndpointServiceConfigurationsAction, this))
+    : Ec2Request(new DeleteVpcEndpointServiceConfigurationsRequestPrivate(Ec2Request::DeleteVpcEndpointServiceConfigurationsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest
  */
 
 /*!
- * Constructs a DeleteVpcEndpointServiceConfigurationsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVpcEndpointServiceConfigurationsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceConfigurationsRequestPrivate(
-    const EC2Request::Action action, DeleteVpcEndpointServiceConfigurationsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVpcEndpointServiceConfigurationsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceCo
  */
 DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceConfigurationsRequestPrivate(
     const DeleteVpcEndpointServiceConfigurationsRequestPrivate &other, DeleteVpcEndpointServiceConfigurationsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

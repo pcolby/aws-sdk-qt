@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest(const DescribeSpotPriceHistoryRequest &other)
-    : EC2Request(new DescribeSpotPriceHistoryRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeSpotPriceHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest(const DescribeS
  * Constructs a DescribeSpotPriceHistoryRequest object.
  */
 DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest()
-    : EC2Request(new DescribeSpotPriceHistoryRequestPrivate(EC2Request::DescribeSpotPriceHistoryAction, this))
+    : Ec2Request(new DescribeSpotPriceHistoryRequestPrivate(Ec2Request::DescribeSpotPriceHistoryAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeSpotPriceHistoryRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeSpotPriceHistoryRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
-    const EC2Request::Action action, DescribeSpotPriceHistoryRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeSpotPriceHistoryRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
     const DescribeSpotPriceHistoryRequestPrivate &other, DescribeSpotPriceHistoryRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

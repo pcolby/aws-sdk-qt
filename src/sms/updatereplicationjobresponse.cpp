@@ -44,7 +44,7 @@ UpdateReplicationJobResponse::UpdateReplicationJobResponse(
         const UpdateReplicationJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new UpdateReplicationJobResponsePrivate(this), parent)
+    : SmsResponse(new UpdateReplicationJobResponsePrivate(this), parent)
 {
     setRequest(new UpdateReplicationJobRequest(request));
     setReply(reply);
@@ -82,7 +82,7 @@ void UpdateReplicationJobResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateReplicationJobResponsePrivate object with public implementation \a q.
  */
 UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponsePrivate(
-    UpdateReplicationJobResponse * const q) : SMSResponsePrivate(q)
+    UpdateReplicationJobResponse * const q) : SmsResponsePrivate(q)
 {
 
 }

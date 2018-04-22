@@ -27,7 +27,7 @@ namespace ECS {
 
 class DeregisterTaskDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeregisterTaskDefinitionRequest : public ECSRequest {
+class QTAWS_EXPORT DeregisterTaskDefinitionRequest : public EcsRequest {
 
 public:
     DeregisterTaskDefinitionRequest(const DeregisterTaskDefinitionRequest &other);

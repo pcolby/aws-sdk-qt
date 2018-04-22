@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeRouteTablesRequest::DescribeRouteTablesRequest(const DescribeRouteTablesRequest &other)
-    : EC2Request(new DescribeRouteTablesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeRouteTablesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeRouteTablesRequest::DescribeRouteTablesRequest(const DescribeRouteTables
  * Constructs a DescribeRouteTablesRequest object.
  */
 DescribeRouteTablesRequest::DescribeRouteTablesRequest()
-    : EC2Request(new DescribeRouteTablesRequestPrivate(EC2Request::DescribeRouteTablesAction, this))
+    : Ec2Request(new DescribeRouteTablesRequestPrivate(Ec2Request::DescribeRouteTablesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeRouteTablesRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeRouteTablesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
-    const EC2Request::Action action, DescribeRouteTablesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeRouteTablesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
  */
 DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
     const DescribeRouteTablesRequestPrivate &other, DescribeRouteTablesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

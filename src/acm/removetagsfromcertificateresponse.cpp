@@ -53,7 +53,7 @@ RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
         const RemoveTagsFromCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new RemoveTagsFromCertificateResponsePrivate(this), parent)
+    : AcmResponse(new RemoveTagsFromCertificateResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromCertificateRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a RemoveTagsFromCertificateResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePrivate(
-    RemoveTagsFromCertificateResponse * const q) : ACMResponsePrivate(q)
+    RemoveTagsFromCertificateResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

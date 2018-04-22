@@ -28,10 +28,10 @@ namespace EMR {
 
 class RunJobFlowRequest;
 
-class QTAWS_EXPORT RunJobFlowRequestPrivate : public EMRRequestPrivate {
+class QTAWS_EXPORT RunJobFlowRequestPrivate : public EmrRequestPrivate {
 
 public:
-    RunJobFlowRequestPrivate(const EMRRequest::Action action,
+    RunJobFlowRequestPrivate(const EmrRequest::Action action,
                                    RunJobFlowRequest * const q);
     RunJobFlowRequestPrivate(const RunJobFlowRequestPrivate &other,
                                    RunJobFlowRequest * const q);

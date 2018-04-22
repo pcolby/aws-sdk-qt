@@ -28,10 +28,10 @@ namespace SES {
 
 class GetIdentityMailFromDomainAttributesRequest;
 
-class QTAWS_EXPORT GetIdentityMailFromDomainAttributesRequestPrivate : public SESRequestPrivate {
+class QTAWS_EXPORT GetIdentityMailFromDomainAttributesRequestPrivate : public SesRequestPrivate {
 
 public:
-    GetIdentityMailFromDomainAttributesRequestPrivate(const SESRequest::Action action,
+    GetIdentityMailFromDomainAttributesRequestPrivate(const SesRequest::Action action,
                                    GetIdentityMailFromDomainAttributesRequest * const q);
     GetIdentityMailFromDomainAttributesRequestPrivate(const GetIdentityMailFromDomainAttributesRequestPrivate &other,
                                    GetIdentityMailFromDomainAttributesRequest * const q);

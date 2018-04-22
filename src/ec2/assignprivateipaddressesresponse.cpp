@@ -48,7 +48,7 @@ AssignPrivateIpAddressesResponse::AssignPrivateIpAddressesResponse(
         const AssignPrivateIpAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssignPrivateIpAddressesResponsePrivate(this), parent)
+    : Ec2Response(new AssignPrivateIpAddressesResponsePrivate(this), parent)
 {
     setRequest(new AssignPrivateIpAddressesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void AssignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
  * Constructs a AssignPrivateIpAddressesResponsePrivate object with public implementation \a q.
  */
 AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponsePrivate(
-    AssignPrivateIpAddressesResponse * const q) : EC2ResponsePrivate(q)
+    AssignPrivateIpAddressesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

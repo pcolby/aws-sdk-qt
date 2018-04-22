@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 ListResourceDataSyncRequest::ListResourceDataSyncRequest(const ListResourceDataSyncRequest &other)
-    : SSMRequest(new ListResourceDataSyncRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new ListResourceDataSyncRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ ListResourceDataSyncRequest::ListResourceDataSyncRequest(const ListResourceDataS
  * Constructs a ListResourceDataSyncRequest object.
  */
 ListResourceDataSyncRequest::ListResourceDataSyncRequest()
-    : SSMRequest(new ListResourceDataSyncRequestPrivate(SSMRequest::ListResourceDataSyncAction, this))
+    : SsmRequest(new ListResourceDataSyncRequestPrivate(SsmRequest::ListResourceDataSyncAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * ListResourceDataSyncRequest::response(QNetwor
  */
 
 /*!
- * Constructs a ListResourceDataSyncRequestPrivate object for SSM \a action,
+ * Constructs a ListResourceDataSyncRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
-    const SSMRequest::Action action, ListResourceDataSyncRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, ListResourceDataSyncRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
  */
 ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
     const ListResourceDataSyncRequestPrivate &other, ListResourceDataSyncRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

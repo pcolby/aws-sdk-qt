@@ -46,7 +46,7 @@ UpdateConfigurationResponse::UpdateConfigurationResponse(
         const UpdateConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new UpdateConfigurationResponsePrivate(this), parent)
+    : MqResponse(new UpdateConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationRequest(request));
     setReply(reply);
@@ -84,7 +84,7 @@ void UpdateConfigurationResponse::parseSuccess(QIODevice &response)
  * Constructs a UpdateConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationResponsePrivate::UpdateConfigurationResponsePrivate(
-    UpdateConfigurationResponse * const q) : MQResponsePrivate(q)
+    UpdateConfigurationResponse * const q) : MqResponsePrivate(q)
 {
 
 }

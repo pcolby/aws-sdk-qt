@@ -60,7 +60,7 @@ GetWorkflowExecutionHistoryResponse::GetWorkflowExecutionHistoryResponse(
         const GetWorkflowExecutionHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new GetWorkflowExecutionHistoryResponsePrivate(this), parent)
+    : SwfResponse(new GetWorkflowExecutionHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetWorkflowExecutionHistoryRequest(request));
     setReply(reply);
@@ -98,7 +98,7 @@ void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
  * Constructs a GetWorkflowExecutionHistoryResponsePrivate object with public implementation \a q.
  */
 GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponsePrivate(
-    GetWorkflowExecutionHistoryResponse * const q) : SWFResponsePrivate(q)
+    GetWorkflowExecutionHistoryResponse * const q) : SwfResponsePrivate(q)
 {
 
 }

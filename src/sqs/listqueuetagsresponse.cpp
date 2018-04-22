@@ -110,7 +110,7 @@ ListQueueTagsResponse::ListQueueTagsResponse(
         const ListQueueTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new ListQueueTagsResponsePrivate(this), parent)
+    : SqsResponse(new ListQueueTagsResponsePrivate(this), parent)
 {
     setRequest(new ListQueueTagsRequest(request));
     setReply(reply);
@@ -148,7 +148,7 @@ void ListQueueTagsResponse::parseSuccess(QIODevice &response)
  * Constructs a ListQueueTagsResponsePrivate object with public implementation \a q.
  */
 ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
-    ListQueueTagsResponse * const q) : SQSResponsePrivate(q)
+    ListQueueTagsResponse * const q) : SqsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ResetImageAttributeRequest::ResetImageAttributeRequest(const ResetImageAttributeRequest &other)
-    : EC2Request(new ResetImageAttributeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ResetImageAttributeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ResetImageAttributeRequest::ResetImageAttributeRequest(const ResetImageAttribute
  * Constructs a ResetImageAttributeRequest object.
  */
 ResetImageAttributeRequest::ResetImageAttributeRequest()
-    : EC2Request(new ResetImageAttributeRequestPrivate(EC2Request::ResetImageAttributeAction, this))
+    : Ec2Request(new ResetImageAttributeRequestPrivate(Ec2Request::ResetImageAttributeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetwork
  */
 
 /*!
- * Constructs a ResetImageAttributeRequestPrivate object for EC2 \a action,
+ * Constructs a ResetImageAttributeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
-    const EC2Request::Action action, ResetImageAttributeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ResetImageAttributeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
     const ResetImageAttributeRequestPrivate &other, ResetImageAttributeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

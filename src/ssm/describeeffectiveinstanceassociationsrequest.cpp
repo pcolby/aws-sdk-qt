@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DescribeEffectiveInstanceAssociationsRequest::DescribeEffectiveInstanceAssociationsRequest(const DescribeEffectiveInstanceAssociationsRequest &other)
-    : SSMRequest(new DescribeEffectiveInstanceAssociationsRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DescribeEffectiveInstanceAssociationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DescribeEffectiveInstanceAssociationsRequest::DescribeEffectiveInstanceAssociati
  * Constructs a DescribeEffectiveInstanceAssociationsRequest object.
  */
 DescribeEffectiveInstanceAssociationsRequest::DescribeEffectiveInstanceAssociationsRequest()
-    : SSMRequest(new DescribeEffectiveInstanceAssociationsRequestPrivate(SSMRequest::DescribeEffectiveInstanceAssociationsAction, this))
+    : SsmRequest(new DescribeEffectiveInstanceAssociationsRequestPrivate(SsmRequest::DescribeEffectiveInstanceAssociationsAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectiveInstanceAssociationsRequest:
  */
 
 /*!
- * Constructs a DescribeEffectiveInstanceAssociationsRequestPrivate object for SSM \a action,
+ * Constructs a DescribeEffectiveInstanceAssociationsRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
-    const SSMRequest::Action action, DescribeEffectiveInstanceAssociationsRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DescribeEffectiveInstanceAssociationsRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAs
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
     const DescribeEffectiveInstanceAssociationsRequestPrivate &other, DescribeEffectiveInstanceAssociationsRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

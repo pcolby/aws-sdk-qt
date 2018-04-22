@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest(const GetLaunchTemplateDataRequest &other)
-    : EC2Request(new GetLaunchTemplateDataRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new GetLaunchTemplateDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest(const GetLaunchTempla
  * Constructs a GetLaunchTemplateDataRequest object.
  */
 GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest()
-    : EC2Request(new GetLaunchTemplateDataRequestPrivate(EC2Request::GetLaunchTemplateDataAction, this))
+    : Ec2Request(new GetLaunchTemplateDataRequestPrivate(Ec2Request::GetLaunchTemplateDataAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetwo
  */
 
 /*!
- * Constructs a GetLaunchTemplateDataRequestPrivate object for EC2 \a action,
+ * Constructs a GetLaunchTemplateDataRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
-    const EC2Request::Action action, GetLaunchTemplateDataRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, GetLaunchTemplateDataRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
     const GetLaunchTemplateDataRequestPrivate &other, GetLaunchTemplateDataRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

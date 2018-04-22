@@ -143,7 +143,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new UntagResourceResponsePrivate(this), parent)
+    : KmsResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
  * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
-    UntagResourceResponse * const q) : KMSResponsePrivate(q)
+    UntagResourceResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

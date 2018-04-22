@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 StartInstancesRequest::StartInstancesRequest(const StartInstancesRequest &other)
-    : EC2Request(new StartInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new StartInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ StartInstancesRequest::StartInstancesRequest(const StartInstancesRequest &other)
  * Constructs a StartInstancesRequest object.
  */
 StartInstancesRequest::StartInstancesRequest()
-    : EC2Request(new StartInstancesRequestPrivate(EC2Request::StartInstancesAction, this))
+    : Ec2Request(new StartInstancesRequestPrivate(Ec2Request::StartInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * StartInstancesRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a StartInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a StartInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 StartInstancesRequestPrivate::StartInstancesRequestPrivate(
-    const EC2Request::Action action, StartInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, StartInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ StartInstancesRequestPrivate::StartInstancesRequestPrivate(
  */
 StartInstancesRequestPrivate::StartInstancesRequestPrivate(
     const StartInstancesRequestPrivate &other, StartInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetParameterHistoryRequest::GetParameterHistoryRequest(const GetParameterHistoryRequest &other)
-    : SSMRequest(new GetParameterHistoryRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetParameterHistoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetParameterHistoryRequest::GetParameterHistoryRequest(const GetParameterHistory
  * Constructs a GetParameterHistoryRequest object.
  */
 GetParameterHistoryRequest::GetParameterHistoryRequest()
-    : SSMRequest(new GetParameterHistoryRequestPrivate(SSMRequest::GetParameterHistoryAction, this))
+    : SsmRequest(new GetParameterHistoryRequestPrivate(SsmRequest::GetParameterHistoryAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetParameterHistoryRequest::response(QNetwork
  */
 
 /*!
- * Constructs a GetParameterHistoryRequestPrivate object for SSM \a action,
+ * Constructs a GetParameterHistoryRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
-    const SSMRequest::Action action, GetParameterHistoryRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetParameterHistoryRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
     const GetParameterHistoryRequestPrivate &other, GetParameterHistoryRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

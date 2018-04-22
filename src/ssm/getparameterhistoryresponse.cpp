@@ -68,7 +68,7 @@ GetParameterHistoryResponse::GetParameterHistoryResponse(
         const GetParameterHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetParameterHistoryResponsePrivate(this), parent)
+    : SsmResponse(new GetParameterHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetParameterHistoryRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void GetParameterHistoryResponse::parseSuccess(QIODevice &response)
  * Constructs a GetParameterHistoryResponsePrivate object with public implementation \a q.
  */
 GetParameterHistoryResponsePrivate::GetParameterHistoryResponsePrivate(
-    GetParameterHistoryResponse * const q) : SSMResponsePrivate(q)
+    GetParameterHistoryResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

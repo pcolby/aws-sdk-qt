@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DisassociateSubnetCidrBlockRequest;
 
-class QTAWS_EXPORT DisassociateSubnetCidrBlockRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DisassociateSubnetCidrBlockRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DisassociateSubnetCidrBlockRequestPrivate(const EC2Request::Action action,
+    DisassociateSubnetCidrBlockRequestPrivate(const Ec2Request::Action action,
                                    DisassociateSubnetCidrBlockRequest * const q);
     DisassociateSubnetCidrBlockRequestPrivate(const DisassociateSubnetCidrBlockRequestPrivate &other,
                                    DisassociateSubnetCidrBlockRequest * const q);

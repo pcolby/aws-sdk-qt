@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateDefaultVpcRequest::CreateDefaultVpcRequest(const CreateDefaultVpcRequest &other)
-    : EC2Request(new CreateDefaultVpcRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateDefaultVpcRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateDefaultVpcRequest::CreateDefaultVpcRequest(const CreateDefaultVpcRequest &
  * Constructs a CreateDefaultVpcRequest object.
  */
 CreateDefaultVpcRequest::CreateDefaultVpcRequest()
-    : EC2Request(new CreateDefaultVpcRequestPrivate(EC2Request::CreateDefaultVpcAction, this))
+    : Ec2Request(new CreateDefaultVpcRequestPrivate(Ec2Request::CreateDefaultVpcAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a CreateDefaultVpcRequestPrivate object for EC2 \a action,
+ * Constructs a CreateDefaultVpcRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
-    const EC2Request::Action action, CreateDefaultVpcRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateDefaultVpcRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
  */
 CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
     const CreateDefaultVpcRequestPrivate &other, CreateDefaultVpcRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

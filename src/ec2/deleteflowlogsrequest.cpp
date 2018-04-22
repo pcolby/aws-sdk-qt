@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteFlowLogsRequest::DeleteFlowLogsRequest(const DeleteFlowLogsRequest &other)
-    : EC2Request(new DeleteFlowLogsRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteFlowLogsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteFlowLogsRequest::DeleteFlowLogsRequest(const DeleteFlowLogsRequest &other)
  * Constructs a DeleteFlowLogsRequest object.
  */
 DeleteFlowLogsRequest::DeleteFlowLogsRequest()
-    : EC2Request(new DeleteFlowLogsRequestPrivate(EC2Request::DeleteFlowLogsAction, this))
+    : Ec2Request(new DeleteFlowLogsRequestPrivate(Ec2Request::DeleteFlowLogsAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteFlowLogsRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DeleteFlowLogsRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteFlowLogsRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
-    const EC2Request::Action action, DeleteFlowLogsRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteFlowLogsRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
  */
 DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
     const DeleteFlowLogsRequestPrivate &other, DeleteFlowLogsRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

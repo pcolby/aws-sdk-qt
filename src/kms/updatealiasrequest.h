@@ -27,7 +27,7 @@ namespace KMS {
 
 class UpdateAliasRequestPrivate;
 
-class QTAWS_EXPORT UpdateAliasRequest : public KMSRequest {
+class QTAWS_EXPORT UpdateAliasRequest : public KmsRequest {
 
 public:
     UpdateAliasRequest(const UpdateAliasRequest &other);

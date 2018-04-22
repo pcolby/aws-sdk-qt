@@ -58,7 +58,7 @@ SetTopicAttributesResponse::SetTopicAttributesResponse(
         const SetTopicAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SetTopicAttributesResponsePrivate(this), parent)
+    : SnsResponse(new SetTopicAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetTopicAttributesRequest(request));
     setReply(reply);
@@ -96,7 +96,7 @@ void SetTopicAttributesResponse::parseSuccess(QIODevice &response)
  * Constructs a SetTopicAttributesResponsePrivate object with public implementation \a q.
  */
 SetTopicAttributesResponsePrivate::SetTopicAttributesResponsePrivate(
-    SetTopicAttributesResponse * const q) : SNSResponsePrivate(q)
+    SetTopicAttributesResponse * const q) : SnsResponsePrivate(q)
 {
 
 }

@@ -68,7 +68,7 @@ CreateActivationResponse::CreateActivationResponse(
         const CreateActivationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateActivationResponsePrivate(this), parent)
+    : SsmResponse(new CreateActivationResponsePrivate(this), parent)
 {
     setRequest(new CreateActivationRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void CreateActivationResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateActivationResponsePrivate object with public implementation \a q.
  */
 CreateActivationResponsePrivate::CreateActivationResponsePrivate(
-    CreateActivationResponse * const q) : SSMResponsePrivate(q)
+    CreateActivationResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

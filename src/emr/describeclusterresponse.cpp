@@ -47,7 +47,7 @@ DescribeClusterResponse::DescribeClusterResponse(
         const DescribeClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new DescribeClusterResponsePrivate(this), parent)
+    : EmrResponse(new DescribeClusterResponsePrivate(this), parent)
 {
     setRequest(new DescribeClusterRequest(request));
     setReply(reply);
@@ -85,7 +85,7 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeClusterResponsePrivate object with public implementation \a q.
  */
 DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
-    DescribeClusterResponse * const q) : EMRResponsePrivate(q)
+    DescribeClusterResponse * const q) : EmrResponsePrivate(q)
 {
 
 }

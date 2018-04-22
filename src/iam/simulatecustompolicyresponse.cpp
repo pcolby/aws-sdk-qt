@@ -109,7 +109,7 @@ SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
         const SimulateCustomPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new SimulateCustomPolicyResponsePrivate(this), parent)
+    : IamResponse(new SimulateCustomPolicyResponsePrivate(this), parent)
 {
     setRequest(new SimulateCustomPolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void SimulateCustomPolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a SimulateCustomPolicyResponsePrivate object with public implementation \a q.
  */
 SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
-    SimulateCustomPolicyResponse * const q) : IAMResponsePrivate(q)
+    SimulateCustomPolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

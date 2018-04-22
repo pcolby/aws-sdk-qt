@@ -109,7 +109,7 @@ UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbp
         const UpdateOpenIDConnectProviderThumbprintRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateOpenIDConnectProviderThumbprintResponsePrivate(this), parent)
+    : IamResponse(new UpdateOpenIDConnectProviderThumbprintResponsePrivate(this), parent)
 {
     setRequest(new UpdateOpenIDConnectProviderThumbprintRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void UpdateOpenIDConnectProviderThumbprintResponse::parseSuccess(QIODevice &resp
  * Constructs a UpdateOpenIDConnectProviderThumbprintResponsePrivate object with public implementation \a q.
  */
 UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProviderThumbprintResponsePrivate(
-    UpdateOpenIDConnectProviderThumbprintResponse * const q) : IAMResponsePrivate(q)
+    UpdateOpenIDConnectProviderThumbprintResponse * const q) : IamResponsePrivate(q)
 {
 
 }

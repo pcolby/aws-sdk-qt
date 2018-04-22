@@ -28,10 +28,10 @@ namespace SSM {
 
 class DeleteDocumentRequest;
 
-class QTAWS_EXPORT DeleteDocumentRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DeleteDocumentRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DeleteDocumentRequestPrivate(const SSMRequest::Action action,
+    DeleteDocumentRequestPrivate(const SsmRequest::Action action,
                                    DeleteDocumentRequest * const q);
     DeleteDocumentRequestPrivate(const DeleteDocumentRequestPrivate &other,
                                    DeleteDocumentRequest * const q);

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest(const ReplaceRouteTableAssociationRequest &other)
-    : EC2Request(new ReplaceRouteTableAssociationRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ReplaceRouteTableAssociationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest(const R
  * Constructs a ReplaceRouteTableAssociationRequest object.
  */
 ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest()
-    : EC2Request(new ReplaceRouteTableAssociationRequestPrivate(EC2Request::ReplaceRouteTableAssociationAction, this))
+    : Ec2Request(new ReplaceRouteTableAssociationRequestPrivate(Ec2Request::ReplaceRouteTableAssociationAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response
  */
 
 /*!
- * Constructs a ReplaceRouteTableAssociationRequestPrivate object for EC2 \a action,
+ * Constructs a ReplaceRouteTableAssociationRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
-    const EC2Request::Action action, ReplaceRouteTableAssociationRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ReplaceRouteTableAssociationRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestP
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
     const ReplaceRouteTableAssociationRequestPrivate &other, ReplaceRouteTableAssociationRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

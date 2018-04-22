@@ -27,7 +27,7 @@ namespace SNS {
 
 class GetTopicAttributesRequestPrivate;
 
-class QTAWS_EXPORT GetTopicAttributesRequest : public SNSRequest {
+class QTAWS_EXPORT GetTopicAttributesRequest : public SnsRequest {
 
 public:
     GetTopicAttributesRequest(const GetTopicAttributesRequest &other);

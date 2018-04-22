@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeElasticGpusRequest;
 
-class QTAWS_EXPORT DescribeElasticGpusRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeElasticGpusRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeElasticGpusRequestPrivate(const EC2Request::Action action,
+    DescribeElasticGpusRequestPrivate(const Ec2Request::Action action,
                                    DescribeElasticGpusRequest * const q);
     DescribeElasticGpusRequestPrivate(const DescribeElasticGpusRequestPrivate &other,
                                    DescribeElasticGpusRequest * const q);

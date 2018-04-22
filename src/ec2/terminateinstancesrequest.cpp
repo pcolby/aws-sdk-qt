@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 TerminateInstancesRequest::TerminateInstancesRequest(const TerminateInstancesRequest &other)
-    : EC2Request(new TerminateInstancesRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new TerminateInstancesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ TerminateInstancesRequest::TerminateInstancesRequest(const TerminateInstancesReq
  * Constructs a TerminateInstancesRequest object.
  */
 TerminateInstancesRequest::TerminateInstancesRequest()
-    : EC2Request(new TerminateInstancesRequestPrivate(EC2Request::TerminateInstancesAction, this))
+    : Ec2Request(new TerminateInstancesRequestPrivate(Ec2Request::TerminateInstancesAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a TerminateInstancesRequestPrivate object for EC2 \a action,
+ * Constructs a TerminateInstancesRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
-    const EC2Request::Action action, TerminateInstancesRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, TerminateInstancesRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
  */
 TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
     const TerminateInstancesRequestPrivate &other, TerminateInstancesRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

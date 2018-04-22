@@ -48,7 +48,7 @@ DisassociateVpcCidrBlockResponse::DisassociateVpcCidrBlockResponse(
         const DisassociateVpcCidrBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisassociateVpcCidrBlockResponsePrivate(this), parent)
+    : Ec2Response(new DisassociateVpcCidrBlockResponsePrivate(this), parent)
 {
     setRequest(new DisassociateVpcCidrBlockRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DisassociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
  * Constructs a DisassociateVpcCidrBlockResponsePrivate object with public implementation \a q.
  */
 DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponsePrivate(
-    DisassociateVpcCidrBlockResponse * const q) : EC2ResponsePrivate(q)
+    DisassociateVpcCidrBlockResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

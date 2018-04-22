@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest(const SetDefaultPolicyVersionRequest &other)
-    : IAMRequest(new SetDefaultPolicyVersionRequestPrivate(*other.d_func(), this))
+    : IamRequest(new SetDefaultPolicyVersionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest(const SetDefaultP
  * Constructs a SetDefaultPolicyVersionRequest object.
  */
 SetDefaultPolicyVersionRequest::SetDefaultPolicyVersionRequest()
-    : IAMRequest(new SetDefaultPolicyVersionRequestPrivate(IAMRequest::SetDefaultPolicyVersionAction, this))
+    : IamRequest(new SetDefaultPolicyVersionRequestPrivate(IamRequest::SetDefaultPolicyVersionAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNet
  */
 
 /*!
- * Constructs a SetDefaultPolicyVersionRequestPrivate object for IAM \a action,
+ * Constructs a SetDefaultPolicyVersionRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
-    const IAMRequest::Action action, SetDefaultPolicyVersionRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, SetDefaultPolicyVersionRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const SetDefaultPolicyVersionRequestPrivate &other, SetDefaultPolicyVersionRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

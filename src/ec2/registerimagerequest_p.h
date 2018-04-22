@@ -28,10 +28,10 @@ namespace EC2 {
 
 class RegisterImageRequest;
 
-class QTAWS_EXPORT RegisterImageRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT RegisterImageRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    RegisterImageRequestPrivate(const EC2Request::Action action,
+    RegisterImageRequestPrivate(const Ec2Request::Action action,
                                    RegisterImageRequest * const q);
     RegisterImageRequestPrivate(const RegisterImageRequestPrivate &other,
                                    RegisterImageRequest * const q);

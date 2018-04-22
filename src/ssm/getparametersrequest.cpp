@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 GetParametersRequest::GetParametersRequest(const GetParametersRequest &other)
-    : SSMRequest(new GetParametersRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new GetParametersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ GetParametersRequest::GetParametersRequest(const GetParametersRequest &other)
  * Constructs a GetParametersRequest object.
  */
 GetParametersRequest::GetParametersRequest()
-    : SSMRequest(new GetParametersRequestPrivate(SSMRequest::GetParametersAction, this))
+    : SsmRequest(new GetParametersRequestPrivate(SsmRequest::GetParametersAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * GetParametersRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a GetParametersRequestPrivate object for SSM \a action,
+ * Constructs a GetParametersRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 GetParametersRequestPrivate::GetParametersRequestPrivate(
-    const SSMRequest::Action action, GetParametersRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, GetParametersRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ GetParametersRequestPrivate::GetParametersRequestPrivate(
  */
 GetParametersRequestPrivate::GetParametersRequestPrivate(
     const GetParametersRequestPrivate &other, GetParametersRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

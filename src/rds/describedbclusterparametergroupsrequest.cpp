@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBClusterParameterGroupsRequest::DescribeDBClusterParameterGroupsRequest(const DescribeDBClusterParameterGroupsRequest &other)
-    : RDSRequest(new DescribeDBClusterParameterGroupsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBClusterParameterGroupsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBClusterParameterGroupsRequest::DescribeDBClusterParameterGroupsRequest
  * Constructs a DescribeDBClusterParameterGroupsRequest object.
  */
 DescribeDBClusterParameterGroupsRequest::DescribeDBClusterParameterGroupsRequest()
-    : RDSRequest(new DescribeDBClusterParameterGroupsRequestPrivate(RDSRequest::DescribeDBClusterParameterGroupsAction, this))
+    : RdsRequest(new DescribeDBClusterParameterGroupsRequestPrivate(RdsRequest::DescribeDBClusterParameterGroupsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterParameterGroupsRequest::resp
  */
 
 /*!
- * Constructs a DescribeDBClusterParameterGroupsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBClusterParameterGroupsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroupsRequestPrivate(
-    const RDSRequest::Action action, DescribeDBClusterParameterGroupsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBClusterParameterGroupsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroups
  */
 DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroupsRequestPrivate(
     const DescribeDBClusterParameterGroupsRequestPrivate &other, DescribeDBClusterParameterGroupsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

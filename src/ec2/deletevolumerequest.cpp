@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
-    : EC2Request(new DeleteVolumeRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVolumeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
  * Constructs a DeleteVolumeRequest object.
  */
 DeleteVolumeRequest::DeleteVolumeRequest()
-    : EC2Request(new DeleteVolumeRequestPrivate(EC2Request::DeleteVolumeAction, this))
+    : Ec2Request(new DeleteVolumeRequestPrivate(Ec2Request::DeleteVolumeAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a DeleteVolumeRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVolumeRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
-    const EC2Request::Action action, DeleteVolumeRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVolumeRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const DeleteVolumeRequestPrivate &other, DeleteVolumeRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

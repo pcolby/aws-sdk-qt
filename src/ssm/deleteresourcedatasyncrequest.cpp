@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 DeleteResourceDataSyncRequest::DeleteResourceDataSyncRequest(const DeleteResourceDataSyncRequest &other)
-    : SSMRequest(new DeleteResourceDataSyncRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new DeleteResourceDataSyncRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ DeleteResourceDataSyncRequest::DeleteResourceDataSyncRequest(const DeleteResourc
  * Constructs a DeleteResourceDataSyncRequest object.
  */
 DeleteResourceDataSyncRequest::DeleteResourceDataSyncRequest()
-    : SSMRequest(new DeleteResourceDataSyncRequestPrivate(SSMRequest::DeleteResourceDataSyncAction, this))
+    : SsmRequest(new DeleteResourceDataSyncRequestPrivate(SsmRequest::DeleteResourceDataSyncAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDataSyncRequest::response(QNetw
  */
 
 /*!
- * Constructs a DeleteResourceDataSyncRequestPrivate object for SSM \a action,
+ * Constructs a DeleteResourceDataSyncRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
-    const SSMRequest::Action action, DeleteResourceDataSyncRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, DeleteResourceDataSyncRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
     const DeleteResourceDataSyncRequestPrivate &other, DeleteResourceDataSyncRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteReceiptRuleSetRequest::DeleteReceiptRuleSetRequest(const DeleteReceiptRuleSetRequest &other)
-    : SESRequest(new DeleteReceiptRuleSetRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteReceiptRuleSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteReceiptRuleSetRequest::DeleteReceiptRuleSetRequest(const DeleteReceiptRule
  * Constructs a DeleteReceiptRuleSetRequest object.
  */
 DeleteReceiptRuleSetRequest::DeleteReceiptRuleSetRequest()
-    : SESRequest(new DeleteReceiptRuleSetRequestPrivate(SESRequest::DeleteReceiptRuleSetAction, this))
+    : SesRequest(new DeleteReceiptRuleSetRequestPrivate(SesRequest::DeleteReceiptRuleSetAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptRuleSetRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DeleteReceiptRuleSetRequestPrivate object for SES \a action,
+ * Constructs a DeleteReceiptRuleSetRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
-    const SESRequest::Action action, DeleteReceiptRuleSetRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteReceiptRuleSetRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
  */
 DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
     const DeleteReceiptRuleSetRequestPrivate &other, DeleteReceiptRuleSetRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

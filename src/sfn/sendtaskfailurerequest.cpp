@@ -58,7 +58,7 @@ namespace SFN {
  * Constructs a copy of \a other.
  */
 SendTaskFailureRequest::SendTaskFailureRequest(const SendTaskFailureRequest &other)
-    : SFNRequest(new SendTaskFailureRequestPrivate(*other.d_func(), this))
+    : SfnRequest(new SendTaskFailureRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -67,7 +67,7 @@ SendTaskFailureRequest::SendTaskFailureRequest(const SendTaskFailureRequest &oth
  * Constructs a SendTaskFailureRequest object.
  */
 SendTaskFailureRequest::SendTaskFailureRequest()
-    : SFNRequest(new SendTaskFailureRequestPrivate(SFNRequest::SendTaskFailureAction, this))
+    : SfnRequest(new SendTaskFailureRequestPrivate(SfnRequest::SendTaskFailureAction, this))
 {
 
 }
@@ -100,12 +100,12 @@ QtAws::Core::AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a SendTaskFailureRequestPrivate object for SFN \a action,
+ * Constructs a SendTaskFailureRequestPrivate object for Sfn \a action,
  * with public implementation \a q.
  */
 SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
-    const SFNRequest::Action action, SendTaskFailureRequest * const q)
-    : SFNRequestPrivate(action, q)
+    const SfnRequest::Action action, SendTaskFailureRequest * const q)
+    : SfnRequestPrivate(action, q)
 {
 
 }
@@ -118,7 +118,7 @@ SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
  */
 SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
     const SendTaskFailureRequestPrivate &other, SendTaskFailureRequest * const q)
-    : SFNRequestPrivate(other, q)
+    : SfnRequestPrivate(other, q)
 {
 
 }

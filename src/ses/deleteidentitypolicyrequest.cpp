@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest(const DeleteIdentityPolicyRequest &other)
-    : SESRequest(new DeleteIdentityPolicyRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteIdentityPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest(const DeleteIdentityPol
  * Constructs a DeleteIdentityPolicyRequest object.
  */
 DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest()
-    : SESRequest(new DeleteIdentityPolicyRequestPrivate(SESRequest::DeleteIdentityPolicyAction, this))
+    : SesRequest(new DeleteIdentityPolicyRequestPrivate(SesRequest::DeleteIdentityPolicyAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DeleteIdentityPolicyRequestPrivate object for SES \a action,
+ * Constructs a DeleteIdentityPolicyRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
-    const SESRequest::Action action, DeleteIdentityPolicyRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteIdentityPolicyRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
     const DeleteIdentityPolicyRequestPrivate &other, DeleteIdentityPolicyRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

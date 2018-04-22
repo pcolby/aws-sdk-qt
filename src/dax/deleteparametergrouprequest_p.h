@@ -28,10 +28,10 @@ namespace DAX {
 
 class DeleteParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteParameterGroupRequestPrivate : public DAXRequestPrivate {
+class QTAWS_EXPORT DeleteParameterGroupRequestPrivate : public DaxRequestPrivate {
 
 public:
-    DeleteParameterGroupRequestPrivate(const DAXRequest::Action action,
+    DeleteParameterGroupRequestPrivate(const DaxRequest::Action action,
                                    DeleteParameterGroupRequest * const q);
     DeleteParameterGroupRequestPrivate(const DeleteParameterGroupRequestPrivate &other,
                                    DeleteParameterGroupRequest * const q);

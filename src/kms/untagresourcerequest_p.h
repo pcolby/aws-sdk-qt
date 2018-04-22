@@ -28,10 +28,10 @@ namespace KMS {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public KMSRequestPrivate {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public KmsRequestPrivate {
 
 public:
-    UntagResourceRequestPrivate(const KMSRequest::Action action,
+    UntagResourceRequestPrivate(const KmsRequest::Action action,
                                    UntagResourceRequest * const q);
     UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
                                    UntagResourceRequest * const q);

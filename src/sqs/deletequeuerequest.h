@@ -27,7 +27,7 @@ namespace SQS {
 
 class DeleteQueueRequestPrivate;
 
-class QTAWS_EXPORT DeleteQueueRequest : public SQSRequest {
+class QTAWS_EXPORT DeleteQueueRequest : public SqsRequest {
 
 public:
     DeleteQueueRequest(const DeleteQueueRequest &other);

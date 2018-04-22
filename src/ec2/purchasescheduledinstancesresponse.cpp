@@ -48,7 +48,7 @@ PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
         const PurchaseScheduledInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new PurchaseScheduledInstancesResponsePrivate(this), parent)
+    : Ec2Response(new PurchaseScheduledInstancesResponsePrivate(this), parent)
 {
     setRequest(new PurchaseScheduledInstancesRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
  * Constructs a PurchaseScheduledInstancesResponsePrivate object with public implementation \a q.
  */
 PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePrivate(
-    PurchaseScheduledInstancesResponse * const q) : EC2ResponsePrivate(q)
+    PurchaseScheduledInstancesResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

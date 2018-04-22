@@ -109,7 +109,7 @@ GetAccountAuthorizationDetailsResponse::GetAccountAuthorizationDetailsResponse(
         const GetAccountAuthorizationDetailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetAccountAuthorizationDetailsResponsePrivate(this), parent)
+    : IamResponse(new GetAccountAuthorizationDetailsResponsePrivate(this), parent)
 {
     setRequest(new GetAccountAuthorizationDetailsRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
  * Constructs a GetAccountAuthorizationDetailsResponsePrivate object with public implementation \a q.
  */
 GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsResponsePrivate(
-    GetAccountAuthorizationDetailsResponse * const q) : IAMResponsePrivate(q)
+    GetAccountAuthorizationDetailsResponse * const q) : IamResponsePrivate(q)
 {
 
 }

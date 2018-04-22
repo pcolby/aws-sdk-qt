@@ -28,10 +28,10 @@ namespace EC2 {
 
 class ImportVolumeRequest;
 
-class QTAWS_EXPORT ImportVolumeRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT ImportVolumeRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    ImportVolumeRequestPrivate(const EC2Request::Action action,
+    ImportVolumeRequestPrivate(const Ec2Request::Action action,
                                    ImportVolumeRequest * const q);
     ImportVolumeRequestPrivate(const ImportVolumeRequestPrivate &other,
                                    ImportVolumeRequest * const q);

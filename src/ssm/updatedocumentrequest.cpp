@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 UpdateDocumentRequest::UpdateDocumentRequest(const UpdateDocumentRequest &other)
-    : SSMRequest(new UpdateDocumentRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new UpdateDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ UpdateDocumentRequest::UpdateDocumentRequest(const UpdateDocumentRequest &other)
  * Constructs a UpdateDocumentRequest object.
  */
 UpdateDocumentRequest::UpdateDocumentRequest()
-    : SSMRequest(new UpdateDocumentRequestPrivate(SSMRequest::UpdateDocumentAction, this))
+    : SsmRequest(new UpdateDocumentRequestPrivate(SsmRequest::UpdateDocumentAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a UpdateDocumentRequestPrivate object for SSM \a action,
+ * Constructs a UpdateDocumentRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
-    const SSMRequest::Action action, UpdateDocumentRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, UpdateDocumentRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const UpdateDocumentRequestPrivate &other, UpdateDocumentRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

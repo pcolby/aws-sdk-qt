@@ -28,10 +28,10 @@ namespace EFS {
 
 class ModifyMountTargetSecurityGroupsRequest;
 
-class QTAWS_EXPORT ModifyMountTargetSecurityGroupsRequestPrivate : public EFSRequestPrivate {
+class QTAWS_EXPORT ModifyMountTargetSecurityGroupsRequestPrivate : public EfsRequestPrivate {
 
 public:
-    ModifyMountTargetSecurityGroupsRequestPrivate(const EFSRequest::Action action,
+    ModifyMountTargetSecurityGroupsRequestPrivate(const EfsRequest::Action action,
                                    ModifyMountTargetSecurityGroupsRequest * const q);
     ModifyMountTargetSecurityGroupsRequestPrivate(const ModifyMountTargetSecurityGroupsRequestPrivate &other,
                                    ModifyMountTargetSecurityGroupsRequest * const q);

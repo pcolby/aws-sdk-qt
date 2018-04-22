@@ -27,7 +27,7 @@ namespace EC2 {
 
 class TerminateInstancesRequestPrivate;
 
-class QTAWS_EXPORT TerminateInstancesRequest : public EC2Request {
+class QTAWS_EXPORT TerminateInstancesRequest : public Ec2Request {
 
 public:
     TerminateInstancesRequest(const TerminateInstancesRequest &other);

@@ -48,7 +48,7 @@ DescribeRegionsResponse::DescribeRegionsResponse(
         const DescribeRegionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeRegionsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeRegionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeRegionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeRegionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeRegionsResponsePrivate object with public implementation \a q.
  */
 DescribeRegionsResponsePrivate::DescribeRegionsResponsePrivate(
-    DescribeRegionsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeRegionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

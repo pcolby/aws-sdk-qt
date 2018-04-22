@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 PutParameterRequest::PutParameterRequest(const PutParameterRequest &other)
-    : SSMRequest(new PutParameterRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new PutParameterRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ PutParameterRequest::PutParameterRequest(const PutParameterRequest &other)
  * Constructs a PutParameterRequest object.
  */
 PutParameterRequest::PutParameterRequest()
-    : SSMRequest(new PutParameterRequestPrivate(SSMRequest::PutParameterAction, this))
+    : SsmRequest(new PutParameterRequestPrivate(SsmRequest::PutParameterAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * PutParameterRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a PutParameterRequestPrivate object for SSM \a action,
+ * Constructs a PutParameterRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 PutParameterRequestPrivate::PutParameterRequestPrivate(
-    const SSMRequest::Action action, PutParameterRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, PutParameterRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ PutParameterRequestPrivate::PutParameterRequestPrivate(
  */
 PutParameterRequestPrivate::PutParameterRequestPrivate(
     const PutParameterRequestPrivate &other, PutParameterRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

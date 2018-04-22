@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyVpcEndpointConnectionNotificationRequestPrivate;
 
-class QTAWS_EXPORT ModifyVpcEndpointConnectionNotificationRequest : public EC2Request {
+class QTAWS_EXPORT ModifyVpcEndpointConnectionNotificationRequest : public Ec2Request {
 
 public:
     ModifyVpcEndpointConnectionNotificationRequest(const ModifyVpcEndpointConnectionNotificationRequest &other);

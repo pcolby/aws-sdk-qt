@@ -109,7 +109,7 @@ DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
         const DeleteOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteOpenIDConnectProviderResponsePrivate(this), parent)
+    : IamResponse(new DeleteOpenIDConnectProviderResponsePrivate(this), parent)
 {
     setRequest(new DeleteOpenIDConnectProviderRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void DeleteOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponsePrivate(
-    DeleteOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
+    DeleteOpenIDConnectProviderResponse * const q) : IamResponsePrivate(q)
 {
 
 }

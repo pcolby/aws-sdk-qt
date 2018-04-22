@@ -49,7 +49,7 @@ DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
         const DeleteSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
+    : WafResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSqlInjectionMatchSetRequest(request));
     setReply(reply);
@@ -87,7 +87,7 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePrivate(
-    DeleteSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
+    DeleteSqlInjectionMatchSetResponse * const q) : WafResponsePrivate(q)
 {
 
 }

@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest(const ResetServiceSpecificCredentialRequest &other)
-    : IAMRequest(new ResetServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ResetServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest(con
  * Constructs a ResetServiceSpecificCredentialRequest object.
  */
 ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest()
-    : IAMRequest(new ResetServiceSpecificCredentialRequestPrivate(IAMRequest::ResetServiceSpecificCredentialAction, this))
+    : IamRequest(new ResetServiceSpecificCredentialRequestPrivate(IamRequest::ResetServiceSpecificCredentialAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ResetServiceSpecificCredentialRequest::respon
  */
 
 /*!
- * Constructs a ResetServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * Constructs a ResetServiceSpecificCredentialRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
-    const IAMRequest::Action action, ResetServiceSpecificCredentialRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ResetServiceSpecificCredentialRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequ
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
     const ResetServiceSpecificCredentialRequestPrivate &other, ResetServiceSpecificCredentialRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

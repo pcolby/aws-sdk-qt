@@ -48,7 +48,7 @@ DeleteSpotDatafeedSubscriptionResponse::DeleteSpotDatafeedSubscriptionResponse(
         const DeleteSpotDatafeedSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteSpotDatafeedSubscriptionResponsePrivate(this), parent)
+    : Ec2Response(new DeleteSpotDatafeedSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSpotDatafeedSubscriptionRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteSpotDatafeedSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionResponsePrivate(
-    DeleteSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
+    DeleteSpotDatafeedSubscriptionResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

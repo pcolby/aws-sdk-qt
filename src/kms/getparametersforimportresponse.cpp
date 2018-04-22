@@ -143,7 +143,7 @@ GetParametersForImportResponse::GetParametersForImportResponse(
         const GetParametersForImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GetParametersForImportResponsePrivate(this), parent)
+    : KmsResponse(new GetParametersForImportResponsePrivate(this), parent)
 {
     setRequest(new GetParametersForImportRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void GetParametersForImportResponse::parseSuccess(QIODevice &response)
  * Constructs a GetParametersForImportResponsePrivate object with public implementation \a q.
  */
 GetParametersForImportResponsePrivate::GetParametersForImportResponsePrivate(
-    GetParametersForImportResponse * const q) : KMSResponsePrivate(q)
+    GetParametersForImportResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 GetIdentityVerificationAttributesRequest::GetIdentityVerificationAttributesRequest(const GetIdentityVerificationAttributesRequest &other)
-    : SESRequest(new GetIdentityVerificationAttributesRequestPrivate(*other.d_func(), this))
+    : SesRequest(new GetIdentityVerificationAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ GetIdentityVerificationAttributesRequest::GetIdentityVerificationAttributesReque
  * Constructs a GetIdentityVerificationAttributesRequest object.
  */
 GetIdentityVerificationAttributesRequest::GetIdentityVerificationAttributesRequest()
-    : SESRequest(new GetIdentityVerificationAttributesRequestPrivate(SESRequest::GetIdentityVerificationAttributesAction, this))
+    : SesRequest(new GetIdentityVerificationAttributesRequestPrivate(SesRequest::GetIdentityVerificationAttributesAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * GetIdentityVerificationAttributesRequest::res
  */
 
 /*!
- * Constructs a GetIdentityVerificationAttributesRequestPrivate object for SES \a action,
+ * Constructs a GetIdentityVerificationAttributesRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
-    const SESRequest::Action action, GetIdentityVerificationAttributesRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, GetIdentityVerificationAttributesRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttribut
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
     const GetIdentityVerificationAttributesRequestPrivate &other, GetIdentityVerificationAttributesRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

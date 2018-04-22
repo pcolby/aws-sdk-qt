@@ -74,7 +74,7 @@ UntagCertificateAuthorityResponse::UntagCertificateAuthorityResponse(
         const UntagCertificateAuthorityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new UntagCertificateAuthorityResponsePrivate(this), parent)
+    : AcmpcaResponse(new UntagCertificateAuthorityResponsePrivate(this), parent)
 {
     setRequest(new UntagCertificateAuthorityRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void UntagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
  * Constructs a UntagCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 UntagCertificateAuthorityResponsePrivate::UntagCertificateAuthorityResponsePrivate(
-    UntagCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
+    UntagCertificateAuthorityResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

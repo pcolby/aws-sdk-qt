@@ -27,7 +27,7 @@ namespace ACM {
 
 class ListCertificatesRequestPrivate;
 
-class QTAWS_EXPORT ListCertificatesRequest : public ACMRequest {
+class QTAWS_EXPORT ListCertificatesRequest : public AcmRequest {
 
 public:
     ListCertificatesRequest(const ListCertificatesRequest &other);

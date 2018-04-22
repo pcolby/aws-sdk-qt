@@ -48,7 +48,7 @@ CreateNatGatewayResponse::CreateNatGatewayResponse(
         const CreateNatGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateNatGatewayResponsePrivate(this), parent)
+    : Ec2Response(new CreateNatGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateNatGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateNatGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateNatGatewayResponsePrivate object with public implementation \a q.
  */
 CreateNatGatewayResponsePrivate::CreateNatGatewayResponsePrivate(
-    CreateNatGatewayResponse * const q) : EC2ResponsePrivate(q)
+    CreateNatGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

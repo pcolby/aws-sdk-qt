@@ -105,7 +105,7 @@ namespace SQS {
  * Constructs a copy of \a other.
  */
 PurgeQueueRequest::PurgeQueueRequest(const PurgeQueueRequest &other)
-    : SQSRequest(new PurgeQueueRequestPrivate(*other.d_func(), this))
+    : SqsRequest(new PurgeQueueRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +114,7 @@ PurgeQueueRequest::PurgeQueueRequest(const PurgeQueueRequest &other)
  * Constructs a PurgeQueueRequest object.
  */
 PurgeQueueRequest::PurgeQueueRequest()
-    : SQSRequest(new PurgeQueueRequestPrivate(SQSRequest::PurgeQueueAction, this))
+    : SqsRequest(new PurgeQueueRequestPrivate(SqsRequest::PurgeQueueAction, this))
 {
 
 }
@@ -147,12 +147,12 @@ QtAws::Core::AwsAbstractResponse * PurgeQueueRequest::response(QNetworkReply * c
  */
 
 /*!
- * Constructs a PurgeQueueRequestPrivate object for SQS \a action,
+ * Constructs a PurgeQueueRequestPrivate object for Sqs \a action,
  * with public implementation \a q.
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
-    const SQSRequest::Action action, PurgeQueueRequest * const q)
-    : SQSRequestPrivate(action, q)
+    const SqsRequest::Action action, PurgeQueueRequest * const q)
+    : SqsRequestPrivate(action, q)
 {
 
 }
@@ -165,7 +165,7 @@ PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
     const PurgeQueueRequestPrivate &other, PurgeQueueRequest * const q)
-    : SQSRequestPrivate(other, q)
+    : SqsRequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace EMR {
 
 class DeleteSecurityConfigurationRequest;
 
-class QTAWS_EXPORT DeleteSecurityConfigurationRequestPrivate : public EMRRequestPrivate {
+class QTAWS_EXPORT DeleteSecurityConfigurationRequestPrivate : public EmrRequestPrivate {
 
 public:
-    DeleteSecurityConfigurationRequestPrivate(const EMRRequest::Action action,
+    DeleteSecurityConfigurationRequestPrivate(const EmrRequest::Action action,
                                    DeleteSecurityConfigurationRequest * const q);
     DeleteSecurityConfigurationRequestPrivate(const DeleteSecurityConfigurationRequestPrivate &other,
                                    DeleteSecurityConfigurationRequest * const q);

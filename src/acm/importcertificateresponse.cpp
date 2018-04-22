@@ -53,7 +53,7 @@ ImportCertificateResponse::ImportCertificateResponse(
         const ImportCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new ImportCertificateResponsePrivate(this), parent)
+    : AcmResponse(new ImportCertificateResponsePrivate(this), parent)
 {
     setRequest(new ImportCertificateRequest(request));
     setReply(reply);
@@ -91,7 +91,7 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
  * Constructs a ImportCertificateResponsePrivate object with public implementation \a q.
  */
 ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
-    ImportCertificateResponse * const q) : ACMResponsePrivate(q)
+    ImportCertificateResponse * const q) : AcmResponsePrivate(q)
 {
 
 }

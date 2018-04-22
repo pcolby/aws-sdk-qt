@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 GetKeyRotationStatusRequest::GetKeyRotationStatusRequest(const GetKeyRotationStatusRequest &other)
-    : KMSRequest(new GetKeyRotationStatusRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new GetKeyRotationStatusRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ GetKeyRotationStatusRequest::GetKeyRotationStatusRequest(const GetKeyRotationSta
  * Constructs a GetKeyRotationStatusRequest object.
  */
 GetKeyRotationStatusRequest::GetKeyRotationStatusRequest()
-    : KMSRequest(new GetKeyRotationStatusRequestPrivate(KMSRequest::GetKeyRotationStatusAction, this))
+    : KmsRequest(new GetKeyRotationStatusRequestPrivate(KmsRequest::GetKeyRotationStatusAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * GetKeyRotationStatusRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetKeyRotationStatusRequestPrivate object for KMS \a action,
+ * Constructs a GetKeyRotationStatusRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
-    const KMSRequest::Action action, GetKeyRotationStatusRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, GetKeyRotationStatusRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
     const GetKeyRotationStatusRequestPrivate &other, GetKeyRotationStatusRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

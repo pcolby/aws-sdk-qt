@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbprintRequest(const UpdateOpenIDConnectProviderThumbprintRequest &other)
-    : IAMRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(*other.d_func(), this))
+    : IamRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbpr
  * Constructs a UpdateOpenIDConnectProviderThumbprintRequest object.
  */
 UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbprintRequest()
-    : IAMRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(IAMRequest::UpdateOpenIDConnectProviderThumbprintAction, this))
+    : IamRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(IamRequest::UpdateOpenIDConnectProviderThumbprintAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest:
  */
 
 /*!
- * Constructs a UpdateOpenIDConnectProviderThumbprintRequestPrivate object for IAM \a action,
+ * Constructs a UpdateOpenIDConnectProviderThumbprintRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
-    const IAMRequest::Action action, UpdateOpenIDConnectProviderThumbprintRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, UpdateOpenIDConnectProviderThumbprintRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProvider
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
     const UpdateOpenIDConnectProviderThumbprintRequestPrivate &other, UpdateOpenIDConnectProviderThumbprintRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

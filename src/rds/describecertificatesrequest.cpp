@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertificatesRequest &other)
-    : RDSRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertifica
  * Constructs a DescribeCertificatesRequest object.
  */
 DescribeCertificatesRequest::DescribeCertificatesRequest()
-    : RDSRequest(new DescribeCertificatesRequestPrivate(RDSRequest::DescribeCertificatesAction, this))
+    : RdsRequest(new DescribeCertificatesRequestPrivate(RdsRequest::DescribeCertificatesAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
  */
 
 /*!
- * Constructs a DescribeCertificatesRequestPrivate object for RDS \a action,
+ * Constructs a DescribeCertificatesRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
-    const RDSRequest::Action action, DescribeCertificatesRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeCertificatesRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

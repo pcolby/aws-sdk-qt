@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetGeoMatchSetRequest::GetGeoMatchSetRequest(const GetGeoMatchSetRequest &other)
-    : WAFRequest(new GetGeoMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetGeoMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetGeoMatchSetRequest::GetGeoMatchSetRequest(const GetGeoMatchSetRequest &other)
  * Constructs a GetGeoMatchSetRequest object.
  */
 GetGeoMatchSetRequest::GetGeoMatchSetRequest()
-    : WAFRequest(new GetGeoMatchSetRequestPrivate(WAFRequest::GetGeoMatchSetAction, this))
+    : WafRequest(new GetGeoMatchSetRequestPrivate(WafRequest::GetGeoMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetGeoMatchSetRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a GetGeoMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a GetGeoMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
-    const WAFRequest::Action action, GetGeoMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetGeoMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
  */
 GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
     const GetGeoMatchSetRequestPrivate &other, GetGeoMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

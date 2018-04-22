@@ -48,7 +48,7 @@ ModifyVpcEndpointConnectionNotificationResponse::ModifyVpcEndpointConnectionNoti
         const ModifyVpcEndpointConnectionNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcEndpointConnectionNotificationResponsePrivate(this), parent)
+    : Ec2Response(new ModifyVpcEndpointConnectionNotificationResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcEndpointConnectionNotificationRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void ModifyVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &re
  * Constructs a ModifyVpcEndpointConnectionNotificationResponsePrivate object with public implementation \a q.
  */
 ModifyVpcEndpointConnectionNotificationResponsePrivate::ModifyVpcEndpointConnectionNotificationResponsePrivate(
-    ModifyVpcEndpointConnectionNotificationResponse * const q) : EC2ResponsePrivate(q)
+    ModifyVpcEndpointConnectionNotificationResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

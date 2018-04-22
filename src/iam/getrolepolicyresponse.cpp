@@ -109,7 +109,7 @@ GetRolePolicyResponse::GetRolePolicyResponse(
         const GetRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetRolePolicyResponsePrivate(this), parent)
+    : IamResponse(new GetRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new GetRolePolicyRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetRolePolicyResponse::parseSuccess(QIODevice &response)
  * Constructs a GetRolePolicyResponsePrivate object with public implementation \a q.
  */
 GetRolePolicyResponsePrivate::GetRolePolicyResponsePrivate(
-    GetRolePolicyResponse * const q) : IAMResponsePrivate(q)
+    GetRolePolicyResponse * const q) : IamResponsePrivate(q)
 {
 
 }

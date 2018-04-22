@@ -109,7 +109,7 @@ ListAttachedGroupPoliciesResponse::ListAttachedGroupPoliciesResponse(
         const ListAttachedGroupPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListAttachedGroupPoliciesResponsePrivate(this), parent)
+    : IamResponse(new ListAttachedGroupPoliciesResponsePrivate(this), parent)
 {
     setRequest(new ListAttachedGroupPoliciesRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListAttachedGroupPoliciesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListAttachedGroupPoliciesResponsePrivate object with public implementation \a q.
  */
 ListAttachedGroupPoliciesResponsePrivate::ListAttachedGroupPoliciesResponsePrivate(
-    ListAttachedGroupPoliciesResponse * const q) : IAMResponsePrivate(q)
+    ListAttachedGroupPoliciesResponse * const q) : IamResponsePrivate(q)
 {
 
 }

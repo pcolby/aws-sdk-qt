@@ -109,7 +109,7 @@ ListUsersResponse::ListUsersResponse(
         const ListUsersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListUsersResponsePrivate(this), parent)
+    : IamResponse(new ListUsersResponsePrivate(this), parent)
 {
     setRequest(new ListUsersRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListUsersResponse::parseSuccess(QIODevice &response)
  * Constructs a ListUsersResponsePrivate object with public implementation \a q.
  */
 ListUsersResponsePrivate::ListUsersResponsePrivate(
-    ListUsersResponse * const q) : IAMResponsePrivate(q)
+    ListUsersResponse * const q) : IamResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ DeleteKeyPairResponse::DeleteKeyPairResponse(
         const DeleteKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteKeyPairResponsePrivate(this), parent)
+    : Ec2Response(new DeleteKeyPairResponsePrivate(this), parent)
 {
     setRequest(new DeleteKeyPairRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteKeyPairResponsePrivate object with public implementation \a q.
  */
 DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
-    DeleteKeyPairResponse * const q) : EC2ResponsePrivate(q)
+    DeleteKeyPairResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

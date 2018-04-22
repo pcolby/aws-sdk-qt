@@ -28,7 +28,7 @@ namespace DAX {
 
 class RebootNodeResponsePrivate;
 
-class QTAWS_EXPORT RebootNodeResponse : public DAXResponse {
+class QTAWS_EXPORT RebootNodeResponse : public DaxResponse {
     Q_OBJECT
 
 public:

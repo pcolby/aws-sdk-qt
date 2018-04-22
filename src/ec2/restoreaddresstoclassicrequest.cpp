@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 RestoreAddressToClassicRequest::RestoreAddressToClassicRequest(const RestoreAddressToClassicRequest &other)
-    : EC2Request(new RestoreAddressToClassicRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new RestoreAddressToClassicRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ RestoreAddressToClassicRequest::RestoreAddressToClassicRequest(const RestoreAddr
  * Constructs a RestoreAddressToClassicRequest object.
  */
 RestoreAddressToClassicRequest::RestoreAddressToClassicRequest()
-    : EC2Request(new RestoreAddressToClassicRequestPrivate(EC2Request::RestoreAddressToClassicAction, this))
+    : Ec2Request(new RestoreAddressToClassicRequestPrivate(Ec2Request::RestoreAddressToClassicAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNet
  */
 
 /*!
- * Constructs a RestoreAddressToClassicRequestPrivate object for EC2 \a action,
+ * Constructs a RestoreAddressToClassicRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
-    const EC2Request::Action action, RestoreAddressToClassicRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, RestoreAddressToClassicRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
     const RestoreAddressToClassicRequestPrivate &other, RestoreAddressToClassicRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

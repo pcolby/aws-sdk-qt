@@ -109,7 +109,7 @@ ListMFADevicesResponse::ListMFADevicesResponse(
         const ListMFADevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListMFADevicesResponsePrivate(this), parent)
+    : IamResponse(new ListMFADevicesResponsePrivate(this), parent)
 {
     setRequest(new ListMFADevicesRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void ListMFADevicesResponse::parseSuccess(QIODevice &response)
  * Constructs a ListMFADevicesResponsePrivate object with public implementation \a q.
  */
 ListMFADevicesResponsePrivate::ListMFADevicesResponsePrivate(
-    ListMFADevicesResponse * const q) : IAMResponsePrivate(q)
+    ListMFADevicesResponse * const q) : IamResponsePrivate(q)
 {
 
 }

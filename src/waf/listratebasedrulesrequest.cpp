@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListRateBasedRulesRequest::ListRateBasedRulesRequest(const ListRateBasedRulesRequest &other)
-    : WAFRequest(new ListRateBasedRulesRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListRateBasedRulesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListRateBasedRulesRequest::ListRateBasedRulesRequest(const ListRateBasedRulesReq
  * Constructs a ListRateBasedRulesRequest object.
  */
 ListRateBasedRulesRequest::ListRateBasedRulesRequest()
-    : WAFRequest(new ListRateBasedRulesRequestPrivate(WAFRequest::ListRateBasedRulesAction, this))
+    : WafRequest(new ListRateBasedRulesRequestPrivate(WafRequest::ListRateBasedRulesAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a ListRateBasedRulesRequestPrivate object for WAF \a action,
+ * Constructs a ListRateBasedRulesRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
-    const WAFRequest::Action action, ListRateBasedRulesRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListRateBasedRulesRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
  */
 ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
     const ListRateBasedRulesRequestPrivate &other, ListRateBasedRulesRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

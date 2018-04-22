@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraintSetRequest &other)
-    : WAFRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraint
  * Constructs a GetSizeConstraintSetRequest object.
  */
 GetSizeConstraintSetRequest::GetSizeConstraintSetRequest()
-    : WAFRequest(new GetSizeConstraintSetRequestPrivate(WAFRequest::GetSizeConstraintSetAction, this))
+    : WafRequest(new GetSizeConstraintSetRequestPrivate(WafRequest::GetSizeConstraintSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetwor
  */
 
 /*!
- * Constructs a GetSizeConstraintSetRequestPrivate object for WAF \a action,
+ * Constructs a GetSizeConstraintSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
-    const WAFRequest::Action action, GetSizeConstraintSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, GetSizeConstraintSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const GetSizeConstraintSetRequestPrivate &other, GetSizeConstraintSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

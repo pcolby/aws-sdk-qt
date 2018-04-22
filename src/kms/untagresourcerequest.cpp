@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
-    : KMSRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
  * Constructs a UntagResourceRequest object.
  */
 UntagResourceRequest::UntagResourceRequest()
-    : KMSRequest(new UntagResourceRequestPrivate(KMSRequest::UntagResourceAction, this))
+    : KmsRequest(new UntagResourceRequestPrivate(KmsRequest::UntagResourceAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a UntagResourceRequestPrivate object for KMS \a action,
+ * Constructs a UntagResourceRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
-    const KMSRequest::Action action, UntagResourceRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, UntagResourceRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

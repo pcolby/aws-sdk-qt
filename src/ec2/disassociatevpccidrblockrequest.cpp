@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest(const DisassociateVpcCidrBlockRequest &other)
-    : EC2Request(new DisassociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DisassociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest(const Disassoci
  * Constructs a DisassociateVpcCidrBlockRequest object.
  */
 DisassociateVpcCidrBlockRequest::DisassociateVpcCidrBlockRequest()
-    : EC2Request(new DisassociateVpcCidrBlockRequestPrivate(EC2Request::DisassociateVpcCidrBlockAction, this))
+    : Ec2Request(new DisassociateVpcCidrBlockRequestPrivate(Ec2Request::DisassociateVpcCidrBlockAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNe
  */
 
 /*!
- * Constructs a DisassociateVpcCidrBlockRequestPrivate object for EC2 \a action,
+ * Constructs a DisassociateVpcCidrBlockRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
-    const EC2Request::Action action, DisassociateVpcCidrBlockRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DisassociateVpcCidrBlockRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
     const DisassociateVpcCidrBlockRequestPrivate &other, DisassociateVpcCidrBlockRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

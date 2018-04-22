@@ -48,7 +48,7 @@ CopyImageResponse::CopyImageResponse(
         const CopyImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CopyImageResponsePrivate(this), parent)
+    : Ec2Response(new CopyImageResponsePrivate(this), parent)
 {
     setRequest(new CopyImageRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CopyImageResponse::parseSuccess(QIODevice &response)
  * Constructs a CopyImageResponsePrivate object with public implementation \a q.
  */
 CopyImageResponsePrivate::CopyImageResponsePrivate(
-    CopyImageResponse * const q) : EC2ResponsePrivate(q)
+    CopyImageResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

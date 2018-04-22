@@ -74,7 +74,7 @@ DescribeCertificateAuthorityResponse::DescribeCertificateAuthorityResponse(
         const DescribeCertificateAuthorityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMPCAResponse(new DescribeCertificateAuthorityResponsePrivate(this), parent)
+    : AcmpcaResponse(new DescribeCertificateAuthorityResponsePrivate(this), parent)
 {
     setRequest(new DescribeCertificateAuthorityRequest(request));
     setReply(reply);
@@ -112,7 +112,7 @@ void DescribeCertificateAuthorityResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 DescribeCertificateAuthorityResponsePrivate::DescribeCertificateAuthorityResponsePrivate(
-    DescribeCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
+    DescribeCertificateAuthorityResponse * const q) : AcmpcaResponsePrivate(q)
 {
 
 }

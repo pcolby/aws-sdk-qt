@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 AllocateAddressRequest::AllocateAddressRequest(const AllocateAddressRequest &other)
-    : EC2Request(new AllocateAddressRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new AllocateAddressRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ AllocateAddressRequest::AllocateAddressRequest(const AllocateAddressRequest &oth
  * Constructs a AllocateAddressRequest object.
  */
 AllocateAddressRequest::AllocateAddressRequest()
-    : EC2Request(new AllocateAddressRequestPrivate(EC2Request::AllocateAddressAction, this))
+    : Ec2Request(new AllocateAddressRequestPrivate(Ec2Request::AllocateAddressAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a AllocateAddressRequestPrivate object for EC2 \a action,
+ * Constructs a AllocateAddressRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
-    const EC2Request::Action action, AllocateAddressRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, AllocateAddressRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
     const AllocateAddressRequestPrivate &other, AllocateAddressRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

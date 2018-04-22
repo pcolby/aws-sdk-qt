@@ -61,7 +61,7 @@ DeleteClusterResponse::DeleteClusterResponse(
         const DeleteClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DeleteClusterResponsePrivate(this), parent)
+    : EcsResponse(new DeleteClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterRequest(request));
     setReply(reply);
@@ -99,7 +99,7 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteClusterResponsePrivate object with public implementation \a q.
  */
 DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
-    DeleteClusterResponse * const q) : ECSResponsePrivate(q)
+    DeleteClusterResponse * const q) : EcsResponsePrivate(q)
 {
 
 }

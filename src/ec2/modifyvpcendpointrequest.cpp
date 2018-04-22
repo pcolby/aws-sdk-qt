@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 ModifyVpcEndpointRequest::ModifyVpcEndpointRequest(const ModifyVpcEndpointRequest &other)
-    : EC2Request(new ModifyVpcEndpointRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new ModifyVpcEndpointRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ ModifyVpcEndpointRequest::ModifyVpcEndpointRequest(const ModifyVpcEndpointReques
  * Constructs a ModifyVpcEndpointRequest object.
  */
 ModifyVpcEndpointRequest::ModifyVpcEndpointRequest()
-    : EC2Request(new ModifyVpcEndpointRequestPrivate(EC2Request::ModifyVpcEndpointAction, this))
+    : Ec2Request(new ModifyVpcEndpointRequestPrivate(Ec2Request::ModifyVpcEndpointAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ModifyVpcEndpointRequestPrivate object for EC2 \a action,
+ * Constructs a ModifyVpcEndpointRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
-    const EC2Request::Action action, ModifyVpcEndpointRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, ModifyVpcEndpointRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
  */
 ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
     const ModifyVpcEndpointRequestPrivate &other, ModifyVpcEndpointRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

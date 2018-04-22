@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DescribeBundleTasksRequest::DescribeBundleTasksRequest(const DescribeBundleTasksRequest &other)
-    : EC2Request(new DescribeBundleTasksRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DescribeBundleTasksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DescribeBundleTasksRequest::DescribeBundleTasksRequest(const DescribeBundleTasks
  * Constructs a DescribeBundleTasksRequest object.
  */
 DescribeBundleTasksRequest::DescribeBundleTasksRequest()
-    : EC2Request(new DescribeBundleTasksRequestPrivate(EC2Request::DescribeBundleTasksAction, this))
+    : Ec2Request(new DescribeBundleTasksRequestPrivate(Ec2Request::DescribeBundleTasksAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetwork
  */
 
 /*!
- * Constructs a DescribeBundleTasksRequestPrivate object for EC2 \a action,
+ * Constructs a DescribeBundleTasksRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
-    const EC2Request::Action action, DescribeBundleTasksRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DescribeBundleTasksRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
     const DescribeBundleTasksRequestPrivate &other, DescribeBundleTasksRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

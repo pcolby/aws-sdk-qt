@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeRouteTablesRequest;
 
-class QTAWS_EXPORT DescribeRouteTablesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeRouteTablesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeRouteTablesRequestPrivate(const EC2Request::Action action,
+    DescribeRouteTablesRequestPrivate(const Ec2Request::Action action,
                                    DescribeRouteTablesRequest * const q);
     DescribeRouteTablesRequestPrivate(const DescribeRouteTablesRequestPrivate &other,
                                    DescribeRouteTablesRequest * const q);

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest(const DeleteSqlInjectionMatchSetRequest &other)
-    : WAFRequest(new DeleteSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest(const Delet
  * Constructs a DeleteSqlInjectionMatchSetRequest object.
  */
 DeleteSqlInjectionMatchSetRequest::DeleteSqlInjectionMatchSetRequest()
-    : WAFRequest(new DeleteSqlInjectionMatchSetRequestPrivate(WAFRequest::DeleteSqlInjectionMatchSetAction, this))
+    : WafRequest(new DeleteSqlInjectionMatchSetRequestPrivate(WafRequest::DeleteSqlInjectionMatchSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(Q
  */
 
 /*!
- * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
-    const WAFRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPriva
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const DeleteSqlInjectionMatchSetRequestPrivate &other, DeleteSqlInjectionMatchSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

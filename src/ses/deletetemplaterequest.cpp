@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 DeleteTemplateRequest::DeleteTemplateRequest(const DeleteTemplateRequest &other)
-    : SESRequest(new DeleteTemplateRequestPrivate(*other.d_func(), this))
+    : SesRequest(new DeleteTemplateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ DeleteTemplateRequest::DeleteTemplateRequest(const DeleteTemplateRequest &other)
  * Constructs a DeleteTemplateRequest object.
  */
 DeleteTemplateRequest::DeleteTemplateRequest()
-    : SESRequest(new DeleteTemplateRequestPrivate(SESRequest::DeleteTemplateAction, this))
+    : SesRequest(new DeleteTemplateRequestPrivate(SesRequest::DeleteTemplateAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a DeleteTemplateRequestPrivate object for SES \a action,
+ * Constructs a DeleteTemplateRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
-    const SESRequest::Action action, DeleteTemplateRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, DeleteTemplateRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
  */
 DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
     const DeleteTemplateRequestPrivate &other, DeleteTemplateRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

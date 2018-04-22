@@ -109,7 +109,7 @@ CreateAccountAliasResponse::CreateAccountAliasResponse(
         const CreateAccountAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateAccountAliasResponsePrivate(this), parent)
+    : IamResponse(new CreateAccountAliasResponsePrivate(this), parent)
 {
     setRequest(new CreateAccountAliasRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void CreateAccountAliasResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateAccountAliasResponsePrivate object with public implementation \a q.
  */
 CreateAccountAliasResponsePrivate::CreateAccountAliasResponsePrivate(
-    CreateAccountAliasResponse * const q) : IAMResponsePrivate(q)
+    CreateAccountAliasResponse * const q) : IamResponsePrivate(q)
 {
 
 }

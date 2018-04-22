@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest(const DeleteSSHPublicKeyRequest &other)
-    : IAMRequest(new DeleteSSHPublicKeyRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteSSHPublicKeyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest(const DeleteSSHPublicKeyReq
  * Constructs a DeleteSSHPublicKeyRequest object.
  */
 DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest()
-    : IAMRequest(new DeleteSSHPublicKeyRequestPrivate(IAMRequest::DeleteSSHPublicKeyAction, this))
+    : IamRequest(new DeleteSSHPublicKeyRequestPrivate(IamRequest::DeleteSSHPublicKeyAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkR
  */
 
 /*!
- * Constructs a DeleteSSHPublicKeyRequestPrivate object for IAM \a action,
+ * Constructs a DeleteSSHPublicKeyRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
-    const IAMRequest::Action action, DeleteSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteSSHPublicKeyRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
     const DeleteSSHPublicKeyRequestPrivate &other, DeleteSSHPublicKeyRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

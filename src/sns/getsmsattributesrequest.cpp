@@ -53,7 +53,7 @@ namespace SNS {
  * Constructs a copy of \a other.
  */
 GetSMSAttributesRequest::GetSMSAttributesRequest(const GetSMSAttributesRequest &other)
-    : SNSRequest(new GetSMSAttributesRequestPrivate(*other.d_func(), this))
+    : SnsRequest(new GetSMSAttributesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -62,7 +62,7 @@ GetSMSAttributesRequest::GetSMSAttributesRequest(const GetSMSAttributesRequest &
  * Constructs a GetSMSAttributesRequest object.
  */
 GetSMSAttributesRequest::GetSMSAttributesRequest()
-    : SNSRequest(new GetSMSAttributesRequestPrivate(SNSRequest::GetSMSAttributesAction, this))
+    : SnsRequest(new GetSMSAttributesRequestPrivate(SnsRequest::GetSMSAttributesAction, this))
 {
 
 }
@@ -95,12 +95,12 @@ QtAws::Core::AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a GetSMSAttributesRequestPrivate object for SNS \a action,
+ * Constructs a GetSMSAttributesRequestPrivate object for Sns \a action,
  * with public implementation \a q.
  */
 GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
-    const SNSRequest::Action action, GetSMSAttributesRequest * const q)
-    : SNSRequestPrivate(action, q)
+    const SnsRequest::Action action, GetSMSAttributesRequest * const q)
+    : SnsRequestPrivate(action, q)
 {
 
 }
@@ -113,7 +113,7 @@ GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
  */
 GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
     const GetSMSAttributesRequestPrivate &other, GetSMSAttributesRequest * const q)
-    : SNSRequestPrivate(other, q)
+    : SnsRequestPrivate(other, q)
 {
 
 }

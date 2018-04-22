@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 CreateFpgaImageRequest::CreateFpgaImageRequest(const CreateFpgaImageRequest &other)
-    : EC2Request(new CreateFpgaImageRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new CreateFpgaImageRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ CreateFpgaImageRequest::CreateFpgaImageRequest(const CreateFpgaImageRequest &oth
  * Constructs a CreateFpgaImageRequest object.
  */
 CreateFpgaImageRequest::CreateFpgaImageRequest()
-    : EC2Request(new CreateFpgaImageRequestPrivate(EC2Request::CreateFpgaImageAction, this))
+    : Ec2Request(new CreateFpgaImageRequestPrivate(Ec2Request::CreateFpgaImageAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * CreateFpgaImageRequest::response(QNetworkRepl
  */
 
 /*!
- * Constructs a CreateFpgaImageRequestPrivate object for EC2 \a action,
+ * Constructs a CreateFpgaImageRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
-    const EC2Request::Action action, CreateFpgaImageRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, CreateFpgaImageRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
  */
 CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
     const CreateFpgaImageRequestPrivate &other, CreateFpgaImageRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

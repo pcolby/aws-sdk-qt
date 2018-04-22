@@ -48,7 +48,7 @@ DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissions
         const DescribeNetworkInterfacePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeNetworkInterfacePermissionsResponsePrivate(this), parent)
+    : Ec2Response(new DescribeNetworkInterfacePermissionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeNetworkInterfacePermissionsRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void DescribeNetworkInterfacePermissionsResponse::parseSuccess(QIODevice &respon
  * Constructs a DescribeNetworkInterfacePermissionsResponsePrivate object with public implementation \a q.
  */
 DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePermissionsResponsePrivate(
-    DescribeNetworkInterfacePermissionsResponse * const q) : EC2ResponsePrivate(q)
+    DescribeNetworkInterfacePermissionsResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

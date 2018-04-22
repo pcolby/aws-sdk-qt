@@ -50,7 +50,7 @@ namespace SES {
  * Constructs a copy of \a other.
  */
 SendBulkTemplatedEmailRequest::SendBulkTemplatedEmailRequest(const SendBulkTemplatedEmailRequest &other)
-    : SESRequest(new SendBulkTemplatedEmailRequestPrivate(*other.d_func(), this))
+    : SesRequest(new SendBulkTemplatedEmailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -59,7 +59,7 @@ SendBulkTemplatedEmailRequest::SendBulkTemplatedEmailRequest(const SendBulkTempl
  * Constructs a SendBulkTemplatedEmailRequest object.
  */
 SendBulkTemplatedEmailRequest::SendBulkTemplatedEmailRequest()
-    : SESRequest(new SendBulkTemplatedEmailRequestPrivate(SESRequest::SendBulkTemplatedEmailAction, this))
+    : SesRequest(new SendBulkTemplatedEmailRequestPrivate(SesRequest::SendBulkTemplatedEmailAction, this))
 {
 
 }
@@ -92,12 +92,12 @@ QtAws::Core::AwsAbstractResponse * SendBulkTemplatedEmailRequest::response(QNetw
  */
 
 /*!
- * Constructs a SendBulkTemplatedEmailRequestPrivate object for SES \a action,
+ * Constructs a SendBulkTemplatedEmailRequestPrivate object for Ses \a action,
  * with public implementation \a q.
  */
 SendBulkTemplatedEmailRequestPrivate::SendBulkTemplatedEmailRequestPrivate(
-    const SESRequest::Action action, SendBulkTemplatedEmailRequest * const q)
-    : SESRequestPrivate(action, q)
+    const SesRequest::Action action, SendBulkTemplatedEmailRequest * const q)
+    : SesRequestPrivate(action, q)
 {
 
 }
@@ -110,7 +110,7 @@ SendBulkTemplatedEmailRequestPrivate::SendBulkTemplatedEmailRequestPrivate(
  */
 SendBulkTemplatedEmailRequestPrivate::SendBulkTemplatedEmailRequestPrivate(
     const SendBulkTemplatedEmailRequestPrivate &other, SendBulkTemplatedEmailRequest * const q)
-    : SESRequestPrivate(other, q)
+    : SesRequestPrivate(other, q)
 {
 
 }

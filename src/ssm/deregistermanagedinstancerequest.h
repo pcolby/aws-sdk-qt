@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeregisterManagedInstanceRequestPrivate;
 
-class QTAWS_EXPORT DeregisterManagedInstanceRequest : public SSMRequest {
+class QTAWS_EXPORT DeregisterManagedInstanceRequest : public SsmRequest {
 
 public:
     DeregisterManagedInstanceRequest(const DeregisterManagedInstanceRequest &other);

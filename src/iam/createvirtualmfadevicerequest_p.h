@@ -28,10 +28,10 @@ namespace IAM {
 
 class CreateVirtualMFADeviceRequest;
 
-class QTAWS_EXPORT CreateVirtualMFADeviceRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT CreateVirtualMFADeviceRequestPrivate : public IamRequestPrivate {
 
 public:
-    CreateVirtualMFADeviceRequestPrivate(const IAMRequest::Action action,
+    CreateVirtualMFADeviceRequestPrivate(const IamRequest::Action action,
                                    CreateVirtualMFADeviceRequest * const q);
     CreateVirtualMFADeviceRequestPrivate(const CreateVirtualMFADeviceRequestPrivate &other,
                                    CreateVirtualMFADeviceRequest * const q);

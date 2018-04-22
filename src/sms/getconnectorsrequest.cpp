@@ -39,7 +39,7 @@ namespace SMS {
  * Constructs a copy of \a other.
  */
 GetConnectorsRequest::GetConnectorsRequest(const GetConnectorsRequest &other)
-    : SMSRequest(new GetConnectorsRequestPrivate(*other.d_func(), this))
+    : SmsRequest(new GetConnectorsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -48,7 +48,7 @@ GetConnectorsRequest::GetConnectorsRequest(const GetConnectorsRequest &other)
  * Constructs a GetConnectorsRequest object.
  */
 GetConnectorsRequest::GetConnectorsRequest()
-    : SMSRequest(new GetConnectorsRequestPrivate(SMSRequest::GetConnectorsAction, this))
+    : SmsRequest(new GetConnectorsRequestPrivate(SmsRequest::GetConnectorsAction, this))
 {
 
 }
@@ -81,12 +81,12 @@ QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply 
  */
 
 /*!
- * Constructs a GetConnectorsRequestPrivate object for SMS \a action,
+ * Constructs a GetConnectorsRequestPrivate object for Sms \a action,
  * with public implementation \a q.
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
-    const SMSRequest::Action action, GetConnectorsRequest * const q)
-    : SMSRequestPrivate(action, q)
+    const SmsRequest::Action action, GetConnectorsRequest * const q)
+    : SmsRequestPrivate(action, q)
 {
 
 }
@@ -99,7 +99,7 @@ GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
     const GetConnectorsRequestPrivate &other, GetConnectorsRequest * const q)
-    : SMSRequestPrivate(other, q)
+    : SmsRequestPrivate(other, q)
 {
 
 }

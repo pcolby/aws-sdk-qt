@@ -63,7 +63,7 @@ DeleteActivityResponse::DeleteActivityResponse(
         const DeleteActivityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DeleteActivityResponsePrivate(this), parent)
+    : SfnResponse(new DeleteActivityResponsePrivate(this), parent)
 {
     setRequest(new DeleteActivityRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void DeleteActivityResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteActivityResponsePrivate object with public implementation \a q.
  */
 DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
-    DeleteActivityResponse * const q) : SFNResponsePrivate(q)
+    DeleteActivityResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

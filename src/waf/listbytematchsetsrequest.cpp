@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsRequest &other)
-    : WAFRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsReques
  * Constructs a ListByteMatchSetsRequest object.
  */
 ListByteMatchSetsRequest::ListByteMatchSetsRequest()
-    : WAFRequest(new ListByteMatchSetsRequestPrivate(WAFRequest::ListByteMatchSetsAction, this))
+    : WafRequest(new ListByteMatchSetsRequestPrivate(WafRequest::ListByteMatchSetsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkRe
  */
 
 /*!
- * Constructs a ListByteMatchSetsRequestPrivate object for WAF \a action,
+ * Constructs a ListByteMatchSetsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
-    const WAFRequest::Action action, ListByteMatchSetsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListByteMatchSetsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
  */
 ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
     const ListByteMatchSetsRequestPrivate &other, ListByteMatchSetsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

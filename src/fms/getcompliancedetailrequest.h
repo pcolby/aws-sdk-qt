@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetComplianceDetailRequestPrivate;
 
-class QTAWS_EXPORT GetComplianceDetailRequest : public FMSRequest {
+class QTAWS_EXPORT GetComplianceDetailRequest : public FmsRequest {
 
 public:
     GetComplianceDetailRequest(const GetComplianceDetailRequest &other);

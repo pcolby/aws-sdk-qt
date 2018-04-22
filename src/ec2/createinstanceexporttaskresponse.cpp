@@ -48,7 +48,7 @@ CreateInstanceExportTaskResponse::CreateInstanceExportTaskResponse(
         const CreateInstanceExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateInstanceExportTaskResponsePrivate(this), parent)
+    : Ec2Response(new CreateInstanceExportTaskResponsePrivate(this), parent)
 {
     setRequest(new CreateInstanceExportTaskRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateInstanceExportTaskResponsePrivate object with public implementation \a q.
  */
 CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate(
-    CreateInstanceExportTaskResponse * const q) : EC2ResponsePrivate(q)
+    CreateInstanceExportTaskResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

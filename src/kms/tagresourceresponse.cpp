@@ -143,7 +143,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new TagResourceResponsePrivate(this), parent)
+    : KmsResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);
@@ -181,7 +181,7 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
  * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
-    TagResourceResponse * const q) : KMSResponsePrivate(q)
+    TagResourceResponse * const q) : KmsResponsePrivate(q)
 {
 
 }

@@ -43,7 +43,7 @@ namespace EC2 {
  * Constructs a copy of \a other.
  */
 DeleteVpnGatewayRequest::DeleteVpnGatewayRequest(const DeleteVpnGatewayRequest &other)
-    : EC2Request(new DeleteVpnGatewayRequestPrivate(*other.d_func(), this))
+    : Ec2Request(new DeleteVpnGatewayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -52,7 +52,7 @@ DeleteVpnGatewayRequest::DeleteVpnGatewayRequest(const DeleteVpnGatewayRequest &
  * Constructs a DeleteVpnGatewayRequest object.
  */
 DeleteVpnGatewayRequest::DeleteVpnGatewayRequest()
-    : EC2Request(new DeleteVpnGatewayRequestPrivate(EC2Request::DeleteVpnGatewayAction, this))
+    : Ec2Request(new DeleteVpnGatewayRequestPrivate(Ec2Request::DeleteVpnGatewayAction, this))
 {
 
 }
@@ -85,12 +85,12 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnGatewayRequest::response(QNetworkRep
  */
 
 /*!
- * Constructs a DeleteVpnGatewayRequestPrivate object for EC2 \a action,
+ * Constructs a DeleteVpnGatewayRequestPrivate object for Ec2 \a action,
  * with public implementation \a q.
  */
 DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
-    const EC2Request::Action action, DeleteVpnGatewayRequest * const q)
-    : EC2RequestPrivate(action, q)
+    const Ec2Request::Action action, DeleteVpnGatewayRequest * const q)
+    : Ec2RequestPrivate(action, q)
 {
 
 }
@@ -103,7 +103,7 @@ DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
  */
 DeleteVpnGatewayRequestPrivate::DeleteVpnGatewayRequestPrivate(
     const DeleteVpnGatewayRequestPrivate &other, DeleteVpnGatewayRequest * const q)
-    : EC2RequestPrivate(other, q)
+    : Ec2RequestPrivate(other, q)
 {
 
 }

@@ -28,10 +28,10 @@ namespace SNS {
 
 class GetSMSAttributesRequest;
 
-class QTAWS_EXPORT GetSMSAttributesRequestPrivate : public SNSRequestPrivate {
+class QTAWS_EXPORT GetSMSAttributesRequestPrivate : public SnsRequestPrivate {
 
 public:
-    GetSMSAttributesRequestPrivate(const SNSRequest::Action action,
+    GetSMSAttributesRequestPrivate(const SnsRequest::Action action,
                                    GetSMSAttributesRequest * const q);
     GetSMSAttributesRequestPrivate(const GetSMSAttributesRequestPrivate &other,
                                    GetSMSAttributesRequest * const q);

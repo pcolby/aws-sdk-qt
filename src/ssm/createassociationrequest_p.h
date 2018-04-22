@@ -28,10 +28,10 @@ namespace SSM {
 
 class CreateAssociationRequest;
 
-class QTAWS_EXPORT CreateAssociationRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT CreateAssociationRequestPrivate : public SsmRequestPrivate {
 
 public:
-    CreateAssociationRequestPrivate(const SSMRequest::Action action,
+    CreateAssociationRequestPrivate(const SsmRequest::Action action,
                                    CreateAssociationRequest * const q);
     CreateAssociationRequestPrivate(const CreateAssociationRequestPrivate &other,
                                    CreateAssociationRequest * const q);

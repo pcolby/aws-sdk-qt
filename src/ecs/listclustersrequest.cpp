@@ -56,7 +56,7 @@ namespace ECS {
  * Constructs a copy of \a other.
  */
 ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
-    : ECSRequest(new ListClustersRequestPrivate(*other.d_func(), this))
+    : EcsRequest(new ListClustersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -65,7 +65,7 @@ ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
  * Constructs a ListClustersRequest object.
  */
 ListClustersRequest::ListClustersRequest()
-    : ECSRequest(new ListClustersRequestPrivate(ECSRequest::ListClustersAction, this))
+    : EcsRequest(new ListClustersRequestPrivate(EcsRequest::ListClustersAction, this))
 {
 
 }
@@ -98,12 +98,12 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a ListClustersRequestPrivate object for ECS \a action,
+ * Constructs a ListClustersRequestPrivate object for Ecs \a action,
  * with public implementation \a q.
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
-    const ECSRequest::Action action, ListClustersRequest * const q)
-    : ECSRequestPrivate(action, q)
+    const EcsRequest::Action action, ListClustersRequest * const q)
+    : EcsRequestPrivate(action, q)
 {
 
 }
@@ -116,7 +116,7 @@ ListClustersRequestPrivate::ListClustersRequestPrivate(
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const ListClustersRequestPrivate &other, ListClustersRequest * const q)
-    : ECSRequestPrivate(other, q)
+    : EcsRequestPrivate(other, q)
 {
 
 }

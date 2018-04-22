@@ -48,7 +48,7 @@ CompleteLayerUploadResponse::CompleteLayerUploadResponse(
         const CompleteLayerUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new CompleteLayerUploadResponsePrivate(this), parent)
+    : EcrResponse(new CompleteLayerUploadResponsePrivate(this), parent)
 {
     setRequest(new CompleteLayerUploadRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
  * Constructs a CompleteLayerUploadResponsePrivate object with public implementation \a q.
  */
 CompleteLayerUploadResponsePrivate::CompleteLayerUploadResponsePrivate(
-    CompleteLayerUploadResponse * const q) : ECRResponsePrivate(q)
+    CompleteLayerUploadResponse * const q) : EcrResponsePrivate(q)
 {
 
 }

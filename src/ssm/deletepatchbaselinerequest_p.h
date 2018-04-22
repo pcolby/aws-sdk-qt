@@ -28,10 +28,10 @@ namespace SSM {
 
 class DeletePatchBaselineRequest;
 
-class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SSMRequestPrivate {
+class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SsmRequestPrivate {
 
 public:
-    DeletePatchBaselineRequestPrivate(const SSMRequest::Action action,
+    DeletePatchBaselineRequestPrivate(const SsmRequest::Action action,
                                    DeletePatchBaselineRequest * const q);
     DeletePatchBaselineRequestPrivate(const DeletePatchBaselineRequestPrivate &other,
                                    DeletePatchBaselineRequest * const q);

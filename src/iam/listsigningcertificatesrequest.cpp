@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 ListSigningCertificatesRequest::ListSigningCertificatesRequest(const ListSigningCertificatesRequest &other)
-    : IAMRequest(new ListSigningCertificatesRequestPrivate(*other.d_func(), this))
+    : IamRequest(new ListSigningCertificatesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ ListSigningCertificatesRequest::ListSigningCertificatesRequest(const ListSigning
  * Constructs a ListSigningCertificatesRequest object.
  */
 ListSigningCertificatesRequest::ListSigningCertificatesRequest()
-    : IAMRequest(new ListSigningCertificatesRequestPrivate(IAMRequest::ListSigningCertificatesAction, this))
+    : IamRequest(new ListSigningCertificatesRequestPrivate(IamRequest::ListSigningCertificatesAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * ListSigningCertificatesRequest::response(QNet
  */
 
 /*!
- * Constructs a ListSigningCertificatesRequestPrivate object for IAM \a action,
+ * Constructs a ListSigningCertificatesRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
-    const IAMRequest::Action action, ListSigningCertificatesRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, ListSigningCertificatesRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
     const ListSigningCertificatesRequestPrivate &other, ListSigningCertificatesRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

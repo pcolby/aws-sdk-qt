@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 GetKeyPolicyRequest::GetKeyPolicyRequest(const GetKeyPolicyRequest &other)
-    : KMSRequest(new GetKeyPolicyRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new GetKeyPolicyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ GetKeyPolicyRequest::GetKeyPolicyRequest(const GetKeyPolicyRequest &other)
  * Constructs a GetKeyPolicyRequest object.
  */
 GetKeyPolicyRequest::GetKeyPolicyRequest()
-    : KMSRequest(new GetKeyPolicyRequestPrivate(KMSRequest::GetKeyPolicyAction, this))
+    : KmsRequest(new GetKeyPolicyRequestPrivate(KmsRequest::GetKeyPolicyAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply *
  */
 
 /*!
- * Constructs a GetKeyPolicyRequestPrivate object for KMS \a action,
+ * Constructs a GetKeyPolicyRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
-    const KMSRequest::Action action, GetKeyPolicyRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, GetKeyPolicyRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
     const GetKeyPolicyRequestPrivate &other, GetKeyPolicyRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

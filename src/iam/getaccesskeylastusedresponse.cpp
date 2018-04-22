@@ -109,7 +109,7 @@ GetAccessKeyLastUsedResponse::GetAccessKeyLastUsedResponse(
         const GetAccessKeyLastUsedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetAccessKeyLastUsedResponsePrivate(this), parent)
+    : IamResponse(new GetAccessKeyLastUsedResponsePrivate(this), parent)
 {
     setRequest(new GetAccessKeyLastUsedRequest(request));
     setReply(reply);
@@ -147,7 +147,7 @@ void GetAccessKeyLastUsedResponse::parseSuccess(QIODevice &response)
  * Constructs a GetAccessKeyLastUsedResponsePrivate object with public implementation \a q.
  */
 GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponsePrivate(
-    GetAccessKeyLastUsedResponse * const q) : IAMResponsePrivate(q)
+    GetAccessKeyLastUsedResponse * const q) : IamResponsePrivate(q)
 {
 
 }

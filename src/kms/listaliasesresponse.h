@@ -28,7 +28,7 @@ namespace KMS {
 
 class ListAliasesResponsePrivate;
 
-class QTAWS_EXPORT ListAliasesResponse : public KMSResponse {
+class QTAWS_EXPORT ListAliasesResponse : public KmsResponse {
     Q_OBJECT
 
 public:

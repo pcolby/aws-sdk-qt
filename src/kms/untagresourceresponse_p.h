@@ -27,7 +27,7 @@ namespace KMS {
 
 class UntagResourceResponse;
 
-class QTAWS_EXPORT UntagResourceResponsePrivate : public KMSResponsePrivate {
+class QTAWS_EXPORT UntagResourceResponsePrivate : public KmsResponsePrivate {
     Q_OBJECT
 
 public:

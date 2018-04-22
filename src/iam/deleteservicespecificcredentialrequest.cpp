@@ -104,7 +104,7 @@ namespace IAM {
  * Constructs a copy of \a other.
  */
 DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest(const DeleteServiceSpecificCredentialRequest &other)
-    : IAMRequest(new DeleteServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
+    : IamRequest(new DeleteServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +113,7 @@ DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest(c
  * Constructs a DeleteServiceSpecificCredentialRequest object.
  */
 DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest()
-    : IAMRequest(new DeleteServiceSpecificCredentialRequestPrivate(IAMRequest::DeleteServiceSpecificCredentialAction, this))
+    : IamRequest(new DeleteServiceSpecificCredentialRequestPrivate(IamRequest::DeleteServiceSpecificCredentialAction, this))
 {
 
 }
@@ -146,12 +146,12 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::respo
  */
 
 /*!
- * Constructs a DeleteServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * Constructs a DeleteServiceSpecificCredentialRequestPrivate object for Iam \a action,
  * with public implementation \a q.
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
-    const IAMRequest::Action action, DeleteServiceSpecificCredentialRequest * const q)
-    : IAMRequestPrivate(action, q)
+    const IamRequest::Action action, DeleteServiceSpecificCredentialRequest * const q)
+    : IamRequestPrivate(action, q)
 {
 
 }
@@ -164,7 +164,7 @@ DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRe
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
     const DeleteServiceSpecificCredentialRequestPrivate &other, DeleteServiceSpecificCredentialRequest * const q)
-    : IAMRequestPrivate(other, q)
+    : IamRequestPrivate(other, q)
 {
 
 }

@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
-    : WAFRequest(new ListWebACLsRequestPrivate(*other.d_func(), this))
+    : WafRequest(new ListWebACLsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ ListWebACLsRequest::ListWebACLsRequest(const ListWebACLsRequest &other)
  * Constructs a ListWebACLsRequest object.
  */
 ListWebACLsRequest::ListWebACLsRequest()
-    : WAFRequest(new ListWebACLsRequestPrivate(WAFRequest::ListWebACLsAction, this))
+    : WafRequest(new ListWebACLsRequestPrivate(WafRequest::ListWebACLsAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
  */
 
 /*!
- * Constructs a ListWebACLsRequestPrivate object for WAF \a action,
+ * Constructs a ListWebACLsRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
-    const WAFRequest::Action action, ListWebACLsRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, ListWebACLsRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const ListWebACLsRequestPrivate &other, ListWebACLsRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

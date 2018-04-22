@@ -28,10 +28,10 @@ namespace RDS {
 
 class ModifyDBSubnetGroupRequest;
 
-class QTAWS_EXPORT ModifyDBSubnetGroupRequestPrivate : public RDSRequestPrivate {
+class QTAWS_EXPORT ModifyDBSubnetGroupRequestPrivate : public RdsRequestPrivate {
 
 public:
-    ModifyDBSubnetGroupRequestPrivate(const RDSRequest::Action action,
+    ModifyDBSubnetGroupRequestPrivate(const RdsRequest::Action action,
                                    ModifyDBSubnetGroupRequest * const q);
     ModifyDBSubnetGroupRequestPrivate(const ModifyDBSubnetGroupRequestPrivate &other,
                                    ModifyDBSubnetGroupRequest * const q);

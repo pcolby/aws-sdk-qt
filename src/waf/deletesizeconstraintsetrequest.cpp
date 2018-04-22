@@ -44,7 +44,7 @@ namespace WAF {
  * Constructs a copy of \a other.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeConstraintSetRequest &other)
-    : WAFRequest(new DeleteSizeConstraintSetRequestPrivate(*other.d_func(), this))
+    : WafRequest(new DeleteSizeConstraintSetRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -53,7 +53,7 @@ DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest(const DeleteSizeC
  * Constructs a DeleteSizeConstraintSetRequest object.
  */
 DeleteSizeConstraintSetRequest::DeleteSizeConstraintSetRequest()
-    : WAFRequest(new DeleteSizeConstraintSetRequestPrivate(WAFRequest::DeleteSizeConstraintSetAction, this))
+    : WafRequest(new DeleteSizeConstraintSetRequestPrivate(WafRequest::DeleteSizeConstraintSetAction, this))
 {
 
 }
@@ -86,12 +86,12 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
  */
 
 /*!
- * Constructs a DeleteSizeConstraintSetRequestPrivate object for WAF \a action,
+ * Constructs a DeleteSizeConstraintSetRequestPrivate object for Waf \a action,
  * with public implementation \a q.
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
-    const WAFRequest::Action action, DeleteSizeConstraintSetRequest * const q)
-    : WAFRequestPrivate(action, q)
+    const WafRequest::Action action, DeleteSizeConstraintSetRequest * const q)
+    : WafRequestPrivate(action, q)
 {
 
 }
@@ -104,7 +104,7 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const DeleteSizeConstraintSetRequestPrivate &other, DeleteSizeConstraintSetRequest * const q)
-    : WAFRequestPrivate(other, q)
+    : WafRequestPrivate(other, q)
 {
 
 }

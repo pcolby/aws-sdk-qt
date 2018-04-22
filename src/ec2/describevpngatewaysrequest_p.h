@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeVpnGatewaysRequest;
 
-class QTAWS_EXPORT DescribeVpnGatewaysRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeVpnGatewaysRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeVpnGatewaysRequestPrivate(const EC2Request::Action action,
+    DescribeVpnGatewaysRequestPrivate(const Ec2Request::Action action,
                                    DescribeVpnGatewaysRequest * const q);
     DescribeVpnGatewaysRequestPrivate(const DescribeVpnGatewaysRequestPrivate &other,
                                    DescribeVpnGatewaysRequest * const q);

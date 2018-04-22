@@ -68,7 +68,7 @@ DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
         const DescribeInstanceInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeInstanceInformationResponsePrivate(this), parent)
+    : SsmResponse(new DescribeInstanceInformationResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceInformationRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeInstanceInformationResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeInstanceInformationResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponsePrivate(
-    DescribeInstanceInformationResponse * const q) : SSMResponsePrivate(q)
+    DescribeInstanceInformationResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

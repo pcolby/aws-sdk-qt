@@ -27,7 +27,7 @@ namespace RDS {
 
 class PromoteReadReplicaDBClusterRequestPrivate;
 
-class QTAWS_EXPORT PromoteReadReplicaDBClusterRequest : public RDSRequest {
+class QTAWS_EXPORT PromoteReadReplicaDBClusterRequest : public RdsRequest {
 
 public:
     PromoteReadReplicaDBClusterRequest(const PromoteReadReplicaDBClusterRequest &other);

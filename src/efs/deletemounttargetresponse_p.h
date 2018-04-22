@@ -27,7 +27,7 @@ namespace EFS {
 
 class DeleteMountTargetResponse;
 
-class QTAWS_EXPORT DeleteMountTargetResponsePrivate : public EFSResponsePrivate {
+class QTAWS_EXPORT DeleteMountTargetResponsePrivate : public EfsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SNS {
 
 class DeletePlatformApplicationRequestPrivate;
 
-class QTAWS_EXPORT DeletePlatformApplicationRequest : public SNSRequest {
+class QTAWS_EXPORT DeletePlatformApplicationRequest : public SnsRequest {
 
 public:
     DeletePlatformApplicationRequest(const DeletePlatformApplicationRequest &other);

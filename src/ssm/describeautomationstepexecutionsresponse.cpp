@@ -68,7 +68,7 @@ DescribeAutomationStepExecutionsResponse::DescribeAutomationStepExecutionsRespon
         const DescribeAutomationStepExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeAutomationStepExecutionsResponsePrivate(this), parent)
+    : SsmResponse(new DescribeAutomationStepExecutionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAutomationStepExecutionsRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DescribeAutomationStepExecutionsResponse::parseSuccess(QIODevice &response)
  * Constructs a DescribeAutomationStepExecutionsResponsePrivate object with public implementation \a q.
  */
 DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExecutionsResponsePrivate(
-    DescribeAutomationStepExecutionsResponse * const q) : SSMResponsePrivate(q)
+    DescribeAutomationStepExecutionsResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

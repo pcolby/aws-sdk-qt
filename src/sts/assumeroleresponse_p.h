@@ -27,7 +27,7 @@ namespace STS {
 
 class AssumeRoleResponse;
 
-class QTAWS_EXPORT AssumeRoleResponsePrivate : public STSResponsePrivate {
+class QTAWS_EXPORT AssumeRoleResponsePrivate : public StsResponsePrivate {
     Q_OBJECT
 
 public:

@@ -48,7 +48,7 @@ CreateInternetGatewayResponse::CreateInternetGatewayResponse(
         const CreateInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateInternetGatewayResponsePrivate(this), parent)
+    : Ec2Response(new CreateInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateInternetGatewayRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateInternetGatewayResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateInternetGatewayResponsePrivate object with public implementation \a q.
  */
 CreateInternetGatewayResponsePrivate::CreateInternetGatewayResponsePrivate(
-    CreateInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
+    CreateInternetGatewayResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeTagsResponse;
 
-class QTAWS_EXPORT DescribeTagsResponsePrivate : public EFSResponsePrivate {
+class QTAWS_EXPORT DescribeTagsResponsePrivate : public EfsResponsePrivate {
     Q_OBJECT
 
 public:

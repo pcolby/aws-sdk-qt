@@ -103,7 +103,7 @@ namespace RDS {
  * Constructs a copy of \a other.
  */
 DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeDBEngineVersionsRequest &other)
-    : RDSRequest(new DescribeDBEngineVersionsRequestPrivate(*other.d_func(), this))
+    : RdsRequest(new DescribeDBEngineVersionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +112,7 @@ DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeD
  * Constructs a DescribeDBEngineVersionsRequest object.
  */
 DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest()
-    : RDSRequest(new DescribeDBEngineVersionsRequestPrivate(RDSRequest::DescribeDBEngineVersionsAction, this))
+    : RdsRequest(new DescribeDBEngineVersionsRequestPrivate(RdsRequest::DescribeDBEngineVersionsAction, this))
 {
 
 }
@@ -145,12 +145,12 @@ QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNe
  */
 
 /*!
- * Constructs a DescribeDBEngineVersionsRequestPrivate object for RDS \a action,
+ * Constructs a DescribeDBEngineVersionsRequestPrivate object for Rds \a action,
  * with public implementation \a q.
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
-    const RDSRequest::Action action, DescribeDBEngineVersionsRequest * const q)
-    : RDSRequestPrivate(action, q)
+    const RdsRequest::Action action, DescribeDBEngineVersionsRequest * const q)
+    : RdsRequestPrivate(action, q)
 {
 
 }
@@ -163,7 +163,7 @@ DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const DescribeDBEngineVersionsRequestPrivate &other, DescribeDBEngineVersionsRequest * const q)
-    : RDSRequestPrivate(other, q)
+    : RdsRequestPrivate(other, q)
 {
 
 }

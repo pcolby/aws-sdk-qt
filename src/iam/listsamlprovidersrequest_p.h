@@ -28,10 +28,10 @@ namespace IAM {
 
 class ListSAMLProvidersRequest;
 
-class QTAWS_EXPORT ListSAMLProvidersRequestPrivate : public IAMRequestPrivate {
+class QTAWS_EXPORT ListSAMLProvidersRequestPrivate : public IamRequestPrivate {
 
 public:
-    ListSAMLProvidersRequestPrivate(const IAMRequest::Action action,
+    ListSAMLProvidersRequestPrivate(const IamRequest::Action action,
                                    ListSAMLProvidersRequest * const q);
     ListSAMLProvidersRequestPrivate(const ListSAMLProvidersRequestPrivate &other,
                                    ListSAMLProvidersRequest * const q);

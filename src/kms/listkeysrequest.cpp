@@ -138,7 +138,7 @@ namespace KMS {
  * Constructs a copy of \a other.
  */
 ListKeysRequest::ListKeysRequest(const ListKeysRequest &other)
-    : KMSRequest(new ListKeysRequestPrivate(*other.d_func(), this))
+    : KmsRequest(new ListKeysRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -147,7 +147,7 @@ ListKeysRequest::ListKeysRequest(const ListKeysRequest &other)
  * Constructs a ListKeysRequest object.
  */
 ListKeysRequest::ListKeysRequest()
-    : KMSRequest(new ListKeysRequestPrivate(KMSRequest::ListKeysAction, this))
+    : KmsRequest(new ListKeysRequestPrivate(KmsRequest::ListKeysAction, this))
 {
 
 }
@@ -180,12 +180,12 @@ QtAws::Core::AwsAbstractResponse * ListKeysRequest::response(QNetworkReply * con
  */
 
 /*!
- * Constructs a ListKeysRequestPrivate object for KMS \a action,
+ * Constructs a ListKeysRequestPrivate object for Kms \a action,
  * with public implementation \a q.
  */
 ListKeysRequestPrivate::ListKeysRequestPrivate(
-    const KMSRequest::Action action, ListKeysRequest * const q)
-    : KMSRequestPrivate(action, q)
+    const KmsRequest::Action action, ListKeysRequest * const q)
+    : KmsRequestPrivate(action, q)
 {
 
 }
@@ -198,7 +198,7 @@ ListKeysRequestPrivate::ListKeysRequestPrivate(
  */
 ListKeysRequestPrivate::ListKeysRequestPrivate(
     const ListKeysRequestPrivate &other, ListKeysRequest * const q)
-    : KMSRequestPrivate(other, q)
+    : KmsRequestPrivate(other, q)
 {
 
 }

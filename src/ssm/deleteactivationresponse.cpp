@@ -68,7 +68,7 @@ DeleteActivationResponse::DeleteActivationResponse(
         const DeleteActivationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteActivationResponsePrivate(this), parent)
+    : SsmResponse(new DeleteActivationResponsePrivate(this), parent)
 {
     setRequest(new DeleteActivationRequest(request));
     setReply(reply);
@@ -106,7 +106,7 @@ void DeleteActivationResponse::parseSuccess(QIODevice &response)
  * Constructs a DeleteActivationResponsePrivate object with public implementation \a q.
  */
 DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
-    DeleteActivationResponse * const q) : SSMResponsePrivate(q)
+    DeleteActivationResponse * const q) : SsmResponsePrivate(q)
 {
 
 }

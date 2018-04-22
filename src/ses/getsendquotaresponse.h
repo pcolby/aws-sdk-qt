@@ -28,7 +28,7 @@ namespace SES {
 
 class GetSendQuotaResponsePrivate;
 
-class QTAWS_EXPORT GetSendQuotaResponse : public SESResponse {
+class QTAWS_EXPORT GetSendQuotaResponse : public SesResponse {
     Q_OBJECT
 
 public:

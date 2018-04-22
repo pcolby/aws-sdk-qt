@@ -55,7 +55,7 @@ SendEmailResponse::SendEmailResponse(
         const SendEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendEmailResponsePrivate(this), parent)
+    : SesResponse(new SendEmailResponsePrivate(this), parent)
 {
     setRequest(new SendEmailRequest(request));
     setReply(reply);
@@ -93,7 +93,7 @@ void SendEmailResponse::parseSuccess(QIODevice &response)
  * Constructs a SendEmailResponsePrivate object with public implementation \a q.
  */
 SendEmailResponsePrivate::SendEmailResponsePrivate(
-    SendEmailResponse * const q) : SESResponsePrivate(q)
+    SendEmailResponse * const q) : SesResponsePrivate(q)
 {
 
 }

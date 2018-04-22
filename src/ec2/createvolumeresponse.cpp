@@ -48,7 +48,7 @@ CreateVolumeResponse::CreateVolumeResponse(
         const CreateVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateVolumeResponsePrivate(this), parent)
+    : Ec2Response(new CreateVolumeResponsePrivate(this), parent)
 {
     setRequest(new CreateVolumeRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void CreateVolumeResponse::parseSuccess(QIODevice &response)
  * Constructs a CreateVolumeResponsePrivate object with public implementation \a q.
  */
 CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
-    CreateVolumeResponse * const q) : EC2ResponsePrivate(q)
+    CreateVolumeResponse * const q) : Ec2ResponsePrivate(q)
 {
 
 }

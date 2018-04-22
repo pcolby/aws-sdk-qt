@@ -63,7 +63,7 @@ SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
         const SendTaskHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new SendTaskHeartbeatResponsePrivate(this), parent)
+    : SfnResponse(new SendTaskHeartbeatResponsePrivate(this), parent)
 {
     setRequest(new SendTaskHeartbeatRequest(request));
     setReply(reply);
@@ -101,7 +101,7 @@ void SendTaskHeartbeatResponse::parseSuccess(QIODevice &response)
  * Constructs a SendTaskHeartbeatResponsePrivate object with public implementation \a q.
  */
 SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponsePrivate(
-    SendTaskHeartbeatResponse * const q) : SFNResponsePrivate(q)
+    SendTaskHeartbeatResponse * const q) : SfnResponsePrivate(q)
 {
 
 }

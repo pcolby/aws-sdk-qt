@@ -63,7 +63,7 @@ namespace SSM {
  * Constructs a copy of \a other.
  */
 CreateDocumentRequest::CreateDocumentRequest(const CreateDocumentRequest &other)
-    : SSMRequest(new CreateDocumentRequestPrivate(*other.d_func(), this))
+    : SsmRequest(new CreateDocumentRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -72,7 +72,7 @@ CreateDocumentRequest::CreateDocumentRequest(const CreateDocumentRequest &other)
  * Constructs a CreateDocumentRequest object.
  */
 CreateDocumentRequest::CreateDocumentRequest()
-    : SSMRequest(new CreateDocumentRequestPrivate(SSMRequest::CreateDocumentAction, this))
+    : SsmRequest(new CreateDocumentRequestPrivate(SsmRequest::CreateDocumentAction, this))
 {
 
 }
@@ -105,12 +105,12 @@ QtAws::Core::AwsAbstractResponse * CreateDocumentRequest::response(QNetworkReply
  */
 
 /*!
- * Constructs a CreateDocumentRequestPrivate object for SSM \a action,
+ * Constructs a CreateDocumentRequestPrivate object for Ssm \a action,
  * with public implementation \a q.
  */
 CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
-    const SSMRequest::Action action, CreateDocumentRequest * const q)
-    : SSMRequestPrivate(action, q)
+    const SsmRequest::Action action, CreateDocumentRequest * const q)
+    : SsmRequestPrivate(action, q)
 {
 
 }
@@ -123,7 +123,7 @@ CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
  */
 CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
     const CreateDocumentRequestPrivate &other, CreateDocumentRequest * const q)
-    : SSMRequestPrivate(other, q)
+    : SsmRequestPrivate(other, q)
 {
 
 }

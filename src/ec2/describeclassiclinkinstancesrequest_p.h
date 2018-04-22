@@ -28,10 +28,10 @@ namespace EC2 {
 
 class DescribeClassicLinkInstancesRequest;
 
-class QTAWS_EXPORT DescribeClassicLinkInstancesRequestPrivate : public EC2RequestPrivate {
+class QTAWS_EXPORT DescribeClassicLinkInstancesRequestPrivate : public Ec2RequestPrivate {
 
 public:
-    DescribeClassicLinkInstancesRequestPrivate(const EC2Request::Action action,
+    DescribeClassicLinkInstancesRequestPrivate(const Ec2Request::Action action,
                                    DescribeClassicLinkInstancesRequest * const q);
     DescribeClassicLinkInstancesRequestPrivate(const DescribeClassicLinkInstancesRequestPrivate &other,
                                    DescribeClassicLinkInstancesRequest * const q);

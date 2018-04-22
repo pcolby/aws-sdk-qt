@@ -108,7 +108,7 @@ CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
         const CopyDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyDBParameterGroupResponsePrivate(this), parent)
+    : RdsResponse(new CopyDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyDBParameterGroupRequest(request));
     setReply(reply);
@@ -146,7 +146,7 @@ void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
  * Constructs a CopyDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
-    CopyDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
+    CopyDBParameterGroupResponse * const q) : RdsResponsePrivate(q)
 {
 
 }

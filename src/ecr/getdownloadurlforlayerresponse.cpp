@@ -48,7 +48,7 @@ GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
         const GetDownloadUrlForLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new GetDownloadUrlForLayerResponsePrivate(this), parent)
+    : EcrResponse(new GetDownloadUrlForLayerResponsePrivate(this), parent)
 {
     setRequest(new GetDownloadUrlForLayerRequest(request));
     setReply(reply);
@@ -86,7 +86,7 @@ void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
  * Constructs a GetDownloadUrlForLayerResponsePrivate object with public implementation \a q.
  */
 GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
-    GetDownloadUrlForLayerResponse * const q) : ECRResponsePrivate(q)
+    GetDownloadUrlForLayerResponse * const q) : EcrResponsePrivate(q)
 {
 
 }
