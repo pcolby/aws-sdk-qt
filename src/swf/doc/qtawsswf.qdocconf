@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsSWF
+project = QtAwsSwf
 description = AWS SWF SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

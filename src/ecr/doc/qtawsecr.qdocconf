@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsECR
+project = QtAwsEcr
 description = AWS ECR SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

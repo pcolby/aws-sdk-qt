@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsWAF
+project = QtAwsWaf
 description = AWS WAF SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

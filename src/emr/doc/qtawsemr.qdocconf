@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsEMR
+project = QtAwsEmr
 description = AWS EMR SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

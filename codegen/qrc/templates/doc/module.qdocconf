@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAws{{ServiceName}}
+project = {{ModuleName}}
 description = AWS {{ServiceName}} SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

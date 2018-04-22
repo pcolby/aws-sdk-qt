@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsSNS
+project = QtAwsSns
 description = AWS SNS SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

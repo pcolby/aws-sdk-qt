@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsACM
+project = QtAwsAcm
 description = AWS ACM SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

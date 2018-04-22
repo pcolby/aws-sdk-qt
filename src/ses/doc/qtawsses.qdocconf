@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsSES
+project = QtAwsSes
 description = AWS SES SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

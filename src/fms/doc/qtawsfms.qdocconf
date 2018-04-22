@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsFMS
+project = QtAwsFms
 description = AWS FMS SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

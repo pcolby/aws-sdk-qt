@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsSMS
+project = QtAwsSms
 description = AWS SMS SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsEFS
+project = QtAwsEfs
 description = AWS EFS SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

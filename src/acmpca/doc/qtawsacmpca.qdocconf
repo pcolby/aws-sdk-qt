@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsACMPCA
+project = QtAwsAcmpca
 description = AWS ACMPCA SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

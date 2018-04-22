@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsKMS
+project = QtAwsKms
 description = AWS KMS SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

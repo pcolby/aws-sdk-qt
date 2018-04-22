@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsRDS
+project = QtAwsRds
 description = AWS RDS SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..

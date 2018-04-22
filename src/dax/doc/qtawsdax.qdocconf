@@ -1,6 +1,6 @@
 include(../../../doc/global/qtaws-defaults.qdocconf)
 
-project = QtAwsDAX
+project = QtAwsDax
 description = AWS DAX SDK for Qt
 headerdirs  = ..
 sourcedirs  = ..
