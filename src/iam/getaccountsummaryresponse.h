@@ -21,7 +21,6 @@
 #define QTAWS_GETACCOUNTSUMMARYRESPONSE_H
 
 #include "iamresponse.h"
-#include "getaccountsummaryrequest.h"
 
 namespace QtAws {
 namespace IAM {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT GetAccountSummaryResponse : public IamResponse {
     Q_OBJECT
 
 public:
-    GetAccountSummaryResponse(const GetAccountSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    GetAccountSummaryResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountSummaryRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

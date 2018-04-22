@@ -103,15 +103,13 @@ namespace IAM {
  */
 
 /*!
- * Constructs a GetCredentialReportResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a GetCredentialReportResponse object for \a reply, with parent \a parent.
  */
 GetCredentialReportResponse::GetCredentialReportResponse(
-        const GetCredentialReportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IamResponse(new GetCredentialReportResponsePrivate(this), parent)
 {
-    setRequest(new GetCredentialReportRequest(request));
     setReply(reply);
 }
 

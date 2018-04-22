@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_H
 
 #include "elasticbeanstalkresponse.h"
-#include "describeaccountattributesrequest.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeAccountAttributesResponse : public ElasticBeanstalkRe
     Q_OBJECT
 
 public:
-    DescribeAccountAttributesResponse(const DescribeAccountAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeAccountAttributesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAccountAttributesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

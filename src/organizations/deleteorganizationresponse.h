@@ -21,7 +21,6 @@
 #define QTAWS_DELETEORGANIZATIONRESPONSE_H
 
 #include "organizationsresponse.h"
-#include "deleteorganizationrequest.h"
 
 namespace QtAws {
 namespace Organizations {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DeleteOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:
-    DeleteOrganizationResponse(const DeleteOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DeleteOrganizationResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteOrganizationRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

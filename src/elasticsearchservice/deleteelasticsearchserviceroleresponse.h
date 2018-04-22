@@ -21,7 +21,6 @@
 #define QTAWS_DELETEELASTICSEARCHSERVICEROLERESPONSE_H
 
 #include "elasticsearchserviceresponse.h"
-#include "deleteelasticsearchservicerolerequest.h"
 
 namespace QtAws {
 namespace ElasticsearchService {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DeleteElasticsearchServiceRoleResponse : public Elasticsearch
     Q_OBJECT
 
 public:
-    DeleteElasticsearchServiceRoleResponse(const DeleteElasticsearchServiceRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DeleteElasticsearchServiceRoleResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteElasticsearchServiceRoleRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

@@ -43,15 +43,13 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a DescribeMetricCollectionTypesResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DescribeMetricCollectionTypesResponse object for \a reply, with parent \a parent.
  */
 DescribeMetricCollectionTypesResponse::DescribeMetricCollectionTypesResponse(
-        const DescribeMetricCollectionTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DescribeMetricCollectionTypesResponsePrivate(this), parent)
 {
-    setRequest(new DescribeMetricCollectionTypesRequest(request));
     setReply(reply);
 }
 

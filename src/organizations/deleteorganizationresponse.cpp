@@ -180,15 +180,13 @@ namespace Organizations {
  */
 
 /*!
- * Constructs a DeleteOrganizationResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DeleteOrganizationResponse object for \a reply, with parent \a parent.
  */
 DeleteOrganizationResponse::DeleteOrganizationResponse(
-        const DeleteOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new DeleteOrganizationResponsePrivate(this), parent)
 {
-    setRequest(new DeleteOrganizationRequest(request));
     setReply(reply);
 }
 

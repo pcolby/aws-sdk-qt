@@ -103,15 +103,13 @@ namespace IAM {
  */
 
 /*!
- * Constructs a GetAccountPasswordPolicyResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a GetAccountPasswordPolicyResponse object for \a reply, with parent \a parent.
  */
 GetAccountPasswordPolicyResponse::GetAccountPasswordPolicyResponse(
-        const GetAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IamResponse(new GetAccountPasswordPolicyResponsePrivate(this), parent)
 {
-    setRequest(new GetAccountPasswordPolicyRequest(request));
     setReply(reply);
 }
 

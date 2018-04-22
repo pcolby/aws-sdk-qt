@@ -21,7 +21,6 @@
 #define QTAWS_GETSENDQUOTARESPONSE_H
 
 #include "sesresponse.h"
-#include "getsendquotarequest.h"
 
 namespace QtAws {
 namespace SES {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT GetSendQuotaResponse : public SesResponse {
     Q_OBJECT
 
 public:
-    GetSendQuotaResponse(const GetSendQuotaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    GetSendQuotaResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSendQuotaRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBETERMINATIONPOLICYTYPESRESPONSE_H
 
 #include "autoscalingresponse.h"
-#include "describeterminationpolicytypesrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeTerminationPolicyTypesResponse : public AutoScalingRe
     Q_OBJECT
 
 public:
-    DescribeTerminationPolicyTypesResponse(const DescribeTerminationPolicyTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeTerminationPolicyTypesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTerminationPolicyTypesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

@@ -144,15 +144,13 @@ namespace OpsWorks {
  */
 
 /*!
- * Constructs a DescribeMyUserProfileResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DescribeMyUserProfileResponse object for \a reply, with parent \a parent.
  */
 DescribeMyUserProfileResponse::DescribeMyUserProfileResponse(
-        const DescribeMyUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DescribeMyUserProfileResponsePrivate(this), parent)
 {
-    setRequest(new DescribeMyUserProfileRequest(request));
     setReply(reply);
 }
 

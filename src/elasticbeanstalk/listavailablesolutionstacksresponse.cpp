@@ -60,15 +60,13 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * Constructs a ListAvailableSolutionStacksResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a ListAvailableSolutionStacksResponse object for \a reply, with parent \a parent.
  */
 ListAvailableSolutionStacksResponse::ListAvailableSolutionStacksResponse(
-        const ListAvailableSolutionStacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new ListAvailableSolutionStacksResponsePrivate(this), parent)
 {
-    setRequest(new ListAvailableSolutionStacksRequest(request));
     setReply(reply);
 }
 

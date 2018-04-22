@@ -49,15 +49,13 @@ namespace SES {
  */
 
 /*!
- * Constructs a GetAccountSendingEnabledResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a GetAccountSendingEnabledResponse object for \a reply, with parent \a parent.
  */
 GetAccountSendingEnabledResponse::GetAccountSendingEnabledResponse(
-        const GetAccountSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SesResponse(new GetAccountSendingEnabledResponsePrivate(this), parent)
 {
-    setRequest(new GetAccountSendingEnabledRequest(request));
     setReply(reply);
 }
 

@@ -21,7 +21,6 @@
 #define QTAWS_LISTDOMAINNAMESRESPONSE_H
 
 #include "cloudsearchresponse.h"
-#include "listdomainnamesrequest.h"
 
 namespace QtAws {
 namespace CloudSearch {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT ListDomainNamesResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:
-    ListDomainNamesResponse(const ListDomainNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    ListDomainNamesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDomainNamesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

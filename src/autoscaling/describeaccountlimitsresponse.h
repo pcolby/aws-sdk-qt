@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_H
 
 #include "autoscalingresponse.h"
-#include "describeaccountlimitsrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeAccountLimitsResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:
-    DescribeAccountLimitsResponse(const DescribeAccountLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeAccountLimitsResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAccountLimitsRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

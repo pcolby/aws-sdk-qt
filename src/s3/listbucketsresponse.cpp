@@ -38,15 +38,13 @@ namespace S3 {
  */
 
 /*!
- * Constructs a ListBucketsResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a ListBucketsResponse object for \a reply, with parent \a parent.
  */
 ListBucketsResponse::ListBucketsResponse(
-        const ListBucketsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new ListBucketsResponsePrivate(this), parent)
 {
-    setRequest(new ListBucketsRequest(request));
     setReply(reply);
 }
 

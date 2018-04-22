@@ -47,15 +47,13 @@ namespace ElasticsearchService {
  */
 
 /*!
- * Constructs a ListDomainNamesResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a ListDomainNamesResponse object for \a reply, with parent \a parent.
  */
 ListDomainNamesResponse::ListDomainNamesResponse(
-        const ListDomainNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticsearchServiceResponse(new ListDomainNamesResponsePrivate(this), parent)
 {
-    setRequest(new ListDomainNamesRequest(request));
     setReply(reply);
 }
 

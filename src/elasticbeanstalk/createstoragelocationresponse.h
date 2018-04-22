@@ -21,7 +21,6 @@
 #define QTAWS_CREATESTORAGELOCATIONRESPONSE_H
 
 #include "elasticbeanstalkresponse.h"
-#include "createstoragelocationrequest.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT CreateStorageLocationResponse : public ElasticBeanstalkRespon
     Q_OBJECT
 
 public:
-    CreateStorageLocationResponse(const CreateStorageLocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    CreateStorageLocationResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStorageLocationRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

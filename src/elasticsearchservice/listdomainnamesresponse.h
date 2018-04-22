@@ -21,7 +21,6 @@
 #define QTAWS_LISTDOMAINNAMESRESPONSE_H
 
 #include "elasticsearchserviceresponse.h"
-#include "listdomainnamesrequest.h"
 
 namespace QtAws {
 namespace ElasticsearchService {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT ListDomainNamesResponse : public ElasticsearchServiceResponse
     Q_OBJECT
 
 public:
-    ListDomainNamesResponse(const ListDomainNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    ListDomainNamesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDomainNamesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

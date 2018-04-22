@@ -21,7 +21,6 @@
 #define QTAWS_EXPORTCONFIGURATIONSRESPONSE_H
 
 #include "applicationdiscoveryserviceresponse.h"
-#include "exportconfigurationsrequest.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT ExportConfigurationsResponse : public ApplicationDiscoverySer
     Q_OBJECT
 
 public:
-    ExportConfigurationsResponse(const ExportConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    ExportConfigurationsResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ExportConfigurationsRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

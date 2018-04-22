@@ -21,7 +21,6 @@
 #define QTAWS_GETSENDSTATISTICSRESPONSE_H
 
 #include "sesresponse.h"
-#include "getsendstatisticsrequest.h"
 
 namespace QtAws {
 namespace SES {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT GetSendStatisticsResponse : public SesResponse {
     Q_OBJECT
 
 public:
-    GetSendStatisticsResponse(const GetSendStatisticsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    GetSendStatisticsResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSendStatisticsRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

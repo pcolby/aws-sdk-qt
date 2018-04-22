@@ -180,15 +180,13 @@ namespace Organizations {
  */
 
 /*!
- * Constructs a LeaveOrganizationResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a LeaveOrganizationResponse object for \a reply, with parent \a parent.
  */
 LeaveOrganizationResponse::LeaveOrganizationResponse(
-        const LeaveOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new LeaveOrganizationResponsePrivate(this), parent)
 {
-    setRequest(new LeaveOrganizationRequest(request));
     setReply(reply);
 }
 

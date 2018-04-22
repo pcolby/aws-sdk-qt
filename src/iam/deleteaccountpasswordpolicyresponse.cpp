@@ -103,15 +103,13 @@ namespace IAM {
  */
 
 /*!
- * Constructs a DeleteAccountPasswordPolicyResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DeleteAccountPasswordPolicyResponse object for \a reply, with parent \a parent.
  */
 DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
-        const DeleteAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IamResponse(new DeleteAccountPasswordPolicyResponsePrivate(this), parent)
 {
-    setRequest(new DeleteAccountPasswordPolicyRequest(request));
     setReply(reply);
 }
 

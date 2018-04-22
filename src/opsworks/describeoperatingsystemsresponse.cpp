@@ -144,15 +144,13 @@ namespace OpsWorks {
  */
 
 /*!
- * Constructs a DescribeOperatingSystemsResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DescribeOperatingSystemsResponse object for \a reply, with parent \a parent.
  */
 DescribeOperatingSystemsResponse::DescribeOperatingSystemsResponse(
-        const DescribeOperatingSystemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DescribeOperatingSystemsResponsePrivate(this), parent)
 {
-    setRequest(new DescribeOperatingSystemsRequest(request));
     setReply(reply);
 }
 

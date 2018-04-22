@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBEADJUSTMENTTYPESRESPONSE_H
 
 #include "autoscalingresponse.h"
-#include "describeadjustmenttypesrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeAdjustmentTypesResponse : public AutoScalingResponse 
     Q_OBJECT
 
 public:
-    DescribeAdjustmentTypesResponse(const DescribeAdjustmentTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeAdjustmentTypesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAdjustmentTypesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

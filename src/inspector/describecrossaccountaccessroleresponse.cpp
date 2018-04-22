@@ -43,15 +43,13 @@ namespace Inspector {
  */
 
 /*!
- * Constructs a DescribeCrossAccountAccessRoleResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DescribeCrossAccountAccessRoleResponse object for \a reply, with parent \a parent.
  */
 DescribeCrossAccountAccessRoleResponse::DescribeCrossAccountAccessRoleResponse(
-        const DescribeCrossAccountAccessRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : InspectorResponse(new DescribeCrossAccountAccessRoleResponsePrivate(this), parent)
 {
-    setRequest(new DescribeCrossAccountAccessRoleRequest(request));
     setReply(reply);
 }
 

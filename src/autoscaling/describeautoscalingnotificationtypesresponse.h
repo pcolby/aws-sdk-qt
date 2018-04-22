@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBEAUTOSCALINGNOTIFICATIONTYPESRESPONSE_H
 
 #include "autoscalingresponse.h"
-#include "describeautoscalingnotificationtypesrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeAutoScalingNotificationTypesResponse : public AutoSca
     Q_OBJECT
 
 public:
-    DescribeAutoScalingNotificationTypesResponse(const DescribeAutoScalingNotificationTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeAutoScalingNotificationTypesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAutoScalingNotificationTypesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

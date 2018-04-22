@@ -21,7 +21,6 @@
 #define QTAWS_DELETEACCOUNTPASSWORDPOLICYRESPONSE_H
 
 #include "iamresponse.h"
-#include "deleteaccountpasswordpolicyrequest.h"
 
 namespace QtAws {
 namespace IAM {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DeleteAccountPasswordPolicyResponse : public IamResponse {
     Q_OBJECT
 
 public:
-    DeleteAccountPasswordPolicyResponse(const DeleteAccountPasswordPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DeleteAccountPasswordPolicyResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAccountPasswordPolicyRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

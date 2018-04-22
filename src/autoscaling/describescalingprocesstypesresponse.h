@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBESCALINGPROCESSTYPESRESPONSE_H
 
 #include "autoscalingresponse.h"
-#include "describescalingprocesstypesrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeScalingProcessTypesResponse : public AutoScalingRespo
     Q_OBJECT
 
 public:
-    DescribeScalingProcessTypesResponse(const DescribeScalingProcessTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeScalingProcessTypesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScalingProcessTypesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

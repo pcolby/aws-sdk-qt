@@ -21,7 +21,6 @@
 #define QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_H
 
 #include "sesresponse.h"
-#include "listverifiedemailaddressesrequest.h"
 
 namespace QtAws {
 namespace SES {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT ListVerifiedEmailAddressesResponse : public SesResponse {
     Q_OBJECT
 
 public:
-    ListVerifiedEmailAddressesResponse(const ListVerifiedEmailAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    ListVerifiedEmailAddressesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListVerifiedEmailAddressesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

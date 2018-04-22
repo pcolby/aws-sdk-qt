@@ -43,15 +43,13 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a DescribeAccountLimitsResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DescribeAccountLimitsResponse object for \a reply, with parent \a parent.
  */
 DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
-        const DescribeAccountLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DescribeAccountLimitsResponsePrivate(this), parent)
 {
-    setRequest(new DescribeAccountLimitsRequest(request));
     setReply(reply);
 }
 

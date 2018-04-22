@@ -21,7 +21,6 @@
 #define QTAWS_GETCOMPLIANCESUMMARYBYCONFIGRULERESPONSE_H
 
 #include "configserviceresponse.h"
-#include "getcompliancesummarybyconfigrulerequest.h"
 
 namespace QtAws {
 namespace ConfigService {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT GetComplianceSummaryByConfigRuleResponse : public ConfigServi
     Q_OBJECT
 
 public:
-    GetComplianceSummaryByConfigRuleResponse(const GetComplianceSummaryByConfigRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    GetComplianceSummaryByConfigRuleResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetComplianceSummaryByConfigRuleRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;

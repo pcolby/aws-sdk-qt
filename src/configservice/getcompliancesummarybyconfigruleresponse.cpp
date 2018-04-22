@@ -61,15 +61,13 @@ namespace ConfigService {
  */
 
 /*!
- * Constructs a GetComplianceSummaryByConfigRuleResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a GetComplianceSummaryByConfigRuleResponse object for \a reply, with parent \a parent.
  */
 GetComplianceSummaryByConfigRuleResponse::GetComplianceSummaryByConfigRuleResponse(
-        const GetComplianceSummaryByConfigRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ConfigServiceResponse(new GetComplianceSummaryByConfigRuleResponsePrivate(this), parent)
 {
-    setRequest(new GetComplianceSummaryByConfigRuleRequest(request));
     setReply(reply);
 }
 

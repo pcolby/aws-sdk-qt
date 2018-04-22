@@ -43,15 +43,13 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a DescribeScalingProcessTypesResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a DescribeScalingProcessTypesResponse object for \a reply, with parent \a parent.
  */
 DescribeScalingProcessTypesResponse::DescribeScalingProcessTypesResponse(
-        const DescribeScalingProcessTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DescribeScalingProcessTypesResponsePrivate(this), parent)
 {
-    setRequest(new DescribeScalingProcessTypesRequest(request));
     setReply(reply);
 }
 

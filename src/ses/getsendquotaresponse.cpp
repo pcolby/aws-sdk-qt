@@ -49,15 +49,13 @@ namespace SES {
  */
 
 /*!
- * Constructs a GetSendQuotaResponse object for \a reply to \a request, with parent \a parent.
+ * Constructs a GetSendQuotaResponse object for \a reply, with parent \a parent.
  */
 GetSendQuotaResponse::GetSendQuotaResponse(
-        const GetSendQuotaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SesResponse(new GetSendQuotaResponsePrivate(this), parent)
 {
-    setRequest(new GetSendQuotaRequest(request));
     setReply(reply);
 }
 

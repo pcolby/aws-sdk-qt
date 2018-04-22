@@ -21,7 +21,6 @@
 #define QTAWS_DESCRIBELIFECYCLEHOOKTYPESRESPONSE_H
 
 #include "autoscalingresponse.h"
-#include "describelifecyclehooktypesrequest.h"
 
 namespace QtAws {
 namespace AutoScaling {
@@ -32,9 +31,8 @@ class QTAWS_EXPORT DescribeLifecycleHookTypesResponse : public AutoScalingRespon
     Q_OBJECT
 
 public:
-    DescribeLifecycleHookTypesResponse(const DescribeLifecycleHookTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+    DescribeLifecycleHookTypesResponse(QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLifecycleHookTypesRequest * request() const override;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) override;
