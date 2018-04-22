@@ -4,3 +4,5 @@ project = QtAws
 description = AWS SDK for Qt
 headerdirs  = src
 sourcedirs  = src
+
+navigation.landingtitle = "QtAws"
