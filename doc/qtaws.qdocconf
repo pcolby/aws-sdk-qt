@@ -1,0 +1,10 @@
+include(global/qtaws-defaults.qdocconf)
+
+project = QtAws
+description = AWS SDK for Qt
+#headerdirs  = /home/paul/src/aws-sdk-qt/src/core
+sourcedirs  = src
+
+indexes = /home/paul/opt/qt/Docs/Qt-5.10.1/qtcore/qtcore.index \
+          /home/paul/opt/qt/Docs/Qt-5.10.1/qtnetwork/qtnetwork.index \
+          /home/paul/opt/qt/Docs/Qt-5.10.1/qtxmlpatterns/qtxmlpatterns.index \

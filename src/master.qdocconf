@@ -1,4 +1,5 @@
-/home/paul/src/aws-sdk-qt/doc/aws-sdk-qt.qdocconf
+../doc/qtaws.qdocconf
+core/doc/qtawscore.qdocconf
 acm/doc/qtawsacm.qdocconf
 acmpca/doc/qtawsacmpca.qdocconf
 alexaforbusiness/doc/qtawsalexaforbusiness.qdocconf

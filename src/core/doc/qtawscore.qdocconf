@@ -1,0 +1,10 @@
+include(../../../doc/global/qtaws-defaults.qdocconf)
+
+project = QtAwsCore
+description = AWS Core SDK for Qt
+headerdirs  = ..
+sourcedirs  = ..
+
+navigation.landingpage = "qtawscore-index.html"
+navigation.landingtitle = "Core"
+navigation.cppclassespage = "Core C++ Classes"
