@@ -28,7 +28,6 @@ namespace ElastiCache {
 class ElastiCacheResponse;
 
 class QTAWS_EXPORT ElastiCacheResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace FMS {
 class FmsResponse;
 
 class QTAWS_EXPORT FmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

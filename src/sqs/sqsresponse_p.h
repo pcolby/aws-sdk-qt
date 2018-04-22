@@ -28,7 +28,6 @@ namespace SQS {
 class SqsResponse;
 
 class QTAWS_EXPORT SqsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

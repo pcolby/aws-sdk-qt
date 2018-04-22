@@ -28,7 +28,6 @@ namespace CognitoSync {
 class CognitoSyncResponse;
 
 class QTAWS_EXPORT CognitoSyncResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

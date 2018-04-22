@@ -28,7 +28,6 @@ namespace MediaLive {
 class MediaLiveResponse;
 
 class QTAWS_EXPORT MediaLiveResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

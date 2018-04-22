@@ -28,7 +28,6 @@ namespace ElasticLoadBalancing {
 class ElasticLoadBalancingResponse;
 
 class QTAWS_EXPORT ElasticLoadBalancingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

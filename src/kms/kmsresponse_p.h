@@ -28,7 +28,6 @@ namespace KMS {
 class KmsResponse;
 
 class QTAWS_EXPORT KmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

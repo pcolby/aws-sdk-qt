@@ -28,7 +28,6 @@ namespace Shield {
 class ShieldResponse;
 
 class QTAWS_EXPORT ShieldResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

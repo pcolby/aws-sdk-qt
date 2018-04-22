@@ -28,7 +28,6 @@ namespace AutoScaling {
 class AutoScalingResponse;
 
 class QTAWS_EXPORT AutoScalingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace EC2 {
 class Ec2Response;
 
 class QTAWS_EXPORT Ec2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace CloudWatchLogs {
 class CloudWatchLogsResponse;
 
 class QTAWS_EXPORT CloudWatchLogsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace Connect {
 class ConnectResponse;
 
 class QTAWS_EXPORT ConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

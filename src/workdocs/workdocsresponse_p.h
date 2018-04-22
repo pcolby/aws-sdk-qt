@@ -28,7 +28,6 @@ namespace WorkDocs {
 class WorkDocsResponse;
 
 class QTAWS_EXPORT WorkDocsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

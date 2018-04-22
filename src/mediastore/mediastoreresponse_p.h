@@ -28,7 +28,6 @@ namespace MediaStore {
 class MediaStoreResponse;
 
 class QTAWS_EXPORT MediaStoreResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

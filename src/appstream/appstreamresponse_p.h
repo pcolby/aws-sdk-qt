@@ -28,7 +28,6 @@ namespace AppStream {
 class AppStreamResponse;
 
 class QTAWS_EXPORT AppStreamResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

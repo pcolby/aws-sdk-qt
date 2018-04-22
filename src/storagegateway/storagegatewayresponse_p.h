@@ -28,7 +28,6 @@ namespace StorageGateway {
 class StorageGatewayResponse;
 
 class QTAWS_EXPORT StorageGatewayResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace ResourceGroupsTaggingAPI {
 class ResourceGroupsTaggingAPIResponse;
 
 class QTAWS_EXPORT ResourceGroupsTaggingAPIResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

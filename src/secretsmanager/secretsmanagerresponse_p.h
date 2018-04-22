@@ -28,7 +28,6 @@ namespace SecretsManager {
 class SecretsManagerResponse;
 
 class QTAWS_EXPORT SecretsManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

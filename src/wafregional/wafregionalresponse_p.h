@@ -28,7 +28,6 @@ namespace WAFRegional {
 class WAFRegionalResponse;
 
 class QTAWS_EXPORT WAFRegionalResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

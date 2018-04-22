@@ -28,7 +28,6 @@ namespace ElasticTranscoder {
 class ElasticTranscoderResponse;
 
 class QTAWS_EXPORT ElasticTranscoderResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

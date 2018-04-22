@@ -10,7 +10,6 @@ namespace {{NameSpaceName}} {
 class {{ClassName}};
 
 class QTAWS_EXPORT {{ClassName}}Private : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
     {# @todo data members go here #}

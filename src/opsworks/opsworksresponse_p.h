@@ -28,7 +28,6 @@ namespace OpsWorks {
 class OpsWorksResponse;
 
 class QTAWS_EXPORT OpsWorksResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

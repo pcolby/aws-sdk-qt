@@ -28,7 +28,6 @@ namespace SES {
 class SesResponse;
 
 class QTAWS_EXPORT SesResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

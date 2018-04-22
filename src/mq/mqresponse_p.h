@@ -28,7 +28,6 @@ namespace MQ {
 class MqResponse;
 
 class QTAWS_EXPORT MqResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

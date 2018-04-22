@@ -28,7 +28,6 @@ namespace CloudDirectory {
 class CloudDirectoryResponse;
 
 class QTAWS_EXPORT CloudDirectoryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

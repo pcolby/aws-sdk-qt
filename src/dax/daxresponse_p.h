@@ -28,7 +28,6 @@ namespace DAX {
 class DaxResponse;
 
 class QTAWS_EXPORT DaxResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

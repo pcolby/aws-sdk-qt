@@ -28,7 +28,6 @@ namespace DataPipeline {
 class DataPipelineResponse;
 
 class QTAWS_EXPORT DataPipelineResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

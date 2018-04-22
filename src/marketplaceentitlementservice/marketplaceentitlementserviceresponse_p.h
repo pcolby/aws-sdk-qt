@@ -28,7 +28,6 @@ namespace MarketplaceEntitlementService {
 class MarketplaceEntitlementServiceResponse;
 
 class QTAWS_EXPORT MarketplaceEntitlementServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

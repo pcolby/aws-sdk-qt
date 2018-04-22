@@ -28,7 +28,6 @@ namespace KinesisVideoArchivedMedia {
 class KinesisVideoArchivedMediaResponse;
 
 class QTAWS_EXPORT KinesisVideoArchivedMediaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

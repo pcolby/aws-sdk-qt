@@ -28,7 +28,6 @@ namespace IAM {
 class IamResponse;
 
 class QTAWS_EXPORT IamResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

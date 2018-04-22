@@ -28,7 +28,6 @@ namespace MediaConvert {
 class MediaConvertResponse;
 
 class QTAWS_EXPORT MediaConvertResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

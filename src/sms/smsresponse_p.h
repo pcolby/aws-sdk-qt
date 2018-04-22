@@ -28,7 +28,6 @@ namespace SMS {
 class SmsResponse;
 
 class QTAWS_EXPORT SmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

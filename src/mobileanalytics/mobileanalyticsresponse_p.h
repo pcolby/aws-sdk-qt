@@ -28,7 +28,6 @@ namespace MobileAnalytics {
 class MobileAnalyticsResponse;
 
 class QTAWS_EXPORT MobileAnalyticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

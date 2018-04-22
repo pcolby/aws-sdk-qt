@@ -28,7 +28,6 @@ namespace Health {
 class HealthResponse;
 
 class QTAWS_EXPORT HealthResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 

@@ -28,7 +28,6 @@ namespace IoT {
 class IoTResponse;
 
 class QTAWS_EXPORT IoTResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
-    Q_OBJECT
 
 public:
 
