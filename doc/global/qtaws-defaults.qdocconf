@@ -11,7 +11,7 @@ indexes = $QT_INSTALL_DOCS/qtcore/qtcore.index \
           $QT_INSTALL_DOCS/qtnetwork/qtnetwork.index \
           $QT_INSTALL_DOCS/qtxmlpatterns/qtxmlpatterns.index \
 
-navigation.homepage = index.html
+navigation.homepage = qtaws-index.html
 navigation.hometitle = "SDK"
 
 HTML.footer = \
@@ -38,5 +38,5 @@ syntaxhighlighting = true
 # Don't use seprate sub-directories for each module.
 HTML.nosubdirs = "true"
 
-# Add a red "[intenal]" indicator to items marked with \internal.
+# Add a red "[internal]" indicator to items marked with \internal.
 macro.internal.HTML = "<span style="color:red">[internal]</span>"
