@@ -21,6 +21,11 @@ xHTML.headerscripts = \
     "    ga(\'send\', \'pageview\');\n" \
     "  </script>\n"
 
+# Link to the official Google Titillium Web font. Otherwise the
+# style/online.css sheet we borrow from qt.io, would try (unsuccessfully) to
+# fetcht the font from Qt's cloudfront CDN.
+HTML.headerscripts += "<link href=\"https://fonts.googleapis.com/css?family=Titillium+Web\" rel=\"stylesheet\">"
+
 # minimal header
 HTML.postheader = \
     "<body>\n" \
