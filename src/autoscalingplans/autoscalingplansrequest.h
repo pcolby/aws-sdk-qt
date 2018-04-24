@@ -41,6 +41,7 @@ public:
         DeleteScalingPlanAction,
         DescribeScalingPlanResourcesAction,
         DescribeScalingPlansAction,
+        UpdateScalingPlanAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 

@@ -40,6 +40,7 @@ namespace AutoScalingPlans {
  * \value DeleteScalingPlanAction AutoScalingPlans DeleteScalingPlan action.
  * \value DescribeScalingPlanResourcesAction AutoScalingPlans DescribeScalingPlanResources action.
  * \value DescribeScalingPlansAction AutoScalingPlans DescribeScalingPlans action.
+ * \value UpdateScalingPlanAction AutoScalingPlans UpdateScalingPlan action.
  */
 
 /*!

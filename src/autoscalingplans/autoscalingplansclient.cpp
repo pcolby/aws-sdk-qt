@@ -29,6 +29,8 @@
 #include "describescalingplanresourcesresponse.h"
 #include "describescalingplansrequest.h"
 #include "describescalingplansresponse.h"
+#include "updatescalingplanrequest.h"
+#include "updatescalingplanresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -52,6 +54,8 @@ namespace AutoScalingPlans {
  * \ingroup aws-clients
  * \inmodule QtAwsAutoScalingPlans
  *
+ *  <fullname>AWS Auto Scaling</fullname>
+ * 
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
  * 
@@ -171,6 +175,23 @@ DescribeScalingPlanResourcesResponse * AutoScalingPlansClient::describeScalingPl
 DescribeScalingPlansResponse * AutoScalingPlansClient::describeScalingPlans(const DescribeScalingPlansRequest &request)
 {
     return qobject_cast<DescribeScalingPlansResponse *>(send(request));
+}
+
+/*!
+ * Sends \a request to the AutoScalingPlansClient service, and returns a pointer to an
+ * UpdateScalingPlanResponse object to track the result.
+ *
+ * \note The caller is to take responsbility for the resulting pointer.
+ *
+ * Updates the scaling plan for the specified scaling
+ *
+ * plan>
+ *
+ * You cannot update a scaling plan if it is in the process of being created, updated, or
+ */
+UpdateScalingPlanResponse * AutoScalingPlansClient::updateScalingPlan(const UpdateScalingPlanRequest &request)
+{
+    return qobject_cast<UpdateScalingPlanResponse *>(send(request));
 }
 
 /*!

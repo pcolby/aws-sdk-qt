@@ -36,6 +36,8 @@ class DescribeScalingPlanResourcesRequest;
 class DescribeScalingPlanResourcesResponse;
 class DescribeScalingPlansRequest;
 class DescribeScalingPlansResponse;
+class UpdateScalingPlanRequest;
+class UpdateScalingPlanResponse;
 
 class QTAWS_EXPORT AutoScalingPlansClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -57,6 +59,7 @@ public slots:
     DeleteScalingPlanResponse * deleteScalingPlan(const DeleteScalingPlanRequest &request);
     DescribeScalingPlanResourcesResponse * describeScalingPlanResources(const DescribeScalingPlanResourcesRequest &request);
     DescribeScalingPlansResponse * describeScalingPlans(const DescribeScalingPlansRequest &request);
+    UpdateScalingPlanResponse * updateScalingPlan(const UpdateScalingPlanRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(AutoScalingPlansClient)

@@ -32,6 +32,10 @@ HEADERS += \
     describescalingplansrequest_p.h \
     describescalingplansresponse.h \
     describescalingplansresponse_p.h \
+    updatescalingplanrequest.h \
+    updatescalingplanrequest_p.h \
+    updatescalingplanresponse.h \
+    updatescalingplanresponse_p.h \
 
 SOURCES += \
     autoscalingplansclient.cpp \
@@ -45,5 +49,7 @@ SOURCES += \
     describescalingplanresourcesresponse.cpp \
     describescalingplansrequest.cpp \
     describescalingplansresponse.cpp \
+    updatescalingplanrequest.cpp \
+    updatescalingplanresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

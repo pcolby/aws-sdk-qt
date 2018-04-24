@@ -72,6 +72,7 @@ inspector/doc/qtawsinspector.qdocconf
 iot/doc/qtawsiot.qdocconf
 iotdataplane/doc/qtawsiotdataplane.qdocconf
 iotjobsdataplane/doc/qtawsiotjobsdataplane.qdocconf
+iotanalytics/doc/qtawsiotanalytics.qdocconf
 kinesis/doc/qtawskinesis.qdocconf
 kinesisvideoarchivedmedia/doc/qtawskinesisvideoarchivedmedia.qdocconf
 kinesisvideomedia/doc/qtawskinesisvideomedia.qdocconf
