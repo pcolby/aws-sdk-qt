@@ -1,3 +1,6 @@
+# Use the slightly-more-modern qt.io stylesheet.
+HTML.stylesheets += style/online.css
+
 # Include our own qt5-style sidebar.
 HTML.stylesheets += style/qt5-sidebar.html
 

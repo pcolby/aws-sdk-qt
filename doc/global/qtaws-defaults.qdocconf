@@ -8,8 +8,6 @@ include($QT_INSTALL_DOCS/global/qt-html-templates-online.qdocconf)
 include(html-header.qdocconf)
 include(html-footer.qdocconf)
 
-HTML.stylesheets += style/online.css
-
 # Unfortunately, QDoc ignores this in -single-exec mode :(
 indexes = $QT_INSTALL_DOCS/qtcore/qtcore.index \
           $QT_INSTALL_DOCS/qtnetwork/qtnetwork.index \
