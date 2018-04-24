@@ -14,7 +14,7 @@ indexes = $QT_INSTALL_DOCS/qtcore/qtcore.index \
           $QT_INSTALL_DOCS/qtxmlpatterns/qtxmlpatterns.index \
 
 navigation.homepage = qtaws-index.html
-navigation.hometitle = "SDK"
+navigation.hometitle = "QtAws"
 
 syntaxhighlighting = true
 
