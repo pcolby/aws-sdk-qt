@@ -11,6 +11,7 @@ HTML.stylesheets += style/qt5-sidebar.html
 # style/online.css sheet we borrow from qt.io, would try (unsuccessfully) to
 # fetch the font from Qt's cloudfront CDN.
 HTML.headerscripts = \
+    "  <style> .main { margin-top:20px } </style>\n" \
     "  <link href=\"https://fonts.googleapis.com/css?family=Titillium+Web\" rel=\"stylesheet\">\n" \
     "  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n" \
     "  <script type=\"text/javascript\">\n" \
