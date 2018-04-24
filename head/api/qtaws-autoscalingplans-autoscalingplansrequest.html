@@ -50,14 +50,14 @@
 <!-- @@@AutoScalingPlansRequest -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;AutoScalingPlansRequest&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-autoscalingplans-createscalingplanrequest.html">QtAws::AutoScalingPlans::CreateScalingPlanRequest</a>, <a href="qtaws-autoscalingplans-deletescalingplanrequest.html">QtAws::AutoScalingPlans::DeleteScalingPlanRequest</a>, <a href="qtaws-autoscalingplans-describescalingplanresourcesrequest.html">QtAws::AutoScalingPlans::DescribeScalingPlanResourcesRequest</a>, and <a href="qtaws-autoscalingplans-describescalingplansrequest.html">QtAws::AutoScalingPlans::DescribeScalingPlansRequest</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-autoscalingplans-createscalingplanrequest.html">QtAws::AutoScalingPlans::CreateScalingPlanRequest</a>, <a href="qtaws-autoscalingplans-deletescalingplanrequest.html">QtAws::AutoScalingPlans::DeleteScalingPlanRequest</a>, <a href="qtaws-autoscalingplans-describescalingplanresourcesrequest.html">QtAws::AutoScalingPlans::DescribeScalingPlanResourcesRequest</a>, <a href="qtaws-autoscalingplans-describescalingplansrequest.html">QtAws::AutoScalingPlans::DescribeScalingPlansRequest</a>, and <a href="qtaws-autoscalingplans-updatescalingplanrequest.html">QtAws::AutoScalingPlans::UpdateScalingPlanRequest</a></p>
 </td></tr></table></div><ul>
 <li><a href="qtaws-autoscalingplans-autoscalingplansrequest-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-types"></a>
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscalingplans-autoscalingplansrequest.html#Action-enum">Action</a></b> { CreateScalingPlanAction, DeleteScalingPlanAction, DescribeScalingPlanResourcesAction, DescribeScalingPlansAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscalingplans-autoscalingplansrequest.html#Action-enum">Action</a></b> { CreateScalingPlanAction, DeleteScalingPlanAction, DescribeScalingPlanResourcesAction, DescribeScalingPlansAction, UpdateScalingPlanAction }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-autoscalingplans-autoscalingplansrequest.html#Action-enum">Actions</a></b></td></tr>
 </table></div>
 <a name="public-functions"></a>
@@ -104,7 +104,7 @@
 <!-- @@@AutoScalingPlansRequest -->
 <div class="types">
 <h2>Member Type Documentation</h2>
-<!-- $$$Action$$$CreateScalingPlanAction$$$DeleteScalingPlanAction$$$DescribeScalingPlanResourcesAction$$$DescribeScalingPlansAction -->
+<!-- $$$Action$$$CreateScalingPlanAction$$$DeleteScalingPlanAction$$$DescribeScalingPlanResourcesAction$$$DescribeScalingPlansAction$$$UpdateScalingPlanAction -->
 <h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum AutoScalingPlansRequest::<span class="name">Action</span><br/>flags AutoScalingPlansRequest::<span class="name">Actions</span></h3>
 <p>This enum describes the actions that can be performed as <a href="qtaws-autoscalingplans.html">AutoScalingPlans</a> requests.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
@@ -112,6 +112,7 @@
 <tr><td class="topAlign"><code>QtAws::AutoScalingPlans::AutoScalingPlansRequest::DeleteScalingPlanAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-autoscalingplans.html">AutoScalingPlans</a> DeleteScalingPlan action.</td></tr>
 <tr><td class="topAlign"><code>QtAws::AutoScalingPlans::AutoScalingPlansRequest::DescribeScalingPlanResourcesAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-autoscalingplans.html">AutoScalingPlans</a> DescribeScalingPlanResources action.</td></tr>
 <tr><td class="topAlign"><code>QtAws::AutoScalingPlans::AutoScalingPlansRequest::DescribeScalingPlansAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-autoscalingplans.html">AutoScalingPlans</a> DescribeScalingPlans action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::AutoScalingPlans::AutoScalingPlansRequest::UpdateScalingPlanAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-autoscalingplans.html">AutoScalingPlans</a> UpdateScalingPlan action.</td></tr>
 </table></div>
 <p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
 <!-- @@@Action -->

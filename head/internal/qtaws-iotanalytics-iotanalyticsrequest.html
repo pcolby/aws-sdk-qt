@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotanalyticsrequest.cpp -->
+  <title>IoTAnalyticsRequest Class | IoTAnalytics</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiotanalytics-index.html">IoTAnalytics</a></li>
+<li><a href="qtawsiotanalytics-module.html">C++ Classes</a></li>
+<li>IoTAnalyticsRequest</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#reimplemented-protected-functions">Reimplemented Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTAnalyticsRequest Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iotanalytics-iotanalyticsrequest.html">QtAws::IoTAnalytics::IoTAnalyticsRequest</a>)<br/></span>
+<!-- $$$IoTAnalyticsRequest-brief -->
+<p>The <a href="qtaws-iotanalytics-iotanalyticsrequest.html">IoTAnalyticsRequest</a> class provides an interface for <a href="qtaws-iotanalytics.html">IoTAnalytics</a> requests. <a href="#details">More...</a></p>
+<!-- @@@IoTAnalyticsRequest -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTAnalyticsRequest&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractrequest.html">QtAws::Core::AwsAbstractRequest</a></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qtaws-iotanalytics-batchputmessagerequest.html">QtAws::IoTAnalytics::BatchPutMessageRequest</a>, <a href="qtaws-iotanalytics-cancelpipelinereprocessingrequest.html">QtAws::IoTAnalytics::CancelPipelineReprocessingRequest</a>, <a href="qtaws-iotanalytics-createchannelrequest.html">QtAws::IoTAnalytics::CreateChannelRequest</a>, <a href="qtaws-iotanalytics-createdatasetcontentrequest.html">QtAws::IoTAnalytics::CreateDatasetContentRequest</a>, <a href="qtaws-iotanalytics-createdatasetrequest.html">QtAws::IoTAnalytics::CreateDatasetRequest</a>, <a href="qtaws-iotanalytics-createdatastorerequest.html">QtAws::IoTAnalytics::CreateDatastoreRequest</a>, <a href="qtaws-iotanalytics-createpipelinerequest.html">QtAws::IoTAnalytics::CreatePipelineRequest</a>, <a href="qtaws-iotanalytics-deletechannelrequest.html">QtAws::IoTAnalytics::DeleteChannelRequest</a>, <a href="qtaws-iotanalytics-deletedatasetcontentrequest.html">QtAws::IoTAnalytics::DeleteDatasetContentRequest</a>, <a href="qtaws-iotanalytics-deletedatasetrequest.html">QtAws::IoTAnalytics::DeleteDatasetRequest</a>, <a href="qtaws-iotanalytics-deletedatastorerequest.html">QtAws::IoTAnalytics::DeleteDatastoreRequest</a>, <a href="qtaws-iotanalytics-deletepipelinerequest.html">QtAws::IoTAnalytics::DeletePipelineRequest</a>, <a href="qtaws-iotanalytics-describechannelrequest.html">QtAws::IoTAnalytics::DescribeChannelRequest</a>, <a href="qtaws-iotanalytics-describedatasetrequest.html">QtAws::IoTAnalytics::DescribeDatasetRequest</a>, <a href="qtaws-iotanalytics-describedatastorerequest.html">QtAws::IoTAnalytics::DescribeDatastoreRequest</a>, <a href="qtaws-iotanalytics-describeloggingoptionsrequest.html">QtAws::IoTAnalytics::DescribeLoggingOptionsRequest</a>, <a href="qtaws-iotanalytics-describepipelinerequest.html">QtAws::IoTAnalytics::DescribePipelineRequest</a>, <a href="qtaws-iotanalytics-getdatasetcontentrequest.html">QtAws::IoTAnalytics::GetDatasetContentRequest</a>, <a href="qtaws-iotanalytics-listchannelsrequest.html">QtAws::IoTAnalytics::ListChannelsRequest</a>, <a href="qtaws-iotanalytics-listdatasetsrequest.html">QtAws::IoTAnalytics::ListDatasetsRequest</a>, <a href="qtaws-iotanalytics-listdatastoresrequest.html">QtAws::IoTAnalytics::ListDatastoresRequest</a>, <a href="qtaws-iotanalytics-listpipelinesrequest.html">QtAws::IoTAnalytics::ListPipelinesRequest</a>, <a href="qtaws-iotanalytics-putloggingoptionsrequest.html">QtAws::IoTAnalytics::PutLoggingOptionsRequest</a>, <a href="qtaws-iotanalytics-runpipelineactivityrequest.html">QtAws::IoTAnalytics::RunPipelineActivityRequest</a>, <a href="qtaws-iotanalytics-samplechanneldatarequest.html">QtAws::IoTAnalytics::SampleChannelDataRequest</a>, <a href="qtaws-iotanalytics-startpipelinereprocessingrequest.html">QtAws::IoTAnalytics::StartPipelineReprocessingRequest</a>, <a href="qtaws-iotanalytics-updatechannelrequest.html">QtAws::IoTAnalytics::UpdateChannelRequest</a>, <a href="qtaws-iotanalytics-updatedatasetrequest.html">QtAws::IoTAnalytics::UpdateDatasetRequest</a>, <a href="qtaws-iotanalytics-updatedatastorerequest.html">QtAws::IoTAnalytics::UpdateDatastoreRequest</a>, and <a href="qtaws-iotanalytics-updatepipelinerequest.html">QtAws::IoTAnalytics::UpdatePipelineRequest</a></p>
+</td></tr></table></div><ul>
+<li><a href="qtaws-iotanalytics-iotanalyticsrequest-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#Action-enum">Action</a></b> { BatchPutMessageAction, CancelPipelineReprocessingAction, CreateChannelAction, CreateDatasetAction, ..., UpdatePipelineAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#Action-enum">Actions</a></b></td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest">IoTAnalyticsRequest</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest-1">IoTAnalyticsRequest</a></b>(const IoTAnalyticsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Action </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#action">action</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#actionString">actionString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#apiVersion">apiVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setAction">setAction</a></b>(const Action <i>action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setApiVersion">setApiVersion</a></b>(const QString &amp;<i>version</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> IoTAnalyticsRequest &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#operator-eq">operator=</a></b>(const IoTAnalyticsRequest &amp;<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#operator-eq-eq">operator==</a></b>(const IoTAnalyticsRequest &amp;<i>other</i>) const</td></tr>
+</table></div>
+<ul>
+<li class="fn">7 public functions inherited from <a href="qtaws-core-awsabstractrequest.html#public-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest-2">IoTAnalyticsRequest</a></b>(IoTAnalyticsRequestPrivate * const <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#clearParameter">clearParameter</a></b>(const QString &amp;<i>name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#clearParameters">clearParameters</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#parameter">parameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>defaultValue</i> = QVariant()) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QVariantMap &amp;</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#parameters">parameters</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setParameter">setParameter</a></b>(const QString &amp;<i>name</i>, const QVariant &amp;<i>value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setParameters">setParameters</a></b>(const QVariantMap &amp;<i>parameters</i>)</td></tr>
+</table></div>
+<a name="reimplemented-protected-functions"></a>
+<h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QNetworkRequest </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#unsignedRequest">unsignedRequest</a></b>(const QUrl &amp;<i>endpoint</i>) const override</td></tr>
+</table></div>
+<ul>
+<li class="fn">4 protected functions inherited from <a href="qtaws-core-awsabstractrequest.html#protected-functions">QtAws::Core::AwsAbstractRequest</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTAnalyticsRequest-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iotanalytics-iotanalyticsrequest.html">IoTAnalyticsRequest</a> class provides an interface for <a href="qtaws-iotanalytics.html">IoTAnalytics</a> requests.</p>
+</div>
+<!-- @@@IoTAnalyticsRequest -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$BatchPutMessageAction$$$CancelPipelineReprocessingAction$$$CreateChannelAction$$$CreateDatasetAction$$$CreateDatasetContentAction$$$CreateDatastoreAction$$$CreatePipelineAction$$$DeleteChannelAction$$$DeleteDatasetAction$$$DeleteDatasetContentAction$$$DeleteDatastoreAction$$$DeletePipelineAction$$$DescribeChannelAction$$$DescribeDatasetAction$$$DescribeDatastoreAction$$$DescribeLoggingOptionsAction$$$DescribePipelineAction$$$GetDatasetContentAction$$$ListChannelsAction$$$ListDatasetsAction$$$ListDatastoresAction$$$ListPipelinesAction$$$PutLoggingOptionsAction$$$RunPipelineActivityAction$$$SampleChannelDataAction$$$StartPipelineReprocessingAction$$$UpdateChannelAction$$$UpdateDatasetAction$$$UpdateDatastoreAction$$$UpdatePipelineAction -->
+<h3 class="flags" id="Action-enum"><a name="Action-enum"></a>enum IoTAnalyticsRequest::<span class="name">Action</span><br/>flags IoTAnalyticsRequest::<span class="name">Actions</span></h3>
+<p>This enum describes the actions that can be performed as <a href="qtaws-iotanalytics.html">IoTAnalytics</a> requests.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::BatchPutMessageAction</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> BatchPutMessage action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::CancelPipelineReprocessingAction</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> CancelPipelineReprocessing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::CreateChannelAction</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> CreateChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::CreateDatasetAction</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> CreateDataset action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::CreateDatasetContentAction</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> CreateDatasetContent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::CreateDatastoreAction</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> CreateDatastore action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::CreatePipelineAction</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> CreatePipeline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DeleteChannelAction</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DeleteChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DeleteDatasetAction</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DeleteDataset action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DeleteDatasetContentAction</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DeleteDatasetContent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DeleteDatastoreAction</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DeleteDatastore action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DeletePipelineAction</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DeletePipeline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DescribeChannelAction</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DescribeChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DescribeDatasetAction</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DescribeDataset action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DescribeDatastoreAction</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DescribeDatastore action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DescribeLoggingOptionsAction</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DescribeLoggingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::DescribePipelineAction</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> DescribePipeline action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::GetDatasetContentAction</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> GetDatasetContent action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::ListChannelsAction</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> ListChannels action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::ListDatasetsAction</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> ListDatasets action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::ListDatastoresAction</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> ListDatastores action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::ListPipelinesAction</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> ListPipelines action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::PutLoggingOptionsAction</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> PutLoggingOptions action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::RunPipelineActivityAction</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> RunPipelineActivity action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::SampleChannelDataAction</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> SampleChannelData action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::StartPipelineReprocessingAction</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> StartPipelineReprocessing action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::UpdateChannelAction</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> UpdateChannel action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::UpdateDatasetAction</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> UpdateDataset action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::UpdateDatastoreAction</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> UpdateDatastore action.</td></tr>
+<tr><td class="topAlign"><code>QtAws::IoTAnalytics::IoTAnalyticsRequest::UpdatePipelineAction</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign"><a href="qtaws-iotanalytics.html">IoTAnalytics</a> UpdatePipeline action.</td></tr>
+</table></div>
+<p>The Actions type is a typedef for <a href="">QFlags</a>&lt;Action&gt;. It stores an OR combination of Action values.</p>
+<!-- @@@Action -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTAnalyticsRequest[overload1]$$$IoTAnalyticsRequestconstAction -->
+<h3 class="fn" id="IoTAnalyticsRequest"><a name="IoTAnalyticsRequest"></a>IoTAnalyticsRequest::<span class="name">IoTAnalyticsRequest</span>(const <span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Constructs a <a href="qtaws-iotanalytics-iotanalyticsrequest.html">IoTAnalyticsRequest</a> object for <a href="qtaws-iotanalytics.html">IoTAnalytics</a> <i>action</i>.</p>
+<!-- @@@IoTAnalyticsRequest -->
+<!-- $$$IoTAnalyticsRequest$$$IoTAnalyticsRequestconstIoTAnalyticsRequest& -->
+<h3 class="fn" id="IoTAnalyticsRequest-1"><a name="IoTAnalyticsRequest-1"></a>IoTAnalyticsRequest::<span class="name">IoTAnalyticsRequest</span>(const <span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest">IoTAnalyticsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@IoTAnalyticsRequest -->
+<!-- $$$IoTAnalyticsRequest$$$IoTAnalyticsRequestIoTAnalyticsRequestPrivate*const -->
+<h3 class="fn" id="IoTAnalyticsRequest-2"><a name="IoTAnalyticsRequest-2"></a><code>[protected] </code>IoTAnalyticsRequest::<span class="name">IoTAnalyticsRequest</span>(<span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequestprivate.html">IoTAnalyticsRequestPrivate</a></span> * const <i>d</i>)</h3>
+<p>Constructs aa <a href="qtaws-iotanalytics-iotanalyticsrequest.html">IoTAnalyticsRequest</a> object with private implementation <i>d</i>.</p>
+<p>This overload allows derived classes to provide their own private class implementation that inherits from <a href="qtaws-iotanalytics-iotanalyticsrequestprivate.html">IoTAnalyticsRequestPrivate</a>.</p>
+<!-- @@@IoTAnalyticsRequest -->
+<!-- $$$action[overload1]$$$action -->
+<h3 class="fn" id="action"><a name="action"></a><span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#Action-enum">Action</a></span> IoTAnalyticsRequest::<span class="name">action</span>() const</h3>
+<p>Returns the <a href="qtaws-iotanalytics.html">IoTAnalytics</a> action to be performed by this request.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setAction">setAction</a>().</p>
+<!-- @@@action -->
+<!-- $$$actionString[overload1]$$$actionString -->
+<h3 class="fn" id="actionString"><a name="actionString"></a><span class="type">QString</span> IoTAnalyticsRequest::<span class="name">actionString</span>() const</h3>
+<p>Returns the name of the <a href="qtaws-iotanalytics.html">IoTAnalytics</a> action to be performed by this request.</p>
+<!-- @@@actionString -->
+<!-- $$$apiVersion[overload1]$$$apiVersion -->
+<h3 class="fn" id="apiVersion"><a name="apiVersion"></a><span class="type">QString</span> IoTAnalyticsRequest::<span class="name">apiVersion</span>() const</h3>
+<p>Returns the <a href="qtaws-iotanalytics.html">IoTAnalytics</a> API version implemented by this request.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setApiVersion">setApiVersion</a>().</p>
+<!-- @@@apiVersion -->
+<!-- $$$clearParameter[overload1]$$$clearParameterconstQString& -->
+<h3 class="fn" id="clearParameter"><a name="clearParameter"></a><code>[protected] </code><span class="type">int</span> IoTAnalyticsRequest::<span class="name">clearParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>)</h3>
+<p>Removes the a <i>name</i> parameter from the request, then returns the number of paramters removed (typically <code>0</code> or <code>1</code>).</p>
+<!-- @@@clearParameter -->
+<!-- $$$clearParameters[overload1]$$$clearParameters -->
+<h3 class="fn" id="clearParameters"><a name="clearParameters"></a><code>[protected] </code><span class="type">void</span> IoTAnalyticsRequest::<span class="name">clearParameters</span>()</h3>
+<p>Removes all parameters from the request.</p>
+<!-- @@@clearParameters -->
+<!-- $$$parameter[overload1]$$$parameterconstQString&constQVariant& -->
+<h3 class="fn" id="parameter"><a name="parameter"></a><code>[protected] </code><span class="type">QVariant</span> IoTAnalyticsRequest::<span class="name">parameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>defaultValue</i> = QVariant()) const</h3>
+<p>Returns the value of the <i>name</i> pararemter if set; <i>defaultValue</i> otherwise.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setParameter">setParameter</a>().</p>
+<!-- @@@parameter -->
+<!-- $$$parameters[overload1]$$$parameters -->
+<h3 class="fn" id="parameters"><a name="parameters"></a><code>[protected] </code>const <span class="type">QVariantMap</span> &amp;IoTAnalyticsRequest::<span class="name">parameters</span>() const</h3>
+<p>Returns the parameters included in this request.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#setParameters">setParameters</a>().</p>
+<!-- @@@parameters -->
+<!-- $$$setAction[overload1]$$$setActionconstAction -->
+<h3 class="fn" id="setAction"><a name="setAction"></a><span class="type">void</span> IoTAnalyticsRequest::<span class="name">setAction</span>(const <span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#Action-enum">Action</a></span> <i>action</i>)</h3>
+<p>Sets the <a href="qtaws-iotanalytics.html">IoTAnalytics</a> action to be performed by this request to <i>action</i>.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#action">action</a>().</p>
+<!-- @@@setAction -->
+<!-- $$$setApiVersion[overload1]$$$setApiVersionconstQString& -->
+<h3 class="fn" id="setApiVersion"><a name="setApiVersion"></a><span class="type">void</span> IoTAnalyticsRequest::<span class="name">setApiVersion</span>(const <span class="type">QString</span> &amp;<i>version</i>)</h3>
+<p>Sets the <a href="qtaws-iotanalytics.html">IoTAnalytics</a> API version to include in this request to <i>version</i>.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#apiVersion">apiVersion</a>().</p>
+<!-- @@@setApiVersion -->
+<!-- $$$setParameter[overload1]$$$setParameterconstQString&constQVariant& -->
+<h3 class="fn" id="setParameter"><a name="setParameter"></a><code>[protected] </code><span class="type">void</span> IoTAnalyticsRequest::<span class="name">setParameter</span>(const <span class="type">QString</span> &amp;<i>name</i>, const <span class="type">QVariant</span> &amp;<i>value</i>)</h3>
+<p>Sets the <i>name</i> parameter to <i>value</i>.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#parameter">parameter</a>().</p>
+<!-- @@@setParameter -->
+<!-- $$$setParameters[overload1]$$$setParametersconstQVariantMap& -->
+<h3 class="fn" id="setParameters"><a name="setParameters"></a><code>[protected] </code><span class="type">void</span> IoTAnalyticsRequest::<span class="name">setParameters</span>(const <span class="type">QVariantMap</span> &amp;<i>parameters</i>)</h3>
+<p>Sets the paramters for this request to <i>parameters</i>. Any request parameters set previously will be discarded.</p>
+<p><b>See also </b><a href="qtaws-iotanalytics-iotanalyticsrequest.html#parameters">parameters</a>().</p>
+<!-- @@@setParameters -->
+<!-- $$$unsignedRequest[overload1]$$$unsignedRequestconstQUrl& -->
+<h3 class="fn" id="unsignedRequest"><a name="unsignedRequest"></a><code>[override virtual protected] </code><span class="type">QNetworkRequest</span> IoTAnalyticsRequest::<span class="name">unsignedRequest</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>) const</h3>
+<p>Reimplemented from <a href="qtaws-core-awsabstractrequest.html#unsignedRequest">AwsAbstractRequest::unsignedRequest</a>().</p>
+<p>Returns a network request for the <a href="qtaws-iotanalytics.html">IoTAnalytics</a> request using the given <i>endpoint</i>.</p>
+<p>This <a href="qtaws-iotanalytics.html">IoTAnalytics</a> implementation builds request URLs by combining the common query parameters (such as Action and Version), with any that have been added (via <a href="qtaws-iotanalytics-iotanalyticsrequest.html#setParameter">setParameter</a>) by child classes.</p>
+<!-- @@@unsignedRequest -->
+<!-- $$$operator=[overload1]$$$operator=constIoTAnalyticsRequest& -->
+<h3 class="fn" id="operator-eq"><a name="operator-eq"></a><span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest">IoTAnalyticsRequest</a></span> &amp;IoTAnalyticsRequest::<span class="name">operator=</span>(const <span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest">IoTAnalyticsRequest</a></span> &amp;<i>other</i>)</h3>
+<p>Sets the <a href="qtaws-iotanalytics-iotanalyticsrequest.html">IoTAnalyticsRequest</a> object to be equal to <i>other</i>.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constIoTAnalyticsRequest& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><code>[virtual] </code><span class="type">bool</span> IoTAnalyticsRequest::<span class="name">operator==</span>(const <span class="type"><a href="qtaws-iotanalytics-iotanalyticsrequest.html#IoTAnalyticsRequest">IoTAnalyticsRequest</a></span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if this request is equal to <i>other</i>; <code>false</code> otherwise.</p>
+<p>Note, most derived *Request classes do not need to provider their own implementations of this function, since most such request classes rely on this class' parameters functionality for all request parameters, and that parameters map is already checked via this implementation.</p>
+<!-- @@@operator== -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- iotanalyticsclient.cpp -->
+  <title>IoTAnalyticsClient Class | IoTAnalytics</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <style> .main { margin-top:20px } </style>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+</head>
+<body>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul>
+<li><a href="qtaws-index.html">QtAws</a></li>
+<li><a href="qtawsiotanalytics-index.html">IoTAnalytics</a></li>
+<li><a href="qtawsiotanalytics-module.html">C++ Classes</a></li>
+<li>IoTAnalyticsClient</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">IoTAnalyticsClient Class</h1>
+<span class="small-subtitle">(<a href="qtaws-iotanalytics-iotanalyticsclient.html">QtAws::IoTAnalytics::IoTAnalyticsClient</a>)<br/></span>
+<!-- $$$IoTAnalyticsClient-brief -->
+<p>The <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> class provides access to the AWS IoT Analytics service. <a href="#details">More...</a></p>
+<!-- @@@IoTAnalyticsClient -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;IoTAnalyticsClient&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qtaws-core-awsabstractclient.html">QtAws::Core::AwsAbstractClient</a></td></tr></table></div><ul>
+<li><a href="qtaws-iotanalytics-iotanalyticsclient-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#IoTAnalyticsClient">IoTAnalyticsClient</a></b>(const QtAws::Core::AwsRegion::Region <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#IoTAnalyticsClient-1">IoTAnalyticsClient</a></b>(const QUrl &amp;<i>endpoint</i>, QtAws::Core::AwsAbstractCredentials *<i>credentials</i> = NULL, QNetworkAccessManager * const <i>manager</i> = NULL, QObject * const <i>parent</i> = 0)</td></tr>
+</table></div>
+<ul>
+<li class="fn">12 public functions inherited from <a href="qtaws-core-awsabstractclient.html#public-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> BatchPutMessageResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#batchPutMessage">batchPutMessage</a></b>(const BatchPutMessageRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CancelPipelineReprocessingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#cancelPipelineReprocessing">cancelPipelineReprocessing</a></b>(const CancelPipelineReprocessingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#createChannel">createChannel</a></b>(const CreateChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#createDataset">createDataset</a></b>(const CreateDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDatasetContentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#createDatasetContent">createDatasetContent</a></b>(const CreateDatasetContentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreateDatastoreResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#createDatastore">createDatastore</a></b>(const CreateDatastoreRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> CreatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#createPipeline">createPipeline</a></b>(const CreatePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#deleteChannel">deleteChannel</a></b>(const DeleteChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#deleteDataset">deleteDataset</a></b>(const DeleteDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDatasetContentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#deleteDatasetContent">deleteDatasetContent</a></b>(const DeleteDatasetContentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeleteDatastoreResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#deleteDatastore">deleteDatastore</a></b>(const DeleteDatastoreRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DeletePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#deletePipeline">deletePipeline</a></b>(const DeletePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#describeChannel">describeChannel</a></b>(const DescribeChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#describeDataset">describeDataset</a></b>(const DescribeDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeDatastoreResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#describeDatastore">describeDatastore</a></b>(const DescribeDatastoreRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribeLoggingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#describeLoggingOptions">describeLoggingOptions</a></b>(const DescribeLoggingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DescribePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#describePipeline">describePipeline</a></b>(const DescribePipelineRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> GetDatasetContentResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#getDatasetContent">getDatasetContent</a></b>(const GetDatasetContentRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListChannelsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#listChannels">listChannels</a></b>(const ListChannelsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDatasetsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#listDatasets">listDatasets</a></b>(const ListDatasetsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListDatastoresResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#listDatastores">listDatastores</a></b>(const ListDatastoresRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListPipelinesResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#listPipelines">listPipelines</a></b>(const ListPipelinesRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> PutLoggingOptionsResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#putLoggingOptions">putLoggingOptions</a></b>(const PutLoggingOptionsRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RunPipelineActivityResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#runPipelineActivity">runPipelineActivity</a></b>(const RunPipelineActivityRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SampleChannelDataResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#sampleChannelData">sampleChannelData</a></b>(const SampleChannelDataRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> StartPipelineReprocessingResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#startPipelineReprocessing">startPipelineReprocessing</a></b>(const StartPipelineReprocessingRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateChannelResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#updateChannel">updateChannel</a></b>(const UpdateChannelRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDatasetResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#updateDataset">updateDataset</a></b>(const UpdateDatasetRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdateDatastoreResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#updateDatastore">updateDatastore</a></b>(const UpdateDatastoreRequest &amp;<i>request</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> UpdatePipelineResponse *</td><td class="memItemRight bottomAlign"><b><a href="qtaws-iotanalytics-iotanalyticsclient.html#updatePipeline">updatePipeline</a></b>(const UpdatePipelineRequest &amp;<i>request</i>)</td></tr>
+</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">2 protected functions inherited from <a href="qtaws-core-awsabstractclient.html#protected-functions">QtAws::Core::AwsAbstractClient</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$IoTAnalyticsClient-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> class provides access to the AWS IoT Analytics service.</p>
+<p>AWS IoT Analytics provides advanced data analysis for AWS IoT. It allows you to collect large amounts of device data, process messages, store them, and then query the data and run sophisticated analytics to make accurate decisions in your IoT applications and machine learning use cases. AWS IoT Analytics enables advanced data exploration through integration with Jupyter Notebooks and data visualization through integration with Amazon</p>
+<p>QuickSight&gt;</p>
+<p>Traditional analytics and business intelligence tools are designed to process structured data. IoT data often comes from devices that record noisy processes (such as temperature, motion, or sound). As a result, the data from these devices can have significant gaps, corrupted messages, and false readings that must be cleaned up before analysis can occur. Also, IoT data is often only meaningful in the context of other data from external sources.</p>
+<p>&lt;/p</p>
+<p>AWS IoT Analytics automates each of the steps required to analyze data from IoT devices. AWS IoT Analytics filters, transforms, and enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect only the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with device-specific metadata such as device type and location before storing it. Then, you can analyze your data by running queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. AWS IoT Analytics includes models for common IoT use cases so you can answer questions like which devices are about to fail or which customers are at risk of abandoning their wearable</p>
+</div>
+<!-- @@@IoTAnalyticsClient -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$IoTAnalyticsClient[overload1]$$$IoTAnalyticsClientconstQtAws::Core::AwsRegion::RegionQtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTAnalyticsClient"><a name="IoTAnalyticsClient"></a>IoTAnalyticsClient::<span class="name">IoTAnalyticsClient</span>(const <span class="type">QtAws::Core::AwsRegion::Region</span> <i>region</i> = QtAws::Core::AwsRegion::InvalidRegion, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>Constructs a <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> object.</p>
+<p>The new client object will <i>region</i>, <i>credentials</i>, and <i>manager</i> for network operations.</p>
+<p>The new object will be owned by <i>parent</i>, if set.</p>
+<!-- @@@IoTAnalyticsClient -->
+<!-- $$$IoTAnalyticsClient$$$IoTAnalyticsClientconstQUrl&QtAws::Core::AwsAbstractCredentials*QNetworkAccessManager*constQObject*const -->
+<h3 class="fn" id="IoTAnalyticsClient-1"><a name="IoTAnalyticsClient-1"></a>IoTAnalyticsClient::<span class="name">IoTAnalyticsClient</span>(const <span class="type">QUrl</span> &amp;<i>endpoint</i>, <span class="type">QtAws::Core::AwsAbstractCredentials</span> *<i>credentials</i> = NULL, <span class="type">QNetworkAccessManager</span> * const <i>manager</i> = NULL, <span class="type">QObject</span> * const <i>parent</i> = 0)</h3>
+<p>This function overloads <a href="qtaws-iotanalytics-iotanalyticsclient.html#IoTAnalyticsClient">IoTAnalyticsClient</a>().</p>
+<p>This overload allows the caller to specify the specific <i>endpoint</i> to send requests to. Typically, it is easier to use the alternative constructor, which allows the caller to specify an AWS region instead, in which case this client will determine the correct endpoint for the given region automatically (via AwsEndpoint::getEndpoint).</p>
+<p><b>See also </b><a href="qtaws-core-awsendpoint.html#getEndpoint">QtAws::Core::AwsEndpoint::getEndpoint</a>.</p>
+<!-- @@@IoTAnalyticsClient -->
+<!-- $$$batchPutMessage[overload1]$$$batchPutMessageconstBatchPutMessageRequest& -->
+<h3 class="fn" id="batchPutMessage"><a name="batchPutMessage"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-batchputmessageresponse.html">BatchPutMessageResponse</a></span> *IoTAnalyticsClient::<span class="name">batchPutMessage</span>(const <span class="type"><a href="qtaws-iotanalytics-batchputmessagerequest.html">BatchPutMessageRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-batchputmessageresponse.html">BatchPutMessageResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sends messages to a</p>
+<!-- @@@batchPutMessage -->
+<!-- $$$cancelPipelineReprocessing[overload1]$$$cancelPipelineReprocessingconstCancelPipelineReprocessingRequest& -->
+<h3 class="fn" id="cancelPipelineReprocessing"><a name="cancelPipelineReprocessing"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-cancelpipelinereprocessingresponse.html">CancelPipelineReprocessingResponse</a></span> *IoTAnalyticsClient::<span class="name">cancelPipelineReprocessing</span>(const <span class="type"><a href="qtaws-iotanalytics-cancelpipelinereprocessingrequest.html">CancelPipelineReprocessingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-cancelpipelinereprocessingresponse.html">CancelPipelineReprocessingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Cancels the reprocessing of data through the</p>
+<!-- @@@cancelPipelineReprocessing -->
+<!-- $$$createChannel[overload1]$$$createChannelconstCreateChannelRequest& -->
+<h3 class="fn" id="createChannel"><a name="createChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-createchannelresponse.html">CreateChannelResponse</a></span> *IoTAnalyticsClient::<span class="name">createChannel</span>(const <span class="type"><a href="qtaws-iotanalytics-createchannelrequest.html">CreateChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-createchannelresponse.html">CreateChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a channel. A channel collects data from an MQTT topic and archives the raw, unprocessed messages before publishing the data to a</p>
+<!-- @@@createChannel -->
+<!-- $$$createDataset[overload1]$$$createDatasetconstCreateDatasetRequest& -->
+<h3 class="fn" id="createDataset"><a name="createDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-createdatasetresponse.html">CreateDatasetResponse</a></span> *IoTAnalyticsClient::<span class="name">createDataset</span>(const <span class="type"><a href="qtaws-iotanalytics-createdatasetrequest.html">CreateDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-createdatasetresponse.html">CreateDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a data set. A data set stores data retrieved from a data store by applying an SQL</p>
+<p>action&gt; &lt;note&gt;</p>
+<p>This operation creates the skeleton of a data set. To populate the data set, call</p>
+<!-- @@@createDataset -->
+<!-- $$$createDatasetContent[overload1]$$$createDatasetContentconstCreateDatasetContentRequest& -->
+<h3 class="fn" id="createDatasetContent"><a name="createDatasetContent"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-createdatasetcontentresponse.html">CreateDatasetContentResponse</a></span> *IoTAnalyticsClient::<span class="name">createDatasetContent</span>(const <span class="type"><a href="qtaws-iotanalytics-createdatasetcontentrequest.html">CreateDatasetContentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-createdatasetcontentresponse.html">CreateDatasetContentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates the content of a data set by applying an SQL</p>
+<!-- @@@createDatasetContent -->
+<!-- $$$createDatastore[overload1]$$$createDatastoreconstCreateDatastoreRequest& -->
+<h3 class="fn" id="createDatastore"><a name="createDatastore"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-createdatastoreresponse.html">CreateDatastoreResponse</a></span> *IoTAnalyticsClient::<span class="name">createDatastore</span>(const <span class="type"><a href="qtaws-iotanalytics-createdatastorerequest.html">CreateDatastoreRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-createdatastoreresponse.html">CreateDatastoreResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a data store, which is a repository for</p>
+<!-- @@@createDatastore -->
+<!-- $$$createPipeline[overload1]$$$createPipelineconstCreatePipelineRequest& -->
+<h3 class="fn" id="createPipeline"><a name="createPipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-createpipelineresponse.html">CreatePipelineResponse</a></span> *IoTAnalyticsClient::<span class="name">createPipeline</span>(const <span class="type"><a href="qtaws-iotanalytics-createpipelinerequest.html">CreatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-createpipelineresponse.html">CreatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Creates a pipeline. A pipeline consumes messages from one or more channels and allows you to process the messages before storing them in a data</p>
+<!-- @@@createPipeline -->
+<!-- $$$deleteChannel[overload1]$$$deleteChannelconstDeleteChannelRequest& -->
+<h3 class="fn" id="deleteChannel"><a name="deleteChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-deletechannelresponse.html">DeleteChannelResponse</a></span> *IoTAnalyticsClient::<span class="name">deleteChannel</span>(const <span class="type"><a href="qtaws-iotanalytics-deletechannelrequest.html">DeleteChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-deletechannelresponse.html">DeleteChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deleteChannel -->
+<!-- $$$deleteDataset[overload1]$$$deleteDatasetconstDeleteDatasetRequest& -->
+<h3 class="fn" id="deleteDataset"><a name="deleteDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-deletedatasetresponse.html">DeleteDatasetResponse</a></span> *IoTAnalyticsClient::<span class="name">deleteDataset</span>(const <span class="type"><a href="qtaws-iotanalytics-deletedatasetrequest.html">DeleteDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-deletedatasetresponse.html">DeleteDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified data</p>
+<p>set&gt;</p>
+<p>You do not have to delete the content of the data set before you perform this</p>
+<!-- @@@deleteDataset -->
+<!-- $$$deleteDatasetContent[overload1]$$$deleteDatasetContentconstDeleteDatasetContentRequest& -->
+<h3 class="fn" id="deleteDatasetContent"><a name="deleteDatasetContent"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-deletedatasetcontentresponse.html">DeleteDatasetContentResponse</a></span> *IoTAnalyticsClient::<span class="name">deleteDatasetContent</span>(const <span class="type"><a href="qtaws-iotanalytics-deletedatasetcontentrequest.html">DeleteDatasetContentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-deletedatasetcontentresponse.html">DeleteDatasetContentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the content of the specified data</p>
+<!-- @@@deleteDatasetContent -->
+<!-- $$$deleteDatastore[overload1]$$$deleteDatastoreconstDeleteDatastoreRequest& -->
+<h3 class="fn" id="deleteDatastore"><a name="deleteDatastore"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-deletedatastoreresponse.html">DeleteDatastoreResponse</a></span> *IoTAnalyticsClient::<span class="name">deleteDatastore</span>(const <span class="type"><a href="qtaws-iotanalytics-deletedatastorerequest.html">DeleteDatastoreRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-deletedatastoreresponse.html">DeleteDatastoreResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified data</p>
+<!-- @@@deleteDatastore -->
+<!-- $$$deletePipeline[overload1]$$$deletePipelineconstDeletePipelineRequest& -->
+<h3 class="fn" id="deletePipeline"><a name="deletePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-deletepipelineresponse.html">DeletePipelineResponse</a></span> *IoTAnalyticsClient::<span class="name">deletePipeline</span>(const <span class="type"><a href="qtaws-iotanalytics-deletepipelinerequest.html">DeletePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-deletepipelineresponse.html">DeletePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Deletes the specified</p>
+<!-- @@@deletePipeline -->
+<!-- $$$describeChannel[overload1]$$$describeChannelconstDescribeChannelRequest& -->
+<h3 class="fn" id="describeChannel"><a name="describeChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-describechannelresponse.html">DescribeChannelResponse</a></span> *IoTAnalyticsClient::<span class="name">describeChannel</span>(const <span class="type"><a href="qtaws-iotanalytics-describechannelrequest.html">DescribeChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-describechannelresponse.html">DescribeChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a</p>
+<!-- @@@describeChannel -->
+<!-- $$$describeDataset[overload1]$$$describeDatasetconstDescribeDatasetRequest& -->
+<h3 class="fn" id="describeDataset"><a name="describeDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-describedatasetresponse.html">DescribeDatasetResponse</a></span> *IoTAnalyticsClient::<span class="name">describeDataset</span>(const <span class="type"><a href="qtaws-iotanalytics-describedatasetrequest.html">DescribeDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-describedatasetresponse.html">DescribeDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a data</p>
+<!-- @@@describeDataset -->
+<!-- $$$describeDatastore[overload1]$$$describeDatastoreconstDescribeDatastoreRequest& -->
+<h3 class="fn" id="describeDatastore"><a name="describeDatastore"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-describedatastoreresponse.html">DescribeDatastoreResponse</a></span> *IoTAnalyticsClient::<span class="name">describeDatastore</span>(const <span class="type"><a href="qtaws-iotanalytics-describedatastorerequest.html">DescribeDatastoreRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-describedatastoreresponse.html">DescribeDatastoreResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a data</p>
+<!-- @@@describeDatastore -->
+<!-- $$$describeLoggingOptions[overload1]$$$describeLoggingOptionsconstDescribeLoggingOptionsRequest& -->
+<h3 class="fn" id="describeLoggingOptions"><a name="describeLoggingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-describeloggingoptionsresponse.html">DescribeLoggingOptionsResponse</a></span> *IoTAnalyticsClient::<span class="name">describeLoggingOptions</span>(const <span class="type"><a href="qtaws-iotanalytics-describeloggingoptionsrequest.html">DescribeLoggingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-describeloggingoptionsresponse.html">DescribeLoggingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the current settings of the AWS IoT Analytics logging</p>
+<!-- @@@describeLoggingOptions -->
+<!-- $$$describePipeline[overload1]$$$describePipelineconstDescribePipelineRequest& -->
+<h3 class="fn" id="describePipeline"><a name="describePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-describepipelineresponse.html">DescribePipelineResponse</a></span> *IoTAnalyticsClient::<span class="name">describePipeline</span>(const <span class="type"><a href="qtaws-iotanalytics-describepipelinerequest.html">DescribePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-describepipelineresponse.html">DescribePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about a</p>
+<!-- @@@describePipeline -->
+<!-- $$$getDatasetContent[overload1]$$$getDatasetContentconstGetDatasetContentRequest& -->
+<h3 class="fn" id="getDatasetContent"><a name="getDatasetContent"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-getdatasetcontentresponse.html">GetDatasetContentResponse</a></span> *IoTAnalyticsClient::<span class="name">getDatasetContent</span>(const <span class="type"><a href="qtaws-iotanalytics-getdatasetcontentrequest.html">GetDatasetContentRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-getdatasetcontentresponse.html">GetDatasetContentResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves the contents of a data set as pre-signed</p>
+<!-- @@@getDatasetContent -->
+<!-- $$$listChannels[overload1]$$$listChannelsconstListChannelsRequest& -->
+<h3 class="fn" id="listChannels"><a name="listChannels"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-listchannelsresponse.html">ListChannelsResponse</a></span> *IoTAnalyticsClient::<span class="name">listChannels</span>(const <span class="type"><a href="qtaws-iotanalytics-listchannelsrequest.html">ListChannelsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-listchannelsresponse.html">ListChannelsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of</p>
+<!-- @@@listChannels -->
+<!-- $$$listDatasets[overload1]$$$listDatasetsconstListDatasetsRequest& -->
+<h3 class="fn" id="listDatasets"><a name="listDatasets"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-listdatasetsresponse.html">ListDatasetsResponse</a></span> *IoTAnalyticsClient::<span class="name">listDatasets</span>(const <span class="type"><a href="qtaws-iotanalytics-listdatasetsrequest.html">ListDatasetsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-listdatasetsresponse.html">ListDatasetsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves information about data</p>
+<!-- @@@listDatasets -->
+<!-- $$$listDatastores[overload1]$$$listDatastoresconstListDatastoresRequest& -->
+<h3 class="fn" id="listDatastores"><a name="listDatastores"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-listdatastoresresponse.html">ListDatastoresResponse</a></span> *IoTAnalyticsClient::<span class="name">listDatastores</span>(const <span class="type"><a href="qtaws-iotanalytics-listdatastoresrequest.html">ListDatastoresRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-listdatastoresresponse.html">ListDatastoresResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of data</p>
+<!-- @@@listDatastores -->
+<!-- $$$listPipelines[overload1]$$$listPipelinesconstListPipelinesRequest& -->
+<h3 class="fn" id="listPipelines"><a name="listPipelines"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-listpipelinesresponse.html">ListPipelinesResponse</a></span> *IoTAnalyticsClient::<span class="name">listPipelines</span>(const <span class="type"><a href="qtaws-iotanalytics-listpipelinesrequest.html">ListPipelinesRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-listpipelinesresponse.html">ListPipelinesResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a list of</p>
+<!-- @@@listPipelines -->
+<!-- $$$putLoggingOptions[overload1]$$$putLoggingOptionsconstPutLoggingOptionsRequest& -->
+<h3 class="fn" id="putLoggingOptions"><a name="putLoggingOptions"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-putloggingoptionsresponse.html">PutLoggingOptionsResponse</a></span> *IoTAnalyticsClient::<span class="name">putLoggingOptions</span>(const <span class="type"><a href="qtaws-iotanalytics-putloggingoptionsrequest.html">PutLoggingOptionsRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-putloggingoptionsresponse.html">PutLoggingOptionsResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Sets or updates the AWS IoT Analytics logging</p>
+<!-- @@@putLoggingOptions -->
+<!-- $$$runPipelineActivity[overload1]$$$runPipelineActivityconstRunPipelineActivityRequest& -->
+<h3 class="fn" id="runPipelineActivity"><a name="runPipelineActivity"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-runpipelineactivityresponse.html">RunPipelineActivityResponse</a></span> *IoTAnalyticsClient::<span class="name">runPipelineActivity</span>(const <span class="type"><a href="qtaws-iotanalytics-runpipelineactivityrequest.html">RunPipelineActivityRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-runpipelineactivityresponse.html">RunPipelineActivityResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Simulates the results of running a pipeline activity on a message</p>
+<!-- @@@runPipelineActivity -->
+<!-- $$$sampleChannelData[overload1]$$$sampleChannelDataconstSampleChannelDataRequest& -->
+<h3 class="fn" id="sampleChannelData"><a name="sampleChannelData"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-samplechanneldataresponse.html">SampleChannelDataResponse</a></span> *IoTAnalyticsClient::<span class="name">sampleChannelData</span>(const <span class="type"><a href="qtaws-iotanalytics-samplechanneldatarequest.html">SampleChannelDataRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-samplechanneldataresponse.html">SampleChannelDataResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Retrieves a sample of messages from the specified channel ingested during the specified timeframe. Up to 10 messages can be</p>
+<!-- @@@sampleChannelData -->
+<!-- $$$startPipelineReprocessing[overload1]$$$startPipelineReprocessingconstStartPipelineReprocessingRequest& -->
+<h3 class="fn" id="startPipelineReprocessing"><a name="startPipelineReprocessing"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-startpipelinereprocessingresponse.html">StartPipelineReprocessingResponse</a></span> *IoTAnalyticsClient::<span class="name">startPipelineReprocessing</span>(const <span class="type"><a href="qtaws-iotanalytics-startpipelinereprocessingrequest.html">StartPipelineReprocessingRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-startpipelinereprocessingresponse.html">StartPipelineReprocessingResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Starts the reprocessing of raw message data through the</p>
+<!-- @@@startPipelineReprocessing -->
+<!-- $$$updateChannel[overload1]$$$updateChannelconstUpdateChannelRequest& -->
+<h3 class="fn" id="updateChannel"><a name="updateChannel"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-updatechannelresponse.html">UpdateChannelResponse</a></span> *IoTAnalyticsClient::<span class="name">updateChannel</span>(const <span class="type"><a href="qtaws-iotanalytics-updatechannelrequest.html">UpdateChannelRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-updatechannelresponse.html">UpdateChannelResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the settings of a</p>
+<!-- @@@updateChannel -->
+<!-- $$$updateDataset[overload1]$$$updateDatasetconstUpdateDatasetRequest& -->
+<h3 class="fn" id="updateDataset"><a name="updateDataset"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-updatedatasetresponse.html">UpdateDatasetResponse</a></span> *IoTAnalyticsClient::<span class="name">updateDataset</span>(const <span class="type"><a href="qtaws-iotanalytics-updatedatasetrequest.html">UpdateDatasetRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-updatedatasetresponse.html">UpdateDatasetResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the settings of a data</p>
+<!-- @@@updateDataset -->
+<!-- $$$updateDatastore[overload1]$$$updateDatastoreconstUpdateDatastoreRequest& -->
+<h3 class="fn" id="updateDatastore"><a name="updateDatastore"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-updatedatastoreresponse.html">UpdateDatastoreResponse</a></span> *IoTAnalyticsClient::<span class="name">updateDatastore</span>(const <span class="type"><a href="qtaws-iotanalytics-updatedatastorerequest.html">UpdateDatastoreRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-updatedatastoreresponse.html">UpdateDatastoreResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the settings of a data</p>
+<!-- @@@updateDatastore -->
+<!-- $$$updatePipeline[overload1]$$$updatePipelineconstUpdatePipelineRequest& -->
+<h3 class="fn" id="updatePipeline"><a name="updatePipeline"></a><code>[slot] </code><span class="type"><a href="qtaws-iotanalytics-updatepipelineresponse.html">UpdatePipelineResponse</a></span> *IoTAnalyticsClient::<span class="name">updatePipeline</span>(const <span class="type"><a href="qtaws-iotanalytics-updatepipelinerequest.html">UpdatePipelineRequest</a></span> &amp;<i>request</i>)</h3>
+<p>Sends <i>request</i> to the <a href="qtaws-iotanalytics-iotanalyticsclient.html">IoTAnalyticsClient</a> service, and returns a pointer to an <a href="qtaws-iotanalytics-updatepipelineresponse.html">UpdatePipelineResponse</a> object to track the result.</p>
+<p><b>Note: </b>The caller is to take responsbility for the resulting pointer.</p><p>Updates the settings of a</p>
+<!-- @@@updatePipeline -->
+</div>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2018 Paul Colby
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</body>
+</html>
